@@ -47,3 +47,22 @@ export default {
   },
   plugins: []
 };
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./src/**/*.{astro,html,js,ts}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        // Ghi đè font mặc định của Tailwind bằng Be Vietnam Pro
+        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+      },
+      colors: {
+        // Giữ nguyên bảng màu Blue & Yellow đã tạo ở bước trước
+        primary: { ... },
+        accent: { ... },
+        base: { ... },
+      }
+    }
+  },
+  plugins: []
+};
