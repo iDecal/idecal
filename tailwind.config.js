@@ -1,51 +1,23 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.mjs
 export default {
-  content: ["./src/**/*.{astro,html,js,ts}"],
   theme: {
     extend: {
-      fontFamily: {
-        // Đảm bảo có dấu nháy kép bên trong dấu nháy đơn
-        sans: ['"Be Vietnam Pro"', 'sans-serif'],
-      },
       colors: {
-        base: {
-          50: "#f8fafc",
-          100: "#f1f5f9",
-          200: "#e2e8f0",
-          300: "#cbd5e1",
-          400: "#94a3b8",
-          500: "#64748b",
-          600: "#475569",
-          700: "#334155",
-          800: "#1e293b",
-          900: "#0f172a",
+        // Xanh đậm làm màu nhận diện chính (Deep Navy)
+        'primary': {
+          600: '#004a99', // Dùng cho Button chính, Icon quan trọng
+          900: '#002b59', // Dùng cho Text Heading (H1, H2) để tạo sự sang trọng
         },
-        primary: {
-          50: "#f0f7ff",
-          100: "#e0effe",
-          200: "#bae0fd",
-          300: "#7cc4fb",
-          400: "#38a7f8",
-          500: "#0e87e1",
-          600: "#0269bc",
-          700: "#035398",
-          800: "#07477d",
-          900: "#0c3b68",
+        // Vàng chỉ dùng làm điểm nhấn nhỏ (Soft Gold)
+        'accent': {
+          500: '#f59e0b', // Thay vì vàng tươi, dùng vàng hổ phách để dịu mắt hơn
         },
-        accent: {
-          50: "#fffbeb",
-          100: "#fef3c7",
-          200: "#fde68a",
-          300: "#fcd34d",
-          400: "#fbbf24",
-          500: "#facc15", 
-          600: "#ca8a04",
-          700: "#a16207",
-          800: "#854d0e",
-          900: "#713f12",
-        },
-      },
-    },
-  },
-  plugins: [],
-};
+        // Màu nền trung tính để làm dịu giao diện
+        'neutral': {
+          50: '#f8fafc',  // Nền cho các section phụ
+          100: '#f1f5f9', // Đường kẻ viền (border)
+        }
+      }
+    }
+  }
+}
