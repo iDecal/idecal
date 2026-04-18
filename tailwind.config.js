@@ -1,23 +1,27 @@
-// tailwind.config.mjs
+/** @type {import('tailwindcss').Config} */
 export default {
+  // PHẦN QUAN TRỌNG: Phải có dòng này để Tailwind quét code trong thư mục src
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  
   theme: {
     extend: {
       colors: {
-        // Xanh đậm làm màu nhận diện chính (Deep Navy)
+        // Xanh đậm chuyên nghiệp cho thương hiệu iDecal
         'primary': {
-          600: '#004a99', // Dùng cho Button chính, Icon quan trọng
-          900: '#002b59', // Dùng cho Text Heading (H1, H2) để tạo sự sang trọng
+          600: '#004a99', // Màu chính cho button, icon
+          900: '#002b59', // Màu tiêu đề H1, H2
         },
-        // Vàng chỉ dùng làm điểm nhấn nhỏ (Soft Gold)
+        // Vàng điểm nhấn tinh tế
         'accent': {
-          500: '#f59e0b', // Thay vì vàng tươi, dùng vàng hổ phách để dịu mắt hơn
+          500: '#f59e0b', 
         },
-        // Màu nền trung tính để làm dịu giao diện
+        // Màu nền trung tính giúp giao diện bớt rối
         'neutral': {
-          50: '#f8fafc',  // Nền cho các section phụ
-          100: '#f1f5f9', // Đường kẻ viền (border)
+          50: '#f8fafc',  
+          100: '#f1f5f9', 
         }
       }
-    }
-  }
+    },
+  },
+  plugins: [],
 }
