@@ -1,111 +1,91 @@
-<main class="bg-base-50 min-h-screen font-sans text-base-800">
-  
-  <section class="relative bg-primary-700 py-20 px-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center relative z-10">
-      <div class="md:w-1/2 text-white">
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
-          Giải Pháp <span class="text-accent-400">In Ấn & Decal</span> Chuyên Nghiệp
-        </h1>
-        <p class="text-lg text-primary-100 mb-8 opacity-90">
-          Nâng tầm thương hiệu với dịch vụ thiết kế và in ấn decal chất lượng cao. Sắc nét, bền bỉ và giao hàng nhanh chóng.
-        </div>
-        <div class="flex gap-4">
-          <a href="#products" class="bg-accent-500 hover:bg-accent-600 text-white px-8 py-3 rounded-lg font-bold transition-all shadow-lg">
-            Xem Sản Phẩm
-          </a>
-          <a href="/contact" class="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-primary-700 transition-all">
-            Báo Giá Ngay
-          </a>
-        </div>
-      </div>
-      <div class="md:w-1/2 mt-12 md:mt-0">
-        <img src="/images/hero-decal.png" alt="iDecal Showcase" class="rounded-2xl shadow-2xl rotate-2" />
-      </div>
-    </div>
-    <div class="absolute top-0 right-0 w-64 h-64 bg-primary-600 rounded-full -mr-32 -mt-32 opacity-50"></div>
-  </section>
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-  <section class="py-12 bg-white border-b border-base-200">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div>
-        <div class="text-3xl font-bold text-primary-600">10k+</div>
-        <div class="text-base-500 text-sm uppercase tracking-wider">Khách hàng</div>
-      </div>
-      <div>
-        <div class="text-3xl font-bold text-primary-600">24h</div>
-        <div class="text-base-500 text-sm uppercase tracking-wider">Giao hàng nhanh</div>
-      </div>
-      <div>
-        <div class="text-3xl font-bold text-primary-600">100%</div>
-        <div class="text-base-500 text-sm uppercase tracking-wider">Chất lượng Nhật</div>
-      </div>
-      <div>
-        <div class="text-3xl font-bold text-primary-600">Giá Rẻ</div>
-        <div class="text-base-500 text-sm uppercase tracking-wider">Tận xưởng</div>
-      </div>
-    </div>
-  </section>
+// SEO Meta
+const title = "iDecal.vn | Decal dán kính cách nhiệt & Decal mờ trang trí chuyên nghiệp";
+const description = "Chuyên gia cung cấp giải pháp decal dán kính, phim cách nhiệt nhà ở, văn phòng tại TP.HCM & Bình Dương. Đối tác của 200+ công ty nội thất.";
+---
 
-  <section id="products" class="py-20 max-w-7xl mx-auto px-6">
-    <div class="flex justify-between items-end mb-12">
-      <div>
-        <h2 class="text-3xl font-bold text-base-900">Sản phẩm nổi bật</h2>
-        <p class="text-base-500 mt-2">Đa dạng chất liệu, đáp ứng mọi nhu cầu kinh doanh</p>
-      </div>
-      <a href="/shop" class="text-primary-600 font-semibold hover:underline">Xem tất cả &rarr;</a>
-    </div>
+<Layout title={title} description={description}>
+  <Header />
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-base-100">
-        <div class="h-64 bg-base-200 overflow-hidden">
-          <img src="/images/decal-tem-nhan.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+  <main class="font-sans">
+    <section class="relative bg-primary-900 text-white py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div>
+          <span class="inline-block bg-accent-500 text-primary-900 px-4 py-1 rounded-full text-sm font-bold mb-4">
+            Đối tác của 200+ công ty nội thất
+          </span>
+          <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+            iDecal – Decal dán kính cách nhiệt & <span class="text-accent-500">Decal mờ</span> trang trí
+          </h1>
+          <p class="text-lg text-primary-100 mb-8 leading-relaxed">
+            Chào mừng bạn đến với <strong>iDecal</strong> – Chuyên gia hàng đầu cung cấp giải pháp decal dán kính chất lượng cao. Từ văn phòng đến nhà ở, chúng tôi cam kết sự hài lòng tuyệt đối.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="tel:086677040" class="bg-accent-500 hover:bg-accent-400 text-primary-900 px-8 py-4 rounded-xl font-black text-lg shadow-lg transition-all active:scale-95">
+              NHẬN BÁO GIÁ MIỄN PHÍ
+            </a>
+          </div>
+          <div class="mt-8 grid grid-cols-3 gap-4 text-sm font-semibold text-primary-200">
+            <div class="flex items-center gap-2">✓ Thi công chuyên nghiệp</div>
+            <div class="flex items-center gap-2">✓ Bảo hành 2-5 năm</div>
+            <div class="flex items-center gap-2">✓ Giá cạnh tranh</div>
+          </div>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Decal Tem Nhãn</h3>
-          <p class="text-base-600 text-sm mb-4">Chống nước, bám dính cực tốt trên mọi bề mặt sản phẩm.</p>
-          <button class="w-full py-2 bg-base-100 text-base-800 font-semibold rounded hover:bg-primary-500 hover:text-white transition-colors">Tìm hiểu thêm</button>
-        </div>
-      </div>
-
-      <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-base-100">
-        <div class="h-64 bg-base-200 overflow-hidden">
-          <img src="/images/decal-xe.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Decal Dán Xe</h3>
-          <p class="text-base-600 text-sm mb-4">Chất liệu PVC cao cấp, không bay màu, bảo vệ sơn xe tối ưu.</p>
-          <button class="w-full py-2 bg-base-100 text-base-800 font-semibold rounded hover:bg-primary-500 hover:text-white transition-colors">Tìm hiểu thêm</button>
+        <div class="relative">
+          <div class="absolute -inset-4 bg-accent-500/20 blur-3xl rounded-full"></div>
+          <img src="/images/hero-idecal.webp" alt="Thi công decal dán kính" class="rounded-2xl shadow-2xl relative z-10 border-4 border-primary-800" />
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl z-20 hidden lg:block">
+            <p class="text-4xl font-black text-primary-600">96.5%</p>
+            <p class="text-base-600 text-xs uppercase font-bold tracking-tighter">Khách hàng hài lòng</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow border border-base-100">
-        <div class="h-64 bg-base-200 overflow-hidden">
-          <img src="/images/decal-quang-cao.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+    <section id="services" class="py-24 bg-base-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-black text-primary-900 mb-4">Dịch vụ Decal dán kính trọn gói</h2>
+          <p class="text-base-600">Chúng tôi cung cấp giải pháp trang trí kính & dịch vụ decal dán kính cách nhiệt toàn diện.</p>
         </div>
-        <div class="p-6">
-          <h3 class="text-xl font-bold mb-2">Decal Quảng Cáo</h3>
-          <p class="text-base-600 text-sm mb-4">Giải pháp in khổ lớn cho cửa hàng, sự kiện và văn phòng.</p>
-          <button class="w-full py-2 bg-base-100 text-base-800 font-semibold rounded hover:bg-primary-500 hover:text-white transition-colors">Tìm hiểu thêm</button>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="my-20 max-w-5xl mx-auto px-6">
-    <div class="bg-accent-500 rounded-3xl p-10 md:p-16 flex flex-col items-center text-center text-white shadow-2xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Sẵn sàng đưa thương hiệu của bạn vươn xa?</h2>
-      <p class="text-accent-50 mb-8 max-w-2xl text-lg">
-        Liên hệ ngay để nhận tư vấn miễn phí và bản thiết kế demo cho sản phẩm của bạn.
-      </p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <button class="bg-white text-accent-600 px-10 py-4 rounded-full font-bold text-lg shadow-md hover:scale-105 transition-transform">
-          Zalo: 09xx.xxx.xxx
-        </button>
-        <button class="bg-primary-700 text-white px-10 py-4 rounded-full font-bold text-lg shadow-md hover:bg-primary-800 transition-colors">
-          Gửi Yêu Cầu
-        </button>
-      </div>
-    </div>
-  </section>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-base-200 hover:border-primary-500 transition-all group">
+            <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors">
+              <svg class="w-8 h-8 text-primary-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-base-900">Decal mờ 3D</h3>
+            <p class="text-base-600 text-sm mb-4">Thiết kế vân nổi sống động. Tạo chiều sâu, nét độc đáo sang trọng cho kính.</p>
+            <a href="#" class="text-primary-600 font-bold text-sm hover:underline">Chi tiết thêm →</a>
+          </div>
 
-</main>
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-base-200 hover:border-primary-500 transition-all group">
+            <div class="w-14 h-14 bg-primary-50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors">
+              <svg class="w-8 h-8 text-primary-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707-.707"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-base-900">Phim cách nhiệt</h3>
+            <p class="text-base-600 text-sm mb-4">3M, Llumar: Cách nhiệt 80%, chống 99% UV. Giảm chói và bảo vệ kính tối ưu.</p>
+            <a href="#" class="text-primary-600 font-bold text-sm hover:underline">Chi tiết thêm →</a>
+          </div>
+
+          </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-accent-500">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-5xl font-black text-primary-900 mb-6">Bạn cần tư vấn từ chuyên gia?</h2>
+        <p class="text-primary-800 text-xl mb-10 font-medium">Chúng tôi trả lời mọi thắc mắc 24/7 qua Hotline</p>
+        <a href="tel:086677040" class="inline-flex items-center gap-4 bg-primary-900 text-white px-10 py-5 rounded-full text-2xl font-black hover:scale-105 transition-transform">
+           Gọi ngay: 0866-77040
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
