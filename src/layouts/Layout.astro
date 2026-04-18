@@ -1,0 +1,41 @@
+---
+// src/layouts/Layout.astro
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Dịch vụ Decal dán kính cách nhiệt & Decal mờ trang trí" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "iDecal.vn",
+        "image": "https://idecal.vn/logo.png",
+        "url": "https://idecal.vn",
+        "telephone": "0866077040",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "TP. Hồ Chí Minh",
+          "addressRegion": "VN"
+        },
+        "description": "Chuyên thi công decal quảng cáo, phim cách nhiệt và film nội thất tại TPHCM và Bình Dương."
+      }
+    </script>
+  </head>
+  <body>
+    <slot /> </body>
+</html>
