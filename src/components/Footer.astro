@@ -1,48 +1,86 @@
 ---
-// src/components/Footer.astro
-const year = new Date().getFullYear();
+// src/components/Header.astro
+const services = [
+  { name: "Decal Dán Kính Văn Phòng", href: "/dich-vu/decal-dan-kinh-van-phong" },
+  { name: "Phim Cách Nhiệt", href: "/dich-vu/phim-cach-nhiet" },
+  { name: "Decal Mờ 3D", href: "/dich-vu/decal-mo-3d" },
+  { name: "Cắt Chữ & Logo", href: "/dich-vu/decal-cat-chu" }
+];
 ---
 
-<footer class="bg-primary-900 text-white pt-16 pb-8">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-    
-    <div class="space-y-4">
-      <h3 class="text-xl font-black tracking-tighter uppercase italic decoration-accent-500 underline underline-offset-4">iDECAL</h3>
-      <p class="text-sm text-gray-300 leading-relaxed">
-        Đơn vị chuyên sâu trong lĩnh vực cung cấp và thi công decal dán kính, phim cách nhiệt nhà kính chuyên nghiệp tại TP.HCM.
-      </p>
-    </div>
+<header class="fixed w-full z-50 bg-white shadow-sm border-b border-neutral-100">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-2xl font-black text-primary-900 tracking-tighter">iDECAL</span>
+      <span class="w-2 h-2 bg-accent-500 rounded-full"></span>
+    </a>
 
-    <div class="space-y-4">
-      <h4 class="text-sm font-black uppercase text-accent-500 tracking-widest">Dịch vụ</h4>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="/dich-vu/decal-dan-kinh-van-phong" class="hover:text-white transition-colors">Decal Văn Phòng</a></li>
-        <li><a href="/dich-vu/phim-cach-nhiet" class="hover:text-white transition-colors">Phim Cách Nhiệt</a></li>
-        <li><a href="/dich-vu/decal-mo-3d" class="hover:text-white transition-colors">Decal Mờ 3D</a></li>
-        <li><a href="/dich-vu/decal-cat-chu" class="hover:text-white transition-colors">Cắt Chữ & Logo</a></li>
-      </ul>
-    </div>
-
-    <div class="space-y-4">
-      <h4 class="text-sm font-black uppercase text-accent-500 tracking-widest">Hệ thống</h4>
-      <ul class="space-y-2 text-sm text-gray-300">
-        <li><a href="https://idecal.vn" target="_blank" class="hover:text-white transition-colors">idecal.vn</a></li>
-        <li><a href="https://thicongdecal.pro" target="_blank" class="hover:text-white transition-colors">thicongdecal.pro</a></li>
-        <li><a href="https://homedecal.vn" target="_blank" class="hover:text-white transition-colors">homedecal.vn</a></li>
-      </ul>
-    </div>
-
-    <div class="space-y-4">
-      <h4 class="text-sm font-black uppercase text-accent-500 tracking-widest">Liên hệ</h4>
-      <div class="bg-primary-600/30 p-4 rounded-2xl border border-white/10">
-        <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Hotline thi công</p>
-        <a href="tel:086677040" class="text-2xl font-black text-white hover:text-accent-500 transition-colors">0866-77040</a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="/" class="text-sm font-bold text-gray-700">TRANG CHỦ</a>
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-sm font-bold text-gray-700 uppercase">
+          DỊCH VỤ <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+        </button>
+        <div class="absolute top-full left-0 w-64 bg-white shadow-xl border border-neutral-100 rounded-xl py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+          {services.map(s => <a href={s.href} class="block px-6 py-2 text-sm text-gray-600 hover:bg-neutral-50">{s.name}</a>)}
+        </div>
       </div>
+      <a href="/lien-he" class="text-sm font-bold text-gray-700">LIÊN HỆ</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="tel:086677040" class="hidden sm:block text-primary-600 font-black">0866-77040</a>
+      <button id="menu-toggle" class="lg:hidden p-2 text-primary-900">
+        <svg id="icon-hamburger" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        <svg id="icon-close" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-gray-500 font-bold uppercase tracking-widest">
-    <p>© {year} iDECAL - All Rights Reserved.</p>
-    <p>Sản phẩm bởi iDecal Team.</p>
+  <div id="mobile-nav" class="hidden lg:hidden bg-white border-t border-neutral-100 w-full">
+    <div class="p-6 flex flex-col gap-6">
+      <a href="/" class="text-lg font-black text-primary-900">TRANG CHỦ</a>
+      
+      <div>
+        <button id="submenu-toggle" class="flex justify-between w-full text-lg font-black text-primary-900 uppercase">
+          DỊCH VỤ <svg id="submenu-arrow" class="w-6 h-6 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div id="submenu-mobile" class="hidden flex flex-col gap-3 mt-4 pl-4 border-l-2 border-neutral-100">
+          {services.map(s => <a href={s.href} class="text-gray-500 font-medium">{s.name}</a>)}
+        </div>
+      </div>
+
+      <a href="/lien-he" class="text-lg font-black text-primary-900">LIÊN HỆ</a>
+      <a href="tel:086677040" class="bg-primary-600 text-white text-center py-4 rounded-xl font-black">GỌI: 0866-77040</a>
+    </div>
   </div>
-</footer>
+</header>
+
+<div class="h-20"></div>
+
+<script is:inline>
+  // Sử dụng is:inline để đảm bảo script chạy ngay lập tức khi load trang
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-toggle');
+    const nav = document.getElementById('mobile-nav');
+    const iconHam = document.getElementById('icon-hamburger');
+    const iconClose = document.getElementById('icon-close');
+    
+    const subBtn = document.getElementById('submenu-toggle');
+    const subNav = document.getElementById('submenu-mobile');
+    const subArrow = document.getElementById('submenu-arrow');
+
+    // Đóng mở menu chính
+    btn?.addEventListener('click', () => {
+      const isHidden = nav.classList.toggle('hidden');
+      iconHam.classList.toggle('hidden', !isHidden);
+      iconClose.classList.toggle('hidden', isHidden);
+    });
+
+    // Đóng mở menu dịch vụ (phụ)
+    subBtn?.addEventListener('click', () => {
+      const isSubHidden = subNav.classList.toggle('hidden');
+      subArrow.style.transform = isSubHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  });
+</script>
