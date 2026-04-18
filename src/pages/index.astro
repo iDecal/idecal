@@ -188,83 +188,68 @@ const description = "Chuyên gia cung cấp giải pháp decal dán kính, phim 
   </div>
 </section>
 
+---
+// Chèn đoạn này vào phần main của index.astro
+---
+
 <section class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
     
-    <div>
-      <h2 class="text-4xl font-black text-[#004d99] mb-6">Tại sao chọn iDecal</h2>
-      <p class="text-gray-600 mb-10 text-lg leading-relaxed">
-        iDecal mang đến giải pháp trang trí – chống nóng – tạo không gian riêng tư với mẫu mã đa dạng cho nhà ở, văn phòng, showroom và các công trình dự án lớn.
-      </p>
-      
-      <div class="space-y-6">
-        <div class="flex items-start gap-4">
-          <div class="bg-[#ffc107] p-2 rounded-lg text-white shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="font-bold text-[#004d99] text-xl">Chất lượng đảm bảo</h4>
-            <p class="text-gray-500">Sử dụng 100% Decal chính hãng từ 3M, Llumar, V-KOOL.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="bg-[#ffc107] p-2 rounded-lg text-white shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="font-bold text-[#004d99] text-xl">Thi công chuyên nghiệp</h4>
-            <p class="text-gray-500">Đội ngũ thợ giàu kinh nghiệm, quy trình thi công sạch sẽ, tỉ mỉ.</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="bg-[#ffc107] p-2 rounded-lg text-white shadow-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <div>
-            <h4 class="font-bold text-[#004d99] text-xl">Bảo hành dài hạn</h4>
-            <p class="text-gray-500">Cam kết bảo hành 2-5 năm cho mọi sản phẩm thi công.</p>
-          </div>
-        </div>
-      </div>
+    <div class="relative">
+      <div class="absolute -inset-4 bg-primary-100/50 blur-2xl rounded-full"></div>
+      <img 
+        src="/images/about-idecal.webp" 
+        alt="Về iDecal - Chuyên gia decal dán kính" 
+        class="rounded-[40px] shadow-2xl relative z-10 w-full h-[450px] object-cover border-8 border-white"
+      />
     </div>
 
-    <div class="bg-[#f0f7ff] p-10 rounded-[40px] border border-blue-50 shadow-sm text-center lg:text-left">
-      <h3 class="text-2xl font-black text-[#004d99] mb-4 italic underline decoration-[#ffc107] underline-offset-8">Tư vấn từ chuyên gia</h3>
-      <p class="text-gray-700 mb-8">Chúng tôi thiết kế mẫu độc quyền, tích hợp logo thương hiệu và khảo sát tận nơi miễn phí.</p>
+    <div class="relative z-10">
+      <h2 class="text-4xl font-black text-primary-900 mb-6">Chuyên gia Decal & Phim cách nhiệt hàng đầu</h2>
+      <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+        Với hơn nhiều năm kinh nghiệm trong lĩnh vực thi công decal dán kính và phim cách nhiệt, <strong>iDecal</strong> tự hào là đối tác tin cậy của hơn 200+ đơn vị nội thất và hàng ngàn khách hàng cá nhân.
+      </p>
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-center gap-3 font-bold text-primary-800">
+          <span class="bg-accent-500 text-white p-1 rounded-md">✓</span> Thi công nhanh chóng, sạch sẽ
+        </li>
+        <li class="flex items-center gap-3 font-bold text-primary-800">
+          <span class="bg-accent-500 text-white p-1 rounded-md">✓</span> Vật liệu chính hãng 100%
+        </li>
+      </ul>
       
-      <div class="bg-white p-8 rounded-3xl shadow-md mb-8 inline-block w-full">
-         <p class="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Hotline 24/7</p>
-         <a href="tel:086677040" class="text-4xl font-black text-[#0073e6] hover:text-blue-700 transition-colors">0866-77040</a>
-      </div>
-
-      <a href="/lien-he" class="block w-full bg-[#0066cc] text-white font-black py-5 rounded-2xl hover:bg-blue-800 transition-all shadow-lg text-lg uppercase tracking-wide">
-        Đặt thiết kế mẫu
+      <a href="/gioi-thieu" class="inline-block bg-primary-600 text-white px-8 py-4 rounded-xl font-black hover:bg-primary-700 transition-all shadow-lg hover:-translate-y-1">
+        TÌM HIỂU THÊM VỀ CHÚNG TÔI
       </a>
     </div>
-
   </div>
 </section>
 
-<section class="py-12">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="bg-gradient-to-r from-[#1a99ff] to-[#7d33ff] rounded-[30px] p-12 text-center text-white shadow-2xl">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Bạn cần tư vấn từ chuyên gia?</h2>
-      <p class="text-white/80 mb-8 font-medium">Chúng tôi trả lời mọi thắc mắc 24/7</p>
+<section class="py-12 bg-primary-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="bg-white p-10 md:p-16 rounded-[50px] shadow-xl border border-primary-100 text-center relative overflow-hidden">
       
-      <a href="tel:086677040" class="inline-flex items-center gap-3 bg-white text-[#0066cc] px-10 py-4 rounded-xl font-black text-xl hover:bg-blue-50 transition-all shadow-xl">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-        Gọi ngay 0866-77040
-      </a>
+      <div class="absolute top-0 right-0 w-32 h-32 bg-accent-500/10 rounded-bl-full"></div>
+      
+      <div class="relative z-10">
+        <h3 class="text-2xl md:text-3xl font-black text-primary-900 mb-4 italic underline decoration-accent-500 underline-offset-8">
+          Tư vấn từ chuyên gia iDecal
+        </h3>
+        <p class="text-gray-600 mb-10 max-w-2xl mx-auto text-lg">
+          Chúng tôi thiết kế mẫu độc quyền, tích hợp logo thương hiệu và khảo sát tận nơi hoàn toàn miễn phí tại TP.HCM & các tỉnh lân cận.
+        </p>
+        
+        <div class="bg-primary-50/50 p-8 rounded-3xl border border-dashed border-primary-200 mb-10 inline-block w-full max-w-md">
+           <p class="text-xs text-primary-400 font-bold uppercase tracking-widest mb-2">Đường dây nóng 24/7</p>
+           <a href="tel:086677040" class="text-4xl md:text-5xl font-black text-primary-600 hover:text-accent-600 transition-colors tracking-tight">
+             0866-77040
+           </a>
+        </div>
+
+        <a href="/lien-he" class="block w-full max-w-md mx-auto bg-primary-600 text-white font-black py-5 rounded-2xl hover:bg-primary-700 transition-all shadow-xl text-xl uppercase tracking-wider">
+          ĐẶT THIẾT KẾ MẪU NGAY
+        </a>
+      </div>
     </div>
   </div>
 </section>
