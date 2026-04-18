@@ -20,21 +20,29 @@ const { title, description = "Dịch vụ Decal dán kính cách nhiệt & Decal
     <meta name="description" content={description} />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "iDecal.vn",
-        "image": "https://idecal.vn/logo.png",
-        "url": "https://idecal.vn",
-        "telephone": "0866077040",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "TP. Hồ Chí Minh",
-          "addressRegion": "VN"
-        },
-        "description": "Chuyên thi công decal quảng cáo, phim cách nhiệt và film nội thất tại TPHCM và Bình Dương."
-      }
-    </script>
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "iDecal.vn",
+  "image": "https://idecal.vn/logo.png",
+  "url": "https://idecal.vn",
+  "telephone": "086677040",
+  "email": "hi@idecal.vn",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "606/20 Quốc lộ 13, P. Hiệp Bình Phước",
+    "addressLocality": "TP. Thủ Đức",
+    "addressRegion": "TP. Hồ Chí Minh",
+    "addressCountry": "VN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 10.849, 
+    "longitude": 106.711
+  },
+  "description": "Dịch vụ in ấn, thi công decal trang trí, phim cách nhiệt và film nội thất chuyên nghiệp tại TP. Thủ Đức và các khu vực lân cận."
+}
+</script>
   </head>
   <body>
     <slot /> </body>
