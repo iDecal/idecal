@@ -3,32 +3,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Base: Chuyển từ tông xanh lá cũ sang tông xám trung tính/lạnh sạch sẽ hơn
+        // Base: Tông xám lạnh để tôn màu Vàng và Xanh
         base: {
-          50: "#f9fafb",
-          100: "#f3f4f6",
-          200: "#e5e7eb",
-          300: "#d1d5db",
-          400: "#9ca3af",
-          500: "#6b7280",
-          600: "#4b5563",
-          700: "#374151",
-          800: "#1f2937",
-          900: "#111827",
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
         },
-        // Primary: Màu xanh thương hiệu iDecal (Professional Blue)
+        // Primary: Màu xanh Blue đậm (Professional & Trust)
         primary: {
-          50: "#eff6ff",
-          400: "#3b82f6",
-          500: "#1d4ed8", // Màu chủ đạo chuẩn
-          600: "#1e40af",
-          700: "#1d3a8a",
+          50: "#f0f7ff",
+          100: "#e0effe",
+          200: "#bae0fd",
+          300: "#7cc4fb",
+          400: "#38a7f8",
+          500: "#0e87e1", // Blue chính
+          600: "#0269bc",
+          700: "#035398", // Blue đậm cho Header/Hero
+          800: "#07477d",
+          900: "#0c3b68",
         },
-        // Accent: Màu cam/vàng nhấn mạnh (Decal Highlight)
+        // Accent: Màu Vàng chuẩn (không bị cam) - High Contrast
         accent: {
-          400: "#fbbf24",
-          500: "#f59e0b", // Màu nhấn (Call to action)
-          600: "#d97706",
+          50: "#fffbeb",
+          100: "#fef3c7",
+          200: "#fde68a",
+          300: "#fcd34d",
+          400: "#fbbf24", // Vàng sáng
+          500: "#facc15", // Vàng thương hiệu chính (Yellow 500)
+          600: "#ca8a04", // Vàng đậm để làm viền hoặc text
+          700: "#a16207",
+          800: "#854d0e",
+          900: "#713f12",
         }
       }
     }
