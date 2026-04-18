@@ -1,1 +1,57 @@
-âsxẫ
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-base-900 text-base-300 pt-16 pb-8 border-t-4 border-primary-600">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    
+    <div class="space-y-4">
+      <img src="/logo-white.svg" alt="iDecal Logo White" class="h-12 w-auto mb-4" />
+      <p class="text-sm leading-relaxed">
+        <strong>iDecal.vn</strong> - Chuyên gia cung cấp giải pháp decal trang trí, phim cách nhiệt và film nội thất hàng đầu tại miền Nam. Chất lượng Nhật Bản - Thi công chuyên nghiệp.
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Dịch vụ trọng tâm</h3>
+      <ul class="space-y-3 text-sm">
+        <li><a href="/phim-cach-nhiet" class="hover:text-accent-400 transition-colors">Phim cách nhiệt nhà kính</a></li>
+        <li><a href="/decal-trang-tri" class="hover:text-accent-400 transition-colors">Decal mờ văn phòng</a></li>
+        <li><a href="/decal-xe" class="hover:text-accent-400 transition-colors">In tem nhãn - Decal dán xe</a></li>
+        <li><a href="/film-noithat" class="hover:text-accent-400 transition-colors">Film dán nội thất cao cấp</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Khu vực thi công</h3>
+      <ul class="space-y-2 text-sm">
+        <li>Thi công Decal tại Thủ Đức</li>
+        <li>Dán phim cách nhiệt Quận 7</li>
+        <li>Trang trí kính văn phòng Quận 12</li>
+        <li>Dịch vụ Decal tại Bình Dương</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white font-bold text-lg mb-6 uppercase tracking-wider">Liên hệ</h3>
+      <ul class="space-y-4 text-sm">
+        <li class="flex items-start gap-3">
+          <span class="text-accent-500 font-bold">Địa chỉ:</span>
+          <span>606/20 Quốc lộ 13, P. Hiệp Bình Phước, TP. Thủ Đức, TP.HCM</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-accent-500 font-bold">Hotline:</span>
+          <a href="tel:086677040" class="hover:text-white">0866-77040</a>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-accent-500 font-bold">Email:</span>
+          <a href="mailto:hi@idecal.vn" class="hover:text-white">hi@idecal.vn</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-base-800 text-center text-xs text-base-500">
+    <p>© {currentYear} iDecal.vn. All rights reserved. Thiết kế tối ưu bởi Astro.</p>
+  </div>
+</footer>
