@@ -1,6 +1,8 @@
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite'; // Thêm dòng này
 
 export default defineConfig({
-  integrations: [tailwind()],
+  vite: {
+    plugins: [tailwindcss()], // Và dòng này
+  },
 });
