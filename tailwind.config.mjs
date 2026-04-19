@@ -11,7 +11,7 @@ export default {
 			},
 			fontFamily: {
 				heading: ['"Be Vietnam Pro"', 'sans-serif'],
-				body: ['Roboto', 'sans-serif'],
+				body: ['Inter', 'sans-serif'],
 			},
 		},
 	},
