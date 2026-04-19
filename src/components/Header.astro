@@ -1,0 +1,61 @@
+---
+const navItems = [
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Dán kính cách nhiệt', href: '/cach-nhiet' },
+  { name: 'Decal mờ trang trí', href: '/decal-mo' },
+  { name: 'Dự án', href: '/du-an' },
+  { name: 'Liên hệ', href: '/lien-he' },
+];
+---
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/" class="text-3xl font-heading font-bold italic">
+          <span class="text-secondary">i</span><span class="text-primary">DECAL</span>
+        </a>
+      </div>
+
+      <nav class="hidden md:flex space-x-8">
+        {navItems.map(item => (
+          <a href={item.href} class="text-secondary hover:text-primary font-medium transition-colors">
+            {item.name}
+          </a>
+        ))}
+      </nav>
+
+      <div class="hidden md:block">
+        <a href="tel:0123456789" class="bg-primary text-secondary font-bold py-2 px-5 rounded-full hover:scale-105 transition-transform inline-block">
+          Hotline: 0123.456.789
+        </a>
+      </div>
+
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-secondary focus:outline-none">
+          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+    {navItems.map(item => (
+      <a href={item.href} class="block px-3 py-2 text-secondary hover:bg-accent rounded-md font-medium">
+        {item.name}
+      </a>
+    ))}
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>
