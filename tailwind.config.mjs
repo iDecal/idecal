@@ -5,7 +5,7 @@ export default {
 		extend: {
 			colors: {
 				primary: '#FBBF24',   // Vàng
-				secondary: '#000000', // Đen
+				secondary: '#0b3954', // Đen
 				accent: '#BAE6FD',    // Xanh da nhạt
 				background: '#FFFFFF' // Nền trắng
 			},
