@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const { 
+  title = "idecal - Dịch vụ Decal Kính Cách Nhiệt & Trang Trí", 
+  description = "Chuyên thi công decal dán kính cách nhiệt, decal mờ văn phòng tại TP.HCM. Chống nóng hiệu quả, thẩm mỹ cao.", 
+  image = "/og-image.jpg",
+  canonicalURL = Astro.url 
+} = Astro.props;
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<meta name="robots" content="index, follow" />
