@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+const { title, description, image, link } = Astro.props;
+---
+<div class="bg-surface-100 rounded-brand shadow-soft hover:shadow-xl transition-all border border-surface-300 group overflow-hidden">
+  <div class="aspect-video overflow-hidden">
+    <img src={image} alt={title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+  </div>
+  <div class="p-8">
+    <h3 class="text-title-sm font-heading font-black mb-3">{title}</h3>
+    <p class="text-body-sm font-body mb-6 leading-relaxed opacity-70">{description}</p>
+    <a href={link} class="font-bold text-sm flex items-center gap-2 group-hover:text-primary transition-colors">
+      Chi tiết sản phẩm <span>→</span>
+    </a>
+  </div>
+</div>
