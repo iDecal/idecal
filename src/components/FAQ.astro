@@ -10,51 +10,52 @@ const faqs = [
   },
   { 
     q: "Tôi có thể tự dán decal tại nhà không?", 
-    a: "Bạn hoàn toàn có thể tự dán. Tuy nhiên, để đảm bảo bề mặt phẳng mịn, không bị bọt khí và thẩm mỹ cao nhất, đội ngũ kỹ thuật của iDecal luôn sẵn sàng hỗ trợ lắp đặt chuyên nghiệp." 
+    a: "Bạn hoàn toàn có thể tự dán. Tuy nhiên, để đảm bảo bề mặt phẳng mịn, không bị bọt khí và thẩm mỹ cao nhất, đội ngũ kỹ thuật của iDecal luôn sẵn sàng hỗ trợ chuyên nghiệp." 
   },
   { 
     q: "iDecal có nhận thi công tại các tỉnh ngoài TP.HCM không?", 
-    a: "Hiện tại iDecal tập trung phục vụ chính tại TP.HCM, Bình Dương và Quy Nhơn. Với các dự án lớn tại tỉnh lân cận, chúng tôi vẫn hỗ trợ khảo sát và thi công tận nơi." 
+    a: "Hiện tại iDecal phục vụ chính tại TP.HCM, Bình Dương và Quy Nhơn. Với các dự án lớn, chúng tôi vẫn hỗ trợ khảo sát và thi công tận nơi." 
   },
   { 
     q: "Chất liệu phim dán nội thất có bền không?", 
-    a: "Các dòng phim Octki, GYMak chúng tôi sử dụng có khả năng chống trầy xước, chống ẩm mốc và độ bền lên đến 7-10 năm trong điều kiện nội thất." 
+    a: "Các dòng phim Octki, GYMak chúng tôi sử dụng có khả năng chống trầy xước, chống ẩm mốc và độ bền lên đến 7-10 năm." 
   },
   { 
     q: "Thời gian thi công một công trình thường mất bao lâu?", 
-    a: "Tùy vào khối lượng, nhưng đa số các công trình văn phòng hoặc căn hộ thông thường iDecal sẽ hoàn thiện nhanh chóng ngay trong ngày." 
+    a: "Tùy vào khối lượng, đa số các công trình văn phòng hoặc căn hộ thông thường iDecal sẽ hoàn thiện nhanh chóng ngay trong ngày." 
   }
 ];
 ---
 
-<section class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
+<section class="py-24 bg-white overflow-hidden">
+  <div class="container">
+    
     <div class="text-center mb-16">
-      <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-3">Giải đáp thắc mắc</h2>
-      <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Câu hỏi thường gặp</h3>
-      <p class="text-slate-500 text-sm lowercase">tất cả các giải đáp về dịch vụ và bảo hành tại idecal</p>
+      <h6>Giải đáp thắc mắc</h6>
+      <h2 class="text-h2">Câu hỏi thường gặp</h2>
+      <p class="italic">Tất cả các giải đáp về dịch vụ và bảo hành tại iDecal</p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-x-16 gap-y-2 items-start">
+    <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4 items-start">
       {faqs.map((faq) => (
-        <div class="border-b border-slate-100 pb-2">
-          <details class="faq-details group lg:pointer-events-none cursor-pointer lg:cursor-default">
+        <div class="faq-item group border-b border-slate-100 transition-all duration-300 hover:bg-slate-50/50 rounded-xl px-4">
+          <details class="faq-details group lg:pointer-events-none cursor-pointer lg:cursor-default" open>
             
-            <summary class="flex items-center justify-between list-none py-4 font-normal text-base text-[#031246] group-open:text-primary transition-colors leading-relaxed">
-              <span class="flex gap-3">
-                <span class="text-primary font-bold opacity-50">Q.</span>
-                {faq.q}
+            <summary class="flex items-center justify-between list-none py-6 font-bold text-secondary group-open:text-primary transition-colors leading-tight">
+              <span class="flex gap-4 items-start">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-[10px] flex items-center justify-center font-black">Q</span>
+                <span class="text-[15px] md:text-base">{faq.q}</span>
               </span>
-              <span class="lg:hidden transform group-open:rotate-180 transition-transform duration-300 text-slate-300 group-open:text-primary">
+              <span class="lg:hidden transform group-open:rotate-180 transition-transform duration-300 text-slate-300">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </span>
             </summary>
             
-            <div class="flex gap-3 text-slate-600 leading-relaxed text-base pb-4 animate-fadeIn">
-              <span class="text-primary font-bold opacity-50">A.</span>
-              <p>{faq.a}</p>
+            <div class="flex gap-4 pb-6 animate-fadeIn items-start">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-secondary/5 text-secondary/40 text-[10px] flex items-center justify-center font-black">A</span>
+              <p class="text-text-muted text-sm leading-relaxed">{faq.a}</p>
             </div>
           </details>
         </div>
@@ -64,30 +65,30 @@ const faqs = [
 </section>
 
 <style>
+  /* Hiệu ứng mượt mà khi mở FAQ */
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .animate-fadeIn {
-    animation: fadeIn 0.4s ease-out;
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   
   summary::-webkit-details-marker {
     display: none;
   }
 
+  /* Desktop: Luôn hiển thị câu trả lời */
   @media (min-width: 1024px) {
     .faq-details {
       display: block !important;
-    }
-    .faq-details[open] summary {
-      cursor: default;
     }
     .faq-details div {
       display: flex !important;
     }
   }
 
+  /* Mobile: Đóng/Mở theo click */
   @media (max-width: 1023px) {
     .faq-details div {
       display: none;
@@ -99,13 +100,18 @@ const faqs = [
 </style>
 
 <script>
-  function handleDesktopFAQ() {
-    if (window.innerWidth >= 1024) {
-      document.querySelectorAll('.faq-details').forEach(el => {
+  function setupFAQ() {
+    const isDesktop = window.innerWidth >= 1024;
+    document.querySelectorAll('.faq-details').forEach(el => {
+      if (isDesktop) {
         el.setAttribute('open', '');
-      });
-    }
+      } else {
+        // Trên mobile, nếu muốn mặc định đóng hết thì xóa dòng dưới
+        // el.removeAttribute('open'); 
+      }
+    });
   }
-  handleDesktopFAQ();
-  window.addEventListener('resize', handleDesktopFAQ);
+  
+  setupFAQ();
+  window.addEventListener('resize', setupFAQ);
 </script>
