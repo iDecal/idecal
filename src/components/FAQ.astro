@@ -1,20 +1,84 @@
 ---
 const faqs = [
-  { q: "Decal mờ 3D có che hoàn toàn tầm nhìn không?", a: "Sản phẩm này có độ mờ từ 20-30%, giúp tạo không gian riêng tư nhưng vẫn đảm bảo ánh sáng đi qua." },
-  { q: "Phim cách nhiệt bảo hành bao lâu?", a: "Tất cả dòng phim cách nhiệt cao cấp tại iDecal được bảo hành từ 5-10 năm về thông số kỹ thuật." },
-  { q: "Tôi có thể tự dán tại nhà không?", a: "Bạn có thể tự dán, nhưng để đảm bảo tính thẩm mỹ và không bị bọt khí, chúng tôi khuyến khích sử dụng dịch vụ lắp đặt chuyên nghiệp." },
+  { 
+    q: "Decal mờ 3D có che hoàn toàn tầm nhìn không?", 
+    a: "Sản phẩm này có độ mờ từ 20-30%, giúp tạo không gian riêng tư nhưng vẫn đảm bảo ánh sáng tự nhiên đi qua, tạo cảm giác thông thoáng cho văn phòng." 
+  },
+  { 
+    q: "Phim cách nhiệt tại iDecal bảo hành bao lâu?", 
+    a: "Tất cả các dòng phim cách nhiệt cao cấp được iDecal thi công đều có chế độ bảo hành từ 5-10 năm về các thông số cách nhiệt và độ bền màu." 
+  },
+  { 
+    q: "Tôi có thể tự dán decal tại nhà không?", 
+    a: "Bạn hoàn toàn có thể tự dán. Tuy nhiên, để đảm bảo bề mặt phẳng mịn, không bị bọt khí và thẩm mỹ cao nhất, đội ngũ kỹ thuật của iDecal luôn sẵn sàng hỗ trợ lắp đặt chuyên nghiệp." 
+  },
+  { 
+    q: "iDecal có nhận thi công tại các tỉnh ngoài TP.HCM không?", 
+    a: "Hiện tại iDecal tập trung phục vụ chính tại TP.HCM, Bình Dương và Quy Nhơn. Với các dự án lớn tại tỉnh lân cận, chúng tôi vẫn hỗ trợ khảo sát và thi công tận nơi." 
+  },
+  { 
+    q: "Chất liệu phim dán nội thất có bền không?", 
+    a: "Các dòng phim Octki, GYMak chúng tôi sử dụng có khả năng chống trầy xước, chống ẩm mốc và độ bền lên đến 7-10 năm trong điều kiện nội thất." 
+  },
+  { 
+    q: "Thời gian thi công một công trình thường mất bao lâu?", 
+    a: "Tùy vào khối lượng, nhưng đa số các công trình văn phòng hoặc căn hộ thông thường iDecal sẽ hoàn thiện nhanh chóng ngay trong ngày." 
+  }
 ];
 ---
+
 <section class="py-24 bg-white">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-secondary text-center mb-12">Câu hỏi thường gặp</h2>
-    <div class="space-y-6">
-      {faqs.map(faq => (
-        <div class="border border-slate-100 p-6 rounded-brand bg-slate-50/50">
-          <h4 class="font-bold text-secondary mb-2">Q: {faq.q}</h4>
-          <p class="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-3">Giải đáp thắc mắc</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Câu hỏi thường gặp</h3>
+      <p class="text-slate-500 text-sm lowercase">tất cả các giải đáp về dịch vụ và bảo hành tại idecal</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-x-16 gap-y-8 items-start">
+      {faqs.map((faq) => (
+        <div class="border-b border-slate-100 pb-6">
+          <details open class="group lg:pointer-events-none cursor-pointer lg:cursor-default">
+            <summary class="flex items-center justify-between list-none py-2 text-secondary font-bold text-lg lg:text-xl">
+              {faq.q}
+              <span class="lg:hidden transform group-open:rotate-180 transition-transform duration-300 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="text-slate-600 leading-relaxed text-base pt-3 animate-fadeIn">
+              {faq.a}
+            </div>
+          </details>
         </div>
       ))}
     </div>
   </div>
 </section>
+
+<style>
+  /* Hiệu ứng fadeIn khi mở trên mobile */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Ẩn dấu mũi tên mặc định */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Ép trạng thái luôn mở trên Desktop từ 1024px trở lên */
+  @media (min-width: 1024px) {
+    details {
+      display: block !important;
+    }
+    details[open] summary {
+      cursor: default;
+    }
+  }
+</style>
