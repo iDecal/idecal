@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-text font-sans antialiased;
+  }
+
+  /* Ép chuẩn hệ thống tiêu đề Bolder */
+  h1 { @apply text-h1 text-secondary mb-6 tracking-tighter; }
+  h2 { @apply text-h2 text-secondary mb-8 tracking-tight; }
+  h3 { @apply text-h3 text-secondary mb-4 tracking-tight; }
+  h4 { @apply text-h4 text-secondary mb-3; }
+  h5 { @apply text-h5 text-secondary mb-2; }
+  h6 { @apply text-h6 text-secondary uppercase tracking-widest mb-2; }
+
+  p {
+    @apply text-text-muted leading-relaxed mb-4;
+  }
+}
+
+@layer components {
+  /* Nút Báo Giá chuẩn Bolder */
+  .btn-primary-solid {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-brand transition-all duration-300 shadow-brand hover:bg-secondary hover:-translate-y-1;
+  }
+
+  /* Nút Xem Chi Tiết */
+  .btn-idecal-bold {
+    @apply inline-flex items-center gap-2 font-black uppercase text-xs tracking-[0.2em] text-secondary border-b-4 border-primary pb-1 transition-all hover:text-primary hover:border-secondary;
+  }
+
+  /* Card dịch vụ đồng bộ */
+  .service-card-brand {
+    @apply bg-white border border-border rounded-brand p-5 shadow-card transition-all duration-500 hover:shadow-brand hover:-translate-y-2;
+  }
+
+  /* Ảnh Brand */
+  .img-brand {
+    @apply rounded-[2rem] object-cover shadow-brand;
+  }
+}
+
+/* Hiệu ứng mượt mà cho khối 96.5% */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
