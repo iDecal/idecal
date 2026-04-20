@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   BASE SYSTEM
+========================= */
 @layer base {
   body {
     @apply bg-white text-text font-sans antialiased;
   }
 
-  /* Ép chuẩn hệ thống tiêu đề Bolder */
+  /* Ép chuẩn hệ thống tiêu đề Bolder (Đã hạ độ đậm xuống 800 theo config mới) */
   h1 { @apply text-h1 text-secondary mb-6 tracking-tighter; }
   h2 { @apply text-h2 text-secondary mb-8 tracking-tight; }
   h3 { @apply text-h3 text-secondary mb-4 tracking-tight; }
@@ -20,20 +23,28 @@
   }
 }
 
+/* =========================
+   COMPONENT SYSTEM
+========================= */
 @layer components {
+  /* CHÌA KHÓA ĐỂ CĂN GIỮA: Định nghĩa container chuẩn iDecal */
+  .container {
+    @apply max-w-7xl mx-auto px-6 w-full;
+  }
+
   /* Nút Báo Giá chuẩn Bolder */
   .btn-primary-solid {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-brand transition-all duration-300 shadow-brand hover:bg-secondary hover:-translate-y-1;
+    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest text-sm rounded-brand transition-all duration-300 shadow-brand hover:bg-secondary hover:-translate-y-1;
   }
 
   /* Nút Xem Chi Tiết */
   .btn-idecal-bold {
-    @apply inline-flex items-center gap-2 font-black uppercase text-xs tracking-[0.2em] text-secondary border-b-4 border-primary pb-1 transition-all hover:text-primary hover:border-secondary;
+    @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-[0.2em] text-secondary border-b-4 border-primary pb-1 transition-all hover:text-primary hover:border-secondary;
   }
 
   /* Card dịch vụ đồng bộ */
   .service-card-brand {
-    @apply bg-white border border-border rounded-brand p-5 shadow-card transition-all duration-500 hover:shadow-brand hover:-translate-y-2;
+    @apply bg-white border border-border rounded-brand p-5 shadow-card transition-all duration-500 hover:shadow-brand hover:-translate-y-2 flex flex-col h-full;
   }
 
   /* Ảnh Brand */
@@ -42,11 +53,14 @@
   }
 }
 
-/* Hiệu ứng mượt mà cho khối 96.5% */
+/* =========================
+   ANIMATIONS
+========================= */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 .animate-fade-up {
   animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
