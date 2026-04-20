@@ -1,0 +1,28 @@
+---
+const projects = [
+  { title: "Toyota Backdrop", category: "Event", image: "/projects/toyota.webp" },
+  { title: "Vinhomes Grand Park", category: "Decal Kính", image: "/projects/vinhomes.webp" },
+  { title: "The Blue Tshirt", category: "Quảng Cáo", image: "/projects/blue-tshirt.webp" },
+];
+---
+<section id="portfolio" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-secondary">Dự án tiêu biểu</h2>
+      </div>
+      <a href="/du-an" class="text-primary font-bold hover:underline">Xem tất cả →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {projects.map(p => (
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-brand aspect-video mb-4">
+            <img src={p.image} alt={p.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+          </div>
+          <p class="text-primary text-xs font-bold uppercase mb-1">{p.category}</p>
+          <h4 class="text-lg font-bold text-secondary">{p.title}</h4>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
