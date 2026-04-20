@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Partners from '../components/Partners.astro';
-import ServiceCard from '../components/ServiceCard.astro'; // Đã tạo từ lượt trước
+import ServiceCard from '../components/ServiceCard.astro';
 import About from '../components/About.astro';
 import Portfolio from '../components/Portfolio.astro';
 import FAQ from '../components/FAQ.astro';
@@ -19,18 +19,8 @@ import FAQ from '../components/FAQ.astro';
     image="/images/hero-decal.jpg" 
   />
   
-  
   <Partners />
-
-  <section class="py-24">
-    <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-      <h2 class="text-3xl md:text-5xl font-bold text-secondary">6 Dịch vụ chính tại iDecal</h2>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map(s => <ServiceCard {...s} />)}
-    </div>
-  </section>
-
+  <ServiceCard />
   <About />
   <Portfolio />
   <FAQ />
