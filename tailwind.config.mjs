@@ -10,7 +10,7 @@ export default {
 					light: '#d0effd',
 				},
 				secondary: {
-					DEFAULT: '#031246', // Xanh đen iDecal
+					DEFAULT: '#031246',
 					light: '#05207c',
 				},
 				background: '#FFFFFF',
@@ -24,20 +24,24 @@ export default {
 				sans: ['Inter', 'sans-serif'],
 			},
 			fontSize: {
-				// Hệ thống H tự động co giãn (Mobile -> Desktop)
-				'h1': ['clamp(2.5rem, 5vw, 4.5rem)', { lineHeight: '1.1', fontWeight: '900' }],
-				'h2': ['clamp(1.75rem, 3.5vw, 3rem)', { lineHeight: '1.2', fontWeight: '900' }],
-				'h3': ['clamp(1.5rem, 2.5vw, 2.25rem)', { lineHeight: '1.3', fontWeight: '800' }],
-				'h4': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.4', fontWeight: '800' }],
-				'h5': ['1.125rem', { lineHeight: '1.5', fontWeight: '700' }],
-				'h6': ['1rem', { lineHeight: '1.5', fontWeight: '700' }],
+				/* GIẢM ĐỘ ĐẬM:
+				   - H1 & H2 hạ xuống 800 (Extra Bold) thay vì 900.
+				   - H3 hạ xuống 700 (Bold).
+				   - Các tiêu đề nhỏ giữ ở mức 600-700 để dễ đọc.
+				*/
+				'h1': ['clamp(1.75rem, 3.5vw, 2.5rem)', { lineHeight: '1.2', fontWeight: '800', letterSpacing: '-0.01em' }],
+				'h2': ['clamp(1.5rem, 3vw, 2.125rem)', { lineHeight: '1.2', fontWeight: '800', letterSpacing: '-0.01em' }],
+				'h3': ['clamp(1.25rem, 2.5vw, 1.625rem)', { lineHeight: '1.3', fontWeight: '700' }],
+				'h4': ['1.125rem', { lineHeight: '1.4', fontWeight: '700' }],
+				'h5': ['1rem', { lineHeight: '1.5', fontWeight: '600' }],
+				'h6': ['0.875rem', { lineHeight: '1.5', fontWeight: '600', letterSpacing: '0.02em' }],
 			},
 			boxShadow: {
-				'card': '0 10px 30px -5px rgba(3, 18, 70, 0.08)',
-				'brand': '0 20px 40px -10px rgba(3, 18, 70, 0.15)',
+				'card': '0 8px 24px -4px rgba(3, 18, 70, 0.06)',
+				'brand': '0 16px 32px -8px rgba(3, 18, 70, 0.1)',
 			},
 			borderRadius: {
-				'brand': '20px', // Bo góc lớn hiện đại
+				'brand': '12px', // Giảm độ bo góc một chút để trông cứng cáp hơn
 			}
 		},
 	},
