@@ -1,12 +1,58 @@
 ---
-// Đảm bảo phần đầu file TRỐNG, không import Services hay Index
-interface Props {
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-}
-const { title, description, image, link } = Astro.props;
+import ServiceCard from './ServiceCard.astro';
+
+// Dữ liệu 6 dịch vụ chính của iDecal
+const services = [
+  { 
+    title: "Phim Cách Nhiệt", 
+    description: "Cách nhiệt 80%, ngăn 99% UV cho nhà kính, bảo vệ sức khỏe và nội thất.", 
+    image: "/images/pcn.webp", 
+    link: "/phim-cach-nhiet" 
+  },
+  { 
+    title: "Decal Mờ 3D", 
+    description: "Vân nổi sống động, độ mờ riêng tư 20-30%, tạo điểm nhấn sang trọng cho vách kính.", 
+    image: "/images/mo3d.webp", 
+    link: "/decal-mo-3d" 
+  },
+  { 
+    title: "Decal Cắt Chữ", 
+    description: "Cắt CNC sắc nét Logo, Sticker thương hiệu theo yêu cầu, độ bền màu cao.", 
+    image: "/images/cat.webp", 
+    link: "/decal-cat-chu" 
+  },
+  { 
+    title: "Phim Nội Thất", 
+    description: "Làm mới bàn ghế, tủ kệ với vân gỗ, đá tự nhiên từ các thương hiệu Octki, Infeel.", 
+    image: "/images/film.webp", 
+    link: "/film-noithat" 
+  },
+  { 
+    title: "Decal Quảng Cáo", 
+    description: "In ấn PP, Vinyl khổ lớn chuyên nghiệp, sắc nét cho showroom và cửa hàng.", 
+    image: "/images/adv.webp", 
+    link: "/decal-quang-cao" 
+  },
+  { 
+    title: "Decal Văn Phòng", 
+    description: "Giải pháp trang trí kính văn phòng trọn gói, chuyên nghiệp tại TP.HCM và lân cận.", 
+    image: "/images/vp.webp", 
+    link: "/decal-van-phong" 
+  }
+];
 ---
-<div class="service-card">
+
+<section class="py-24 bg-slate-50/50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-3">Dịch vụ trọng tâm</p>
+      <h2 class="hero-title">Giải pháp dán kính & Nội thất chuyên nghiệp</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map((service) => (
+        <ServiceCard {...service} />
+      ))}
+    </div>
   </div>
+</section>
