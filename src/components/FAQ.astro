@@ -1,0 +1,20 @@
+---
+const faqs = [
+  { q: "Decal mờ 3D có che hoàn toàn tầm nhìn không?", a: "Sản phẩm này có độ mờ từ 20-30%, giúp tạo không gian riêng tư nhưng vẫn đảm bảo ánh sáng đi qua." },
+  { q: "Phim cách nhiệt bảo hành bao lâu?", a: "Tất cả dòng phim cách nhiệt cao cấp tại iDecal được bảo hành từ 5-10 năm về thông số kỹ thuật." },
+  { q: "Tôi có thể tự dán tại nhà không?", a: "Bạn có thể tự dán, nhưng để đảm bảo tính thẩm mỹ và không bị bọt khí, chúng tôi khuyến khích sử dụng dịch vụ lắp đặt chuyên nghiệp." },
+];
+---
+<section class="py-24 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-secondary text-center mb-12">Câu hỏi thường gặp</h2>
+    <div class="space-y-6">
+      {faqs.map(faq => (
+        <div class="border border-slate-100 p-6 rounded-brand bg-slate-50/50">
+          <h4 class="font-bold text-secondary mb-2">Q: {faq.q}</h4>
+          <p class="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
