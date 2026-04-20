@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 // Thêm các dòng import dưới đây:
-import Hero from '../components/Hero.astro';
+import hero from '../components/hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import ProcessStep from '../components/ProcessStep.astro';
 
@@ -11,7 +11,7 @@ const description = "Chuyên gia cung cấp giải pháp decal dán kính, phim 
 
 <Layout title={title} description={description}>
   <main class="bg-surface-100">
-    <Hero 
+    <hero 
       badge="Đối tác của 200+ công ty nội thất"
       ...
     />
