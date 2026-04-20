@@ -3,32 +3,37 @@
 @tailwind utilities;
 
 /* =========================
-   ROOT (Design Tokens)
+   ROOT
 ========================= */
 :root {
   --color-brand-dark: #031246;
-  --color-brand-primary: #17abeb; /* đồng bộ với tailwind.config */
+  --color-brand-primary: #17abeb;
 }
 
 /* =========================
-   BASE (Typography / Reset)
+   BASE
 ========================= */
 @layer base {
-  h1 {
-    @apply text-4xl md:text-6xl font-extrabold leading-tight text-secondary mb-8;
-  }
-
   body {
     @apply bg-background text-text font-sans;
   }
+
+  h1 {
+    @apply text-4xl md:text-6xl font-extrabold leading-tight text-secondary mb-8;
+  }
 }
 
 /* =========================
-   COMPONENTS (Reusable UI)
+   COMPONENTS
 ========================= */
 @layer components {
 
-  /* ===== BUTTON SYSTEM ===== */
+  /* ===== CONTAINER ===== */
+  .container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  /* ===== BUTTON ===== */
   .btn {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-brand font-semibold transition;
   }
@@ -58,17 +63,104 @@
   }
 
   /* ===== HERO ===== */
+  .hero {
+    @apply py-20;
+  }
+
+  .hero .container {
+    @apply grid lg:grid-cols-2 gap-12 items-center;
+  }
+
   .hero-title {
     @apply text-4xl md:text-5xl font-bold text-secondary leading-tight;
+  }
+
+  .hero-subtitle {
+    @apply text-text-muted mb-3;
   }
 
   .hero-desc {
     @apply text-text-muted mt-4 text-lg;
   }
 
-  /* ===== CARD ===== */
-  .card {
-    @apply bg-white border border-border rounded-brand shadow-card;
+  .hero-actions {
+    @apply mt-6 flex gap-4 flex-wrap;
   }
 
+  .hero-features {
+    @apply mt-6 flex flex-wrap gap-4 text-sm text-text-muted;
+  }
+
+  .hero-media {}
+
+  .hero-card {
+    @apply relative bg-white border border-border rounded-brand shadow-card p-6;
+  }
+
+  .hero-image {
+    @apply w-full h-64 bg-gray-100 rounded;
+  }
+
+  .hero-logo {
+    @apply absolute top-4 left-4 font-bold text-secondary;
+  }
+
+  .hero-stats {
+    @apply absolute bottom-4 right-4 bg-white px-4 py-2 rounded shadow;
+  }
+
+  .stats-number {
+    @apply text-xl font-bold text-secondary;
+  }
+
+  .stats-text {
+    @apply text-xs text-text-muted;
+  }
+
+  /* ===== SECTION ===== */
+  .section-header {
+    @apply text-center mb-16;
+  }
+
+  .section-subtitle {
+    @apply text-primary font-extrabold uppercase tracking-widest text-xs mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-secondary;
+  }
+
+  /* ===== SERVICES ===== */
+  .services {
+    @apply py-20 bg-slate-50/50;
+  }
+
+  .services-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  /* ===== SERVICE CARD ===== */
+  .service-card {
+    @apply block bg-white border border-border rounded-brand overflow-hidden shadow-card transition;
+  }
+
+  .service-card:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  .service-image img {
+    @apply w-full h-48 object-cover;
+  }
+
+  .service-content {
+    @apply p-5;
+  }
+
+  .service-title {
+    @apply text-lg font-semibold text-secondary mb-2;
+  }
+
+  .service-desc {
+    @apply text-text-muted text-sm;
+  }
 }
