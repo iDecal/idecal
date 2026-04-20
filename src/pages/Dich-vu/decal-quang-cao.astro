@@ -1,85 +1,88 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro';
 
-const faqs = [
-  { q: "iDecal có hỗ trợ thiết kế file in không?", a: "Có, đội ngũ thiết kế của chúng tôi sẽ hỗ trợ tối ưu file in, kiểm tra độ phân giải và chỉnh sửa màu sắc chuẩn CMYK để đảm bảo bản in sắc nét nhất." },
-  { q: "Loại decal nào phù hợp dán xe tải quảng cáo?", a: "Đối với xe tải, iDecal tư vấn sử dụng Decal sữa chuyên dụng hoặc Decal 3M cao cấp có độ bám dính cực cao và chịu được nắng mưa." },
-  { q: "Thời gian in ấn và thi công mất bao lâu?", a: "Với các đơn hàng dưới 50m2, iDecal có thể hoàn thiện in ấn và thi công ngay trong 24h để kịp tiến độ của khách hàng." },
-  { q: "Bản in decal quảng cáo có bị bay màu không?", a: "Chúng tôi sử dụng mực in UV Nhật Bản và cán thêm lớp màng bảo vệ, giúp màu sắc bền bỉ từ 2-5 năm ngoài trời." }
+// Dữ liệu giả lập cho các công trình đã thực hiện
+const projects = [
+  {
+    title: "Dán Decal Quảng Cáo Chuỗi Xe Tải Coca-Cola",
+    type: "Decal 3M Cao Cấp",
+    image: "/images/congtrinh-xetai-1.webp",
+    size: "250m2"
+  },
+  {
+    title: "Thi Công Decal Lưới & Cắt Chữ Showroom Toyota",
+    type: "Decal Lưới / Cắt Vi Tính",
+    image: "/images/congtrinh-showroom-1.webp",
+    size: "80m2"
+  },
+  {
+    title: "In POSM & Standee Quảng Cáo Sự Kiện VinFast",
+    type: "In PP Bồi Formex",
+    image: "/images/congtrinh-posm-1.webp",
+    size: "150m2"
+  }
 ];
 ---
 
-<Layout title="Thi Công Decal Quảng Cáo Chuyên Nghiệp | iDecal">
+<Layout title="Thi Công & In Ấn Decal Quảng Cáo Chuyên Nghiệp | iDecal">
   
-  <section class="py-24 bg-slate-900 text-white relative">
-    <div class="container grid lg:grid-cols-2 gap-12 items-center">
+  <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      
       <div class="animate-fade-up">
-        <h6 class="text-primary tracking-[0.3em]">Branding Solution</h6>
-        <h1 class="text-white">In Ấn & Thi Công Decal Quảng Cáo</h1>
-        <p class="text-slate-400 text-lg">Dịch vụ trọn gói từ thiết kế đến thi công với các dòng vật liệu <strong>Decal sữa, Decal trong, Decal 3M</strong> cao cấp.</p>
-        <div class="mt-8 flex gap-4">
-          <a href="#" class="btn-primary-solid">Nhận báo giá</a>
+        <h6 class="text-slate-300 tracking-[0.3em] font-bold">Giải pháp thương hiệu</h6>
+        
+        <h1 class="text-white !important leading-tight">In Ấn & Thi Công Decal Quảng Cáo Khổ Lớn</h1>
+        
+        <p class="text-slate-300 text-lg leading-relaxed">
+          Tối ưu diện mạo kinh doanh với dịch vụ trọn gói từ <strong>thiết kế</strong>, <strong>in ấn</strong> sắc nét đến <strong>thi công</strong> chuẩn xác trên mọi bề mặt: Xe tải, Vách kính, Bảng hiệu, Standee.
+        </p>
+        
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="#quote" class="btn-primary-solid">Liên hệ báo giá ngay</a>
+          <a href="#portfolio" class="btn-idecal-bold text-white border-white transition-colors hover:text-primary hover:border-primary">Xem công trình thực tế</a>
         </div>
       </div>
-      <div class="relative"><img src="/images/hero-qc.webp" class="img-brand w-full h-[400px]" alt="Decal quảng cáo" /></div>
+      
+      <div class="relative group">
+        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+        <img 
+          src="/images/hero-decal-quangcao.webp" 
+          alt="Thi công decal quảng cáo trên xe tải" 
+          class="img-brand w-full h-[450px] object-cover relative z-10 transition-transform duration-500 group-hover:scale-105" 
+        />
+      </div>
     </div>
+    
+    <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent"></div>
   </section>
 
-  <section class="py-24 bg-white">
+  <section id="portfolio" class="py-24 bg-white border-b border-slate-100/50">
     <div class="container">
       <div class="text-center mb-16">
-        <h6>Năng lực iDecal</h6>
-        <h2>Dịch vụ In & Thiết kế</h2>
+        <h6 class="text-primary tracking-widest uppercase">Uy tín đã được khẳng định</h6>
+        <h2>Công trình Decal Quảng Cáo tiêu biểu</h2>
+        <p class="max-w-2xl mx-auto italic">Chúng tôi tự hào là đối tác tin cậy của hàng trăm doanh nghiệp tại TP.HCM và các tỉnh lân cận.</p>
       </div>
+
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="service-card-brand bg-slate-50/50 border-none"> <h4 class="!mb-4 text-primary">In Kỹ Thuật Số</h4>
-          <p class="text-sm">In <strong>PP bồi Formex</strong>, <strong>Decal trong</strong> cán màng bóng/mờ cho độ bền vượt trội.</p>
-        </div>
-        <div class="service-card-brand bg-slate-50/50 border-none">
-          <h4 class="!mb-4 text-primary">Decal Xe Tải</h4>
-          <p class="text-sm">Sử dụng <strong>Decal 3M</strong> chuyên dụng, bám dính cực tốt, không để lại keo khi gỡ.</p>
-        </div>
-        <div class="service-card-brand bg-slate-50/50 border-none">
-          <h4 class="!mb-4 text-primary">Biển Hiệu & POSM</h4>
-          <p class="text-sm">Thi công <strong>Decal lưới</strong>, <strong>Decal cắt chữ</strong> bảng hiệu chuyên nghiệp.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-24 bg-blue-50/40 border-y border-blue-100/50">
-    <div class="container grid lg:grid-cols-2 gap-16 items-center">
-      <div class="order-2 lg:order-1">
-        <img src="/images/tech.webp" class="img-brand shadow-blue-900/5" alt="Công nghệ in" />
-      </div>
-      <div class="order-1 lg:order-2">
-        <h2>Công nghệ & Vật liệu</h2>
-        <p>Chúng tôi sử dụng <strong>mực UV Nhật Bản</strong> và các dòng <strong>Decal chính hãng</strong> giúp bản in sắc nét, không bong tróc mép sau thời gian dài sử dụng.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-24 bg-slate-50/80">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h6>Hỏi đáp</h6>
-        <h2>Giải đáp thắc mắc</h2>
-      </div>
-      <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6">
-        {faqs.map((faq) => (
-          <div class="faq-item">
-            <details class="faq-details group lg:pointer-events-none" open>
-              <summary class="flex items-center justify-between py-4 font-bold text-secondary group-open:text-primary px-2">
-                <span class="flex gap-4 items-start">
-                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-[10px] flex items-center justify-center font-black">Q</span>
-                  <span class="text-secondary">{faq.q}</span>
-                </span>
-              </summary>
-              <div class="flex gap-4 p-5 bg-white rounded-2xl animate-fadeIn items-start shadow-sm border border-slate-100">
-                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-secondary/40 text-[10px] flex items-center justify-center font-black">A</span>
-                <p class="text-text-muted text-sm leading-relaxed !mb-0">{faq.a}</p>
+        {projects.map((project) => (
+          <div class="group overflow-hidden rounded-[2rem] bg-white shadow-card transition-all duration-300 hover:shadow-brand hover:-translate-y-2">
+            <div class="overflow-hidden h-64">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+              />
+            </div>
+            
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full">{project.type}</span>
+                <span class="text-xs text-text-muted">Khối lượng: {project.size}</span>
               </div>
-            </details>
+              <h4 class="text-base text-secondary !mb-0 group-hover:text-primary transition-colors">{project.title}</h4>
+            </div>
           </div>
         ))}
       </div>
@@ -89,25 +92,12 @@ const faqs = [
 </Layout>
 
 <style>
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-  .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
-  summary::-webkit-details-marker { display: none; }
-  @media (min-width: 1024px) { .faq-details { display: block !important; } .faq-details div { display: flex !important; } }
-  @media (max-width: 1023px) { 
-    .faq-details div { display: none; } 
-    .faq-details[open] div { display: flex; } 
-    .faq-details[open] { @apply mb-4; }
+  /* Hiệu ứng FadeIn cho Hero */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 </style>
-
-<script>
-  function setupFAQ() {
-    const isDesktop = window.innerWidth >= 1024;
-    document.querySelectorAll('.faq-details').forEach(el => {
-      if (isDesktop) el.setAttribute('open', '');
-      else el.removeAttribute('open');
-    });
-  }
-  setupFAQ();
-  window.addEventListener('resize', setupFAQ);
-</script>
