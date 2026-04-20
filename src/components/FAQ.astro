@@ -50,7 +50,8 @@ const faqs = [
                 </svg>
               </span>
             </summary>
-            <div class="flex gap-3 text-slate-600 leading-relaxed text-base pb-4 animate-fadeIn">
+            
+            <div class="flex gap-3 text-slate-600 lg:text-secondary lg:text-sm lg:font-bold leading-relaxed text-base pb-4 animate-fadeIn">
               <span class="text-primary font-bold opacity-50">A.</span>
               <p>{faq.a}</p>
             </div>
@@ -62,7 +63,6 @@ const faqs = [
 </section>
 
 <style>
-  /* Hiệu ứng mượt mà */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
@@ -75,7 +75,6 @@ const faqs = [
     display: none;
   }
 
-  /* Force mở trên Desktop và ẩn icon mũi tên */
   @media (min-width: 1024px) {
     .faq-details {
       display: block !important;
@@ -83,13 +82,11 @@ const faqs = [
     .faq-details[open] summary {
       cursor: default;
     }
-    /* Luôn hiển thị nội dung trên desktop bất kể thuộc tính open */
     .faq-details div {
       display: flex !important;
     }
   }
 
-  /* Trên Mobile: Đóng mặc định, mở khi nhấn */
   @media (max-width: 1023px) {
     .faq-details div {
       display: none;
@@ -101,7 +98,6 @@ const faqs = [
 </style>
 
 <script>
-  // Script để đảm bảo trên Desktop luôn ở trạng thái 'open' để đúng chuẩn SEO và hiển thị
   function handleDesktopFAQ() {
     if (window.innerWidth >= 1024) {
       document.querySelectorAll('.faq-details').forEach(el => {
@@ -109,8 +105,6 @@ const faqs = [
       });
     }
   }
-  
-  // Chạy khi load và khi resize
   handleDesktopFAQ();
   window.addEventListener('resize', handleDesktopFAQ);
 </script>
