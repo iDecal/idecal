@@ -10,9 +10,18 @@
     @apply bg-white text-text font-sans antialiased;
   }
 
-  /* Ép chuẩn hệ thống tiêu đề Bolder (Đã hạ độ đậm xuống 800 theo config mới) */
-  h1 { @apply text-h1 text-secondary mb-6 tracking-tighter; }
-  h2 { @apply text-h2 text-secondary mb-8 tracking-tight; }
+  /* H1 & H2 được tinh chỉnh:
+     - Trên mobile: tăng thêm 1 bậc (text-4xl cho h1, text-3xl cho h2)
+     - Trên desktop (md): quay về text-h1, text-h2 chuẩn
+  */
+  h1 { 
+    @apply text-4xl md:text-h1 text-secondary mb-6 tracking-tighter font-bold; 
+  }
+  
+  h2 { 
+    @apply text-3xl md:text-h2 text-secondary mb-8 tracking-tight font-bold; 
+  }
+
   h3 { @apply text-h3 text-secondary mb-4 tracking-tight; }
   h4 { @apply text-h4 text-secondary mb-3; }
   h5 { @apply text-h5 text-secondary mb-2; }
