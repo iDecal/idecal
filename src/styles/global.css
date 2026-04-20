@@ -19,18 +19,46 @@
   }
 
   h1 {
-    @apply text-4xl md:text-6xl font-extrabold leading-tight text-secondary mb-8;
+    @apply text-4xl md:text-6xl font-extrabold leading-tight text-secondary mb-6;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold text-secondary;
+  }
+
+  p {
+    @apply text-text-muted leading-relaxed;
   }
 }
 
 /* =========================
-   COMPONENTS
+   COMPONENT SYSTEM
 ========================= */
 @layer components {
 
-  /* ===== CONTAINER ===== */
+  /* ===== LAYOUT ===== */
   .container {
     @apply max-w-7xl mx-auto px-6;
+  }
+
+  .section {
+    @apply py-20;
+  }
+
+  .section-soft {
+    @apply py-20 bg-slate-50/50;
+  }
+
+  .section-header {
+    @apply text-center mb-16;
+  }
+
+  .section-subtitle {
+    @apply text-primary font-bold uppercase tracking-widest text-xs mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-secondary;
   }
 
   /* ===== BUTTON ===== */
@@ -62,12 +90,46 @@
     @apply text-primary border-primary;
   }
 
-  /* ===== HERO ===== */
-  .hero {
-    @apply py-20;
+  /* ===== GRID SYSTEM ===== */
+  .grid-2 {
+    @apply grid md:grid-cols-2 gap-8;
   }
 
-  .hero .container {
+  .grid-3 {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  /* ===== CARD (DÙNG CHUNG) ===== */
+  .card {
+    @apply bg-white border border-border rounded-brand shadow-card overflow-hidden transition;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  .card-image img {
+    @apply w-full h-48 object-cover;
+  }
+
+  .card-body {
+    @apply p-5;
+  }
+
+  .card-title {
+    @apply text-lg font-semibold text-secondary mb-2;
+  }
+
+  .card-desc {
+    @apply text-text-muted text-sm;
+  }
+
+  /* ===== HERO (CHỈ GIỮ STRUCTURE) ===== */
+  .hero {
+    @apply section;
+  }
+
+  .hero-layout {
     @apply grid lg:grid-cols-2 gap-12 items-center;
   }
 
@@ -91,10 +153,8 @@
     @apply mt-6 flex flex-wrap gap-4 text-sm text-text-muted;
   }
 
-  .hero-media {}
-
   .hero-card {
-    @apply relative bg-white border border-border rounded-brand shadow-card p-6;
+    @apply relative card p-6;
   }
 
   .hero-image {
@@ -115,52 +175,5 @@
 
   .stats-text {
     @apply text-xs text-text-muted;
-  }
-
-  /* ===== SECTION ===== */
-  .section-header {
-    @apply text-center mb-16;
-  }
-
-  .section-subtitle {
-    @apply text-primary font-extrabold uppercase tracking-widest text-xs mb-3;
-  }
-
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-secondary;
-  }
-
-  /* ===== SERVICES ===== */
-  .services {
-    @apply py-20 bg-slate-50/50;
-  }
-
-  .services-grid {
-    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
-  }
-
-  /* ===== SERVICE CARD ===== */
-  .service-card {
-    @apply block bg-white border border-border rounded-brand overflow-hidden shadow-card transition;
-  }
-
-  .service-card:hover {
-    @apply -translate-y-1 shadow-lg;
-  }
-
-  .service-image img {
-    @apply w-full h-48 object-cover;
-  }
-
-  .service-content {
-    @apply p-5;
-  }
-
-  .service-title {
-    @apply text-lg font-semibold text-secondary mb-2;
-  }
-
-  .service-desc {
-    @apply text-text-muted text-sm;
   }
 }
