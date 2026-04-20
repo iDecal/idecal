@@ -1,46 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+// Thêm các dòng import dưới đây:
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ProcessStep from '../components/ProcessStep.astro';
 
 const title = "iDecal.vn | Decal dán kính cách nhiệt & Decal mờ trang trí chuyên nghiệp";
-const description = "Chuyên gia cung cấp giải pháp decal dán kính, phim cách nhiệt nhà kính, văn phòng tại TP. Thủ Đức, TP.HCM & Bình Dương. Đối tác của 200+ công ty nội thất.";
+const description = "Chuyên gia cung cấp giải pháp decal dán kính, phim cách nhiệt nhà kính, văn phòng...";
 ---
 
 <Layout title={title} description={description}>
   <main class="bg-surface-100">
-    
     <Hero 
       badge="Đối tác của 200+ công ty nội thất"
-      title="iDecal – Decal dán kính"
-      highlight="cách nhiệt"
-      description="Giải pháp hàng đầu cho không gian văn phòng và căn hộ. Chúng tôi cam kết chất lượng vật liệu chính hãng và kỹ thuật thi công sắc nét."
-      image="/Dich-vu-decal-dan-kinh-cach-nhiet.webp"
-      stats="96.5%"
-    >
-      <Fragment slot="features">
-        <div class="flex items-center gap-2"><span class="text-primary text-xl">✓</span> Thi công chuyên nghiệp</div>
-        <div class="flex items-center gap-2"><span class="text-primary text-xl">✓</span> Bảo hành 2-5 năm</div>
-        <div class="flex items-center gap-2"><span class="text-primary text-xl">✓</span> Giá cạnh tranh</div>
-      </Fragment>
-    </Hero>
-
+      ...
+    />
+    
     <section class="py-24">
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-        <ServiceCard 
-          title="Decal mờ 3D" 
-          description="Thiết kế vân nổi sống động. Tạo chiều sâu, nét độc đáo sang trọng cho kính." 
-          image="/images/decal-mo-3d.webp" 
-          link="/decal-mo-3d" 
-        />
-        </div>
+        <ServiceCard ... />
+      </div>
     </section>
 
-    <section class="py-24 bg-surface-200">
-       <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-8">
-          <ProcessStep number="01" title="Thiết kế độc quyền" description="..." />
-          <ProcessStep number="02" title="In ấn sắc nét" description="..." />
-          <ProcessStep number="03" title="Thi công tận tâm" description="..." />
-       </div>
-    </section>
-
-  </main>
+    </main>
 </Layout>
