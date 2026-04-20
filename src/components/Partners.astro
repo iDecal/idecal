@@ -1,0 +1,16 @@
+---
+const partners = [
+  { name: "Toyota", logo: "/logos/toyota.svg" },
+  { name: "Vinhome", logo: "/logos/vinhome.svg" },
+  { name: "The Blue Tshirt", logo: "/logos/blue-tshirt.svg" },
+  { name: "Shop the Hive", logo: "/logos/the-hive.svg" },
+];
+---
+<section class="py-12 border-y border-slate-100 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <p class="text-center text-slate-400 text-sm font-bold uppercase tracking-widest mb-8">Đối tác tin cậy</p>
+    <div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+       {partners.map(p => <img src={p.logo} alt={p.name} class="h-8 md:h-12 w-auto" />)}
+    </div>
+  </div>
+</section>
