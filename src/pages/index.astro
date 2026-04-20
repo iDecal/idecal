@@ -1,96 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import hero from '../components/hero.astro';
-import ServiceCard from '../components/ServiceCard.astro';
+import Hero from '../components/Hero.astro';
+import Partners from '../components/Partners.astro';
+import ServiceCard from '../components/ServiceCard.astro'; // Đã tạo từ lượt trước
+import About from '../components/About.astro';
+import Portfolio from '../components/Portfolio.astro';
+import FAQ from '../components/FAQ.astro';
 
-// Dữ liệu 6 dịch vụ thế mạnh của iDecal
+// Dữ liệu 6 dịch vụ chính
 const services = [
-  {
-    title: "Phim Cách Nhiệt",
-    description: "Giải pháp từ 3M, Llumar: Cách nhiệt đến 80%, ngăn 99% tia UV. Bảo vệ sức khỏe và nội thất tối ưu.",
-    image: "/images/phim-cach-nhiet.webp",
-    link: "/phim-cach-nhiet"
-  },
-  {
-    title: "Decal Mờ 3D",
-    description: "Thiết kế vân nổi sống động, tạo chiều sâu và sự riêng tư tinh tế với độ che chắn 20-30%.",
-    image: "/images/decal-mo-3d.webp",
-    link: "/decal-mo-3d"
-  },
-  {
-    title: "Decal Cắt Chữ",
-    description: "Cắt máy CNC sắc nét cho Logo, Sticker, nhãn dán thương hiệu. Bền màu và bám dính cực tốt.",
-    image: "/images/decal-cat-chu.webp",
-    link: "/decal-cat-chu"
-  },
-  {
-    title: "Phim Dán Nội Thất",
-    description: "Tái tạo không gian với vân gỗ, vân đá, kim loại. Làm mới bàn ghế, tủ kệ nhanh chóng và tiết kiệm.",
-    image: "/images/film-noithat.webp",
-    link: "/film-noithat"
-  },
-  {
-    title: "Decal Quảng Cáo",
-    description: "In ấn khổ lớn trên chất liệu PP, Vinyl bền màu. Phù hợp dán tường, dán xe và các chiến dịch event.",
-    image: "/images/decal-quang-cao.webp",
-    link: "/decal-quang-cao"
-  },
-  {
-    title: "Decal Văn Phòng",
-    description: "Tạo không gian làm việc chuyên nghiệp, che mờ vách kính ngăn phòng kết hợp cắt Logo thương hiệu.",
-    image: "/images/decal-van-phong.webp",
-    link: "/decal-van-phong"
-  }
+  { title: "Phim Cách Nhiệt", description: "Cách nhiệt 80%, ngăn 99% UV cho nhà kính.", image: "/images/pcn.webp", link: "/phim-cach-nhiet" },
+  { title: "Decal Mờ 3D", description: "Vân nổi sống động, độ mờ riêng tư 20-30%.", image: "/images/mo3d.webp", link: "/decal-mo-3d" },
+  { title: "Decal Cắt Chữ", description: "Cắt CNC sắc nét Logo, Sticker thương hiệu.", image: "/images/cat.webp", link: "/decal-cat-chu" },
+  { title: "Phim Nội Thất", description: "Làm mới bàn ghế, tủ kệ với vân gỗ, đá.", image: "/images/film.webp", link: "/film-noithat" },
+  { title: "Decal Quảng Cáo", description: "In ấn PP, Vinyl khổ lớn chuyên nghiệp.", image: "/images/adv.webp", link: "/decal-quang-cao" },
+  { title: "Decal Văn Phòng", description: "Giải pháp trang trí kính văn phòng trọn gói.", image: "/images/vp.webp", link: "/decal-van-phong" }
 ];
-
-const title = "iDecal.vn | Giải pháp Decal & Phim Cách Nhiệt Chuyên Nghiệp";
-const description = "Chuyên gia thi công decal dán kính, phim cách nhiệt nhà kính, văn phòng tại TP.HCM, Bình Dương và Quy Nhơn.";
 ---
 
-<Layout title={title} description={description}>
-  <main class="bg-white">
-    <Hero 
-      badge="Đối tác của 200+ công ty nội thất"
-      title="Nâng tầm không gian với"
-      highlight="Decal & Phim Cách Nhiệt"
-      description="Chuyên gia cung cấp giải pháp decal dán kính chuyên nghiệp, chống nóng tối ưu cho văn phòng và căn hộ tại miền Nam."
-      image="/images/hero-idecal.webp"
-    />
+<Layout title="iDecal - Chuyên gia Decal & Phim Cách Nhiệt">
+  <Hero 
+    badge="Thi công chuyên nghiệp"
+    title="Giải pháp dán kính"
+    highlight="Toàn diện"
+    description="Chuyên thi công Decal mờ, Phim cách nhiệt và In ấn quảng cáo tại TP.HCM, Bình Dương, Quy Nhơn."
+    image="/images/hero-home.webp"
+  />
+  
+  <Partners />
 
-    <section class="py-24 bg-white">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-3">Dịch vụ thế mạnh</h2>
-          <h3 class="text-3xl md:text-5xl font-bold text-secondary mb-4">Giải pháp Decal trọn gói</h3>
-          <p class="text-slate-600 text-lg">Thi công nhanh chóng, thẩm mỹ cao với đội ngũ kỹ thuật giàu kinh nghiệm.</p>
-        </div>
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold text-secondary">6 Dịch vụ chính tại iDecal</h2>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {services.map(s => <ServiceCard {...s} />)}
+    </div>
+  </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <ServiceCard 
-              title={service.title}
-              description={service.description}
-              image={service.image}
-              link={service.link}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-secondary py-16">
-      <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-white mb-6">Bạn cần tư vấn giải pháp phù hợp?</h2>
-        <p class="text-primary-light/80 mb-8 max-w-xl mx-auto">Liên hệ ngay để nhận khảo sát thực tế và báo giá miễn phí trong 24h.</p>
-        <div class="flex justify-center gap-4">
-          <a href="tel:0900000000" class="bg-primary text-white px-8 py-3 rounded-brand font-bold hover:bg-primary-dark transition-all">
-            GỌI NGAY
-          </a>
-          <a href="/lien-he" class="border border-white text-white px-8 py-3 rounded-brand font-bold hover:bg-white hover:text-secondary transition-all">
-            NHẬN BÁO GIÁ
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <About />
+  <Portfolio />
+  <FAQ />
 </Layout>
