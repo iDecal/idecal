@@ -1,58 +1,68 @@
 ---
-import ServiceCard from './ServiceCard.astro';
-
-// Dữ liệu 6 dịch vụ chính của iDecal
 const services = [
   { 
     title: "Phim Cách Nhiệt", 
-    description: "Cách nhiệt 80%, ngăn 99% UV cho nhà kính, bảo vệ sức khỏe và nội thất.", 
+    description: "Cách nhiệt 80%, ngăn 99% UV cho nhà kính.", 
     image: "/images/pcn.webp", 
     link: "/phim-cach-nhiet" 
   },
   { 
     title: "Decal Mờ 3D", 
-    description: "Vân nổi sống động, độ mờ riêng tư 20-30%, tạo điểm nhấn sang trọng cho vách kính.", 
+    description: "Vân nổi sống động, tăng tính riêng tư.", 
     image: "/images/mo3d.webp", 
     link: "/decal-mo-3d" 
   },
   { 
     title: "Decal Cắt Chữ", 
-    description: "Cắt CNC sắc nét Logo, Sticker thương hiệu theo yêu cầu, độ bền màu cao.", 
+    description: "Cắt CNC logo, sticker theo yêu cầu.", 
     image: "/images/cat.webp", 
     link: "/decal-cat-chu" 
   },
   { 
     title: "Phim Nội Thất", 
-    description: "Làm mới bàn ghế, tủ kệ với vân gỗ, đá tự nhiên từ các thương hiệu Octki, Infeel.", 
+    description: "Làm mới nội thất với vân gỗ, đá.", 
     image: "/images/film.webp", 
     link: "/film-noithat" 
   },
   { 
     title: "Decal Quảng Cáo", 
-    description: "In ấn PP, Vinyl khổ lớn chuyên nghiệp, sắc nét cho showroom và cửa hàng.", 
+    description: "In PP, Vinyl sắc nét.", 
     image: "/images/adv.webp", 
     link: "/decal-quang-cao" 
   },
   { 
     title: "Decal Văn Phòng", 
-    description: "Giải pháp trang trí kính văn phòng trọn gói, chuyên nghiệp tại TP.HCM và lân cận.", 
+    description: "Thi công trọn gói văn phòng.", 
     image: "/images/vp.webp", 
     link: "/decal-van-phong" 
   }
 ];
 ---
 
-<section class="py-24 bg-slate-50/50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <p class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-3">Dịch vụ trọng tâm</p>
-      <h2 class="hero-title">Giải pháp dán kính & Nội thất chuyên nghiệp</h2>
+<section class="services">
+  <div class="container">
+
+    <div class="section-header">
+      <p class="section-subtitle">Dịch vụ trọng tâm</p>
+      <h2 class="section-title">Giải pháp dán kính & Nội thất</h2>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <ServiceCard {...service} />
+    <div class="services-grid">
+      {services.map((item) => (
+        <a href={item.link} class="service-card">
+
+          <div class="service-card-image">
+            <img src={item.image} alt={item.title} loading="lazy" />
+          </div>
+
+          <div class="service-card-body">
+            <h3 class="service-card-title">{item.title}</h3>
+            <p class="service-card-desc">{item.description}</p>
+          </div>
+
+        </a>
       ))}
     </div>
+
   </div>
 </section>
