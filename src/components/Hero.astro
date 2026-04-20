@@ -1,53 +1,58 @@
-<section class="hero">
-  <div class="container">
+<section class="py-16 md:py-24 overflow-hidden">
+  <div class="container grid lg:grid-cols-2 gap-12 items-center">
+    
+    <div class="z-10">
+      <p class="text-primary font-bold uppercase tracking-widest text-xs mb-4">
+        Thi công chuyên nghiệp
+      </p>
 
-    <!-- LEFT -->
-    <div>
-      <p class="hero-subtitle">Thi công chuyên nghiệp</p>
-
-      <h1 class="hero-title">
-        Giải pháp dán kính 
+      <h1 class="text-h1">
+        Giải pháp dán kính <br />
         <span class="text-primary">Toàn diện</span>
       </h1>
 
-      <p class="hero-desc">
+      <p class="text-text-muted text-lg mb-8 max-w-lg">
         Chuyên thi công Decal mờ, Phim cách nhiệt và In ấn quảng cáo 
         tại TP.HCM, Bình Dương, Quy Nhơn.
       </p>
 
-      <!-- BUTTON -->
-      <div class="hero-actions">
-        <a href="/lien-he" class="btn btn-primary">
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="/lien-he" class="btn-primary-solid">
           Báo giá ngay
         </a>
 
-        <a href="/du-an" class="btn-text">
+        <a href="/du-an" class="btn-idecal-bold">
           Xem công trình
         </a>
       </div>
 
-      <!-- FEATURES -->
-      <div class="hero-features">
-        <span>✔ Thi công chuyên nghiệp</span>
-        <span>✔ Bảo hành 2-5 năm</span>
-        <span>✔ Giá cạnh tranh</span>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-muted font-medium">
+        <span class="flex items-center gap-2">✔ Thi công chuyên nghiệp</span>
+        <span class="flex items-center gap-2">✔ Bảo hành 2-5 năm</span>
+        <span class="flex items-center gap-2">✔ Giá cạnh tranh</span>
       </div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="hero-media">
-      <div class="hero-card">
+    <div class="relative">
+      <div class="absolute -inset-4 bg-primary/5 rounded-[2.5rem] -rotate-2"></div>
+      
+      <div class="relative bg-white border border-border rounded-brand shadow-brand overflow-hidden p-4">
+        
+        <div class="absolute top-8 left-8 bg-white/90 backdrop-blur px-4 py-1 rounded-full shadow-sm z-20">
+          <span class="font-black text-secondary text-sm tracking-tighter">iDecal</span>
+        </div>
 
-        <!-- LOGO -->
-        <div class="hero-logo">iDecal</div>
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-slate-100">
+           <img 
+            src="/images/hero-decal.webp" 
+            alt="Thi công iDecal" 
+            class="w-full h-full object-cover"
+           />
+        </div>
 
-        <!-- IMAGE -->
-        <div class="hero-image"></div>
-
-        <!-- STATS -->
-        <div class="hero-stats">
-          <div class="stats-number">96.5%</div>
-          <div class="stats-text">khách hàng hài lòng</div>
+        <div class="absolute bottom-8 right-8 bg-white p-4 rounded-2xl shadow-brand border border-slate-50 animate-fade-up">
+          <div class="text-2xl font-black text-secondary line-height-1">96.5%</div>
+          <div class="text-[10px] uppercase font-bold text-text-muted tracking-wider">khách hàng hài lòng</div>
         </div>
 
       </div>
