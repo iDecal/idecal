@@ -1,5 +1,18 @@
 import { defineCollection, z } from 'astro:content';
 
+// PHẢI ĐỊNH NGHĨA blogCollection TRƯỚC KHI DÙNG
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.date(),
+    category: z.enum(['Kiến thức', 'Dự án', 'Khuyến mãi']),
+    image: z.string(),
+  }),
+});
+
+// ĐỊNH NGHĨA projectsCollection
 const projectsCollection = defineCollection({
   type: 'content',
   schema: z.object({
@@ -12,7 +25,8 @@ const projectsCollection = defineCollection({
   }),
 });
 
+// SAU ĐÓ MỚI EXPORT
 export const collections = {
-  'blog': blogCollection, // Blog đã tạo trước đó
-  'projects': projectsCollection, // Thêm mới Dự án
+  'blog': blogCollection,
+  'projects': projectsCollection,
 };
