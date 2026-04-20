@@ -4,36 +4,40 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				// Xanh dương sáng (Màu chính - Action/Accent)
 				primary: {
 					DEFAULT: '#17abeb',
-					dark: '#1499d3', // Tông đậm hơn một chút cho hover
-					light: '#d0effd', // Tông rất nhạt để làm nền nhấn
+					dark: '#1499d3',
+					light: '#d0effd',
 				},
-				// Xanh đen đậm (Màu phụ - Text/Headers/Footers)
 				secondary: {
-					DEFAULT: '#031246',
+					DEFAULT: '#031246', // Xanh đen iDecal
 					light: '#05207c',
 				},
-				// Định nghĩa rõ ràng màu nền và màu văn bản để giao diện rõ ràng
-				background: '#FFFFFF', // Nền trắng thuần
+				background: '#FFFFFF',
 				text: {
-					DEFAULT: '#031246', // Chữ chính dùng màu xanh đen đậm thay vì đen thuần
-					muted: '#64748b',   // Chữ phụ, mô tả (màu xám)
+					DEFAULT: '#031246', 
+					muted: '#64748b',   
 				},
-				// Màu đường kẻ, viền (Border) để phân chia bố cục
-				border: '#e2e8f0', // Xám nhạt
+				border: '#e2e8f0',
 			},
 			fontFamily: {
-				// Đề xuất font Inter cho giao diện hiện đại, rõ ràng
 				sans: ['Inter', 'sans-serif'],
 			},
+			fontSize: {
+				// Hệ thống H tự động co giãn (Mobile -> Desktop)
+				'h1': ['clamp(2.5rem, 5vw, 4.5rem)', { lineHeight: '1.1', fontWeight: '900' }],
+				'h2': ['clamp(1.75rem, 3.5vw, 3rem)', { lineHeight: '1.2', fontWeight: '900' }],
+				'h3': ['clamp(1.5rem, 2.5vw, 2.25rem)', { lineHeight: '1.3', fontWeight: '800' }],
+				'h4': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.4', fontWeight: '800' }],
+				'h5': ['1.125rem', { lineHeight: '1.5', fontWeight: '700' }],
+				'h6': ['1rem', { lineHeight: '1.5', fontWeight: '700' }],
+			},
 			boxShadow: {
-				// Shadow rất nhẹ để làm nổi bật các khối (card) trên nền trắng
-				'card': '0 2px 12px -1px rgba(3, 18, 70, 0.08)',
+				'card': '0 10px 30px -5px rgba(3, 18, 70, 0.08)',
+				'brand': '0 20px 40px -10px rgba(3, 18, 70, 0.15)',
 			},
 			borderRadius: {
-				'brand': '10px', // Bo góc hiện đại
+				'brand': '20px', // Bo góc lớn hiện đại
 			}
 		},
 	},
