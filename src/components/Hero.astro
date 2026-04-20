@@ -1,65 +1,59 @@
 ---
-interface Props {
-  badge: string;
-  title: string;
-  highlight: string;
-  description: string;
-  image: string;
-}
-
-const { badge, title, highlight, description, image } = Astro.props;
 ---
 
-<section class="relative bg-white py-12 lg:py-24 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-    
-    <div class="relative z-10">
-      <p class="uppercase tracking-[0.2em] text-[10px] opacity-60 mb-4 font-bold">{badge}</p>
-      
-      <h1 class="text-balance">
-        {title} <br />
-        <span class="text-primary">{highlight}</span>
+<section class="hero">
+  <div class="container">
+
+    <!-- LEFT -->
+    <div class="hero-content">
+      <p class="hero-subtitle">
+        Thi công chuyên nghiệp
+      </p>
+
+      <h1 class="hero-title">
+        Giải pháp dán kính
+        <span class="highlight">Toàn diện</span>
       </h1>
 
-      <div class="max-w-xl mb-10" set:html={description} />
+      <p class="hero-desc">
+        Chuyên thi công Decal mờ, Phim cách nhiệt và In ấn quảng cáo tại 
+        TP.HCM, Bình Dương, Quy Nhơn.
+      </p>
 
-      <div class="flex flex-wrap gap-6 items-center mb-12">
-        <a href="#contact" class="btn-primary-solid">
-          BÁO GIÁ NGAY
+      <div class="hero-actions">
+        <a href="/lien-he" class="btn btn-primary">
+          Báo giá ngay
         </a>
-        
-        <a href="#portfolio" class="btn-idecal-bold">
-          XEM CÔNG TRÌNH
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+
+        <a href="/du-an" class="btn-text">
+          Xem công trình
         </a>
       </div>
 
-      <div class="flex flex-wrap gap-x-6 gap-y-3">
-        {['Thi công chuyên nghiệp', 'Bảo hành 2-5 năm', 'Giá cạnh tranh'].map((item) => (
-          <div class="flex items-center gap-2 text-slate-500 text-xs font-medium">
-            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-            </svg>
-            {item}
-          </div>
-        ))}
+      <div class="hero-features">
+        <div class="feature">Thi công chuyên nghiệp</div>
+        <div class="feature">Bảo hành 2-5 năm</div>
+        <div class="feature">Giá cạnh tranh</div>
       </div>
     </div>
 
-    <div class="relative">
-      <div class="relative">
-        <img src={image} alt="iDecal" class="img-brand w-full h-[450px] lg:h-[550px]" />
-        
-        <div class="absolute bottom-8 right-0 bg-white p-6 rounded-l-2xl shadow-2xl max-w-[220px] border-l-4 border-primary animate-fadeIn">
-          <div class="text-3xl font-black text-[#031246] mb-1">
-            96.5<span class="text-primary text-xl">%</span>
-          </div>
-          <p class="text-[10px] leading-snug m-0 text-slate-500">
-            Khách hàng hài lòng về dịch vụ decal dán kính tại iDecal.
-          </p>
+    <!-- RIGHT -->
+    <div class="hero-media">
+      <div class="hero-card">
+
+        <div class="hero-logo">
+          iDecal
         </div>
+
+        <div class="hero-image">
+          <!-- <img src="/images/hero.jpg" alt=""> -->
+        </div>
+
+        <div class="hero-stats">
+          <p class="stats-number">96.5<span>%</span></p>
+          <p class="stats-text">khách hàng hài lòng</p>
+        </div>
+
       </div>
     </div>
 
