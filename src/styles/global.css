@@ -1,0 +1,33 @@
+:root {
+  /* Mã màu thương hiệu */
+  --color-primary: #007bff; /* Màu xanh sáng iDecal (thay bằng mã chính xác của anh) */
+  --color-secondary: #031246; /* Màu xanh đậm anh yêu cầu */
+  --color-text-main: #475569; /* Màu xám cho nội dung bài viết */
+}
+
+@layer base {
+  /* H1: Tiêu đề trang (Dùng 1 lần duy nhất mỗi trang) */
+  h1 {
+    @apply text-3xl md:text-5xl font-black text-[var(--color-secondary)] leading-tight mb-6;
+  }
+
+  /* H2: Tiêu đề các section lớn (Dự án tiêu biểu, Tại sao chọn...) */
+  h2 {
+    @apply text-2xl md:text-4xl font-bold text-[var(--color-secondary)] leading-snug mb-5;
+  }
+
+  /* H3: Tiêu đề các mục con bên trong section hoặc tiêu đề bài blog */
+  h3 {
+    @apply text-xl md:text-2xl font-bold text-[var(--color-secondary)] leading-snug mb-4;
+  }
+
+  /* H4: Tiêu đề nhỏ nhất (Tên dự án, tiêu đề FAQ) */
+  h4 {
+    @apply text-lg font-bold text-[var(--color-secondary)] mb-3;
+  }
+
+  /* Body text: Chữ nội dung */
+  p {
+    @apply text-base text-[var(--color-text-main)] leading-relaxed mb-4;
+  }
+}
