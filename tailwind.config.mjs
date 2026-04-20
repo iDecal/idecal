@@ -4,38 +4,36 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				// Màu vàng thương hiệu (phù hợp cho các nút báo giá, icon)
+				// Xanh dương sáng (Màu chính - Action/Accent)
 				primary: {
-					DEFAULT: '#ffdf3c',
-					dark: '#e6c730',
+					DEFAULT: '#17abeb',
+					dark: '#1499d3', // Tông đậm hơn một chút cho hover
+					light: '#d0effd', // Tông rất nhạt để làm nền nhấn
 				},
-				// Màu xanh đen đậm (dùng cho Header, Footer, chữ tiêu đề)
+				// Xanh đen đậm (Màu phụ - Text/Headers/Footers)
 				secondary: {
-					DEFAULT: '#0b3954',
-					light: '#154b6d',
+					DEFAULT: '#031246',
+					light: '#05207c',
 				},
-				// Xanh da trời nhạt (phù hợp làm nền cho các section sản phẩm)
-				accent: {
-					DEFAULT: '#BAE6FD',
-					light: '#E0F2FE',
+				// Định nghĩa rõ ràng màu nền và màu văn bản để giao diện rõ ràng
+				background: '#FFFFFF', // Nền trắng thuần
+				text: {
+					DEFAULT: '#031246', // Chữ chính dùng màu xanh đen đậm thay vì đen thuần
+					muted: '#64748b',   // Chữ phụ, mô tả (màu xám)
 				},
-				// Bổ sung dải màu xám để làm background phân tách các khối
-				surface: {
-					100: '#FFFFFF', // Trắng thuần
-					200: '#F8FAFC', // Xám cực nhạt (hợp với tone nền sáng bạn đang đổi)
-					300: '#F1F5F9',
-				}
+				// Màu đường kẻ, viền (Border) để phân chia bố cục
+				border: '#e2e8f0', // Xám nhạt
 			},
 			fontFamily: {
-				heading: ['"Be Vietnam Pro"', 'sans-serif'],
-				body: ['Inter', 'sans-serif'],
+				// Đề xuất font Inter cho giao diện hiện đại, rõ ràng
+				sans: ['Inter', 'sans-serif'],
 			},
 			boxShadow: {
-				// Shadow nhẹ giúp các card decal/phim cách nhiệt trông nổi khối hơn
-				'soft': '0 4px 20px -2px rgba(11, 57, 84, 0.05)',
+				// Shadow rất nhẹ để làm nổi bật các khối (card) trên nền trắng
+				'card': '0 2px 12px -1px rgba(3, 18, 70, 0.08)',
 			},
 			borderRadius: {
-				'brand': '8px', // Bo góc vừa phải, tạo cảm giác hiện đại
+				'brand': '10px', // Bo góc hiện đại
 			}
 		},
 	},
