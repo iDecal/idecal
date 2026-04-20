@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* =========================
-   ROOT
+   ROOT & VARIABLES
 ========================= */
 :root {
   --color-brand-dark: #031246;
@@ -15,19 +15,19 @@
 ========================= */
 @layer base {
   body {
-    @apply bg-background text-text font-sans;
+    @apply bg-white text-slate-900 font-sans;
   }
 
-  h1 {
-    @apply text-4xl md:text-6xl font-extrabold leading-tight text-secondary mb-6;
+  /* Ép tất cả tiêu đề chính về màu xanh đậm thương hiệu */
+  h1, h2, h3, h4, .hero-title {
+    @apply text-[#031246] font-black leading-tight;
   }
 
-  h2 {
-    @apply text-3xl md:text-4xl font-bold text-secondary;
-  }
-
+  h1 { @apply text-5xl md:text-7xl mb-6; }
+  h2 { @apply text-3xl md:text-5xl; }
+  
   p {
-    @apply text-text-muted leading-relaxed;
+    @apply text-slate-600 leading-relaxed;
   }
 }
 
@@ -36,144 +36,41 @@
 ========================= */
 @layer components {
 
-  /* ===== LAYOUT ===== */
-  .container {
+  /* ===== BUTTONS (ÉP CHUẨN BOLDER) ===== */
+  
+  /* Nút Báo Giá Ngay - Xanh dương, chữ cực đậm */
+  .btn-primary-solid {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-[#17abeb] text-white font-black uppercase tracking-widest text-sm rounded-xl transition-all duration-300 shadow-lg shadow-blue-200 hover:bg-[#031246] hover:-translate-y-1;
+  }
+
+  /* Nút Xem Công Trình / Xem Chi Tiết - Gạch chân, chữ đậm */
+  .btn-idecal-bold {
+    @apply inline-flex items-center gap-2 font-black uppercase text-xs tracking-[0.2em] text-[#031246] border-b-4 border-[#17abeb] pb-1 transition-all hover:text-[#17abeb] hover:border-[#031246];
+  }
+
+  /* ===== LAYOUT & SECTIONS ===== */
+  .container-brand {
     @apply max-w-7xl mx-auto px-6;
   }
 
-  .section {
-    @apply py-20;
+  /* Card dịch vụ */
+  .service-card-style {
+    @apply bg-white border border-slate-100 rounded-[2rem] p-5 shadow-sm transition-all duration-500 hover:shadow-2xl hover:-translate-y-2;
   }
 
-  .section-soft {
-    @apply py-20 bg-slate-50/50;
+  /* Image brand style */
+  .img-brand {
+    @apply rounded-[2.5rem] object-cover shadow-2xl;
   }
+}
 
-  .section-header {
-    @apply text-center mb-16;
-  }
-
-  .section-subtitle {
-    @apply text-primary font-bold uppercase tracking-widest text-xs mb-3;
-  }
-
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold text-secondary;
-  }
-
-  /* ===== BUTTON ===== */
-  .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-brand font-semibold transition;
-  }
-
-  .btn-primary {
-    @apply bg-primary text-white shadow-card;
-  }
-
-  .btn-primary:hover {
-    @apply bg-primary-dark;
-  }
-
-  .btn-outline {
-    @apply border border-secondary text-secondary;
-  }
-
-  .btn-outline:hover {
-    @apply bg-secondary text-white;
-  }
-
-  .btn-text {
-    @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-widest border-b-2 border-secondary pb-1 transition;
-  }
-
-  .btn-text:hover {
-    @apply text-primary border-primary;
-  }
-
-  /* ===== GRID SYSTEM ===== */
-  .grid-2 {
-    @apply grid md:grid-cols-2 gap-8;
-  }
-
-  .grid-3 {
-    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
-  }
-
-  /* ===== CARD (DÙNG CHUNG) ===== */
-  .card {
-    @apply bg-white border border-border rounded-brand shadow-card overflow-hidden transition;
-  }
-
-  .card-hover:hover {
-    @apply -translate-y-1 shadow-lg;
-  }
-
-  .card-image img {
-    @apply w-full h-48 object-cover;
-  }
-
-  .card-body {
-    @apply p-5;
-  }
-
-  .card-title {
-    @apply text-lg font-semibold text-secondary mb-2;
-  }
-
-  .card-desc {
-    @apply text-text-muted text-sm;
-  }
-
-  /* ===== HERO (CHỈ GIỮ STRUCTURE) ===== */
-  .hero {
-    @apply section;
-  }
-
-  .hero-layout {
-    @apply grid lg:grid-cols-2 gap-12 items-center;
-  }
-
-  .hero-title {
-    @apply text-4xl md:text-5xl font-bold text-secondary leading-tight;
-  }
-
-  .hero-subtitle {
-    @apply text-text-muted mb-3;
-  }
-
-  .hero-desc {
-    @apply text-text-muted mt-4 text-lg;
-  }
-
-  .hero-actions {
-    @apply mt-6 flex gap-4 flex-wrap;
-  }
-
-  .hero-features {
-    @apply mt-6 flex flex-wrap gap-4 text-sm text-text-muted;
-  }
-
-  .hero-card {
-    @apply relative card p-6;
-  }
-
-  .hero-image {
-    @apply w-full h-64 bg-gray-100 rounded;
-  }
-
-  .hero-logo {
-    @apply absolute top-4 left-4 font-bold text-secondary;
-  }
-
-  .hero-stats {
-    @apply absolute bottom-4 right-4 bg-white px-4 py-2 rounded shadow;
-  }
-
-  .stats-number {
-    @apply text-xl font-bold text-secondary;
-  }
-
-  .stats-text {
-    @apply text-xs text-text-muted;
-  }
+/* =========================
+   ANIMATIONS (Cho khối 96.5%)
+========================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
 }
