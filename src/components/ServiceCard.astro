@@ -42,22 +42,35 @@ const services = [
 <section class="services">
   <div class="container">
 
+    <!-- HEADER -->
     <div class="section-header">
       <p class="section-subtitle">Dịch vụ trọng tâm</p>
       <h2 class="section-title">Giải pháp dán kính & Nội thất</h2>
     </div>
 
+    <!-- GRID -->
     <div class="services-grid">
       {services.map((item) => (
         <a href={item.link} class="service-card">
 
+          <!-- IMAGE -->
           <div class="service-card-image">
-            <img src={item.image} alt={item.title} loading="lazy" />
+            <img 
+              src={item.image} 
+              alt={item.title} 
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
           </div>
 
+          <!-- CONTENT -->
           <div class="service-card-body">
             <h3 class="service-card-title">{item.title}</h3>
             <p class="service-card-desc">{item.description}</p>
+
+            <span class="service-card-link">
+              Chi tiết sản phẩm →
+            </span>
           </div>
 
         </a>
