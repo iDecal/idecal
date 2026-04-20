@@ -39,7 +39,7 @@ const faqs = [
     <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6 items-start">
       {faqs.map((faq) => (
         <div class="faq-item transition-all duration-300">
-          <details class="faq-details group lg:pointer-events-none cursor-pointer lg:cursor-default" open>
+          <details class="faq-details group lg:pointer-events-none cursor-pointer lg:cursor-default">
             
             <summary class="flex items-center justify-between list-none py-4 font-bold text-secondary group-open:text-primary transition-colors leading-tight px-2">
               <span class="flex gap-4 items-start">
@@ -66,39 +66,48 @@ const faqs = [
 </section>
 
 <style>
-  /* Hiệu ứng trượt nhẹ khi mở câu trả lời */
+  /* Hiệu ứng mượt mà khi hiện nội dung */
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
   .animate-fadeIn {
-    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
   
   summary::-webkit-details-marker {
     display: none;
   }
 
-  /* Desktop: Luôn hiển thị câu trả lời dạng lưới */
+  /* Desktop: Luôn hiển thị câu trả lời */
   @media (min-width: 1024px) {
     .faq-details { display: block !important; }
     .faq-details div { display: flex !important; }
   }
 
-  /* Mobile: Đóng/Mở linh hoạt */
+  /* Mobile: Tinh chỉnh khoảng cách khi mở */
   @media (max-width: 1023px) {
     .faq-details div { display: none; }
     .faq-details[open] div { display: flex; }
+    .faq-details[open] { @apply mb-4; }
   }
 </style>
 
 <script>
-  function setupFAQ() {
+  function handleFAQState() {
     const isDesktop = window.innerWidth >= 1024;
-    document.querySelectorAll('.faq-details').forEach(el => {
-      if (isDesktop) el.setAttribute('open', '');
+    const faqDetails = document.querySelectorAll('.faq-details');
+    
+    faqDetails.forEach(el => {
+      if (isDesktop) {
+        el.setAttribute('open', '');
+      } else {
+        el.removeAttribute('open');
+      }
     });
   }
-  setupFAQ();
-  window.addEventListener('resize', setupFAQ);
+
+  // Chạy khi load trang và khi resize màn hình
+  handleFAQState();
+  window.addEventListener('resize', handleFAQState);
 </script>
