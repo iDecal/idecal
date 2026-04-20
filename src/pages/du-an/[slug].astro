@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('projects');
+  return entries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Lấy dự án liên quan cùng category
+const allProjects = await getCollection('projects');
+const related = allProjects.filter(p => p.data.category === entry.data.category && p.slug !== entry.slug).slice(0, 2);
+---
+
+<Layout title={entry.data.title}>
+  <main class="bg-white pt-24 pb-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <header class="mb-12">
+        <span class="text-primary font-black uppercase tracking-widest text-xs">{entry.data.category}</span>
+        <h1 class="text-4xl md:text-6xl font-bold text-secondary mt-4 mb-6">{entry.data.title}</h1>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-slate-100">
+          <div>
+            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Khách hàng</p>
+            <p class="text-secondary font-bold">{entry.data.client}</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Dịch vụ</p>
+            <p class="text-secondary font-bold">Thi công Decal</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Khu vực</p>
+            <p class="text-secondary font-bold">TP.HCM</p>
+          </div>
+          <div>
+            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Hoàn thành</p>
+            <p class="text-secondary font-bold">{entry.data.pubDate.toLocaleDateString('vi-VN')}</p>
+          </div>
+        </div>
+      </header>
+
+      <img src={entry.data.image} alt={entry.data.title} class="w-full rounded-[3rem] shadow-2xl mb-16" />
+
+      <div class="prose prose-lg max-w-none mb-20">
+        <Content />
+      </div>
+
+      {related.length > 0 && (
+        <section class="pt-20 border-t border-slate-100">
+          <h3 class="text-2xl font-bold text-secondary mb-10">Dự án tương tự</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            {related.map(p => (
+              <a href={`/du-an/${p.slug}`} class="group">
+                <div class="aspect-video rounded-3xl overflow-hidden mb-4">
+                  <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-all" />
+                </div>
+                <h4 class="text-lg font-bold text-secondary group-hover:text-primary transition-colors">{p.data.title}</h4>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  </main>
+</Layout>
