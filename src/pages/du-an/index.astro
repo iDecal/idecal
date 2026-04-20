@@ -1,0 +1,70 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+allProjects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const categories = ["Tất cả", "Văn phòng", "Căn hộ", "Showroom", "Sự kiện"];
+---
+
+<Layout title="Dự án tiêu biểu | iDecal">
+  <main class="bg-white pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Công trình đã thực hiện</h1>
+        <p class="text-slate-500 text-sm lowercase tracking-widest">minh chứng cho chất lượng và uy tín của idecal qua từng dự án</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-16">
+        {categories.map(cat => (
+          <button class="project-filter px-8 py-2 rounded-full border-2 border-slate-100 text-slate-500 font-bold text-sm transition-all hover:border-primary hover:text-primary" data-category={cat}>
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <div id="project-grid" class="grid md:grid-cols-2 gap-8">
+        {allProjects.map(project => (
+          <div class="project-card group overflow-hidden rounded-[2rem] relative aspect-[16/10]" data-category={project.data.category}>
+            <img src={project.data.image} alt={project.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
+              <span class="text-primary font-black text-xs uppercase tracking-tighter mb-2">{project.data.category}</span>
+              <h2 class="text-white text-2xl font-bold mb-4">{project.data.title}</h2>
+              <p class="text-slate-300 text-sm mb-6 line-clamp-2">{project.data.description}</p>
+              <a href={`/du-an/${project.slug}`} class="text-white font-bold text-sm underline underline-offset-8 decoration-primary">XEM CHI TIẾT</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  const filters = document.querySelectorAll('.project-filter');
+  const cards = document.querySelectorAll('.project-card');
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = btn.getAttribute('data-category');
+      
+      // Update UI button
+      filters.forEach(b => b.classList.remove('bg-secondary', 'text-white', 'border-secondary'));
+      btn.classList.add('bg-secondary', 'text-white', 'border-secondary');
+
+      // Filter Logic
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (cat === "Tất cả" || cardCat === cat) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+  // Active nút Tất cả mặc định
+  (document.querySelector('[data-category="Tất cả"]') as HTMLElement).click();
+</script>
