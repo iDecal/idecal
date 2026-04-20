@@ -1,20 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Partners from '../components/Partners.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import About from '../components/About.astro';
-import Portfolio from '../components/Portfolio.astro';
-import FAQ from '../components/FAQ.astro';
+// Đảm bảo phần đầu file TRỐNG, không import Services hay Index
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+const { title, description, image, link } = Astro.props;
 ---
-
-<Layout title="iDecal - Chuyên gia Decal & Phim Cách Nhiệt">
-  
-  <Hero />
-  <Partners />
-  <ServiceCard />
-  <About />
-  <Portfolio />
-  <FAQ />
-
-</Layout>
+<div class="service-card">
+  </div>
