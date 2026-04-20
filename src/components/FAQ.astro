@@ -37,9 +37,9 @@ const faqs = [
 
     <div class="grid lg:grid-cols-2 gap-x-16 gap-y-2 items-start">
       {faqs.map((faq) => (
-        <div class="border-b border-slate-100 pb-4">
+        <div class="border-b border-slate-100 pb-2">
           <details class="faq-details group lg:pointer-events-none cursor-pointer lg:cursor-default">
-            <summary class="flex items-center justify-between list-none py-4 text-secondary font-bold text-lg lg:text-xl group-open:text-primary transition-colors">
+            <summary class="flex items-center justify-between list-none py-4 text-secondary font-bold text-lg lg:text-sm lg:font-black group-open:text-primary transition-colors uppercase lg:tracking-tight">
               <span class="flex gap-3">
                 <span class="text-primary opacity-50">Q.</span>
                 {faq.q}
@@ -51,7 +51,7 @@ const faqs = [
               </span>
             </summary>
             
-            <div class="flex gap-3 text-slate-600 lg:text-secondary lg:text-sm lg:font-bold leading-relaxed text-base pb-4 animate-fadeIn">
+            <div class="flex gap-3 text-slate-600 leading-relaxed text-base pb-4 animate-fadeIn">
               <span class="text-primary font-bold opacity-50">A.</span>
               <p>{faq.a}</p>
             </div>
