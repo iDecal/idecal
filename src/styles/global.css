@@ -2,59 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   ROOT (Design Tokens)
+========================= */
 :root {
   --color-brand-dark: #031246;
-  --color-brand-primary: #007bff;
+  --color-brand-primary: #17abeb; /* đồng bộ với tailwind.config */
 }
 
+/* =========================
+   BASE (Typography / Reset)
+========================= */
 @layer base {
-  /* Ép H1 to và đúng màu bằng mọi giá */
   h1 {
-    font-size: 2.5rem !important; /* Mobile */
-    line-height: 1.2 !important;
-    font-weight: 900 !important;
-    color: var(--color-brand-dark) !important;
-    margin-bottom: 2rem !important;
+    @apply text-4xl md:text-6xl font-extrabold leading-tight text-secondary mb-8;
   }
-  @media (min-width: 768px) {
-    h1 { font-size: 4rem !important; } /* Desktop */
+
+  body {
+    @apply bg-background text-text font-sans;
   }
 }
 
-@layer utilities {
-  /* Class cho nút Báo Giá (Nền xanh, chữ trắng, bo góc) */
-  .btn-primary-solid {
-    display: inline-flex !important;
-    align-items: center !important;
-    background-color: var(--color-brand-primary) !important;
-    color: white !important;
-    padding: 1rem 2rem !important;
-    border-radius: 1rem !important;
-    font-weight: 900 !important;
-    font-size: 0.75rem !important;
-    letter-spacing: 0.1em !important;
-    text-transform: uppercase !important;
-    box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.3) !important;
-    transition: all 0.3s !important;
+/* =========================
+   COMPONENTS (Reusable UI)
+========================= */
+@layer components {
+
+  /* ===== BUTTON SYSTEM ===== */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-brand font-semibold transition;
   }
 
-  /* Class cho nút Xem Công Trình (Gạch chân, chữ đậm) */
-  .btn-idecal-bold {
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 0.5rem !important;
-    color: var(--color-brand-dark) !important;
-    font-weight: 900 !important;
-    font-size: 0.75rem !important;
-    letter-spacing: 0.1em !important;
-    text-transform: uppercase !important;
-    border-bottom: 2px solid var(--color-brand-dark) !important;
-    padding-bottom: 0.25rem !important;
-    transition: all 0.3s !important;
+  .btn-primary {
+    @apply bg-primary text-white shadow-card;
   }
-  
-  .btn-idecal-bold:hover {
-    color: var(--color-brand-primary) !important;
-    border-color: var(--color-brand-primary) !important;
+
+  .btn-primary:hover {
+    @apply bg-primary-dark;
   }
+
+  .btn-outline {
+    @apply border border-secondary text-secondary;
+  }
+
+  .btn-outline:hover {
+    @apply bg-secondary text-white;
+  }
+
+  .btn-text {
+    @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-widest border-b-2 border-secondary pb-1 transition;
+  }
+
+  .btn-text:hover {
+    @apply text-primary border-primary;
+  }
+
+  /* ===== HERO ===== */
+  .hero-title {
+    @apply text-4xl md:text-5xl font-bold text-secondary leading-tight;
+  }
+
+  .hero-desc {
+    @apply text-text-muted mt-4 text-lg;
+  }
+
+  /* ===== CARD ===== */
+  .card {
+    @apply bg-white border border-border rounded-brand shadow-card;
+  }
+
 }
