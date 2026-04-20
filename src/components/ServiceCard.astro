@@ -1,54 +1,20 @@
 ---
-// Dữ liệu 6 dịch vụ chính của iDecal
-const services = [
-  { title: "Phim Cách Nhiệt", description: "Cách nhiệt 80%, ngăn 99% UV cho nhà kính.", image: "/images/pcn.webp", link: "/phim-cach-nhiet" },
-  { title: "Decal Mờ 3D", description: "Vân nổi sống động, độ mờ riêng tư 20-30%.", image: "/images/mo3d.webp", link: "/decal-mo-3d" },
-  { title: "Decal Cắt Chữ", description: "Cắt CNC sắc nét Logo, Sticker thương hiệu.", image: "/images/cat.webp", link: "/decal-cat-chu" },
-  { title: "Phim Nội Thất", description: "Làm mới bàn ghế, tủ kệ với vân gỗ, đá.", image: "/images/film.webp", link: "/film-noithat" },
-  { title: "Decal Quảng Cáo", description: "In ấn PP, Vinyl khổ lớn chuyên nghiệp.", image: "/images/adv.webp", link: "/decal-quang-cao" },
-  { title: "Decal Văn Phòng", description: "Giải pháp trang trí kính văn phòng trọn gói.", image: "/images/vp.webp", link: "/decal-van-phong" }
-];
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Partners from '../components/Partners.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Portfolio from '../components/Portfolio.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
-<section class="py-24 bg-slate-50/50">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="mb-16">
-      <p class="text-primary font-black uppercase tracking-[0.2em] text-[10px] mb-3">Dịch vụ trọng tâm</p>
-      <h3>Giải pháp dán kính & Nội thất chuyên nghiệp</h3>
-    </div>
+<Layout title="iDecal - Chuyên gia Decal & Phim Cách Nhiệt">
+  
+  <Hero />
+  <Partners />
+  <Services />
+  <About />
+  <Portfolio />
+  <FAQ />
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service) => (
-        <a href={service.link} class="group bg-white rounded-[2rem] p-4 shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 flex flex-col h-full">
-          
-          <div class="overflow-hidden rounded-2xl aspect-[4/3] mb-6">
-            <img 
-              src={service.image} 
-              alt={service.title} 
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-          </div>
-
-          <div class="px-2 pb-4 flex flex-col flex-grow">
-            <h4 class="group-hover:text-primary transition-colors duration-300">
-              {service.title}
-            </h4>
-            
-            <p class="text-sm line-clamp-2 mb-6">
-              {service.description}
-            </p>
-
-            <div class="mt-auto">
-              <span class="btn-idecal-bold">
-                XEM CHI TIẾT
-                <svg class="w-3 h-3 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </span>
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+</Layout>
