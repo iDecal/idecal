@@ -1,7 +1,6 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro'; // Đã sửa đường dẫn theo cấu trúc thư mục của anh
 
-// Dữ liệu giả lập cho các công trình đã thực hiện
 const projects = [
   {
     title: "Dán Decal Quảng Cáo Chuỗi Xe Tải Coca-Cola",
@@ -22,67 +21,108 @@ const projects = [
     size: "150m2"
   }
 ];
+
+const faqs = [
+  { q: "iDecal có hỗ trợ thiết kế file in không?", a: "Có, đội ngũ thiết kế của chúng tôi sẽ hỗ trợ tối ưu file in, kiểm tra độ phân giải và chỉnh sửa màu sắc chuẩn CMYK để đảm bảo bản in sắc nét nhất." },
+  { q: "Loại decal nào phù hợp dán xe tải quảng cáo?", a: "Đối với xe tải, iDecal tư vấn sử dụng Decal sữa hoặc Decal 3M chuyên dụng có độ bám dính cực cao, chịu được nắng mưa và không để lại keo khi gỡ bỏ." },
+  { q: "Thời gian in ấn và thi công mất bao lâu?", a: "Với các đơn hàng dưới 50m2, iDecal có thể hoàn thiện in ấn và thi công ngay trong 24h để kịp tiến độ sự kiện của khách hàng." },
+  { q: "Bản in decal quảng cáo có bị bay màu không?", a: "Chúng tôi sử dụng mực in UV Nhật Bản và cán thêm lớp màng bảo vệ (bóng hoặc mờ), giúp màu sắc bền bỉ từ 2-5 năm dù ở điều kiện ngoài trời." }
+];
 ---
 
-<Layout title="Thi Công & In Ấn Decal Quảng Cáo Chuyên Nghiệp | iDecal">
+<Layout title="Thi Công Decal Quảng Cáo, In Ấn & Thiết Kế Trọn Gói | iDecal">
   
   <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
     <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
-      
       <div class="animate-fade-up">
-        <h6 class="text-slate-300 tracking-[0.3em] font-bold">Giải pháp thương hiệu</h6>
-        
+        <h6 class="text-primary tracking-[0.3em] font-bold">Branding Solution</h6>
         <h1 class="text-white !important leading-tight">In Ấn & Thi Công Decal Quảng Cáo Khổ Lớn</h1>
-        
-        <p class="text-slate-300 text-lg leading-relaxed">
-          Tối ưu diện mạo kinh doanh với dịch vụ trọn gói từ <strong>thiết kế</strong>, <strong>in ấn</strong> sắc nét đến <strong>thi công</strong> chuẩn xác trên mọi bề mặt: Xe tải, Vách kính, Bảng hiệu, Standee.
+        <p class="text-slate-300 text-lg">
+          Dịch vụ trọn gói từ <strong>thiết kế</strong>, <strong>in ấn</strong> sắc nét đến <strong>thi công</strong> chuyên nghiệp. Sử dụng đa dạng vật liệu: <strong>Decal sữa, Decal trong, PP, Decal 3M...</strong>
         </p>
-        
         <div class="flex flex-wrap gap-4 mt-8">
-          <a href="#quote" class="btn-primary-solid">Liên hệ báo giá ngay</a>
-          <a href="#portfolio" class="btn-idecal-bold text-white border-white transition-colors hover:text-primary hover:border-primary">Xem công trình thực tế</a>
+          <a href="#quote" class="btn-primary-solid text-white">Nhận báo giá ngay</a>
+          <a href="#portfolio" class="btn-idecal-bold text-white border-white transition-all hover:text-primary hover:border-primary">Xem công trình thực tế</a>
         </div>
       </div>
-      
       <div class="relative group">
         <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
-        <img 
-          src="/images/decal-quang-cao/Decal-quang-cao.webp" 
-          alt="Thi công decal quảng cáo trên xe tải" 
-          class="img-brand w-full h-[450px] object-cover relative z-10 transition-transform duration-500 group-hover:scale-105" 
-        />
+        <img src="/images/hero-decal-quangcao.webp" alt="Thi công decal quảng cáo" class="img-brand w-full h-[450px] object-cover relative z-10" />
       </div>
     </div>
-    
-    <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-slate-900 via-slate-900/10 to-transparent"></div>
   </section>
 
-  <section id="portfolio" class="py-24 bg-white border-b border-slate-100/50">
+  <section class="py-24 bg-white">
     <div class="container">
       <div class="text-center mb-16">
-        <h6 class="text-primary tracking-widest uppercase">Uy tín đã được khẳng định</h6>
-        <h2>Công trình Decal Quảng Cáo tiêu biểu</h2>
-        <p class="max-w-2xl mx-auto italic">Chúng tôi tự hào là đối tác tin cậy của hàng trăm doanh nghiệp tại TP.HCM và các tỉnh lân cận.</p>
+        <h6 class="text-primary">Năng lực sản xuất</h6>
+        <h2>Giải pháp In & Thiết kế</h2>
       </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="service-card-brand bg-slate-50/50 border-none">
+          <h4 class="!mb-4 text-secondary">Thiết kế & In ấn</h4>
+          <p class="text-sm">In <strong>PP bồi Formex</strong>, <strong>Decal sữa</strong> cán màng chất lượng cao bằng máy in Nhật Bản hiện đại.</p>
+        </div>
+        <div class="service-card-brand bg-slate-50/50 border-none">
+          <h4 class="!mb-4 text-secondary">Quảng cáo phương tiện</h4>
+          <p class="text-sm">Chuyên thi công <strong>Decal quảng cáo xe tải</strong> bằng vật liệu <strong>Decal 3M</strong> chịu nhiệt, bền màu.</p>
+        </div>
+        <div class="service-card-brand bg-slate-50/50 border-none">
+          <h4 class="!mb-4 text-secondary">Showroom & POSM</h4>
+          <p class="text-sm">Thi công <strong>Decal lưới</strong> kính, <strong>Decal cắt chữ</strong> trang trí và booth quảng cáo sự kiện.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section id="portfolio" class="py-24 bg-blue-50/40">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6>Thực tế thi công</h6>
+        <h2>Công trình tiêu biểu</h2>
+      </div>
       <div class="grid md:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <div class="group overflow-hidden rounded-[2rem] bg-white shadow-card transition-all duration-300 hover:shadow-brand hover:-translate-y-2">
-            <div class="overflow-hidden h-64">
-              <img 
-                src={project.image} 
-                alt={project.title} 
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-              />
+          <div class="group overflow-hidden rounded-[2rem] bg-white shadow-card transition-all hover:-translate-y-2">
+            <div class="overflow-hidden h-60">
+              <img src={project.image} alt={project.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             </div>
-            
             <div class="p-6">
-              <div class="flex items-center justify-between gap-3 mb-2">
-                <span class="inline-block px-3 py-1 text-xs font-bold text-primary bg-primary/10 rounded-full">{project.type}</span>
-                <span class="text-xs text-text-muted">Khối lượng: {project.size}</span>
-              </div>
-              <h4 class="text-base text-secondary !mb-0 group-hover:text-primary transition-colors">{project.title}</h4>
+              <span class="inline-block px-3 py-1 text-[10px] font-bold text-primary bg-primary/5 rounded-full mb-3 uppercase tracking-wider">{project.type}</span>
+              <h4 class="text-base text-secondary !mb-0">{project.title}</h4>
             </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50/80">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6>Giải đáp thắc mắc</h6>
+        <h2>Câu hỏi thường gặp</h2>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6">
+        {faqs.map((faq) => (
+          <div class="faq-item">
+            <details class="faq-details group lg:pointer-events-none">
+              <summary class="flex items-center justify-between py-4 font-bold text-secondary group-open:text-primary px-2 cursor-pointer">
+                <span class="flex gap-4 items-start">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-[10px] flex items-center justify-center font-black">Q</span>
+                  <span class="text-secondary">{faq.q}</span>
+                </span>
+                <span class="lg:hidden transform group-open:rotate-180 transition-transform text-slate-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div class="flex gap-4 p-5 bg-white rounded-2xl animate-fadeIn items-start shadow-sm border border-slate-100">
+                <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-secondary/40 text-[10px] flex items-center justify-center font-black">A</span>
+                <p class="text-text-muted text-sm leading-relaxed !mb-0">{faq.a}</p>
+              </div>
+            </details>
           </div>
         ))}
       </div>
@@ -92,12 +132,28 @@ const projects = [
 </Layout>
 
 <style>
-  /* Hiệu ứng FadeIn cho Hero */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
+  summary::-webkit-details-marker { display: none; }
+  @media (min-width: 1024px) { 
+    .faq-details { display: block !important; } 
+    .faq-details div { display: flex !important; } 
   }
-  .animate-fade-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  @media (max-width: 1023px) { 
+    .faq-details div { display: none; } 
+    .faq-details[open] div { display: flex; } 
+    .faq-details[open] { @apply mb-4; }
   }
 </style>
+
+<script>
+  function setupFAQ() {
+    const isDesktop = window.innerWidth >= 1024;
+    document.querySelectorAll('.faq-details').forEach(el => {
+      if (isDesktop) el.setAttribute('open', '');
+      else el.removeAttribute('open');
+    });
+  }
+  setupFAQ();
+  window.addEventListener('resize', setupFAQ);
+</script>
