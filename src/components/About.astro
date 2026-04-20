@@ -1,0 +1,23 @@
+<section class="py-24 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="relative">
+      <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-brand -z-10"></div>
+      <img src="/images/about-idecal.webp" alt="Về iDecal" class="rounded-brand shadow-xl" />
+    </div>
+    <div>
+      <h2 class="text-primary font-bold text-sm uppercase mb-3">Về chúng tôi</h2>
+      <h3 class="text-3xl md:text-4xl font-bold text-secondary mb-6 text-balance">Hơn 10 năm kinh nghiệm thi công Decal chuyên nghiệp</h3>
+      <p class="text-slate-600 mb-6 leading-relaxed">
+        iDecal tự hào là đơn vị dẫn đầu trong lĩnh vực thiết kế, in ấn và lắp đặt decal tại TP.HCM, Bình Dương và Quy Nhơn. Chúng tôi không chỉ bán sản phẩm, chúng tôi mang lại giải pháp thẩm mỹ và bảo vệ không gian sống của bạn.
+      </p>
+      <ul class="space-y-4 mb-8">
+        {['Vật liệu Octki, GYMak chính hãng', 'Kỹ thuật viên hơn 5 năm kinh nghiệm', 'Bảo hành bong tróc 2 năm'].map(item => (
+          <li class="flex items-center gap-3 text-secondary font-semibold">
+            <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
