@@ -9,31 +9,31 @@ interface Props {
 const { badge, title, highlight, description, image } = Astro.props;
 ---
 
-<section class="relative bg-white pt-12 pb-16 lg:pt-24 lg:pb-24 overflow-hidden">
+<section class="relative bg-white py-12 lg:py-24 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
     
     <div class="relative z-10">
-      <p class="text-slate-500 text-sm mb-4">{badge}</p>
+      <p class="uppercase tracking-widest text-[10px] opacity-60 mb-4">{badge}</p>
       
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight mb-6 text-balance">
+      <h1 class="text-balance">
         {title} <span class="text-primary">{highlight}</span>
       </h1>
 
-      <div class="text-slate-600 mb-8 leading-relaxed max-w-xl text-base md:text-lg" set:html={description} />
+      <div class="max-w-xl md:text-lg" set:html={description} />
 
-      <div class="flex flex-wrap gap-4 mb-10">
-        <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-brand font-bold transition-all shadow-lg shadow-primary/20">
+      <div class="flex flex-wrap gap-4 mt-8 mb-10">
+        <a href="#contact" class="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-brand font-black text-xs tracking-widest shadow-lg shadow-primary/20 transition-all">
           BÁO GIÁ NGAY
         </a>
-        <a href="#portfolio" class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-brand font-bold transition-all">
+        <a href="#portfolio" class="btn-idecal normal-case border-none pb-4">
           XEM CÔNG TRÌNH
         </a>
       </div>
 
       <div class="flex flex-wrap gap-x-6 gap-y-3">
         {['Thi công chuyên nghiệp', 'Bảo hành 2-5 năm', 'Giá cạnh tranh'].map((item) => (
-          <div class="flex items-center gap-2 text-slate-500 text-sm">
-            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <div class="flex items-center gap-2 text-slate-500 text-xs font-medium">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
             </svg>
             {item}
@@ -43,21 +43,15 @@ const { badge, title, highlight, description, image } = Astro.props;
     </div>
 
     <div class="relative">
-      <div class="absolute -top-6 -left-6 z-20 w-16 h-16 text-primary opacity-20">
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 0l2.5 8.5h8.5l-7 5 2.5 8.5-7-5-7 5 2.5-8.5-7-5h8.5z"/>
-        </svg>
-      </div>
-
-      <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-[10px] border-slate-50">
-        <img src={image} alt="iDecal" class="w-full h-[450px] object-cover" />
+      <div class="relative">
+        <img src={image} alt="iDecal" class="img-brand w-full h-[450px]" />
         
-        <div class="absolute bottom-8 right-0 bg-white p-5 rounded-l-2xl shadow-xl max-w-[220px] border-l-4 border-primary">
-          <div class="text-3xl font-bold text-secondary mb-1">
+        <div class="absolute bottom-8 right-0 bg-white p-5 rounded-l-2xl shadow-xl max-w-[220px] border-l-4 border-primary animate-fadeIn">
+          <div class="text-3xl font-black text-secondary mb-1">
             96.5<span class="text-primary text-xl">%</span>
           </div>
-          <p class="text-xs text-slate-500 leading-snug">
-            khách hàng hài lòng về dịch vụ decal dán kính tại idecal.
+          <p class="text-[10px] leading-snug m-0">
+            Khách hàng hài lòng về dịch vụ decal dán kính tại iDecal.
           </p>
         </div>
       </div>
