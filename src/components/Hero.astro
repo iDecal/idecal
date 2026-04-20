@@ -23,14 +23,17 @@ const { badge, title, highlight, description, image } = Astro.props;
 
       <div class="flex flex-wrap gap-4 mb-10">
         <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-brand font-bold transition-all shadow-lg shadow-primary/20">
-          Nhận báo giá miễn phí
+          BÁO GIÁ NGAY
+        </a>
+        <a href="#portfolio" class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-brand font-bold transition-all">
+          XEM CÔNG TRÌNH
         </a>
       </div>
 
       <div class="flex flex-wrap gap-x-6 gap-y-3">
         {['Thi công chuyên nghiệp', 'Bảo hành 2-5 năm', 'Giá cạnh tranh'].map((item) => (
           <div class="flex items-center gap-2 text-slate-500 text-sm">
-            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
             </svg>
             {item}
@@ -40,8 +43,8 @@ const { badge, title, highlight, description, image } = Astro.props;
     </div>
 
     <div class="relative">
-      <div class="absolute -top-6 -left-6 z-20 w-16 h-16 text-primary">
-        <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <div class="absolute -top-6 -left-6 z-20 w-16 h-16 text-primary opacity-20">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 0l2.5 8.5h8.5l-7 5 2.5 8.5-7-5-7 5 2.5-8.5-7-5h8.5z"/>
         </svg>
       </div>
