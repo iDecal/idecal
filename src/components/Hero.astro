@@ -1,65 +1,23 @@
----
-interface Props {
-  badge: string;
-  title: string;
-  highlight: string;
-  description: string;
-  image: string;
-}
-const { badge, title, highlight, description, image } = Astro.props;
----
+<div class="relative z-10">
+  <p class="uppercase tracking-[0.2em] text-[10px] opacity-60 mb-4">{badge}</p>
+  
+  <h1 class="text-balance">
+    {title} <span class="text-primary">{highlight}</span>
+  </h1>
 
-<section class="relative bg-white py-12 lg:py-24 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+  <div class="max-w-xl text-slate-600 mb-10" set:html={description} />
+
+  <div class="flex flex-wrap gap-8 items-center mb-12">
+    <a href="#contact" class="btn-primary-solid">
+      BÁO GIÁ NGAY
+    </a>
     
-    <div class="relative z-10">
-      <p class="uppercase tracking-[0.2em] text-[10px] opacity-60 mb-4">{badge}</p>
-      
-      <h1 class="text-balance">
-        {title} <span class="text-primary">{highlight}</span>
-      </h1>
-
-      <div class="max-w-xl md:text-lg mt-6" set:html={description} />
-
-      <div class="flex flex-wrap gap-6 mt-10 mb-10 items-center">
-        <a href="#contact" class="btn-primary-solid">
-          BÁO GIÁ NGAY
-        </a>
-        
-        <a href="#portfolio" class="btn-idecal-bold">
-          XEM CÔNG TRÌNH
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-      </div>
-
-      <div class="flex flex-wrap gap-x-6 gap-y-3">
-        {['Thi công chuyên nghiệp', 'Bảo hành 2-5 năm', 'Giá cạnh tranh'].map((item) => (
-          <div class="flex items-center gap-2 text-slate-500 text-xs font-medium">
-            <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
-            </svg>
-            {item}
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div class="relative">
-      <div class="relative">
-        <img src={image} alt="iDecal" class="img-brand w-full h-[450px]" />
-        
-        <div class="absolute bottom-8 right-0 bg-white p-6 rounded-l-2xl shadow-2xl max-w-[220px] border-l-4 border-primary animate-fadeIn">
-          <div class="text-3xl font-black text-secondary mb-1">
-            96.5<span class="text-primary text-xl">%</span>
-          </div>
-          <p class="text-[10px] leading-snug m-0 text-slate-500">
-            Khách hàng hài lòng về dịch vụ decal dán kính tại iDecal.
-          </p>
-        </div>
-      </div>
-    </div>
-
+    <a href="#portfolio" class="btn-idecal-bold">
+      XEM CÔNG TRÌNH
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
   </div>
-</section>
+  
+  </div>
