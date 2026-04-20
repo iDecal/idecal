@@ -8,21 +8,74 @@ interface Props {
 }
 const { badge, title, highlight, description, image } = Astro.props;
 ---
-<section class="relative bg-white pt-20 pb-16 lg:pt-32 lg:pb-24">
+
+<section class="relative bg-white pt-12 pb-16 lg:pt-24 lg:pb-24 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
-    <div>
-      <span class="inline-block bg-primary/10 text-primary px-4 py-1 rounded-full text-xs font-bold mb-6">{badge}</span>
-      <h1 class="text-4xl md:text-6xl font-bold text-secondary leading-tight mb-6">
-        {title} <span class="text-primary">{highlight}</span>
+    <div class="relative z-10">
+      <p class="text-slate-500 text-sm font-medium mb-4">{badge}</p>
+      
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-[1.15] mb-6">
+        {title} <br />
+        <span class="text-primary">{highlight}</span>
       </h1>
-      <p class="text-lg text-slate-600 mb-10 leading-relaxed">{description}</p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-brand font-bold transition-all shadow-lg shadow-primary/20">BÁO GIÁ NGAY</a>
-        <a href="#portfolio" class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-brand font-bold transition-all">XEM CÔNG TRÌNH</a>
+
+      <div class="text-slate-600 mb-8 leading-relaxed max-w-xl text-base md:text-lg" set:html={description}>
+        </div>
+
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#contact" class="inline-flex items-center bg-gradient-to-r from-[#17abeb] to-[#7c3aed] hover:opacity-90 text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg shadow-blue-200">
+          Nhận báo giá miễn phí 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-x-6 gap-y-3">
+        {[
+          'Thi công chuyên nghiệp',
+          'Bảo hành 2-5 năm',
+          'Giá cạnh tranh'
+        ].map((item) => (
+          <div class="flex items-center gap-2 text-slate-600 text-sm font-medium">
+            <div class="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center">
+               <svg class="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            {item}
+          </div>
+        ))}
       </div>
     </div>
-    <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-[12px] border-slate-50">
-      <img src={image} alt="iDecal Hero" class="w-full h-auto object-cover" />
+
+    <div class="relative">
+      <div class="absolute -top-6 -left-6 z-20 w-16 h-16 text-primary animate-spin-slow">
+        <svg viewBox="0 0 100 100" fill="currentColor">
+          <path d="M50 0 L55 35 L90 20 L65 45 L100 50 L65 55 L90 80 L55 65 L50 100 L45 65 L10 80 L35 55 L0 50 L35 45 L10 20 L45 35 Z" />
+        </svg>
+      </div>
+
+      <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+        <img src={image} alt="iDecal Project" class="w-full h-[450px] object-cover" />
+        
+        <div class="absolute bottom-10 right-0 bg-white/95 backdrop-blur p-6 rounded-l-3xl shadow-xl max-w-[240px] border-l-4 border-primary">
+          <div class="text-4xl font-black text-secondary mb-1">
+            96.5<span class="text-primary text-2xl">%</span>
+          </div>
+          <p class="text-xs text-slate-500 font-bold leading-snug uppercase tracking-tight">
+            Khách hàng hài lòng về Dịch vụ Decal dán kính tại iDecal.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .animate-spin-slow {
+    animation: spin 12s linear infinite;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
