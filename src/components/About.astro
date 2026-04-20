@@ -1,41 +1,73 @@
-<div class="grid sm:grid-cols-2 gap-x-8 gap-y-10 mt-10">
-  {[
-    {
-      title: "Chất lượng đảm bảo",
-      desc: "Sử dụng 100% Decal chính hãng từ 3M, Llumar, V-KOOL...",
-      icon: "M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21a3.745 3.745 0 0 1-3.068-.63 3.745 3.745 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.745 3.745 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
-    },
-    {
-      title: "Thi công chuyên nghiệp",
-      desc: "Đội ngũ thợ giàu kinh nghiệm, quy trình chuẩn xác.",
-      icon: "M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-    },
-    {
-      title: "Bảo hành dài hạn",
-      desc: "Cam kết bảo hành 2-5 năm cho mọi sản phẩm.",
-      icon: "M11.42 15.17 17.25 21A2.67 2.67 0 0 0 21 17.25l-5.83-5.83m-4.75 3.75-3.75-3.75m9.06-3.06L15 4.5a2.67 2.67 0 0 0-3.75 0l-5.83 5.83A2.67 2.67 0 0 0 7.25 15l5.83 5.83A2.67 2.67 0 0 0 15 15.17l-4.75-4.75"
-    },
-    {
-      title: "Giá cả cạnh tranh",
-      desc: "Báo giá minh bạch, không phát sinh chi phí.",
-      icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.407 2.67 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.407-2.67-1M12 16v-1m0 1H9m3 0h3"
-    }
-  ].map((item) => (
-    <div class="flex items-start gap-4 group"> <div class="flex-shrink-0 mt-1 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
-          <path stroke-linecap="round" stroke-linejoin="round" d={item.icon} />
-        </svg>
+<section class="py-20 bg-white overflow-hidden">
+  <div class="container grid lg:grid-cols-2 gap-12 items-center">
+    
+    <div class="relative order-2 lg:order-1">
+      <div class="absolute -bottom-6 -left-6 w-48 h-48 bg-slate-50 rounded-full -z-10 animate-pulse"></div>
+      <div class="rounded-[3rem] rounded-tr-[8rem] overflow-hidden shadow-xl border-[8px] border-slate-50">
+        <img 
+          src="/images/about-idecal.webp" 
+          alt="Đội ngũ iDecal" 
+          class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" 
+        />
       </div>
-
-      <div class="flex flex-col">
-        <h4 class="text-[15px] font-bold text-secondary mb-1 leading-tight">
-          {item.title}
-        </h4>
-        <p class="text-[13px] text-text-muted leading-snug !mb-0">
-          {item.desc}
-        </p>
-      </div>
-
     </div>
-  ))}
-</div>
+
+    <div class="order-1 lg:order-2">
+      <h6>Tại sao chọn iDecal</h6>
+      
+      <h2>Giải pháp Decal dán kính trang trí & Decal chống nóng toàn diện</h2>
+      
+      <p>
+        iDecal mang đến giải pháp trang trí – chống nắng – tạo không gian riêng tư với mẫu mã đa dạng, phù hợp cho nhà ở, văn phòng, showroom, cửa hàng và công trình dự án.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-10 mt-10">
+        {[
+          {
+            title: "Chất lượng đảm bảo",
+            desc: "Sử dụng 100% Decal chính hãng từ 3M, Llumar, V-KOOL...",
+            icon: "M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21a3.745 3.745 0 0 1-3.068-.63 3.745 3.745 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.745 3.745 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+          },
+          {
+            title: "Thi công chuyên nghiệp",
+            desc: "Đội ngũ thợ giàu kinh nghiệm, quy trình chuẩn xác.",
+            icon: "M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+          },
+          {
+            title: "Bảo hành dài hạn",
+            desc: "Cam kết bảo hành 2-5 năm cho mọi sản phẩm.",
+            icon: "M11.42 15.17 17.25 21A2.67 2.67 0 0 0 21 17.25l-5.83-5.83m-4.75 3.75-3.75-3.75m9.06-3.06L15 4.5a2.67 2.67 0 0 0-3.75 0l-5.83 5.83A2.67 2.67 0 0 0 7.25 15l5.83 5.83A2.67 2.67 0 0 0 15 15.17l-4.75-4.75"
+          },
+          {
+            title: "Giá cả cạnh tranh",
+            desc: "Báo giá minh bạch, không phát sinh chi phí.",
+            icon: "M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33"
+          }
+        ].map((item) => (
+          <div class="flex items-start gap-4 group">
+            <div class="flex-shrink-0 mt-1 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d={item.icon} />
+              </svg>
+            </div>
+            
+            <div>
+              <h4 class="!mb-1">{item.title}</h4>
+              <p class="text-xs !mb-0 leading-snug">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12">
+        <a href="/gioi-thieu" class="btn-idecal-bold">
+          Về chúng tôi
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
