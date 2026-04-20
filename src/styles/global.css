@@ -6,20 +6,24 @@
    BASE SYSTEM
 ========================= */
 @layer base {
+  html {
+    /* Ngăn trình duyệt mobile tự ý phóng to chữ */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-white text-text font-sans antialiased;
   }
 
-  /* H1 & H2 được tinh chỉnh:
-     - Trên mobile: tăng thêm 1 bậc (text-4xl cho h1, text-3xl cho h2)
-     - Trên desktop (md): quay về text-h1, text-h2 chuẩn
-  */
+  /* Ép chuẩn tiêu đề đồng bộ trên mọi thiết bị */
   h1 { 
-    @apply text-4xl md:text-h1 text-secondary mb-6 tracking-tighter font-bold; 
+    @apply text-[2.55rem] md:text-h1 text-secondary mb-6 tracking-tighter font-bold !important; 
   }
   
   h2 { 
-    @apply text-3xl md:text-h2 text-secondary mb-8 tracking-tight font-bold; 
+    /* Dùng kích thước cụ thể [1.875rem] ~ 30px để tất cả H2 bằng chặn chặn trên mobile */
+    @apply text-[1.875rem] md:text-h2 text-secondary mb-8 tracking-tight font-bold !important; 
   }
 
   h3 { @apply text-h3 text-secondary mb-4 tracking-tight; }
@@ -36,7 +40,7 @@
    COMPONENT SYSTEM
 ========================= */
 @layer components {
-  /* CHÌA KHÓA ĐỂ CĂN GIỮA: Định nghĩa container chuẩn iDecal */
+  /* Container chuẩn iDecal */
   .container {
     @apply max-w-7xl mx-auto px-6 w-full;
   }
@@ -46,7 +50,7 @@
     @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest text-sm rounded-brand transition-all duration-300 shadow-brand hover:bg-secondary hover:-translate-y-1;
   }
 
-  /* Nút Xem Chi Tiết */
+  /* Nút Xem Chi Tiết - Đã hạ line xuống border-b-2 */
   .btn-idecal-bold {
     @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-[0.2em] text-secondary border-b-2 border-primary pb-1 transition-all hover:text-primary hover:border-secondary;
   }
