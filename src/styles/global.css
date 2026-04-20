@@ -48,7 +48,7 @@
 
   /* Nút Xem Chi Tiết */
   .btn-idecal-bold {
-    @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-[0.2em] text-secondary border-b-4 border-primary pb-1 transition-all hover:text-primary hover:border-secondary;
+    @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-[0.2em] text-secondary border-b-2 border-primary pb-1 transition-all hover:text-primary hover:border-secondary;
   }
 
   /* Card dịch vụ đồng bộ */
