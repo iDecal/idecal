@@ -3,81 +3,66 @@
 @tailwind utilities;
 
 :root {
-  /* 1. KHAI BÁO BIẾN MÀU CHUẨN - Giúp anh đổi màu toàn bộ web tại đây */
-  --color-brand-primary: #007bff;   /* Xanh sáng iDecal */
-  --color-brand-dark: #031246;      /* Màu xanh đậm anh yêu cầu */
-  --color-text-body: #475569;       /* Màu chữ nội dung (Slate 600) */
-  --color-border-light: #f1f5f9;    /* Màu viền (Slate 100) */
+  --color-brand-primary: #007bff;
+  --color-brand-dark: #031246;
+  --color-text-body: #475569;
+  --color-border-light: #f1f5f9;
 }
 
 @layer base {
-  /* 2. CHUẨN HÓA CÁC THẺ TIÊU ĐỀ (H1-H4) */
-  /* Khi anh dùng <h1>, <h2>... nó sẽ tự động lấy màu và font này */
-  
+  /* Mặc định cho toàn bộ tiêu đề */
   h1, h2, h3, h4 {
     @apply text-[var(--color-brand-dark)] font-bold tracking-tight leading-tight;
   }
 
-  /* H1: Tiêu đề trang - Dùng font-black để cực đậm và nổi bật */
+  /* Tăng kích thước H1 để tránh bị nhỏ trên Desktop */
   h1 {
-    @apply text-3xl md:text-5xl font-black mb-8;
+    @apply text-4xl md:text-6xl font-black mb-8 !important;
   }
 
-  /* H2: Tiêu đề Section chính */
   h2 {
-    @apply text-2xl md:text-4xl mb-6;
+    @apply text-3xl md:text-4xl mb-6 !important;
   }
 
-  /* H3: Tiêu đề con/Mục dịch vụ */
   h3 {
-    @apply text-xl md:text-2xl mb-4;
+    @apply text-xl md:text-2xl mb-4 !important;
   }
 
-  /* H4: Tiêu đề nhỏ/Tên dự án */
-  h4 {
-    @apply text-lg mb-3;
-  }
-
-  /* 3. CHUẨN HÓA ĐOẠN VĂN & NỘI DUNG (P) */
   p {
     @apply text-base text-[var(--color-text-body)] leading-relaxed mb-4 font-normal;
-  }
-
-  /* 4. CHUẨN HÓA FAQ (Câu hỏi & Trả lời) */
-  
-  /* Câu hỏi (Q): Chữ bằng A, màu đậm #031246, không in đậm */
-  .faq-q {
-    @apply text-base font-normal text-[var(--color-brand-dark)] leading-relaxed;
-  }
-
-  /* Câu trả lời (A): Chữ thường, màu xám nhẹ */
-  .faq-a {
-    @apply text-base font-normal text-[var(--color-text-body)] leading-relaxed;
-  }
-
-  /* 5. CÁC THÀNH PHẦN TRANG TRÍ CHUNG */
-  hr {
-    @apply border-[var(--color-border-light)];
   }
 }
 
 @layer components {
-  /* 6. NÚT BẤM iDECAL (BOLDER) */
-  /* Sử dụng: <a class="btn-idecal">Về chúng tôi</a> */
-  .btn-idecal {
+  /* 1. FIX LỖI NÚT BOLDER: Định nghĩa class rõ ràng hơn */
+  .btn-idecal-bold {
     @apply inline-flex items-center gap-3 text-[var(--color-brand-dark)] font-black text-xs 
            tracking-[0.2em] uppercase border-b-2 border-[var(--color-brand-dark)] 
            pb-1 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] 
-           transition-all duration-300 cursor-pointer;
+           transition-all duration-300 cursor-pointer !important;
   }
 
-  /* Ảnh Bo Góc Chuyên Nghiệp */
+  /* 2. NÚT BÁO GIÁ (Solid Button) */
+  .btn-primary-solid {
+    @apply bg-[var(--color-brand-primary)] hover:opacity-90 text-white px-8 py-4 
+           rounded-2xl font-black text-xs tracking-widest shadow-lg 
+           shadow-blue-500/20 transition-all uppercase !important;
+  }
+
   .img-brand {
-    @apply rounded-[2.5rem] rounded-tr-[6rem] shadow-lg border-[6px] border-slate-50 object-cover transition-transform duration-700 hover:scale-105;
+    @apply rounded-[2.5rem] rounded-tr-[6rem] shadow-lg border-[6px] border-slate-50 
+           object-cover transition-transform duration-700 hover:scale-105;
+  }
+
+  /* Style cho Q và A */
+  .faq-q {
+    @apply text-base font-normal text-[var(--color-brand-dark)] leading-relaxed !important;
+  }
+  .faq-a {
+    @apply text-base font-normal text-slate-600 leading-relaxed !important;
   }
 }
 
-/* 7. HIỆU ỨNG MƯỢT MÀ */
 .animate-fadeIn {
   animation: fadeIn 0.4s ease-out forwards;
 }
