@@ -3,71 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --color-brand-primary: #007bff;
   --color-brand-dark: #031246;
-  --color-text-body: #475569;
-  --color-border-light: #f1f5f9;
+  --color-brand-primary: #007bff;
 }
 
 @layer base {
-  /* Mặc định cho toàn bộ tiêu đề */
-  h1, h2, h3, h4 {
-    @apply text-[var(--color-brand-dark)] font-bold tracking-tight leading-tight;
-  }
-
-  /* Tăng kích thước H1 để tránh bị nhỏ trên Desktop */
+  /* Ép H1 to và đúng màu bằng mọi giá */
   h1 {
-    @apply text-4xl md:text-6xl font-black mb-8 !important;
+    font-size: 2.5rem !important; /* Mobile */
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+    color: var(--color-brand-dark) !important;
+    margin-bottom: 2rem !important;
   }
-
-  h2 {
-    @apply text-3xl md:text-4xl mb-6 !important;
-  }
-
-  h3 {
-    @apply text-xl md:text-2xl mb-4 !important;
-  }
-
-  p {
-    @apply text-base text-[var(--color-text-body)] leading-relaxed mb-4 font-normal;
+  @media (min-width: 768px) {
+    h1 { font-size: 4rem !important; } /* Desktop */
   }
 }
 
-@layer components {
-  /* 1. FIX LỖI NÚT BOLDER: Định nghĩa class rõ ràng hơn */
-  .btn-idecal-bold {
-    @apply inline-flex items-center gap-3 text-[var(--color-brand-dark)] font-black text-xs 
-           tracking-[0.2em] uppercase border-b-2 border-[var(--color-brand-dark)] 
-           pb-1 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] 
-           transition-all duration-300 cursor-pointer !important;
-  }
-
-  /* 2. NÚT BÁO GIÁ (Solid Button) */
+@layer utilities {
+  /* Class cho nút Báo Giá (Nền xanh, chữ trắng, bo góc) */
   .btn-primary-solid {
-    @apply bg-[var(--color-brand-primary)] hover:opacity-90 text-white px-8 py-4 
-           rounded-2xl font-black text-xs tracking-widest shadow-lg 
-           shadow-blue-500/20 transition-all uppercase !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    background-color: var(--color-brand-primary) !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    border-radius: 1rem !important;
+    font-weight: 900 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 123, 255, 0.3) !important;
+    transition: all 0.3s !important;
   }
 
-  .img-brand {
-    @apply rounded-[2.5rem] rounded-tr-[6rem] shadow-lg border-[6px] border-slate-50 
-           object-cover transition-transform duration-700 hover:scale-105;
+  /* Class cho nút Xem Công Trình (Gạch chân, chữ đậm) */
+  .btn-idecal-bold {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    color: var(--color-brand-dark) !important;
+    font-weight: 900 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    border-bottom: 2px solid var(--color-brand-dark) !important;
+    padding-bottom: 0.25rem !important;
+    transition: all 0.3s !important;
   }
-
-  /* Style cho Q và A */
-  .faq-q {
-    @apply text-base font-normal text-[var(--color-brand-dark)] leading-relaxed !important;
+  
+  .btn-idecal-bold:hover {
+    color: var(--color-brand-primary) !important;
+    border-color: var(--color-brand-primary) !important;
   }
-  .faq-a {
-    @apply text-base font-normal text-slate-600 leading-relaxed !important;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.4s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
