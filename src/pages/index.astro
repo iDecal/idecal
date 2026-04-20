@@ -1,28 +1,80 @@
 ---
 import Layout from '../layouts/Layout.astro';
-// Thêm các dòng import dưới đây:
-import hero from '../components/hero.astro';
+import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
-import ProcessStep from '../components/ProcessStep.astro';
 
-const title = "iDecal.vn | Decal dán kính cách nhiệt & Decal mờ trang trí chuyên nghiệp";
-const description = "Chuyên gia cung cấp giải pháp decal dán kính, phim cách nhiệt nhà kính, văn phòng...";
+// 1. Khai báo mảng dữ liệu cho 6 dịch vụ
+const services = [
+  {
+    title: "Phim Cách Nhiệt",
+    description: "Giải pháp từ 3M, Llumar: Cách nhiệt đến 80%, ngăn 99% tia UV. Bảo vệ sức khỏe và nội thất tối ưu.",
+    image: "/images/phim-cach-nhiet.webp",
+    link: "/phim-cach-nhiet"
+  },
+  {
+    title: "Decal Mờ 3D",
+    description: "Thiết kế vân nổi sống động, tạo chiều sâu và sự riêng tư tinh tế với độ che chắn 20-30%.",
+    image: "/images/decal-mo-3d.webp",
+    link: "/decal-mo-3d"
+  },
+  {
+    title: "Decal Cắt Chữ",
+    description: "Cắt máy CNC sắc nét cho Logo, Sticker, nhãn dán thương hiệu. Bền màu và bám dính cực tốt.",
+    image: "/images/decal-cat-chu.webp",
+    link: "/decal-cat-chu"
+  },
+  {
+    title: "Phim Dán Nội Thất",
+    description: "Tái tạo không gian với vân gỗ, vân đá, kim loại. Làm mới bàn ghế, tủ kệ nhanh chóng và tiết kiệm.",
+    image: "/images/film-noithat.webp",
+    link: "/film-noithat"
+  },
+  {
+    title: "Decal Quảng Cáo",
+    description: "In ấn khổ lớn trên chất liệu PP, Vinyl bền màu. Phù hợp dán tường, dán xe và các chiến dịch event.",
+    image: "/images/decal-quang-cao.webp",
+    link: "/decal-quang-cao"
+  },
+  {
+    title: "Decal Văn Phòng",
+    description: "Tạo không gian làm việc chuyên nghiệp, che mờ vách kính ngăn phòng kết hợp cắt Logo thương hiệu.",
+    image: "/images/decal-van-phong.webp",
+    link: "/decal-van-phong"
+  }
+];
+
+const title = "iDecal.vn | Giải pháp Decal & Phim Cách Nhiệt Chuyên Nghiệp";
 ---
 
-<Layout title={title} description={description}>
-  <main class="bg-surface-100">
-    <hero 
+<Layout title={title}>
+  <main class="bg-white">
+    <Hero 
       badge="Đối tác của 200+ công ty nội thất"
-      ...
+      title="Dịch vụ Decal & Phim"
+      highlight="Cách Nhiệt"
+      description="Chuyên gia cung cấp giải pháp decal dán kính, phim cách nhiệt nhà kính, văn phòng tại TP.HCM & Bình Dương."
+      image="/images/hero-idecal.webp"
     />
-    
-    <section class="py-24">
-      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
-        <hero ... />
-        <ServiceCard ... />
-        <ProcessStep ... />
+
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-primary font-bold uppercase tracking-widest text-sm mb-3">Dịch vụ thế mạnh</h2>
+          <h3 class="text-3xl md:text-5xl font-bold text-secondary mb-4">Giải pháp Decal trọn gói</h3>
+          <p class="text-slate-600 text-lg font-body">Chúng tôi cung cấp giải pháp trang trí & chống nóng toàn diện cho mọi công trình.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <ServiceCard 
+              title={service.title}
+              description={service.description}
+              image={service.image}
+              link={service.link}
+            />
+          ))}
+        </div>
       </div>
     </section>
-
-    </main>
+  </main>
 </Layout>
