@@ -1,4 +1,42 @@
-<div class="grid lg:grid-cols-2 gap-x-12 gap-y-6 items-start">
+---
+const faqs = [
+  { 
+    q: "Decal mờ 3D có che hoàn toàn tầm nhìn không?", 
+    a: "Sản phẩm này có độ mờ từ 20-30%, giúp tạo không gian riêng tư nhưng vẫn đảm bảo ánh sáng tự nhiên đi qua, tạo cảm giác thông thoáng cho văn phòng." 
+  },
+  { 
+    q: "Phim cách nhiệt tại iDecal bảo hành bao lâu?", 
+    a: "Tất cả các dòng phim cách nhiệt cao cấp được iDecal thi công đều có chế độ bảo hành từ 5-10 năm về các thông số cách nhiệt và độ bền màu." 
+  },
+  { 
+    q: "Tôi có thể tự dán decal tại nhà không?", 
+    a: "Bạn hoàn toàn có thể tự dán. Tuy nhiên, để đảm bảo bề mặt phẳng mịn, không bị bọt khí và thẩm mỹ cao nhất, đội ngũ kỹ thuật của iDecal luôn sẵn sàng hỗ trợ chuyên nghiệp." 
+  },
+  { 
+    q: "iDecal có nhận thi công tại các tỉnh ngoài TP.HCM không?", 
+    a: "Hiện tại iDecal phục vụ chính tại TP.HCM, Bình Dương và Quy Nhơn. Với các dự án lớn, chúng tôi vẫn hỗ trợ khảo sát và thi công tận nơi." 
+  },
+  { 
+    q: "Chất liệu phim dán nội thất có bền không?", 
+    a: "Các dòng phim Octki, GYMak chúng tôi sử dụng có khả năng chống trầy xước, chống ẩm mốc và độ bền lên đến 7-10 năm." 
+  },
+  { 
+    q: "Thời gian thi công một công trình thường mất bao lâu?", 
+    a: "Tùy vào khối lượng, đa số các công trình văn phòng hoặc căn hộ thông thường iDecal sẽ hoàn thiện nhanh chóng ngay trong ngày." 
+  }
+];
+---
+
+<section class="py-24 bg-white overflow-hidden">
+  <div class="container">
+    
+    <div class="text-center mb-16">
+      <h6>Giải đáp thắc mắc</h6>
+      <h2 class="text-h2">Câu hỏi thường gặp</h2>
+      <p class="italic text-sm">Tất cả các giải đáp về dịch vụ và bảo hành tại iDecal</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6 items-start">
       {faqs.map((faq) => (
         <div class="faq-item transition-all duration-300">
           <details class="faq-details group lg:pointer-events-none cursor-pointer lg:cursor-default" open>
@@ -24,3 +62,43 @@
         </div>
       ))}
     </div>
+  </div>
+</section>
+
+<style>
+  /* Hiệu ứng trượt nhẹ khi mở câu trả lời */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Desktop: Luôn hiển thị câu trả lời dạng lưới */
+  @media (min-width: 1024px) {
+    .faq-details { display: block !important; }
+    .faq-details div { display: flex !important; }
+  }
+
+  /* Mobile: Đóng/Mở linh hoạt */
+  @media (max-width: 1023px) {
+    .faq-details div { display: none; }
+    .faq-details[open] div { display: flex; }
+  }
+</style>
+
+<script>
+  function setupFAQ() {
+    const isDesktop = window.innerWidth >= 1024;
+    document.querySelectorAll('.faq-details').forEach(el => {
+      if (isDesktop) el.setAttribute('open', '');
+    });
+  }
+  setupFAQ();
+  window.addEventListener('resize', setupFAQ);
+</script>
