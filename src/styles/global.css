@@ -1,33 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  /* Mã màu thương hiệu */
-  --color-primary: #007bff; /* Màu xanh sáng iDecal (thay bằng mã chính xác của anh) */
-  --color-secondary: #031246; /* Màu xanh đậm anh yêu cầu */
-  --color-text-main: #475569; /* Màu xám cho nội dung bài viết */
+  /* 1. KHAI BÁO BIẾN MÀU CHUẨN - Giúp anh đổi màu toàn bộ web tại đây */
+  --color-brand-primary: #007bff;   /* Xanh sáng iDecal */
+  --color-brand-dark: #031246;      /* Màu xanh đậm anh yêu cầu */
+  --color-text-body: #475569;       /* Màu chữ nội dung (Slate 600) */
+  --color-border-light: #f1f5f9;    /* Màu viền (Slate 100) */
 }
 
 @layer base {
-  /* H1: Tiêu đề trang (Dùng 1 lần duy nhất mỗi trang) */
+  /* 2. CHUẨN HÓA CÁC THẺ TIÊU ĐỀ (H1-H4) */
+  /* Khi anh dùng <h1>, <h2>... nó sẽ tự động lấy màu và font này */
+  
+  h1, h2, h3, h4 {
+    @apply text-[var(--color-brand-dark)] font-bold tracking-tight leading-tight;
+  }
+
+  /* H1: Tiêu đề trang - Dùng font-black để cực đậm và nổi bật */
   h1 {
-    @apply text-3xl md:text-5xl font-black text-[var(--color-secondary)] leading-tight mb-6;
+    @apply text-3xl md:text-5xl font-black mb-8;
   }
 
-  /* H2: Tiêu đề các section lớn (Dự án tiêu biểu, Tại sao chọn...) */
+  /* H2: Tiêu đề Section chính */
   h2 {
-    @apply text-2xl md:text-4xl font-bold text-[var(--color-secondary)] leading-snug mb-5;
+    @apply text-2xl md:text-4xl mb-6;
   }
 
-  /* H3: Tiêu đề các mục con bên trong section hoặc tiêu đề bài blog */
+  /* H3: Tiêu đề con/Mục dịch vụ */
   h3 {
-    @apply text-xl md:text-2xl font-bold text-[var(--color-secondary)] leading-snug mb-4;
+    @apply text-xl md:text-2xl mb-4;
   }
 
-  /* H4: Tiêu đề nhỏ nhất (Tên dự án, tiêu đề FAQ) */
+  /* H4: Tiêu đề nhỏ/Tên dự án */
   h4 {
-    @apply text-lg font-bold text-[var(--color-secondary)] mb-3;
+    @apply text-lg mb-3;
   }
 
-  /* Body text: Chữ nội dung */
+  /* 3. CHUẨN HÓA ĐOẠN VĂN & NỘI DUNG (P) */
   p {
-    @apply text-base text-[var(--color-text-main)] leading-relaxed mb-4;
+    @apply text-base text-[var(--color-text-body)] leading-relaxed mb-4 font-normal;
   }
+
+  /* 4. CHUẨN HÓA FAQ (Câu hỏi & Trả lời) */
+  
+  /* Câu hỏi (Q): Chữ bằng A, màu đậm #031246, không in đậm */
+  .faq-q {
+    @apply text-base font-normal text-[var(--color-brand-dark)] leading-relaxed;
+  }
+
+  /* Câu trả lời (A): Chữ thường, màu xám nhẹ */
+  .faq-a {
+    @apply text-base font-normal text-[var(--color-text-body)] leading-relaxed;
+  }
+
+  /* 5. CÁC THÀNH PHẦN TRANG TRÍ CHUNG */
+  hr {
+    @apply border-[var(--color-border-light)];
+  }
+}
+
+@layer components {
+  /* 6. NÚT BẤM iDECAL (BOLDER) */
+  /* Sử dụng: <a class="btn-idecal">Về chúng tôi</a> */
+  .btn-idecal {
+    @apply inline-flex items-center gap-3 text-[var(--color-brand-dark)] font-black text-xs 
+           tracking-[0.2em] uppercase border-b-2 border-[var(--color-brand-dark)] 
+           pb-1 hover:text-[var(--color-brand-primary)] hover:border-[var(--color-brand-primary)] 
+           transition-all duration-300 cursor-pointer;
+  }
+
+  /* Ảnh Bo Góc Chuyên Nghiệp */
+  .img-brand {
+    @apply rounded-[2.5rem] rounded-tr-[6rem] shadow-lg border-[6px] border-slate-50 object-cover transition-transform duration-700 hover:scale-105;
+  }
+}
+
+/* 7. HIỆU ỨNG MƯỢT MÀ */
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
