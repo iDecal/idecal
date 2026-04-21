@@ -1,123 +1,154 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// Dữ liệu lợi ích
 const benefits = [
   {
     id: "01",
     title: "Kinh nghiệm lâu năm",
-    desc: "Đội ngũ thợ dán Decal kính của chúng tôi đã có hơn 10 năm kinh nghiệm trong ngành, đảm bảo sự chuyên nghiệp và chính xác trong từng dự án."
+    desc: "Đội ngũ thợ dán Decal kính đã có hơn 10 năm kinh nghiệm, đảm bảo sự chuyên nghiệp và chính xác trong từng dự án."
   },
   {
     id: "02",
-    title: "Thi công khắp TPHCM & Bình Dương",
-    desc: "Chúng tôi có đội ngũ thợ thi công khắp các Quận tại TP HCM và các huyện tại Bình Dương, Đồng Nai, Long An..."
+    title: "Thi công TPHCM & Bình Dương",
+    desc: "Phủ sóng khắp các Quận tại TP HCM và các tỉnh lân cận như Bình Dương, Đồng Nai, Long An..."
   },
   {
     id: "03",
     title: "Dịch vụ tận tình",
-    desc: "Đội ngũ nhân viên tư vấn nhiệt tình, sẵn sàng hỗ trợ để đạt được những công trình trang trí đẹp mắt và vật liệu Decal phù hợp nhất."
+    desc: "Tư vấn nhiệt tình, hỗ trợ khách hàng lựa chọn mẫu mã và vật liệu phù hợp nhất cho không gian văn phòng."
   }
 ];
 
+// Dữ liệu nhân sự
 const team = [
   { name: "Xuân Linh", role: "CEO & Director", img: "/images/team/xuan-linh.webp" },
-  { name: "Anh Lê", role: "Biên tập viên & Saleman", img: "/images/team/anh-le.webp" },
-  { name: "Thanh Sang", role: "Kỹ thuật thi công Decal", img: "/images/team/thanh-sang.webp" }
+  { name: "Anh Lê", role: "Biên tập viên & Sales", img: "/images/team/anh-le.webp" },
+  { name: "Thanh Sang", role: "Kỹ thuật thi công", img: "/images/team/thanh-sang.webp" }
 ];
 ---
 
 <Layout title="Giới thiệu về iDecal - Dịch vụ Decal chuyên nghiệp TPHCM & Bình Dương">
   
-  <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+  <section class="py-24 bg-slate-950 text-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+      <div class="absolute top-[-10%] left-[-5%] w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
+    </div>
+
     <div class="container grid lg:grid-cols-2 gap-16 items-center relative z-10">
-      
-      <div class="animate-fade-up">
-        <h6 class="text-primary tracking-[0.3em] font-bold uppercase mb-4">iDecal Solutions</h6>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-          Thi Công Decal Chuyên Nghiệp TPHCM
+      <div class="animate-fade-right">
+        <div class="inline-block px-4 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+          Về iDecal Solutions
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-7xl font-black mb-8 leading-[1.1]">
+          Thi Công Decal <span class="text-primary italic">Chuyên Nghiệp</span>
         </h1>
-        <p class="max-w-xl text-slate-300 text-lg mb-10 leading-relaxed">
-          iDecal là công ty chuyên **Thi công decal dán kính** chuyên nghiệp tại TPHCM, Bình Dương và các tỉnh lân cận. Với hơn **10 năm kinh nghiệm**, cùng đội ngũ đầy sáng tạo, chúng tôi luôn đảm bảo mỗi sản phẩm đều đạt tiêu chuẩn cao nhất.
+        <p class="max-w-xl text-slate-400 text-lg mb-12 leading-relaxed">
+          Chúng tôi là đơn vị hàng đầu chuyên **thi công decal dán kính** tại TPHCM và Bình Dương. Với hơn **10 năm thực chiến**, iDecal tự tin mang đến những không gian văn phòng tinh tế và hiện đại nhất.
         </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#contact" class="btn-primary-solid text-white px-10 py-4 rounded-full font-bold hover:shadow-lg transition-all">
-            Liên hệ ngay
+        <div class="flex flex-wrap gap-6 items-center">
+          <a href="#contact" class="bg-primary hover:bg-white hover:text-primary text-slate-950 px-12 py-5 rounded-full font-black uppercase text-sm tracking-wider transition-all transform hover:-translate-y-1 shadow-2xl shadow-primary/20">
+            Tư vấn ngay
           </a>
-          <a href="/du-an" class="text-slate-400 group flex items-center gap-2 hover:text-white transition-colors">
-            Xem công trình đã dán <span class="group-hover:translate-x-1 transition-transform">→</span>
+          <a href="/du-an" class="group flex items-center gap-3 text-slate-300 font-bold hover:text-white transition-colors">
+            Xem dự án thực tế
+            <span class="w-10 h-10 rounded-full border border-slate-700 flex items-center justify-center group-hover:bg-primary group-hover:border-primary group-hover:text-slate-950 transition-all">→</span>
           </a>
         </div>
       </div>
 
-      <div class="relative group">
-        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+      <div class="relative group animate-fade-left">
+        <div class="absolute -inset-4 bg-gradient-to-tr from-primary to-transparent rounded-[4rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
         
-        <div class="hero-image-clip relative z-10 rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-2xl">
+        <div class="hero-image-clip relative z-10 rounded-[3rem] overflow-hidden border-[6px] border-white/5 shadow-2xl backdrop-blur-sm">
           <img 
             src="/images/intro-hero.webp" 
-            alt="Thi công dán decal kính văn phòng chuyên nghiệp" 
-            class="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700" 
+            alt="Đội ngũ iDecal thi công dán decal kính văn phòng" 
+            class="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-1000 ease-out" 
           />
+          <div class="absolute bottom-10 left-10 right-10 p-6 bg-slate-900/80 backdrop-blur-md rounded-2xl border border-white/10 hidden md:block">
+             <p class="text-primary font-bold">10+ Năm Kinh Nghiệm</p>
+             <p class="text-xs text-slate-400 uppercase tracking-tighter">Hơn 5000+ công trình đã hoàn thiện</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <style>
-    /* Tạo Clip-path xéo cho khung ảnh */
+    /* CSS Clip-path tạo khối xéo độc đáo */
     .hero-image-clip {
-      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(12% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 
     @media (max-width: 1024px) {
       .hero-image-clip {
-        clip-path: none; /* Bỏ clip-path trên mobile để ảnh hiển thị đầy đủ */
-        border-radius: 2rem;
-        height: 350px;
+        clip-path: none;
+        border-radius: 2.5rem;
+        height: 400px;
       }
+    }
+
+    /* Hiệu ứng mờ dần khi load trang */
+    .animate-fade-right {
+      animation: fadeInRight 0.8s ease-out forwards;
+    }
+    .animate-fade-left {
+      animation: fadeInLeft 0.8s ease-out forwards;
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
     }
   </style>
 
   <section class="py-24 bg-white">
     <div class="container">
-      <div class="grid md:grid-cols-3 gap-12">
+      <div class="grid md:grid-cols-3 gap-10">
         {benefits.map(item => (
-          <div class="relative p-8 border border-slate-100 rounded-3xl hover:shadow-xl transition-shadow">
-            <span class="text-5xl font-black text-primary/10 absolute top-4 right-8">{item.id}</span>
-            <h3 class="text-xl font-bold mb-4 text-secondary">{item.title}</h3>
-            <p class="text-slate-600 leading-relaxed">{item.desc}</p>
+          <div class="group relative p-10 border border-slate-100 rounded-[2.5rem] hover:bg-slate-50 transition-all duration-300">
+            <span class="text-7xl font-black text-primary/5 absolute top-6 right-10 group-hover:text-primary/10 transition-colors">{item.id}</span>
+            <h3 class="text-2xl font-black mb-4 text-slate-900">{item.title}</h3>
+            <p class="text-slate-500 leading-relaxed text-sm">{item.desc}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section class="py-24 bg-slate-50">
-    <div class="container grid lg:grid-cols-2 gap-16 items-center">
-      <div>
-        <h6 class="text-primary font-bold uppercase mb-2">Why choose us?</h6>
-        <h2 class="text-3xl font-bold mb-8">Cung cấp Dịch vụ Decal tiêu chuẩn</h2>
-        <div class="space-y-4">
-          <div class="flex items-start gap-4">
-            <div class="text-primary mt-1">✔</div>
-            <p><strong>Chất lượng Decal nhập khẩu:</strong> Sử dụng Avery, Oracal... bền bỉ và đa dạng.</p>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="text-primary mt-1">✔</div>
-            <p><strong>Mực in Eco Solvent:</strong> Thân thiện với môi trường, sắc nét.</p>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="text-primary mt-1">✔</div>
-            <p><strong>Tác phong chuyên nghiệp:</strong> Thân thiện & thi công đúng tiến độ.</p>
-          </div>
+  <section class="py-24 bg-slate-50 relative">
+    <div class="container grid lg:grid-cols-2 gap-20 items-center">
+      <div class="order-2 lg:order-1">
+        <h6 class="text-primary font-black uppercase tracking-widest text-xs mb-4">Lợi thế cạnh tranh</h6>
+        <h2 class="text-4xl font-black mb-10 text-slate-900 leading-tight">Dịch Vụ Decal Tiêu Chuẩn Quốc Tế</h2>
+        <div class="space-y-6">
+          {[
+            { t: "Chất lượng Decal nhập khẩu", d: "Sử dụng vật liệu Avery, Oracal chính hãng, độ bền trên 5 năm." },
+            { t: "Mực in Eco Solvent", d: "Công nghệ in Nhật Bản, màu sắc rực rỡ và cực kỳ bền màu." },
+            { t: "Tác phong chuyên nghiệp", d: "Thi công đúng tiến độ, vệ sinh sạch sẽ sau khi hoàn thiện." }
+          ].map(point => (
+            <div class="flex gap-5">
+              <div class="w-12 h-12 shrink-0 bg-white shadow-sm border border-slate-100 rounded-xl flex items-center justify-center text-primary font-bold">✓</div>
+              <div>
+                <h4 class="font-bold text-slate-900">{point.t}</h4>
+                <p class="text-sm text-slate-500">{point.d}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div class="bg-primary/5 rounded-[3rem] p-12">
-        <h3 class="text-2xl font-bold mb-6 text-secondary text-center">Hình ảnh thi công tiêu biểu</h3>
-        <p class="text-center text-slate-500 italic">"Những công trình dịch vụ Decal tiêu biểu trong hơn 5+ năm qua"</p>
-        <div class="grid grid-cols-2 gap-4 mt-8">
-           <div class="h-40 bg-slate-200 rounded-2xl animate-pulse"></div>
-           <div class="h-40 bg-slate-200 rounded-2xl animate-pulse"></div>
+      <div class="order-1 lg:order-2 bg-white rounded-[4rem] p-16 shadow-xl relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 bg-primary text-slate-950 font-black rounded-bl-[3rem]">5+ Năm</div>
+        <h3 class="text-2xl font-black mb-8 text-slate-900">Hình ảnh tiêu biểu</h3>
+        <p class="text-slate-400 text-sm mb-10">Những công trình dán decal kính tiêu biểu trong suốt hành trình phát triển của iDecal.</p>
+        <div class="grid grid-cols-2 gap-4">
+           <div class="aspect-square bg-slate-100 rounded-3xl animate-pulse"></div>
+           <div class="aspect-square bg-slate-100 rounded-3xl animate-pulse"></div>
         </div>
       </div>
     </div>
@@ -125,25 +156,31 @@ const team = [
 
   <section class="py-24 bg-white">
     <div class="container">
-      <h2 class="text-center text-3xl font-bold mb-16">Đội ngũ nhân sự tiêu biểu</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="max-w-2xl mx-auto text-center mb-20">
+        <h2 class="text-4xl font-black mb-4">Đội Ngũ Nhân Sự Tiêu Biểu</h2>
+        <p class="text-slate-500">Những người đứng sau sự thành công của các dự án decal lớn nhỏ.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-12">
         {team.map(member => (
           <div class="text-center group">
-            <div class="w-48 h-48 bg-slate-100 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg group-hover:border-primary transition-all">
-              <img src={member.img} alt={member.name} class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+            <div class="relative w-56 h-56 mx-auto mb-8">
+               <div class="absolute inset-0 bg-primary rounded-[3rem] rotate-6 group-hover:rotate-12 transition-transform opacity-10"></div>
+               <div class="relative w-full h-full bg-slate-100 rounded-[3rem] overflow-hidden border-4 border-white shadow-xl">
+                  <img src={member.img} alt={member.name} class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+               </div>
             </div>
-            <h4 class="text-xl font-bold text-secondary">{member.name}</h4>
-            <p class="text-primary text-sm font-medium uppercase tracking-wider">{member.role}</p>
+            <h4 class="text-2xl font-black text-slate-900">{member.name}</h4>
+            <p class="text-primary text-xs font-bold uppercase tracking-widest mt-2">{member.role}</p>
           </div>
         ))}
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-20 bg-primary text-white text-center rounded-t-[4rem]">
-    <div class="container">
-      <h2 class="text-3xl font-bold mb-8">Bạn cần tư vấn thi công Decal?</h2>
-      <a href="https://zalo.me/090xxxxxxx" class="inline-block bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-secondary hover:text-white transition-all shadow-xl">
+  <section id="contact" class="py-24 bg-primary text-slate-950 text-center relative overflow-hidden">
+    <div class="container relative z-10">
+      <h2 class="text-4xl md:text-5xl font-black mb-10 leading-tight">Sẵn Sàng Làm Mới<br/>Không Gian Văn Phòng Của Bạn?</h2>
+      <a href="https://zalo.me/090xxxxxxx" class="inline-block bg-slate-950 text-white px-16 py-6 rounded-full font-black uppercase text-sm tracking-widest hover:scale-105 transition-transform shadow-2xl">
         Hotline: 090x.xxx.xxx
       </a>
     </div>
