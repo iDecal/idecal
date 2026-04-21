@@ -1,6 +1,5 @@
 ---
 // Navbar.astro - iDecal Navigation Component
-// Định nghĩa các liên kết menu để dễ quản lý và tối ưu SEO
 const navLinks = [
   { name: "Trang chủ", href: "/" },
   { name: "Giới thiệu", href: "/gioi-thieu" },
@@ -68,12 +67,12 @@ const navLinks = [
       </div>
 
       <div class="hidden lg:flex items-center gap-4">
-        <a href="tel:090xxxxxxx" class="flex flex-col items-end mr-2">
-          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Tư vấn miễn phí</span>
-          <span class="text-sm font-black text-secondary tracking-wide">090x.xxx.xxx</span>
+        <a href="tel:090xxxxxxx" class="flex flex-col items-end mr-2 group">
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Hotline 24/7</span>
+          <span class="text-sm font-black text-secondary tracking-wide group-hover:text-primary transition-colors font-mono">090x.xxx.xxx</span>
         </a>
-        <a href="/lien-he" class="bg-slate-950 text-white px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-slate-950 transition-all shadow-xl shadow-slate-900/10">
-          Báo giá ngay
+        <a href="/lien-he" class="bg-slate-950 text-white px-8 py-3.5 rounded-xl font-bold text-xs uppercase tracking-[0.15em] hover:bg-primary hover:text-slate-950 transition-all shadow-xl shadow-slate-900/10 active:scale-95">
+          Tư vấn miễn phí
         </a>
       </div>
 
@@ -89,18 +88,18 @@ const navLinks = [
 
   <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col">
     <div class="p-6 flex justify-between items-center border-b border-slate-100">
-      <span class="text-2xl font-black text-slate-900">i<span class="text-primary">Decal</span></span>
-      <button id="menu-close" class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-900 text-2xl">&times;</button>
+      <span class="text-2xl font-black text-slate-900 font-mono">i<span class="text-primary font-sans">Decal</span></span>
+      <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-900 text-3xl hover:bg-slate-200">&times;</button>
     </div>
     
-    <div class="flex-1 overflow-y-auto p-6 space-y-8">
+    <div class="flex-1 overflow-y-auto p-8 space-y-10">
       {navLinks.map((link) => (
-        <div class="space-y-4">
-          <a href={link.href} class="text-3xl font-black text-slate-900 hover:text-primary transition-colors inline-block">{link.name}</a>
+        <div class="space-y-5">
+          <a href={link.href} class="text-3xl font-black text-slate-900 hover:text-primary transition-colors inline-block tracking-tighter">{link.name}</a>
           {link.dropdown && (
-            <div class="grid gap-4 ml-4 border-l-2 border-slate-100 pl-6">
+            <div class="grid gap-5 ml-4 border-l-2 border-slate-100 pl-6">
               {link.dropdown.map((sub) => (
-                <a href={sub.href} class={`text-lg font-bold ${sub.highlight ? 'text-primary' : 'text-slate-400'}`}>
+                <a href={sub.href} class={`text-lg font-bold transition-colors ${sub.highlight ? 'text-primary' : 'text-slate-400 hover:text-slate-600'}`}>
                   {sub.name}
                 </a>
               ))}
@@ -110,11 +109,11 @@ const navLinks = [
       ))}
     </div>
 
-    <div class="p-6 border-t border-slate-100 space-y-4">
-      <a href="tel:090xxxxxxx" class="w-full block bg-primary text-slate-950 text-center py-5 rounded-2xl font-black uppercase tracking-widest text-lg">
-        Gọi 090x.xxx.xxx
+    <div class="p-6 border-t border-slate-100 space-y-4 bg-slate-50">
+      <a href="tel:090xxxxxxx" class="w-full block bg-primary text-slate-950 text-center py-5 rounded-2xl font-black uppercase tracking-widest text-lg shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+        Tư vấn miễn phí
       </a>
-      <p class="text-center text-xs text-slate-400 font-bold uppercase tracking-widest">Khảo sát tận nơi sau 30 phút</p>
+      <p class="text-center text-[11px] text-slate-400 font-bold uppercase tracking-[0.2em]">Khảo sát & Mang mẫu tận nhà</p>
     </div>
   </div>
 </nav>
@@ -126,7 +125,7 @@ const navLinks = [
 
   menuToggle?.addEventListener('click', () => {
     mobileMenu?.classList.remove('translate-x-full');
-    document.body.style.overflow = 'hidden'; // Chặn scroll khi mở menu
+    document.body.style.overflow = 'hidden';
   });
 
   menuClose?.addEventListener('click', () => {
@@ -134,7 +133,6 @@ const navLinks = [
     document.body.style.overflow = ''; 
   });
 
-  // Đóng menu khi click vào link (dành cho anchor links)
   const links = mobileMenu?.querySelectorAll('a');
   links?.forEach(link => {
     link.addEventListener('click', () => {
@@ -143,10 +141,3 @@ const navLinks = [
     });
   });
 </script>
-
-<style>
-  /* Hiệu ứng Glassmorphism nhẹ cho Navbar */
-  nav {
-    transition: all 0.3s ease;
-  }
-</style>
