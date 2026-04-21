@@ -1,0 +1,123 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const products = [
+  {
+    name: "Phim Cách Nhiệt 3M Crystalline",
+    origin: "USA",
+    feature: "Cản 97% tia hồng ngoại, không cản sóng điện thoại",
+    image: "/images/products/3m-crystalline.webp"
+  },
+  {
+    name: "Phim Llumar Nano-Ceramic",
+    origin: "USA",
+    feature: "Công nghệ men gốm, độ bền cao, màu sắc sang trọng",
+    image: "/images/products/llumar-ceramic.webp"
+  },
+  {
+    name: "Phim Phản Quang Silver",
+    origin: "Hàn Quốc",
+    feature: "Chống chói cực tốt, tạo không gian riêng tư 1 chiều",
+    image: "/images/products/reflective-film.webp"
+  }
+];
+
+const faqs = [
+  { q: "Dán phim cách nhiệt có làm tối phòng không?", a: "iDecal có nhiều dòng phim với độ xuyên sáng khác nhau. Đối với văn phòng, chúng tôi thường tư vấn các dòng phim có độ xuyên sáng từ 35-50%, vừa đảm bảo cách nhiệt tốt vừa giữ được ánh sáng tự nhiên." },
+  { q: "Phim cách nhiệt có bền không? Bảo hành bao lâu?", a: "Các dòng phim chính hãng 3M, Llumar có độ bền lên đến 10-15 năm. iDecal cam kết bảo hành từ 5-10 năm cho các hiện tượng bong tróc, bay màu hoặc rạn nứt." },
+  { q: "Thời gian thi công cho một căn hộ/văn phòng mất bao lâu?", a: "Với đội ngũ thợ chuyên nghiệp, iDecal thường hoàn thiện thi công trong vòng 2-4 giờ cho căn hộ chung cư và trong ngày cho các sàn văn phòng dưới 100m2." }
+];
+---
+
+<Layout title="Phim Cách Nhiệt Nhà Kính | Giải Pháp Chống Nóng Văn Phòng & Nhà Ở">
+  
+  <section class="py-24 bg-slate-900 relative overflow-hidden">
+    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="animate-fade-up">
+        <h6 class="text-primary tracking-[0.3em] font-bold">Heat Control Solution</h6>
+        <h1 class="text-white !important">Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp</h1>
+        <p class="text-slate-300 text-lg">
+          Giải pháp chống nóng toàn diện cho <strong>văn phòng, nhà ở và showroom</strong>. Giảm tới 80% sức nóng mặt trời, bảo vệ sức khỏe và tiết kiệm 30% điện năng máy lạnh.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="#quote" class="btn-primary-solid">Liên hệ báo giá ngay</a>
+          <a href="#products" class="btn-idecal-bold text-white border-white transition-all hover:text-primary hover:border-primary">Xem bảng giá sản phẩm</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+        <img src="/images/hero-film-cach-nhiet.webp" alt="Thi công phim cách nhiệt" class="img-brand w-full h-[450px] object-cover relative z-10" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6 class="text-primary">Ứng dụng thực tế</h6>
+        <h2>Giải pháp cho mọi không gian</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="service-card-brand bg-blue-50/30 border-none p-8">
+          <h4 class="text-secondary">Văn Phòng Làm Việc</h4>
+          <p class="text-sm">Chống chói màn hình máy tính, tạo không gian làm việc mát mẻ và chuyên nghiệp cho nhân viên.</p>
+        </div>
+        <div class="service-card-brand bg-blue-50/30 border-none p-8">
+          <h4 class="text-secondary">Căn Hộ & Biệt Thự</h4>
+          <p class="text-sm">Bảo vệ nội thất da, gỗ khỏi tia UV và giữ cho tầm nhìn ra bên ngoài luôn trong trẻo, dịu mắt.</p>
+        </div>
+        <div class="service-card-brand bg-blue-50/30 border-none p-8">
+          <h4 class="text-secondary">Showroom & Cửa Hàng</h4>
+          <p class="text-sm">Cách nhiệt nhưng vẫn đảm bảo độ trong suốt để khách hàng quan sát sản phẩm từ bên ngoài.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="py-24 bg-slate-50">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6>Danh mục sản phẩm</h6>
+        <h2>Thương hiệu Phim Cách Nhiệt hàng đầu</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {products.map((item) => (
+          <div class="bg-white rounded-[2rem] overflow-hidden shadow-card group transition-all hover:-translate-y-2">
+            <div class="h-56 overflow-hidden">
+              <img src={item.image} alt={item.name} class="w-full h-full object-cover group-hover:scale-110 transition-duration-500" />
+            </div>
+            <div class="p-8">
+              <span class="text-[10px] font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">Xuất xứ: {item.origin}</span>
+              <h4 class="mt-4 mb-2 text-lg text-secondary">{item.name}</h4>
+              <p class="text-xs italic leading-relaxed">{item.feature}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <div>
+          <h6 class="text-primary">Hỗ trợ khách hàng</h6>
+          <h2>Câu hỏi thường gặp</h2>
+          <p class="text-sm mt-4">Những thắc mắc phổ biến của khách hàng khi lựa chọn giải pháp chống nóng cho nhà kính.</p>
+        </div>
+        <div class="lg:col-span-2 space-y-6">
+          {faqs.map((faq) => (
+            <div class="p-6 rounded-2xl border border-slate-100 hover:border-primary/30 transition-colors">
+              <h4 class="text-base text-secondary flex gap-3 items-start">
+                <span class="w-6 h-6 rounded-full bg-primary text-white text-[10px] flex items-center justify-center shrink-0 mt-1">Q</span>
+                {faq.q}
+              </h4>
+              <p class="text-sm mt-4 pl-9 text-slate-500">{faq.a}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
