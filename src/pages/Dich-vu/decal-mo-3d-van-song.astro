@@ -1,10 +1,35 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
+// 1. Khai báo tất cả biến và dữ liệu ở đây
 const features = [
   { title: "Bề mặt nổi 3D", desc: "Họa tiết vân sóng được dập nổi tạo hiệu ứng chiều sâu và cảm giác cao cấp khi chạm tay vào." },
   { title: "Độ xuyên sáng", desc: "Giữ lại 20-30% ánh sáng tự nhiên, giúp không gian không bị tối mà vẫn đảm bảo tính riêng tư tương đối." },
   { title: "Chất liệu cao cấp", desc: "Decal dày dặn, độ bám dính cực tốt trên kính, không để lại keo khi bóc bỏ sau thời gian dài." }
+];
+
+const products = [
+  {
+    id: "clear",
+    name: "Vân Sóng Trong Suốt",
+    imgSmall: "/images/products/wave-clear-small.webp",
+    imgLarge: "/images/products/wave-clear-large.webp",
+    alt: "Decal vân sóng trong suốt"
+  },
+  {
+    id: "bronze",
+    name: "Vân Sóng Màu Trà",
+    imgSmall: "/images/products/wave-bronze-small.webp",
+    imgLarge: "/images/products/wave-bronze-large.webp",
+    alt: "Decal vân sóng màu trà"
+  },
+  {
+    id: "blue",
+    name: "Vân Sóng Màu Xanh",
+    imgSmall: "/images/products/wave-blue-small.webp",
+    imgLarge: "/images/products/wave-blue-large.webp",
+    alt: "Decal vân sóng màu xanh"
+  }
 ];
 ---
 
@@ -45,143 +70,74 @@ const features = [
     </div>
   </section>
 
----
-// Định nghĩa danh sách sản phẩm để quản lý code sạch hơn
-const products = [
-  {
-    id: "clear",
-    name: "Vân Sóng Trong Suốt",
-    imgSmall: "/images/products/wave-clear-small.webp",
-    imgLarge: "/images/products/wave-clear-large.webp",
-    alt: "Decal vân sóng trong suốt"
-  },
-  {
-    id: "bronze",
-    name: "Vân Sóng Màu Trà",
-    imgSmall: "/images/products/wave-bronze-small.webp",
-    imgLarge: "/images/products/wave-bronze-large.webp",
-    alt: "Decal vân sóng màu trà"
-  },
-  {
-    id: "blue",
-    name: "Vân Sóng Màu Xanh",
-    imgSmall: "/images/products/wave-blue-small.webp",
-    imgLarge: "/images/products/wave-blue-large.webp",
-    alt: "Decal vân sóng màu xanh"
-  }
-];
----
-
-<section class="py-24 bg-slate-50">
-  <div class="container">
-    <div class="text-center mb-16">
-      <h6 class="text-primary font-black uppercase tracking-widest text-[10px]">Premium Collection</h6>
-      <h2 class="mt-4">Bảng Giá & Quy Cách Decal 3D Vân Sóng</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto mt-4 text-sm">
-        Sản phẩm cao cấp có đầy đủ tùy chọn <strong>Sóng To / Sóng Nhỏ</strong> cho tất cả các màu. 
-        Thi công trọn gói chuyên nghiệp tại TP.HCM & Bình Dương.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8 mb-16">
-      {products.map((p) => (
-        <div class="product-card bg-white rounded-[3rem] p-8 shadow-sm border border-slate-100 group hover:shadow-xl transition-all flex flex-col" data-id={p.id}>
-          <div class="h-60 overflow-hidden rounded-[2rem] mb-6 bg-slate-100">
-            <img 
-              id={`img-${p.id}`}
-              src={p.imgSmall} 
-              alt={p.alt} 
-              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
-            />
-          </div>
-
-          <h3 class="text-xl font-bold text-secondary mb-2">{p.name}</h3>
-          
-          <div class="flex gap-2 mb-6">
-            <button 
-              class="wave-selector active px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider transition-all border border-slate-200" 
-              data-type="small" 
-              data-target={p.id}
-              data-src={p.imgSmall}
-            >
-              Sóng Nhỏ
-            </button>
-            <button 
-              class="wave-selector px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider transition-all border border-slate-200 text-slate-400" 
-              data-type="large" 
-              data-target={p.id}
-              data-src={p.imgLarge}
-            >
-              Sóng To
-            </button>
-          </div>
-          
-          <div class="mt-auto pt-6 border-t border-slate-50">
-            <div class="flex items-baseline gap-1 mb-2">
-              <span class="text-2xl font-black text-primary">280.000đ</span>
-              <span class="text-xs text-slate-400">/m²</span>
-            </div>
-            <ul class="text-[11px] text-slate-500 space-y-1">
-              <li>• Khổ ngang: 1.52m</li>
-              <li>• Quy cách: 1.52m x 30m (cuộn)</li>
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <div class="max-w-2xl mx-auto p-6 bg-blue-50/50 rounded-2xl border border-blue-100 text-center">
-      <p class="text-[12px] text-slate-600 leading-relaxed">
-        <strong>Lưu ý:</strong> Giá trên chưa bao gồm công thi công và thuế VAT. 
-        Đối với khách hàng đại lý hoặc công trình số lượng lớn, vui lòng liên hệ trực tiếp để có chiết khấu tốt nhất.
-      </p>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Style cho nút đang được chọn */
-  .wave-selector.active {
-    background-color: #3b82f6; /* Màu primary của anh */
-    color: white;
-    border-color: #3b82f6;
-    shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  }
-</style>
-
-<script>
-  // Script xử lý đổi hình ảnh khi click nút
-  const buttons = document.querySelectorAll('.wave-selector');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      const targetId = button.getAttribute('data-target');
-      const newSrc = button.getAttribute('data-src');
-      const imgElement = document.getElementById(`img-${targetId}`);
-      
-      // 1. Cập nhật ảnh (kèm hiệu ứng mờ nhẹ khi đổi)
-      if (imgElement) {
-        imgElement.style.opacity = '0.5';
-        setTimeout(() => {
-          imgElement.setAttribute('src', newSrc);
-          imgElement.style.opacity = '1';
-        }, 150);
-      }
-
-      // 2. Cập nhật trạng thái nút trong cùng một Card
-      const card = button.closest('.product-card');
-      card.querySelectorAll('.wave-selector').forEach(btn => {
-        btn.classList.remove('active', 'text-white');
-        btn.classList.add('text-slate-400');
-      });
-      
-      button.classList.add('active');
-      button.classList.remove('text-slate-400');
-    });
-  });
-</script>
-
   <section class="py-24 bg-slate-50">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6 class="text-primary font-black uppercase tracking-widest text-[10px]">Premium Collection</h6>
+        <h2 class="mt-4">Bảng Giá & Quy Cách Decal 3D Vân Sóng</h2>
+        <p class="text-slate-500 max-w-2xl mx-auto mt-4 text-sm">
+          Sản phẩm cao cấp có đầy đủ tùy chọn <strong>Sóng To / Sóng Nhỏ</strong> cho tất cả các màu. 
+          Thi công trọn gói chuyên nghiệp tại TP.HCM & Bình Dương.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        {products.map((p) => (
+          <div class="product-card bg-white rounded-[3rem] p-8 shadow-sm border border-slate-100 group hover:shadow-xl transition-all flex flex-col" data-id={p.id}>
+            <div class="h-60 overflow-hidden rounded-[2rem] mb-6 bg-slate-100">
+              <img 
+                id={`img-${p.id}`}
+                src={p.imgSmall} 
+                alt={p.alt} 
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+              />
+            </div>
+
+            <h3 class="text-xl font-bold text-secondary mb-2">{p.name}</h3>
+            
+            <div class="flex gap-2 mb-6">
+              <button 
+                class="wave-selector active px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider transition-all border border-slate-200" 
+                data-type="small" 
+                data-target={p.id}
+                data-src={p.imgSmall}
+              >
+                Sóng Nhỏ
+              </button>
+              <button 
+                class="wave-selector px-3 py-1.5 rounded-lg text-[9px] font-black uppercase tracking-wider transition-all border border-slate-200 text-slate-400" 
+                data-type="large" 
+                data-target={p.id}
+                data-src={p.imgLarge}
+              >
+                Sóng To
+              </button>
+            </div>
+            
+            <div class="mt-auto pt-6 border-t border-slate-50">
+              <div class="flex items-baseline gap-1 mb-2">
+                <span class="text-2xl font-black text-primary">280.000đ</span>
+                <span class="text-xs text-slate-400">/m²</span>
+              </div>
+              <ul class="text-[11px] text-slate-500 space-y-1">
+                <li>• Khổ ngang: 1.52m</li>
+                <li>• Quy cách: 1.52m x 30m (cuộn)</li>
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="max-w-2xl mx-auto p-6 bg-blue-50/50 rounded-2xl border border-blue-100 text-center">
+        <p class="text-[12px] text-slate-600 leading-relaxed">
+          <strong>Lưu ý:</strong> Giá trên chưa bao gồm công thi công và thuế VAT. 
+          Đối với khách hàng đại lý hoặc công trình số lượng lớn, vui lòng liên hệ trực tiếp để có chiết khấu tốt nhất.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
     <div class="container">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -196,7 +152,7 @@ const products = [
           </ul>
           <div class="p-6 bg-amber-50 rounded-2xl border border-amber-100">
              <p class="text-xs text-amber-700 italic">
-               <strong>Lưu ý:</strong> Đây là dòng sản phẩm tập trung vào tính thẩm mỹ trang trí. Do độ xuyên sáng đạt khoảng 30%, sản phẩm cung cấp sự riêng tư tương đối, không che khuất hoàn toàn tầm nhìn như decal mờ truyền thống.
+               <strong>Lưu ý:</strong> Đây là dòng sản phẩm tập trung vào tính thẩm mỹ trang trí. Do độ xuyên sáng đạt khoảng 30%, sản phẩm cung cấp sự riêng tư tương đối.
              </p>
           </div>
         </div>
@@ -211,12 +167,12 @@ const products = [
     </div>
   </section>
 
-  <section id="contact" class="py-24 bg-white">
+  <section id="contact" class="py-24 bg-slate-900 rounded-t-[4rem]">
     <div class="container">
-      <div class="bg-slate-900 rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
+      <div class="text-center text-white relative z-10">
         <h2 class="text-white !important mb-6">Liên hệ xem mẫu & Đo đạc tận nơi</h2>
         <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
-          Mẫu Decal 3D Vân Sóng cần được nhìn trực tiếp để cảm nhận độ nổi của vân. Đội ngũ iDecal sẵn sàng mang mẫu đến tận công trình tại TP.HCM & Bình Dương.
+          Mẫu Decal 3D Vân Sóng cần được nhìn trực tiếp. Đội ngũ iDecal sẵn sàng mang mẫu đến tận nơi tại TP.HCM & Bình Dương.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6">
           <a href="tel:090xxxxxxx" class="btn-primary-solid !px-10 text-sm">Gửi báo giá qua Zalo</a>
@@ -227,3 +183,41 @@ const products = [
   </section>
 
 </Layout>
+
+<style>
+  .wave-selector.active {
+    background-color: #3b82f6; 
+    color: white;
+    border-color: #3b82f6;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); /* Sửa lỗi shadow ở đây */
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll('.wave-selector');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const newSrc = button.getAttribute('data-src');
+      const imgElement = document.getElementById(`img-${targetId}`);
+      
+      if (imgElement) {
+        imgElement.style.opacity = '0.5';
+        setTimeout(() => {
+          imgElement.setAttribute('src', newSrc);
+          imgElement.style.opacity = '1';
+        }, 150);
+      }
+
+      const card = button.closest('.product-card');
+      card.querySelectorAll('.wave-selector').forEach(btn => {
+        btn.classList.remove('active');
+        btn.classList.add('text-slate-400');
+      });
+      
+      button.classList.add('active');
+      button.classList.remove('text-slate-400');
+    });
+  });
+</script>
