@@ -1,11 +1,12 @@
 ---
-// Navbar.astro - iDecal Navigation Component
+// Navbar.astro - iDecal Navigation (Fixed Mobile Accordion)
 const navLinks = [
   { name: "Trang chủ", href: "/" },
   { name: "Giới thiệu", href: "/gioi-thieu" },
   { 
     name: "Dịch vụ", 
     href: "#",
+    id: "services-menu", // Thêm ID để bắt sự kiện click
     dropdown: [
       { name: "Thiết kế - In ấn - Thi công Decal", href: "/dich-vu-tron-goi", highlight: true }, 
       { name: "Phim Cách Nhiệt", href: "/phim-cach-nhiet" },
@@ -28,41 +29,24 @@ const navLinks = [
       
       <div class="flex-shrink-0">
         <a href="/" class="flex items-center group">
-          <img 
-            src="/images/idecal-logo.png" 
-            alt="iDecal Logo" 
-            class="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-          />
+          <img src="/images/idecal-logo.png" alt="iDecal Logo" class="h-12 w-auto object-contain" />
         </a>
       </div>
 
       <div class="hidden lg:flex items-center gap-8">
         {navLinks.map((link) => (
           <div class="relative group py-8">
-            <a 
-              href={link.href} 
-              class="text-[13px] font-bold text-slate-600 hover:text-primary uppercase tracking-widest transition-colors flex items-center gap-1"
-            >
+            <a href={link.href} class="text-[13px] font-bold text-slate-600 hover:text-primary uppercase tracking-widest transition-colors flex items-center gap-1">
               {link.name}
-              {link.dropdown && (
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 opacity-50 group-hover:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
-                </svg>
-              )}
+              {link.dropdown && <span class="text-[10px] opacity-50">▼</span>}
             </a>
-
             {link.dropdown && (
               <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
-                <div class="grid gap-1">
-                  {link.dropdown.map((sub) => (
-                    <a 
-                      href={sub.href} 
-                      class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-primary text-slate-950 font-bold mb-2 shadow-md shadow-primary/20' : 'text-slate-600 hover:bg-slate-50 hover:text-primary'}`}
-                    >
-                      {sub.name}
-                    </a>
-                  ))}
-                </div>
+                {link.dropdown.map((sub) => (
+                  <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-primary text-slate-950 font-bold mb-2 shadow-md' : 'text-slate-600 hover:bg-slate-50 hover:text-primary'}`}>
+                    {sub.name}
+                  </a>
+                ))}
               </div>
             )}
           </div>
@@ -72,22 +56,17 @@ const navLinks = [
       <div class="hidden lg:flex items-center gap-4">
         <div class="flex flex-col items-end mr-2">
           <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Hotline 24/7</span>
-          <a href="tel:0866077040" class="text-sm font-black text-secondary tracking-wide font-mono hover:text-primary transition-colors">
-            0866-077-040
-          </a>
+          <a href="tel:0866077040" class="text-sm font-black text-secondary font-mono">0866-077-040</a>
         </div>
-        
-        <a href="/lien-he" class="bg-slate-950 text-white px-10 py-4 rounded-2xl font-bold text-xs uppercase tracking-[0.15em] hover:bg-primary hover:text-slate-950 transition-all shadow-2xl shadow-slate-900/20 active:scale-95 border-2 border-transparent hover:border-primary">
+        <a href="/lien-he" class="bg-slate-950 text-white px-8 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-slate-950 transition-all">
           Tư vấn miễn phí
         </a>
       </div>
 
-      <button id="menu-toggle" class="lg:hidden p-2 text-slate-900" aria-label="Open Menu">
-        <div class="w-6 h-5 flex flex-col justify-between">
-          <span class="w-full h-0.5 bg-current rounded-full"></span>
-          <span class="w-3/4 h-0.5 bg-current rounded-full ml-auto"></span>
-          <span class="w-full h-0.5 bg-current rounded-full"></span>
-        </div>
+      <button id="menu-toggle" class="lg:hidden p-2 text-slate-900">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
       </button>
     </div>
   </div>
@@ -95,31 +74,37 @@ const navLinks = [
   <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col">
     <div class="p-6 flex justify-between items-center border-b border-slate-100">
       <img src="/images/idecal-logo.png" alt="iDecal Logo" class="h-10 w-auto" />
-      <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-slate-900 text-3xl">&times;</button>
+      <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-3xl">&times;</button>
     </div>
     
-    <div class="flex-1 overflow-y-auto p-8 space-y-10">
-      {navLinks.map((link) => (
-        <div class="space-y-5">
-          <a href={link.href} class="text-3xl font-black text-slate-900 hover:text-primary transition-colors inline-block">{link.name}</a>
-          {link.dropdown && (
-            <div class="grid gap-5 ml-4 border-l-2 border-slate-100 pl-6">
-              {link.dropdown.map((sub) => (
-                <a href={sub.href} class={`text-lg font-bold ${sub.highlight ? 'text-primary uppercase' : 'text-slate-400'}`}>
-                  {sub.name}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      ))}
+    <div class="flex-1 overflow-y-auto p-8">
+      <div class="flex flex-col gap-6">
+        {navLinks.map((link) => (
+          <div class="flex flex-col">
+            {link.dropdown ? (
+              <button class="mobile-dropdown-btn text-3xl font-black text-slate-900 flex justify-between items-center text-left">
+                {link.name}
+                <span class="text-xl transition-transform duration-300">＋</span>
+              </button>
+              <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-4 mt-0">
+                {link.dropdown.map((sub) => (
+                  <a href={sub.href} class={`text-lg font-bold pl-4 border-l-2 border-slate-100 mt-4 ${sub.highlight ? 'text-primary' : 'text-slate-400'}`}>
+                    {sub.name}
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <a href={link.href} class="text-3xl font-black text-slate-900 uppercase tracking-tighter">{link.name}</a>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
 
-    <div class="p-6 border-t border-slate-100 space-y-4 bg-slate-50">
-      <a href="tel:0866077040" class="w-full block bg-primary text-slate-950 text-center py-6 rounded-2xl font-black uppercase tracking-widest text-lg shadow-xl shadow-primary/30">
+    <div class="p-6 border-t border-slate-100 bg-slate-50">
+      <a href="tel:0866077040" class="w-full block bg-primary text-slate-950 text-center py-5 rounded-2xl font-black uppercase tracking-widest text-lg shadow-xl shadow-primary/30">
         Tư vấn: 0866-077-040
       </a>
-      <p class="text-center text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">Khảo sát & Mang mẫu tận nhà trong 30p</p>
     </div>
   </div>
 </nav>
@@ -129,6 +114,7 @@ const navLinks = [
   const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
 
+  // Đóng/Mở Menu chính
   menuToggle?.addEventListener('click', () => {
     mobileMenu?.classList.remove('translate-x-full');
     document.body.style.overflow = 'hidden';
@@ -137,5 +123,27 @@ const navLinks = [
   menuClose?.addEventListener('click', () => {
     mobileMenu?.classList.add('translate-x-full');
     document.body.style.overflow = ''; 
+  });
+
+  // Xử lý Accordion (Collapse) cho Dịch vụ trên Mobile
+  const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+  
+  dropdownBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling as HTMLElement;
+      const icon = btn.querySelector('span');
+      
+      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0px';
+        content.style.marginTop = '0px';
+        if (icon) icon.innerText = '＋';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.marginTop = '1rem';
+        if (icon) icon.innerText = '－';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      }
+    });
   });
 </script>
