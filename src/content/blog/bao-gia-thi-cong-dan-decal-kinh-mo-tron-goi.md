@@ -1,8 +1,9 @@
 ---
 title: "Bảng Báo Giá Thi Công Decal Dán Kính Mờ Cập Nhật 2025"
-description: "Dự án lắp đặt backdrop decal tại showroom Toyota với độ sắc nét cao."
-pubDate: 2026-04-20
-category: "Báo giá"
+description: "iDecal cung cấp bảng báo giá decal mờ chi tiết theo từng hạng mục và phân tích các yếu tố ảnh hưởng đến chi phí."
+pubDate: 2026-04-21
+category: "Kiến thức"
+author: "Anh Lê"
 image: "/images/Banner/gioi-thieu-idecal.jpeg"
 ---
 
