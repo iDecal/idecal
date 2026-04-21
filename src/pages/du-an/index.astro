@@ -9,40 +9,82 @@ const categories = ["Tất cả", "Văn phòng", "Căn hộ", "Showroom", "Sự 
 ---
 
 <Layout title="Dự án tiêu biểu | iDecal">
-  <main class="bg-white pt-24 pb-20">
+  <main class="bg-white pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16">
-        <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Công trình đã thực hiện</h1>
-        <p class="text-slate-500 text-sm lowercase tracking-widest">minh chứng cho chất lượng và uy tín của idecal qua từng dự án</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-[#031246] mb-6 tracking-tight">Công trình đã thực hiện</h1>
+        <p class="text-slate-400 text-[11px] uppercase tracking-[0.3em] font-medium">Minh chứng chất lượng và uy tín qua từng dự án</p>
       </div>
 
-      <div class="flex flex-wrap justify-center gap-3 mb-16">
+      <div class="flex flex-wrap justify-center gap-4 mb-20">
         {categories.map(cat => (
-          <button class="project-filter px-8 py-2 rounded-full border-2 border-slate-100 text-slate-500 font-bold text-sm transition-all hover:border-primary hover:text-primary" data-category={cat}>
+          <button 
+            class="project-filter px-10 py-3 rounded-full border border-slate-200 text-slate-500 font-semibold text-[13px] uppercase tracking-[0.15em] transition-all hover:border-[#031246] hover:text-[#031246] active:scale-95" 
+            data-category={cat}
+          >
             {cat}
           </button>
         ))}
       </div>
 
-      <div id="project-grid" class="grid md:grid-cols-2 gap-8">
+      <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
         {allProjects.map(project => (
-          <div class="project-card group overflow-hidden rounded-[2rem] relative aspect-[16/10]" data-category={project.data.category}>
-            <img src={project.data.image} alt={project.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+          <div class="project-card group flex flex-col" data-category={project.data.category}>
+            <div class="overflow-hidden rounded-2xl aspect-[16/10] shadow-sm mb-6">
+              <img 
+                src={project.data.image} 
+                alt={project.data.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" 
+              />
+            </div>
             
-            <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10">
-              <span class="text-primary font-black text-xs uppercase tracking-tighter mb-2">{project.data.category}</span>
-              <h2 class="text-white text-2xl font-bold mb-4">{project.data.title}</h2>
-              <p class="text-slate-300 text-sm mb-6 line-clamp-2">{project.data.description}</p>
-              <a href={`/du-an/${project.slug}`} class="text-white font-bold text-sm underline underline-offset-8 decoration-primary">XEM CHI TIẾT</a>
+            <div class="flex flex-col flex-1 px-2">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="text-[#031246] font-bold text-[10px] uppercase tracking-[0.2em]">{project.data.category}</span>
+                <div class="h-[1px] w-8 bg-slate-200"></div>
+              </div>
+              
+              <h2 class="text-[#031246] text-2xl font-bold mb-3 tracking-tight group-hover:text-blue-700 transition-colors">
+                {project.data.title}
+              </h2>
+              
+              <p class="text-slate-500 text-sm mb-6 line-clamp-2 font-light leading-relaxed tracking-wide">
+                {project.data.description}
+              </p>
+              
+              <a href={`/du-an/${project.slug}`} class="inline-flex items-center text-[#031246] font-bold text-[12px] uppercase tracking-[0.2em] group/link w-fit">
+                Xem chi tiết dự án
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2 transform group-hover/link:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         ))}
       </div>
+
+      <section class="mt-32 bg-[#031246] rounded-3xl p-12 md:p-20 text-center relative overflow-hidden shadow-2xl">
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Bạn đang cần giải pháp cho không gian của mình?</h2>
+          <p class="text-white/60 mb-10 max-w-2xl mx-auto font-light tracking-wide">
+            Đừng ngần ngại liên hệ với iDecal để được khảo sát tận nơi và tư vấn mẫu decal phù hợp nhất.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="tel:0866077040" class="bg-white text-[#031246] px-10 py-4 rounded-full font-bold uppercase tracking-[0.15em] text-sm hover:bg-slate-100 transition-all shadow-lg">
+              Gọi ngay: 0866.077.040
+            </a>
+            <a href="/lien-he" class="border border-white/20 text-white px-10 py-4 rounded-full font-bold uppercase tracking-[0.15em] text-sm hover:bg-white/10 transition-all">
+              Gửi yêu cầu báo giá
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 </Layout>
 
 <script>
+  // Logic lọc giữ nguyên như bản trước
   const filters = document.querySelectorAll('.project-filter');
   const cards = document.querySelectorAll('.project-card');
 
@@ -50,21 +92,26 @@ const categories = ["Tất cả", "Văn phòng", "Căn hộ", "Showroom", "Sự 
     btn.addEventListener('click', () => {
       const cat = btn.getAttribute('data-category');
       
-      // Update UI button
-      filters.forEach(b => b.classList.remove('bg-secondary', 'text-white', 'border-secondary'));
-      btn.classList.add('bg-secondary', 'text-white', 'border-secondary');
+      filters.forEach(b => {
+        b.classList.remove('bg-[#031246]', 'text-white', 'border-[#031246]');
+        b.classList.add('border-slate-200', 'text-slate-500');
+      });
+      
+      btn.classList.add('bg-[#031246]', 'text-white', 'border-[#031246]');
+      btn.classList.remove('border-slate-200', 'text-slate-500');
 
-      // Filter Logic
       cards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
         if (cat === "Tất cả" || cardCat === cat) {
-          (card as HTMLElement).style.display = 'block';
+          (card as HTMLElement).style.display = 'flex';
+          (card as HTMLElement).animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 });
         } else {
           (card as HTMLElement).style.display = 'none';
         }
       });
     });
   });
-  // Active nút Tất cả mặc định
-  (document.querySelector('[data-category="Tất cả"]') as HTMLElement).click();
+
+  const defaultBtn = document.querySelector('[data-category="Tất cả"]') as HTMLElement;
+  if(defaultBtn) defaultBtn.click();
 </script>
