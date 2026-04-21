@@ -1,61 +1,115 @@
 ---
-const navItems = [
-  { name: 'Trang chủ', href: '/' },
-  { name: 'Dán kính cách nhiệt', href: '/cach-nhiet' },
-  { name: 'Decal mờ trang trí', href: '/decal-mo' },
-  { name: 'Dự án', href: '/du-an' },
-  { name: 'Liên hệ', href: '/lien-he' },
+// Định nghĩa các liên kết menu để dễ quản lý và tối ưu SEO
+const navLinks = [
+  { name: "Trang chủ", href: "/" },
+  { name: "Giới thiệu", href: "/gioi-thieu" },
+  { 
+    name: "Dịch vụ", 
+    href: "#",
+    dropdown: [
+      { name: "Phim Cách Nhiệt", href: "/phim-cach-nhiet" },
+      { name: "Decal 3D Vân Sóng", href: "/decal-mo-3d-van-song" },
+      { name: "Decal Cắt Chữ", href: "/cat-decal" },
+      { name: "Decal Quảng Cáo", href: "/decal-quang-cao" },
+      { name: "Film Dán Nội Thất", href: "/film-noi-that" },
+      { name: "Decal Dán Kính Văn Phòng", href: "/decal-dan-kinh-van-phong" },
+    ]
+  },
+  { name: "Công trình thực tế", href: "/du-an" },
+  { name: "Liên hệ", href: "/lien-he" },
 ];
 ---
 
-<header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <div class="container mx-auto px-4">
     <div class="flex justify-between items-center h-20">
       
-      <div class="flex-shrink-0 flex items-center">
-        <a href="/" class="text-3xl font-heading font-bold italic">
-          <span class="text-secondary">i</span><span class="text-primary">DECAL</span>
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center gap-2">
+          <span class="text-2xl font-black text-slate-900 tracking-tighter">i<span class="text-primary">Decal</span></span>
         </a>
       </div>
 
-      <nav class="hidden md:flex space-x-8">
-        {navItems.map(item => (
-          <a href={item.href} class="text-secondary hover:text-primary font-medium transition-colors">
-            {item.name}
-          </a>
+      <div class="hidden lg:flex items-center gap-8">
+        {navLinks.map((link) => (
+          <div class="relative group">
+            <a 
+              href={link.href} 
+              class="text-sm font-bold text-slate-600 hover:text-primary uppercase tracking-wider transition-colors py-8"
+            >
+              {link.name}
+              {link.dropdown && <span class="ml-1 text-[10px]">▼</span>}
+            </a>
+
+            {link.dropdown && (
+              <div class="absolute top-full left-0 w-64 bg-white shadow-2xl rounded-2xl border border-slate-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
+                {link.dropdown.map((sub) => (
+                  <a 
+                    href={sub.href} 
+                    class="block px-4 py-3 text-sm text-slate-600 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium"
+                  >
+                    {sub.name}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
         ))}
-      </nav>
+      </div>
 
-      <div class="hidden md:block">
-        <a href="tel:0123456789" class="bg-primary text-secondary font-bold py-2 px-5 rounded-full hover:scale-105 transition-transform inline-block">
-          Hotline: 0123.456.789
+      <div class="hidden lg:block">
+        <a href="tel:090xxxxxxx" class="bg-primary text-slate-950 px-6 py-3 rounded-full font-black text-sm uppercase tracking-widest hover:shadow-lg transition-all">
+          090x.xxx.xxx
         </a>
       </div>
 
-      <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" class="text-secondary focus:outline-none">
-          <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
+      <button id="menu-toggle" class="lg:hidden text-slate-900 p-2" aria-label="Mở menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
     </div>
   </div>
 
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-6 space-y-2 shadow-lg">
-    {navItems.map(item => (
-      <a href={item.href} class="block px-3 py-2 text-secondary hover:bg-accent rounded-md font-medium">
-        {item.name}
+  <div id="mobile-menu" class="fixed inset-0 bg-slate-950 z-[60] transform translate-x-full transition-transform duration-300 lg:hidden p-8 flex flex-col">
+    <div class="flex justify-between items-center mb-12">
+      <span class="text-2xl font-black text-white">i<span class="text-primary">Decal</span></span>
+      <button id="menu-close" class="text-white p-2 text-3xl">&times;</button>
+    </div>
+    
+    <div class="flex flex-col gap-6">
+      {navLinks.map((link) => (
+        <div class="flex flex-col">
+          <a href={link.href} class="text-2xl font-bold text-white hover:text-primary">{link.name}</a>
+          {link.dropdown && (
+            <div class="mt-4 ml-4 flex flex-col gap-3 border-l-2 border-slate-800 pl-4">
+              {link.dropdown.map((sub) => (
+                <a href={sub.href} class="text-slate-400 hover:text-primary font-medium">{sub.name}</a>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-auto">
+      <a href="tel:090xxxxxxx" class="w-full block bg-primary text-slate-950 text-center py-5 rounded-2xl font-black uppercase tracking-widest text-lg">
+        Gọi Tư Vấn Ngay
       </a>
-    ))}
+    </div>
   </div>
-</header>
+</nav>
 
 <script>
-  const btn = document.getElementById('mobile-menu-button');
-  const menu = document.getElementById('mobile-menu');
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-  btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  menuToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('translate-x-full');
+  });
+
+  menuClose?.addEventListener('click', () => {
+    mobileMenu?.classList.add('translate-x-full');
   });
 </script>
