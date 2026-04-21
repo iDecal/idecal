@@ -2,24 +2,27 @@
 import Layout from '../../layouts/Layout.astro';
 
 const interiorFilms = [
-  {
-    title: "Film Vân Gỗ Tự Nhiên",
-    desc: "Tái tạo bề mặt tủ bếp, bàn ghế với các đường vân gỗ sồi, gỗ óc chó chân thực đến từng thớ vải.",
-    brands: "Infeel, Octki",
-    image: "/images/noi-that/film-van-go.webp"
-  },
-  {
-    title: "Film Giả Đá & Marble",
-    desc: "Biến mặt bàn, quầy bar cũ thành đá hoa cương sang trọng với chi phí chỉ bằng 1/10 đá thật.",
-    brands: "GYMak, Infeel",
-    image: "/images/noi-that/film-gia-da.webp"
-  },
-  {
-    title: "Film Màu Solid & Kim Loại",
-    desc: "Phong cách tối giản cho các thiết bị điện tử, tủ lạnh hoặc cửa ra vào với bề mặt nhám mờ hoặc xước kim loại.",
-    brands: "Octki",
-    image: "/images/noi-that/film-solid.webp"
-  }
+  { title: "Vân Gỗ Cao Cấp", desc: "Tái tạo bề mặt tủ bếp, bàn ghế với đường vân sồi, óc chó chân thực.", brands: "Infeel, Octki", image: "/images/noi-that/film-van-go.webp" },
+  { title: "Vân Đá Cẩm Thạch", desc: "Biến mặt bàn, quầy bar thành đá Marble sang trọng, chịu nhiệt tốt.", brands: "GYMak, Infeel", image: "/images/noi-that/film-gia-da.webp" },
+  { title: "Vân Đơn Sắc (Solid)", desc: "Phong cách Minimalist với các tông màu trung tính nhám mờ hiện đại.", brands: "Octki", image: "/images/noi-that/film-solid.webp" },
+  { title: "Vân Bê Tông & Xi Măng", desc: "Hiệu ứng Industrial mạnh mẽ cho vách tường và kệ trang trí.", brands: "Infeel", image: "/images/noi-that/film-be-tong.webp" },
+  { title: "Vân Kim Loại & Xước", desc: "Làm mới thang máy, tủ lạnh với bề mặt xước kim loại đẳng cấp.", brands: "Octki", image: "/images/noi-that/film-kim-loai.webp" },
+  { title: "Vân Tráng Gương", desc: "Bề mặt bóng gương sâu, phù hợp cho các điểm nhấn decor sang trọng.", brands: "GYMak", image: "/images/noi-that/film-trang-guong.webp" },
+  { title: "Vân Vải & Da", desc: "Tạo cảm giác ấm cúng, mềm mại cho tủ quần áo và tab đầu giường.", brands: "Infeel", image: "/images/noi-that/film-van-vai.webp" },
+  { title: "Vân Bóng Mờ (Satin)", desc: "Độ bóng vừa phải, chống bám vân tay, dễ dàng vệ sinh lau chùi.", brands: "Octki", image: "/images/noi-that/film-bong-mo.webp" }
+];
+
+const applications = [
+  { area: "Tủ Bếp & Mặt Bàn", detail: "Chống thấm nước, chịu nhiệt độ cao, bảo vệ cốt gỗ bên trong khỏi ẩm mốc." },
+  { area: "Cửa & Thang Máy", detail: "Thay đổi màu sắc cửa ra vào, cửa phòng ngủ nhanh chóng không cần thay mới." },
+  { area: "Tủ Áo & Kệ Tivi", detail: "Làm mới nội thất phòng ngủ, phòng khách đồng bộ theo phong cách thiết kế." },
+  { area: "Vách Tường & Cột", detail: "Giải pháp thay thế sơn hoặc ốp đá nội thất với chi phí tiết kiệm." }
+];
+
+const faqs = [
+  { q: "Dán Film nội thất có bền không?", a: "Sản phẩm có độ bền trung bình từ 5-10 năm. iDecal bảo hành bong tróc 2 năm cho mọi công trình." },
+  { q: "Có dán được trên bề mặt cũ, bong tróc không?", a: "Được. Kỹ thuật viên của chúng tôi sẽ xử lý bề mặt (xả nhám, trám trét) phẳng mịn trước khi dán." },
+  { q: "Film có chịu được nước và nhiệt không?", a: "Hoàn toàn có. Film nội thất cao cấp có lớp phủ chống xước, chịu được nước và nhiệt độ phòng bếp thông thường." }
 ];
 ---
 
@@ -29,13 +32,13 @@ const interiorFilms = [
     <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
       <div class="animate-fade-up">
         <h6 class="text-primary tracking-[0.3em] font-bold uppercase">Interior Transformation</h6>
-        <h1 class="text-white !important">Film Nội Thất - Giải Pháp "Refesh" Không Gian Đẳng Cấp</h1>
+        <h1 class="text-white !important">Film Nội Thất - Giải Pháp "Refresh" Không Gian Đẳng Cấp</h1>
         <p class="text-slate-400 text-lg">
-          Thay đổi màu sắc nội thất <strong>tủ bếp, bàn ghế, cửa, thang máy</strong> bằng vật liệu Film cao cấp từ Hàn Quốc & Đài Loan. Thi công sạch sẽ, không bụi bẩn, không mùi sơn, hoàn thiện ngay trong ngày.
+          Thay đổi diện mạo <strong>tủ bếp, cửa, thang máy</strong> bằng Film cao cấp Octki, Infeel. Thi công sạch sẽ, không bụi bẩn, không mùi sơn, hoàn thiện ngay trong ngày.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#samples" class="btn-primary-solid">Xem mẫu Film thực tế</a>
-          <a href="https://zalo.me/090xxxxxxx" class="btn-idecal-bold text-white border-white hover:border-primary hover:text-primary transition-all">Tư vấn chọn màu qua Zalo</a>
+          <a href="#samples" class="btn-primary-solid">Xem bảng màu thực tế</a>
+          <a href="https://zalo.me/090xxxxxxx" class="btn-idecal-bold text-white border-white hover:text-primary transition-all">Báo giá qua Zalo</a>
         </div>
       </div>
       <div class="relative">
@@ -45,49 +48,22 @@ const interiorFilms = [
     </div>
   </section>
 
-  <section class="py-24 bg-white">
-    <div class="container">
-      <div class="grid md:grid-cols-4 gap-8 text-center">
-        <div class="p-6">
-          <div class="text-primary mb-4 flex justify-center text-4xl">✨</div>
-          <h4 class="text-base font-bold mb-2">Thẩm Mỹ Cao</h4>
-          <p class="text-[12px] text-slate-50">Bề mặt vân nổi 3D chân thực, sang trọng như vật liệu thật.</p>
-        </div>
-        <div class="p-6 border-x border-slate-100">
-          <div class="text-primary mb-4 flex justify-center text-4xl">🛡️</div>
-          <h4 class="text-base font-bold mb-2">Chống Trầy & Nước</h4>
-          <p class="text-[12px] text-slate-50">Khả năng chịu nhiệt, chống ẩm mốc và chống trầy xước cực tốt.</p>
-        </div>
-        <div class="p-6 border-r border-slate-100">
-          <div class="text-primary mb-4 flex justify-center text-4xl">🚀</div>
-          <h4 class="text-base font-bold mb-2">Thi Công Nhanh</h4>
-          <p class="text-[12px] text-slate-50">Không cần tháo dỡ nội thất, không bụi bẩn, không tiếng ồn.</p>
-        </div>
-        <div class="p-6">
-          <div class="text-primary mb-4 flex justify-center text-4xl">💰</div>
-          <h4 class="text-base font-bold mb-2">Tiết Kiệm Chi Phí</h4>
-          <p class="text-[12px] text-slate-50">Làm mới toàn bộ không gian với chi phí cực thấp so với đóng mới.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="samples" class="py-24 bg-slate-50">
     <div class="container">
       <div class="text-center mb-16">
-        <h6 class="text-primary font-black uppercase tracking-widest text-[10px]">Vật liệu cao cấp</h6>
-        <h2 class="mt-4">Bảng màu Film nội thất đa dạng</h2>
+        <h6 class="text-primary font-black uppercase tracking-widest text-[10px]">Premium Catalog</h6>
+        <h2 class="mt-4">Bộ Sưu Tập Film Nội Thất 2026</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-4 gap-6">
         {interiorFilms.map((film) => (
           <div class="bg-white rounded-[2rem] overflow-hidden group shadow-sm hover:shadow-xl transition-all border border-slate-100">
-            <div class="h-64 overflow-hidden">
-              <img src={film.image} alt={film.title} class="w-full h-full object-cover group-hover:scale-110 transition-duration-700" />
+            <div class="h-48 overflow-hidden">
+              <img src={film.image} alt={film.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
             </div>
-            <div class="p-8">
-              <p class="text-[10px] font-black text-primary uppercase mb-2">Thương hiệu: {film.brands}</p>
-              <h4 class="text-secondary !mb-4">{film.title}</h4>
-              <p class="text-xs text-slate-500 leading-relaxed italic">"{film.desc}"</p>
+            <div class="p-6">
+              <p class="text-[9px] font-black text-primary uppercase mb-2">{film.brands}</p>
+              <h4 class="text-sm font-bold text-secondary mb-2">{film.title}</h4>
+              <p class="text-[11px] text-slate-500 leading-relaxed">{film.desc}</p>
             </div>
           </div>
         ))}
@@ -95,48 +71,57 @@ const interiorFilms = [
     </div>
   </section>
 
-  <section class="py-24 bg-white overflow-hidden">
+  <section class="py-24 bg-white">
     <div class="container">
-      <div class="bg-slate-900 rounded-[3rem] p-8 lg:p-20 relative">
-        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
-        <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 class="text-white !important">Dịch vụ chuyên nghiệp từ iDecal</h2>
-            <p class="text-slate-400 mt-6 mb-8">
-              Chúng tôi không chỉ bán Film, chúng tôi mang đến giải pháp làm mới không gian sống của bạn một cách nghệ thuật nhất. Đội ngũ thợ hơn 10 năm kinh nghiệm đảm bảo mọi góc cạnh, đường viền đều được xử lý hoàn hảo.
-            </p>
-            <ul class="space-y-4 mb-10">
-              <li class="flex items-center gap-3 text-white text-sm">
-                <span class="text-primary">✓</span> Bảo hành bong tróc lên đến 2 năm
-              </li>
-              <li class="flex items-center gap-3 text-white text-sm">
-                <span class="text-primary">✓</span> Đội ngũ đo đạc & tư vấn mẫu tận nhà
-              </li>
-              <li class="flex items-center gap-3 text-white text-sm">
-                <span class="text-primary">✓</span> Cam kết sử dụng film chính hãng 100%
-              </li>
-            </ul>
-          </div>
-          <div class="bg-white/5 backdrop-blur-sm p-8 rounded-3xl border border-white/10">
-             <h4 class="text-white mb-6">Liên hệ thi công</h4>
-             <div class="space-y-4">
-                <a href="tel:090xxxxxxx" class="flex items-center gap-4 p-4 bg-white rounded-2xl group hover:bg-primary transition-all">
-                   <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary group-hover:bg-white">📞</div>
-                   <div>
-                      <p class="text-[10px] text-slate-400 uppercase font-bold">Hotline trực tiếp</p>
-                      <p class="font-bold text-secondary">090x.xxx.xxx (Mr. Anh Lê)</p>
-                   </div>
-                </a>
-                <a href="https://zalo.me/090xxxxxxx" class="flex items-center gap-4 p-4 bg-white rounded-2xl group hover:bg-primary transition-all">
-                   <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-primary group-hover:bg-white">💬</div>
-                   <div>
-                      <p class="text-[10px] text-slate-400 uppercase font-bold">Tư vấn nhanh</p>
-                      <p class="font-bold text-secondary">Gửi hình ảnh qua Zalo</p>
-                   </div>
-                </a>
-             </div>
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-2 gap-4">
+          <img src="/images/noi-that/app-1.webp" class="rounded-3xl h-64 w-full object-cover" alt="Dán tủ bếp" />
+          <img src="/images/noi-that/app-2.webp" class="rounded-3xl h-64 mt-8 w-full object-cover" alt="Dán thang máy" />
+        </div>
+        <div>
+          <h2 class="mb-8">Ứng dụng đa dạng trong nội thất</h2>
+          <div class="space-y-6">
+            {applications.map(app => (
+              <div class="flex gap-4 p-4 rounded-2xl hover:bg-blue-50 transition-colors border border-transparent hover:border-blue-100">
+                <div class="text-primary font-bold">✨</div>
+                <div>
+                  <h4 class="text-base font-bold text-secondary">{app.area}</h4>
+                  <p class="text-xs text-slate-500 mt-1">{app.detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50">
+    <div class="container max-w-4xl">
+      <div class="text-center mb-16">
+        <h2 class="mb-4">Câu hỏi thường gặp</h2>
+        <p class="text-slate-500">Giải đáp các thắc mắc về kỹ thuật và bảo hành dán Film nội thất.</p>
+      </div>
+      <div class="space-y-4">
+        {faqs.map(faq => (
+          <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+            <h4 class="text-sm font-bold text-secondary mb-2">Q: {faq.q}</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">A: {faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-900 rounded-t-[4rem]">
+    <div class="container text-center text-white">
+      <h2 class="text-white !important mb-6">Bạn cần làm mới không gian?</h2>
+      <p class="text-slate-400 mb-10 max-w-2xl mx-auto text-sm">
+        Đừng vội thay mới đồ nội thất đắt đỏ. Hãy để iDecal mang mẫu Film đến tận nhà đo đạc và tư vấn giải pháp tối ưu nhất cho bạn.
+      </p>
+      <div class="flex justify-center gap-6">
+        <a href="tel:090xxxxxxx" class="btn-primary-solid">Hotline: 090x.xxx.xxx</a>
+        <a href="https://zalo.me/090xxxxxxx" class="px-8 py-3 bg-white text-secondary font-bold rounded-brand hover:bg-primary hover:text-white transition-all">Chat Zalo ngay</a>
       </div>
     </div>
   </section>
