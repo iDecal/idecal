@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const cuttingServices = [
+  {
+    title: "Cắt Chữ Decal Vi Tính",
+    desc: "Cắt chữ quảng cáo, bảng hiệu, tên cửa hàng với độ chính xác tuyệt đối từ file vector.",
+    features: ["Font chữ đa dạng", "Cắt được chi tiết nhỏ", "Dán được trên mọi bề mặt"],
+    image: "/images/cat-decal/cat-chu-vi-tinh.webp"
+  },
+  {
+    title: "Cắt Logo & Tem Nhãn",
+    desc: "Giải pháp cho các đơn vị cần làm tem xe, logo thương hiệu dán kính hoặc dán tường.",
+    features: ["Đúng chuẩn hệ màu", "Bế theo khuôn mẫu", "Chống bay màu tốt"],
+    image: "/images/cat-decal/cat-logo-tem.webp"
+  },
+  {
+    title: "Cắt Hoa Văn Trang Trí",
+    desc: "Cắt các họa tiết nghệ thuật, hoa văn đối xứng trên decal mờ hoặc decal màu trang trí nội thất.",
+    features: ["Mẫu mã sáng tạo", "Tùy biến kích thước", "Thi công tỉ mỉ"],
+    image: "/images/cat-decal/cat-hoa-van.webp"
+  }
+];
+---
+
+<Layout title="Dịch Vụ Cắt Decal Vi Tính | Cắt Logo, Chữ Quảng Cáo Lấy Liền">
+
+  <section class="py-24 bg-slate-900 relative overflow-hidden">
+    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="animate-fade-up">
+        <h6 class="text-primary tracking-[0.3em] font-bold uppercase">Precision Cutting Technology</h6>
+        <h1 class="text-white !important">Cắt Decal Vi Tính & Cắt Logo Chính Xác 100%</h1>
+        <p class="text-slate-400 text-lg">
+          iDecal sở hữu hệ thống máy cắt CNC hiện đại, đáp ứng mọi yêu cầu về độ tinh xảo. Nhận cắt decal lấy liền, hỗ trợ thiết kế file vector cho khách hàng tại <strong>TP.HCM, Bình Dương và Quy Nhơn</strong>.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="#contact" class="btn-primary-solid">Gửi File Báo Giá</a>
+          <a href="/du-an" class="btn-idecal-bold text-white border-white hover:text-primary">Xem Công Trình Thực Tế</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="absolute -bottom-10 -right-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"></div>
+        <img src="/images/cat-decal/hero-cutting.webp" alt="Máy cắt decal vi tính hiện đại" class="img-brand w-full h-[450px] object-cover relative z-20 shadow-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <div class="p-8 bg-blue-50/50 rounded-[2.5rem] border border-blue-100/50">
+          <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 shadow-brand">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h4 class="text-secondary">Cắt Lấy Liền</h4>
+          <p class="text-sm text-slate-500">Tối ưu quy trình sản xuất, đáp ứng các đơn hàng gấp trong ngày với chất lượng không đổi.</p>
+        </div>
+        <div class="p-8 bg-blue-50/50 rounded-[2.5rem] border border-blue-100/50">
+          <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 shadow-brand">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h4 class="text-secondary">Chính Xác 100%</h4>
+          <p class="text-sm text-slate-500">Hệ thống mắt thần định vị giúp cắt bế tem nhãn chính xác từng milimet theo đường viền phức tạp.</p>
+        </div>
+        <div class="p-8 bg-blue-50/50 rounded-[2.5rem] border border-blue-100/50">
+          <div class="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center mb-6 shadow-brand">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h4 class="text-secondary">Vật Liệu Cao Cấp</h4>
+          <p class="text-sm text-slate-500">Sử dụng decal chính hãng có độ bám dính cực tốt, không để lại keo khi bóc bỏ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6>Dịch vụ chi tiết</h6>
+        <h2>Giải pháp cắt decal đa dạng</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {cuttingServices.map((item) => (
+          <div class="service-card-brand bg-white group">
+            <div class="h-52 overflow-hidden rounded-2xl mb-6">
+              <img src={item.image} alt={item.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <h4 class="text-secondary !mb-3">{item.title}</h4>
+            <p class="text-xs leading-relaxed mb-6">{item.desc}</p>
+            <div class="flex flex-wrap gap-2">
+              {item.features.map(f => (
+                <span class="text-[10px] font-bold bg-blue-50 text-primary px-3 py-1 rounded-lg border border-blue-100">{f}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-white">
+    <div class="container">
+      <div class="bg-blue-50/50 rounded-[3rem] p-12 lg:p-20 text-center border border-blue-100">
+        <h2 class="mb-6">Sẵn sàng thực hiện dự án của bạn?</h2>
+        <p class="text-slate-500 mb-10 max-w-2xl mx-auto">
+          Dù là 1 mét hay hàng nghìn mét, iDecal đều phục vụ tận tâm. Hãy gửi yêu cầu để chúng tôi tư vấn loại decal phù hợp nhất cho mục đích sử dụng của bạn.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <div class="text-left bg-white p-4 rounded-2xl shadow-sm border border-blue-100">
+            <p class="text-[10px] uppercase font-bold text-slate-400">Hotline TP.HCM</p>
+            <p class="text-lg font-black text-secondary">090x.xxx.xxx</p>
+          </div>
+          <div class="text-left bg-white p-4 rounded-2xl shadow-sm border border-blue-100">
+            <p class="text-[10px] uppercase font-bold text-slate-400">Hotline Bình Dương</p>
+            <p class="text-lg font-black text-secondary">091x.xxx.xxx</p>
+          </div>
+        </div>
+        <div class="mt-10">
+          <a href="https://zalo.me/090xxxxxxx" class="btn-primary-solid !px-12">Chat Zalo Ngay</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
