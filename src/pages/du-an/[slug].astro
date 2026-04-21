@@ -12,54 +12,117 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-// Lấy dự án liên quan cùng category
+// Giả sử anh có mảng gallery trong file markdown, nếu không có sẽ lấy ảnh đại diện làm mẫu
+const gallery = entry.data.gallery || [entry.data.image, entry.data.image, entry.data.image];
+
 const allProjects = await getCollection('projects');
-const related = allProjects.filter(p => p.data.category === entry.data.category && p.slug !== entry.slug).slice(0, 2);
+const related = allProjects.filter(p => p.data.category === entry.data.category && p.slug !== entry.slug).slice(0, 3);
 ---
 
-<Layout title={entry.data.title}>
-  <main class="bg-white pt-24 pb-20">
-    <div class="max-w-5xl mx-auto px-6">
+<Layout title={`${entry.data.title} | iDecal`}>
+  <main class="bg-white pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-6">
+      
       <header class="mb-12">
-        <span class="text-primary font-black uppercase tracking-widest text-xs">{entry.data.category}</span>
-        <h1 class="text-4xl md:text-6xl font-bold text-secondary mt-4 mb-6">{entry.data.title}</h1>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-y border-slate-100">
-          <div>
-            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Khách hàng</p>
-            <p class="text-secondary font-bold">{entry.data.client}</p>
-          </div>
-          <div>
-            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Dịch vụ</p>
-            <p class="text-secondary font-bold">Thi công Decal</p>
-          </div>
-          <div>
-            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Khu vực</p>
-            <p class="text-secondary font-bold">TP.HCM</p>
-          </div>
-          <div>
-            <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Hoàn thành</p>
-            <p class="text-secondary font-bold">{entry.data.pubDate.toLocaleDateString('vi-VN')}</p>
-          </div>
-        </div>
+        <nav class="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-6">
+          <a href="/" class="hover:text-[#031246]">Trang chủ</a>
+          <span>/</span>
+          <a href="/du-an" class="hover:text-[#031246]">Dự án</a>
+          <span>/</span>
+          <span class="text-[#031246] font-bold">{entry.data.category}</span>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-bold text-[#031246] leading-tight max-w-4xl">
+          {entry.data.title}
+        </h1>
       </header>
 
-      <img src={entry.data.image} alt={entry.data.title} class="w-full rounded-[3rem] shadow-2xl mb-16" />
+      <div class="grid lg:grid-cols-3 gap-12">
+        
+        <div class="lg:col-span-2">
+          <div class="rounded-2xl overflow-hidden shadow-lg mb-10">
+             <img src={entry.data.image} alt={entry.data.title} class="w-full h-auto object-cover" />
+          </div>
 
-      <div class="prose prose-lg max-w-none mb-20">
-        <Content />
+          <article class="prose prose-slate prose-lg max-w-none mb-16 prose-headings:text-[#031246] prose-a:text-blue-600">
+            <Content />
+          </article>
+
+          {gallery && (
+            <section class="mb-16">
+              <h3 class="text-xl font-bold text-[#031246] mb-8 uppercase tracking-wider">Hình ảnh thực tế công trình</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {gallery.map((img, index) => (
+                  <div class={`overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-shadow ${index === 0 ? 'md:col-span-2' : ''}`}>
+                    <img src={img} alt={`Hình ảnh ${index + 1}`} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+        <div class="lg:col-span-1">
+          <div class="sticky top-32 space-y-8">
+            
+            <div class="bg-slate-50 rounded-2xl p-8 border border-slate-100">
+              <h3 class="text-[#031246] font-bold uppercase tracking-widest text-xs mb-6 pb-4 border-b border-slate-200">Thông tin dự án</h3>
+              <div class="space-y-6">
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Khách hàng</p>
+                  <p class="text-[#031246] font-bold tracking-tight">{entry.data.client || "Chưa cập nhật"}</p>
+                </div>
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Hạng mục thi công</p>
+                  <p class="text-[#031246] font-bold tracking-tight">{entry.data.service || "Dán decal kính cách nhiệt"}</p>
+                </div>
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Địa điểm</p>
+                  <p class="text-[#031246] font-bold tracking-tight">{entry.data.location || "TP. Hồ Chí Minh"}</p>
+                </div>
+                <div>
+                  <p class="text-slate-400 text-[10px] uppercase font-bold mb-1">Ngày hoàn thành</p>
+                  <p class="text-[#031246] font-bold tracking-tight">{entry.data.pubDate.toLocaleDateString('vi-VN')}</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#031246] rounded-2xl p-8 text-white shadow-xl shadow-[#031246]/20">
+              <h3 class="text-xl font-bold mb-4">Bạn thích phong cách này?</h3>
+              <p class="text-white/70 text-sm mb-8 font-light leading-relaxed">
+                Liên hệ iDecal để được tư vấn mẫu tương tự và nhận báo giá ưu đãi ngay hôm nay.
+              </p>
+              <div class="space-y-4">
+                <a href="tel:0866077040" class="flex items-center justify-center gap-3 bg-white text-[#031246] w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:bg-slate-100 transition-all">
+                  Gọi ngay: 0866.077.040
+                </a>
+                <a href="/lien-he" class="flex items-center justify-center border border-white/20 w-full py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-white/10 transition-all">
+                  Yêu cầu báo giá qua Zalo
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       {related.length > 0 && (
-        <section class="pt-20 border-t border-slate-100">
-          <h3 class="text-2xl font-bold text-secondary mb-10">Dự án tương tự</h3>
-          <div class="grid md:grid-cols-2 gap-8">
+        <section class="pt-20 mt-20 border-t border-slate-100">
+          <div class="flex justify-between items-end mb-10">
+            <div>
+              <span class="text-[#031246] font-bold text-[10px] uppercase tracking-[0.3em]">Xem thêm</span>
+              <h3 class="text-2xl font-bold text-[#031246] mt-2">Dự án tương tự</h3>
+            </div>
+            <a href="/du-an" class="text-sm font-bold text-slate-400 hover:text-[#031246] transition-colors">Xem tất cả →</a>
+          </div>
+          
+          <div class="grid md:grid-cols-3 gap-8">
             {related.map(p => (
               <a href={`/du-an/${p.slug}`} class="group">
-                <div class="aspect-video rounded-3xl overflow-hidden mb-4">
-                  <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-all" />
+                <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 shadow-sm">
+                  <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-                <h4 class="text-lg font-bold text-secondary group-hover:text-primary transition-colors">{p.data.title}</h4>
+                <h4 class="text-base font-bold text-[#031246] group-hover:text-blue-700 transition-colors line-clamp-1">{p.data.title}</h4>
+                <p class="text-xs text-slate-400 mt-1 uppercase tracking-wider">{p.data.category}</p>
               </a>
             ))}
           </div>
