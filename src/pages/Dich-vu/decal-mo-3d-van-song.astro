@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const features = [
+  { title: "Bề mặt nổi 3D", desc: "Họa tiết vân sóng được dập nổi tạo hiệu ứng chiều sâu và cảm giác cao cấp khi chạm tay vào." },
+  { title: "Độ xuyên sáng", desc: "Giữ lại 20-30% ánh sáng tự nhiên, giúp không gian không bị tối mà vẫn đảm bảo tính riêng tư tương đối." },
+  { title: "Chất liệu cao cấp", desc: "Decal dày dặn, độ bám dính cực tốt trên kính, không để lại keo khi bóc bỏ sau thời gian dài." }
+];
+---
+
+<Layout title="Decal Mờ 3D Vân Sóng | Giải Pháp Trang Trí Vách Kính Sang Trọng">
+
+  <section class="py-24 bg-slate-900 relative overflow-hidden">
+    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="animate-fade-up">
+        <h6 class="text-primary tracking-[0.3em] font-bold uppercase">Luxury Glass Decoration</h6>
+        <h1 class="text-white !important">Decal Mờ 3D Vân Sóng - Nghệ Thuật Trên Kính</h1>
+        <p class="text-slate-300 text-lg">
+          Dòng sản phẩm decal cao cấp với họa tiết vân sóng dập nổi tinh tế. Giải pháp hoàn hảo cho <strong>vách kính văn phòng, phòng tắm và cửa ra vào</strong>, mang lại vẻ đẹp hiện đại và đẳng cấp cho không gian.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact" class="btn-primary-solid">Nhận báo giá thi công</a>
+          <a href="/images/projects/van-song-thuc-te.jpg" class="btn-idecal-bold text-white border-white hover:text-primary transition-all">Xem mẫu thực tế</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+        <div class="rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
+          <img src="/images/products/decal-3d-van-song.webp" alt="Decal mờ 3d vân sóng" class="w-full h-[500px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="grid lg:grid-cols-3 gap-8">
+        {features.map(f => (
+          <div class="p-10 bg-blue-50/30 rounded-[2.5rem] border border-blue-100/50 hover:bg-white hover:shadow-card transition-all duration-500">
+            <h4 class="text-secondary !mb-4">{f.title}</h4>
+            <p class="text-sm text-slate-500 leading-relaxed">{f.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="mb-6">Sự khác biệt của Decal 3D Vân Sóng</h2>
+          <p class="text-slate-600 mb-8">
+            Không giống như các loại decal mờ thông thường, dòng 3D vân sóng tập trung vào hiệu ứng thị giác. Khi có ánh sáng chiếu vào, các đường vân sẽ tạo ra những mảng sáng tối đan xen, làm cho vách kính không còn đơn điệu.
+          </p>
+          <ul class="space-y-4 mb-10 text-sm font-medium text-secondary">
+            <li class="flex items-center gap-3"><span class="text-primary font-bold">✓</span> Phù hợp cho vách ngăn phòng họp, phòng khách.</li>
+            <li class="flex items-center gap-3"><span class="text-primary font-bold">✓</span> Độ xuyên sáng 20-30% tạo không gian mờ ảo.</li>
+            <li class="flex items-center gap-3"><span class="text-primary font-bold">✓</span> Khả năng chống trầy xước bề mặt kính tốt.</li>
+          </ul>
+          <div class="p-6 bg-amber-50 rounded-2xl border border-amber-100">
+             <p class="text-xs text-amber-700 italic">
+               <strong>Lưu ý:</strong> Đây là dòng sản phẩm tập trung vào tính thẩm mỹ trang trí. Do độ xuyên sáng đạt khoảng 30%, sản phẩm cung cấp sự riêng tư tương đối, không che khuất hoàn toàn tầm nhìn như decal mờ truyền thống.
+             </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="/images/projects/3d-wave-1.webp" class="rounded-3xl h-full w-full object-cover shadow-lg" alt="Thi công vân sóng 1" />
+          <div class="space-y-4">
+            <img src="/images/projects/3d-wave-2.webp" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Thi công vân sóng 2" />
+            <img src="/images/projects/3d-wave-3.webp" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Thi công vân sóng 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-white">
+    <div class="container">
+      <div class="bg-slate-900 rounded-[3rem] p-12 text-center text-white relative overflow-hidden">
+        <h2 class="text-white !important mb-6">Liên hệ xem mẫu & Đo đạc tận nơi</h2>
+        <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
+          Mẫu Decal 3D Vân Sóng cần được nhìn trực tiếp để cảm nhận độ nổi của vân. Đội ngũ iDecal sẵn sàng mang mẫu đến tận công trình tại TP.HCM & Bình Dương.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-6">
+          <a href="tel:090xxxxxxx" class="btn-primary-solid !px-10 text-sm">Gửi báo giá qua Zalo</a>
+          <a href="https://zalo.me/090xxxxxxx" class="px-10 py-4 bg-white text-secondary font-bold rounded-brand hover:bg-primary hover:text-white transition-all text-sm">Xem kho mẫu 2026</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
