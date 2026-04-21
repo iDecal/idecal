@@ -35,7 +35,7 @@ const navLinks = [
       { name: "Tin khuyến mãi", href: "/blog/khuyen-mai" },
     ]
   },
-  { name: "Liên hệ", href: "/lien-he" },
+  { name: "Liên hệ", href: "/lien-he-idecal" },
 ];
 ---
 
@@ -59,7 +59,7 @@ const navLinks = [
             {link.dropdown && (
               <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
                 {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-[#00AEEF]/10 text-[#00AEEF] font-bold mb-2' : 'text-slate-600 hover:bg-slate-50 hover:text-[#00AEEF]'}`}>
+                  <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-[#031246]/10 text-[#031246] font-bold mb-2' : 'text-slate-600 hover:bg-slate-50 hover:text-[#00AEEF]'}`}>
                     {sub.name}
                   </a>
                 ))}
@@ -79,7 +79,7 @@ const navLinks = [
         </a>
       </div>
 
-      <button id="menu-toggle" class="lg:hidden p-2 text-[#00AEEF]" aria-label="Open Menu">
+      <button id="menu-toggle" class="lg:hidden p-2 text-[#031246]" aria-label="Open Menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
