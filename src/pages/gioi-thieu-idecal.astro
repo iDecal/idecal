@@ -15,7 +15,7 @@ const benefits = [
   {
     id: "03",
     title: "Dịch vụ tận tình",
-    desc: "Đội ngũ nhân viên tư vấn nhiệt tình, sẵn sàng hỗ trợ để đạt được những công trình trang trí đẹp mắt và vật liệu phù hợp nhất."
+    desc: "Đội ngũ nhân viên tư vấn nhiệt tình, sẵn sàng hỗ trợ để đạt được những công trình trang trí đẹp mắt và vật liệu Decal phù hợp nhất."
   }
 ];
 
@@ -28,16 +28,55 @@ const team = [
 
 <Layout title="Giới thiệu về iDecal - Dịch vụ Decal chuyên nghiệp TPHCM & Bình Dương">
   
-  <section class="py-20 bg-slate-900 text-white">
-    <div class="container text-center">
-      <h6 class="text-primary tracking-widest uppercase font-bold mb-4">Về chúng tôi</h6>
-      <h1 class="text-4xl md:text-5xl font-bold mb-6">iDecal - Công ty cung cấp Dịch vụ Decal chuyên nghiệp</h1>
-      <p class="max-w-3xl mx-auto text-slate-400 text-lg">
-        iDecal chuyên Thi công decal dán kính chuyên nghiệp tại TPHCM, Bình Dương và các tỉnh lân cận. 
-        Với hơn 10 năm kinh nghiệm, chúng tôi cam kết mỗi sản phẩm đều đạt tiêu chuẩn cao nhất.
-      </p>
+  <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="container grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      
+      <div class="animate-fade-up">
+        <h6 class="text-primary tracking-[0.3em] font-bold uppercase mb-4">iDecal Solutions</h6>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+          Thi Công Decal Chuyên Nghiệp TPHCM
+        </h1>
+        <p class="max-w-xl text-slate-300 text-lg mb-10 leading-relaxed">
+          iDecal là công ty chuyên **Thi công decal dán kính** chuyên nghiệp tại TPHCM, Bình Dương và các tỉnh lân cận. Với hơn **10 năm kinh nghiệm**, cùng đội ngũ đầy sáng tạo, chúng tôi luôn đảm bảo mỗi sản phẩm đều đạt tiêu chuẩn cao nhất.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="btn-primary-solid text-white px-10 py-4 rounded-full font-bold hover:shadow-lg transition-all">
+            Liên hệ ngay
+          </a>
+          <a href="/du-an" class="text-slate-400 group flex items-center gap-2 hover:text-white transition-colors">
+            Xem công trình đã dán <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+        
+        <div class="hero-image-clip relative z-10 rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-2xl">
+          <img 
+            src="/images/intro-hero.webp" 
+            alt="Thi công dán decal kính văn phòng chuyên nghiệp" 
+            class="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-700" 
+          />
+        </div>
+      </div>
     </div>
   </section>
+
+  <style>
+    /* Tạo Clip-path xéo cho khung ảnh */
+    .hero-image-clip {
+      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    @media (max-width: 1024px) {
+      .hero-image-clip {
+        clip-path: none; /* Bỏ clip-path trên mobile để ảnh hiển thị đầy đủ */
+        border-radius: 2rem;
+        height: 350px;
+      }
+    }
+  </style>
 
   <section class="py-24 bg-white">
     <div class="container">
@@ -61,19 +100,15 @@ const team = [
         <div class="space-y-4">
           <div class="flex items-start gap-4">
             <div class="text-primary mt-1">✔</div>
-            <p><strong>Chất lượng Decal nhập khẩu:</strong> Sử dụng Avery, Oracal... bền bỉ và đa dạng mẫu mã.</p>
+            <p><strong>Chất lượng Decal nhập khẩu:</strong> Sử dụng Avery, Oracal... bền bỉ và đa dạng.</p>
           </div>
           <div class="flex items-start gap-4">
             <div class="text-primary mt-1">✔</div>
-            <p><strong>Mực in Eco Solvent:</strong> Công nghệ in thân thiện với môi trường, sắc nét.</p>
+            <p><strong>Mực in Eco Solvent:</strong> Thân thiện với môi trường, sắc nét.</p>
           </div>
           <div class="flex items-start gap-4">
             <div class="text-primary mt-1">✔</div>
-            <p><strong>Tác phong chuyên nghiệp:</strong> Nhân viên thân thiện, thi công đúng tiến độ.</p>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="text-primary mt-1">✔</div>
-            <p><strong>Gói dịch vụ linh hoạt:</strong> Nhiều lựa chọn tối ưu ngân sách cho khách hàng.</p>
+            <p><strong>Tác phong chuyên nghiệp:</strong> Thân thiện & thi công đúng tiến độ.</p>
           </div>
         </div>
       </div>
@@ -81,8 +116,8 @@ const team = [
         <h3 class="text-2xl font-bold mb-6 text-secondary text-center">Hình ảnh thi công tiêu biểu</h3>
         <p class="text-center text-slate-500 italic">"Những công trình dịch vụ Decal tiêu biểu trong hơn 5+ năm qua"</p>
         <div class="grid grid-cols-2 gap-4 mt-8">
-           <div class="h-40 bg-slate-200 rounded-2xl overflow-hidden animate-pulse"></div>
-           <div class="h-40 bg-slate-200 rounded-2xl overflow-hidden animate-pulse"></div>
+           <div class="h-40 bg-slate-200 rounded-2xl animate-pulse"></div>
+           <div class="h-40 bg-slate-200 rounded-2xl animate-pulse"></div>
         </div>
       </div>
     </div>
@@ -105,11 +140,11 @@ const team = [
     </div>
   </section>
 
-  <section class="py-20 bg-primary text-white text-center">
+  <section id="contact" class="py-20 bg-primary text-white text-center rounded-t-[4rem]">
     <div class="container">
       <h2 class="text-3xl font-bold mb-8">Bạn cần tư vấn thi công Decal?</h2>
       <a href="https://zalo.me/090xxxxxxx" class="inline-block bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-secondary hover:text-white transition-all shadow-xl">
-        Liên hệ ngay với iDecal
+        Hotline: 090x.xxx.xxx
       </a>
     </div>
   </section>
