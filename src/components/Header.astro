@@ -1,5 +1,5 @@
 ---
-// Navbar.astro - iDecal Navigation (Brand Blue Edition)
+// Navbar.astro - iDecal Navigation (Deep Blue Edition #031246)
 const navLinks = [
   { name: "Trang chủ", href: "/" },
   { name: "Giới thiệu", href: "/gioi-thieu" },
@@ -35,7 +35,7 @@ const navLinks = [
       { name: "Tin khuyến mãi", href: "/blog/khuyen-mai" },
     ]
   },
-  { name: "Liên hệ", href: "/lien-he-idecal" },
+  { name: "Liên hệ", href: "/lien-he" },
 ];
 ---
 
@@ -52,14 +52,17 @@ const navLinks = [
       <div class="hidden lg:flex items-center gap-8">
         {navLinks.map((link) => (
           <div class="relative group py-8">
-            <a href={link.href} class="text-[13px] font-bold text-slate-600 hover:text-[#031246] uppercase tracking-widest transition-colors flex items-center gap-1">
+            <a 
+              href={link.href} 
+              class="text-[13px] font-semibold text-slate-600 hover:text-[#031246] uppercase tracking-[0.1em] transition-colors flex items-center gap-1"
+            >
               {link.name}
               {link.dropdown && <span class="text-[10px] opacity-50">▼</span>}
             </a>
             {link.dropdown && (
               <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
                 {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-[#031246]/10 text-[#031246] font-bold mb-2' : 'text-slate-600 hover:bg-slate-50 hover:text-[#00AEEF]'}`}>
+                  <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-[#031246]/5 text-[#031246] font-bold mb-2' : 'text-slate-600 hover:bg-slate-50 hover:text-[#031246]'}`}>
                     {sub.name}
                   </a>
                 ))}
@@ -70,12 +73,12 @@ const navLinks = [
       </div>
 
       <div class="hidden lg:flex items-center gap-4">
-        <a href="tel:0866077040" class="flex items-center gap-3 bg-[#031246] text-white px-6 py-3 rounded-full hover:bg-[#008ec4] transition-all shadow-lg shadow-[#00AEEF]/30 active:scale-95 group">
-          <div class="flex flex-col border-r border-white/20 pr-3">
-             <span class="text-[10px] font-bold uppercase tracking-tighter leading-none mb-1">Hotline 24/7</span>
-             <span class="text-sm font-black font-mono leading-none">0866.077.040</span>
+        <a href="tel:0866077040" class="flex items-center gap-4 bg-[#031246] text-white px-7 py-3.5 rounded-full hover:bg-[#0a1d5a] transition-all shadow-lg shadow-[#031246]/20 active:scale-95 group">
+          <div class="flex flex-col border-r border-white/20 pr-4">
+             <span class="text-[9px] font-medium uppercase tracking-[0.2em] leading-none mb-1.5 opacity-80">Hotline 24/7</span>
+             <span class="text-sm font-bold font-mono leading-none tracking-wider">0866.077.040</span>
           </div>
-          <span class="text-xs font-bold uppercase tracking-widest">Tư vấn miễn phí</span>
+          <span class="text-xs font-semibold uppercase tracking-[0.15em]">Tư vấn miễn phí</span>
         </a>
       </div>
 
@@ -90,7 +93,7 @@ const navLinks = [
   <div id="mobile-menu" class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col h-screen">
     <div class="p-6 flex justify-between items-center border-b border-slate-100">
       <img src="/images/idecal-logo.png" alt="iDecal Logo" class="h-10 w-auto" />
-      <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-[#00AEEF] text-3xl">&times;</button>
+      <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-[#031246] text-3xl">&times;</button>
     </div>
     
     <div class="flex-1 overflow-y-auto px-8 py-6">
@@ -98,19 +101,19 @@ const navLinks = [
         {navLinks.map((link) => (
           <div class="flex flex-col border-b border-slate-50 pb-2">
             {link.dropdown ? (
-              <button class="mobile-dropdown-btn text-xl font-black text-slate-900 flex justify-between items-center text-left py-3 uppercase tracking-tighter">
+              <button class="mobile-dropdown-btn text-xl font-bold text-slate-900 flex justify-between items-center text-left py-4 uppercase tracking-[0.1em]">
                 {link.name}
-                <span class="text-[#00AEEF]">＋</span>
+                <span class="text-[#031246] font-light">＋</span>
               </button>
               <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-2 bg-slate-50 rounded-xl px-4">
                 {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`text-base font-bold py-3 ${sub.highlight ? 'text-[#00AEEF]' : 'text-slate-500'}`}>
+                  <a href={sub.href} class={`text-base font-medium py-3 tracking-wide ${sub.highlight ? 'text-[#031246] font-bold' : 'text-slate-500'}`}>
                     {sub.name}
                   </a>
                 ))}
               </div>
             ) : (
-              <a href={link.href} class="text-xl font-black text-slate-900 py-4 uppercase tracking-tighter hover:text-[#00AEEF]">{link.name}</a>
+              <a href={link.href} class="text-xl font-bold text-slate-900 py-4 uppercase tracking-[0.1em] hover:text-[#031246]">{link.name}</a>
             )}
           </div>
         ))}
@@ -118,15 +121,14 @@ const navLinks = [
     </div>
 
     <div class="p-6 border-t border-slate-100 bg-white">
-      <a href="tel:0866077040" class="w-full block bg-[#00AEEF] text-white text-center py-5 rounded-2xl font-black uppercase tracking-widest text-lg shadow-xl shadow-[#00AEEF]/30 active:scale-[0.98] transition-transform">
-        Tư vấn miễn phí: 0866.077.040
+      <a href="tel:0866077040" class="w-full block bg-[#031246] text-white text-center py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-lg shadow-xl shadow-[#031246]/20">
+        Tư vấn: 0866.077.040
       </a>
     </div>
   </div>
 </nav>
 
 <script>
-  // Script giữ nguyên logic đóng mở menu và accordion như bản trước
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
