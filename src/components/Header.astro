@@ -1,12 +1,11 @@
 ---
-// Navbar.astro - iDecal Navigation (Fixed Mobile Accordion)
+// Navbar.astro - iDecal Navigation (Fixed Mobile Multi-Accordion)
 const navLinks = [
   { name: "Trang chủ", href: "/" },
   { name: "Giới thiệu", href: "/gioi-thieu" },
   { 
     name: "Dịch vụ", 
     href: "#",
-    id: "services-menu", // Thêm ID để bắt sự kiện click
     dropdown: [
       { name: "Thiết kế - In ấn - Thi công Decal", href: "/dich-vu-tron-goi", highlight: true }, 
       { name: "Phim Cách Nhiệt", href: "/phim-cach-nhiet" },
@@ -17,8 +16,28 @@ const navLinks = [
       { name: "Decal Dán Kính Văn Phòng", href: "/decal-dan-kinh-van-phong" },
     ]
   },
-  { name: "Công trình thực tế", href: "/du-an" },
-  { name: "Blog Kiến Thức", href: "/blog" },
+  { 
+    name: "Công trình thực tế", 
+    href: "#",
+    dropdown: [
+      { name: "Văn phòng", href: "/du-an/van-phong" },
+      { name: "Showroom", href: "/du-an/showroom" },
+      { name: "Nhà xưởng", href: "/du-an/nha-xuong" },
+      { name: "Quảng cáo", href: "/du-an/quang-cao" },
+      { name: "Dự án tiêu biểu", href: "/du-an" },
+    ]
+  },
+  { 
+    name: "Blog", 
+    href: "#",
+    dropdown: [
+      { name: "Hướng dẫn", href: "/blog/huong-dan" },
+      { name: "So sánh vật liệu", href: "/blog/so-sanh" },
+      { name: "Mẫu thiết kế", href: "/blog/mau-thiet-ke" },
+      { name: "Báo giá", href: "/blog/bao-gia" },
+      { name: "Tin khuyến mãi", href: "/blog/khuyen-mai" },
+    ]
+  },
   { name: "Liên hệ", href: "/lien-he" },
 ];
 ---
@@ -33,7 +52,7 @@ const navLinks = [
         </a>
       </div>
 
-      <div class="hidden lg:flex items-center gap-8">
+      <div class="hidden lg:flex items-center gap-6">
         {navLinks.map((link) => (
           <div class="relative group py-8">
             <a href={link.href} class="text-[13px] font-bold text-slate-600 hover:text-primary uppercase tracking-widest transition-colors flex items-center gap-1">
@@ -55,15 +74,15 @@ const navLinks = [
 
       <div class="hidden lg:flex items-center gap-4">
         <div class="flex flex-col items-end mr-2">
-          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">Hotline 24/7</span>
-          <a href="tel:0866077040" class="text-sm font-black text-secondary font-mono">0866-077-040</a>
+          <span class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter font-sans">Hotline 24/7</span>
+          <a href="tel:0866077040" class="text-sm font-black text-secondary font-mono tracking-tight">0866-077-040</a>
         </div>
-        <a href="/lien-he" class="bg-slate-950 text-white px-8 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-slate-950 transition-all">
+        <a href="/lien-he" class="bg-slate-950 text-white px-8 py-3.5 rounded-2xl font-bold text-xs uppercase tracking-widest hover:bg-primary hover:text-slate-950 transition-all shadow-xl shadow-slate-900/10">
           Tư vấn miễn phí
         </a>
       </div>
 
-      <button id="menu-toggle" class="lg:hidden p-2 text-slate-900">
+      <button id="menu-toggle" class="lg:hidden p-2 text-slate-900" aria-label="Open Menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
@@ -77,24 +96,24 @@ const navLinks = [
       <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-3xl">&times;</button>
     </div>
     
-    <div class="flex-1 overflow-y-auto p-8">
+    <div class="flex-1 overflow-y-auto px-8 py-6">
       <div class="flex flex-col gap-6">
         {navLinks.map((link) => (
-          <div class="flex flex-col">
+          <div class="flex flex-col border-b border-slate-50 pb-4">
             {link.dropdown ? (
-              <button class="mobile-dropdown-btn text-3xl font-black text-slate-900 flex justify-between items-center text-left">
+              <button class="mobile-dropdown-btn text-2xl font-black text-slate-900 flex justify-between items-center text-left py-2">
                 {link.name}
-                <span class="text-xl transition-transform duration-300">＋</span>
+                <span class="text-xl opacity-30 transition-transform duration-300">＋</span>
               </button>
-              <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-4 mt-0">
+              <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-2">
                 {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`text-lg font-bold pl-4 border-l-2 border-slate-100 mt-4 ${sub.highlight ? 'text-primary' : 'text-slate-400'}`}>
+                  <a href={sub.href} class={`text-lg font-bold pl-4 border-l-2 border-slate-100 mt-3 py-1 ${sub.highlight ? 'text-primary' : 'text-slate-400'}`}>
                     {sub.name}
                   </a>
                 ))}
               </div>
             ) : (
-              <a href={link.href} class="text-3xl font-black text-slate-900 uppercase tracking-tighter">{link.name}</a>
+              <a href={link.href} class="text-2xl font-black text-slate-900 py-2">{link.name}</a>
             )}
           </div>
         ))}
@@ -114,7 +133,6 @@ const navLinks = [
   const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  // Đóng/Mở Menu chính
   menuToggle?.addEventListener('click', () => {
     mobileMenu?.classList.remove('translate-x-full');
     document.body.style.overflow = 'hidden';
@@ -125,7 +143,7 @@ const navLinks = [
     document.body.style.overflow = ''; 
   });
 
-  // Xử lý Accordion (Collapse) cho Dịch vụ trên Mobile
+  // Xử lý Accordion cho toàn bộ các mục có dropdown trên Mobile
   const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
   
   dropdownBtns.forEach(btn => {
@@ -133,14 +151,15 @@ const navLinks = [
       const content = btn.nextElementSibling as HTMLElement;
       const icon = btn.querySelector('span');
       
+      // Đóng các mục khác nếu muốn (optional)
+      // dropdownBtns.forEach(otherBtn => { ... });
+
       if (content.style.maxHeight && content.style.maxHeight !== '0px') {
         content.style.maxHeight = '0px';
-        content.style.marginTop = '0px';
         if (icon) icon.innerText = '＋';
         if (icon) icon.style.transform = 'rotate(0deg)';
       } else {
         content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.marginTop = '1rem';
         if (icon) icon.innerText = '－';
         if (icon) icon.style.transform = 'rotate(180deg)';
       }
