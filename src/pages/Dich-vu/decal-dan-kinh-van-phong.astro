@@ -1,0 +1,121 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const officeServices = [
+  {
+    title: "Decal Mờ Phun Cát",
+    desc: "Giải pháp phổ biến nhất cho vách kính văn phòng, tạo không gian riêng tư nhưng vẫn giữ được sự thông thoáng.",
+    features: ["Che mờ tầm nhìn", "Dễ dàng vệ sinh", "Chi phí tối ưu"],
+    image: "/images/office/decal-mo.webp"
+  },
+  {
+    title: "Cắt Chữ & Logo Công Ty",
+    desc: "Khẳng định thương hiệu ngay từ cửa ra vào. Cắt CNC chính xác logo và tên công ty trên nền decal mờ hoặc decal màu.",
+    features: ["Độ chính xác cao", "Thiết kế theo yêu cầu", "Tăng tính chuyên nghiệp"],
+    image: "/images/office/cat-logo.webp"
+  },
+  {
+    title: "Decal Trang Trí & Chỉ Kẻ",
+    desc: "Tạo điểm nhấn hiện đại với các đường kẻ chỉ (line) hoặc họa tiết hình học, giúp không gian bớt đơn điệu.",
+    features: ["Thẩm mỹ cao", "Mẫu mã đa dạng", "Tạo cảm hứng làm việc"],
+    image: "/images/office/decal-trang-tri.webp"
+  }
+];
+---
+
+<Layout title="Decal Dán Kính Văn Phòng | Thiết Kế & Thi Công Trọn Gói">
+
+  <section class="py-24 bg-slate-900 relative">
+    <div class="container grid lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-fade-up">
+        <h6 class="text-primary tracking-[0.3em] font-bold uppercase">Professional Workspace</h6>
+        <h1 class="text-white !important">Nâng Tầm Không Gian Làm Việc Với Decal Kính</h1>
+        <p class="text-slate-300 text-lg">
+          iDecal chuyên cung cấp giải pháp <strong>decal mờ, cắt logo, trang trí vách kính</strong> chuyên nghiệp cho văn phòng. Giúp tạo sự riêng tư, tăng tính thẩm mỹ và nhận diện thương hiệu.
+        </p>
+        <div class="mt-8">
+          <a href="#contact" class="btn-primary-solid">Nhận tư vấn mẫu & Báo giá</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <div class="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-2xl group-hover:bg-primary/30 transition-all"></div>
+        <img src="/images/office/hero-office.webp" alt="Văn phòng dán decal kính mờ" class="img-brand w-full h-[450px] object-cover relative z-10" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="mb-4">Dịch vụ Decal văn phòng tiêu biểu</h2>
+        <p class="text-slate-500">Chúng tôi thấu hiểu nhu cầu về một không gian làm việc vừa riêng tư vừa giữ được tính kết nối giữa các phòng ban.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {officeServices.map((service) => (
+          <div class="service-card-brand group h-full">
+            <div class="mb-6 overflow-hidden rounded-2xl h-48">
+              <img src={service.image} alt={service.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            </div>
+            <h4 class="text-secondary !mb-3">{service.title}</h4>
+            <p class="text-xs leading-relaxed mb-6">{service.desc}</p>
+            <ul class="space-y-2 mt-auto">
+              {service.features.map((f) => (
+                <li class="text-[11px] font-bold text-slate-500 flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 bg-primary rounded-full"></span> {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-blue-50/30">
+    <div class="container">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h6>Quy trình thực hiện</h6>
+          <h2>Thi công nhanh gọn, không ảnh hưởng giờ làm việc</h2>
+          <p class="mt-6 mb-10">iDecal cam kết quy trình thi công sạch sẽ, chuyên nghiệp, đảm bảo tiến độ cho doanh nghiệp.</p>
+          
+          <div class="space-y-6">
+            <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
+              <span class="text-2xl font-black text-primary/20">01</span>
+              <p class="text-sm font-medium text-secondary">Khảo sát, đo đạc thực tế và tư vấn mẫu tại công trình.</p>
+            </div>
+            <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
+              <span class="text-2xl font-black text-primary/20">02</span>
+              <p class="text-sm font-medium text-secondary">Thiết kế file cắt logo, demo maket để khách duyệt.</p>
+            </div>
+            <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-blue-100">
+              <span class="text-2xl font-black text-primary/20">03</span>
+              <p class="text-sm font-medium text-secondary">Thi công sạch sẽ, bàn giao và hướng dẫn bảo quản.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <img src="/images/office/office-1.webp" class="rounded-3xl h-64 w-full object-cover shadow-lg" alt="Thi công 1" />
+          <img src="/images/office/office-2.webp" class="rounded-3xl h-64 w-full object-cover shadow-lg mt-8" alt="Thi công 2" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-white">
+    <div class="container text-center">
+      <div class="bg-slate-900 p-12 rounded-[3rem] text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+        <h2 class="text-white !important mb-6">Bạn cần báo giá cho văn phòng?</h2>
+        <p class="text-slate-400 mb-8 max-w-xl mx-auto">Gửi ngay số lượng m2 hoặc hình ảnh vách kính để nhận báo giá chi tiết trong 5 phút.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="tel:090xxxxxxx" class="btn-primary-solid">Gọi: 090x.xxx.xxx</a>
+          <a href="https://zalo.me/090xxxxxxx" class="px-8 py-4 bg-white text-secondary font-bold uppercase tracking-widest text-sm rounded-brand hover:bg-primary hover:text-white transition-all">Chat Zalo tư vấn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
