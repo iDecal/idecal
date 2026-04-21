@@ -1,1 +1,160 @@
-acscsáccsa
+---
+import Layout from '../../layouts/Layout.astro';
+
+// Danh sách dịch vụ dựa trên các file đã có trong thư mục
+const services = [
+  {
+    title: "Thi công Decal Quảng Cáo",
+    slug: "decal-quang-cao",
+    desc: "Thiết kế, in ấn và thi công decal bảng hiệu, gian hàng, sự kiện chuyên nghiệp.",
+    icon: "📢"
+  },
+  {
+    title: "Decal dán kính văn phòng",
+    slug: "decal-dan-kinh-van-phong",
+    desc: "Giải pháp decal mờ, cắt logo thương hiệu giúp tạo không gian riêng tư và hiện đại.",
+    icon: "🏢"
+  },
+  {
+    title: "Phim cách nhiệt nhà kính",
+    slug: "phim-cach-nhiet",
+    desc: "Chống nóng nhà ở, chung cư, showroom. Cản 99% tia UV, tiết kiệm điện năng.",
+    icon: "☀️"
+  },
+  {
+    title: "Trang trí nội thất & Furniture Wrap",
+    slug: "film-noi-that",
+    desc: "Làm mới tủ bếp, bàn ghế bằng Film cao cấp Octki, Infeel. Không bụi bẩn, thi công nhanh.",
+    icon: "🛋️"
+  },
+  {
+    title: "Cắt Decal vi tính",
+    slug: "cat-decal",
+    desc: "Cắt chữ, logo, tem nhãn lấy liền với độ chính xác cao bằng máy CNC hiện đại.",
+    icon: "✂️"
+  },
+  {
+    title: "Decal mờ 3D vân sóng",
+    slug: "decal-mo-3d-van-song",
+    desc: "Dòng sản phẩm cao cấp với hiệu ứng nổi khối 3D sang trọng cho vách kính.",
+    icon: "🌊"
+  }
+];
+
+const steps = [
+  { n: "01", t: "Tiếp nhận & Tư vấn", d: "Liên hệ qua Hotline/Zalo, iDecal tư vấn sơ bộ về mẫu mã và báo giá ước tính." },
+  { n: "02", t: "Khảo sát tận nơi", d: "Kỹ thuật viên đến đo đạc thực tế và mang theo mẫu film/decal để quý khách xem trực tiếp." },
+  { n: "03", t: "Thiết kế & Maket", d: "Lên phương án thiết kế, dàn trang và gửi bản demo (maket) để khách hàng duyệt trước khi in/cắt." },
+  { n: "04", t: "Thi công & Bàn giao", d: "Đội ngũ thợ tay nghề cao tiến hành lắp đặt sạch sẽ, nhanh chóng và nghiệm thu cùng khách hàng." }
+];
+---
+
+<Layout title="Dịch Vụ Thi Công Decal & Phim Cách Nhiệt Chuyên Nghiệp | iDecal">
+
+  <section class="py-24 bg-slate-900 relative overflow-hidden">
+    <div class="container text-center relative z-10">
+      <h6 class="text-primary tracking-[0.3em] font-bold uppercase animate-fade-up">iDecal Solutions</h6>
+      <h1 class="text-white !important mt-4 mb-6">Giải Pháp Trang Trí & Chống Nóng Toàn Diện</h1>
+      <p class="text-slate-400 text-lg max-w-3xl mx-auto">
+        Đơn vị với hơn 10 năm kinh nghiệm chuyên sâu trong lĩnh vực thiết kế, in ấn và thi công Decal quảng cáo, dán kính văn phòng và phim cách nhiệt tại TP.HCM, Bình Dương và Quy Nhơn.
+      </p>
+    </div>
+    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+       <div class="absolute top-10 left-10 w-64 h-64 bg-primary rounded-full blur-[120px]"></div>
+       <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600 rounded-full blur-[150px]"></div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((s) => (
+          <a href={`/Dich-vu/${s.slug}`} class="group p-8 rounded-[2.5rem] border border-slate-100 hover:border-primary/30 hover:shadow-xl transition-all duration-500 bg-white flex flex-col h-full">
+            <div class="text-4xl mb-6 group-hover:scale-120 transition-transform inline-block w-fit">{s.icon}</div>
+            <h3 class="text-xl font-bold text-secondary mb-4 group-hover:text-primary transition-colors">{s.title}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed mb-8">{s.desc}</p>
+            <div class="mt-auto flex items-center text-primary font-bold text-[10px] uppercase tracking-widest gap-2">
+              Xem chi tiết <span class="group-hover:translate-x-2 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-slate-50">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h6 class="text-primary">Work Process</h6>
+        <h2>Quy trình làm việc chuyên nghiệp</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {steps.map((step) => (
+          <div class="relative p-8 bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden group">
+            <div class="text-5xl font-black text-slate-50 absolute -right-2 -top-2 group-hover:text-primary/10 transition-colors">{step.n}</div>
+            <h4 class="text-secondary relative z-10 mb-4">{step.t}</h4>
+            <p class="text-xs text-slate-500 leading-relaxed relative z-10">{step.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container">
+      <div class="bg-blue-50/50 rounded-[3rem] p-12 border border-blue-100">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="mb-6">Khu vực phục vụ tận nơi</h2>
+            <p class="text-slate-600 mb-8">iDecal sẵn sàng phục vụ quý khách tại xưởng hoặc thi công trực tiếp tại công trình theo yêu cầu.</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="text-primary font-bold">📍</span>
+                <div>
+                  <p class="font-bold text-secondary text-sm">TP. Hồ Chí Minh</p>
+                  <p class="text-xs text-slate-500">Quận 1, 2, 7, 9, Thủ Đức, Bình Thạnh...</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 border-t border-blue-100 pt-4">
+                <span class="text-primary font-bold">📍</span>
+                <div>
+                  <p class="font-bold text-secondary text-sm">Tỉnh Bình Dương</p>
+                  <p class="text-xs text-slate-500">Thuận An, Dĩ An, Thủ Dầu Một.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3 border-t border-blue-100 pt-4">
+                <span class="text-primary font-bold">📍</span>
+                <div>
+                  <p class="font-bold text-secondary text-sm">TP. Quy Nhơn</p>
+                  <p class="text-xs text-slate-500">Khu vực nội thành và lân cận.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="bg-white p-8 rounded-[2.5rem] shadow-sm">
+            <h4 class="mb-6">Thông tin liên hệ</h4>
+            <div class="space-y-6">
+              <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl">
+                 <div class="text-xl">📞</div>
+                 <div>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase">Hotline 24/7</p>
+                    <p class="font-bold text-secondary">090x.xxx.xxx (Mr. Anh Lê)</p>
+                 </div>
+              </div>
+              <div class="flex items-center gap-4 p-4 bg-slate-50 rounded-2xl">
+                 <div class="text-xl">📧</div>
+                 <div>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase">Email</p>
+                    <p class="font-bold text-secondary">hi@idecal.vn</p>
+                 </div>
+              </div>
+              <a href="https://zalo.me/090xxxxxxx" class="btn-primary-solid w-full text-center">Chat Zalo Báo Giá Ngay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
