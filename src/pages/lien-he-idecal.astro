@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Thông tin doanh nghiệp để cấu hình Schema SEO
+const businessInfo = {
+  name: "iDecal - Dịch vụ thi công Decal chuyên nghiệp",
+  address: "Số 123 Đường số 1, Phường Tân Quy, Quận 7, TP. Hồ Chí Minh",
+  hotline: "090x.xxx.xxx",
+  email: "idecal.net@gmail.com",
+  zalo: "https://zalo.me/090xxxxxxx",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.955!2d106.701!3d10.730!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQzJzQ4LjAiTiAxMDbCsDQyJzAzLjYiRQ!5e0!3m2!1svi!2svn!4v1620000000000!5m2!1vi!2svn"
+};
+---
+
+<Layout title="Liên Hệ iDecal | Báo Giá Thi Công Decal TPHCM & Bình Dương">
+  
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": businessInfo.name,
+    "image": "https://idecal.vn/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": businessInfo.address,
+      "addressLocality": "Quận 7",
+      "addressRegion": "Hồ Chí Minh",
+      "postalCode": "700000",
+      "addressCountry": "VN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 10.730,
+      "longitude": 106.701
+    },
+    "url": "https://idecal.vn/lien-he",
+    "telephone": businessInfo.hotline
+  })} />
+
+  <section class="py-20 bg-slate-900 text-white text-center">
+    <div class="container">
+      <h1 class="text-4xl md:text-5xl font-black mb-4">Liên Hệ Với iDecal</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto">
+        Anh cần tư vấn dán kính văn phòng, chống nắng hay film nội thất? 
+        Hãy để lại thông tin hoặc gọi trực tiếp, iDecal sẽ khảo sát tận nơi sau 30 phút.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="container grid lg:grid-cols-2 gap-12">
+      
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-secondary mb-6">Thông tin trực tiếp</h2>
+          <div class="grid gap-4">
+            <a href={`tel:${businessInfo.hotline}`} class="flex items-center gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-primary transition-all group">
+              <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white text-xl">📞</div>
+              <div>
+                <p class="text-xs text-slate-500 uppercase font-bold">Hotline/Zalo hỗ trợ 24/7</p>
+                <p class="text-lg font-bold text-secondary group-hover:text-primary">{businessInfo.hotline} (Mr. Anh Lê)</p>
+              </div>
+            </a>
+
+            <a href={`mailto:${businessInfo.email}`} class="flex items-center gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:border-primary transition-all">
+              <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white text-xl">✉️</div>
+              <div>
+                <p class="text-xs text-slate-500 uppercase font-bold">Gửi yêu cầu báo giá</p>
+                <p class="text-lg font-bold text-secondary">{businessInfo.email}</p>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100">
+              <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center text-white text-xl">📍</div>
+              <div>
+                <p class="text-xs text-slate-500 uppercase font-bold">Địa chỉ thi công</p>
+                <p class="text-lg font-bold text-secondary">{businessInfo.address}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-8 bg-primary/10 rounded-3xl border border-primary/20">
+          <h4 class="font-bold text-secondary mb-2">💡 Lưu ý khách hàng:</h4>
+          <p class="text-sm text-slate-600">
+            iDecal cung cấp dịch vụ đo đạc và mang mẫu decal tận nhà **miễn phí** tại khu vực TP.HCM và Bình Dương. Anh không cần ngại khoảng cách, chúng tôi có thợ trực sẵn tại các khu vực.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 lg:p-12 rounded-[3rem] shadow-2xl border border-slate-100">
+        <h3 class="text-2xl font-bold mb-8">Gửi tin nhắn cho chúng tôi</h3>
+        <form class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-400 uppercase">Họ và tên</label>
+              <input type="text" placeholder="Ví dụ: Anh Lê" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" />
+            </div>
+            <div class="space-y-2">
+              <label class="text-xs font-bold text-slate-400 uppercase">Số điện thoại</label>
+              <input type="tel" placeholder="090x xxx xxx" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-slate-400 uppercase">Dịch vụ quan tâm</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none appearance-none bg-white">
+              <option>Dán decal mờ văn phòng</option>
+              <option>Dán phim cách nhiệt nhà kính</option>
+              <option>Dán Film nội thất (Furniture Wrap)</option>
+              <option>In & Cắt decal theo yêu cầu</option>
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-slate-400 uppercase">Nội dung chi tiết</label>
+            <textarea rows="4" placeholder="Nhập yêu cầu của bạn tại đây..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none"></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-secondary hover:shadow-lg transition-all">
+            Gửi Yêu Cầu Tư Vấn
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 container">
+    <div class="rounded-[3rem] overflow-hidden shadow-xl border-8 border-white">
+      <iframe 
+        src={businessInfo.mapUrl} 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        title="Vị trí iDecal trên Google Maps"
+      ></iframe>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Hiệu ứng focus cho các input */
+  input, textarea, select {
+    transition: all 0.3s ease;
+  }
+</style>
