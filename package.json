@@ -1,23 +1,17 @@
 {
-  "name": "idecal-astro-web",
-  "type": "module",
-  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "npm install --legacy-peer-deps && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-  "astro": "^6.0.0",
-  "emdash": "latest",
-  "@astrojs/cloudflare": "latest",
-  "@astrojs/tailwind": "latest"
-},
+    "astro": "^6.0.0",
+    "emdash": "latest",
+    "@astrojs/cloudflare": "latest"
+  },
   "devDependencies": {
-    "@astrojs/sitemap": "^3.0.0", 
-    "@astrojs/tailwind": "^5.1.0",
-    "tailwindcss": "^3.4.0"
+    "@astrojs/tailwind": "latest"
   }
 }
