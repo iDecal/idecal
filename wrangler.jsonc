@@ -5,8 +5,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "Tên_DB_Của_Bạn", 
-      "database_id": "ID_DB_Của_Bạn"
+      "database_name": "idecal", 
+      "database_id": "94535070-8883-4099-bbe6-8aedae547ad5"
     }
   ]
 }
