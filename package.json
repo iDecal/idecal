@@ -6,12 +6,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {
-    "astro": "^6.0.0",
-    "emdash": "latest",
-    "@astrojs/cloudflare": "latest"
-  },
-  "devDependencies": {
-    "@astrojs/tailwind": "latest"
-  }
+ "dependencies": {
+  "astro": "^5.0.0", 
+  "emdash": "0.5.0",
+  "@astrojs/cloudflare": "latest"
+},
+"devDependencies": {
+  "@astrojs/tailwind": "^5.1.0"
+}
 }
