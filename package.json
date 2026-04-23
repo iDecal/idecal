@@ -1,18 +1,21 @@
 {
+  "name": "idecal",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "npm install --legacy-peer-deps && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
- {
   "dependencies": {
     "astro": "^6.0.0",
     "emdash": "latest",
     "@astrojs/cloudflare": "latest"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "latest"
+    "@astrojs/tailwind": "latest",
+    "tailwindcss": "^3.4.0"
   }
 }
