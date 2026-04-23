@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "latest",
-    "emdash": "latest"
-  },
+  "astro": "^6.0.0",
+  "emdash": "latest",
+  "@astrojs/cloudflare": "latest",
+  "@astrojs/tailwind": "latest"
+},
   "devDependencies": {
     "@astrojs/sitemap": "^3.0.0", 
     "@astrojs/tailwind": "^5.1.0",
