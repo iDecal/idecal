@@ -1,12 +1,16 @@
 import { defineConfig } from 'astro/config';
-import emdash from "emdash/astro";
-import { d1 } from "emdash/db";
-import cloudflare from "@astrojs/cloudflare";
+import tailwind from '@astrojs/tailwind';
+import cloudflare from '@astrojs/cloudflare';
+import { emdash } from 'emdash';
+import { d1 } from 'emdash/db/cloudflare'; // Sửa dòng này để khớp với bản mới
 
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
   integrations: [
-    emdash({ database: d1() })
+    tailwind(),
+    emdash({
+      db: d1(),
+    }),
   ],
 });
