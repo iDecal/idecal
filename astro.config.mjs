@@ -8,6 +8,6 @@ export default defineConfig({
   adapter: cloudflare(),
   integrations: [
     tailwind(),
-    emdash(), // Không cần d1() ở đây nữa, EmDash sẽ tự nhận diện môi trường Cloudflare
+    emdash(), // Để trống thế này là cách an toàn nhất
   ],
 });
