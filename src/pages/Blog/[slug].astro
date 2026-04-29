@@ -1,21 +1,25 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content'; // Thêm render vào đây
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    // Đổi entry.slug thành entry.id
+    params: { slug: entry.id }, 
+    props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content, headings } = await entry.render();
 
-// Lấy bài viết liên quan (Cùng danh mục, loại trừ bài hiện tại)
+// TRONG ASTRO 6: Dùng hàm render(entry) thay vì entry.render()
+const { Content, headings } = await render(entry);
+
+// Lấy bài viết liên quan
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter(p => p.data.category === entry.data.category && p.slug !== entry.slug)
+  .filter(p => p.data.category === entry.data.category && p.id !== entry.id) // Đổi p.slug thành p.id
   .slice(0, 3);
 ---
 
