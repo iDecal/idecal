@@ -4,15 +4,16 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.0"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0"
+    "astro": "^5.0.0",
+    "@astrojs/cloudflare": "latest",
+    "@astrojs/tailwind": "latest",
+    "tailwindcss": "^3.4.1",
+    "@tailwindcss/typography": "latest"
   }
 }
