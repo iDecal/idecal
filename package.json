@@ -2,15 +2,8 @@
   "name": "idecal",
   "type": "module",
   "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
   "dependencies": {
-    "astro": "^5.0.0",
+    "astro": "^6.0.0",
     "@astrojs/cloudflare": "latest",
     "@astrojs/tailwind": "latest",
     "tailwindcss": "^3.4.1",
