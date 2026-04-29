@@ -14,21 +14,19 @@ export default {
 					light: '#05207c',
 				},
 				background: '#FFFFFF',
-				text: {
+				// Đổi tên từ text thành mainText để tránh trùng với tiền tố text- của tailwind
+				mainText: {
 					DEFAULT: '#031246', 
 					muted: '#64748b',   
 				},
 				border: '#e2e8f0',
 			},
 			fontFamily: {
+				// Đổi thành body để khớp với Layout.astro nếu bạn muốn dùng font-body
+				body: ['Inter', 'sans-serif'],
 				sans: ['Inter', 'sans-serif'],
 			},
 			fontSize: {
-				/* GIẢM ĐỘ ĐẬM:
-				   - H1 & H2 hạ xuống 800 (Extra Bold) thay vì 900.
-				   - H3 hạ xuống 700 (Bold).
-				   - Các tiêu đề nhỏ giữ ở mức 600-700 để dễ đọc.
-				*/
 				'h1': ['clamp(1.75rem, 3.5vw, 2.5rem)', { lineHeight: '1.2', fontWeight: '800', letterSpacing: '-0.01em' }],
 				'h2': ['clamp(1.5rem, 3vw, 2.125rem)', { lineHeight: '1.2', fontWeight: '800', letterSpacing: '-0.01em' }],
 				'h3': ['clamp(1.25rem, 2.5vw, 1.625rem)', { lineHeight: '1.3', fontWeight: '700' }],
@@ -41,9 +39,11 @@ export default {
 				'brand': '0 16px 32px -8px rgba(3, 18, 70, 0.1)',
 			},
 			borderRadius: {
-				'brand': '12px', // Giảm độ bo góc một chút để trông cứng cáp hơn
+				'brand': '12px',
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }
