@@ -1,22 +1,26 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('projects');
   return entries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    // Astro 6 dùng id thay cho slug khi sử dụng loader
+    params: { slug: entry.id }, 
+    props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+// Cách render mới của Astro 6
+const { Content } = await render(entry);
 
-// Lấy gallery từ dữ liệu file, nếu không có sẽ để mảng trống
 const gallery = entry.data.gallery || [];
 
 const allProjects = await getCollection('projects');
-const related = allProjects.filter(p => p.data.category === entry.data.category && p.slug !== entry.slug).slice(0, 3);
+const related = allProjects
+  .filter(p => p.data.category === entry.data.category && p.id !== entry.id)
+  .slice(0, 3);
 ---
 
 <Layout title={`${entry.data.title} | iDecal`}>
@@ -110,7 +114,7 @@ const related = allProjects.filter(p => p.data.category === entry.data.category 
           </div>
           <div class="grid md:grid-cols-3 gap-8">
             {related.map(p => (
-              <a href={`/du-an/${p.slug}`} class="group">
+              <a href={`/du-an/${p.id}`} class="group">
                 <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 shadow-sm border border-slate-100">
                   <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
                 </div>
