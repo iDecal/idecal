@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* =========================
-   BASE SYSTEM
+    BASE SYSTEM
 ========================= */
 @layer base {
   html {
@@ -12,10 +12,12 @@
   }
 
   body {
-    /* Thiết lập màu mặc định cho nền sáng */
-    --text-main: theme('colors.secondary');
-    --text-muted: theme('colors.slate.500');
-    @apply bg-white text-text font-sans antialiased;
+    /* Thiết lập biến màu để dùng linh hoạt */
+    --text-main: #031246; /* Màu secondary của iDecal */
+    --text-muted: #64748b; /* Màu slate-500 cho nội dung phụ */
+    
+    /* SỬA LỖI: Thay text-text bằng text-secondary để build thành công */
+    @apply bg-white text-secondary font-sans antialiased;
   }
 
   /* Ép chuẩn tiêu đề đồng bộ */
@@ -41,33 +43,32 @@
 }
 
 /* =========================
-   DARK SECTION AUTO-COLOR
-   Khi thẻ cha có nền tối, tự động đổi màu các thẻ con
+    DARK SECTION AUTO-COLOR
+    Khi thẻ cha có nền tối, tự động đổi màu các thẻ con
 ========================= */
 .bg-slate-900, .bg-secondary, [data-theme="dark"] {
-  --text-main: theme('colors.white');
-  --text-muted: theme('colors.slate.300');
+  --text-main: #ffffff;
+  --text-muted: #cbd5e1; /* slate-300 */
   
-  /* Đảm bảo các thẻ trực tiếp cũng nhận màu */
+  /* Đảm bảo các thẻ trực tiếp cũng nhận màu trắng */
   @apply text-white;
 }
 
 /* =========================
-   COMPONENT SYSTEM
+    COMPONENT SYSTEM
 ========================= */
 @layer components {
   .container {
     @apply max-w-7xl mx-auto px-6 w-full;
   }
 
-  /* Nút Báo Giá chuẩn Bolder */
+  /* Nút Báo Giá chuẩn iDecal */
   .btn-primary-solid {
     @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest text-sm rounded-brand transition-all duration-300 shadow-brand hover:bg-secondary hover:-translate-y-1;
   }
 
   /* Nút Xem Chi Tiết */
   .btn-idecal-bold {
-    /* Sử dụng currentColor để đường line tự đổi màu theo chữ */
     @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-[0.2em] pb-1 transition-all border-b-2 border-primary hover:text-primary hover:border-primary;
     color: var(--text-main);
   }
@@ -82,7 +83,7 @@
 }
 
 /* =========================
-   ANIMATIONS
+    ANIMATIONS
 ========================= */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
