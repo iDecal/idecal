@@ -2,20 +2,25 @@
   "name": "idecal",
   "type": "module",
   "version": "0.0.1",
+
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
+
   "dependencies": {
     "astro": "^6.0.0",
-    "emdash": "latest",
-    "@astrojs/cloudflare": "latest"
+    "@astrojs/cloudflare": "^12.0.0"
   },
+
   "devDependencies": {
-    "@astrojs/tailwind": "latest",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^4.0.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0"
+  },
+
+  "engines": {
+    "node": ">=18"
   }
 }
