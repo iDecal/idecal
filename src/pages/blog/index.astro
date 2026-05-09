@@ -2,17 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Tự động lấy tất cả bài viết
+// Lấy tất cả bài viết từ collection 'blog'
 const allPosts = await getCollection('blog');
 
-// Sửa logic sắp xếp: Kiểm tra cả data.date (WP) và data.pubDate (cũ)
+// Sắp xếp bài viết theo ngày mới nhất (Ưu tiên trường 'date' của WP)
 allPosts.sort((a, b) => {
   const dateA = a.data.date || a.data.pubDate || new Date(0);
   const dateB = b.data.date || b.data.pubDate || new Date(0);
   return dateB.valueOf() - dateA.valueOf();
 });
 
-// Cập nhật danh sách Category để bao gồm "Mẫu thiết kế" từ WordPress
 const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", "Mẫu thiết kế"];
 ---
 
@@ -20,7 +19,7 @@ const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", 
   <main class="bg-white pt-20 pb-24">
     <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
       <h1 class="text-4xl font-bold text-secondary mb-4">Tin tức & Chia sẻ</h1>
-      <p class="text-slate-500 text-sm lowercase">khám phá các dự án và kinh nghiệm dán decal chuyên nghiệp</p>
+      <p class="text-slate-500 text-sm lowercase">Khám phá các dự án và kinh nghiệm dán decal chuyên nghiệp</p>
     </div>
 
     <div class="flex justify-center gap-3 mb-12 flex-wrap">
@@ -33,12 +32,15 @@ const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", 
 
     <div id="blog-grid" class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
       {allPosts.map(post => {
-        // Xử lý linh hoạt giữa category (cũ) và categories (WordPress)
-        const displayCategory = post.data.category || (post.data.categories && post.data.categories[0]) || "Kiến thức";
+        // Xử lý danh mục hiển thị
+        const displayCategory = (post.data.categories && post.data.categories[0]) || post.data.category || "Kiến thức";
         
+        // Sửa lỗi link undefined: Ưu tiên slug trong Frontmatter, nếu không có dùng slug hệ thống
+        const finalSlug = post.data.slug || post.slug;
+
         return (
           <article class="post-card group" data-category={displayCategory}>
-            <a href={`/blog/${post.slug}`}>
+            <a href={`/blog/${finalSlug}`}>
               <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100">
                 <img 
                   src={post.data.image || "/images/default-thumb.jpg"} 
@@ -64,5 +66,22 @@ const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", 
 </Layout>
 
 <script>
-  // Logic Filter giữ nguyên...
+  // Logic Filter bài viết
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.post-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'Tất cả' || cardCat === category) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
 </script>
