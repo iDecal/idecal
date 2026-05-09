@@ -1,34 +1,35 @@
 import { defineCollection, z } from 'astro:content';
 
-// ĐỊNH NGHĨA blogCollection
 const blogCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    // Chuyển sang optional() để không bị lỗi "Required" nếu quên viết mô tả
-    description: z.string().optional().default("Dịch vụ thi công decal chuyên nghiệp iDecal"), 
-    // Sử dụng coerce để tự động chuyển đổi chuỗi ngày tháng từ Markdown thành đối tượng Date
-    pubDate: z.coerce.date(), 
-    // Thêm 'Tin tức' hoặc các hạng mục khác nếu cần để tránh lỗi enum
-    category: z.enum(['Kiến thức', 'Dự án', 'Khuyến mãi', 'Tin tức']).default('Kiến thức'),
+    // WordPress thường xuất ra trường 'slug' riêng
+    slug: z.string().optional(),
+    // File của bạn dùng 'date' thay vì 'pubDate', dùng coerce để xử lý định dạng ISO
+    date: z.coerce.date(),
+    // File của bạn dùng 'categories' (số nhiều) và là một mảng string
+    categories: z.array(z.string()).default(['Mẫu thiết kế']),
+    // Các trường sau đây không có trong file mẫu nên để .optional() để tránh lỗi build
+    description: z.string().optional().default("Dịch vụ thi công decal chuyên nghiệp iDecal"),
     image: z.string().optional().default('/images/default-thumb.jpg'),
+    author: z.string().optional().default('iDecal'),
   }),
 });
 
-// ĐỊNH NGHĨA projectsCollection
 const projectsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    client: z.string().default('Khách hàng iDecal'),
+    client: z.string().optional().default('Khách hàng iDecal'),
     category: z.enum(['Văn phòng', 'Căn hộ', 'Showroom', 'Sự kiện']).default('Văn phòng'),
-    image: z.string(),
+    image: z.string().optional(),
     description: z.string().optional(),
-    pubDate: z.coerce.date(),
+    // Đồng bộ dùng 'date' thay vì 'pubDate' cho nhất quán với blog
+    date: z.coerce.date(),
   }),
 });
 
-// EXPORT
 export const collections = {
   'blog': blogCollection,
   'projects': projectsCollection,
