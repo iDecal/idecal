@@ -1,8 +1,10 @@
 ---
 title: "99+ Mẫu Decal dán kính văn phòng đẹp 2026"
-slug: 99-mau-decal-dan-kinh-van-phong-dep-2026
-date: 2025-03-29T22:14:59
-categories: ["Mẫu thiết kế"]
+description: "iDecal cung cấp bảng báo giá decal mờ chi tiết theo từng hạng mục và phân tích các yếu tố ảnh hưởng đến chi phí."
+pubDate: 2025-03-29
+category: "Kiến thức"
+author: "Anh Lê"
+image: "/images/Banner/gioi-thieu-idecal.jpeg"
 ---
 Bạn muốn tạo một không gian làm việc chuyên nghiệp, riêng tư và đầy tính thẩm mỹ? Decal dán kính văn phòng chính là giải pháp hoàn hảo dành cho bạn!
 
