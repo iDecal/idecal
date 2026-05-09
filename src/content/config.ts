@@ -1,21 +1,26 @@
 import { defineCollection, z } from 'astro:content';
 
+// Định nghĩa blogCollection với các trường linh hoạt cho WordPress
 const blogCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    // Khớp với trường 'date' trong file .md của bạn
-    // Dùng z.coerce để tự động sửa các lỗi định dạng ngày tháng
-    date: z.coerce.date(),
-    // WordPress dùng 'categories' dạng mảng, chúng ta để optional để không lỗi nếu thiếu
+    // Khớp với trường 'date' từ file .md của bạn
+    date: z.coerce.date(), 
+    // Cho phép có pubDate (bản cũ) hoặc không
+    pubDate: z.coerce.date().optional(),
+    // WordPress dùng 'categories' dạng mảng
     categories: z.array(z.string()).optional().default(['Mẫu thiết kế']),
-    // Chuyển description thành optional để fix lỗi "Required"
-    description: z.string().optional().default("Dịch vụ decal chuyên nghiệp iDecal"),
+    // Hỗ trợ trường 'category' bản cũ
+    category: z.string().optional(),
+    // Description là optional để tránh lỗi "Required"
+    description: z.string().optional().default("Dịch vụ thi công decal chuyên nghiệp iDecal"),
     image: z.string().optional().default('/images/default-thumb.jpg'),
     slug: z.string().optional(),
   }),
 });
 
+// Định nghĩa projectsCollection
 const projectsCollection = defineCollection({
   type: 'content',
   schema: z.object({
