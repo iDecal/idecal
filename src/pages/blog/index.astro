@@ -2,10 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Lấy tất cả bài viết từ collection 'blog'
 const allPosts = await getCollection('blog');
 
-// Sắp xếp bài viết theo ngày mới nhất (Ưu tiên trường 'date' của WP)
+// Sắp xếp bài viết linh hoạt theo cả hai loại ngày tháng
 allPosts.sort((a, b) => {
   const dateA = a.data.date || a.data.pubDate || new Date(0);
   const dateB = b.data.date || b.data.pubDate || new Date(0);
@@ -15,48 +14,26 @@ allPosts.sort((a, b) => {
 const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", "Mẫu thiết kế"];
 ---
 
-<Layout title="Blog iDecal | Kiến thức & Dự án">
+<Layout title="Blog iDecal | Tin tức">
   <main class="bg-white pt-20 pb-24">
-    <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
-      <h1 class="text-4xl font-bold text-secondary mb-4">Tin tức & Chia sẻ</h1>
-      <p class="text-slate-500 text-sm lowercase">Khám phá các dự án và kinh nghiệm dán decal chuyên nghiệp</p>
-    </div>
-
-    <div class="flex justify-center gap-3 mb-12 flex-wrap">
-      {categories.map(cat => (
-        <button class="filter-btn px-6 py-2 rounded-full border border-slate-200 text-sm font-bold" data-category={cat}>
-          {cat}
-        </button>
-      ))}
-    </div>
-
     <div id="blog-grid" class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
       {allPosts.map(post => {
-        // Xử lý danh mục hiển thị
+        // Xử lý Category linh hoạt
         const displayCategory = (post.data.categories && post.data.categories[0]) || post.data.category || "Kiến thức";
         
-        // Sửa lỗi link undefined: Ưu tiên slug trong Frontmatter, nếu không có dùng slug hệ thống
+        // GIẢI PHÁP SỬA LỖI UNDEFINED:
+        // Ưu tiên lấy slug từ Frontmatter (data.slug), nếu không có mới lấy slug mặc định của file
         const finalSlug = post.data.slug || post.slug;
 
         return (
           <article class="post-card group" data-category={displayCategory}>
             <a href={`/blog/${finalSlug}`}>
               <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                <img 
-                  src={post.data.image || "/images/default-thumb.jpg"} 
-                  alt={post.data.title} 
-                  class="w-full h-full object-cover group-hover:scale-105 transition-all" 
-                />
+                <img src={post.data.image || "/images/default-thumb.jpg"} alt={post.data.title} class="w-full h-full object-cover" />
               </div>
-              <span class="text-primary text-[10px] font-black uppercase tracking-widest">
-                {displayCategory}
-              </span>
-              <h2 class="text-xl font-bold text-secondary mt-2 group-hover:text-primary transition-colors">
-                {post.data.title}
-              </h2>
-              <p class="text-slate-500 text-sm mt-3 line-clamp-2">
-                {post.data.description || "Khám phá dịch vụ dán decal chuyên nghiệp tại iDecal."}
-              </p>
+              <span class="text-primary text-[10px] font-black uppercase">{displayCategory}</span>
+              <h2 class="text-xl font-bold text-secondary mt-2">{post.data.title}</h2>
+              <p class="text-slate-500 text-sm mt-3 line-clamp-2">{post.data.description}</p>
             </a>
           </article>
         );
@@ -64,24 +41,3 @@ const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", 
     </div>
   </main>
 </Layout>
-
-<script>
-  // Logic Filter bài viết
-  const buttons = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.post-card');
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const category = btn.getAttribute('data-category');
-      
-      cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (category === 'Tất cả' || cardCat === category) {
-          (card as HTMLElement).style.display = 'block';
-        } else {
-          (card as HTMLElement).style.display = 'none';
-        }
-      });
-    });
-  });
-</script>
