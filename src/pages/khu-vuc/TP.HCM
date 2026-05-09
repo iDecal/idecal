@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Dán Decal TPHCM | Dịch Vụ Thi Công Chuyên Nghiệp iDecal">
+  <section class="relative py-20 overflow-hidden bg-slate-900">
+    <div class="container relative z-10">
+      <div class="max-w-3xl animate-fade-up">
+        <span class="inline-block px-4 py-1 mb-4 text-xs font-bold tracking-widest text-white uppercase bg-primary rounded-full">
+          Dịch vụ tại TP. Hồ Chí Minh
+        </span>
+        <h1 class="text-white">Thi Công Dán Decal Tận Nơi Tại TPHCM</h1>
+        <p class="text-lg mb-8 text-slate-300">
+          Đơn vị chuyên nghiệp chuyên cung cấp giải pháp decal kính, decal mờ, phim cách nhiệt và wrap nội thất cho văn phòng, căn hộ tại tất cả các quận huyện nội thành Sài Gòn.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="tel:0866077040" class="btn-primary-solid">Gọi: 0866.077.040</a>
+          <a href="#dich-vu" class="btn-idecal-bold text-white border-white">Xem Dịch Vụ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dich-vu" class="py-20 bg-white">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="mb-4">Giải Pháp Decal Cho Mọi Không Gian</h2>
+        <p class="max-w-2xl mx-auto">iDecal cung cấp đa dạng hạng mục thi công, đảm bảo tính thẩm mỹ và độ bền cao nhất cho khách hàng tại TPHCM.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service-card-brand">
+          <h3>Decal Mờ Văn Phòng</h3>
+          <p>Tạo không gian riêng tư, chuyên nghiệp cho phòng họp, vách kính ngăn với độ che phủ tối ưu 20-30% hoặc cắt logo thương hiệu.</p>
+          <div class="mt-auto">
+            <a href="#" class="btn-idecal-bold">Chi tiết</a>
+          </div>
+        </div>
+
+        <div class="service-card-brand">
+          <h3>Phim Cách Nhiệt</h3>
+          <p>Giải pháp chống nóng hiệu quả cho căn hộ chung cư và nhà phố tại Sài Gòn, giúp giảm tới 80% nhiệt lượng mặt trời.</p>
+          <div class="mt-auto">
+            <a href="#" class="btn-idecal-bold">Chi tiết</a>
+          </div>
+        </div>
+
+        <div class="service-card-brand">
+          <h3>Wrap Nội Thất 3S</h3>
+          <p>Làm mới tủ bếp, bàn ghế bằng vật liệu decal cao cấp vân gỗ, vân đá mà không cần thay mới nội thất cũ.</p>
+          <div class="mt-auto">
+            <a href="#" class="btn-idecal-bold">Chi tiết</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-50">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2>Khu Vực Hỗ Trợ Tại TPHCM</h2>
+          <p>Chúng tôi sở hữu đội ngũ kỹ thuật cơ động, sẵn sàng có mặt khảo sát và thi công nhanh trong ngày tại các khu vực Quận 1, 7, 10, Thủ Đức và các khu vực lân cận.</p>
+        </div>
+        <div class="relative">
+          <img src="/images/thi-cong-thuc-te.jpg" alt="Thi công decal tại TPHCM" class="img-brand w-full h-[400px]" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bao-gia" class="py-16 bg-secondary text-center">
+    <div class="container">
+      <h2 class="text-white mb-6">Sẵn Sàng Làm Mới Không Gian Của Bạn?</h2>
+      <p class="text-slate-300 mb-10 max-w-xl mx-auto">Liên hệ ngay để nhận tư vấn mẫu mã và khảo sát đo đạc miễn phí tận nơi tại TPHCM.</p>
+      <a href="tel:0866077040" class="btn-primary-solid bg-primary hover:bg-white hover:text-secondary">
+        Hotline: 0866 077 040
+      </a>
+    </div>
+  </section>
+</Layout>
