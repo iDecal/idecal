@@ -2,11 +2,18 @@
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-// Tự động lấy tất cả bài viết và sắp xếp theo ngày mới nhất
+// Tự động lấy tất cả bài viết
 const allPosts = await getCollection('blog');
-allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi"];
+// Sửa logic sắp xếp: Kiểm tra cả data.date (WP) và data.pubDate (cũ)
+allPosts.sort((a, b) => {
+  const dateA = a.data.date || a.data.pubDate || new Date(0);
+  const dateB = b.data.date || b.data.pubDate || new Date(0);
+  return dateB.valueOf() - dateA.valueOf();
+});
+
+// Cập nhật danh sách Category để bao gồm "Mẫu thiết kế" từ WordPress
+const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", "Mẫu thiết kế"];
 ---
 
 <Layout title="Blog iDecal | Kiến thức & Dự án">
@@ -25,22 +32,37 @@ const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi"];
     </div>
 
     <div id="blog-grid" class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-      {allPosts.map(post => (
-        <article class="post-card group" data-category={post.data.category}>
-          <a href={`/blog/${post.slug}`}>
-            <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100">
-              <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-all" />
-            </div>
-            <span class="text-primary text-[10px] font-black uppercase tracking-widest">{post.data.category}</span>
-            <h2 class="text-xl font-bold text-secondary mt-2 group-hover:text-primary transition-colors">{post.data.title}</h2>
-            <p class="text-slate-500 text-sm mt-3 line-clamp-2">{post.data.description}</p>
-          </a>
-        </article>
-      ))}
+      {allPosts.map(post => {
+        // Xử lý linh hoạt giữa category (cũ) và categories (WordPress)
+        const displayCategory = post.data.category || (post.data.categories && post.data.categories[0]) || "Kiến thức";
+        
+        return (
+          <article class="post-card group" data-category={displayCategory}>
+            <a href={`/blog/${post.slug}`}>
+              <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100">
+                <img 
+                  src={post.data.image || "/images/default-thumb.jpg"} 
+                  alt={post.data.title} 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-all" 
+                />
+              </div>
+              <span class="text-primary text-[10px] font-black uppercase tracking-widest">
+                {displayCategory}
+              </span>
+              <h2 class="text-xl font-bold text-secondary mt-2 group-hover:text-primary transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="text-slate-500 text-sm mt-3 line-clamp-2">
+                {post.data.description || "Khám phá dịch vụ dán decal chuyên nghiệp tại iDecal."}
+              </p>
+            </a>
+          </article>
+        );
+      })}
     </div>
   </main>
 </Layout>
 
 <script>
-  // Logic Filter giữ nguyên như bản trước...
+  // Logic Filter giữ nguyên...
 </script>
