@@ -4,15 +4,15 @@ const blogCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    // WordPress dùng 'date', sử dụng coerce để tự sửa định dạng ngày tháng
-    date: z.coerce.date().optional(),
-    // Chấp nhận cả 'pubDate' nếu có, hoặc để mặc định để tránh lỗi build
-    pubDate: z.coerce.date().optional(),
-    // Chuyển description thành optional để không bị lỗi "Required"
-    description: z.string().optional().default("Dịch vụ decal chuyên nghiệp iDecal"),
-    // Khớp với file .md của bạn dùng 'categories' dạng mảng
+    // Khớp với trường 'date' trong file .md của bạn
+    // Dùng z.coerce để tự động sửa các lỗi định dạng ngày tháng
+    date: z.coerce.date(),
+    // WordPress dùng 'categories' dạng mảng, chúng ta để optional để không lỗi nếu thiếu
     categories: z.array(z.string()).optional().default(['Mẫu thiết kế']),
+    // Chuyển description thành optional để fix lỗi "Required"
+    description: z.string().optional().default("Dịch vụ decal chuyên nghiệp iDecal"),
     image: z.string().optional().default('/images/default-thumb.jpg'),
+    slug: z.string().optional(),
   }),
 });
 
