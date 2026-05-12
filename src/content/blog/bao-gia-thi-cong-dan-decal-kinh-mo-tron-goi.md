@@ -66,7 +66,6 @@ Chúng tôi không chỉ bán sản phẩm, chúng tôi cung cấp một **“gi
 4.  **Thi công chuyên nghiệp:** Thợ lành nghề, đảm bảo thẩm mỹ và tiến độ.
 5.  **Nghiệm thu & Bảo hành:** Kích hoạt chính sách bảo hành dài hạn (2-5 năm).
 
-
 ## 4. Câu Hỏi Thường Gặp (FAQ)
 
 **Q: Báo giá trọn gói đã bao gồm những gì?**
