@@ -3,93 +3,214 @@
 @tailwind utilities;
 
 /* =========================
-    BASE SYSTEM
+THỢ ĐIỆN MÁY XANH STYLE
 ========================= */
+
 @layer base {
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
+html {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+}
 
-  body {
-    /* Thiết lập biến màu để dùng linh hoạt */
-    --text-main: #031246; /* Màu secondary của iDecal */
-    --text-muted: #64748b; /* Màu slate-500 cho nội dung phụ */
-    
-    /* SỬA LỖI: Thay text-text bằng text-secondary để build thành công */
-    @apply bg-white text-secondary font-sans antialiased;
-  }
+body {
+--text-main: #1f2937;
+--text-muted: #6b7280;
 
-  /* Ép chuẩn tiêu đề đồng bộ */
-  h1 { 
-    @apply text-[2.25rem] md:text-h1 mb-6 tracking-tighter font-bold !important;
-    color: var(--text-main); 
-  }
-  
-  h2 { 
-    @apply text-[1.875rem] md:text-h2 mb-8 tracking-tight font-bold !important;
-    color: var(--text-main);
-  }
+```
+@apply bg-white text-secondary font-sans antialiased;
+```
 
-  h3 { @apply text-h3 mb-4 tracking-tight; color: var(--text-main); }
-  h4 { @apply text-h4 mb-3; color: var(--text-main); }
-  h5 { @apply text-h5 mb-2; color: var(--text-main); }
-  h6 { @apply text-h6 uppercase tracking-widest mb-2; color: var(--text-main); }
+}
 
-  p {
-    @apply leading-relaxed mb-4;
-    color: var(--text-muted);
-  }
+h1 {
+@apply text-[2.25rem] md:text-h1 mb-6 tracking-tighter font-bold;
+color: var(--text-main);
+}
+
+h2 {
+@apply text-[1.875rem] md:text-h2 mb-8 tracking-tight font-bold;
+color: var(--text-main);
+}
+
+h3 {
+@apply text-h3 mb-4 tracking-tight;
+color: var(--text-main);
+}
+
+h4 {
+@apply text-h4 mb-3;
+color: var(--text-main);
+}
+
+h5 {
+@apply text-h5 mb-2;
+color: var(--text-main);
+}
+
+h6 {
+@apply text-h6 uppercase tracking-widest mb-2;
+color: var(--text-main);
+}
+
+p {
+@apply leading-relaxed mb-4;
+color: var(--text-muted);
+}
 }
 
 /* =========================
-    DARK SECTION AUTO-COLOR
-    Khi thẻ cha có nền tối, tự động đổi màu các thẻ con
+DARK MODE SECTIONS
 ========================= */
-.bg-slate-900, .bg-secondary, [data-theme="dark"] {
-  --text-main: #ffffff;
-  --text-muted: #cbd5e1; /* slate-300 */
-  
-  /* Đảm bảo các thẻ trực tiếp cũng nhận màu trắng */
-  @apply text-white;
+
+.bg-slate-900,
+.bg-secondary-dark,
+[data-theme="dark"] {
+--text-main: #ffffff;
+--text-muted: #cbd5e1;
+
+@apply text-white;
 }
 
 /* =========================
-    COMPONENT SYSTEM
+COMPONENTS
 ========================= */
+
 @layer components {
-  .container {
-    @apply max-w-7xl mx-auto px-6 w-full;
-  }
-
-  /* Nút Báo Giá chuẩn iDecal */
-  .btn-primary-solid {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-bold uppercase tracking-widest text-sm rounded-brand transition-all duration-300 shadow-brand hover:bg-secondary hover:-translate-y-1;
-  }
-
-  /* Nút Xem Chi Tiết */
-  .btn-idecal-bold {
-    @apply inline-flex items-center gap-2 font-bold uppercase text-xs tracking-[0.2em] pb-1 transition-all border-b-2 border-primary hover:text-primary hover:border-primary;
-    color: var(--text-main);
-  }
-
-  .service-card-brand {
-    @apply bg-white border border-border rounded-brand p-5 shadow-card transition-all duration-500 hover:shadow-brand hover:-translate-y-2 flex flex-col h-full;
-  }
-
-  .img-brand {
-    @apply rounded-[2rem] object-cover shadow-brand;
-  }
+.container {
+@apply max-w-7xl mx-auto px-6 w-full;
 }
 
-/* =========================
-    ANIMATIONS
-========================= */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+/* CTA chính */
+
+.btn-primary-solid {
+@apply inline-flex
+items-center
+justify-center
+px-8
+py-4
+font-bold
+uppercase
+tracking-widest
+text-sm
+rounded-brand
+transition-all
+duration-300;
+
+```
+background: #ffc107;
+color: #111827;
+
+box-shadow:
+  0 10px 25px rgba(255, 193, 7, 0.25);
+```
+
 }
 
-.animate-fade-up {
-  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.btn-primary-solid:hover {
+background: #ffb300;
+transform: translateY(-3px);
+}
+
+/* Link phụ */
+
+.btn-idecal-bold {
+@apply inline-flex
+items-center
+gap-2
+font-bold
+uppercase
+text-xs
+tracking-[0.2em]
+pb-1
+transition-all
+border-b-2;
+
+```
+color: #00a99d;
+border-color: #00a99d;
+```
+
+}
+
+.btn-idecal-bold:hover {
+color: #00897b;
+border-color: #00897b;
+}
+
+/* Card dịch vụ */
+
+.service-card-brand {
+@apply bg-white
+rounded-brand
+p-6
+flex
+flex-col
+h-full
+transition-all
+duration-500;
+
+```
+border: 1px solid #e5e7eb;
+
+box-shadow:
+  0 10px 30px rgba(0, 0, 0, 0.06);
+```
+
+}
+
+.service-card-brand:hover {
+transform: translateY(-6px);
+
+```
+box-shadow:
+  0 20px 50px rgba(0, 0, 0, 0.12);
+```
+
+}
+
+.img-brand {
+@apply rounded-[2rem] object-cover;
+
+```
+box-shadow:
+  0 15px 40px rgba(0, 169, 157, 0.15);
+```
+
+}
+
+/* Hero */
+
+.hero-gradient {
+background:
+linear-gradient(
+135deg,
+#00a99d 0%,
+#00897b 100%
+);
+}
+
+.hero-gradient h1,
+.hero-gradient h2,
+.hero-gradient h3,
+.hero-gradient p {
+color: white;
+}
+
+/* Section nền sáng */
+
+.section-soft {
+background: #f5f9fa;
+}
+
+/* Badge */
+
+.badge-brand {
+background: rgba(0, 169, 157, 0.1);
+color: #00a99d;
+
+```
+@apply px-4 py-2 rounded-full text-sm font-semibold;
+```
+
+}
 }
