@@ -91,7 +91,6 @@ const relatedPosts = allPosts
         <div class="space-y-6">
           <h4 class="text-secondary font-black text-sm uppercase tracking-widest border-b pb-2">Cùng chuyên mục</h4>
           {relatedPosts.map(p => (
-            /* SỬA: Đổi p.slug thành p.id để đồng bộ dữ liệu tĩnh của Astro */
             <a href={`/blog/${p.id}`} class="group block">
               <div class="aspect-video rounded-xl overflow-hidden mb-3 bg-slate-100">
                 <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -107,7 +106,6 @@ const relatedPosts = allPosts
 </Layout>
 
 <style is:global>
-  /* Fix scroll-margin để khi bấm vào mục lục không bị che bởi Header */
   h2, h3 {
     scroll-margin-top: 100px;
   }
