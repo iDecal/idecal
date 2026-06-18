@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro'; // Đã sửa đường dẫn theo cấu trúc thư mục của anh
+import Layout from '../../layouts/Layout.astro'; 
 
 const projects = [
   {
@@ -59,15 +59,15 @@ const faqs = [
         <h2>Giải pháp In & Thiết kế</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="service-card-brand bg-slate-50/50 border-none">
+        <div class="service-card-brand bg-slate-50/50 border-none p-8 rounded-3xl">
           <h4 class="!mb-4 text-secondary">Thiết kế & In ấn</h4>
           <p class="text-sm">In <strong>PP bồi Formex</strong>, <strong>Decal sữa</strong> cán màng chất lượng cao bằng máy in Nhật Bản hiện đại.</p>
         </div>
-        <div class="service-card-brand bg-slate-50/50 border-none">
+        <div class="service-card-brand bg-slate-50/50 border-none p-8 rounded-3xl">
           <h4 class="!mb-4 text-secondary">Quảng cáo phương tiện</h4>
           <p class="text-sm">Chuyên thi công <strong>Decal quảng cáo xe tải</strong> bằng vật liệu <strong>Decal 3M</strong> chịu nhiệt, bền màu.</p>
         </div>
-        <div class="service-card-brand bg-slate-50/50 border-none">
+        <div class="service-card-brand bg-slate-50/50 border-none p-8 rounded-3xl">
           <h4 class="!mb-4 text-secondary">Showroom & POSM</h4>
           <p class="text-sm">Thi công <strong>Decal lưới</strong> kính, <strong>Decal cắt chữ</strong> trang trí và booth quảng cáo sự kiện.</p>
         </div>
@@ -106,7 +106,7 @@ const faqs = [
       <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6">
         {faqs.map((faq) => (
           <div class="faq-item">
-            <details class="faq-details group lg:pointer-events-none">
+            <details class="faq-details group lg:pointer-events-none open:mb-4 lg:open:mb-0">
               <summary class="flex items-center justify-between py-4 font-bold text-secondary group-open:text-primary px-2 cursor-pointer">
                 <span class="flex gap-4 items-start">
                   <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-[10px] flex items-center justify-center font-black">Q</span>
@@ -118,42 +118,9 @@ const faqs = [
                   </svg>
                 </span>
               </summary>
-              <div class="flex gap-4 p-5 bg-white rounded-2xl animate-fadeIn items-start shadow-sm border border-slate-100">
+              <div class="flex gap-4 p-5 bg-white rounded-2xl shortcut-content items-start shadow-sm border border-slate-100">
                 <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-secondary/40 text-[10px] flex items-center justify-center font-black">A</span>
                 <p class="text-text-muted text-sm leading-relaxed !mb-0">{faq.a}</p>
               </div>
             </details>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-</Layout>
-
-<style>
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-  .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
-  summary::-webkit-details-marker { display: none; }
-  @media (min-width: 1024px) { 
-    .faq-details { display: block !important; } 
-    .faq-details div { display: flex !important; } 
-  }
-  @media (max-width: 1023px) { 
-    .faq-details div { display: none; } 
-    .faq-details[open] div { display: flex; } 
-    .faq-details[open] { @apply mb-4; }
-  }
-</style>
-
-<script>
-  function setupFAQ() {
-    const isDesktop = window.innerWidth >= 1024;
-    document.querySelectorAll('.faq-details').forEach(el => {
-      if (isDesktop) el.setAttribute('open', '');
-      else el.removeAttribute('open');
-    });
-  }
-  setupFAQ();
-  window.addEventListener('resize', setupFAQ);
-</script>
