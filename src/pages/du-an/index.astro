@@ -87,13 +87,19 @@ const categories = ["Tất cả", "Văn phòng", "Căn hộ", "Showroom", "Sự 
 </Layout>
 
 <script>
-  // Logic filter giữ nguyên
   const filters = document.querySelectorAll('.project-filter');
   const cards = document.querySelectorAll('.project-card');
+
+  // Thêm class transition của Tailwind vào tất cả các card ngay từ đầu để chuẩn bị hiệu ứng
+  cards.forEach(card => {
+    card.classList.add('transition-all', 'duration-500', 'ease-in-out');
+  });
 
   filters.forEach(btn => {
     btn.addEventListener('click', () => {
       const cat = btn.getAttribute('data-category');
+      
+      // 1. Cập nhật trạng thái active cho các nút filter
       filters.forEach(b => {
         b.classList.remove('bg-[#031246]', 'text-white', 'border-[#031246]');
         b.classList.add('border-slate-200', 'text-slate-500');
@@ -101,14 +107,35 @@ const categories = ["Tất cả", "Văn phòng", "Căn hộ", "Showroom", "Sự 
       btn.classList.add('bg-[#031246]', 'text-white', 'border-[#031246]');
       btn.classList.remove('border-slate-200', 'text-slate-500');
 
+      // 2. Thực hiện hiệu ứng Fade-out (Mờ dần rồi biến mất)
       cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (cat === "Tất cả" || cardCat === cat) {
-          (card as HTMLElement).style.display = 'flex';
-        } else {
-          (card as HTMLElement).style.display = 'none';
-        }
+        const htmlCard = card as HTMLElement;
+        // Giảm opacity về 0 và thu nhỏ nhẹ một chút để tạo cảm giác mượt mà
+        htmlCard.classList.add('opacity-0', 'scale-95');
+        htmlCard.classList.remove('opacity-100', 'scale-100');
       });
+
+      // 3. Đợi hiệu ứng fade-out hoàn thành (khoảng 300ms) rồi mới lọc và Fade-in
+      setTimeout(() => {
+        cards.forEach(card => {
+          const htmlCard = card as HTMLElement;
+          const cardCat = htmlCard.getAttribute('data-category');
+
+          if (cat === "Tất cả" || cardCat === cat) {
+            // Hiện cấu trúc thẻ
+            htmlCard.style.display = 'flex';
+            
+            // Kích hoạt hiệu ứng Fade-in bằng cách trả lại opacity và scale ban đầu ở khung hình tiếp theo
+            requestAnimationFrame(() => {
+              htmlCard.classList.remove('opacity-0', 'scale-95');
+              htmlCard.classList.add('opacity-100', 'scale-100');
+            });
+          } else {
+            // Ẩn hoàn toàn khỏi layout đối với các thẻ không thuộc danh mục chọn
+            htmlCard.style.display = 'none';
+          }
+        });
+      }, 300); // 300ms trùng khớp với nhịp giảm opacity
     });
   });
 </script>
