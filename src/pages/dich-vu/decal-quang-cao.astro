@@ -60,15 +60,15 @@ const faqs = [
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="service-card-brand bg-slate-50/50 border-none p-8 rounded-3xl">
-          <h4 class="!mb-4 text-secondary">Thiết kế & In ấn</h4>
+          <h4 class="mb-4 text-secondary">Thiết kế & In ấn</h4>
           <p class="text-sm">In <strong>PP bồi Formex</strong>, <strong>Decal sữa</strong> cán màng chất lượng cao bằng máy in Nhật Bản hiện đại.</p>
         </div>
         <div class="service-card-brand bg-slate-50/50 border-none p-8 rounded-3xl">
-          <h4 class="!mb-4 text-secondary">Quảng cáo phương tiện</h4>
+          <h4 class="mb-4 text-secondary">Quảng cáo phương tiện</h4>
           <p class="text-sm">Chuyên thi công <strong>Decal quảng cáo xe tải</strong> bằng vật liệu <strong>Decal 3M</strong> chịu nhiệt, bền màu.</p>
         </div>
         <div class="service-card-brand bg-slate-50/50 border-none p-8 rounded-3xl">
-          <h4 class="!mb-4 text-secondary">Showroom & POSM</h4>
+          <h4 class="mb-4 text-secondary">Showroom & POSM</h4>
           <p class="text-sm">Thi công <strong>Decal lưới</strong> kính, <strong>Decal cắt chữ</strong> trang trí và booth quảng cáo sự kiện.</p>
         </div>
       </div>
@@ -89,7 +89,7 @@ const faqs = [
             </div>
             <div class="p-6">
               <span class="inline-block px-3 py-1 text-[10px] font-bold text-primary bg-primary/5 rounded-full mb-3 uppercase tracking-wider">{project.type}</span>
-              <h4 class="text-base text-secondary !mb-0">{project.title}</h4>
+              <h4 class="text-base text-secondary mb-0">{project.title}</h4>
             </div>
           </div>
         ))}
@@ -106,7 +106,8 @@ const faqs = [
       <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6">
         {faqs.map((faq) => (
           <div class="faq-item">
-            <details class="faq-details group lg:pointer-events-none open:mb-4 lg:open:mb-0">
+            {/* SỬA: Thêm class Tailwind điều khiển hiển thị để dọn dẹp CSS thuần */}
+            <details class="faq-details group lg:pointer-events-none open:mb-4 lg:open:mb-0 lg:block">
               <summary class="flex items-center justify-between py-4 font-bold text-secondary group-open:text-primary px-2 cursor-pointer">
                 <span class="flex gap-4 items-start">
                   <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-[10px] flex items-center justify-center font-black">Q</span>
@@ -118,9 +119,10 @@ const faqs = [
                   </svg>
                 </span>
               </summary>
-              <div class="flex gap-4 p-5 bg-white rounded-2xl shortcut-content items-start shadow-sm border border-slate-100">
+              {/* SỬA: Thay đổi cách responsive hiển thị bằng class thay vì media query CSS */}
+              <div class="shortcut-content flex gap-4 p-5 bg-white rounded-2xl items-start shadow-sm border border-slate-100 hidden lg:flex group-open:flex">
                 <span class="flex-shrink-0 w-6 h-6 rounded-full bg-slate-100 text-secondary/40 text-[10px] flex items-center justify-center font-black">A</span>
-                <p class="text-text-muted text-sm leading-relaxed !mb-0">{faq.a}</p>
+                <p class="text-text-muted text-sm leading-relaxed mb-0">{faq.a}</p>
               </div>
             </details>
           </div>
@@ -138,15 +140,6 @@ const faqs = [
   }
   .shortcut-content { animation: fadeIn 0.4s ease-out forwards; }
   summary::-webkit-details-marker { display: none; }
-
-  @media (min-width: 1024px) { 
-    .faq-details { display: block !important; } 
-    .faq-details div { display: flex !important; } 
-  }
-  @media (max-width: 1023px) { 
-    .faq-details div { display: none; } 
-    .faq-details[open] div { display: flex; } 
-  }
 </style>
 
 <script>
