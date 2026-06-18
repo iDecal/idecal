@@ -175,8 +175,8 @@ const products = [
           Mẫu Decal 3D Vân Sóng cần được nhìn trực tiếp. Đội ngũ iDecal sẵn sàng mang mẫu đến tận nơi tại TP.HCM & Bình Dương.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="tel:090xxxxxxx" class="btn-primary-solid !px-10 text-sm">Gửi báo giá qua Zalo</a>
-          <a href="https://zalo.me/090xxxxxxx" class="px-10 py-4 bg-white text-secondary font-bold rounded-brand hover:bg-primary hover:text-white transition-all text-sm">Xem kho mẫu 2026</a>
+          <a href="tel:0866077040" class="btn-primary-solid !px-10 text-sm">Gửi báo giá qua Zalo</a>
+          <a href="https://zalo.me/0866077040" class="px-10 py-4 bg-white text-secondary font-bold rounded-brand hover:bg-primary hover:text-white transition-all text-sm">Xem kho mẫu 2026</a>
         </div>
       </div>
     </div>
@@ -189,7 +189,7 @@ const products = [
     background-color: #3b82f6; 
     color: white;
     border-color: #3b82f6;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); /* Sửa lỗi shadow ở đây */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 </style>
 
@@ -200,9 +200,9 @@ const products = [
     button.addEventListener('click', () => {
       const targetId = button.getAttribute('data-target');
       const newSrc = button.getAttribute('data-src');
-      const imgElement = document.getElementById(`img-${targetId}`);
+      const imgElement = document.getElementById(`img-${targetId}`) as HTMLImageElement;
       
-      if (imgElement) {
+      if (imgElement && newSrc) {
         imgElement.style.opacity = '0.5';
         setTimeout(() => {
           imgElement.setAttribute('src', newSrc);
@@ -211,10 +211,12 @@ const products = [
       }
 
       const card = button.closest('.product-card');
-      card.querySelectorAll('.wave-selector').forEach(btn => {
-        btn.classList.remove('active');
-        btn.classList.add('text-slate-400');
-      });
+      if (card) {
+        card.querySelectorAll('.wave-selector').forEach(btn => {
+          btn.classList.remove('active');
+          btn.classList.add('text-slate-400');
+        });
+      }
       
       button.classList.add('active');
       button.classList.remove('text-slate-400');
