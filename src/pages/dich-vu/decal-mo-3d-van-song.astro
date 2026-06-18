@@ -39,7 +39,6 @@ const products = [
     <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
       <div class="animate-fade-up">
         <h6 class="text-primary tracking-[0.3em] font-bold uppercase">Luxury Glass Decoration</h6>
-        {/* SỬA: Thay !important thành !text-white đúng chuẩn Tailwind */}
         <h1 class="!text-white">Decal Mờ 3D Vân Sóng - Nghệ Thuật Trên Kính</h1>
         <p class="text-slate-300 text-lg">
           Dòng sản phẩm decal cao cấp với họa tiết vân sóng dập nổi tinh tế. Giải pháp hoàn hảo cho <strong>vách kính văn phòng, phòng tắm và cửa ra vào</strong>, mang lại vẻ đẹp hiện đại và đẳng cấp cho không gian.
@@ -171,7 +170,6 @@ const products = [
   <section id="contact" class="py-24 bg-slate-900 rounded-t-[4rem]">
     <div class="container">
       <div class="text-center text-white relative z-10">
-        {/* SỬA: Thay !important thành !text-white */}
         <h2 class="!text-white mb-6">Liên hệ xem mẫu & Đo đạc tận nơi</h2>
         <p class="text-slate-400 mb-10 max-w-2xl mx-auto">
           Mẫu Decal 3D Vân Sóng cần được nhìn trực tiếp. Đội ngũ iDecal sẵn sàng mang mẫu đến tận nơi tại TP.HCM & Bình Dương.
@@ -191,4 +189,20 @@ const products = [
     background-color: #3b82f6; 
     color: white;
     border-color: #3b82f6;
-    box-shadow: 0 4px 6px -1px rgba(0, 0
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll('.wave-selector');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.getAttribute('data-target');
+      const newSrc = button.getAttribute('data-src');
+      const imgElement = document.getElementById(`img-${targetId}`) as HTMLImageElement;
+      
+      if (imgElement && newSrc) {
+        imgElement.style.opacity = '0.5';
+        setTimeout(() => {
+          imgElement.
