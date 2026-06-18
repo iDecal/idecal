@@ -36,13 +36,13 @@ const faqs = [
     <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
       <div class="animate-fade-up">
         <h6 class="text-primary tracking-[0.3em] font-bold">Branding Solution</h6>
-        <h1 class="text-white !important leading-tight">In Ấn & Thi Công Decal Quảng Cáo Khổ Lớn</h1>
+        <h1 class="text-white leading-tight">In Ấn & Thi Công Decal Quảng Cáo Khổ Lớn</h1>
         <p class="text-slate-300 text-lg">
           Dịch vụ trọn gói từ <strong>thiết kế</strong>, <strong>in ấn</strong> sắc nét đến <strong>thi công</strong> chuyên nghiệp. Sử dụng đa dạng vật liệu: <strong>Decal sữa, Decal trong, PP, Decal 3M...</strong>
         </p>
         <div class="flex flex-wrap gap-4 mt-8">
           <a href="#quote" class="btn-primary-solid text-white">Nhận báo giá ngay</a>
-          <a href="#portfolio" class="btn-idecal-bold text-white border-white transition-all hover:text-primary hover:border-primary">Xem công trình thực tế</a>
+          <a href="#portfolio" class="btn-idecal-bold text-white border border-white transition-all hover:text-primary hover:border-primary">Xem công trình thực tế</a>
         </div>
       </div>
       <div class="relative group">
@@ -124,3 +124,39 @@ const faqs = [
               </div>
             </details>
           </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  @keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); } 
+    to { opacity: 1; transform: translateY(0); } 
+  }
+  .shortcut-content { animation: fadeIn 0.4s ease-out forwards; }
+  summary::-webkit-details-marker { display: none; }
+
+  @media (min-width: 1024px) { 
+    .faq-details { display: block !important; } 
+    .faq-details div { display: flex !important; } 
+  }
+  @media (max-width: 1023px) { 
+    .faq-details div { display: none; } 
+    .faq-details[open] div { display: flex; } 
+  }
+</style>
+
+<script>
+  function setupFAQ() {
+    const isDesktop = window.innerWidth >= 1024;
+    document.querySelectorAll('.faq-details').forEach(el => {
+      if (isDesktop) el.setAttribute('open', '');
+      else el.removeAttribute('open');
+    });
+  }
+  setupFAQ();
+  window.addEventListener('resize', setupFAQ);
+</script>
