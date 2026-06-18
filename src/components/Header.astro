@@ -18,7 +18,7 @@ const navLinks = [
   },
   { 
     name: "Công trình thực tế", 
-    href: "/blog",
+    href: "/du-an", // SỬA: Đổi từ /blog sang /du-an để trỏ đúng trang danh sách công trình
     dropdown: [
       { name: "Văn phòng", href: "/du-an/van-phong" },
       { name: "Showroom", href: "/du-an/showroom" },
@@ -49,6 +49,7 @@ const navLinks = [
         </a>
       </div>
 
+      <!-- Desktop Menu -->
       <div class="hidden lg:flex items-center gap-8">
         {navLinks.map((link) => (
           <div class="relative group py-8">
@@ -90,6 +91,7 @@ const navLinks = [
     </div>
   </div>
 
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col h-screen">
     <div class="p-6 flex justify-between items-center border-b border-slate-100">
       <img src="/images/idecal-logo.png" alt="iDecal Logo" class="h-10 w-auto" />
@@ -101,17 +103,19 @@ const navLinks = [
         {navLinks.map((link) => (
           <div class="flex flex-col border-b border-slate-50 pb-2">
             {link.dropdown ? (
-              <button class="mobile-dropdown-btn text-xl font-bold text-slate-900 flex justify-between items-center text-left py-4 uppercase tracking-[0.1em]">
-                {link.name}
-                <span class="text-[#031246] font-light">＋</span>
-              </button>
-              <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-2 bg-slate-50 rounded-xl px-4">
-                {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`text-base font-medium py-3 tracking-wide ${sub.highlight ? 'text-[#031246] font-bold' : 'text-slate-500'}`}>
-                    {sub.name}
-                  </a>
-                ))}
-              </div>
+              <>
+                <button class="mobile-dropdown-btn text-xl font-bold text-slate-900 flex justify-between items-center text-left py-4 uppercase tracking-[0.1em]">
+                  {link.name}
+                  <span class="text-[#031246] font-light">＋</span>
+                </button>
+                <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-2 bg-slate-50 rounded-xl px-4">
+                  {link.dropdown.map((sub) => (
+                    <a href={sub.href} class={`text-base font-medium py-3 tracking-wide ${sub.highlight ? 'text-[#031246] font-bold' : 'text-slate-500'}`}>
+                      {sub.name}
+                    </a>
+                  ))}
+                </div>
+              </>
             ) : (
               <a href={link.href} class="text-xl font-bold text-slate-900 py-4 uppercase tracking-[0.1em] hover:text-[#031246]">{link.name}</a>
             )}
