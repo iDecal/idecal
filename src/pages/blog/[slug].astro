@@ -1,11 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getCollection, render } from 'astro:content'; // Thêm render vào đây
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
-    // Đổi entry.slug thành entry.id
     params: { slug: entry.id }, 
     props: { entry },
   }));
@@ -19,7 +18,7 @@ const { Content, headings } = await render(entry);
 // Lấy bài viết liên quan
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter(p => p.data.category === entry.data.category && p.id !== entry.id) // Đổi p.slug thành p.id
+  .filter(p => p.data.category === entry.data.category && p.id !== entry.id)
   .slice(0, 3);
 ---
 
@@ -92,7 +91,8 @@ const relatedPosts = allPosts
         <div class="space-y-6">
           <h4 class="text-secondary font-black text-sm uppercase tracking-widest border-b pb-2">Cùng chuyên mục</h4>
           {relatedPosts.map(p => (
-            <a href={`/blog/${p.slug}`} class="group block">
+            /* SỬA: Đổi p.slug thành p.id để đồng bộ dữ liệu tĩnh của Astro */
+            <a href={`/blog/${p.id}`} class="group block">
               <div class="aspect-video rounded-xl overflow-hidden mb-3 bg-slate-100">
                 <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
               </div>
