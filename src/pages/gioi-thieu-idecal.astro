@@ -19,7 +19,7 @@ import about from '../data/about-page.json';
   <section class="bg-surface py-14 md:py-20">
     <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div><img src="/images/Banner/banner-gioi-thieu-idecal.jpg" alt="Giải pháp và dịch vụ decal iDecal" loading="lazy" width="800" height="640" class="aspect-[5/4] w-full rounded-3xl object-cover" /></div>
-      <div><p class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">{about.qualityKicker}</p><h2 class="brand-heading">{about.qualityTitle}</h2><p>{about.qualityIntro}</p><ul class="my-7 space-y-4">{about.qualityPoints.map(point => <li class="flex gap-3 text-sm leading-relaxed text-secondary"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs text-primary" aria-hidden="true">✓</span>{point}</li>)}</ul><a href="/#dich-vu" class="btn-primary-solid">Tất cả dịch vụ</a></div>
+      <div><p class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">{about.qualityKicker}</p><h2 class="brand-heading">{about.qualityTitle}</h2><p>{about.qualityIntro}</p><ul class="my-7 space-y-4">{about.qualityPoints.map(point => <li class="flex gap-1.5 text-sm leading-relaxed text-secondary"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs text-primary" aria-hidden="true">✓</span><span>{point}</span></li>)}</ul><a href="/#dich-vu" class="btn-primary-solid">Tất cả dịch vụ</a></div>
     </div>
   </section>
   <section id="doi-ngu" class="container scroll-mt-24 py-14 md:py-20">

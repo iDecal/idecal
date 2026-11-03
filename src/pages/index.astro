@@ -1,4 +1,7 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 import SEO from '../components/SEO.astro';
 import '@fontsource-variable/lexend';
 import '../styles/homepage/source.css';
@@ -13,8 +16,12 @@ import publicHomepage from '../content/homepage/public.html?raw';
     <link rel="icon" type="image/png" href="/images/idecal-logo.png" />
     <SEO title="Dịch vụ Decal dán kính cách nhiệt & Decal mờ trang trí | iDecal©" description="Chúng tôi cung cấp giải pháp trang trí kính & Dịch vụ decal dán kính cách nhiệt toàn diện. iDecal chuyên giải pháp Decal trang trí & Chống nóng toàn diện." image="/images/Banner/Dich-vu-decal-dan-kinh-cach-nhiet.webp" />
   </head>
-  <body class="home wp-singular page page-id-29325 wp-custom-logo wp-embed-responsive wp-theme-greenshift theme-greenshift gspbody gspb-bodyfront greenshift-theme">
+  <body class="bg-background font-body text-secondary">
+    <Header />
+    <div class="homepage-original home gspbody gspb-bodyfront greenshift-theme"><div class="wp-site-blocks">
     <Fragment set:html={publicHomepage} />
+    </div></div>
+    <Footer />
     <script>import '../scripts/homepage';</script>
   </body>
 </html>
