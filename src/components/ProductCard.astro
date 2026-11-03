@@ -13,8 +13,8 @@ const Heading = heading;
   <div class="flex flex-1 flex-col gap-3 p-3 md:p-5">
     <Heading class="!mb-0 text-sm font-medium leading-snug md:text-base"><a href={`/san-pham/${product.slug}`} class="hover:text-primary">{product.name}</a></Heading>
     <p class="!mb-0 text-xs text-text-muted">{product.attributes['quy-cach']?.join(' · ') || product.subcategory}</p>
-    <p class="!mb-1 mt-auto pt-2 text-base font-semibold text-brand-navy">{formatPrice(product.price)}</p>
-    <div class="grid">
+    {product.price != null && <p class="!mb-1 mt-auto pt-2 text-base font-semibold text-brand-navy">{formatPrice(product.price)}</p>}
+    <div class="mt-auto grid pt-2">
       <a href={`/san-pham/${product.slug}`} class="inline-flex min-h-10 flex-1 items-center justify-center rounded-lg border border-brand-line bg-surface px-3 text-xs font-medium text-secondary transition-colors hover:border-secondary hover:bg-secondary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Chi tiết<span class="sr-only"> {product.name}</span></a>
     </div>
   </div>
