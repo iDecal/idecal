@@ -7,7 +7,7 @@ import ProductCatalog from '../../components/ProductCatalog.astro';
 import { products, productCategories, productsInCategory } from '../../data/catalogue';
 ---
 <Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description="Khám phá 74 mẫu trong 6 nhóm sản phẩm iDecal: decal mờ dán kính, phim cách nhiệt, film nội thất, cắt in logo, open time và quảng cáo. Xem mẫu và tư vấn báo giá.">
-  <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productCategories[0].image} imageAlt="Decal mờ chuyển màu cho vách kính văn phòng" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Sản phẩm'}]}>
+  <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productCategories[0].image} imageAlt="Decal mờ chuyển màu cho vách kính văn phòng">
     <p slot="description">6 nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
     <Fragment slot="actions"><a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
     <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{productCategories.length}</strong> nhóm sản phẩm</span></Fragment>

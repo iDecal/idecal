@@ -6,7 +6,7 @@ import about from '../data/about-page.json';
 <Layout title="Giới thiệu iDecal | Dịch vụ Decal uy tín và chuyên nghiệp" description={about.intro[0]} image="/images/Banner/banner-gioi-thieu-idecal.jpg">
   <section class="border-b border-border bg-surface py-14 md:py-20">
     <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-8 flex gap-2 text-sm text-text-muted"><a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Giới thiệu iDecal</span></nav>
+
       <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div><p class="!mb-4 text-xs font-medium uppercase tracking-[0.15em] text-primary">{about.subtitle}</p><h1 class="brand-heading text-3xl font-semibold md:text-5xl">{about.title}</h1>{about.intro.map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}<div class="mt-8 flex flex-wrap items-center gap-5"><a href="/lien-he-idecal" class="btn-primary-solid">Liên hệ</a><a href="#doi-ngu" class="btn-idecal-bold">Gặp đội ngũ iDecal →</a></div></div>
         <div class="relative"><img src="/images/Banner/dich-vu-thiet-ke-decal.webp" alt="Thiết kế decal theo yêu cầu tại iDecal" width="800" height="600" class="aspect-[4/3] w-full rounded-3xl object-cover" /><div class="absolute -bottom-5 right-5 rounded-2xl bg-brand-gradient px-7 py-5 text-white shadow-brand"><span class="block text-3xl font-semibold">10+</span><span class="text-xs">năm kinh nghiệm</span></div></div>

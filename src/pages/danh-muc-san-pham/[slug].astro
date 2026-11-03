@@ -11,7 +11,7 @@ const items = productsInCategory(category.slug);
 const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';
 ---
 <Layout title={`${category.name} | Mẫu & giá tham khảo iDecal`} description={category.description}>
-  <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'} breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Sản phẩm',href:'/san-pham'},{label:category.name}]}>
+  <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'}>
     <p slot="description">{category.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
     <div slot="after" class="banner-benefits">{category.benefits.map(benefit=><div><h2>{benefit.title}</h2><p>{benefit.description}</p></div>)}</div>

@@ -26,11 +26,7 @@ const steps = [
 {updatedContent ? <RegionalLanding region={region} content={updatedContent} projects={projects} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description}>
   <section class="relative overflow-hidden border-b border-border bg-surface py-14 md:py-20">
     <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap items-center gap-2 text-sm text-text-muted">
-        <a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true">/</span>
-        <a href="/khu-vuc" class="hover:text-primary">Khu vực</a><span aria-hidden="true">/</span>
-        <span aria-current="page">{region.name}</span>
-      </nav>
+
       <div class="grid items-start gap-10 lg:grid-cols-[1.6fr_1fr]">
         <div>
           <p class="!mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-primary">{region.theme}</p>

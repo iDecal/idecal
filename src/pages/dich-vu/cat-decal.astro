@@ -15,7 +15,7 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
 <Layout title="Dịch vụ cắt Decal theo yêu cầu tại TP.HCM | iDecal" description="Cắt chữ, logo, tem nhãn và Decal trang trí theo yêu cầu. Xem chất liệu, bảng giá tham khảo, quy trình gửi file và tư vấn tại iDecal." image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg">
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema).replaceAll('<', '\\u003c')} />
   <div class="cutting-page">
-    <PageBanner title={content.title} eyebrow="Thiết kế · Cắt · Giao hàng" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ Decal bằng máy cắt vi tính" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ',href:'/dich-vu'},{label:'Cắt Decal'}]}>
+    <PageBanner title={content.title} eyebrow="Thiết kế · Cắt · Giao hàng" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ Decal bằng máy cắt vi tính">
       <Fragment slot="description"><p>{content.intro}</p><p>{content.description}</p></Fragment>
       <Fragment slot="actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Gửi file qua Zalo</a><a href="#bang-gia" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
       <p slot="meta">Hoàn thành từ 1–24 giờ, tùy khối lượng và yêu cầu kỹ thuật.</p>
