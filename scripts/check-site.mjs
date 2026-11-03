@@ -49,6 +49,31 @@ for (const slug of regionSlugs) {
 }
 assert.equal(regionDescriptions.size, regionSlugs.length, 'Regional descriptions must be distinct');
 
+const catalogueProducts = JSON.parse(await readFile('src/data/products.json', 'utf8'));
+const catalogueCategories = JSON.parse(await readFile('src/data/product-categories.json', 'utf8'));
+assert.equal(new Set(catalogueProducts.map(product => product.slug)).size, catalogueProducts.length, 'Product slugs must be unique');
+const catalogueIndex = await readFile(path.join(root, 'san-pham/index.html'), 'utf8');
+const legacyRedirects = await readFile('public/_redirects', 'utf8');
+for (const category of catalogueCategories) {
+  const categoryPage = path.join(root, 'danh-muc-san-pham', category.slug, 'index.html');
+  assert.ok(await exists(categoryPage), `Missing product category: ${category.slug}`);
+  assert.ok(catalogueIndex.includes(`href="/danh-muc-san-pham/${category.slug}"`), `Catalogue must link to ${category.slug}`);
+  const html = await readFile(categoryPage, 'utf8');
+  const expected = catalogueProducts.filter(product => product.category === category.slug).length;
+  assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Category count mismatch: ${category.slug}`);
+}
+for (const product of catalogueProducts) {
+  assert.ok(catalogueCategories.some(category => category.slug === product.category), `Unknown category for ${product.slug}`);
+  const productPage = path.join(root, 'san-pham', product.slug, 'index.html');
+  assert.ok(await exists(productPage), `Missing product page: ${product.slug}`);
+  const html = await readFile(productPage, 'utf8');
+  const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] ?? '{}');
+  assert.equal(schema['@type'], 'Product', `Missing Product structured data: ${product.slug}`);
+  assert.equal(schema.name, product.name, `Product schema mismatch: ${product.slug}`);
+  assert.ok(legacyRedirects.includes(`/${product.slug} /san-pham/${product.slug}/ 301`), `Missing legacy redirect: ${product.slug}`);
+}
+assert.equal((catalogueIndex.match(/class="catalogue-card\b/g) ?? []).length, catalogueProducts.length, 'Catalogue must include every product');
+
 let references = 0;
 const failures = [];
 for (const file of files) {

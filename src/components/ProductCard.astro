@@ -1,0 +1,24 @@
+---
+import ProductImage from './ProductImage.astro';
+import { formatPrice, type Product } from '../data/catalogue';
+interface Props { product: Product; compare?: boolean; heading?: 'h2' | 'h3'; }
+const { product, compare = false, heading = 'h3' } = Astro.props;
+const Heading = heading;
+---
+<article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-brand={product.brand || 'Chưa cập nhật'} data-category={product.category} data-search={`${product.name} ${product.brand} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
+  <a href={`/san-pham/${product.slug}`} class="relative block aspect-[4/5] overflow-hidden" aria-label={`Xem ${product.name}`}>
+    <ProductImage src={product.images[0]} alt={product.name} />
+    <span class="absolute left-3 top-3 rounded bg-white/95 px-2.5 py-1 text-xs font-medium text-secondary">{product.code}</span>
+  </a>
+  <div class="flex flex-1 flex-col gap-3 p-3 md:p-5">
+    <p class="!mb-0 text-xs text-primary">{product.brand || product.subcategory}</p>
+    <Heading class="!mb-0 text-sm font-medium leading-snug md:text-base"><a href={`/san-pham/${product.slug}`} class="hover:text-primary">{product.name}</a></Heading>
+    <p class="!mb-0 text-xs text-text-muted">{product.attributes['quy-cach']?.join(' · ') || product.subcategory}</p>
+    <p class="!mb-1 mt-auto pt-2 text-base font-semibold text-brand-navy">{formatPrice(product.price)}</p>
+    {compare && <button type="button" class="compare-product min-h-10 rounded border border-border px-3 text-sm text-primary hover:border-primary aria-pressed:bg-primary/10" data-compare-id={product.slug} aria-pressed="false" aria-label={`So sánh ${product.name}`}>+ So sánh</button>}
+    <div class="grid gap-2 sm:grid-cols-2">
+      <a href={`/san-pham/${product.slug}`} class="inline-flex min-h-10 flex-1 items-center justify-center rounded border border-brand-navy px-3 text-xs font-medium text-brand-navy hover:bg-surface">Chi tiết<span class="sr-only"> {product.name}</span></a>
+      <a href={`https://zalo.me/0866077040`} class="inline-flex min-h-10 flex-1 items-center justify-center rounded bg-brand-gradient px-3 text-xs font-medium text-white" aria-label={`Hỏi mẫu ${product.name} qua Zalo`}>Hỏi mẫu này</a>
+    </div>
+  </div>
+</article>

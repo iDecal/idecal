@@ -1,0 +1,48 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductImage from '../../components/ProductImage.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { products, productCategories, formatPrice, productSpecs, type Product } from '../../data/catalogue';
+export function getStaticPaths() { return products.map(product => ({ params: { slug: product.slug }, props: { product } })); }
+interface Props { product: Product; }
+const { product } = Astro.props;
+const category = productCategories.find(group => group.slug === product.category)!;
+const related = products.filter(other => other.category === product.category && other.slug !== product.slug).slice(0,4);
+const specs = productSpecs(product);
+const schema = { '@context': 'https://schema.org', '@type': 'Product', name: product.name, description: product.description, image: product.images.map(image => new URL(image, Astro.site).href), category: category.name, ...(product.brand ? { brand: { '@type': 'Brand', name: product.brand } } : {}) };
+---
+<Layout title={`${product.name} | iDecal`} description={product.description.slice(0,170)} image={product.images[0]}>
+  <script type="application/ld+json" set:html={JSON.stringify(schema).replaceAll('<', String.fromCharCode(92) + 'u003c')} />
+  <section class="container py-10 md:py-14" data-product-detail>
+    <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap gap-2 text-xs text-text-muted"><a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true">/</span><a href="/san-pham" class="hover:text-primary">Sản phẩm</a><span aria-hidden="true">/</span><a href={`/danh-muc-san-pham/${category.slug}`} class="text-primary">{category.name}</a><span aria-hidden="true">/</span><span aria-current="page">{product.name}</span></nav>
+    <div class="grid min-w-0 gap-8 lg:grid-cols-2 lg:gap-12">
+      <div class="min-w-0"><div class="aspect-[4/5] overflow-hidden rounded-2xl border border-border" data-main-gallery><ProductImage src={product.images[0]} alt={product.name} eager /></div>{product.images.length > 1 && <div class="mt-4 flex gap-3 overflow-x-auto pb-2" role="group" aria-label="Chọn ảnh sản phẩm">{product.images.map((image,index) => <button type="button" data-gallery-source={image} data-gallery-label={`${product.name} – ảnh ${index+1}`} aria-pressed={index===0} aria-label={`Ảnh ${index+1}`} class="h-20 w-20 shrink-0 overflow-hidden rounded-lg border-2 border-transparent aria-pressed:border-primary"><ProductImage src={image} alt={`${product.name} – ảnh ${index+1}`} /></button>)}</div>}</div>
+      <div class="min-w-0"><p class="!mb-3 text-xs uppercase tracking-widest text-primary">{category.name} · {product.brand || 'Tư vấn theo mẫu'}</p><h1 class="text-2xl font-semibold leading-tight md:text-4xl">{product.name}</h1><p class="mb-4 text-xs">Mã mẫu: <span class="font-medium text-secondary">{product.code}</span></p><p class="mb-3 text-2xl font-semibold text-brand-navy">{formatPrice(product.price)}</p><p class="mb-6 text-xs">Giá tham khảo trong catalogue; liên hệ xác nhận đơn vị tính, quy cách và phần thi công.</p><p class="text-base leading-relaxed">{product.description}</p>
+        {product.uses.length > 0 && <ul class="mb-8 flex flex-wrap gap-2" aria-label="Ứng dụng">{product.uses.map(use => <li class="rounded-full bg-surface px-3 py-1.5 text-xs text-secondary">{use}</li>)}</ul>}
+        <div class="flex flex-wrap items-center gap-5"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Nhận báo giá qua Zalo</a><a href="tel:0866077040" class="btn-idecal-bold">Gọi 0866.077.040</a></div>
+        <div class="mt-8 rounded-2xl border border-border bg-surface p-5"><h2 class="!mb-3 text-base font-medium">Tư vấn đúng mẫu, đúng nhu cầu</h2><p class="!mb-0 text-sm">Gửi mã mẫu cùng ảnh bề mặt và kích thước. iDecal sẽ làm rõ vật liệu, khối lượng và kế hoạch thực hiện trước khi xác nhận báo giá.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="container grid gap-10 pb-14 md:pb-20 lg:grid-cols-[1.3fr_1fr]">
+    <article class="min-w-0"><p class="!mb-3 text-xs uppercase tracking-widest text-primary">Mô tả</p><h2 class="brand-heading">Về sản phẩm</h2><p class="leading-relaxed">{product.paragraphs[0]}</p>{product.paragraphs.length>1 && <details class="group"><summary class="inline-block min-h-11 cursor-pointer text-sm font-medium text-primary underline underline-offset-4">Đọc thêm mô tả</summary><div class="mt-4">{product.paragraphs.slice(1).map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}</div></details>}
+      {product.uses.length>0 && <><h3 class="mt-8 text-xl">Ứng dụng phù hợp</h3><ul class="list-disc space-y-2 pl-5 text-sm text-text-muted">{product.uses.map(use => <li>{use}</li>)}</ul></>}
+    </article>
+    <aside class="min-w-0"><p class="!mb-3 text-xs uppercase tracking-widest text-primary">Thông tin mẫu</p><h2 class="brand-heading">Quy cách & thông tin</h2><div class="overflow-x-auto rounded-xl border border-border"><table class="w-full text-left text-sm"><caption class="sr-only">Thông tin {product.name}</caption><tbody>{specs.map(spec => <tr class="border-b border-border last:border-0"><th scope="row" class="w-1/3 bg-surface p-4 font-medium">{spec.label}</th><td class="p-4">{spec.value}</td></tr>)}</tbody></table></div><p class="mt-4 text-xs">Thông tin theo catalogue đính kèm. Quy cách, vật liệu và chính sách áp dụng cho công trình được xác nhận khi tư vấn.</p><a href={`/dich-vu/${category.service}`} class="text-sm font-medium text-primary hover:underline">Xem dịch vụ liên quan →</a></aside>
+  </section>
+  <section class="bg-surface py-14 md:py-20"><div class="container"><div class="mb-8 flex flex-wrap items-end justify-between gap-4"><h2 class="brand-heading !mb-0">Sản phẩm cùng nhóm</h2><a href={`/danh-muc-san-pham/${category.slug}`} class="btn-idecal-bold">Xem nhóm sản phẩm →</a></div><div class="grid grid-cols-2 gap-4 lg:grid-cols-4 md:gap-5">{related.map(other => <ProductCard product={other} />)}</div></div></section>
+</Layout>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-product-detail]').forEach(root => {
+    const image = root.querySelector<HTMLImageElement>('[data-main-gallery] [data-product-photo]');
+    const buttons = root.querySelectorAll<HTMLButtonElement>('[data-gallery-source]');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const src = button.dataset.gallerySource;
+      if (!image || !src) return;
+      image.hidden = false;
+      image.alt = button.dataset.galleryLabel ?? image.alt;
+      image.src = src;
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    }));
+  });
+</script>

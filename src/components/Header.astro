@@ -1,5 +1,6 @@
 ---
 import { regions } from '../data/regions';
+import { productCategories } from '../data/catalogue';
 
 interface NavLink {
   name: string;
@@ -8,6 +9,10 @@ interface NavLink {
 }
 const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
+  { name: 'Sản phẩm', href: '/san-pham', dropdown: [
+    { name: 'Tất cả sản phẩm', href: '/san-pham', highlight: true },
+    ...productCategories.map(category => ({ name: category.name, href: `/danh-muc-san-pham/${category.slug}` })),
+  ] },
   { name: 'Dịch vụ', href: '/#dich-vu', dropdown: [
     { name: 'Thiết kế - In ấn - Thi công Decal', href: '/dich-vu/decal-quang-cao', highlight: true },
     { name: 'Phim Cách Nhiệt', href: '/dich-vu/phim-cach-nhiet' },

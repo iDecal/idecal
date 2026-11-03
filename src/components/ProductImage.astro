@@ -1,0 +1,28 @@
+---
+interface Props { src: string; alt: string; eager?: boolean; }
+const { src, alt, eager = false } = Astro.props;
+---
+<div class="relative h-full w-full overflow-hidden bg-surface" data-product-image>
+  <div class="absolute inset-0 flex flex-col items-center justify-center gap-3 p-5 text-center text-secondary" data-image-placeholder aria-hidden="true">
+    <svg aria-hidden="true" class="h-9 w-9 text-primary/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 3-3 6 6"/></svg>
+    <span class="text-xs">Hình ảnh đang cập nhật</span>
+  </div>
+  <img src={src} alt={alt} width="800" height="1000" loading={eager ? 'eager' : 'lazy'} class="relative h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" data-product-photo />
+</div>
+<script>
+  document.querySelectorAll<HTMLImageElement>('[data-product-photo]').forEach(image => {
+    const fallback = () => {
+      image.hidden = true;
+      const container = image.closest('[data-product-image]');
+      container?.setAttribute('role', 'img');
+      container?.setAttribute('aria-label', `${image.alt} – hình ảnh đang cập nhật`);
+    };
+    image.addEventListener('error', fallback);
+    image.addEventListener('load', () => {
+      image.hidden = false;
+      image.closest('[data-product-image]')?.removeAttribute('role');
+      image.closest('[data-product-image]')?.removeAttribute('aria-label');
+    });
+    if (image.complete && !image.naturalWidth) fallback();
+  });
+</script>

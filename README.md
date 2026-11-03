@@ -25,6 +25,9 @@ npm audit
 
 Hệ màu dựa trên hai bản thiết kế HTML cũ: xem [bảng màu và cách áp dụng](docs/brand-design.md).
 
+- Catalogue: `src/data/products.json` (74 mẫu), `src/data/product-categories.json` (6 danh mục); kiểu dữ liệu và hàm dùng chung ở `src/data/catalogue.ts`.
+- Trang sản phẩm: `/san-pham`, `/san-pham/[slug]`; danh mục: `/danh-muc-san-pham/[slug]`. Đường dẫn sản phẩm cũ được chuyển hướng qua `public/_redirects`.
+- Ảnh có trong gói đính kèm nằm tại `public/images/catalogue`. Các ảnh khác giữ URL công khai từ `idecal.vn` và có khung dự phòng khi không tải được. Giá trong dữ liệu là giá tham khảo; không mặc định đơn vị tính hoặc tình trạng tồn kho.
 - Khu vực: `src/data/regions.ts`; trang tổng hợp tại `/khu-vuc`, các trang con được tạo từ `src/pages/khu-vuc/[slug].astro`. Dữ liệu cũng dùng cho menu và chân trang.
 - Blog: `src/content/blog/*.md`.
 - Công trình: `src/content/projects/*.md`.

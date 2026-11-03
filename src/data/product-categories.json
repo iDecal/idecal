@@ -1,0 +1,446 @@
+[
+  {
+    "slug": "decal-mo-dan-kinh",
+    "name": "Decal mờ dán kính",
+    "headline": "Decal mờ dán kính văn phòng, nhà ở",
+    "description": "Tạo sự riêng tư, chống lóa và giữ ánh sáng tự nhiên cho vách kính văn phòng, cửa sổ và showroom. Có decal mờ trơn, họa tiết, cắt logo và decal 3D vân sóng.",
+    "benefits": [
+      {
+        "title": "Riêng tư mà vẫn sáng",
+        "description": "Che mờ tầm nhìn từ bên ngoài nhưng ánh sáng tự nhiên vẫn đi qua."
+      },
+      {
+        "title": "Cân đối ánh sáng",
+        "description": "Chọn mức che phủ theo vị trí kính, mục đích sử dụng và nhu cầu giữ sáng."
+      },
+      {
+        "title": "Trang trí và nhận diện",
+        "description": "Cắt logo, kẻ chỉ, in họa tiết theo thương hiệu."
+      },
+      {
+        "title": "Linh hoạt theo thiết kế",
+        "description": "Có thể phối hợp mờ trơn, sọc, họa tiết và logo theo kích thước từng ô kính."
+      }
+    ],
+    "priceTitle": "Báo giá decal mờ dán kính",
+    "priceNote": "Đơn giá theo m², cho văn phòng, nhà ở, căn hộ.",
+    "prices": [
+      {
+        "name": "Decal mờ trơn",
+        "price": "120.000 - 150.000 đ/m²"
+      },
+      {
+        "name": "Decal mờ cắt sọc",
+        "price": "165.000 đ/m²"
+      },
+      {
+        "name": "Decal mờ cắt họa tiết",
+        "price": "280.000 - 320.000 đ/m²"
+      },
+      {
+        "name": "Decal mờ in Graphic",
+        "price": "210.000 - 280.000 đ/m²"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Decal mờ có cách nhiệt không?",
+        "answer": "Decal mờ chủ yếu tạo sự riêng tư và trang trí, không có chức năng cách nhiệt. Muốn chống nóng, hãy chọn phim cách nhiệt."
+      },
+      {
+        "question": "Báo giá thi công tính như thế nào?",
+        "answer": "Chi phí phụ thuộc chất liệu decal, diện tích, độ khó bề mặt, thiết kế và hiện trạng mặt bằng. iDecal khảo sát và báo giá chi tiết trước khi làm. Diện tích nhỏ, lẻ thường tính phí trọn gói."
+      },
+      {
+        "question": "Decal thường dùng được bao lâu?",
+        "answer": "Dán trong nhà: 3 đến 5 năm hoặc lâu hơn. Dán ngoài trời: 1 đến 3 năm do chịu ảnh hưởng của thời tiết và tia UV."
+      }
+    ],
+    "service": "decal-dan-kinh-van-phong",
+    "image": "/images/catalogue/decal-mo-chuyen-mau-gradient.jpg",
+    "needs": [
+      {
+        "label": "Riêng tư văn phòng",
+        "tip": "Decal mờ trắng trơn hoặc gradient che tầm nhìn tốt mà vẫn lấy sáng, hợp vách phòng họp, phòng giám đốc.",
+        "keywords": [
+          "trơn",
+          "trắng",
+          "gradient",
+          "chuyển màu"
+        ]
+      },
+      {
+        "label": "Trang trí họa tiết",
+        "tip": "Họa tiết chấm, kẻ sọc, ô vuông, hoa lá vừa che mờ vừa tạo điểm nhấn cho cửa hàng, quán cà phê.",
+        "keywords": [
+          "họa tiết",
+          "chấm",
+          "sọc",
+          "ô vuông",
+          "hoa",
+          "lá"
+        ]
+      },
+      {
+        "label": "Sang trọng, có chiều sâu",
+        "tip": "Decal 3D vân sóng tạo hiệu ứng nổi khi ánh sáng chiếu qua, hợp spa, nhà hàng, không gian cao cấp.",
+        "keywords": [
+          "3d",
+          "sóng"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "phim-cach-nhiet",
+    "name": "Phim cách nhiệt",
+    "headline": "Phim cách nhiệt chống nóng cho kính",
+    "description": "Giải pháp giảm nhiệt, chống tia UV và giảm chói cho nhà kính, văn phòng, showroom và nhà ở. Phim các hãng như 3M, Llumar, V-KOOL.",
+    "benefits": [
+      {
+        "title": "Giảm nhiệt",
+        "description": "Cản bớt nhiệt từ ánh nắng, không gian bên trong mát hơn."
+      },
+      {
+        "title": "Chống tia UV",
+        "description": "Bảo vệ kính, nội thất và người dùng khỏi tia UV."
+      },
+      {
+        "title": "Giảm chói",
+        "description": "Giảm ánh sáng gắt, dễ làm việc gần cửa kính."
+      },
+      {
+        "title": "Tiết kiệm điện",
+        "description": "Giảm tải cho điều hòa, tiết kiệm chi phí điện năng."
+      }
+    ],
+    "priceTitle": "Báo giá phim cách nhiệt",
+    "priceNote": "Giá tham khảo, cập nhật tháng 3/2025. Vui lòng hỏi lại giá mới.",
+    "prices": [
+      {
+        "name": "Nhóm giá rẻ",
+        "price": "190.000 - 220.000 đ/m²"
+      },
+      {
+        "name": "Nhóm trung bình",
+        "price": "250.000 - 380.000 đ/m²"
+      },
+      {
+        "name": "Nhóm cao cấp",
+        "price": "Trên 420.000 đ/m²"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Phim cách nhiệt khác decal mờ thế nào?",
+        "answer": "Phim cách nhiệt cản nắng, chống UV và giảm nhiệt, thường màu trà, phản quang hoặc xanh. Decal mờ chỉ tạo riêng tư và trang trí."
+      },
+      {
+        "question": "Báo giá thi công tính như thế nào?",
+        "answer": "Chi phí phụ thuộc chất liệu decal, diện tích, độ khó bề mặt, thiết kế và hiện trạng mặt bằng. iDecal khảo sát và báo giá chi tiết trước khi làm. Diện tích nhỏ, lẻ thường tính phí trọn gói."
+      },
+      {
+        "question": "Decal thường dùng được bao lâu?",
+        "answer": "Dán trong nhà: 3 đến 5 năm hoặc lâu hơn. Dán ngoài trời: 1 đến 3 năm do chịu ảnh hưởng của thời tiết và tia UV."
+      }
+    ],
+    "service": "phim-cach-nhiet",
+    "image": "/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp",
+    "needs": [
+      {
+        "label": "Chống nóng, giảm điện",
+        "tip": "Ưu tiên phim cản nhiệt tốt như phim bạc phản gương hoặc phim nhiều lớp. Hiệu quả thực tế phụ thuộc loại kính và mã phim, nên iDecal tư vấn sau khi xem kính của bạn.",
+        "keywords": [
+          "bạc",
+          "xanh",
+          "RS"
+        ]
+      },
+      {
+        "label": "Riêng tư ban ngày",
+        "tip": "Phim màu đậm hoặc tráng gương khó nhìn xuyên từ ngoài vào ban ngày. Buổi tối khi bật đèn trong nhà, hiệu ứng này giảm đi.",
+        "keywords": [
+          "bạc",
+          "khói đen",
+          "khói trung"
+        ]
+      },
+      {
+        "label": "Giữ view, ít đổi màu",
+        "tip": "Chọn phim khói sáng hoặc xanh nhạt để vẫn lấy sáng tự nhiên và ít làm đổi màu cảnh nhìn ra ngoài.",
+        "keywords": [
+          "khói sáng",
+          "nhạt"
+        ]
+      },
+      {
+        "label": "Bảo vệ, chống vỡ vụn",
+        "tip": "Phim bảo vệ an toàn giữ các mảnh kính khi bị vỡ, phù hợp cửa kính lớn, nơi đông người.",
+        "keywords": [
+          "bảo vệ",
+          "safety",
+          "ppf"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "film-noi-that",
+    "name": "Film nội thất",
+    "headline": "Film dán nội thất làm mới không gian",
+    "description": "Tái tạo không gian với film vân gỗ, vân đá, kim loại, vân vải và đơn sắc. Làm mới tủ bếp, cửa và đồ nội thất nhanh chóng, tiết kiệm chi phí.",
+    "benefits": [
+      {
+        "title": "Mẫu đa dạng",
+        "description": "Vân gỗ, đá Marble, kim loại, bê tông, vân vải và đơn sắc."
+      },
+      {
+        "title": "Tiết kiệm chi phí",
+        "description": "Làm mới đồ cũ thay vì thay mới toàn bộ."
+      },
+      {
+        "title": "Thi công nhanh",
+        "description": "Không cần tháo dỡ lớn, ít bụi bẩn."
+      },
+      {
+        "title": "Xem Catalogue",
+        "description": "Nhiều mẫu để chọn, iDecal tư vấn theo không gian."
+      }
+    ],
+    "priceTitle": "Báo giá phim dán nội thất",
+    "priceNote": "Giá vật tư tham khảo, chưa gồm nhân công dán. Quy cách cuộn và đơn vị tính được xác nhận theo từng mẫu.",
+    "prices": [
+      {
+        "name": "Vân gỗ",
+        "price": "255.000 đ/m"
+      },
+      {
+        "name": "Kim loại",
+        "price": "550.000 - 780.000 đ/m"
+      },
+      {
+        "name": "Vân vải, giả xi măng, đá Marble, đơn sắc",
+        "price": "Liên hệ báo giá"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Film dán nội thất dùng cho đâu?",
+        "answer": "Dùng làm mới tủ bếp, cửa, vách và đồ nội thất. Bề mặt cần sạch, phẳng."
+      },
+      {
+        "question": "Báo giá thi công tính như thế nào?",
+        "answer": "Chi phí phụ thuộc chất liệu decal, diện tích, độ khó bề mặt, thiết kế và hiện trạng mặt bằng. iDecal khảo sát và báo giá chi tiết trước khi làm. Diện tích nhỏ, lẻ thường tính phí trọn gói."
+      },
+      {
+        "question": "Decal thường dùng được bao lâu?",
+        "answer": "Dán trong nhà: 3 đến 5 năm hoặc lâu hơn. Dán ngoài trời: 1 đến 3 năm do chịu ảnh hưởng của thời tiết và tia UV."
+      }
+    ],
+    "service": "film-noi-that",
+    "image": "/images/film-noi-that/Phim-dan-noi-that-cao-cap.jpg",
+    "needs": [
+      {
+        "label": "Làm mới tủ, cửa gỗ",
+        "tip": "Chọn film vân gỗ để đổi diện mạo tủ, bàn, cửa mà không cần thay mới. Nên xem mẫu thật dưới ánh sáng của không gian bạn.",
+        "keywords": [
+          "gỗ"
+        ]
+      },
+      {
+        "label": "Hiện đại, công nghiệp",
+        "tip": "Vân kim loại và xi măng hợp quầy bar, vách, không gian tối giản theo phong cách công nghiệp.",
+        "keywords": [
+          "kim loại",
+          "xi măng"
+        ]
+      },
+      {
+        "label": "Sang trọng",
+        "tip": "Vân đá cẩm thạch tạo cảm giác cao cấp cho quầy lễ tân, mặt bàn, vách ốp.",
+        "keywords": [
+          "đá"
+        ]
+      },
+      {
+        "label": "Mềm mại, dễ phối",
+        "tip": "Vân vải và màu đơn sắc dễ phối với nhiều nội thất, phù hợp phòng ngủ, phòng khách.",
+        "keywords": [
+          "vải",
+          "đơn sắc"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "cat-va-in-logo",
+    "name": "Cắt và in logo",
+    "headline": "Cắt decal, in decal theo yêu cầu",
+    "description": "Cắt chữ, cắt logo, tem nhãn và decal trang trí trên nhiều chất liệu. Xưởng cắt decal tại TP.HCM, nhận file thiết kế hoặc thiết kế giúp bạn, giao nhanh trong 1 đến 24 giờ.",
+    "benefits": [
+      {
+        "title": "Chính xác",
+        "description": "Máy cắt tự động, tái tạo chuẩn logo và chữ."
+      },
+      {
+        "title": "Nhiều chất liệu",
+        "description": "Decal mờ, màu, phản quang, giấy, PVC."
+      },
+      {
+        "title": "Trọn gói",
+        "description": "Thiết kế, cắt, giao và thi công dán tận nơi."
+      },
+      {
+        "title": "Theo tiến độ công trình",
+        "description": "Thống nhất mẫu, khối lượng và lịch thực hiện trước khi sản xuất."
+      }
+    ],
+    "priceTitle": "Báo giá cắt decal theo yêu cầu",
+    "priceNote": "Gửi file AI, Corel hoặc PDF qua Zalo 0866-077-040 để báo giá nhanh.",
+    "prices": [
+      {
+        "name": "Cắt gia công decal (khách tự mang decal)",
+        "price": "Từ 50.000 đ/m²"
+      },
+      {
+        "name": "Cắt chữ decal",
+        "price": "Từ 120.000 đ/m²"
+      },
+      {
+        "name": "Cắt logo, quote, slogan bằng decal",
+        "price": "Từ 250.000 đ/m²"
+      },
+      {
+        "name": "Cắt decal mờ trang trí",
+        "price": "Từ 80.000 đ/m²"
+      },
+      {
+        "name": "Cắt hashtag quảng cáo",
+        "price": "Báo giá theo file"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Cần gửi file gì để cắt decal?",
+        "answer": "Gửi file thiết kế dạng AI, Corel hoặc PDF qua Zalo 0866-077-040. Chưa có file, iDecal hỗ trợ thiết kế."
+      },
+      {
+        "question": "Báo giá thi công tính như thế nào?",
+        "answer": "Chi phí phụ thuộc chất liệu decal, diện tích, độ khó bề mặt, thiết kế và hiện trạng mặt bằng. iDecal khảo sát và báo giá chi tiết trước khi làm. Diện tích nhỏ, lẻ thường tính phí trọn gói."
+      },
+      {
+        "question": "Decal thường dùng được bao lâu?",
+        "answer": "Dán trong nhà: 3 đến 5 năm hoặc lâu hơn. Dán ngoài trời: 1 đến 3 năm do chịu ảnh hưởng của thời tiết và tia UV."
+      }
+    ],
+    "service": "cat-decal",
+    "image": "/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg",
+    "needs": []
+  },
+  {
+    "slug": "open-time-thong-bao",
+    "name": "Open time, thông báo",
+    "headline": "Decal open time, decal thông báo",
+    "description": "Decal giờ mở cửa, biển thông báo, chỉ dẫn dán cửa kính cho cửa hàng, văn phòng và phòng khám. Cắt theo thông tin và phông chữ của bạn.",
+    "benefits": [
+      {
+        "title": "Rõ ràng",
+        "description": "Thông tin giờ mở cửa, chỉ dẫn dễ đọc từ xa."
+      },
+      {
+        "title": "Theo thương hiệu",
+        "description": "Dùng màu và phông chữ của cửa hàng."
+      },
+      {
+        "title": "Dễ thay đổi",
+        "description": "Tháo và dán lại khi đổi thông tin."
+      },
+      {
+        "title": "Thi công gọn",
+        "description": "Dán nhanh trên kính, bề mặt phẳng."
+      }
+    ],
+    "priceTitle": "Báo giá decal open time",
+    "priceNote": "Giá phụ thuộc kích thước, thiết kế và phạm vi thực hiện. Gửi thông tin để được báo giá.",
+    "prices": [
+      {
+        "name": "Decal open time",
+        "price": "Liên hệ báo giá"
+      },
+      {
+        "name": "Decal thông báo",
+        "price": "Liên hệ báo giá"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Báo giá thi công tính như thế nào?",
+        "answer": "Chi phí phụ thuộc chất liệu decal, diện tích, độ khó bề mặt, thiết kế và hiện trạng mặt bằng. iDecal khảo sát và báo giá chi tiết trước khi làm. Diện tích nhỏ, lẻ thường tính phí trọn gói."
+      },
+      {
+        "question": "Decal thường dùng được bao lâu?",
+        "answer": "Dán trong nhà: 3 đến 5 năm hoặc lâu hơn. Dán ngoài trời: 1 đến 3 năm do chịu ảnh hưởng của thời tiết và tia UV."
+      },
+      {
+        "question": "Tôi có thể tự dán không?",
+        "answer": "Sản phẩm đơn giản như decal mờ dán kính nhỏ có thể tự dán theo hướng dẫn. Với diện tích lớn hoặc yêu cầu thẩm mỹ cao, nên dùng dịch vụ thi công của iDecal."
+      }
+    ],
+    "service": "cat-decal",
+    "image": "https://idecal.vn/wp-content/uploads/2024/04/Decal-gio-mo-cua.png",
+    "needs": []
+  },
+  {
+    "slug": "decal-quang-cao-standee",
+    "name": "Quảng cáo, standee",
+    "headline": "Decal quảng cáo và standee",
+    "description": "Giải pháp in decal khổ lớn cho mọi chiến dịch quảng cáo: dán tường, dán kính, dán xe. Chất liệu PP, Vinyl bền màu, thu hút khách hàng. Có standee PP cán formex.",
+    "benefits": [
+      {
+        "title": "In khổ lớn",
+        "description": "Hình ảnh sắc nét cho mặt tiền, show window."
+      },
+      {
+        "title": "Bền màu",
+        "description": "Chất liệu PP, Vinyl bền màu ngoài trời."
+      },
+      {
+        "title": "Nhiều bề mặt",
+        "description": "Dán tường, kính, xe."
+      },
+      {
+        "title": "Thi công trọn gói",
+        "description": "Thiết kế, in và dán tận nơi."
+      }
+    ],
+    "priceTitle": "Báo giá decal quảng cáo",
+    "priceNote": "Giá phụ thuộc kích thước, chất liệu và vị trí thi công.",
+    "prices": [
+      {
+        "name": "Standee PP cán formex A3, A2",
+        "price": "Từ 200.000 đ"
+      },
+      {
+        "name": "Decal quảng cáo in khổ lớn",
+        "price": "Liên hệ báo giá"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Báo giá thi công tính như thế nào?",
+        "answer": "Chi phí phụ thuộc chất liệu decal, diện tích, độ khó bề mặt, thiết kế và hiện trạng mặt bằng. iDecal khảo sát và báo giá chi tiết trước khi làm. Diện tích nhỏ, lẻ thường tính phí trọn gói."
+      },
+      {
+        "question": "Decal thường dùng được bao lâu?",
+        "answer": "Dán trong nhà: 3 đến 5 năm hoặc lâu hơn. Dán ngoài trời: 1 đến 3 năm do chịu ảnh hưởng của thời tiết và tia UV."
+      },
+      {
+        "question": "Tôi có thể tự dán không?",
+        "answer": "Sản phẩm đơn giản như decal mờ dán kính nhỏ có thể tự dán theo hướng dẫn. Với diện tích lớn hoặc yêu cầu thẩm mỹ cao, nên dùng dịch vụ thi công của iDecal."
+      }
+    ],
+    "service": "decal-quang-cao",
+    "image": "/images/decal-quang-cao/Decal-quang-cao.webp",
+    "needs": []
+  }
+]

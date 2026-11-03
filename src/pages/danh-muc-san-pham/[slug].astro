@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import { productCategories, productsInCategory, type ProductCategory } from '../../data/catalogue';
+export function getStaticPaths() { return productCategories.map(category => ({ params: { slug: category.slug }, props: { category } })); }
+interface Props { category: ProductCategory; }
+const { category } = Astro.props;
+const items = productsInCategory(category.slug);
+---
+<Layout title={`${category.name} | Mẫu & giá tham khảo iDecal`} description={category.description}>
+  <section class="brand-dark bg-brand-navy bg-brand-pattern py-14 md:py-20">
+    <div class="container">
+      <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap gap-2 text-sm text-brand-inverse"><a href="/" class="text-brand-highlight">Trang chủ</a><span aria-hidden="true">/</span><a href="/san-pham" class="text-brand-highlight">Sản phẩm</a><span aria-hidden="true">/</span><span aria-current="page">{category.name}</span></nav>
+      <p class="!mb-4 text-xs uppercase tracking-widest text-brand-highlight">{category.name}</p><h1 class="max-w-4xl text-3xl font-semibold !text-white md:text-5xl">{category.headline}</h1>
+      <p class="mb-8 max-w-3xl text-lg text-brand-inverse">{category.description}</p>
+      <div class="flex flex-wrap items-center gap-5"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></div>
+      <div class="mt-10 grid gap-5 border-t border-white/15 pt-8 sm:grid-cols-2 lg:grid-cols-4">{category.benefits.map(benefit => <div><h2 class="!mb-2 text-base font-medium text-white">{benefit.title}</h2><p class="!mb-0 text-sm text-brand-inverse">{benefit.description}</p></div>)}</div>
+    </div>
+  </section>
+  <ProductCatalog items={items} category={category} />
+  <section class="bg-surface py-14 md:py-20"><div class="container max-w-5xl"><p class="!mb-3 text-xs uppercase tracking-widest text-primary">Bảng giá tham khảo</p><h2 class="brand-heading">{category.priceTitle}</h2><p>{category.priceNote}</p><div class="overflow-x-auto rounded-xl border border-border bg-white"><table class="w-full text-left text-sm"><caption class="sr-only">{category.priceTitle}</caption><thead class="bg-brand-pale/40"><tr><th scope="col" class="p-4 font-medium">Hạng mục</th><th scope="col" class="p-4 font-medium">Giá tham khảo</th></tr></thead><tbody>{category.prices.map(row => <tr class="border-t border-border"><th scope="row" class="p-4 font-normal">{row.name}</th><td class="p-4 font-medium text-brand-navy">{row.price}</td></tr>)}</tbody></table></div><p class="mt-4 text-xs">Giá theo catalogue đính kèm; giá hiện hành và các phần vật tư, thiết kế, tháo lớp cũ, công thi công được xác nhận theo yêu cầu thực tế.</p><a href="https://zalo.me/0866077040" class="btn-primary-solid mt-3">Nhận báo giá cho công trình</a></div></section>
+  <section class="container py-14 md:py-20"><h2 class="brand-heading text-center">3 bước từ tư vấn đến thi công</h2><div class="grid gap-6 md:grid-cols-3">{[{title:'Gửi nhu cầu & hiện trạng',text:'Chia sẻ ảnh, kích thước, địa chỉ và mẫu bạn quan tâm.'},{title:'Chọn mẫu & thống nhất báo giá',text:'Xác nhận quy cách, vật liệu, khối lượng và phạm vi công việc.'},{title:'Sản xuất & bàn giao',text:'Thống nhất lịch thực hiện, kiểm tra hoàn thiện và hướng dẫn sử dụng.'}].map((step,index) => <div class="rounded-2xl border border-border p-6"><span class="mb-4 block text-sm font-medium text-primary">0{index+1}</span><h3 class="text-lg font-semibold">{step.title}</h3><p class="!mb-0 text-sm">{step.text}</p></div>)}</div><a href={`/dich-vu/${category.service}`} class="btn-idecal-bold mt-8">Xem dịch vụ thi công liên quan →</a></section>
+  <section class="container pb-14 md:pb-20"><div class="mx-auto max-w-4xl"><h2 class="brand-heading">Câu hỏi thường gặp</h2><div class="divide-y divide-border">{category.faqs.map(faq => <details class="group py-5"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-medium [&::-webkit-details-marker]:hidden">{faq.question}<span aria-hidden="true" class="text-xl text-primary group-open:rotate-45">+</span></summary><p class="!mb-0 mt-4 text-sm leading-relaxed">{faq.answer}</p></details>)}</div></div></section>
+  <section class="container pb-16"><div class="brand-dark rounded-3xl bg-brand-navy bg-brand-pattern p-8 text-center md:p-12"><h2 class="text-white">Cần báo giá {category.name.toLocaleLowerCase('vi-VN')}?</h2><p class="text-brand-inverse">Gửi mã mẫu, ảnh hiện trạng và kích thước qua Zalo để được tư vấn.</p><a href="tel:0866077040" class="btn-primary-solid">Gọi 0866.077.040</a></div><nav aria-label="Nhóm sản phẩm khác" class="mt-10"><h2 class="text-xl">Các nhóm sản phẩm khác</h2><div class="flex flex-wrap gap-3">{productCategories.filter(group => group.slug !== category.slug).map(group => <a href={`/danh-muc-san-pham/${group.slug}`} class="rounded-full border border-border px-4 py-2 text-sm text-primary hover:bg-surface">{group.name}</a>)}</div></nav></section>
+</Layout>
