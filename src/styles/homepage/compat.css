@@ -56,3 +56,44 @@
   .homepage-original .why-benefits { gap: 18px; }
   .homepage-original .why-benefit { gap: 12px; }
 }
+
+/* Quiet labels and breathing room around the homepage calls to action. */
+.homepage-original .home-eyebrow,
+.homepage-original #gspb_text-id-gsbp-5d5362d.home-eyebrow {
+  display: inline-flex; align-items: center; width: fit-content; max-width: 100%;
+  padding: 8px 14px; border: 1px solid #e0eafa; border-radius: 999px;
+  background: linear-gradient(110deg, #eef8ff, #f5efff); color: #1b4f7a;
+  font-size: 13px; font-weight: 500; line-height: 1.6; margin: 0 0 20px;
+}
+.homepage-original #gspb_button-id-gsbp-4b5e15a { margin-top: 24px; margin-bottom: 24px; }
+.homepage-original #gspb_iconsList-id-gsbp-0e0111d { margin-top: 0; }
+.homepage-original .why-benefits { margin-bottom: 36px; }
+.homepage-original .why-idecal-photo { aspect-ratio: 1 / 1.1; }
+.homepage-original #gspb_row-id-gsbp-aa4530a.home-partner-strip {
+  display: block; width: 100%; max-width: none; margin: 24px 0 0; padding: 32px 24px;
+  background: #f3f7fc; border-top: 1px solid #e7eef7; border-bottom: 1px solid #e7eef7;
+}
+.homepage-original .home-partner-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; align-items: center; }
+.homepage-original .home-partner-logo { display: flex; align-items: center; justify-content: center; height: 88px; padding: 12px 20px; }
+.homepage-original .home-partner-logo img { display: block; width: auto; height: auto; max-width: 180px; max-height: 64px; object-fit: contain; }
+.homepage-original #gspb_container-id-gsbp-36095c7 { margin-top: 24px; margin-bottom: 72px; }
+.homepage-original #gspb_button-id-gsbp-4f78641 { margin-top: 24px; }
+.homepage-original #gspb_row-id-gsbp-d9148c4.home-faq-intro {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px;
+  width: calc(100% - 48px); max-width: 1200px; margin: 0 auto 40px; padding: 0;
+}
+.homepage-original .home-faq-intro .faq-heading { margin: 0 0 18px; font-size: clamp(26px, 2.5vw, 36px); line-height: 1.3; font-weight: 600; background: linear-gradient(100deg,#0f8fe0,#4f46e5 55%,#7d12f7); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.homepage-original .faq-description { margin: 0; font-size: 15px; line-height: 1.8; color: #44566b; }
+.homepage-original .home-faq-photo { margin: 0; height: 260px; overflow: hidden; border-radius: 20px; background: #eef6fb; }
+.homepage-original .home-faq-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+@media(max-width: 767px) {
+  .homepage-original #gspb_row-id-gsbp-aa4530a.home-partner-strip { padding: 24px; margin-top: 16px; }
+  .homepage-original .home-partner-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+  .homepage-original .home-partner-logo { height: 76px; padding: 12px 8px; }
+  .homepage-original .home-partner-logo img { max-width: 100%; max-height: 48px; }
+  .homepage-original #gspb_container-id-gsbp-36095c7 { margin-top: 16px; margin-bottom: 48px; }
+  .homepage-original #gspb_row-id-gsbp-d9148c4.home-faq-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
+  .homepage-original .home-faq-photo { height: 200px; border-radius: 16px; }
+  .homepage-original .why-idecal-photo { aspect-ratio: 5 / 4; }
+  .homepage-original .home-eyebrow, .homepage-original #gspb_text-id-gsbp-5d5362d.home-eyebrow { font-size: 12px; padding: 7px 12px; }
+}
