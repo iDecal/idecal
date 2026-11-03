@@ -1,4 +1,5 @@
 ---
+import '../../styles/catalogue.css';
 import Layout from '../../layouts/Layout.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
 import { productCategories, productsInCategory, type ProductCategory } from '../../data/catalogue';
@@ -8,13 +9,13 @@ const { category } = Astro.props;
 const items = productsInCategory(category.slug);
 ---
 <Layout title={`${category.name} | Mẫu & giá tham khảo iDecal`} description={category.description}>
-  <section class="brand-dark bg-brand-navy bg-brand-pattern py-14 md:py-20">
+  <section class="catalogue-hero py-12 md:py-16">
     <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap gap-2 text-sm text-brand-inverse"><a href="/" class="text-brand-highlight">Trang chủ</a><span aria-hidden="true">/</span><a href="/san-pham" class="text-brand-highlight">Sản phẩm</a><span aria-hidden="true">/</span><span aria-current="page">{category.name}</span></nav>
-      <p class="!mb-4 text-xs uppercase tracking-widest text-brand-highlight">{category.name}</p><h1 class="max-w-4xl text-3xl font-semibold !text-white md:text-5xl">{category.headline}</h1>
-      <p class="mb-8 max-w-3xl text-lg text-brand-inverse">{category.description}</p>
+      <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap gap-2 text-sm text-text-muted"><a href="/" class="text-primary">Trang chủ</a><span aria-hidden="true">/</span><a href="/san-pham" class="text-primary">Sản phẩm</a><span aria-hidden="true">/</span><span aria-current="page">{category.name}</span></nav>
+      <p class="!mb-4 text-xs uppercase tracking-widest text-primary">{category.name}</p><h1 class="max-w-4xl text-3xl font-semibold brand-heading md:text-5xl">{category.headline}</h1>
+      <p class="mb-8 max-w-3xl text-lg text-text-muted">{category.description}</p>
       <div class="flex flex-wrap items-center gap-5"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></div>
-      <div class="mt-10 grid gap-5 border-t border-white/15 pt-8 sm:grid-cols-2 lg:grid-cols-4">{category.benefits.map(benefit => <div><h2 class="!mb-2 text-base font-medium text-white">{benefit.title}</h2><p class="!mb-0 text-sm text-brand-inverse">{benefit.description}</p></div>)}</div>
+      <div class="mt-10 grid gap-5 border-t border-border pt-8 sm:grid-cols-2 lg:grid-cols-4">{category.benefits.map(benefit => <div><h2 class="!mb-2 text-base font-medium text-brand-navy">{benefit.title}</h2><p class="!mb-0 text-sm text-text-muted">{benefit.description}</p></div>)}</div>
     </div>
   </section>
   <ProductCatalog items={items} category={category} />

@@ -4,8 +4,6 @@ import { productCategories, type Product, type ProductCategory } from '../data/c
 interface Props { items: Product[]; category?: ProductCategory; }
 const { items, category } = Astro.props;
 const id = `catalog-${category?.slug ?? 'all'}`;
-const brands = [...new Set(items.map(product => product.brand || 'Chưa cập nhật'))].sort((a,b) => a.localeCompare(b, 'vi'));
-const comparisonData = items.map(product => ({ slug: product.slug, name: product.name, brand: product.brand, price: product.price, attributes: product.attributes, uses: product.uses }));
 ---
 <section id="mau-san-pham" class="scroll-mt-24 py-14 md:py-20" data-catalog>
   <div class="container min-w-0">
@@ -18,10 +16,9 @@ const comparisonData = items.map(product => ({ slug: product.slug, name: product
       <div class="flex flex-wrap gap-2" role="group" aria-label="Gợi ý theo nhu cầu">{category.needs.map(need => <button type="button" data-catalog-goal data-keywords={JSON.stringify(need.keywords)} data-tip={need.tip} aria-pressed="false" class="min-h-11 rounded-full border border-border px-4 text-sm text-secondary aria-pressed:border-primary aria-pressed:bg-primary/10">{need.label}</button>)}</div>
       <p class="!mb-0 mt-4 text-sm" data-catalog-tip role="status" aria-live="polite">Chọn nhu cầu để xem gợi ý và các mẫu liên quan trong catalogue.</p>
     </div>}
-    <div class="mb-6 grid gap-4 rounded-2xl border border-border bg-surface p-5 md:grid-cols-2 lg:grid-cols-4">
-      <div class="md:col-span-2 lg:col-span-1"><label for={`${id}-search`} class="mb-2 block text-xs font-medium text-secondary">Tìm tên, hãng hoặc ứng dụng</label><input id={`${id}-search`} type="search" data-catalog-search class="min-h-11 w-full rounded-lg border border-border bg-white px-3 text-sm text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ví dụ: mờ, Rainier, vân gỗ…" /></div>
+    <div class={`mb-6 grid gap-4 rounded-2xl border border-border bg-surface p-5 md:grid-cols-2 ${category ? '' : 'lg:grid-cols-3'}`}>
+      <div><label for={`${id}-search`} class="mb-2 block text-xs font-medium text-secondary">Tìm tên hoặc ứng dụng</label><input id={`${id}-search`} type="search" data-catalog-search class="min-h-11 w-full rounded-lg border border-border bg-white px-3 text-sm text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Ví dụ: mờ, sọc ngang, vân gỗ…" /></div>
       {!category && <div><label for={`${id}-category`} class="mb-2 block text-xs font-medium text-secondary">Danh mục</label><select id={`${id}-category`} data-catalog-category class="min-h-11 w-full rounded-lg border border-border bg-white px-3 text-sm text-secondary"><option value="">Tất cả danh mục</option>{productCategories.map(group => <option value={group.slug}>{group.name}</option>)}</select></div>}
-      <div><label for={`${id}-brand`} class="mb-2 block text-xs font-medium text-secondary">Hãng</label><select id={`${id}-brand`} data-catalog-brand class="min-h-11 w-full rounded-lg border border-border bg-white px-3 text-sm text-secondary"><option value="">Tất cả hãng</option>{brands.map(brand => <option value={brand}>{brand}</option>)}</select></div>
       <div><label for={`${id}-sort`} class="mb-2 block text-xs font-medium text-secondary">Sắp xếp</label><select id={`${id}-sort`} data-catalog-sort class="min-h-11 w-full rounded-lg border border-border bg-white px-3 text-sm text-secondary"><option value="default">Theo catalogue</option><option value="price-asc">Giá tham khảo tăng dần</option><option value="price-desc">Giá tham khảo giảm dần</option><option value="name">Tên A–Z</option></select></div>
     </div>
     <div class="mb-6 flex flex-wrap items-center justify-between gap-3 text-sm">
@@ -29,17 +26,9 @@ const comparisonData = items.map(product => ({ slug: product.slug, name: product
       <button type="button" data-catalog-reset class="min-h-10 text-primary underline underline-offset-4">Bỏ bộ lọc</button>
     </div>
     <p class="mb-6 text-xs text-text-muted">Giá trong catalogue là giá tham khảo. Liên hệ để xác nhận đơn vị tính, quy cách, vật liệu và phần thi công.</p>
-    <div class="grid grid-cols-2 items-stretch gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-5" data-catalog-grid>{items.map(product => <ProductCard product={product} compare />)}</div>
+    <div class="grid grid-cols-2 items-stretch gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-5" data-catalog-grid>{items.map(product => <ProductCard product={product} />)}</div>
     <div data-catalog-empty hidden class="rounded-2xl border border-dashed border-brand-line bg-surface p-8 text-center"><h3 class="text-lg">Chưa có mẫu khớp lựa chọn</h3><p>Thử từ khóa khác hoặc bỏ bộ lọc để xem lại catalogue.</p><button type="button" data-catalog-reset class="btn-primary-solid">Xem tất cả mẫu</button></div>
     <div class="mt-8 text-center"><button type="button" data-catalog-more hidden class="min-h-12 rounded border border-brand-navy px-7 text-sm font-medium text-brand-navy hover:bg-surface">Xem thêm mẫu</button></div>
-    <p data-compare-status class="mt-6 text-sm" role="status" aria-live="polite" aria-atomic="true"></p>
-    <section data-catalog-comparison hidden class="mt-6 rounded-2xl border border-border bg-surface p-5 md:p-8" aria-label="So sánh mẫu đã chọn">
-      <div class="mb-5 flex flex-wrap items-center justify-between gap-3"><h3 class="!mb-0 text-xl">So sánh mẫu đã chọn <span class="text-sm font-normal">(tối đa 3)</span></h3><button type="button" data-compare-clear class="min-h-10 text-sm text-primary underline">Bỏ chọn tất cả</button></div>
-      <div data-compare-table class="overflow-x-auto"></div>
-      <p class="mt-4 text-xs">So sánh theo thông tin có trong catalogue. Các thông số chưa có cần được xác nhận theo mẫu thực tế.</p>
-      <a href="https://zalo.me/0866077040" class="btn-primary-solid">Nhờ tư vấn chọn mẫu</a>
-    </section>
-    <script type="application/json" data-comparison-data set:html={JSON.stringify(comparisonData).replaceAll('<', String.fromCharCode(92) + 'u003c')} />
   </div>
 </section>
 <style>[data-catalog] :global([hidden]) { display: none !important; }</style>

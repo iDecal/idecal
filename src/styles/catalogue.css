@@ -1,0 +1,16 @@
+/* Shared light treatment for the catalogue and every category banner. */
+.catalogue-hero {
+  background: radial-gradient(ellipse at 95% 0%, #ecebff 0%, transparent 55%), linear-gradient(120deg, #f0f8ff, #fafcff);
+  border-bottom: 1px solid #e0e9f4;
+  --text-main: #1b4f7a;
+  --text-muted: #44566b;
+}
+.catalogue-hero h1 { line-height: 1.25; letter-spacing: 0; }
+.catalogue-hero .btn-idecal-bold { color: #1b4f7a; }
+.catalogue-hero .btn-idecal-bold:hover { color: #4f46e5; }
+.catalogue-detail { background: linear-gradient(135deg,#f3f9ff,#fcfbff); border-radius: 0 0 24px 24px; }
+.category-card [data-product-image] { height: 100%; }
+@media(max-width:767px) {
+  .catalogue-hero .container, .catalogue-detail { padding-left: 20px; padding-right: 20px; }
+  .catalogue-hero h1 { font-size: 30px; }
+}
