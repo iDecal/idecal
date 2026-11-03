@@ -1,0 +1,76 @@
+{
+  "title": "Giới thiệu về iDecal",
+  "subtitle": "Công ty cung cấp Dịch vụ Decal chuyên nghiệp",
+  "intro": [
+    "iDecal là công ty chuyên Thi công decal dán kính chuyên nghiệp TPHCM và Bình Dương và nhiều tỉnh thành khác: Thi công decal dán kính văn phòng , thi công decal chống nắng cách nhiệt ,…",
+    "Với hơn 10 năm kinh ngiệm, cùng đội ngũ thiết kế đầy sáng tạo và giàu kinh nghiệm, iDecal luôn đảm bảo rằng mỗi sản phẩm đều đạt tiêu chuẩn cao nhất, đáp ứng nhu cầu và mong đợi của khách hàng trong mọi dự án."
+  ],
+  "values": [
+    {
+      "title": "Kinh nghiệm lâu năm",
+      "text": "Đội ngũ thợ dán Decal kính của chúng tôi đã có hơn 10 năm kinh nghiệm trong ngành, đảm bảo sự chuyên nghiệp và chính xác trong từng dự án."
+    },
+    {
+      "title": "Thi công Decal khắp TPHCM & Bình Dương",
+      "text": "Chúng tôi có đội ngũ thợ thi công Decal kính khắp các Quận tại TP HCM và các huyện tại Bình Dương, Đồng Nai , Long An,…"
+    },
+    {
+      "title": "Dịch vụ tận tình",
+      "text": "Đội ngũ nhân viên tư vấn nhiệt tình, sẵn sàng hỗ trợ và hướng dẫn khách hàng để đạt được những công trình trang trí đẹp mắt và vật liệu Decal phù hợp nhất."
+    }
+  ],
+  "qualityTitle": "Cung cấp Dịch vụ Decal tiêu chuẩn",
+  "qualityKicker": "Why chose us?",
+  "qualityIntro": "Tại iDecal.vn – Chúng tôi cung cấp các sản phẩm Decal chất lượng có nguồn gốc xuất xứ rõ ràng, Dịch vụ xứng tầm và chuyên nghiệp",
+  "qualityPoints": [
+    "Chất lượng Decal nhập khẩu ( Avery , Oracal ,..) bền bỉ & đa dạng.",
+    "Mực in Decal Eco Solven thân thiện môi trường.",
+    "Tác phong nhân viên thân thiện & chuyên nghiệp.",
+    "Nhiều gói dịch vụ Decal để lựa chọn"
+  ],
+  "people": [
+    {
+      "name": "Anh Lê",
+      "role": "Hiện đang là Biên tập viên & Saleman của website: idecal.vn",
+      "image": "/images/Banner/Anh-le-idecal.jpg"
+    },
+    {
+      "name": "Xuân Linh",
+      "role": "CEO & Dicector",
+      "image": "/images/Banner/Xuan-Linh-Marketing-tai-iDecal.jpg"
+    },
+    {
+      "name": "Thanh Sang",
+      "role": "Kỹ thuật thi công Decal",
+      "image": "/images/Banner/Thanh-sang-nhan-vien-thi-cong-decal.png"
+    }
+  ],
+  "galleryTitle": "Hình ảnh thi công tiêu biểu",
+  "galleryLead": "Những công trình dịch vụ Decal trong hơn 5+ năm qua",
+  "gallery": [
+    {
+      "image": "https://idecal.vn/wp-content/uploads/2025/11/z7190601022128_897751503d3ca618ac7f2275294ff7fb-1024x768.jpg",
+      "caption": "Thi công dán Decal lưới mặt tiền Showroom Lnyk & Co Bình Dương"
+    },
+    {
+      "image": "https://idecal.vn/wp-content/uploads/2024/10/Thi-cong-dan-Decal-luoi-OGA.webp",
+      "caption": "Thi cong dan Decal luoi OGA"
+    },
+    {
+      "image": "https://idecal.vn/wp-content/uploads/2025/09/Thi-cong-LOGO-mica-gan-tren-khung-sat-1024x768.jpg",
+      "caption": "Thi công phim dán nội thất và Logo công ty Gate 1"
+    },
+    {
+      "image": "https://idecal.vn/wp-content/uploads/2025/05/Phim-TPF-bao-ve-son-o-to.jpg",
+      "caption": "Dán PPF bảo vệ xe"
+    },
+    {
+      "image": "https://idecal.vn/wp-content/uploads/2025/04/Thi-cong-dan-phim-cach-nhiet-nha-xuong-1024x768.jpg",
+      "caption": "Thi công dán Phim cách nhiêt tại Khu Chế Xuất Tân Thuận Quận 7"
+    },
+    {
+      "image": "https://idecal.vn/wp-content/uploads/2023/12/Decal-dan-kinh-nha-khoa-quang-cao-dich-vu-1024x621.jpg",
+      "caption": "Thi công Decal lưới dán kính Nha Khoa"
+    }
+  ]
+}

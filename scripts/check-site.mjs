@@ -28,11 +28,21 @@ for (const [collection, route] of [['blog', 'blog'], ['projects', 'du-an']]) {
 const home = await readFile(path.join(root, 'index.html'), 'utf8');
 const projectIndex = await readFile(path.join(root, 'du-an/index.html'), 'utf8');
 const projectFiles = (await walk(path.resolve('src/content/projects'))).filter(file => file.endsWith('.md'));
-const homeProjects = home.match(/class="project-card\b/g) ?? [];
 const indexProjects = projectIndex.match(/class="project-card\b/g) ?? [];
-assert.equal(homeProjects.length, Math.min(3, projectFiles.length), 'Home must display up to three projects');
 assert.equal(indexProjects.length, projectFiles.length, 'Project index must display every project');
 assert.ok(home.includes('href="/du-an"'), 'Home must link to the full project index');
+// The latest requested homepage reproduces the supplied public WordPress content,
+// which replaces the previous three-project homepage section.
+const sourceAudit = JSON.parse(await readFile('src/content/homepage/source-audit.json', 'utf8'));
+const sourceMain = home.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? '';
+const decodeText = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&apos;|&#039;/g, "'").replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_,code) => String.fromCodePoint(Number(code))).replace(/&#x([0-9a-f]+);/gi, (_,code) => String.fromCodePoint(parseInt(code,16)));
+const normalizeText = value => value.replace(/\s+/g, ' ').trim();
+const actualHomeText = normalizeText(decodeText(sourceMain.replace(/<[^>]*>/g, ' ')));
+assert.equal(actualHomeText, normalizeText(sourceAudit.mainText), 'Homepage must preserve every public text fragment from the supplied file');
+for (const id of sourceAudit.sections) assert.ok(home.includes(`id="${id}"`), `Missing source homepage section: ${id}`);
+assert.ok(!home.includes('id="wpadminbar"'), 'WordPress administration must not be published');
+assert.ok(!home.includes('google_gtagjs-js'), 'Saved administration/tracking scripts must not be imported');
+
 
 const regionSlugs = ['tp-hcm', 'vung-tau', 'dong-nai', 'nha-trang', 'quy-nhon', 'binh-duong', 'da-nang', 'ha-noi'];
 const regionIndex = await readFile(path.join(root, 'khu-vuc/index.html'), 'utf8');

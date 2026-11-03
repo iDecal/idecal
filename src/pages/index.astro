@@ -1,19 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Partners from '../components/Partners.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import About from '../components/About.astro';
-import Portfolio from '../components/Portfolio.astro';
-import FAQ from '../components/FAQ.astro';
-
+import SEO from '../components/SEO.astro';
+import '@fontsource-variable/lexend';
+import '../styles/homepage/source.css';
+import '../styles/homepage/compat.css';
+import publicHomepage from '../content/homepage/public.html?raw';
 ---
-
-<Layout title="iDecal - Chuyên gia Decal & Phim Cách Nhiệt">
-  <Hero />
-  <Partners />
-  <ServiceCard />
-  <Portfolio />
-  <About />
-  <FAQ />
-</Layout>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/images/idecal-logo.png" />
+    <SEO title="Dịch vụ Decal dán kính cách nhiệt & Decal mờ trang trí | iDecal©" description="Chúng tôi cung cấp giải pháp trang trí kính & Dịch vụ decal dán kính cách nhiệt toàn diện. iDecal chuyên giải pháp Decal trang trí & Chống nóng toàn diện." image="/images/Banner/Dich-vu-decal-dan-kinh-cach-nhiet.webp" />
+  </head>
+  <body class="home wp-singular page page-id-29325 wp-custom-logo wp-embed-responsive wp-theme-greenshift theme-greenshift gspbody gspb-bodyfront greenshift-theme">
+    <Fragment set:html={publicHomepage} />
+    <script>import '../scripts/homepage';</script>
+  </body>
+</html>

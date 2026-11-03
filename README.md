@@ -23,6 +23,8 @@ npm audit
 
 ## Nội dung và hình ảnh
 
+Trang chủ giữ nội dung/CSS từ HTML người dùng cung cấp; trang giới thiệu được thiết kế lại từ nội dung gốc. Xem [ghi chú nhập trang và ảnh nguồn](docs/homepage-import.md).
+
 Hệ màu dựa trên hai bản thiết kế HTML cũ: xem [bảng màu và cách áp dụng](docs/brand-design.md).
 
 - Catalogue: `src/data/products.json` (74 mẫu), `src/data/product-categories.json` (6 danh mục); kiểu dữ liệu và hàm dùng chung ở `src/data/catalogue.ts`.
