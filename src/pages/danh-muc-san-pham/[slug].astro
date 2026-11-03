@@ -1,5 +1,6 @@
 ---
 import '../../styles/catalogue.css';
+import BannerBenefits from '../../components/BannerBenefits.astro';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
@@ -14,7 +15,7 @@ const bannerImage = category.image.startsWith('/') ? category.image : '/images/B
   <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'}>
     <p slot="description">{category.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
-    <div slot="after" class="banner-benefits">{category.benefits.map(benefit=><div><h2>{benefit.title}</h2><p>{benefit.description}</p></div>)}</div>
+    <BannerBenefits slot="meta" benefits={category.benefits} />
   </PageBanner>
   <ProductCatalog items={items} category={category} />
 </Layout>
