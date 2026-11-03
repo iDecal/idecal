@@ -1,4 +1,5 @@
 ---
+import SubmenuIcon from './SubmenuIcon.astro';
 import { regions } from '../data/regions';
 import { productCategories } from '../data/catalogue';
 
@@ -55,8 +56,8 @@ const navLinks: NavLink[] = [
             {link.dropdown && (
               <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-border p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all transform translate-y-2 group-hover:translate-y-0">
                 {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-brand-navy/5 text-brand-navy font-bold mb-2' : 'text-secondary hover:bg-surface hover:text-brand-navy'}`}>
-                    {sub.name}
+                  <a href={sub.href} class={`flex items-center gap-3 px-3 py-2.5 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-brand-navy/5 text-brand-navy font-bold mb-2' : 'text-secondary hover:bg-surface hover:text-brand-navy'}`}>
+                    <SubmenuIcon href={sub.href} /><span>{sub.name}</span>
                   </a>
                 ))}
               </div>
@@ -79,26 +80,26 @@ const navLinks: NavLink[] = [
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" inert role="dialog" aria-modal="true" aria-label="Menu điều hướng" class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col h-screen">
-    <div class="p-6 flex justify-between items-center border-b border-border">
+  <div id="mobile-menu" hidden inert aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu điều hướng" class="fixed inset-0 bg-white z-[110] lg:hidden flex flex-col h-[100dvh] overflow-hidden">
+    <div class="shrink-0 px-5 py-4 flex justify-between items-center border-b border-border">
       <img src="/images/idecal-logo.png" alt="iDecal Logo" class="h-10 w-auto" />
       <button id="menu-close" aria-label="Đóng menu" class="w-12 h-12 bg-brand-pale rounded-full flex items-center justify-center text-brand-navy text-3xl">&times;</button>
     </div>
     
-    <div class="flex-1 overflow-y-auto px-8 py-6">
-      <div class="flex flex-col gap-4">
-        {navLinks.map((link) => (
+    <div class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-4">
+      <div class="flex flex-col gap-1">
+        {navLinks.map((link, index) => (
           <div class="flex flex-col border-b border-slate-50 pb-2">
             {link.dropdown ? (
               <>
-                <button aria-expanded="false" class="mobile-dropdown-btn text-lg font-medium text-secondary flex justify-between items-center text-left py-3">
+                <button aria-expanded="false" aria-controls={`mobile-submenu-${index}`} class="mobile-dropdown-btn text-lg font-medium text-secondary flex justify-between items-center text-left py-3">
                   {link.name}
                   <span class="text-brand-navy font-light">＋</span>
                 </button>
-                <div class="mobile-dropdown-content max-h-0 overflow-hidden transition-all duration-500 flex flex-col gap-2 bg-surface rounded-xl px-4">
+                <div id={`mobile-submenu-${index}`} hidden class="mobile-dropdown-content flex flex-col bg-surface rounded-xl px-3 py-2 mb-2">
                   {link.dropdown.map((sub) => (
-                    <a href={sub.href} class={`text-base font-medium py-3 tracking-wide ${sub.highlight ? 'text-brand-navy font-bold' : 'text-secondary'}`}>
-                      {sub.name}
+                    <a href={sub.href} class={`flex items-center gap-3 text-sm leading-relaxed font-medium py-2.5 ${sub.highlight ? 'text-brand-navy font-bold' : 'text-secondary'}`}>
+                      <SubmenuIcon href={sub.href} /><span>{sub.name}</span>
                     </a>
                   ))}
                 </div>
@@ -111,7 +112,7 @@ const navLinks: NavLink[] = [
       </div>
     </div>
 
-    <div class="p-6 border-t border-border bg-white">
+    <div class="shrink-0 p-5 border-t border-border bg-white mobile-menu-footer">
       <a href="tel:0866077040" class="block w-full rounded bg-brand-gradient px-4 py-3 text-center text-sm font-medium text-white transition-colors hover:brightness-110">
         Gọi 0866.077.040
       </a>
@@ -129,7 +130,8 @@ const navLinks: NavLink[] = [
     if (!mobileMenu || !menuToggle) return;
     const wasOpen = menuToggle.getAttribute('aria-expanded') === 'true';
     if (wasOpen === open) return;
-    mobileMenu.classList.toggle('translate-x-full', !open);
+    mobileMenu.hidden = !open;
+    mobileMenu.setAttribute('aria-hidden', String(!open));
     mobileMenu.inert = !open;
     menuToggle.setAttribute('aria-expanded', String(open));
     if (open) {
@@ -137,6 +139,13 @@ const navLinks: NavLink[] = [
       document.body.style.overflow = 'hidden';
       menuClose?.focus();
     } else {
+      mobileMenu.querySelectorAll<HTMLButtonElement>('.mobile-dropdown-btn').forEach(button => {
+        button.setAttribute('aria-expanded', 'false');
+        const panel = button.nextElementSibling as HTMLElement | null;
+        if (panel) { panel.hidden = true; panel.inert = true; }
+        const indicator = button.querySelector('span');
+        if (indicator) indicator.textContent = '＋';
+      });
       document.body.style.overflow = previousOverflow;
       menuToggle.focus();
     }
@@ -170,7 +179,15 @@ const navLinks: NavLink[] = [
       if (!content) return;
       const open = button.getAttribute('aria-expanded') !== 'true';
       button.setAttribute('aria-expanded', String(open));
-      content.style.maxHeight = open ? `${content.scrollHeight}px` : '0px';
+      document.querySelectorAll<HTMLButtonElement>('.mobile-dropdown-btn').forEach(other => {
+        if (other === button) return;
+        other.setAttribute('aria-expanded', 'false');
+        const panel = other.nextElementSibling as HTMLElement | null;
+        if (panel) { panel.hidden = true; panel.inert = true; }
+        const indicator = other.querySelector('span');
+        if (indicator) indicator.textContent = '＋';
+      });
+      content.hidden = !open;
       content.inert = !open;
       const icon = button.querySelector('span');
       if (icon) icon.textContent = open ? '－' : '＋';
@@ -179,3 +196,8 @@ const navLinks: NavLink[] = [
     if (content) content.inert = true;
   });
 </script>
+
+<style>
+  #mobile-menu[hidden], .mobile-dropdown-content[hidden] { display: none !important; }
+  .mobile-menu-footer { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+</style>
