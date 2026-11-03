@@ -1,5 +1,6 @@
 ---
 import '../../styles/catalogue.css';
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
 import { productCategories, productsInCategory, type ProductCategory } from '../../data/catalogue';
@@ -7,17 +8,14 @@ export function getStaticPaths() { return productCategories.map(category => ({ p
 interface Props { category: ProductCategory; }
 const { category } = Astro.props;
 const items = productsInCategory(category.slug);
+const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';
 ---
 <Layout title={`${category.name} | Mẫu & giá tham khảo iDecal`} description={category.description}>
-  <section class="catalogue-hero py-12 md:py-16">
-    <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap gap-2 text-sm text-text-muted"><a href="/" class="text-primary">Trang chủ</a><span aria-hidden="true">/</span><a href="/san-pham" class="text-primary">Sản phẩm</a><span aria-hidden="true">/</span><span aria-current="page">{category.name}</span></nav>
-      <p class="!mb-4 text-xs uppercase tracking-widest text-primary">{category.name}</p><h1 class="max-w-4xl text-3xl font-semibold brand-heading md:text-5xl">{category.headline}</h1>
-      <p class="mb-8 max-w-3xl text-lg text-text-muted">{category.description}</p>
-      <div class="flex flex-wrap items-center gap-5"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></div>
-      <div class="mt-10 grid gap-5 border-t border-border pt-8 sm:grid-cols-2 lg:grid-cols-4">{category.benefits.map(benefit => <div><h2 class="!mb-2 text-base font-medium text-brand-navy">{benefit.title}</h2><p class="!mb-0 text-sm text-text-muted">{benefit.description}</p></div>)}</div>
-    </div>
-  </section>
+  <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'} breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Sản phẩm',href:'/san-pham'},{label:category.name}]}>
+    <p slot="description">{category.description}</p>
+    <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
+    <div slot="after" class="banner-benefits">{category.benefits.map(benefit=><div><h2>{benefit.title}</h2><p>{benefit.description}</p></div>)}</div>
+  </PageBanner>
   <ProductCatalog items={items} category={category} />
   <section class="bg-surface py-14 md:py-20"><div class="container max-w-5xl"><p class="!mb-3 text-xs uppercase tracking-widest text-primary">Bảng giá tham khảo</p><h2 class="brand-heading">{category.priceTitle}</h2><p>{category.priceNote}</p><div class="overflow-x-auto rounded-xl border border-border bg-white"><table class="w-full text-left text-sm"><caption class="sr-only">{category.priceTitle}</caption><thead class="bg-brand-pale/40"><tr><th scope="col" class="p-4 font-medium">Hạng mục</th><th scope="col" class="p-4 font-medium">Giá tham khảo</th></tr></thead><tbody>{category.prices.map(row => <tr class="border-t border-border"><th scope="row" class="p-4 font-normal">{row.name}</th><td class="p-4 font-medium text-brand-navy">{row.price === 'Liên hệ báo giá' ? '—' : row.price}</td></tr>)}</tbody></table></div><p class="mt-4 text-xs">Giá theo catalogue đính kèm; giá hiện hành và các phần vật tư, thiết kế, tháo lớp cũ, công thi công được xác nhận theo yêu cầu thực tế.</p><a href="https://zalo.me/0866077040" class="btn-primary-solid mt-3">Nhận báo giá cho công trình</a></div></section>
   <section class="container py-14 md:py-20"><h2 class="brand-heading text-center">3 bước từ tư vấn đến thi công</h2><div class="grid gap-6 md:grid-cols-3">{[{title:'Gửi nhu cầu & hiện trạng',text:'Chia sẻ ảnh, kích thước, địa chỉ và mẫu bạn quan tâm.'},{title:'Chọn mẫu & thống nhất báo giá',text:'Xác nhận quy cách, vật liệu, khối lượng và phạm vi công việc.'},{title:'Sản xuất & bàn giao',text:'Thống nhất lịch thực hiện, kiểm tra hoàn thiện và hướng dẫn sử dụng.'}].map((step,index) => <div class="rounded-2xl border border-border p-6"><span class="mb-4 block text-sm font-medium text-primary">0{index+1}</span><h3 class="text-lg font-semibold">{step.title}</h3><p class="!mb-0 text-sm">{step.text}</p></div>)}</div><a href={`/dich-vu/${category.service}`} class="btn-idecal-bold mt-8">Xem dịch vụ thi công liên quan →</a></section>

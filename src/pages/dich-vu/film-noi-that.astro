@@ -1,4 +1,5 @@
 ---
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 
 const interiorFilms = [
@@ -28,25 +29,12 @@ const faqs = [
 
 <Layout title="Film Nội Thất - Furniture Wrap | Làm Mới Không Gian Không Cần Thay Đồ">
 
-  <section class="py-24 brand-dark bg-brand-navy bg-brand-pattern relative overflow-hidden">
-    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
-      <div class="animate-fade-up">
-        <h6 class="text-brand-highlight tracking-[0.3em] font-bold uppercase">Interior Transformation</h6>
-        <h1 class="!text-white">Film Nội Thất - Giải Pháp "Refresh" Không Gian Đẳng Cấp</h1>
-        <p class="text-text-muted text-lg">
+  <PageBanner title={"Film Nội Thất - Giải Pháp \"Refresh\" Không Gian Đẳng Cấp"} eyebrow="Dịch vụ iDecal" image="/images/film-noi-that/Phim-dan-noi-that-cao-cap.jpg" imageAlt="Dán film nội thất tủ bếp" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ',href:'/dich-vu'},{label:"Film nội thất"}]}>
+    <p slot="description">
           Thay đổi diện mạo <strong>tủ bếp, cửa, thang máy</strong> bằng Film cao cấp Octki, Infeel. Thi công sạch sẽ, không bụi bẩn, không mùi sơn, hoàn thiện ngay trong ngày.
         </p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#samples" class="btn-primary-solid">Xem bảng màu thực tế</a>
-          <a href="https://zalo.me/0866077040" class="btn-idecal-bold text-white border-white hover:text-primary transition-all">Báo giá qua Zalo</a>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="absolute -inset-10 bg-primary/10 rounded-full blur-3xl opacity-40"></div>
-        <img src="/images/film-noi-that/Phim-dan-noi-that-cao-cap.jpg" alt="Dán film nội thất tủ bếp" class="img-brand w-full h-[500px] object-cover relative z-10 border-l-8 border-primary" />
-      </div>
-    </div>
-  </section>
+    <Fragment slot="actions"><a class="btn-primary-solid" href="#samples">Xem bảng màu thực tế</a><a class="btn-idecal-bold" href="https://zalo.me/0866077040">Báo giá qua Zalo</a></Fragment>
+  </PageBanner>
 
   <section id="samples" class="py-24 bg-surface">
     <div class="container">

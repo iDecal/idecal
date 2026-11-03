@@ -1,26 +1,17 @@
 ---
 import '../../styles/catalogue.css';
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
 import { products, productCategories, productsInCategory } from '../../data/catalogue';
 ---
 <Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description="Khám phá 74 mẫu trong 6 nhóm sản phẩm iDecal: decal mờ dán kính, phim cách nhiệt, film nội thất, cắt in logo, open time và quảng cáo. Xem mẫu và tư vấn báo giá.">
-  <section class="catalogue-hero py-12 md:py-16">
-    <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-8 flex gap-2 text-sm text-text-muted"><a href="/" class="text-primary">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Sản phẩm</span></nav>
-      <div class="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
-        <div>
-          <p class="!mb-4 text-xs uppercase tracking-widest text-primary">Sản phẩm iDecal</p>
-          <h1 class="text-3xl font-semibold brand-heading md:text-5xl">Decal dán kính, phim cách nhiệt & film nội thất</h1>
-          <p class="mb-8 max-w-2xl text-text-muted">6 nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo, hoặc tìm nhanh mẫu bạn cần trong catalogue.</p>
-          <div class="flex flex-wrap items-center gap-5"><a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm <span aria-hidden="true">↓</span></a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></div>
-          <div class="mt-8 flex gap-8 border-t border-border pt-6"><div><span class="block text-3xl font-semibold text-brand-navy">{products.length}</span><span class="text-xs text-text-muted">mẫu trong catalogue</span></div><div><span class="block text-3xl font-semibold text-brand-navy">{productCategories.length}</span><span class="text-xs text-text-muted">nhóm sản phẩm</span></div></div>
-        </div>
-        <div class="aspect-square overflow-hidden rounded-2xl border border-border"><ProductImage src={productCategories[0].image} alt="Decal mờ chuyển màu cho vách kính văn phòng" eager /></div>
-      </div>
-    </div>
-  </section>
+  <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productCategories[0].image} imageAlt="Decal mờ chuyển màu cho vách kính văn phòng" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Sản phẩm'}]}>
+    <p slot="description">6 nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
+    <Fragment slot="actions"><a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
+    <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{productCategories.length}</strong> nhóm sản phẩm</span></Fragment>
+  </PageBanner>
   <section id="danh-muc" class="container scroll-mt-24 py-14 md:py-20">
     <p class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

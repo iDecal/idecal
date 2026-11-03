@@ -1,4 +1,5 @@
 ---
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import BlogHome from '../../components/BlogHome.astro';
 const officeServices = [
@@ -25,24 +26,12 @@ const officeServices = [
 
 <Layout title="Decal Dán Kính Văn Phòng | Thiết Kế & Thi Công Trọn Gói">
 
-  <section class="py-24 brand-dark bg-brand-navy bg-brand-pattern relative">
-    <div class="container grid lg:grid-cols-2 gap-12 items-center">
-      <div class="animate-fade-up">
-        <h6 class="text-brand-highlight tracking-[0.3em] font-bold uppercase">Professional Workspace</h6>
-        <h1 class="!text-white">Nâng Tầm Không Gian Làm Việc Với Decal Kính</h1>
-        <p class="text-brand-inverse text-lg">
+  <PageBanner title="Nâng Tầm Không Gian Làm Việc Với Decal Kính" eyebrow="Dịch vụ iDecal" image="/images/Banner/Dich-vu-dan-Decal-kinh-mo-van-phong-TP-HCM.png" imageAlt="Văn phòng dán decal kính mờ" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ',href:'/dich-vu'},{label:"Decal dán kính văn phòng"}]}>
+    <p slot="description">
           iDecal chuyên cung cấp giải pháp <strong>decal mờ, cắt logo, trang trí vách kính</strong> chuyên nghiệp cho văn phòng. Giúp tạo sự riêng tư, tăng tính thẩm mỹ và nhận diện thương hiệu cho không gian làm việc.
         </p>
-        <div class="mt-8">
-          <a href="/lien-he-idecal" class="btn-primary-solid">Nhận tư vấn mẫu & Báo giá</a>
-        </div>
-      </div>
-      <div class="relative group">
-        <div class="absolute -inset-4 bg-primary/20 rounded-[3rem] blur-2xl group-hover:bg-primary/30 transition-all"></div>
-        <img src="/images/Banner/Dich-vu-dan-Decal-kinh-mo-van-phong-TP-HCM.png" alt="Văn phòng dán decal kính mờ" class="img-brand w-full h-[450px] object-cover relative z-10" />
-      </div>
-    </div>
-  </section>
+    <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Nhận tư vấn mẫu &amp; Báo giá</a></Fragment>
+  </PageBanner>
 
   <section class="py-24 bg-white">
     <div class="container">

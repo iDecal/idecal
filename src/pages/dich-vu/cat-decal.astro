@@ -1,4 +1,5 @@
 ---
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import content from '../../data/decal-cutting.json';
 import '../../styles/catalogue.css';
@@ -14,22 +15,11 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
 <Layout title="Dịch vụ cắt Decal theo yêu cầu tại TP.HCM | iDecal" description="Cắt chữ, logo, tem nhãn và Decal trang trí theo yêu cầu. Xem chất liệu, bảng giá tham khảo, quy trình gửi file và tư vấn tại iDecal." image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg">
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema).replaceAll('<', '\\u003c')} />
   <div class="cutting-page">
-    <section class="catalogue-hero cutting-hero">
-      <div class="container">
-        <nav aria-label="Đường dẫn" class="cutting-breadcrumb"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><a href="/dich-vu">Dịch vụ</a><span aria-hidden="true">/</span><span aria-current="page">Cắt Decal</span></nav>
-        <div class="cutting-hero-grid">
-          <div>
-            <span class="cutting-eyebrow">Thiết kế · Cắt · Giao hàng</span>
-            <h1 class="brand-heading">{content.title}</h1>
-            <p class="cutting-lead">{content.intro}</p>
-            <p class="cutting-description">{content.description}</p>
-            <div class="cutting-actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Gửi file qua Zalo <svg aria-hidden="true" class="cutting-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a><a href="#bang-gia" class="btn-idecal-bold">Xem bảng giá ↓</a></div>
-            <p class="cutting-timing"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hoàn thành từ 1–24 giờ, tùy khối lượng và yêu cầu kỹ thuật.</p>
-          </div>
-          <figure class="cutting-hero-photo"><img src="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" alt="Gia công cắt chữ Decal bằng máy cắt vi tính" width="900" height="900" fetchpriority="high" /><figcaption>Cắt theo file · Tùy chỉnh kích thước</figcaption></figure>
-        </div>
-      </div>
-    </section>
+    <PageBanner title={content.title} eyebrow="Thiết kế · Cắt · Giao hàng" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ Decal bằng máy cắt vi tính" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ',href:'/dich-vu'},{label:'Cắt Decal'}]}>
+      <Fragment slot="description"><p>{content.intro}</p><p>{content.description}</p></Fragment>
+      <Fragment slot="actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Gửi file qua Zalo</a><a href="#bang-gia" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
+      <p slot="meta">Hoàn thành từ 1–24 giờ, tùy khối lượng và yêu cầu kỹ thuật.</p>
+    </PageBanner>
     <nav aria-label="Nội dung dịch vụ cắt Decal" class="cutting-jump"><div class="container"><a href="#san-pham-dich-vu">Dịch vụ</a><a href="#chat-lieu">Chất liệu</a><a href="#bang-gia">Bảng giá</a><a href="#quy-trinh">Quy trình</a><a href="#cau-hoi">Câu hỏi thường gặp</a></div></nav>
     <section id="san-pham-dich-vu" class="container cutting-section">
       <div class="cutting-section-heading"><p class="cutting-kicker">Sản phẩm & dịch vụ</p><h2 class="brand-heading">Bạn cần cắt loại Decal nào?</h2><p>Đa dạng các loại Decal đáp ứng nhu cầu biển hiệu, tem nhãn và trang trí.</p></div>

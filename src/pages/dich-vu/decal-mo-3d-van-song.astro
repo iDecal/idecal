@@ -1,4 +1,5 @@
 ---
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 
 // 1. Khai báo tất cả biến và dữ liệu ở đây
@@ -35,27 +36,12 @@ const products = [
 
 <Layout title="Decal Mờ 3D Vân Sóng | Giải Pháp Trang Trí Vách Kính Sang Trọng">
 
-  <section class="py-24 brand-dark bg-brand-navy bg-brand-pattern relative overflow-hidden">
-    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
-      <div class="animate-fade-up">
-        <h6 class="text-brand-highlight tracking-[0.3em] font-bold uppercase">Luxury Glass Decoration</h6>
-        <h1 class="!text-white">Decal Mờ 3D Vân Sóng - Nghệ Thuật Trên Kính</h1>
-        <p class="text-brand-inverse text-lg">
+  <PageBanner title="Decal Mờ 3D Vân Sóng - Nghệ Thuật Trên Kính" eyebrow="Dịch vụ iDecal" image="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp" imageAlt="Decal mờ 3d vân sóng" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ',href:'/dich-vu'},{label:"Decal mờ 3D vân sóng"}]}>
+    <p slot="description">
           Dòng sản phẩm decal cao cấp với họa tiết vân sóng dập nổi tinh tế. Giải pháp hoàn hảo cho <strong>vách kính văn phòng, phòng tắm và cửa ra vào</strong>, mang lại vẻ đẹp hiện đại và đẳng cấp cho không gian.
         </p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="/lien-he-idecal" class="btn-primary-solid">Nhận báo giá thi công</a>
-          <a href="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp" class="btn-idecal-bold text-white border-white hover:text-primary transition-all">Xem mẫu thực tế</a>
-        </div>
-      </div>
-      <div class="relative group">
-        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
-        <div class="rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
-          <img src="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp" alt="Decal mờ 3d vân sóng" class="w-full h-[500px] object-cover" />
-        </div>
-      </div>
-    </div>
-  </section>
+    <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Nhận báo giá thi công</a><a class="btn-idecal-bold" href="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp">Xem mẫu thực tế</a></Fragment>
+  </PageBanner>
 
   <section class="py-24 bg-white">
     <div class="container">

@@ -1,5 +1,6 @@
 ---
 import ServicePricing from '../../components/ServicePricing.astro';
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/catalogue.css';
 const services = [
@@ -12,15 +13,10 @@ const services = [
 ];
 ---
 <Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá 6 dịch vụ iDecal: Decal văn phòng, phim cách nhiệt, Decal 3D, cắt chữ logo, film nội thất và in Decal quảng cáo.">
-  <section class="catalogue-hero py-12 md:py-16">
-    <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-7 flex gap-2 text-sm text-text-muted"><a href="/" class="text-primary">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Dịch vụ</span></nav>
-      <p class="!mb-4 text-xs font-medium uppercase tracking-widest text-primary">Dịch vụ iDecal</p>
-      <h1 class="brand-heading max-w-4xl text-3xl font-semibold md:text-5xl">Thiết kế, in ấn & thi công Decal</h1>
-      <p class="mb-7 max-w-2xl text-base leading-relaxed">Từ trang trí kính đến làm mới nội thất. Chọn dịch vụ phù hợp để xem mẫu, tìm hiểu cách thực hiện và nhận tư vấn cho không gian của bạn.</p>
-      <div class="flex flex-wrap items-center gap-5"><a href="#cac-dich-vu" class="btn-primary-solid">Khám phá dịch vụ ↓</a><a href="#bang-gia-dich-vu" class="btn-idecal-bold">Xem bảng giá ↓</a></div>
-    </div>
-  </section>
+  <PageBanner title="Thiết kế, in ấn & thi công Decal" eyebrow="Dịch vụ iDecal" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ và logo Decal" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ'}]}>
+    <p slot="description">Từ trang trí kính đến làm mới nội thất. Chọn dịch vụ phù hợp để xem mẫu, tìm hiểu cách thực hiện và nhận tư vấn cho không gian của bạn.</p>
+    <Fragment slot="actions"><a href="#cac-dich-vu" class="btn-primary-solid">Khám phá dịch vụ ↓</a><a href="#bang-gia-dich-vu" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
+  </PageBanner>
   <section id="cac-dich-vu" class="container scroll-mt-28 py-10 md:py-14">
     <h2 class="brand-heading mb-7 text-2xl md:text-3xl">Giải pháp cho từng không gian</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

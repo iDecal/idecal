@@ -1,4 +1,5 @@
 ---
+import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 
 const products = [
@@ -31,25 +32,12 @@ const faqs = [
 
 <Layout title="Phim Cách Nhiệt Nhà Kính | Giải Pháp Chống Nóng Văn Phòng & Nhà Ở">
   
-  <section class="py-24 brand-dark bg-brand-navy bg-brand-pattern relative overflow-hidden">
-    <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
-      <div class="animate-fade-up">
-        <h6 class="text-brand-highlight tracking-[0.3em] font-bold">Heat Control Solution</h6>
-        <h1 class="!text-white">Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp</h1>
-        <p class="text-brand-inverse text-lg">
+  <PageBanner title="Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp" eyebrow="Dịch vụ iDecal" image="/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp" imageAlt="Thi công phim cách nhiệt" breadcrumbs={[{label:'Trang chủ',href:'/'},{label:'Dịch vụ',href:'/dich-vu'},{label:"Phim cách nhiệt"}]}>
+    <p slot="description">
           Giải pháp chống nóng toàn diện cho <strong>văn phòng, nhà ở và showroom</strong>. Giảm tới 80% sức nóng mặt trời, bảo vệ sức khỏe và tiết kiệm 30% điện năng máy lạnh.
         </p>
-        <div class="flex flex-wrap gap-4 mt-8">
-          <a href="/lien-he-idecal" class="btn-primary-solid">Liên hệ báo giá ngay</a>
-          <a href="#products" class="btn-idecal-bold text-white border-white transition-all hover:text-primary hover:border-primary">Xem bảng giá sản phẩm</a>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
-        <img src="/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp" alt="Thi công phim cách nhiệt" class="img-brand w-full h-[450px] object-cover relative z-10" />
-      </div>
-    </div>
-  </section>
+    <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ báo giá ngay</a><a class="btn-idecal-bold" href="#products">Xem bảng giá sản phẩm</a></Fragment>
+  </PageBanner>
 
   <section class="py-24 bg-white">
     <div class="container">
