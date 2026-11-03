@@ -1,4 +1,5 @@
 ---
+import ServicePricing from '../../components/ServicePricing.astro';
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/catalogue.css';
 const services = [
@@ -17,7 +18,7 @@ const services = [
       <p class="!mb-4 text-xs font-medium uppercase tracking-widest text-primary">Dịch vụ iDecal</p>
       <h1 class="brand-heading max-w-4xl text-3xl font-semibold md:text-5xl">Thiết kế, in ấn & thi công Decal</h1>
       <p class="mb-7 max-w-2xl text-base leading-relaxed">Từ trang trí kính đến làm mới nội thất. Chọn dịch vụ phù hợp để xem mẫu, tìm hiểu cách thực hiện và nhận tư vấn cho không gian của bạn.</p>
-      <div class="flex flex-wrap items-center gap-5"><a href="#cac-dich-vu" class="btn-primary-solid">Khám phá dịch vụ ↓</a><a href="/lien-he-idecal" class="btn-idecal-bold">Trao đổi nhu cầu →</a></div>
+      <div class="flex flex-wrap items-center gap-5"><a href="#cac-dich-vu" class="btn-primary-solid">Khám phá dịch vụ ↓</a><a href="#bang-gia-dich-vu" class="btn-idecal-bold">Xem bảng giá ↓</a></div>
     </div>
   </section>
   <section id="cac-dich-vu" class="container scroll-mt-28 py-10 md:py-14">
@@ -30,4 +31,5 @@ const services = [
     </div>
   </section>
 
+  <ServicePricing />
 </Layout>

@@ -1,0 +1,42 @@
+{
+  "title": "Bảng giá dịch vụ Decal",
+  "sourceTitle": "Bảng giá dịch vụ Decal dán kính (mới nhất 2026)",
+  "intro": "Giá tham khảo theo tài liệu iDecal 2026. Từng nhóm có phạm vi và đơn vị tính khác nhau; giá thực tế được xác nhận theo vật liệu, kích thước và điều kiện thi công.",
+  "groups": [
+    {
+      "id":"decal-mo","title":"Decal mờ dán kính","scope":"Trọn gói vật liệu & nhân công","description":"Dùng cho văn phòng, nhà ở và căn hộ. Giá bao gồm vật liệu Decal mờ và nhân công dán.",
+      "columns":["Hạng mục","Giá / m²"],
+      "rows":[["Decal mờ trơn","120.000 – 150.000đ"],["Decal mờ cắt sọc","165.000đ"],["Decal mờ cắt họa tiết","280.000 – 320.000đ"],["Decal mờ in Graphic","210.000 – 280.000đ"]],
+      "notes":["Chưa bao gồm tháo gỡ và vệ sinh Decal cũ: 20.000–40.000đ/m², tùy khu vực trong nhà hay ngoài trời.","Chưa bao gồm 8% VAT theo tài liệu."],
+      "service":"decal-dan-kinh-van-phong","linkText":"Xem dịch vụ Decal dán kính"
+    },
+    {
+      "id":"film-noi-that","title":"Film dán nội thất","scope":"Giá vật tư · Chưa gồm công dán","description":"Quy cách cuộn: 1,22m × 30m. Đơn vị giá /m được giữ theo tài liệu; chưa bao gồm nhân công dán.",
+      "columns":["Loại vân","Giá / m"],
+      "rows":[["Vân gỗ","255.000đ"],["Kim loại","550.000 – 780.000đ"],["Vân vải","Chưa cập nhật"],["Vân giả xi măng, bê tông","Chưa cập nhật"],["Vân đá Marble","Chưa cập nhật"],["Vân đơn sắc","Chưa cập nhật"]],
+      "notes":["Các mục chưa có giá trong tài liệu được để trống số liệu, cần xác nhận theo mã vật liệu."],
+      "service":"film-noi-that","linkText":"Xem dịch vụ film nội thất"
+    },
+    {
+      "id":"phim-cach-nhiet","title":"Phim cách nhiệt nhà kính","scope":"Mốc giá trong tài liệu: 03/2025","description":"Mức giá được phân theo nhóm sản phẩm. Thương hiệu, thông số kỹ thuật và loại phim ảnh hưởng đến giá thực tế.",
+      "columns":["Nhóm sản phẩm","Giá / m²"],
+      "rows":[["Giá rẻ","190.000 – 220.000đ"],["Trung bình","250.000 – 380.000đ"],["Cao cấp","Trên 420.000đ"]],
+      "notes":["Phần phim cách nhiệt trong file ghi cập nhật tháng 3/2025, chưa phải báo giá đã xác nhận tại thời điểm đặt hàng.","Phạm vi vật tư, nhân công và thuế cần được xác nhận theo mẫu phim và công trình."],
+      "service":"phim-cach-nhiet","linkText":"Xem dịch vụ phim cách nhiệt"
+    },
+    {
+      "id":"cat-chu","title":"Cắt chữ Decal theo yêu cầu","scope":"Đo đạc · Thiết kế · In cắt · Thi công","description":"Giá hoàn thiện theo khổ cắt và số lượng. Các mức trọn gói và giá theo mét dài được phân biệt trong bảng.",
+      "columns":["Số lượng","Khổ cắt 0,6m","Khổ cắt 1,2m"],
+      "rows":[["Dưới 1m","Trọn gói 500.000đ","Trọn gói 800.000đ"],["1–3m","Trọn gói 800.000đ","Trọn gói 1.100.000đ"],["3–5m","280.000đ / mét dài","380.000đ / mét dài"],["5–10m","220.000đ / mét dài","330.000đ / mét dài"],["10–20m","180.000đ / mét dài","270.000đ / mét dài"],["20–50m","150.000đ / mét dài","200.000đ / mét dài"],["Trên 50m","Liên hệ giá tốt","Liên hệ giá tốt"]],
+      "notes":["Theo tài liệu, giá đã bao gồm đo đạc, thiết kế, in cắt và thi công.","Chưa bao gồm 8% VAT theo tài liệu."],
+      "service":"cat-decal","linkText":"Xem dịch vụ cắt Decal"
+    }
+  ],
+  "factors":[
+    {"title":"Chất liệu","text":"Decal thường, dòng cao cấp và vật liệu đặc biệt có mức giá khác nhau."},
+    {"title":"Diện tích & khối lượng","text":"Đơn hàng lớn có thể có giá theo quy mô; đơn nhỏ có thể tính trọn gói để bao gồm đi lại và nhân công."},
+    {"title":"Bề mặt & vị trí thi công","text":"Bề mặt cong, gồ ghề hoặc vị trí trên cao làm thay đổi kỹ thuật, thời gian và chi phí thực hiện."},
+    {"title":"Thiết kế & công nghệ in","text":"Độ phức tạp của mẫu cắt, số màu, loại mực và nhu cầu chỉnh sửa file ảnh hưởng đến chi phí."},
+    {"title":"Tháo lớp cũ & vệ sinh","text":"Công bóc Decal cũ, xử lý keo và làm sạch bề mặt thường được tính riêng theo hiện trạng."}
+  ]
+}
