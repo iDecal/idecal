@@ -38,8 +38,9 @@ light: '#DDF7F5',
 		},
 
 		fontFamily: {
-			body: ['Roboto', 'sans-serif'],
-			sans: ['Roboto', 'sans-serif'],
+			body: ['Lexend Variable', 'sans-serif'],
+			mono: ['Lexend Variable', 'sans-serif'],
+			sans: ['Lexend Variable', 'sans-serif'],
 		},
 
 		fontSize: {

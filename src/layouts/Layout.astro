@@ -2,6 +2,7 @@
 import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '@fontsource-variable/lexend';
 import '../styles/global.css';
 interface Props {
 	title: string;
@@ -20,10 +21,6 @@ const { title, image, description = "Dịch vụ decal dán kính cách nhiệt 
 		<link rel="icon" type="image/png" href="/images/idecal-logo.png" />
 		<meta name="generator" content={Astro.generator} />
 		<SEO title={title} description={description} image={image} />
-		
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 	</head>
 	<body class="bg-background font-body text-secondary">
 		<Header />
@@ -37,11 +34,6 @@ const { title, image, description = "Dịch vụ decal dán kính cách nhiệt 
 </html>
 
 <style is:global>
-	/* Định nghĩa Font cho tiêu đề trên toàn bộ trang */
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Be Vietnam Pro', sans-serif;
-	}
-	
 	/* Đảm bảo trang luôn đủ chiều cao để Footer nằm ở dưới cùng */
 	body {
 		display: flex;
