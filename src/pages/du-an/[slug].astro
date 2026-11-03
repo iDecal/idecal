@@ -1,123 +1,34 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
 import { getCollection, render } from 'astro:content';
-
+import '../../styles/project-detail.css';
 export async function getStaticPaths() {
-  const entries = await getCollection('projects');
-  return entries.map(entry => ({
-    // Content Layer dùng id làm đường dẫn bài viết
-    params: { slug: entry.id }, 
-    props: { entry },
-  }));
+  return (await getCollection('projects')).map(entry => ({ params: { slug: entry.id }, props: { entry } }));
 }
-
 const { entry } = Astro.props;
-// Render nội dung từ Content Layer
 const { Content } = await render(entry);
-
-const gallery = entry.data.gallery || [];
-
-const allProjects = await getCollection('projects');
-const related = allProjects
-  .filter(p => p.data.category === entry.data.category && p.id !== entry.id)
-  .slice(0, 3);
+const gallery = [...new Set(entry.data.gallery)].filter(image => image !== entry.data.image);
+const related = (await getCollection('projects'))
+  .filter(project => project.id !== entry.id)
+  .sort((a,b) => Number(b.data.category === entry.data.category) - Number(a.data.category === entry.data.category) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0,4);
+const bookingUrl = '/dat-dich-vu?dich-vu=dich-vu-tron-goi';
 ---
-
 <Layout title={`${entry.data.title} | iDecal`} description={entry.data.description} image={entry.data.image}>
-  <div class="bg-white pt-32 pb-20">
-    <div class="max-w-7xl mx-auto px-6">
-      
-      <header class="mb-12">
-
-        <h1 class="text-3xl md:text-5xl font-bold text-brand-navy leading-tight max-w-4xl">
-          {entry.data.title}
-        </h1>
-      </header>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        
-        <div class="lg:col-span-8">
-          <div class="rounded-2xl overflow-hidden shadow-lg mb-10">
-             <img src={entry.data.image} alt={entry.data.title} class="w-full h-auto object-cover" />
-          </div>
-
-          <article class="prose prose-slate prose-lg max-w-none mb-16 prose-headings:text-brand-navy prose-a:text-primary">
-            <Content />
-          </article>
-
-          {gallery.length > 0 && (
-            <section class="mb-16">
-              <h3 class="text-xl font-bold text-brand-navy mb-8 uppercase tracking-wider">Hình ảnh thực tế công trình</h3>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {gallery.map((img, index) => (
-                  <div class="overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                    <img src={img} alt={`Công trình iDecal ${index + 1}`} class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-
-        <div class="lg:col-span-4">
-          <div class="sticky top-32 space-y-8">
-            
-            <div class="bg-surface rounded-2xl p-8 border border-border">
-              <h3 class="text-brand-navy font-bold uppercase tracking-widest text-xs mb-6 pb-4 border-b border-border">Thông tin dự án</h3>
-              <div class="space-y-6">
-                <div>
-                  <p class="text-text-muted text-[10px] uppercase font-bold mb-1">Khách hàng</p>
-                  <p class="text-brand-navy font-bold tracking-tight">{entry.data.client || "Đối tác iDecal"}</p>
-                </div>
-                <div>
-                  <p class="text-text-muted text-[10px] uppercase font-bold mb-1">Hạng mục</p>
-                  <p class="text-brand-navy font-bold tracking-tight">{entry.data.service || "Thi công trọn gói"}</p>
-                </div>
-                <div>
-                  <p class="text-text-muted text-[10px] uppercase font-bold mb-1">Khu vực</p>
-                  <p class="text-brand-navy font-bold tracking-tight">{entry.data.location || "TP. Hồ Chí Minh"}</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="brand-dark bg-brand-navy rounded-2xl p-8 text-white shadow-xl shadow-brand-navy/20 relative overflow-hidden">
-              <div class="absolute -top-10 -right-10 w-32 h-32 bg-white/5 rounded-full"></div>
-              <h3 class="text-xl font-bold mb-4 relative z-10">Tư vấn báo giá</h3>
-              <p class="text-white/70 text-sm mb-8 font-light leading-relaxed relative z-10">
-                Anh Nhân và đội ngũ iDecal sẵn sàng khảo sát và tư vấn mẫu tận nơi miễn phí.
-              </p>
-              <div class="space-y-4 relative z-10">
-                <a href="tel:0866077040" class="flex items-center justify-center gap-3 bg-brand-gradient text-white w-full py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:brightness-110 transition-all shadow-lg shadow-brand-start/20">
-                  Gọi: 0866.077.040
-                </a>
-                <a href="https://zalo.me/0866077040" target="_blank" class="flex items-center justify-center border border-white/20 w-full py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-white/10 transition-all">
-                  Chat qua Zalo
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      {related.length > 0 && (
-        <section class="pt-20 mt-20 border-t border-border">
-          <div class="flex justify-between items-end mb-10">
-            <h3 class="text-2xl font-bold text-brand-navy">Công trình tương tự</h3>
-            <a href="/du-an" class="text-xs font-bold text-text-muted uppercase tracking-widest hover:text-brand-navy">Tất cả dự án →</a>
-          </div>
-          <div class="grid md:grid-cols-3 gap-8">
-            {related.map(p => (
-              <a href={`/du-an/${p.id}`} class="group">
-                <div class="aspect-[4/3] rounded-xl overflow-hidden mb-4 shadow-sm border border-border">
-                  <img src={p.data.image} alt={p.data.title} class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
-                </div>
-                <h4 class="text-sm font-bold text-brand-navy group-hover:text-primary transition-colors">{p.data.title}</h4>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
-    </div>
+  <div class="project-detail">
+    <section class="project-detail-hero"><div class="container project-detail-hero-grid">
+      <div><p class="project-detail-badge">{entry.data.category}</p><h1 class="brand-heading">{entry.data.title}</h1><p class="project-detail-intro">{entry.data.description}</p><a href="#hinh-anh" class="project-detail-link">Xem hình ảnh thực tế <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16m-6-6 6 6 6-6" /></svg></a></div>
+      <div class="project-detail-facts"><h2>Thông tin công trình</h2><dl><div><dt>Khách hàng</dt><dd>{entry.data.client}</dd></div><div><dt>Loại công trình</dt><dd>{entry.data.category}</dd></div>{entry.data.location && <div><dt>Khu vực</dt><dd>{entry.data.location}</dd></div>}{entry.data.service && <div><dt>Hạng mục</dt><dd>{entry.data.service}</dd></div>}</dl></div>
+    </div></section>
+    <section id="hinh-anh" class="container project-detail-visual" aria-label="Hình ảnh thực tế công trình"><figure><a class="project-detail-photo" href={entry.data.image} target="_blank" rel="noopener noreferrer" aria-label={`Mở ảnh lớn: ${entry.data.title}`}><img src={entry.data.image} alt={entry.data.title} width="1600" height="1000" fetchpriority="high" /><span class="project-detail-enlarge"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5" /></svg>Xem ảnh lớn</span></a><figcaption><span>Hình ảnh tại công trình</span><span>{entry.data.client}</span></figcaption></figure></section>
+    <section class="container project-detail-body">
+      <article class="project-detail-story"><p class="project-detail-kicker">Hồ sơ thực hiện</p><h2 class="project-detail-section-title">Về công trình</h2><div class="project-detail-content"><Content /></div>
+        {gallery.length > 0 && <section class="project-detail-gallery" aria-label="Thư viện ảnh"><h2 class="project-detail-section-title">Các góc nhìn thực tế</h2><div>{gallery.map((image,index) => <a href={image} target="_blank" rel="noopener noreferrer" aria-label={`Mở ảnh công trình ${index + 2}`}><img src={image} alt={`${entry.data.title} – góc nhìn ${index + 2}`} width="900" height="700" loading="lazy" /></a>)}</div></section>}
+      </article>
+      <aside class="project-detail-aside" aria-label="Tư vấn công trình"><div class="project-detail-consult"><span class="project-detail-consult-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H9l-5 4V4Zm4 4h8M8 12h5" /></svg></span><p class="project-detail-kicker">Ý tưởng cho không gian của bạn</p><h2>Bạn thích cách hoàn thiện này?</h2><p>Gửi hình ảnh không gian, kích thước và nhu cầu của bạn. iDecal sẽ tư vấn mẫu, vật liệu và phương án thực hiện phù hợp.</p><a class="btn-primary-solid" href={bookingUrl}>Trao đổi về công trình <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a><a class="project-detail-link" href="https://zalo.me/0866077040">Tư vấn qua Zalo <span aria-hidden="true">→</span></a><p class="project-detail-consult-note">Mẫu và chi phí được xác nhận theo hiện trạng, vật liệu và khối lượng thực tế.</p></div></aside>
+    </section>
+    {related.length > 0 && <section class="project-detail-related"><div class="container"><div class="project-detail-related-heading"><div><p class="project-detail-kicker">Thêm ý tưởng tham khảo</p><h2 class="project-detail-section-title">Khám phá công trình khác</h2></div><a class="project-detail-link" href="/du-an">Tất cả công trình <span aria-hidden="true">→</span></a></div><div class="project-detail-related-grid">{related.map(project => <ProjectCard project={project} />)}</div></div></section>}
+    <div class="container project-detail-back"><a href="/du-an" class="project-detail-link"><span aria-hidden="true">←</span>Trở lại danh sách công trình</a></div>
   </div>
 </Layout>
