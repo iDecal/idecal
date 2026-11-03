@@ -3,6 +3,8 @@ import '../../styles/catalogue.css';
 import filmSpecifications from '../../data/film-specifications.json';
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import '../../styles/product-extras.css';
 import { isPVCProduct, pvcRollSize, pvcFinishes, pvcFinishImages } from '../../data/pvc-options';
 import '../../styles/pvc-options.css';
 import { products, productCategories, formatPrice, productSpecs, type Product } from '../../data/catalogue';
@@ -12,6 +14,11 @@ const { product } = Astro.props;
 const category = productCategories.find(group => group.slug === product.category)!;
 const isPVC = isPVCProduct(product.slug);
 const finishImages = pvcFinishImages(product.slug);
+const installationImages = product.installationImages ?? [];
+const related = products.filter(other => other.slug !== product.slug && (
+  isPVC ? isPVCProduct(other.slug) : !isPVCProduct(other.slug) && other.category === product.category
+)).slice(0,4);
+const relatedCategoryUrl = `/danh-muc-san-pham/${isPVC ? 'decal-pvc' : category.slug}`;
 const galleryImages = isPVC ? [
   ...pvcFinishes.map(finish => ({ src: finishImages[finish.value as keyof typeof finishImages], label: `${product.name} – minh họa bề mặt ${finish.label.toLocaleLowerCase('vi-VN')}`, finish: finish.value })),
   ...product.images.filter(src => !src.startsWith('/images/pvc-colors/')).map((src,index) => ({ src, label: `${product.name} – ảnh ${index+1}`, finish: '' })),
@@ -69,6 +76,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
     </div>
     </div>
   </section>
+  {installationImages.length > 0 && <section class="product-installations" aria-labelledby="product-installations-title"><div class="container"><div class="product-extras-heading"><div><p>Ứng dụng tại công trình</p><h2 id="product-installations-title" class="brand-heading">Ảnh thi công thực tế</h2></div><a href="/du-an">Xem các công trình <span aria-hidden="true">→</span></a></div><div class="product-installation-grid">{installationImages.map(photo => <figure><a href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`Mở ảnh lớn: ${photo.alt}`}><img src={photo.src} alt={photo.alt} width="1000" height="750" loading="lazy" /></a><figcaption>{photo.caption && <p>{photo.caption}</p>}{photo.projectSlug && <a href={`/du-an/${photo.projectSlug}`}>Xem công trình <span aria-hidden="true">→</span></a>}</figcaption></figure>)}</div></div></section>}
+  {related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
 </Layout>
 <script>
   document.querySelectorAll<HTMLElement>('[data-product-detail]').forEach(root => {

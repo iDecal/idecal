@@ -500,6 +500,14 @@
       "Cửa kính công ty",
       "Showroom",
       "Quầy lễ tân"
+    ],
+    "installationImages": [
+      {
+        "src": "/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png",
+        "alt": "Decal mờ kết hợp cắt chữ logo tại phòng khám FDCARE, Quận 9",
+        "caption": "Ứng dụng Decal mờ kết hợp cắt chữ logo tại FDCARE, Quận 9.",
+        "projectSlug": "in-an-thi-cong-decal-dfcare-quan-9"
+      }
     ]
   },
   {

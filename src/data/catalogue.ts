@@ -12,6 +12,7 @@ export interface Product {
   description: string;
   paragraphs: string[];
   images: string[];
+  installationImages?: { src: string; alt: string; caption?: string; projectSlug?: string }[];
   attributes: Partial<Record<string, string[]>>;
   uses: string[];
 }
