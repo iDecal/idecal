@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/catalogue.css';
+const services = [
+  { slug: 'decal-dan-kinh-van-phong', name: 'Decal dán kính văn phòng', description: 'Trang trí vách kính, phân chia không gian và tạo sự riêng tư cho văn phòng, phòng họp, showroom.', image: '/images/Banner/Decal dán kính văn Phòng.webp' },
+  { slug: 'phim-cach-nhiet', name: 'Phim cách nhiệt nhà kính', description: 'Tư vấn chọn phim theo hướng nắng, nhu cầu ánh sáng và loại kính cho nhà ở, cửa hàng, văn phòng.', image: '/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp' },
+  { slug: 'decal-mo-3d-van-song', name: 'Decal mờ 3D vân sóng', description: 'Làm mới cửa và vách kính với hiệu ứng vân sóng, kết hợp trang trí và che tầm nhìn theo nhu cầu.', image: '/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp' },
+  { slug: 'cat-decal', name: 'Cắt chữ & logo Decal', description: 'Cắt chữ, logo và họa tiết theo thiết kế để dán kính, bảng hiệu hoặc nhận diện thương hiệu.', image: '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg' },
+  { slug: 'film-noi-that', name: 'Dán film nội thất', description: 'Thay đổi bề mặt tủ, bàn, cửa và các chi tiết nội thất bằng film vân gỗ, vân đá hoặc màu đơn sắc.', image: '/images/Banner/film-dan-noi-that-van-go.jpg' },
+  { slug: 'decal-quang-cao', name: 'Thiết kế & in Decal quảng cáo', description: 'Thiết kế, in và thi công Decal quảng cáo cho kính cửa hàng, showroom và các bề mặt trưng bày.', image: '/images/Banner/gioi-thieu-idecal.jpeg' },
+];
+---
+<Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá 6 dịch vụ iDecal: Decal văn phòng, phim cách nhiệt, Decal 3D, cắt chữ logo, film nội thất và in Decal quảng cáo.">
+  <section class="catalogue-hero py-12 md:py-16">
+    <div class="container">
+      <nav aria-label="Đường dẫn" class="mb-7 flex gap-2 text-sm text-text-muted"><a href="/" class="text-primary">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Dịch vụ</span></nav>
+      <p class="!mb-4 text-xs font-medium uppercase tracking-widest text-primary">Dịch vụ iDecal</p>
+      <h1 class="brand-heading max-w-4xl text-3xl font-semibold md:text-5xl">Thiết kế, in ấn & thi công Decal</h1>
+      <p class="mb-7 max-w-2xl text-base leading-relaxed">Từ trang trí kính đến làm mới nội thất. Chọn dịch vụ phù hợp để xem mẫu, tìm hiểu cách thực hiện và nhận tư vấn cho không gian của bạn.</p>
+      <div class="flex flex-wrap items-center gap-5"><a href="#cac-dich-vu" class="btn-primary-solid">Khám phá dịch vụ ↓</a><a href="/lien-he-idecal" class="btn-idecal-bold">Trao đổi nhu cầu →</a></div>
+    </div>
+  </section>
+  <section id="cac-dich-vu" class="container scroll-mt-28 py-10 md:py-14">
+    <h2 class="brand-heading mb-7 text-2xl md:text-3xl">Giải pháp cho từng không gian</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {services.map((service,index) => <article class="service-overview-card flex flex-col overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
+        <a href={`/dich-vu/${service.slug}`} class="relative block aspect-[16/10] overflow-hidden" aria-label={`Xem dịch vụ ${service.name}`}><img src={service.image} alt={service.name} width="800" height="500" loading="lazy" class="h-full w-full object-cover" /><span class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1 text-xs font-medium text-primary">0{index+1}</span></a>
+        <div class="flex flex-1 flex-col p-5 md:p-6"><h3 class="mb-3 text-xl font-semibold"><a href={`/dich-vu/${service.slug}`} class="hover:text-primary">{service.name}</a></h3><p class="mb-6 text-sm leading-relaxed">{service.description}</p><a href={`/dich-vu/${service.slug}`} class="mt-auto flex items-center justify-between border-t border-border pt-4 text-sm font-medium text-primary hover:text-brand-navy">Xem dịch vụ<span aria-hidden="true">→</span></a></div>
+      </article>)}
+    </div>
+  </section>
+  <section class="container pb-12 md:pb-16"><div class="rounded-2xl border border-brand-line bg-surface p-6 md:p-9"><div class="flex flex-wrap items-center justify-between gap-6"><div class="max-w-xl"><h2 class="mb-3 text-2xl font-semibold text-brand-navy">Chưa biết chọn dịch vụ nào?</h2><p class="!mb-0 text-sm leading-relaxed">Gửi ảnh hiện trạng, kích thước và nhu cầu sử dụng. iDecal sẽ tư vấn phương án phù hợp trước khi thực hiện.</p></div><div class="flex flex-wrap items-center gap-5"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Tư vấn qua Zalo</a><a href="tel:0866077040" class="btn-idecal-bold">0866.077.040</a></div></div></div></section>
+</Layout>

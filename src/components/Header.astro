@@ -14,8 +14,9 @@ const navLinks: NavLink[] = [
     { name: 'Tất cả sản phẩm', href: '/san-pham', highlight: true },
     ...productCategories.map(category => ({ name: category.name, href: `/danh-muc-san-pham/${category.slug}` })),
   ] },
-  { name: 'Dịch vụ', href: '/#dich-vu', dropdown: [
-    { name: 'Thiết kế - In ấn - Thi công Decal', href: '/dich-vu/decal-quang-cao', highlight: true },
+  { name: 'Dịch vụ', href: '/dich-vu', dropdown: [
+    { name: 'Tất cả dịch vụ', href: '/dich-vu', highlight: true },
+    { name: 'Thiết kế - In ấn - Thi công Decal', href: '/dich-vu/decal-quang-cao' },
     { name: 'Phim Cách Nhiệt', href: '/dich-vu/phim-cach-nhiet' },
     { name: 'Decal 3D Vân Sóng', href: '/dich-vu/decal-mo-3d-van-song' },
     { name: 'Decal Cắt Chữ', href: '/dich-vu/cat-decal' },

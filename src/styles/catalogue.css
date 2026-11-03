@@ -67,3 +67,10 @@
 @media(max-width:767px) {
   .product-gallery { width: 92%; max-width: 360px; }
 }
+
+.product-detail-title { font-size: clamp(25px,2.4vw,32px); }
+.product-short-description { margin: 0 0 24px; color: #44566b; font-size: 14px; line-height: 1.8; }
+@media(max-width:767px) {
+  .product-detail-title { font-size: 25px; }
+  .product-short-description { font-size: 14px; margin-bottom: 22px; }
+}

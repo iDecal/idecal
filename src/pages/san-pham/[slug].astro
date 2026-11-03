@@ -1,5 +1,6 @@
 ---
 import '../../styles/catalogue.css';
+import filmSpecifications from '../../data/film-specifications.json';
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -12,6 +13,18 @@ const related = products.filter(other => other.category === product.category && 
 const specs = productSpecs(product).filter(spec => spec.label !== 'Thương hiệu');
 const normalizeText = (text: string) => text.replace(/\s+/g, ' ').trim();
 const descriptionParagraphs = [...new Set([product.description, ...product.paragraphs].map(normalizeText))].filter(Boolean);
+type FilmSpecs = Record<string, number | string | null>;
+const filmSpecs = (filmSpecifications as Record<string, FilmSpecs>)[product.slug];
+const filmFields = [
+  { key: 'vlt', label: 'Độ truyền sáng (VLT)', unit: '%' },
+  { key: 'irr', label: 'Cản tia hồng ngoại (IRR)', unit: '%' },
+  { key: 'uvr', label: 'Cản tia UV (UVR)', unit: '%' },
+  { key: 'tser', label: 'Tổng năng lượng mặt trời bị loại bỏ (TSER)', unit: '%' },
+  { key: 'vlr', label: 'Độ phản gương (VLR)', unit: '%' },
+  { key: 'thicknessMil', label: 'Độ dày phim', unit: 'mil' },
+  { key: 'warrantyYears', label: 'Bảo hành', unit: 'năm' },
+];
+const shortDescription = product.description.match(/^.*?[.!?](?:\s|$)/)?.[0].trim() || product.description;
 const schema = { '@context': 'https://schema.org', '@type': 'Product', name: product.name, description: product.description, image: product.images.map(image => new URL(image, Astro.site).href), category: category.name, ...(product.brand ? { brand: { '@type': 'Brand', name: product.brand } } : {}) };
 ---
 <Layout title={`${product.name} | iDecal`} description={product.description.slice(0,170)} image={product.images[0]}>
@@ -23,7 +36,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
       <div class="product-summary min-w-0">
         <span class="product-code">Mã mẫu: {product.code}</span>
         <h1 class="product-detail-title brand-heading">{product.name}</h1>
-        {product.price != null && <div class="mb-6"><p class="!mb-1 text-2xl font-semibold text-brand-navy">{formatPrice(product.price)}</p><p class="!mb-0 text-xs">Giá tham khảo, xác nhận theo quy cách và khối lượng thực tế.</p></div>}
+        {product.price != null && <div class="mb-6"><p class="!mb-1 text-lg font-semibold text-brand-navy">{formatPrice(product.price)}</p><p class="!mb-0 text-xs">Giá tham khảo, xác nhận theo quy cách và khối lượng thực tế.</p></div>}
+        <p class="product-short-description">{shortDescription}</p>
         <div class="product-actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Tư vấn qua Zalo</a><a href="tel:0866077040" class="btn-idecal-bold">Gọi 0866.077.040</a></div>
         <div class="product-information" aria-label="Thông tin sản phẩm">
           <details class="product-information-item">
@@ -38,6 +52,10 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
             <summary><h2>Quy cách &amp; thông tin</h2><span aria-hidden="true">+</span></summary>
             <div class="product-information-content"><dl class="product-specs">{specs.map(spec => <div><dt>{spec.label}</dt><dd>{spec.value}</dd></div>)}</dl><p class="product-spec-note">Quy cách và vật liệu được xác nhận theo mẫu khi tư vấn.</p></div>
           </details>
+          {filmSpecs && <details class="product-information-item" data-film-specifications>
+            <summary><h2>Thông số phim cách nhiệt</h2><span aria-hidden="true">+</span></summary>
+            <div class="product-information-content"><dl class="product-specs">{filmFields.map(field => <div><dt>{field.label}</dt><dd>{filmSpecs[field.key] != null && filmSpecs[field.key] !== '' ? `${filmSpecs[field.key]} ${field.unit}` : 'Chưa cập nhật'}</dd></div>)}</dl></div>
+          </details>}
         </div>
         <a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a>
       </div>
