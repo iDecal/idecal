@@ -74,6 +74,7 @@ for (const category of catalogueCategories) {
 // New navigation groups may overlap by application while preserving original product URLs.
 const landingSamples = [
   ['decal-mo-dan-kinh', 'decal-mo-in-logo-thuong-hieu'],
+  ['decal-pvc', 'decal-mau-xam-dam-nhat-co-san-keo'],
   ['phim-cach-nhiet-nha-kinh', 'phim-cach-nhiet-rs20'],
   ['film-dan-noi-that', 'film-dan-noi-that-van-go'],
   ['decal-dan-kinh-van-phong', 'decal-mo-cat-logo-thuong-hieu'],

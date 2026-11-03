@@ -8,9 +8,9 @@ import '../../styles/product-groups.css';
 import { products } from '../../data/catalogue';
 import { productLandings, landingProducts } from '../../data/site-offerings';
 ---
-<Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description="Khám phá 7 nhóm sản phẩm iDecal: Decal mờ, phim cách nhiệt nhà kính, film nội thất, Decal văn phòng, film bảo vệ, film trang trí kính và Decal quảng cáo.">
-  <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productLandings[0].image} imageAlt="Decal mờ chuyển màu cho vách kính văn phòng">
-    <p slot="description">7 nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
+<Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description="Khám phá 8 nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt nhà kính, film nội thất, Decal văn phòng, film bảo vệ, Decal/ film trang trí kính và Decal quảng cáo.">
+  <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productLandings[0].image} imageAlt={productLandings[0].name}>
+    <p slot="description">{productLandings.length} nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
     <Fragment slot="actions"><a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
     <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{productLandings.length}</strong> nhóm sản phẩm</span></Fragment>
   </PageBanner>
