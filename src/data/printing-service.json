@@ -1,22 +1,96 @@
 {
   "materials": [
-    {"name":"Decal sữa / PVC trắng","tag":"Hình ảnh & nhận diện","description":"Nền trắng giúp hình ảnh và nội dung quảng cáo dễ đọc. Phù hợp in logo, poster dán kính, bảng hiệu và các bề mặt phẳng tương thích.","note":"Chọn bề mặt bóng hoặc mờ, lớp cán và loại keo theo nhu cầu sử dụng."},
-    {"name":"Decal trong","tag":"Trang trí cửa kính","description":"Nền trong cho các thiết kế muốn giữ khoảng nhìn xuyên kính, tạo điểm nhấn bằng chữ, logo hoặc họa tiết.","note":"Trao đổi độ che phủ, nền màu và khả năng đọc nội dung trước khi chọn cách in."},
-    {"name":"Decal lưới","tag":"Kính mặt tiền & showroom","description":"Cấu trúc lỗ lưới kết hợp hình ảnh quảng cáo với khả năng quan sát tương đối qua kính, tùy ánh sáng và vị trí sử dụng.","note":"Cần xem hướng sáng, khoảng nhìn và cách chia khổ trên từng ô kính."},
-    {"name":"Decal giấy","tag":"Tem nhãn & bao bì","description":"Lựa chọn cho nhãn sản phẩm, thông tin đóng gói và các ứng dụng trong nhà, ở môi trường khô ráo.","note":"Xác nhận kích thước tem, hình bế và bề mặt dán để chọn cách hoàn thiện."},
-    {"name":"Decal phản quang","tag":"Chỉ dẫn & nhận diện","description":"Vật liệu phản sáng khi được chiếu sáng, dùng cho các chi tiết chỉ dẫn hoặc nhận diện cần hiệu ứng phản quang.","note":"Kiểm tra tính tương thích của mực và yêu cầu phản quang khi có nội dung in."},
-    {"name":"PP quảng cáo","tag":"Poster & standee","description":"Vật liệu in hình ảnh cho poster, standee hoặc bảng trưng bày. Có thể chọn loại có keo hoặc không keo tùy ứng dụng.","note":"Trao đổi thêm về cán màng, bồi formex và hình thức trưng bày khi cần."}
+    {
+      "name": "Decal sữa / PVC trắng",
+      "tag": "Hình ảnh & nhận diện",
+      "description": "Nền trắng giúp hình ảnh và nội dung quảng cáo dễ đọc. Phù hợp in logo, poster dán kính, bảng hiệu và các bề mặt phẳng tương thích.",
+      "note": "Chọn bề mặt bóng hoặc mờ, lớp cán và loại keo theo nhu cầu sử dụng.",
+      "image": "/images/print-materials/decal-trang.jpg",
+      "imageAlt": "Minh họa cuộn Decal trắng có lớp đế"
+    },
+    {
+      "name": "Decal trong",
+      "tag": "Trang trí cửa kính",
+      "description": "Nền trong cho các thiết kế muốn giữ khoảng nhìn xuyên kính, tạo điểm nhấn bằng chữ, logo hoặc họa tiết.",
+      "note": "Trao đổi độ che phủ, nền màu và khả năng đọc nội dung trước khi chọn cách in.",
+      "image": "/images/print-materials/decal-trong.jpg",
+      "imageAlt": "Minh họa Decal trong in hình quảng cáo trên cửa kính"
+    },
+    {
+      "name": "Decal lưới",
+      "tag": "Kính mặt tiền & showroom",
+      "description": "Cấu trúc lỗ lưới kết hợp hình ảnh quảng cáo với khả năng quan sát tương đối qua kính, tùy ánh sáng và vị trí sử dụng.",
+      "note": "Cần xem hướng sáng, khoảng nhìn và cách chia khổ trên từng ô kính.",
+      "image": "/images/cong-trinh/thi-cong-dan-decal-luoi-mat-tien-toyota-tan-binh.jpg",
+      "imageAlt": "Ứng dụng Decal lưới in quảng cáo trên kính showroom Toyota"
+    },
+    {
+      "name": "Decal giấy",
+      "tag": "Tem nhãn & bao bì",
+      "description": "Lựa chọn cho nhãn sản phẩm, thông tin đóng gói và các ứng dụng trong nhà, ở môi trường khô ráo.",
+      "note": "Xác nhận kích thước tem, hình bế và bề mặt dán để chọn cách hoàn thiện.",
+      "image": "/images/print-materials/tem-nhan.jpg",
+      "imageAlt": "Minh họa thiết kế tem nhãn sản phẩm"
+    },
+    {
+      "name": "Decal phản quang",
+      "tag": "Chỉ dẫn & nhận diện",
+      "description": "Vật liệu phản sáng khi được chiếu sáng, dùng cho các chi tiết chỉ dẫn hoặc nhận diện cần hiệu ứng phản quang.",
+      "note": "Kiểm tra tính tương thích của mực và yêu cầu phản quang khi có nội dung in.",
+      "image": "/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg",
+      "imageAlt": "Minh họa gia công chữ trên Decal phản quang"
+    },
+    {
+      "name": "PP quảng cáo",
+      "tag": "Poster & standee",
+      "description": "Vật liệu in hình ảnh cho poster, standee hoặc bảng trưng bày. Có thể chọn loại có keo hoặc không keo tùy ứng dụng.",
+      "note": "Trao đổi thêm về cán màng, bồi formex và hình thức trưng bày khi cần.",
+      "image": "/images/print-materials/pp-standee.webp",
+      "imageAlt": "Minh họa poster PP bồi bảng trưng bày"
+    }
   ],
   "technologies": [
-    {"name":"In Solvent / Eco-solvent","description":"Nhóm công nghệ thường được sử dụng với vật liệu quảng cáo như Decal và PP, phù hợp các thiết kế hình ảnh khổ lớn.","detail":"Lựa chọn mực, vật liệu và lớp bảo vệ theo môi trường sử dụng, độ bám và yêu cầu hoàn thiện."},
-    {"name":"In UV","description":"Mực được đóng rắn bằng tia UV trong quá trình in. Phương án này được cân nhắc theo loại vật liệu và hiệu ứng bản in mong muốn.","detail":"Thống nhất khả năng bám mực, độ che phủ, yêu cầu lớp nền và bề mặt hoàn thiện trước khi sản xuất."},
-    {"name":"In Latex","description":"Sử dụng hệ mực Latex gốc nước, là một phương án cho hình ảnh quảng cáo trên các vật liệu tương thích.","detail":"Đối chiếu vật liệu, điều kiện sử dụng và yêu cầu màu sắc để lựa chọn phương án phù hợp."}
+    {
+      "name": "In UV",
+      "description": "Mực được đóng rắn bằng tia UV trong quá trình in. Phương án này được cân nhắc theo loại vật liệu và hiệu ứng bản in mong muốn.",
+      "detail": "Thống nhất khả năng bám mực, độ che phủ, yêu cầu lớp nền và bề mặt hoàn thiện trước khi sản xuất."
+    },
+    {
+      "name": "In mực dầu",
+      "description": "Sử dụng mực gốc dung môi cho hình ảnh quảng cáo trên Decal, PP và các vật liệu tương thích, phù hợp nhu cầu in khổ lớn.",
+      "detail": "Chọn vật liệu, lớp cán và cách hoàn thiện theo vị trí trong hoặc ngoài trời, thời gian sử dụng và yêu cầu độ bền bản in."
+    }
   ],
-  "finishing": ["Cán màng bóng / mờ", "Cắt chữ hoặc bế theo hình", "Chia khổ theo vị trí dán", "Bồi formex theo yêu cầu"],
+  "finishing": [
+    "Cán màng bóng / mờ",
+    "Cắt chữ hoặc bế theo hình",
+    "Chia khổ theo vị trí dán",
+    "Bồi formex theo yêu cầu"
+  ],
   "reasons": [
-    {"title":"Tư vấn theo đúng ứng dụng","description":"Làm rõ bề mặt dán, vị trí trong hoặc ngoài trời và thời gian sử dụng để lựa chọn vật liệu cùng cách hoàn thiện."},
-    {"title":"Kiểm tra file trước khi in","description":"Trao đổi kích thước, nội dung, độ rõ hình ảnh và cách chia khổ; thống nhất bản duyệt trước khi đưa vào sản xuất."},
-    {"title":"Báo giá rõ từng hạng mục","description":"Làm rõ vật liệu, thiết kế, in, gia công và thi công. Phần nào đã bao gồm trong đơn giá được ghi cụ thể."},
-    {"title":"Kết nối từ thiết kế đến thi công","description":"Có thể chọn riêng in ấn hoặc phối hợp thiết kế, cắt và thi công để phương án hoàn thiện được thống nhất từ đầu."}
+    {
+      "title": "In nhanh, chủ động tiến độ",
+      "description": "Trao đổi lịch nhận hàng ngay từ đầu, sắp xếp tiến độ theo số lượng, cách gia công và thời gian bạn cần."
+    },
+    {
+      "title": "Hỗ trợ check file trước khi in",
+      "description": "Kiểm tra kích thước, nội dung, độ rõ hình ảnh và cách chia khổ; phản hồi những điểm cần chỉnh trước khi duyệt in."
+    },
+    {
+      "title": "Giá tốt, phương án phù hợp",
+      "description": "Tư vấn vật liệu, khổ in và số lượng hợp lý để tối ưu chi phí theo ngân sách, tránh những công đoạn không cần thiết."
+    },
+    {
+      "title": "Tư vấn đúng vật liệu",
+      "description": "Chọn chất liệu theo bề mặt dán, môi trường sử dụng và hiệu ứng hình ảnh bạn mong muốn."
+    },
+    {
+      "title": "Báo giá rõ từng hạng mục",
+      "description": "Làm rõ vật liệu, thiết kế, in, gia công và thi công; ghi cụ thể phần đã bao gồm trong đơn giá."
+    },
+    {
+      "title": "Hỗ trợ từ thiết kế đến thi công",
+      "description": "Chọn riêng in ấn hoặc kết hợp thiết kế, cắt và thi công để bản in phù hợp với cách hoàn thiện thực tế."
+    }
   ]
 }
