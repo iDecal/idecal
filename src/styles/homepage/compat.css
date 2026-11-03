@@ -291,3 +291,10 @@
   .homepage-original .process-card { padding: 16px; }
   .homepage-original .process-card-top { margin-bottom: 10px; min-height: 36px; }
 }
+.homepage-original #gspb_heading-id-gspb-UdG4q3VW8rfFITty4mInj { line-height: 1.2; margin-bottom: 20px; }
+.homepage-original #gspb_container-id-gsbp-cb40e80 > .wp-block-paragraph { color: #294d6a; }
+.homepage-original .gs-accordion .gs-accordion-item__title,
+.homepage-original .gs-accordion .gs-accordion-item__text { font-weight: 450 !important; }
+@media(max-width:767px) {
+  .homepage-original #gspb_heading-id-gspb-UdG4q3VW8rfFITty4mInj { line-height: 1.3; }
+}

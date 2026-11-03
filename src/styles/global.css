@@ -103,3 +103,21 @@
 .homepage-original :is(h1, h2, h3, h4, h5, h6) * {
   font-family: 'Lexend Variable', sans-serif !important;
 }
+
+/* Tighter typography and a slightly stronger reading weight in page content. */
+.page-content, .page-content *, .homepage-original, .homepage-original * {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+.page-content :where(p, li, dt, dd, td, summary):not([class*='font-']),
+.homepage-original :where(p, li, dt, dd, td, summary):not([class*='font-']),
+.homepage-original .gspb_text {
+  font-weight: 450 !important;
+}
+.page-content p, .homepage-original p { line-height: 1.7 !important; }
+.page-content :is(h1, h2, h3, h4, h5, h6),
+.page-content :is(h1, h2, h3, h4, h5, h6) *,
+.homepage-original :is(h1, h2, h3, h4, h5, h6),
+.homepage-original :is(h1, h2, h3, h4, h5, h6) * {
+  letter-spacing: -0.02em !important;
+}
