@@ -11,11 +11,9 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
   { name: 'Sản phẩm', href: '/san-pham', dropdown: [
-    { name: 'Tất cả sản phẩm', href: '/san-pham', highlight: true },
     ...productLandings.map(landing => ({ name: landing.name, href: `/danh-muc-san-pham/${landing.slug}` })),
   ] },
   { name: 'Dịch vụ', href: '/dich-vu', dropdown: [
-    { name: 'Tất cả dịch vụ', href: '/dich-vu', highlight: true },
     ...serviceOfferings.map(service => ({ name: service.name, href: `/dich-vu/${service.slug}` })),
   ] },
   { name: 'Công trình thực tế', href: '/du-an' },
