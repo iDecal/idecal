@@ -1,71 +1,71 @@
 .cutting-page { color: #1b4f7a; }
 .cutting-hero { padding: 36px 0 48px; }
-.cutting-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; color: #44566b; font-size: 12px; }
+.cutting-breadcrumb { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; color: #44566b; font-size: 13px; }
 .cutting-breadcrumb a { color: #0d6b96; }
 .cutting-hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
-.cutting-eyebrow { display: inline-block; background: #fff9; border: 1px solid #dce6f4; border-radius: 999px; padding: 7px 12px; font-size: 12px; color: #0d6b96; margin-bottom: 20px; }
+.cutting-eyebrow { display: inline-block; background: #fff9; border: 1px solid #dce6f4; border-radius: 999px; padding: 7px 12px; font-size: 13px; color: #0d6b96; margin-bottom: 20px; }
 .cutting-hero h1 { font-size: clamp(30px,3.5vw,44px); margin: 0 0 20px; line-height: 1.25; }
-.cutting-lead { font-size: 17px; line-height: 1.75; margin: 0 0 16px; color: #1b4f7a; }
-.cutting-description { font-size: 14px; line-height: 1.8; color: #44566b; margin: 0 0 24px; }
+.cutting-lead { font-size: 18px; line-height: 1.75; margin: 0 0 16px; color: #1b4f7a; }
+.cutting-description { font-size: 15px; line-height: 1.8; color: #44566b; margin: 0 0 24px; }
 .cutting-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 24px; margin-top: 24px; }
-.cutting-timing { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; line-height: 1.7; margin: 20px 0 0; }
+.cutting-timing { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; line-height: 1.7; margin: 20px 0 0; }
 .cutting-timing svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
 .cutting-hero-photo { position: relative; aspect-ratio: 1; margin: 0; overflow: hidden; border-radius: 24px; border: 1px solid #dbe3ec; }
 .cutting-hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.cutting-hero-photo figcaption { position: absolute; bottom: 16px; left: 16px; right: 16px; background: #fffffff2; padding: 12px 14px; border-radius: 10px; font-size: 12px; }
+.cutting-hero-photo figcaption { position: absolute; bottom: 16px; left: 16px; right: 16px; background: #fffffff2; padding: 12px 14px; border-radius: 10px; font-size: 13px; }
 .cutting-jump { border-bottom: 1px solid #e0e9f4; background: white; }
 .cutting-jump .container { display: flex; gap: 28px; overflow-x: auto; }
-.cutting-jump a { flex-shrink: 0; padding: 18px 0; color: #1b4f7a; font-size: 13px; font-weight: 500; }
+.cutting-jump a { flex-shrink: 0; padding: 18px 0; color: #1b4f7a; font-size: 14px; font-weight: 500; }
 .cutting-jump a:hover { color: #4f46e5; }
 .cutting-page section[id] { scroll-margin-top: 112px; }
 .cutting-section { padding-top: 56px; padding-bottom: 56px; }
 .cutting-section-heading { max-width: 760px; margin-bottom: 28px; }
-.cutting-kicker { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: #0d6b96; margin: 0 0 12px; }
+.cutting-kicker { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: #0d6b96; margin: 0 0 12px; }
 .cutting-section h2 { font-size: clamp(24px,2.4vw,32px); line-height: 1.35; letter-spacing: 0; margin: 0 0 14px; }
-.cutting-section-heading > p:last-child { margin-bottom: 0; font-size: 14px; line-height: 1.8; }
+.cutting-section-heading > p:last-child { margin-bottom: 0; font-size: 15px; line-height: 1.8; }
 .cutting-service-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
 .cutting-service-card { display: flex; flex-direction: column; padding: 24px; border: 1px solid #dbe3ec; border-radius: 16px; }
 .cutting-card-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .cutting-icon { display: flex; align-items: center; justify-content: center; flex: 0 0 42px; height: 42px; border-radius: 11px; background: #edf4ff; color: #0d6b96; }
 .cutting-icon svg { width: 23px; height: 23px; }
 .cutting-card-heading h3 { font-size: 18px; line-height: 1.45; margin: 0; font-weight: 600; }
-.cutting-service-card > p { font-size: 14px; line-height: 1.8; margin-bottom: 20px; }
-.cutting-service-card > a { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; border-top: 1px solid #e0e9f4; padding-top: 15px; min-height: 44px; font-size: 13px; font-weight: 500; color: #0d6b96; }
+.cutting-service-card > p { font-size: 15px; line-height: 1.8; margin-bottom: 20px; }
+.cutting-service-card > a { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; border-top: 1px solid #e0e9f4; padding-top: 15px; min-height: 44px; font-size: 14px; font-weight: 500; color: #0d6b96; }
 .cutting-service-card > a:hover { color: #4f46e5; }
 .cutting-surface { background: #f4f8fd; }
 .cutting-material-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
 .cutting-material { background: #fff; border: 1px solid #e0e9f4; border-radius: 14px; padding: 20px; }
-.cutting-material > span { display: block; color: #0d6b96; font-size: 12px; margin-bottom: 16px; }
+.cutting-material > span { display: block; color: #0d6b96; font-size: 13px; margin-bottom: 16px; }
 .cutting-material h3, .cutting-steps h3 { font-size: 16px; line-height: 1.5; margin: 0 0 10px; font-weight: 500; }
-.cutting-material p, .cutting-steps p { font-size: 13px; line-height: 1.8; margin-bottom: 0; }
+.cutting-material p, .cutting-steps p { font-size: 14px; line-height: 1.8; margin-bottom: 0; }
 .cutting-price-table { border: 1px solid #dbe3ec; border-radius: 14px; overflow-x: auto; }
-.cutting-price-table table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; font-size: 14px; }
+.cutting-price-table table { width: 100%; min-width: 620px; border-collapse: collapse; text-align: left; font-size: 15px; }
 .cutting-price-table thead { background: #edf4fc; }
 .cutting-price-table th, .cutting-price-table td { padding: 18px 20px; border-bottom: 1px solid #e0e9f4; }
 .cutting-price-table tbody tr:last-child > * { border-bottom: 0; }
 .cutting-price-table th { font-weight: 500; }
 .cutting-price-table td:nth-child(2) { color: #031245; font-weight: 600; white-space: nowrap; }
-.cutting-price-table td:last-child { color: #44566b; font-size: 13px; }
+.cutting-price-table td:last-child { color: #44566b; font-size: 14px; }
 .cutting-price-note { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; }
-.cutting-price-note p { font-size: 12px; margin: 0; }
-.cutting-price-note a { font-size: 13px; color: #0d6b96; font-weight: 500; padding: 8px 0; }
+.cutting-price-note p { font-size: 13px; margin: 0; }
+.cutting-price-note a { font-size: 14px; color: #0d6b96; font-weight: 500; padding: 8px 0; }
 .cutting-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 28px; }
-.cutting-step-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin-bottom: 18px; background: #e5edff; border-radius: 10px; color: #3b5cb3; font-size: 12px; }
+.cutting-step-number { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin-bottom: 18px; background: #e5edff; border-radius: 10px; color: #3b5cb3; font-size: 13px; }
 .cutting-why { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 .cutting-work-photo { width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: 16px; }
 .cutting-benefits { padding: 0; margin: 0; display: grid; gap: 24px; list-style: none; }
 .cutting-benefits li { display: flex; align-items: flex-start; gap: 12px; }
-.cutting-benefits li > span { display: flex; align-items: center; justify-content: center; flex: 0 0 26px; height: 26px; background: #edf4ff; color: #0d6b96; border-radius: 50%; font-size: 13px; }
+.cutting-benefits li > span { display: flex; align-items: center; justify-content: center; flex: 0 0 26px; height: 26px; background: #edf4ff; color: #0d6b96; border-radius: 50%; font-size: 14px; }
 .cutting-benefits h3 { font-size: 16px; line-height: 1.5; margin: 0 0 7px; font-weight: 500; }
-.cutting-benefits p { font-size: 13px; line-height: 1.8; margin-bottom: 0; }
+.cutting-benefits p { font-size: 14px; line-height: 1.8; margin-bottom: 0; }
 .cutting-faq-layout { display: grid; grid-template-columns: 1fr 1.6fr; gap: 48px; }
 .cutting-faqs { display: grid; gap: 12px; align-content: start; }
 .cutting-faqs details { background: white; border: 1px solid #dbe3ec; border-radius: 12px; padding: 0 20px; }
-.cutting-faqs summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; padding: 18px 0; font-size: 14px; font-weight: 500; line-height: 1.6; list-style: none; }
+.cutting-faqs summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer; padding: 18px 0; font-size: 15px; font-weight: 500; line-height: 1.6; list-style: none; }
 .cutting-faqs summary::-webkit-details-marker { display: none; }
-.cutting-faqs summary span { font-size: 22px; font-weight: 400; color: #0d6b96; }
+.cutting-faqs summary span { font-size: 23px; font-weight: 400; color: #0d6b96; }
 .cutting-faqs details[open] summary span { transform: rotate(45deg); }
-.cutting-faqs details p { font-size: 14px; line-height: 1.8; padding-bottom: 18px; margin: 0; }
+.cutting-faqs details p { font-size: 15px; line-height: 1.8; padding-bottom: 18px; margin: 0; }
 .cutting-page a:focus-visible, .cutting-page summary:focus-visible { outline: 2px solid #4f46e5; outline-offset: 4px; }
 @media(max-width:1023px) {
   .cutting-hero-grid { gap: 32px; }
@@ -78,7 +78,7 @@
   .cutting-breadcrumb { margin-bottom: 24px; }
   .cutting-hero-grid, .cutting-service-grid, .cutting-why, .cutting-faq-layout { grid-template-columns: 1fr; gap: 24px; }
   .cutting-hero h1 { font-size: 30px; }
-  .cutting-lead { font-size: 16px; }
+  .cutting-lead { font-size: 17px; }
   .cutting-hero-photo { aspect-ratio: 4/3; border-radius: 18px; }
   .cutting-jump .container { gap: 22px; }
   .cutting-jump a { padding: 16px 0; }

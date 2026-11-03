@@ -5,8 +5,8 @@ interface Props { product: Product; heading?: 'h2' | 'h3'; }
 const { product, heading = 'h3' } = Astro.props;
 const Heading = heading;
 const descriptionWords = product.description.trim().split(/\s+/);
-const shortDescription = descriptionWords.length > 25
-  ? `${descriptionWords.slice(0, 25).join(' ').replace(/[.,;:!?–—-]+$/u, '')}…`
+const shortDescription = descriptionWords.length > 15
+  ? `${descriptionWords.slice(0, 15).join(' ').replace(/[.,;:!?–—-]+$/u, '')}…`
   : descriptionWords.join(' ');
 ---
 <article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>

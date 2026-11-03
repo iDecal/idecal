@@ -14,25 +14,25 @@ import pricing from '../data/service-pricing.json';
 <style>
 .service-pricing-section { padding: 56px 0; background: #eef4fc; border-top: 1px solid #d6e1ef; }
 .service-pricing-heading { max-width: 800px; margin-bottom: 28px; }
-.service-pricing-eyebrow { display: inline-block; padding: 6px 12px; border: 1px solid #dce6f4; border-radius: 999px; background: #fff; color: #006edc; font-size: 12px; margin-bottom: 14px; }
+.service-pricing-eyebrow { display: inline-block; padding: 6px 12px; border: 1px solid #dce6f4; border-radius: 999px; background: #fff; color: #006edc; font-size: 13px; margin-bottom: 14px; }
 .service-pricing-heading h2 { font-size: clamp(26px,2.5vw,34px); margin: 0 0 16px; line-height: 1.35; }
-.service-pricing-heading p { font-size: 14px; margin: 0; color: #44566b; }
+.service-pricing-heading p { font-size: 15px; margin: 0; color: #44566b; }
 .service-pricing-groups { display: grid; gap: 14px; }
 .service-pricing-group { background: #fff; border: 1px solid #ccdced; border-radius: 14px; overflow: hidden; scroll-margin-top: 112px; }
 .service-pricing-group > summary { display: flex; gap: 16px; align-items: center; padding: 20px 24px; cursor: pointer; list-style: none; transition: background .18s; }
 .service-pricing-group > summary::-webkit-details-marker, .service-price-factors > summary::-webkit-details-marker { display: none; }
 .service-pricing-group > summary:hover { background: #f7faff; }
 .service-pricing-group[open] > summary { background: #f8fbff; border-bottom: 1px solid #e0e8f3; }
-.service-price-number { display: flex; align-items: center; justify-content: center; flex: 0 0 38px; height: 38px; color: #006edc; background: #edf4ff; border-radius: 10px; font-size: 12px; }
+.service-price-number { display: flex; align-items: center; justify-content: center; flex: 0 0 38px; height: 38px; color: #006edc; background: #edf4ff; border-radius: 10px; font-size: 13px; }
 .service-price-title { flex: 1; min-width: 0; }
 .service-price-title h3 { font-size: 18px; font-weight: 500; line-height: 1.5; margin: 0 0 3px; color: #173a61; }
 .service-price-title > span { display: block; color: #52657c; font-size: 12px; line-height: 1.6; }
 .service-price-chevron { flex: 0 0 20px; width: 20px; height: 20px; color: #006edc; transition: transform .18s; }
 .service-pricing-group[open] .service-price-chevron { transform: rotate(180deg); }
 .service-price-content { padding: 22px 24px 24px; }
-.service-price-description { font-size: 14px; margin: 0 0 18px; color: #44566b; }
+.service-price-description { font-size: 15px; margin: 0 0 18px; color: #44566b; }
 .service-price-scroll { overflow-x: auto; border: 1px solid #dbe3ef; border-radius: 10px; }
-.service-price-scroll table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.service-price-scroll table { width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; }
 .service-price-wide table { min-width: 620px; }
 .service-price-scroll thead { background: #183960; color: #fff; }
 .service-price-scroll th, .service-price-scroll td { padding: 15px 18px; border-bottom: 1px solid #e0e8f3; vertical-align: top; }
@@ -41,16 +41,16 @@ import pricing from '../data/service-pricing.json';
 .service-price-scroll tr:nth-child(even) { background: #f5f8fd; }
 .service-price-scroll thead tr { background: #183960; }
 .service-price-scroll tbody tr:last-child > * { border-bottom: 0; }
-.service-price-scroll td.price-not-updated { color: #68778c; font-size: 12px; }
-.service-price-notes { margin: 18px 0; padding-left: 18px; display: grid; gap: 6px; color: #52657c; font-size: 12px; line-height: 1.7; }
-.service-price-related { display: inline-flex; align-items: center; gap: 16px; font-size: 13px; font-weight: 500; padding: 6px 0; }
+.service-price-scroll td.price-not-updated { color: #68778c; font-size: 13px; }
+.service-price-notes { margin: 18px 0; padding-left: 18px; display: grid; gap: 6px; color: #52657c; font-size: 13px; line-height: 1.7; }
+.service-price-related { display: inline-flex; align-items: center; gap: 16px; font-size: 14px; font-weight: 500; padding: 6px 0; }
 .service-price-factors { margin-top: 24px; padding: 0 20px; border: 1px solid #d6e1ef; border-radius: 12px; background: #fff9; }
-.service-price-factors > summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; cursor: pointer; font-size: 14px; font-weight: 500; list-style: none; }
-.service-price-factors > summary span { color: #006edc; font-size: 20px; }
+.service-price-factors > summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; cursor: pointer; font-size: 15px; font-weight: 500; list-style: none; }
+.service-price-factors > summary span { color: #006edc; font-size: 21px; }
 .service-price-factors[open] > summary span { transform: rotate(45deg); }
 .service-price-factors ul { list-style: none; margin: 0; padding: 0 0 20px; display: grid; gap: 18px; grid-template-columns: repeat(2,minmax(0,1fr)); }
-.service-price-factors strong { font-size: 13px; color: #173a61; font-weight: 600; }
-.service-price-factors p { margin: 5px 0 0; font-size: 13px; color: #52657c; }
+.service-price-factors strong { font-size: 14px; color: #173a61; font-weight: 600; }
+.service-price-factors p { margin: 5px 0 0; font-size: 14px; color: #52657c; }
 .service-pricing-section summary:focus-visible, .service-price-scroll:focus-visible { outline: 2px solid #006edc; outline-offset: -3px; }
 @media(max-width:767px) {
  .service-pricing-section { padding: 36px 0; }
@@ -59,8 +59,8 @@ import pricing from '../data/service-pricing.json';
  .service-price-number { flex-basis: 32px; height: 32px; }
  .service-price-title h3 { font-size: 16px; }
  .service-price-content { padding: 18px 16px 20px; }
- .service-price-description { font-size: 13px; }
- .service-price-scroll table { font-size: 13px; }
+ .service-price-description { font-size: 14px; }
+ .service-price-scroll table { font-size: 14px; }
  .service-price-scroll th, .service-price-scroll td { padding: 12px; }
  .service-price-factors { padding: 0 16px; }
  .service-price-factors ul { grid-template-columns: 1fr; }

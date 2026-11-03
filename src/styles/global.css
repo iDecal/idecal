@@ -127,3 +127,97 @@
 .homepage-original .home-service-action { color: #006edc !important; }
 .homepage-original .home-service-action:hover { color: #0057b3 !important; }
 .homepage-original .home-service-action:focus-visible { outline-color: #006edc; }
+
+/* Increase content text by 1px; keep heading sizes and shared navigation unchanged. */
+.page-content, .homepage-original { font-size: 17px; }
+:where(.page-content, .homepage-original) .text-xs:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .text-sm:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 15px; }
+:where(.page-content, .homepage-original) .text-base:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 17px; }
+:where(.page-content, .homepage-original) .text-lg:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 19px; }
+:where(.page-content, .homepage-original) .text-xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 21px; }
+:where(.page-content, .homepage-original) .text-2xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 25px; }
+:where(.page-content, .homepage-original) .text-3xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 31px; }
+:where(.page-content, .homepage-original) .text-4xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 37px; }
+:where(.page-content, .homepage-original) .text-\[9px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 10px; }
+:where(.page-content, .homepage-original) .text-\[10px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 11px; }
+:where(.page-content, .homepage-original) .text-\[11px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 12px; }
+:where(.page-content, .homepage-original) .text-\[12px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .text-\[15px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 16px; }
+@media (min-width: 640px) {
+:where(.page-content, .homepage-original) .sm\:text-xs:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .sm\:text-sm:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 15px; }
+:where(.page-content, .homepage-original) .sm\:text-base:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 17px; }
+:where(.page-content, .homepage-original) .sm\:text-lg:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 19px; }
+:where(.page-content, .homepage-original) .sm\:text-xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 21px; }
+:where(.page-content, .homepage-original) .sm\:text-2xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 25px; }
+:where(.page-content, .homepage-original) .sm\:text-3xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 31px; }
+:where(.page-content, .homepage-original) .sm\:text-4xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 37px; }
+:where(.page-content, .homepage-original) .sm\:text-\[9px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 10px; }
+:where(.page-content, .homepage-original) .sm\:text-\[10px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 11px; }
+:where(.page-content, .homepage-original) .sm\:text-\[11px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 12px; }
+:where(.page-content, .homepage-original) .sm\:text-\[12px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .sm\:text-\[15px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 16px; }
+}
+@media (min-width: 768px) {
+:where(.page-content, .homepage-original) .md\:text-xs:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .md\:text-sm:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 15px; }
+:where(.page-content, .homepage-original) .md\:text-base:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 17px; }
+:where(.page-content, .homepage-original) .md\:text-lg:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 19px; }
+:where(.page-content, .homepage-original) .md\:text-xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 21px; }
+:where(.page-content, .homepage-original) .md\:text-2xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 25px; }
+:where(.page-content, .homepage-original) .md\:text-3xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 31px; }
+:where(.page-content, .homepage-original) .md\:text-4xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 37px; }
+:where(.page-content, .homepage-original) .md\:text-\[9px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 10px; }
+:where(.page-content, .homepage-original) .md\:text-\[10px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 11px; }
+:where(.page-content, .homepage-original) .md\:text-\[11px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 12px; }
+:where(.page-content, .homepage-original) .md\:text-\[12px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .md\:text-\[15px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 16px; }
+}
+@media (min-width: 1024px) {
+:where(.page-content, .homepage-original) .lg\:text-xs:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .lg\:text-sm:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 15px; }
+:where(.page-content, .homepage-original) .lg\:text-base:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 17px; }
+:where(.page-content, .homepage-original) .lg\:text-lg:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 19px; }
+:where(.page-content, .homepage-original) .lg\:text-xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 21px; }
+:where(.page-content, .homepage-original) .lg\:text-2xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 25px; }
+:where(.page-content, .homepage-original) .lg\:text-3xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 31px; }
+:where(.page-content, .homepage-original) .lg\:text-4xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 37px; }
+:where(.page-content, .homepage-original) .lg\:text-\[9px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 10px; }
+:where(.page-content, .homepage-original) .lg\:text-\[10px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 11px; }
+:where(.page-content, .homepage-original) .lg\:text-\[11px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 12px; }
+:where(.page-content, .homepage-original) .lg\:text-\[12px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .lg\:text-\[15px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 16px; }
+}
+@media (min-width: 1280px) {
+:where(.page-content, .homepage-original) .xl\:text-xs:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .xl\:text-sm:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 15px; }
+:where(.page-content, .homepage-original) .xl\:text-base:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 17px; }
+:where(.page-content, .homepage-original) .xl\:text-lg:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 19px; }
+:where(.page-content, .homepage-original) .xl\:text-xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 21px; }
+:where(.page-content, .homepage-original) .xl\:text-2xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 25px; }
+:where(.page-content, .homepage-original) .xl\:text-3xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 31px; }
+:where(.page-content, .homepage-original) .xl\:text-4xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 37px; }
+:where(.page-content, .homepage-original) .xl\:text-\[9px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 10px; }
+:where(.page-content, .homepage-original) .xl\:text-\[10px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 11px; }
+:where(.page-content, .homepage-original) .xl\:text-\[11px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 12px; }
+:where(.page-content, .homepage-original) .xl\:text-\[12px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .xl\:text-\[15px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 16px; }
+}
+@media (min-width: 1536px) {
+:where(.page-content, .homepage-original) .\32 xl\:text-xs:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-sm:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 15px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-base:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 17px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-lg:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 19px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 21px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-2xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 25px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-3xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 31px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-4xl:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 37px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-\[9px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 10px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-\[10px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 11px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-\[11px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 12px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-\[12px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 13px; }
+:where(.page-content, .homepage-original) .\32 xl\:text-\[15px\]:where(:not(h1, h2, h3, h4, h5, h6, h1 *, h2 *, h3 *, h4 *, h5 *, h6 *)) { font-size: 16px; }
+}
+
+.page-content .product-card-description { font-weight: 400 !important; }
+:where(.page-content, .homepage-original) :is(.btn-primary-solid, .btn-idecal-bold, .badge-brand) { font-size: 15px; }
