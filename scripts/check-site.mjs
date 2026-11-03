@@ -69,7 +69,7 @@ for (const category of catalogueCategories) {
   assert.ok(await exists(categoryPage), `Missing product category: ${category.slug}`);
   const html = await readFile(categoryPage, 'utf8');
   const expected = catalogueProducts.filter(product => product.category === category.slug).length;
-  if (category.slug !== 'decal-mo-dan-kinh') assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Legacy category count mismatch: ${category.slug}`);
+  if (!['decal-mo-dan-kinh', 'decal-pvc'].includes(category.slug)) assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Legacy category count mismatch: ${category.slug}`);
 }
 // New navigation groups may overlap by application while preserving original product URLs.
 const landingSamples = [
@@ -88,6 +88,14 @@ for (const [slug, sample] of landingSamples) {
   assert.ok(html.includes(`data-product-id="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);
   assert.ok(html.includes('id="mau-san-pham"'), `Landing ${slug} must contain a product catalogue`);
   if (slug === 'film-bao-ve-noi-that') assert.ok(!html.includes('data-product-id="phim-bao-ve-kinh-safety-4ml"'), 'Glass safety film must not be classified as interior protection');
+}
+const pvcPalette = JSON.parse(await readFile('src/data/pvc-colors.json', 'utf8'));
+const pvcLanding = await readFile(path.join(root, 'danh-muc-san-pham/decal-pvc/index.html'), 'utf8');
+assert.equal(new Set(pvcPalette.colors.map(color => color.productSlug)).size, pvcPalette.colors.length, 'Every color must link to a distinct product');
+for (const color of pvcPalette.colors) {
+  assert.ok(catalogueProducts.some(product => product.slug === color.productSlug), `Missing color product: ${color.productSlug}`);
+  assert.ok(pvcLanding.includes(`href="/san-pham/${color.productSlug}"`), `Missing color link: ${color.name}`);
+  assert.match(color.hex, /^#[0-9a-f]{6}$/i, `Invalid swatch color: ${color.name}`);
 }
 const serviceIndex = await readFile(path.join(root, 'dich-vu/index.html'), 'utf8');
 for (const slug of ['thiet-ke','in-decal','cat-decal','thi-cong-decal','dich-vu-tron-goi']) {

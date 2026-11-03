@@ -442,5 +442,24 @@
     "service": "decal-quang-cao",
     "image": "/images/decal-quang-cao/Decal-quang-cao.webp",
     "needs": []
+  },
+  {
+    "slug": "decal-pvc",
+    "name": "Decal PVC",
+    "headline": "Decal PVC màu theo nhu cầu",
+    "description": "Mẫu màu Decal PVC số hóa để tham khảo trước khi tư vấn vật liệu thực tế.",
+    "benefits": [
+      {
+        "title": "Chọn màu tham khảo",
+        "description": "Đối chiếu mẫu thật trước khi chốt màu."
+      }
+    ],
+    "priceTitle": "Thông tin vật liệu",
+    "priceNote": "Khổ cuộn và chi phí được xác nhận khi tư vấn.",
+    "prices": [],
+    "faqs": [],
+    "service": "cat-decal",
+    "image": "/images/catalogue/decal-pvc-xam.jpg",
+    "needs": []
   }
 ]

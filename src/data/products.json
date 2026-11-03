@@ -2219,5 +2219,1127 @@
       "Căn hộ ban công",
       "Showroom"
     ]
+  },
+  {
+    "slug": "decal-pvc-mau-xam-nhat",
+    "name": "Decal PVC màu xám nhạt",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-004",
+    "description": "Decal PVC màu xám nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xám nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xam-nhat.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xám nhạt"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xam-dam",
+    "name": "Decal PVC màu xám đậm",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-005",
+    "description": "Decal PVC màu xám đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xám đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xam-dam.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xám đậm"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-kem",
+    "name": "Decal PVC màu kem",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-006",
+    "description": "Decal PVC màu kem theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu kem theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-kem.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Kem"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-be",
+    "name": "Decal PVC màu be",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-007",
+    "description": "Decal PVC màu be theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu be theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-be.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Be"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-nau-nhat",
+    "name": "Decal PVC màu nâu nhạt",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-008",
+    "description": "Decal PVC màu nâu nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu nâu nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-nau-nhat.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Nâu nhạt"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-nau",
+    "name": "Decal PVC màu nâu",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-009",
+    "description": "Decal PVC màu nâu theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu nâu theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-nau.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Nâu"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-vang-cam",
+    "name": "Decal PVC màu vàng cam",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-010",
+    "description": "Decal PVC màu vàng cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu vàng cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-vang-cam.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Vàng cam"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-vang",
+    "name": "Decal PVC màu vàng",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-011",
+    "description": "Decal PVC màu vàng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu vàng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-vang.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Vàng"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-vang-chanh",
+    "name": "Decal PVC màu vàng chanh",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-012",
+    "description": "Decal PVC màu vàng chanh theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu vàng chanh theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-vang-chanh.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Vàng chanh"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-cam-nhat",
+    "name": "Decal PVC màu cam nhạt",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-013",
+    "description": "Decal PVC màu cam nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu cam nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-cam-nhat.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Cam nhạt"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-cam-pastel",
+    "name": "Decal PVC màu cam pastel",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-014",
+    "description": "Decal PVC màu cam pastel theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu cam pastel theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-cam-pastel.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Cam pastel"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-do-cam",
+    "name": "Decal PVC màu đỏ cam",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-015",
+    "description": "Decal PVC màu đỏ cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu đỏ cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-do-cam.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Đỏ cam"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-do",
+    "name": "Decal PVC màu đỏ",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-016",
+    "description": "Decal PVC màu đỏ theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu đỏ theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-do.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Đỏ"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-do-dam",
+    "name": "Decal PVC màu đỏ đậm",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-017",
+    "description": "Decal PVC màu đỏ đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu đỏ đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-do-dam.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Đỏ đậm"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-do-ruou-vang",
+    "name": "Decal PVC màu đỏ rượu vang",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-018",
+    "description": "Decal PVC màu đỏ rượu vang theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu đỏ rượu vang theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-do-ruou-vang.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Đỏ rượu vang"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-hong",
+    "name": "Decal PVC màu hồng",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-019",
+    "description": "Decal PVC màu hồng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu hồng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-hong.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Hồng"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-hong-nhat",
+    "name": "Decal PVC màu hồng nhạt",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-020",
+    "description": "Decal PVC màu hồng nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu hồng nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-hong-nhat.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Hồng nhạt"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-tim",
+    "name": "Decal PVC màu tím",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-021",
+    "description": "Decal PVC màu tím theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu tím theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-tim.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Tím"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-tim-lavender",
+    "name": "Decal PVC màu tím lavender",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-022",
+    "description": "Decal PVC màu tím lavender theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu tím lavender theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-tim-lavender.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Tím lavender"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-tim-lilac",
+    "name": "Decal PVC màu tím lilac",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-023",
+    "description": "Decal PVC màu tím lilac theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu tím lilac theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-tim-lilac.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Tím lilac"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-navy",
+    "name": "Decal PVC màu xanh navy",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-024",
+    "description": "Decal PVC màu xanh navy theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh navy theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-navy.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh navy"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-cobalt",
+    "name": "Decal PVC màu xanh cobalt",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-025",
+    "description": "Decal PVC màu xanh cobalt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh cobalt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-cobalt.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh cobalt"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-duong-dam",
+    "name": "Decal PVC màu xanh dương đậm",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-026",
+    "description": "Decal PVC màu xanh dương đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh dương đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-duong-dam.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh dương đậm"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-azure",
+    "name": "Decal PVC màu xanh azure",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-027",
+    "description": "Decal PVC màu xanh azure theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh azure theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-azure.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh azure"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-da-troi",
+    "name": "Decal PVC màu xanh da trời",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-028",
+    "description": "Decal PVC màu xanh da trời theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh da trời theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-da-troi.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh da trời"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-duong-nhat",
+    "name": "Decal PVC màu xanh dương nhạt",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-029",
+    "description": "Decal PVC màu xanh dương nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh dương nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-duong-nhat.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh dương nhạt"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-bang",
+    "name": "Decal PVC màu xanh băng",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-030",
+    "description": "Decal PVC màu xanh băng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh băng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-bang.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh băng"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-ngoc",
+    "name": "Decal PVC màu xanh ngọc",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-031",
+    "description": "Decal PVC màu xanh ngọc theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh ngọc theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-ngoc.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh ngọc"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-bac-ha",
+    "name": "Decal PVC màu xanh bạc hà",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-032",
+    "description": "Decal PVC màu xanh bạc hà theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh bạc hà theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-bac-ha.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh bạc hà"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-la-dam",
+    "name": "Decal PVC màu xanh lá đậm",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-033",
+    "description": "Decal PVC màu xanh lá đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh lá đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-la-dam.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh lá đậm"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-la",
+    "name": "Decal PVC màu xanh lá",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-034",
+    "description": "Decal PVC màu xanh lá theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh lá theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-la.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh lá"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-la-non",
+    "name": "Decal PVC màu xanh lá non",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-035",
+    "description": "Decal PVC màu xanh lá non theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh lá non theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-la-non.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh lá non"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
+  },
+  {
+    "slug": "decal-pvc-mau-xanh-lime",
+    "name": "Decal PVC màu xanh lime",
+    "category": "decal-pvc",
+    "subcategory": "Decal PVC màu",
+    "brand": "",
+    "price": null,
+    "code": "PVC-036",
+    "description": "Decal PVC màu xanh lime theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "paragraphs": [
+      "Decal PVC màu xanh lime theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
+      "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
+    ],
+    "images": [
+      "/images/pvc-colors/decal-pvc-mau-xanh-lime.svg"
+    ],
+    "attributes": {
+      "mau-sac": [
+        "Xanh lime"
+      ],
+      "chat-lieu": [
+        "PVC"
+      ],
+      "quy-cach": [
+        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+      ]
+    },
+    "uses": [
+      "Trang trí bề mặt phẳng",
+      "Cắt chữ và logo",
+      "Làm nền nhận diện"
+    ]
   }
 ]

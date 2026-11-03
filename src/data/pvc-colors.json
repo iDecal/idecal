@@ -1,0 +1,298 @@
+{
+  "source": {
+    "title": "ORAFOL – ORACAL 651 Intermediate Cal",
+    "url": "https://www.orafol.com/en/europe/products/oracal-651-intermediate-cal",
+    "checkedOn": "2026-11-03",
+    "basis": "Published glossy swatch sRGB values; digital reference only, not a stock or brand claim."
+  },
+  "colors": [
+    {
+      "name": "Trắng",
+      "hex": "#e6e9ee",
+      "productSlug": "decal-trang",
+      "family": "trung-tinh",
+      "referenceCode": "010",
+      "referenceName": "White"
+    },
+    {
+      "name": "Đen",
+      "hex": "#0d0e11",
+      "productSlug": "decal-den",
+      "family": "trung-tinh",
+      "referenceCode": "070",
+      "referenceName": "Black"
+    },
+    {
+      "name": "Xám",
+      "hex": "#757d7c",
+      "productSlug": "decal-mau-xam-dam-nhat-co-san-keo",
+      "family": "trung-tinh",
+      "referenceCode": "071",
+      "referenceName": "Grey"
+    },
+    {
+      "name": "Xám nhạt",
+      "hex": "#bfc2c0",
+      "productSlug": "decal-pvc-mau-xam-nhat",
+      "family": "trung-tinh",
+      "referenceCode": "072",
+      "referenceName": "Light grey"
+    },
+    {
+      "name": "Xám đậm",
+      "hex": "#4b4c4c",
+      "productSlug": "decal-pvc-mau-xam-dam",
+      "family": "trung-tinh",
+      "referenceCode": "073",
+      "referenceName": "Dark grey"
+    },
+    {
+      "name": "Kem",
+      "hex": "#ebd494",
+      "productSlug": "decal-pvc-mau-kem",
+      "family": "trung-tinh",
+      "referenceCode": "023",
+      "referenceName": "Cream"
+    },
+    {
+      "name": "Be",
+      "hex": "#cec09f",
+      "productSlug": "decal-pvc-mau-be",
+      "family": "trung-tinh",
+      "referenceCode": "082",
+      "referenceName": "Beige"
+    },
+    {
+      "name": "Nâu nhạt",
+      "hex": "#a8885c",
+      "productSlug": "decal-pvc-mau-nau-nhat",
+      "family": "trung-tinh",
+      "referenceCode": "081",
+      "referenceName": "Light brown"
+    },
+    {
+      "name": "Nâu",
+      "hex": "#432f1e",
+      "productSlug": "decal-pvc-mau-nau",
+      "family": "trung-tinh",
+      "referenceCode": "080",
+      "referenceName": "Brown"
+    },
+    {
+      "name": "Vàng cam",
+      "hex": "#fbaa00",
+      "productSlug": "decal-pvc-mau-vang-cam",
+      "family": "am",
+      "referenceCode": "020",
+      "referenceName": "Golden yellow"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#fec500",
+      "productSlug": "decal-pvc-mau-vang",
+      "family": "am",
+      "referenceCode": "021",
+      "referenceName": "Yellow"
+    },
+    {
+      "name": "Vàng chanh",
+      "hex": "#f2e210",
+      "productSlug": "decal-pvc-mau-vang-chanh",
+      "family": "am",
+      "referenceCode": "025",
+      "referenceName": "Brimstone yellow"
+    },
+    {
+      "name": "Cam nhạt",
+      "hex": "#ea6700",
+      "productSlug": "decal-pvc-mau-cam-nhat",
+      "family": "am",
+      "referenceCode": "036",
+      "referenceName": "Light orange"
+    },
+    {
+      "name": "Cam pastel",
+      "hex": "#fc6c00",
+      "productSlug": "decal-pvc-mau-cam-pastel",
+      "family": "am",
+      "referenceCode": "035",
+      "referenceName": "Pastel orange"
+    },
+    {
+      "name": "Đỏ cam",
+      "hex": "#d33100",
+      "productSlug": "decal-pvc-mau-do-cam",
+      "family": "am",
+      "referenceCode": "047",
+      "referenceName": "Orange red"
+    },
+    {
+      "name": "Đỏ",
+      "hex": "#b0000d",
+      "productSlug": "decal-pvc-mau-do",
+      "family": "am",
+      "referenceCode": "031",
+      "referenceName": "Red"
+    },
+    {
+      "name": "Đỏ đậm",
+      "hex": "#900e16",
+      "productSlug": "decal-pvc-mau-do-dam",
+      "family": "am",
+      "referenceCode": "030",
+      "referenceName": "Dark red"
+    },
+    {
+      "name": "Đỏ rượu vang",
+      "hex": "#6f000e",
+      "productSlug": "decal-pvc-mau-do-ruou-vang",
+      "family": "am",
+      "referenceCode": "312",
+      "referenceName": "Burgundy"
+    },
+    {
+      "name": "Hồng",
+      "hex": "#c22b6b",
+      "productSlug": "decal-pvc-mau-hong",
+      "family": "am",
+      "referenceCode": "041",
+      "referenceName": "Pink"
+    },
+    {
+      "name": "Hồng nhạt",
+      "hex": "#ed84b6",
+      "productSlug": "decal-pvc-mau-hong-nhat",
+      "family": "am",
+      "referenceCode": "045",
+      "referenceName": "Soft pink"
+    },
+    {
+      "name": "Tím",
+      "hex": "#412773",
+      "productSlug": "decal-pvc-mau-tim",
+      "family": "lanh",
+      "referenceCode": "404",
+      "referenceName": "Purple"
+    },
+    {
+      "name": "Tím lavender",
+      "hex": "#775ea0",
+      "productSlug": "decal-pvc-mau-tim-lavender",
+      "family": "lanh",
+      "referenceCode": "043",
+      "referenceName": "Lavender"
+    },
+    {
+      "name": "Tím lilac",
+      "hex": "#b893bc",
+      "productSlug": "decal-pvc-mau-tim-lilac",
+      "family": "lanh",
+      "referenceCode": "042",
+      "referenceName": "Lilac"
+    },
+    {
+      "name": "Xanh navy",
+      "hex": "#1b2e5d",
+      "productSlug": "decal-pvc-mau-xanh-navy",
+      "family": "lanh",
+      "referenceCode": "050",
+      "referenceName": "Dark blue"
+    },
+    {
+      "name": "Xanh cobalt",
+      "hex": "#12226c",
+      "productSlug": "decal-pvc-mau-xanh-cobalt",
+      "family": "lanh",
+      "referenceCode": "065",
+      "referenceName": "Cobalt blue"
+    },
+    {
+      "name": "Xanh dương đậm",
+      "hex": "#1930ab",
+      "productSlug": "decal-pvc-mau-xanh-duong-dam",
+      "family": "lanh",
+      "referenceCode": "086",
+      "referenceName": "Brilliant blue"
+    },
+    {
+      "name": "Xanh azure",
+      "hex": "#005dab",
+      "productSlug": "decal-pvc-mau-xanh-azure",
+      "family": "lanh",
+      "referenceCode": "052",
+      "referenceName": "Azure blue"
+    },
+    {
+      "name": "Xanh da trời",
+      "hex": "#0075bb",
+      "productSlug": "decal-pvc-mau-xanh-da-troi",
+      "family": "lanh",
+      "referenceCode": "084",
+      "referenceName": "Sky blue"
+    },
+    {
+      "name": "Xanh dương nhạt",
+      "hex": "#0089c3",
+      "productSlug": "decal-pvc-mau-xanh-duong-nhat",
+      "family": "lanh",
+      "referenceCode": "053",
+      "referenceName": "Light blue"
+    },
+    {
+      "name": "Xanh băng",
+      "hex": "#3da1d2",
+      "productSlug": "decal-pvc-mau-xanh-bang",
+      "family": "lanh",
+      "referenceCode": "056",
+      "referenceName": "Ice blue"
+    },
+    {
+      "name": "Xanh ngọc",
+      "hex": "#009b97",
+      "productSlug": "decal-pvc-mau-xanh-ngoc",
+      "family": "lanh",
+      "referenceCode": "054",
+      "referenceName": "Turquoise"
+    },
+    {
+      "name": "Xanh bạc hà",
+      "hex": "#5fcdb7",
+      "productSlug": "decal-pvc-mau-xanh-bac-ha",
+      "family": "lanh",
+      "referenceCode": "055",
+      "referenceName": "Mint"
+    },
+    {
+      "name": "Xanh lá đậm",
+      "hex": "#004028",
+      "productSlug": "decal-pvc-mau-xanh-la-dam",
+      "family": "lanh",
+      "referenceCode": "060",
+      "referenceName": "Dark green"
+    },
+    {
+      "name": "Xanh lá",
+      "hex": "#00784b",
+      "productSlug": "decal-pvc-mau-xanh-la",
+      "family": "lanh",
+      "referenceCode": "061",
+      "referenceName": "Green"
+    },
+    {
+      "name": "Xanh lá non",
+      "hex": "#289901",
+      "productSlug": "decal-pvc-mau-xanh-la-non",
+      "family": "lanh",
+      "referenceCode": "064",
+      "referenceName": "Yellow green"
+    },
+    {
+      "name": "Xanh lime",
+      "hex": "#6aa72d",
+      "productSlug": "decal-pvc-mau-xanh-lime",
+      "family": "lanh",
+      "referenceCode": "063",
+      "referenceName": "Lime-tree green"
+    }
+  ]
+}
