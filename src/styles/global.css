@@ -122,17 +122,8 @@
   letter-spacing: -0.02em !important;
 }
 
-/* One blue for text links, with a lighter blue on dark surfaces. */
-:root { --link-color: #006edc; --link-hover-color: #0057b3; }
-:where(.brand-dark, [data-theme='dark'], footer, .cutting-jump, .home-consult) {
-  --link-color: #8dd8ff;
-  --link-hover-color: #fff;
-}
-a:not(.btn-primary-solid):not([class*='bg-']):not(.wp-element-button):not(.home-service-cover):not(.why-about-link):not(.consult-quote):not(.consult-phone):not(.float-btn) {
-  color: var(--link-color) !important;
-}
-a:not(.btn-primary-solid):not([class*='bg-']):not(.wp-element-button):not(.home-service-cover):not(.why-about-link):not(.consult-quote):not(.consult-phone):not(.float-btn):hover {
-  color: var(--link-hover-color) !important;
-}
-a:focus-visible { outline-color: #006edc; }
-.homepage-original .home-service-icon { color: #006edc !important; }
+/* Reference blue is limited to the homepage service cards. */
+.homepage-original .home-service-icon,
+.homepage-original .home-service-action { color: #006edc !important; }
+.homepage-original .home-service-action:hover { color: #0057b3 !important; }
+.homepage-original .home-service-action:focus-visible { outline-color: #006edc; }
