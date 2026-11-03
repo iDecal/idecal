@@ -97,3 +97,47 @@
   .homepage-original .why-idecal-photo { aspect-ratio: 5 / 4; }
   .homepage-original .home-eyebrow, .homepage-original #gspb_text-id-gsbp-5d5362d.home-eyebrow { font-size: 12px; padding: 7px 12px; }
 }
+
+/* Three clear service stages, with a dedicated action on every card. */
+.homepage-original #gspb_row-id-gsbp-c9028b0.home-process { display: block; width: 100%; max-width: none; padding: 72px 24px; margin: 0; background: #f4f8fd; }
+.homepage-original .process-inner { max-width: 1200px; margin: 0 auto; }
+.homepage-original .process-heading { max-width: 640px; margin-bottom: 32px; }
+.homepage-original #home-process-title { margin: 0 0 14px; color: #031245; font-size: clamp(27px,3vw,38px); font-weight: 600; line-height: 1.3; letter-spacing: -.7px; }
+.homepage-original .process-heading p { margin: 0; color: #44566b; font-size: 15px; line-height: 1.8; }
+.homepage-original .process-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.homepage-original .process-card { display: flex; flex-direction: column; padding: 30px; border: 1px solid #e0e9f4; border-radius: 20px; background: white; box-shadow: 0 6px 24px #1b4f7a04; transition: border-color .2s,box-shadow .2s; }
+.homepage-original .process-card:hover { border-color: #bfc9fb; box-shadow: 0 12px 32px #1b4f7a0b; }
+.homepage-original .process-card-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+.homepage-original .process-icon { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 14px; color: #4f46e5; background: #f0edff; }
+.homepage-original .process-card:nth-child(2) .process-icon { background: #e8f6ff; color: #0d6b96; }
+.homepage-original .process-card:nth-child(3) .process-icon { background: #eef2ff; color: #2563eb; }
+.homepage-original .process-icon svg { width: 26px; height: 26px; }
+.homepage-original .process-number { font-size: 14px; color: #7a8ca3; font-weight: 500; }
+.homepage-original .process-card h3 { margin: 0 0 12px; font-size: 20px; font-weight: 600; line-height: 1.4; color: #031245; }
+.homepage-original .process-card p { margin: 0 0 28px; color: #44566b; font-size: 14px; line-height: 1.8; }
+.homepage-original .process-card a { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 20px; border-top: 1px solid #e7edf5; color: #0d6b96; font-size: 14px; font-weight: 500; text-decoration: none; }
+.homepage-original .process-card a:hover { color: #6d28d9; }
+.homepage-original .process-card a svg, .homepage-original .consult-actions svg { width: 20px; height: 20px; flex-shrink: 0; }
+.homepage-original #gspb_container-id-gsbp-36095c7.home-consult { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 48px; width: calc(100% - 48px); max-width: 1200px; margin: 24px auto 80px; padding: 48px; border: 1px solid #253763; border-radius: 24px; background: radial-gradient(ellipse at 100% 0%,#46339088,transparent 65%),#071943; color: white; }
+.homepage-original .consult-label { display: inline-block; margin: 0 0 16px; color: #8dd8ff; font-size: 13px; font-weight: 500; }
+.homepage-original #home-consult-title { margin: 0 0 16px; max-width: 600px; color: white; font-size: clamp(26px,2.6vw,34px); line-height: 1.35; font-weight: 600; }
+.homepage-original .consult-copy p { max-width: 560px; margin: 0; color: #c9d6ea; font-size: 14px; line-height: 1.8; }
+.homepage-original .consult-actions { display: flex; flex-direction: column; gap: 16px; align-items: stretch; }
+.homepage-original .consult-phone { display: inline-flex; align-items: center; justify-content: center; gap: 12px; color: white; font-size: 21px; font-weight: 500; text-decoration: none; }
+.homepage-original .consult-quote { display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 15px 22px; min-height: 50px; background: white; color: #071943; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; transition: background .2s; }
+.homepage-original .consult-quote:hover { background: #e4f2ff; }
+.homepage-original .process-card a:focus-visible, .homepage-original .consult-actions a:focus-visible { outline: 2px solid #1aa7e0; outline-offset: 5px; }
+.homepage-original .why-idecal-photo { aspect-ratio: 1; border-radius: 50%; width: 100%; }
+@media(max-width: 1023px) {
+  .homepage-original .process-card { padding: 24px; }
+  .homepage-original #gspb_container-id-gsbp-36095c7.home-consult { padding: 36px; gap: 32px; }
+}
+@media(max-width: 767px) {
+  .homepage-original #gspb_row-id-gsbp-c9028b0.home-process { padding: 48px 24px; }
+  .homepage-original .process-grid { grid-template-columns: 1fr; gap: 16px; }
+  .homepage-original .process-card-top { margin-bottom: 22px; }
+  .homepage-original #gspb_container-id-gsbp-36095c7.home-consult { grid-template-columns: 1fr; gap: 28px; padding: 28px 24px; margin: 16px auto 48px; border-radius: 20px; }
+  .homepage-original .consult-actions { align-items: flex-start; }
+  .homepage-original .consult-quote { width: 100%; gap: 12px; }
+  .homepage-original .why-idecal-photo { aspect-ratio: 1; border-radius: 50%; max-width: 400px; justify-self: center; }
+}

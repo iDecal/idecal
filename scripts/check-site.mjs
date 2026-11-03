@@ -38,7 +38,7 @@ const sourceMain = home.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? '';
 const decodeText = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&apos;|&#039;/g, "'").replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_,code) => String.fromCodePoint(Number(code))).replace(/&#x([0-9a-f]+);/gi, (_,code) => String.fromCodePoint(parseInt(code,16)));
 const normalizeText = value => value.replace(/\s+/g, ' ').trim();
 const actualHomeText = normalizeText(decodeText(sourceMain.replace(/<[^>]*>/g, ' ')));
-assert.equal(actualHomeText, normalizeText(sourceAudit.mainText), 'Homepage must preserve every public text fragment from the supplied file');
+assert.equal(actualHomeText, normalizeText(sourceAudit.mainText), 'Homepage must preserve approved content, including requested service and CTA revisions');
 for (const id of sourceAudit.sections) assert.ok(home.includes(`id="${id}"`), `Missing source homepage section: ${id}`);
 assert.ok(!home.includes('id="wpadminbar"'), 'WordPress administration must not be published');
 assert.ok(!home.includes('google_gtagjs-js'), 'Saved administration/tracking scripts must not be imported');
