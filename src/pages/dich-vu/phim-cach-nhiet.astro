@@ -1,5 +1,4 @@
 ---
-import ServiceProducts from '../../components/ServiceProducts.astro';
 import ServiceGallery from '../../components/ServiceGallery.astro';
 import '../../styles/services.css';
 import PageBanner from '../../components/PageBanner.astro';
@@ -19,11 +18,11 @@ const faqs = [
     <p slot="description">
           Giải pháp chống nóng toàn diện cho <strong>văn phòng, nhà ở và showroom</strong>. Giảm tới 80% sức nóng mặt trời, bảo vệ sức khỏe và tiết kiệm 30% điện năng máy lạnh.
         </p>
-    <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ báo giá ngay</a><a class="btn-idecal-bold" href="#products">Xem bảng giá sản phẩm</a></Fragment>
+    <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ báo giá ngay</a><a class="btn-idecal-bold" href="#ung-dung">Xem ứng dụng thực tế</a></Fragment>
   </PageBanner>
 <ServiceGallery service="phim-cach-nhiet" />
 
-  <section class="py-24 bg-white">
+  <section id="ung-dung" class="py-24 bg-white">
     <div class="container">
       <div class="text-center mb-16">
         <h6 class="text-primary">Ứng dụng thực tế</h6>
@@ -98,7 +97,6 @@ const faqs = [
     </div>
   </section>
 
-<div id="products"><ServiceProducts service="phim-cach-nhiet" /></div>
 
   <section class="py-24 bg-white">
     <div class="container">

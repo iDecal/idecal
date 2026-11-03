@@ -1,11 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageBanner from '../../components/PageBanner.astro';
-import { serviceOfferings, productLandings } from '../../data/site-offerings';
+import { serviceOfferings } from '../../data/site-offerings';
 import '../../styles/offering-landings.css';
 export function getStaticPaths() { return serviceOfferings.filter(service => service.slug !== 'cat-decal').map(service => ({ params: { slug: service.slug }, props: { service } })); }
 const { service } = Astro.props;
-const groups = productLandings.filter(group => service.groupSlugs.includes(group.slug));
 ---
 <Layout title={`${service.name} | Dịch vụ iDecal`} description={service.description} image={service.image}>
   <div class="offering-landing">
@@ -15,7 +14,6 @@ const groups = productLandings.filter(group => service.groupSlugs.includes(group
     </PageBanner>
     <section class="offering-section container offering-advice"><div><p class="offering-kicker">Phạm vi thực hiện</p><h2>Bạn cần hỗ trợ phần việc nào?</h2><p>Có thể chọn riêng dịch vụ hoặc kết hợp với sản phẩm. iDecal trao đổi phạm vi và cách thực hiện trước khi xác nhận.</p></div><ul class="offering-deliverables">{service.deliverables.map(text => <li><span aria-hidden="true">✓</span>{text}</li>)}</ul></section>
     <section id="quy-trinh" class="offering-section offering-surface"><div class="container"><div class="offering-heading"><p class="offering-kicker">Từng bước rõ ràng</p><h2>Từ yêu cầu đến hoàn thiện</h2></div><div class="offering-cards">{service.steps.map((step,index) => <article><span class="offering-number">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></article>)}</div></div></section>
-    <section class="offering-section container"><div class="offering-heading"><p class="offering-kicker">Vật liệu & mẫu tham khảo</p><h2>Sản phẩm đi cùng dịch vụ</h2><p>Mỗi nhóm có các mẫu sản phẩm để xem hình ảnh và thông tin chi tiết.</p></div><div class="offering-product-groups">{groups.map(group => <a href={`/danh-muc-san-pham/${group.slug}`} class="offering-group-link"><img src={group.image} alt={group.name} width="220" height="220" loading="lazy" /><div><h3>{group.name}</h3><span>Xem mẫu sản phẩm →</span></div></a>)}</div></section>
     <section class="offering-section offering-surface"><div class="container offering-advice"><div><p class="offering-kicker">Chuẩn bị yêu cầu</p><h2>Gửi đúng thông tin, tư vấn sát nhu cầu</h2><p>Gửi kích thước, ảnh vị trí dán, nội dung hoặc file thiết kế và thời gian dự kiến. Những phần đã bao gồm trong đơn giá sẽ được xác nhận khi báo giá.</p></div><div class="offering-service-links"><a href={`/dat-dich-vu?dich-vu=${service.slug}`}><span>Đặt dịch vụ {service.name.toLocaleLowerCase('vi-VN')}</span><span aria-hidden="true">↗</span></a><a href="/du-an"><span>Xem công trình thực tế</span><span aria-hidden="true">→</span></a></div></div></section>
   </div>
 </Layout>
