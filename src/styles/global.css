@@ -16,9 +16,7 @@ body {
 --text-main: #1f2937;
 --text-muted: #6b7280;
 
-```
 @apply bg-white text-secondary font-sans antialiased;
-```
 
 }
 
@@ -96,13 +94,11 @@ rounded-brand
 transition-all
 duration-300;
 
-```
 background: #ffc107;
 color: #111827;
 
 box-shadow:
   0 10px 25px rgba(255, 193, 7, 0.25);
-```
 
 }
 
@@ -125,10 +121,8 @@ pb-1
 transition-all
 border-b-2;
 
-```
 color: #00a99d;
 border-color: #00a99d;
-```
 
 }
 
@@ -149,32 +143,26 @@ h-full
 transition-all
 duration-500;
 
-```
 border: 1px solid #e5e7eb;
 
 box-shadow:
   0 10px 30px rgba(0, 0, 0, 0.06);
-```
 
 }
 
 .service-card-brand:hover {
 transform: translateY(-6px);
 
-```
 box-shadow:
   0 20px 50px rgba(0, 0, 0, 0.12);
-```
 
 }
 
 .img-brand {
 @apply rounded-[2rem] object-cover;
 
-```
 box-shadow:
   0 15px 40px rgba(0, 169, 157, 0.15);
-```
 
 }
 
@@ -208,9 +196,7 @@ background: #f5f9fa;
 background: rgba(0, 169, 157, 0.1);
 color: #00a99d;
 
-```
 @apply px-4 py-2 rounded-full text-sm font-semibold;
-```
 
 }
 }

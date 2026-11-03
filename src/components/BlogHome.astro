@@ -30,7 +30,7 @@ const latestPosts = (await getCollection('blog'))
     <div class="flex overflow-x-auto pb-8 md:pb-0 md:grid md:grid-cols-3 gap-8 snap-x snap-mandatory scrollbar-hide">
       {latestPosts.map((post) => (
         <article class="min-w-[85%] md:min-w-0 snap-center group cursor-pointer">
-          <a href={`/blog/${post.slug}`}>
+          <a href={`/blog/${post.id}`}>
             <div class="relative aspect-[4/3] rounded-[2rem] overflow-hidden mb-6 border border-slate-50 shadow-sm">
               <img 
                 src={post.data.image} 

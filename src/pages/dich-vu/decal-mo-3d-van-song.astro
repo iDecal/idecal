@@ -19,15 +19,15 @@ const products = [
   {
     id: "bronze",
     name: "Vân Sóng Màu Trà",
-    imgSmall: "/images/products/wave-bronze-small.webp",
-    imgLarge: "/images/products/wave-bronze-large.webp",
+    imgSmall: "/images/decal-song-3d/Decal-van-song-3D-mau-tra-song-nho.webp",
+    imgLarge: "/images/decal-song-3d/Decal-van-song-3D-mau-tra-song-to.webp",
     alt: "Decal vân sóng màu trà"
   },
   {
     id: "blue",
     name: "Vân Sóng Màu Xanh",
-    imgSmall: "/images/products/wave-blue-small.webp",
-    imgLarge: "/images/products/wave-blue-large.webp",
+    imgSmall: "/images/image-placeholder.svg",
+    imgLarge: "/images/image-placeholder.svg",
     alt: "Decal vân sóng màu xanh"
   }
 ];
@@ -45,13 +45,13 @@ const products = [
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a href="#contact" class="btn-primary-solid">Nhận báo giá thi công</a>
-          <a href="/images/projects/van-song-thuc-te.jpg" class="btn-idecal-bold text-white border-white hover:text-primary transition-all">Xem mẫu thực tế</a>
+          <a href="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp" class="btn-idecal-bold text-white border-white hover:text-primary transition-all">Xem mẫu thực tế</a>
         </div>
       </div>
       <div class="relative group">
         <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
         <div class="rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-2xl relative z-10">
-          <img src="/images/products/decal-3d-van-song.webp" alt="Decal mờ 3d vân sóng" class="w-full h-[500px] object-cover" />
+          <img src="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp" alt="Decal mờ 3d vân sóng" class="w-full h-[500px] object-cover" />
         </div>
       </div>
     </div>
@@ -157,10 +157,10 @@ const products = [
           </div>
         </div>
         <div class="grid grid-cols-2 gap-4">
-          <img src="/images/projects/3d-wave-1.webp" class="rounded-3xl h-full w-full object-cover shadow-lg" alt="Thi công vân sóng 1" />
+          <img src="/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp" class="rounded-3xl h-full w-full object-cover shadow-lg" alt="Thi công vân sóng 1" />
           <div class="space-y-4">
-            <img src="/images/projects/3d-wave-2.webp" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Thi công vân sóng 2" />
-            <img src="/images/projects/3d-wave-3.webp" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Thi công vân sóng 3" />
+            <img src="/images/decal-song-3d/Decal-van-song-3D-mau-tra-song-nho.webp" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Thi công vân sóng 2" />
+            <img src="/images/decal-song-3d/Decal-van-song-3D-mau-tra-song-to.webp" class="rounded-3xl h-48 w-full object-cover shadow-lg" alt="Thi công vân sóng 3" />
           </div>
         </div>
       </div>
@@ -175,7 +175,7 @@ const products = [
           Mẫu Decal 3D Vân Sóng cần được nhìn trực tiếp. Đội ngũ iDecal sẵn sàng mang mẫu đến tận nơi tại TP.HCM & Bình Dương.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6">
-          <a href="tel:0866077040" class="btn-primary-solid !px-10 text-sm">Gửi báo giá qua Zalo</a>
+          <a href="https://zalo.me/0866077040" class="btn-primary-solid !px-10 text-sm">Gửi báo giá qua Zalo</a>
           <a href="https://zalo.me/0866077040" class="px-10 py-4 bg-white text-secondary font-bold rounded-brand hover:bg-primary hover:text-white transition-all text-sm">Xem kho mẫu 2026</a>
         </div>
       </div>
@@ -194,15 +194,19 @@ const products = [
 </style>
 
 <script>
-  const buttons = document.querySelectorAll('.wave-selector');
-
-  buttons.forEach(button => {
+  document.querySelectorAll<HTMLButtonElement>('.wave-selector').forEach(button => {
+    button.setAttribute('aria-pressed', String(button.classList.contains('active')));
     button.addEventListener('click', () => {
-      const targetId = button.getAttribute('data-target');
-      const newSrc = button.getAttribute('data-src');
-      const imgElement = document.getElementById(`img-${targetId}`) as HTMLImageElement;
-      
-      if (imgElement && newSrc) {
-        imgElement.style.opacity = '0.5';
-        setTimeout(() => {
-          imgElement.
+      const card = button.closest('.product-card');
+      const image = card?.querySelector('img');
+      const src = button.dataset.src;
+      if (!image || !src) return;
+      image.src = src;
+      card?.querySelectorAll('.wave-selector').forEach(selector => {
+        const active = selector === button;
+        selector.classList.toggle('active', active);
+        selector.setAttribute('aria-pressed', String(active));
+      });
+    });
+  });
+</script>

@@ -11,25 +11,24 @@ allPosts.sort((a, b) => {
   return dateB.valueOf() - dateA.valueOf();
 });
 
-const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", "Mẫu thiết kế"];
+
 ---
 
 <Layout title="Blog iDecal | Tin tức">
-  <main class="bg-white pt-20 pb-24">
+  <div class="bg-white pt-20 pb-24">
+    <div class="container mb-12"><h1>Blog iDecal</h1><p>Tin tức, kiến thức decal và công trình thực tế.</p></div>
     <div id="blog-grid" class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
       {allPosts.map(post => {
         // Xử lý Category linh hoạt
         const displayCategory = (post.data.categories && post.data.categories[0]) || post.data.category || "Kiến thức";
         
-        // GIẢI PHÁP SỬA LỖI UNDEFINED:
-        // Ưu tiên lấy slug từ Frontmatter (data.slug), nếu không có mới lấy slug mặc định của file
-        const finalSlug = post.data.slug || post.slug;
+        const finalSlug = post.id;
 
         return (
           <article class="post-card group" data-category={displayCategory}>
             <a href={`/blog/${finalSlug}`}>
               <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-slate-100">
-                <img src={post.data.image || "/images/default-thumb.jpg"} alt={post.data.title} class="w-full h-full object-cover" />
+                <img src={post.data.image || "/images/idecal-logo.png"} alt={post.data.title} class="w-full h-full object-cover" />
               </div>
               <span class="text-primary text-[10px] font-black uppercase">{displayCategory}</span>
               <h2 class="text-xl font-bold text-secondary mt-2">{post.data.title}</h2>
@@ -39,5 +38,5 @@ const categories = ["Tất cả", "Kiến thức", "Dự án", "Khuyến mãi", 
         );
       })}
     </div>
-  </main>
+  </div>
 </Layout>

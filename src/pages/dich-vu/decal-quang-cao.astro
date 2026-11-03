@@ -1,26 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro'; 
 
-const projects = [
-  {
-    title: "Dán Decal Quảng Cáo Chuỗi Xe Tải Coca-Cola",
-    type: "Decal 3M Cao Cấp",
-    image: "/images/congtrinh-xetai-1.webp",
-    size: "250m2"
-  },
-  {
-    title: "Thi Công Decal Lưới & Cắt Chữ Showroom Toyota",
-    type: "Decal Lưới / Cắt Vi Tính",
-    image: "/images/congtrinh-showroom-1.webp",
-    size: "80m2"
-  },
-  {
-    title: "In POSM & Standee Quảng Cáo Sự Kiện VinFast",
-    type: "In PP Bồi Formex",
-    image: "/images/congtrinh-posm-1.webp",
-    size: "150m2"
-  }
-];
+import { getCollection } from 'astro:content';
+const projects = (await getCollection('projects')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const faqs = [
   { q: "iDecal có hỗ trợ thiết kế file in không?", a: "Có, đội ngũ thiết kế của chúng tôi sẽ hỗ trợ tối ưu file in, kiểm tra độ phân giải và chỉnh sửa màu sắc chuẩn CMYK để đảm bảo bản in sắc nét nhất." },
@@ -85,16 +67,21 @@ const faqs = [
         {projects.map((project) => (
           <div class="group overflow-hidden rounded-[2rem] bg-white shadow-card transition-all hover:-translate-y-2">
             <div class="overflow-hidden h-60">
-              <img src={project.image} alt={project.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src={project.data.image} alt={project.data.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             </div>
             <div class="p-6">
-              <span class="inline-block px-3 py-1 text-[10px] font-bold text-primary bg-primary/5 rounded-full mb-3 uppercase tracking-wider">{project.type}</span>
-              <h4 class="text-base text-secondary mb-0">{project.title}</h4>
+              <span class="inline-block px-3 py-1 text-[10px] font-bold text-primary bg-primary/5 rounded-full mb-3 uppercase tracking-wider">{project.data.category}</span>
+              <h4 class="text-base text-secondary mb-0">{project.data.title}</h4>
             </div>
           </div>
         ))}
       </div>
     </div>
+  </section>
+
+  <section id="quote" class="container py-16 text-center">
+    <h2>Nhận báo giá thi công decal</h2>
+    <a href="https://zalo.me/0866077040" class="btn-primary-solid">Chat Zalo nhận báo giá</a>
   </section>
 
   <section class="py-24 bg-slate-50/80">
@@ -151,5 +138,5 @@ const faqs = [
     });
   }
   setupFAQ();
-  window.addEventListener('resize', setupFAQ);
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', setupFAQ);
 </script>

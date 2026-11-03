@@ -4,6 +4,7 @@ client: "TASCO AUTO"
 category: "Showroom"
 image: "/images/cong-trinh/Thi công Decal lưới dán kính showroom GEELY tại Bình Dương.jpg"
 description: "Dự án in ấn & thi công decal lưới dán kính mặt tiền showroom."
+location: "Bình Dương"
 pubDate: 2026-04-20
 ---
 

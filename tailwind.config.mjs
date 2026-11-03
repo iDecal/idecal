@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 export default {
 content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -10,10 +12,10 @@ dark: '#00897B',
 light: '#DDF7F5',
 },
 
-```
 			secondary: {
 				DEFAULT: '#1F2937',
 				light: '#374151',
+                    dark: '#111827',
 			},
 
 			accent: {
@@ -23,6 +25,7 @@ light: '#DDF7F5',
 			},
 
 			background: '#FFFFFF',
+                text: { DEFAULT: '#1F2937', muted: '#6B7280' },
 
 			mainText: {
 				DEFAULT: '#1F2937',
@@ -35,8 +38,8 @@ light: '#DDF7F5',
 		},
 
 		fontFamily: {
-			body: ['Inter', 'sans-serif'],
-			sans: ['Inter', 'sans-serif'],
+			body: ['Roboto', 'sans-serif'],
+			sans: ['Roboto', 'sans-serif'],
 		},
 
 		fontSize: {
@@ -108,7 +111,6 @@ light: '#DDF7F5',
 	},
 },
 
-plugins: [require('@tailwindcss/typography')],
-```
+plugins: [typography],
 
 };

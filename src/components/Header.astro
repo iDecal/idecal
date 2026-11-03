@@ -1,41 +1,25 @@
 ---
 // Navbar.astro - iDecal Navigation (Deep Blue Edition #031246)
-const navLinks = [
-  { name: "Trang chủ", href: "/" },
-  { name: "Giới thiệu", href: "/gioi-thieu-idecal" },
-  { 
-    name: "Dịch vụ", 
-    href: "#",
-    dropdown: [
-      { name: "Thiết kế - In ấn - Thi công Decal", href: "/dich-vu-tron-goi", highlight: true }, 
-      { name: "Phim Cách Nhiệt", href: "/dich-vu/phim-cach-nhiet" },
-      { name: "Decal 3D Vân Sóng", href: "/dich-vu/decal-mo-3d-van-song/" },
-      { name: "Decal Cắt Chữ", href: "/dich-vu/cat-decal" },
-      { name: "Decal Quảng Cáo", href: "/dich-vu/decal-quang-cao" },
-      { name: "Film Dán Nội Thất", href: "/dich-vu/film-noi-that" },
-      { name: "Decal Dán Kính Văn Phòng", href: "/dich-vu/decal-dan-kinh-van-phong" },
-    ]
-  },
-  { 
-    name: "Công trình thực tế", 
-    href: "/du-an", // SỬA: Đổi từ /blog sang /du-an để trỏ đúng trang danh sách công trình
-    dropdown: [
-      { name: "Văn phòng", href: "/du-an/van-phong" },
-      { name: "Showroom", href: "/du-an/showroom" },
-      { name: "Nhà xưởng", href: "/du-an/nha-xuong" },
-      { name: "Quảng cáo", href: "/du-an/quang-cao" },
-    ]
-  },
-  { 
-    name: "Blog", 
-    href: "/blog",
-    dropdown: [
-      { name: "Hướng dẫn", href: "/blog/huong-dan" },
-      { name: "Báo giá", href: "/blog/bao-gia" },
-      { name: "Tin khuyến mãi", href: "/blog/khuyen-mai" },
-    ]
-  },
-  { name: "Liên hệ", href: "/lien-he-idecal" },
+interface NavLink {
+  name: string;
+  href: string;
+  dropdown?: { name: string; href: string; highlight?: boolean }[];
+}
+const navLinks: NavLink[] = [
+  { name: 'Trang chủ', href: '/' },
+  { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
+  { name: 'Dịch vụ', href: '/#dich-vu', dropdown: [
+    { name: 'Thiết kế - In ấn - Thi công Decal', href: '/dich-vu/decal-quang-cao', highlight: true },
+    { name: 'Phim Cách Nhiệt', href: '/dich-vu/phim-cach-nhiet' },
+    { name: 'Decal 3D Vân Sóng', href: '/dich-vu/decal-mo-3d-van-song' },
+    { name: 'Decal Cắt Chữ', href: '/dich-vu/cat-decal' },
+    { name: 'Film Dán Nội Thất', href: '/dich-vu/film-noi-that' },
+    { name: 'Decal Dán Kính Văn Phòng', href: '/dich-vu/decal-dan-kinh-van-phong' },
+  ] },
+  { name: 'Công trình thực tế', href: '/du-an' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Khu vực', href: '/khu-vuc' },
+  { name: 'Liên hệ', href: '/lien-he-idecal' },
 ];
 ---
 
@@ -61,7 +45,7 @@ const navLinks = [
               {link.dropdown && <span class="text-[10px] opacity-50">▼</span>}
             </a>
             {link.dropdown && (
-              <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform translate-y-2 group-hover:translate-y-0">
+              <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-slate-100 p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all transform translate-y-2 group-hover:translate-y-0">
                 {link.dropdown.map((sub) => (
                   <a href={sub.href} class={`block px-4 py-3 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-[#031246]/5 text-[#031246] font-bold mb-2' : 'text-slate-600 hover:bg-slate-50 hover:text-[#031246]'}`}>
                     {sub.name}
@@ -83,7 +67,7 @@ const navLinks = [
         </a>
       </div>
 
-      <button id="menu-toggle" class="lg:hidden p-2 text-[#031246]" aria-label="Open Menu">
+      <button id="menu-toggle" class="lg:hidden p-2 text-[#031246]" aria-label="Mở menu" aria-controls="mobile-menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
@@ -92,10 +76,10 @@ const navLinks = [
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col h-screen">
+  <div id="mobile-menu" inert role="dialog" aria-modal="true" aria-label="Menu điều hướng" class="fixed inset-0 bg-white z-[110] transform translate-x-full transition-transform duration-500 lg:hidden flex flex-col h-screen">
     <div class="p-6 flex justify-between items-center border-b border-slate-100">
       <img src="/images/idecal-logo.png" alt="iDecal Logo" class="h-10 w-auto" />
-      <button id="menu-close" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-[#031246] text-3xl">&times;</button>
+      <button id="menu-close" aria-label="Đóng menu" class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center text-[#031246] text-3xl">&times;</button>
     </div>
     
     <div class="flex-1 overflow-y-auto px-8 py-6">
@@ -104,7 +88,7 @@ const navLinks = [
           <div class="flex flex-col border-b border-slate-50 pb-2">
             {link.dropdown ? (
               <>
-                <button class="mobile-dropdown-btn text-xl font-bold text-slate-900 flex justify-between items-center text-left py-4 uppercase tracking-[0.1em]">
+                <button aria-expanded="false" class="mobile-dropdown-btn text-xl font-bold text-slate-900 flex justify-between items-center text-left py-4 uppercase tracking-[0.1em]">
                   {link.name}
                   <span class="text-[#031246] font-light">＋</span>
                 </button>
@@ -136,29 +120,59 @@ const navLinks = [
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
+  let previousOverflow = '';
 
-  menuToggle?.addEventListener('click', () => {
-    mobileMenu?.classList.remove('translate-x-full');
-    document.body.style.overflow = 'hidden';
+  function setMenu(open: boolean) {
+    if (!mobileMenu || !menuToggle) return;
+    const wasOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    if (wasOpen === open) return;
+    mobileMenu.classList.toggle('translate-x-full', !open);
+    mobileMenu.inert = !open;
+    menuToggle.setAttribute('aria-expanded', String(open));
+    if (open) {
+      previousOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      menuClose?.focus();
+    } else {
+      document.body.style.overflow = previousOverflow;
+      menuToggle.focus();
+    }
+  }
+  menuToggle?.addEventListener('click', () => setMenu(true));
+  menuClose?.addEventListener('click', () => setMenu(false));
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
   });
-
-  menuClose?.addEventListener('click', () => {
-    mobileMenu?.classList.add('translate-x-full');
-    document.body.style.overflow = ''; 
-  });
-
-  const dropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
-  dropdownBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const content = btn.nextElementSibling as HTMLElement;
-      const icon = btn.querySelector('span');
-      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-        content.style.maxHeight = '0px';
-        if (icon) icon.innerText = '＋';
-      } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        if (icon) icon.innerText = '－';
+  document.addEventListener('keydown', event => {
+    if (menuToggle?.getAttribute('aria-expanded') !== 'true') return;
+    if (event.key === 'Escape') setMenu(false);
+    if (event.key === 'Tab') {
+      const controls = Array.from(mobileMenu?.querySelectorAll<HTMLElement>('a, button') ?? [])
+        .filter(element => element.getClientRects().length > 0 && element.offsetHeight > 0 && !element.closest('[inert]'));
+      const first = controls[0];
+      const last = controls.at(-1);
+      if (event.shiftKey && document.activeElement === first && last) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last && first) {
+        event.preventDefault(); first.focus();
       }
+    }
+  });
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', event => {
+    if (event.matches) setMenu(false);
+  });
+  document.querySelectorAll<HTMLButtonElement>('.mobile-dropdown-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling as HTMLElement | null;
+      if (!content) return;
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      content.style.maxHeight = open ? `${content.scrollHeight}px` : '0px';
+      content.inert = !open;
+      const icon = button.querySelector('span');
+      if (icon) icon.textContent = open ? '－' : '＋';
     });
+    const content = button.nextElementSibling as HTMLElement | null;
+    if (content) content.inert = true;
   });
 </script>

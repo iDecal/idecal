@@ -109,5 +109,5 @@ const faqs = [
 
   // Chạy khi load trang và khi resize màn hình
   handleFAQState();
-  window.addEventListener('resize', handleFAQState);
+  window.matchMedia('(min-width: 1024px)').addEventListener('change', handleFAQState);
 </script>

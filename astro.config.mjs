@@ -1,19 +1,7 @@
 import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare';
-import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
+// Cloudflare Pages serves the generated dist directory as a static site.
 export default defineConfig({
+  site: 'https://idecal.vn',
   output: 'static',
-  
-  // Thiết lập adapter để chạy trên Cloudflare Pages
-  adapter: cloudflare(),
-  
-  integrations: [
-    // Kích hoạt Tailwind CSS
-    tailwind({
-      // Giúp Tailwind nhận diện các file cấu hình riêng của bạn
-      applyBaseStyles: false, 
-    }),
-  ],
 });

@@ -6,19 +6,19 @@ const products = [
     name: "Phim Cách Nhiệt 3M Crystalline",
     origin: "USA",
     feature: "Cản 97% tia hồng ngoại, không cản sóng điện thoại",
-    image: "/images/products/3m-crystalline.webp"
+    image: "/images/image-placeholder.svg"
   },
   {
     name: "Phim Llumar Nano-Ceramic",
     origin: "USA",
     feature: "Công nghệ men gốm, độ bền cao, màu sắc sang trọng",
-    image: "/images/products/llumar-ceramic.webp"
+    image: "/images/image-placeholder.svg"
   },
   {
     name: "Phim Phản Quang Silver",
     origin: "Hàn Quốc",
     feature: "Chống chói cực tốt, tạo không gian riêng tư 1 chiều",
-    image: "/images/products/reflective-film.webp"
+    image: "/images/image-placeholder.svg"
   }
 ];
 
@@ -35,7 +35,7 @@ const faqs = [
     <div class="container grid lg:grid-cols-2 gap-12 items-center relative z-10">
       <div class="animate-fade-up">
         <h6 class="text-primary tracking-[0.3em] font-bold">Heat Control Solution</h6>
-        <h1 class="text-white !important">Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp</h1>
+        <h1 class="!text-white">Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp</h1>
         <p class="text-slate-300 text-lg">
           Giải pháp chống nóng toàn diện cho <strong>văn phòng, nhà ở và showroom</strong>. Giảm tới 80% sức nóng mặt trời, bảo vệ sức khỏe và tiết kiệm 30% điện năng máy lạnh.
         </p>
@@ -46,7 +46,7 @@ const faqs = [
       </div>
       <div class="relative">
         <div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
-        <img src="/images/hero-film-cach-nhiet.webp" alt="Thi công phim cách nhiệt" class="img-brand w-full h-[450px] object-cover relative z-10" />
+        <img src="/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp" alt="Thi công phim cách nhiệt" class="img-brand w-full h-[450px] object-cover relative z-10" />
       </div>
     </div>
   </section>
@@ -81,7 +81,7 @@ const faqs = [
           <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
           <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-b-4 border-primary">
             <img 
-              src="/images/loi-ich-phim-cach-nhiet.webp" 
+              src="/images/Banner/So sánh khi dán phim cách nhiệt.avif"
               alt="Lợi ích dán phim cách nhiệt cho nhà kính" 
               class="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-110"
             />
@@ -122,12 +122,12 @@ const faqs = [
             </div>
           </div>
 
-          <div class="mt-12 p-6 bg-slate-900 rounded-3xl flex items-center justify-between">
+          <div id="quote" class="mt-12 p-6 bg-slate-900 rounded-3xl flex items-center justify-between">
             <div class="text-white">
               <p class="text-xs text-slate-400 !mb-1">Tư vấn thi công miễn phí</p>
-              <p class="text-lg font-bold">090x.xxx.xxx</p>
+              <p class="text-lg font-bold">0866.077.040</p>
             </div>
-            <a href="https://zalo.me/090xxxxxxx" class="px-6 py-3 bg-primary text-white text-xs font-bold rounded-xl hover:bg-white hover:text-primary transition-all">Chat Zalo Ngay</a>
+            <a href="https://zalo.me/0866077040" class="px-6 py-3 bg-primary text-white text-xs font-bold rounded-xl hover:bg-white hover:text-primary transition-all">Chat Zalo Ngay</a>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ const faqs = [
         {products.map((item) => (
           <div class="bg-white rounded-[2rem] overflow-hidden shadow-card group transition-all hover:-translate-y-2">
             <div class="h-56 overflow-hidden">
-              <img src={item.image} alt={item.name} class="w-full h-full object-cover group-hover:scale-110 transition-duration-500" />
+              <img src={item.image} alt={item.name} class="w-full h-full object-cover group-hover:scale-110 duration-500" />
             </div>
             <div class="p-8">
               <span class="text-[10px] font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">Xuất xứ: {item.origin}</span>

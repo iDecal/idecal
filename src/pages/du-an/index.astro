@@ -1,141 +1,101 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
 
-// Lấy toàn bộ dự án nhưng KHÔNG gọi .render() ở đây
-const allProjects = await getCollection('projects');
-allProjects.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-const categories = ["Tất cả", "Văn phòng", "Căn hộ", "Showroom", "Sự kiện"];
+const projects = (await getCollection('projects'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || a.id.localeCompare(b.id));
+const categories = ['Tất cả', ...new Set(projects.map(project => project.data.category))];
 ---
 
-<Layout title="Dự án tiêu biểu | iDecal">
-  <main class="bg-white pt-32 pb-20">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h1 class="text-3xl md:text-5xl font-bold text-[#031246] mb-6 tracking-tight">
-          Công trình đã thực hiện
-        </h1>
-        <p class="text-slate-400 text-[11px] uppercase tracking-[0.3em] font-medium">Kỹ thuật - Thẩm mỹ - Tận tâm</p>
-      </div>
+<Layout title="Công trình thực tế | Thi công decal iDecal" description="Khám phá các công trình decal dán kính, trang trí văn phòng và showroom do iDecal thực hiện. Xem hình ảnh và thông tin từng công trình.">
+  <section class="border-b border-slate-100 bg-slate-50 py-16 md:py-24">
+    <div class="container">
+      <nav aria-label="Đường dẫn" class="mb-8 text-sm text-slate-500"><a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true" class="mx-3">/</span><span aria-current="page">Công trình</span></nav>
+      <p class="!mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Hồ sơ công trình iDecal</p>
+      <h1 class="max-w-3xl">Công trình thực tế</h1>
+      <p class="!mb-0 max-w-2xl text-lg text-slate-500">Từ ý tưởng đến không gian hoàn thiện. Xem hình ảnh, hạng mục và thông tin các công trình iDecal đã thực hiện.</p>
+    </div>
+  </section>
 
-      <div class="flex flex-wrap justify-center gap-3 mb-20">
-        {categories.map(cat => (
-          <button 
-            class="project-filter px-8 py-2.5 rounded-full border border-slate-200 text-slate-500 font-semibold text-[12px] uppercase tracking-[0.15em] transition-all hover:border-[#031246] hover:text-[#031246] active:scale-95" 
-            data-category={cat}
-          >
-            {cat}
+  <section class="container py-12 md:py-16" aria-label="Danh sách công trình">
+    <div class="mb-10 flex flex-col gap-6">
+      <div class="max-w-lg">
+        <label for="project-search" class="mb-2 block text-sm font-semibold text-secondary">Tìm công trình</label>
+        <input id="project-search" type="search" placeholder="Tên công trình, khách hàng, khu vực…" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+      </div>
+      <div class="flex flex-wrap gap-3" role="group" aria-label="Lọc theo hạng mục">
+        {categories.map(category => (
+          <button type="button" class={`project-filter rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${category === 'Tất cả' ? 'border-primary bg-primary text-white' : 'border-slate-200 bg-white text-slate-600 hover:border-primary'}`} data-category={category} aria-pressed={category === 'Tất cả'}>
+            {category}
           </button>
         ))}
       </div>
-
-      <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-        {allProjects.map(project => (
-          <div class="project-card group flex flex-col" data-category={project.data.category}>
-            <div class="overflow-hidden rounded-xl aspect-[4/3] shadow-sm mb-5 relative">
-              <img 
-                src={project.data.image} 
-                alt={project.data.title} 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-              />
-              <div class="absolute top-4 left-4 bg-[#031246]/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-full z-10">
-                <span class="text-white font-bold text-[9px] uppercase tracking-[0.2em]">
-                  {project.data.category}
-                </span>
-              </div>
-            </div>
-            
-            <div class="flex flex-col px-1">
-              <h2 class="text-[#031246] text-[20px] font-bold mb-2 tracking-tight group-hover:text-[#00AEEF] transition-colors line-clamp-1">
-                {project.data.title}
-              </h2>
-              
-              <p class="text-slate-500 text-xs mb-4 line-clamp-2 font-light leading-relaxed">
-                {project.data.description}
-              </p>
-              
-              <a href={`/du-an/${project.slug}`} class="inline-flex items-center text-[#031246] font-bold text-[11px] uppercase tracking-[0.15em] group/link w-fit">
-                Xem chi tiết
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 ml-1.5 transform group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <section class="mt-24 bg-[#031246] rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
-        <div class="relative z-10">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Bạn thích phong cách thi công này?</h2>
-          <p class="text-white/60 mb-8 max-w-xl mx-auto font-light text-sm tracking-wide">
-            Liên hệ iDecal để được anh Nhân tư vấn giải pháp dán kính và mang mẫu khảo sát tận nơi miễn phí.
-          </p>
-          <div class="flex flex-wrap justify-center gap-4">
-            <a href="tel:0866077040" class="bg-[#00AEEF] text-white px-8 py-3.5 rounded-full font-bold uppercase tracking-[0.1em] text-xs hover:bg-[#008ec4] transition-all shadow-lg">
-              Gọi tư vấn: 0866.077.040
-            </a>
-            <a href="https://zalo.me/0866077040" class="bg-white/10 text-white border border-white/20 px-8 py-3.5 rounded-full font-bold uppercase tracking-[0.1em] text-xs hover:bg-white/20 transition-all">
-              Chat Zalo nhận báo giá
-            </a>
-          </div>
-        </div>
-      </section>
+      <p id="project-count" class="!mb-0 text-sm text-slate-500" role="status" aria-live="polite" aria-atomic="true">Hiển thị {projects.length} công trình</p>
     </div>
-  </main>
+
+    <div id="project-grid" class="grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map(project => <ProjectCard project={project} headingLevel="h2" />)}
+    </div>
+    <div id="project-empty" hidden class="rounded-3xl border border-dashed border-slate-300 bg-slate-50 p-10 text-center">
+      <h2 class="text-xl">Không tìm thấy công trình phù hợp</h2>
+      <p>Thử từ khóa khác hoặc bỏ bộ lọc để xem tất cả công trình.</p>
+      <button id="project-reset" type="button" class="btn-primary-solid">Xem tất cả công trình</button>
+    </div>
+  </section>
+
+  <section class="container pb-20">
+    <div class="rounded-3xl bg-slate-900 px-6 py-14 text-center md:px-12">
+      <h2 class="text-white">Bạn đang lên ý tưởng cho công trình mới?</h2>
+      <p class="mx-auto mb-8 max-w-xl text-slate-300">Gửi hình ảnh và nhu cầu của bạn để iDecal tư vấn mẫu decal, phương án thi công và báo giá phù hợp.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:0866077040" class="btn-primary-solid">Gọi 0866.077.040</a>
+        <a href="https://zalo.me/0866077040" class="rounded-brand border border-white/30 px-8 py-4 font-bold text-white hover:bg-white/10">Chat Zalo nhận báo giá</a>
+      </div>
+    </div>
+  </section>
 </Layout>
 
 <script>
-  const filters = document.querySelectorAll('.project-filter');
-  const cards = document.querySelectorAll('.project-card');
+  const search = document.querySelector<HTMLInputElement>('#project-search');
+  const filters = document.querySelectorAll<HTMLButtonElement>('.project-filter');
+  const cards = document.querySelectorAll<HTMLElement>('#project-grid .project-card');
+  const count = document.getElementById('project-count');
+  const empty = document.getElementById('project-empty');
+  let category = 'Tất cả';
 
-  // Thêm class transition của Tailwind vào tất cả các card ngay từ đầu để chuẩn bị hiệu ứng
-  cards.forEach(card => {
-    card.classList.add('transition-all', 'duration-500', 'ease-in-out');
-  });
+  const normalize = (value: string) => value.toLocaleLowerCase('vi-VN').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').trim();
 
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const cat = btn.getAttribute('data-category');
-      
-      // 1. Cập nhật trạng thái active cho các nút filter
-      filters.forEach(b => {
-        b.classList.remove('bg-[#031246]', 'text-white', 'border-[#031246]');
-        b.classList.add('border-slate-200', 'text-slate-500');
-      });
-      btn.classList.add('bg-[#031246]', 'text-white', 'border-[#031246]');
-      btn.classList.remove('border-slate-200', 'text-slate-500');
-
-      // 2. Thực hiện hiệu ứng Fade-out (Mờ dần rồi biến mất)
-      cards.forEach(card => {
-        const htmlCard = card as HTMLElement;
-        // Giảm opacity về 0 và thu nhỏ nhẹ một chút để tạo cảm giác mượt mà
-        htmlCard.classList.add('opacity-0', 'scale-95');
-        htmlCard.classList.remove('opacity-100', 'scale-100');
-      });
-
-      // 3. Đợi hiệu ứng fade-out hoàn thành (khoảng 300ms) rồi mới lọc và Fade-in
-      setTimeout(() => {
-        cards.forEach(card => {
-          const htmlCard = card as HTMLElement;
-          const cardCat = htmlCard.getAttribute('data-category');
-
-          if (cat === "Tất cả" || cardCat === cat) {
-            // Hiện cấu trúc thẻ
-            htmlCard.style.display = 'flex';
-            
-            // Kích hoạt hiệu ứng Fade-in bằng cách trả lại opacity và scale ban đầu ở khung hình tiếp theo
-            requestAnimationFrame(() => {
-              htmlCard.classList.remove('opacity-0', 'scale-95');
-              htmlCard.classList.add('opacity-100', 'scale-100');
-            });
-          } else {
-            // Ẩn hoàn toàn khỏi layout đối với các thẻ không thuộc danh mục chọn
-            htmlCard.style.display = 'none';
-          }
-        });
-      }, 300); // 300ms trùng khớp với nhịp giảm opacity
+  function updateProjects() {
+    const query = normalize(search?.value ?? '');
+    let visible = 0;
+    cards.forEach(card => {
+      const matches = (category === 'Tất cả' || card.dataset.category === category) && normalize(card.dataset.search ?? '').includes(query);
+      card.hidden = !matches;
+      if (matches) visible++;
     });
+    filters.forEach(button => {
+      const active = button.dataset.category === category;
+      button.setAttribute('aria-pressed', String(active));
+      button.classList.toggle('bg-primary', active);
+      button.classList.toggle('text-white', active);
+      button.classList.toggle('border-primary', active);
+      button.classList.toggle('bg-white', !active);
+      button.classList.toggle('text-slate-600', !active);
+      button.classList.toggle('border-slate-200', !active);
+    });
+    if (count) count.textContent = `Hiển thị ${visible} / ${cards.length} công trình`;
+    if (empty) empty.hidden = visible > 0;
+  }
+  search?.addEventListener('input', updateProjects);
+  filters.forEach(button => button.addEventListener('click', () => {
+    category = button.dataset.category ?? 'Tất cả';
+    updateProjects();
+  }));
+  document.getElementById('project-reset')?.addEventListener('click', () => {
+    category = 'Tất cả';
+    if (search) search.value = '';
+    updateProjects();
+    search?.focus();
   });
 </script>
