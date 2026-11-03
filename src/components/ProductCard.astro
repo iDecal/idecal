@@ -4,6 +4,10 @@ import { formatPrice, type Product } from '../data/catalogue';
 interface Props { product: Product; heading?: 'h2' | 'h3'; }
 const { product, heading = 'h3' } = Astro.props;
 const Heading = heading;
+const descriptionWords = product.description.trim().split(/\s+/);
+const shortDescription = descriptionWords.length > 25
+  ? `${descriptionWords.slice(0, 25).join(' ').replace(/[.,;:!?–—-]+$/u, '')}…`
+  : descriptionWords.join(' ');
 ---
 <article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
   <a href={`/san-pham/${product.slug}`} class="relative block aspect-square overflow-hidden" aria-label={`Xem ${product.name}`}>
@@ -12,6 +16,7 @@ const Heading = heading;
   </a>
   <div class="flex flex-1 flex-col gap-3 p-3 md:p-5">
     <Heading class="!mb-0 text-sm font-medium leading-snug md:text-base"><a href={`/san-pham/${product.slug}`} class="hover:text-primary">{product.name}</a></Heading>
+    <p class="product-card-description !mb-0 text-xs leading-relaxed text-text-muted">{shortDescription}</p>
     {product.price != null && <p class="!mb-1 mt-auto pt-2 text-base font-semibold text-brand-navy">{formatPrice(product.price)}</p>}
     <div class="mt-auto grid pt-2">
       <a href={`/san-pham/${product.slug}`} class="inline-flex min-h-10 flex-1 items-center justify-center rounded-lg border border-brand-line bg-surface px-3 text-xs font-medium text-secondary transition-colors hover:border-secondary hover:bg-secondary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Chi tiết<span class="sr-only"> {product.name}</span></a>
