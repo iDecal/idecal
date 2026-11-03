@@ -37,7 +37,7 @@ export const productSpecs = (product: Product) => [
   { label: 'Nhóm sản phẩm', value: product.subcategory },
   ...(product.brand ? [{ label: 'Thương hiệu', value: product.brand }] : []),
   ...Object.entries(product.attributes).filter(([key]) => key !== 'thuong-hieu').map(([key, value]) => ({
-    label: ({ 'quy-cach': 'Quy cách', 'xuat-xu': 'Xuất xứ', 'chat-lieu': 'Chất liệu', 'mau-sac': 'Màu sắc' } as Record<string, string>)[key] ?? key,
+    label: ({ 'quy-cach': 'Quy cách', 'xuat-xu': 'Xuất xứ', 'chat-lieu': 'Chất liệu', 'mau-sac': 'Màu sắc', 'be-mat': 'Bề mặt', 'cat-le': 'Cắt lẻ' } as Record<string, string>)[key] ?? key,
     value: value?.join(', ') ?? '',
   })),
 ];

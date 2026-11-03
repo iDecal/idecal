@@ -5,9 +5,10 @@ const bySlug = new Map(products.map(product => [product.slug, product]));
 ---
 <section id="mau-san-pham" class="pvc-palette" aria-labelledby="pvc-palette-title"><div class="container">
   <div class="pvc-palette-heading"><div><p class="pvc-palette-kicker">Chọn màu Decal PVC</p><h2 id="pvc-palette-title">Bảng màu tham khảo</h2></div><p>{palette.colors.length} tông màu · Bấm vào màu để xem sản phẩm</p></div>
+  <p class="pvc-palette-spec">Cuộn 1,2 × 50 m <span aria-hidden="true">·</span> Cắt lẻ theo yêu cầu <span aria-hidden="true">·</span> Bề mặt bóng / nhám</p>
   <p class="pvc-palette-note">Màu màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi chốt màu và bề mặt.</p>
   <div class="pvc-palette-grid">{palette.colors.map(color => <a class="pvc-color-swatch" href={`/san-pham/${color.productSlug}`} data-product-id={color.productSlug} aria-label={`Xem sản phẩm Decal PVC màu ${color.name.toLocaleLowerCase('vi-VN')}`}><span class="pvc-color-preview" style={`--swatch-color: ${color.hex}`} aria-hidden="true"></span><span class="pvc-color-name">{color.name}<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14m-5-5 5 5-5 5" /></svg></span><span class="pvc-color-code">{bySlug.get(color.productSlug)?.code}</span></a>)}</div>
-  <details class="pvc-palette-source"><summary>Nguồn màu & lưu ý khi chọn mẫu <span aria-hidden="true">+</span></summary><div><p>Các ô màu được số hóa theo giá trị sRGB tham khảo từ bảng ORACAL 651 của ORAFOL. Đây là gợi ý tông màu; không xác nhận hàng iDecal thuộc dòng ORACAL, màu đang có sẵn hay lớp hoàn thiện thực tế.</p><p>Khổ cuộn, độ dày, bề mặt bóng/nhám, giá và khả năng cung cấp được xác nhận khi tư vấn. Ảnh màu minh họa không thay thế mẫu vật liệu.</p><a href={palette.source.url} target="_blank" rel="noopener noreferrer">Xem bảng màu tham khảo của ORAFOL <span aria-hidden="true">↗</span></a></div></details>
+  <details class="pvc-palette-source"><summary>Nguồn màu & lưu ý khi chọn mẫu <span aria-hidden="true">+</span></summary><div><p>Các ô màu được số hóa theo giá trị sRGB tham khảo từ bảng ORACAL 651 của ORAFOL. Đây là gợi ý tông màu; không xác nhận hàng iDecal thuộc dòng ORACAL, màu đang có sẵn hay lớp hoàn thiện thực tế.</p><p>Quy cách cuộn 1,2 × 50 m; cắt lẻ theo yêu cầu, có lựa chọn bóng hoặc nhám. Độ dày, giá và khả năng cung cấp được xác nhận khi tư vấn. Ảnh màu minh họa không thay thế mẫu vật liệu.</p><a href={palette.source.url} target="_blank" rel="noopener noreferrer">Xem bảng màu tham khảo của ORAFOL <span aria-hidden="true">↗</span></a></div></details>
 </div></section>
 <style>
 .pvc-palette { padding: 48px 0; background: #f3f8fd; scroll-margin-top: 112px; }
@@ -15,6 +16,7 @@ const bySlug = new Map(products.map(product => [product.slug, product]));
 .pvc-palette-heading h2 { margin: 0; font-size: clamp(24px,2.5vw,32px); color: #173b62; line-height: 1.3; }
 .pvc-palette-kicker { font-size: 13px; color: #0d6b96; margin: 0 0 10px; }
 .pvc-palette-heading > p { margin: 0; color: #64748b; font-size: 14px; }
+.pvc-palette-spec { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 0 0 12px; color: #244766; font-size: 15px; }
 .pvc-palette-note { font-size: 14px; color: #52657c; margin: 0 0 24px; }
 .pvc-palette-grid { display: grid; grid-template-columns: repeat(8,minmax(0,1fr)); gap: 14px; }
 .pvc-color-swatch { min-width: 0; display: flex; flex-direction: column; padding: 8px 8px 10px; background: white; border: 1px solid #dce5f0; border-radius: 12px; color: #244766; transition: border-color .18s,box-shadow .18s; }

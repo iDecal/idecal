@@ -646,7 +646,18 @@
       "https://idecal.vn/wp-content/uploads/2025/09/Decal-xam-mo-dam.jpg",
       "https://idecal.vn/wp-content/uploads/2025/09/Decal-xan-mo.jpg"
     ],
-    "attributes": {},
+    "attributes": {
+      "quy-cach": [
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
+      ]
+    },
     "uses": [
       "Văn phòng",
       "Nhà ở",
@@ -1592,14 +1603,20 @@
     ],
     "attributes": {
       "quy-cach": [
-        "0,6m x 50m",
-        "1,22m x 50m"
+        "Cuộn 1,2 × 50 m"
       ],
       "thuong-hieu": [
         "Shinglung"
       ],
       "xuat-xu": [
         "Việt Nam"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -1627,7 +1644,18 @@
       "https://idecal.vn/wp-content/uploads/2025/09/Decal-den-nham-kho-12m.jpg",
       "https://idecal.vn/wp-content/uploads/2025/09/Decal-den-bong.jpg"
     ],
-    "attributes": {},
+    "attributes": {
+      "quy-cach": [
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
+      ]
+    },
     "uses": [
       "Nội Thất",
       "Tạo Điểm Nhấn",
@@ -2228,9 +2256,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-004",
-    "description": "Decal PVC màu xám nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xám nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xám nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xám nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2245,7 +2273,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2262,9 +2297,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-005",
-    "description": "Decal PVC màu xám đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xám đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xám đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xám đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2279,7 +2314,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2296,9 +2338,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-006",
-    "description": "Decal PVC màu kem theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu kem theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu kem theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu kem theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2313,7 +2355,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2330,9 +2379,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-007",
-    "description": "Decal PVC màu be theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu be theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu be theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu be theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2347,7 +2396,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2364,9 +2420,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-008",
-    "description": "Decal PVC màu nâu nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu nâu nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu nâu nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu nâu nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2381,7 +2437,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2398,9 +2461,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-009",
-    "description": "Decal PVC màu nâu theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu nâu theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu nâu theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu nâu theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2415,7 +2478,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2432,9 +2502,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-010",
-    "description": "Decal PVC màu vàng cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu vàng cam theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu vàng cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu vàng cam theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2449,7 +2519,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2466,9 +2543,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-011",
-    "description": "Decal PVC màu vàng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu vàng theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu vàng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu vàng theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2483,7 +2560,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2500,9 +2584,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-012",
-    "description": "Decal PVC màu vàng chanh theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu vàng chanh theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu vàng chanh theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu vàng chanh theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2517,7 +2601,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2534,9 +2625,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-013",
-    "description": "Decal PVC màu cam nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu cam nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu cam nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu cam nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2551,7 +2642,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2568,9 +2666,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-014",
-    "description": "Decal PVC màu cam pastel theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu cam pastel theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu cam pastel theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu cam pastel theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2585,7 +2683,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2602,9 +2707,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-015",
-    "description": "Decal PVC màu đỏ cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu đỏ cam theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu đỏ cam theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu đỏ cam theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2619,7 +2724,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2636,9 +2748,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-016",
-    "description": "Decal PVC màu đỏ theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu đỏ theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu đỏ theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu đỏ theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2653,7 +2765,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2670,9 +2789,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-017",
-    "description": "Decal PVC màu đỏ đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu đỏ đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu đỏ đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu đỏ đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2687,7 +2806,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2704,9 +2830,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-018",
-    "description": "Decal PVC màu đỏ rượu vang theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu đỏ rượu vang theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu đỏ rượu vang theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu đỏ rượu vang theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2721,7 +2847,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2738,9 +2871,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-019",
-    "description": "Decal PVC màu hồng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu hồng theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu hồng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu hồng theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2755,7 +2888,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2772,9 +2912,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-020",
-    "description": "Decal PVC màu hồng nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu hồng nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu hồng nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu hồng nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2789,7 +2929,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2806,9 +2953,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-021",
-    "description": "Decal PVC màu tím theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu tím theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu tím theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu tím theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2823,7 +2970,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2840,9 +2994,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-022",
-    "description": "Decal PVC màu tím lavender theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu tím lavender theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu tím lavender theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu tím lavender theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2857,7 +3011,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2874,9 +3035,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-023",
-    "description": "Decal PVC màu tím lilac theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu tím lilac theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu tím lilac theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu tím lilac theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2891,7 +3052,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2908,9 +3076,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-024",
-    "description": "Decal PVC màu xanh navy theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh navy theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh navy theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh navy theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2925,7 +3093,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2942,9 +3117,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-025",
-    "description": "Decal PVC màu xanh cobalt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh cobalt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh cobalt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh cobalt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2959,7 +3134,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -2976,9 +3158,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-026",
-    "description": "Decal PVC màu xanh dương đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh dương đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh dương đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh dương đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -2993,7 +3175,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3010,9 +3199,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-027",
-    "description": "Decal PVC màu xanh azure theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh azure theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh azure theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh azure theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3027,7 +3216,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3044,9 +3240,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-028",
-    "description": "Decal PVC màu xanh da trời theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh da trời theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh da trời theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh da trời theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3061,7 +3257,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3078,9 +3281,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-029",
-    "description": "Decal PVC màu xanh dương nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh dương nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh dương nhạt theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh dương nhạt theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3095,7 +3298,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3112,9 +3322,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-030",
-    "description": "Decal PVC màu xanh băng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh băng theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh băng theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh băng theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3129,7 +3339,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3146,9 +3363,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-031",
-    "description": "Decal PVC màu xanh ngọc theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh ngọc theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh ngọc theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh ngọc theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3163,7 +3380,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3180,9 +3404,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-032",
-    "description": "Decal PVC màu xanh bạc hà theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh bạc hà theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh bạc hà theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh bạc hà theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3197,7 +3421,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3214,9 +3445,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-033",
-    "description": "Decal PVC màu xanh lá đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh lá đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh lá đậm theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh lá đậm theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3231,7 +3462,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3248,9 +3486,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-034",
-    "description": "Decal PVC màu xanh lá theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh lá theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh lá theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh lá theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3265,7 +3503,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3282,9 +3527,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-035",
-    "description": "Decal PVC màu xanh lá non theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh lá non theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh lá non theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh lá non theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3299,7 +3544,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [
@@ -3316,9 +3568,9 @@
     "brand": "",
     "price": null,
     "code": "PVC-036",
-    "description": "Decal PVC màu xanh lime theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+    "description": "Decal PVC màu xanh lime theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
     "paragraphs": [
-      "Decal PVC màu xanh lime theo bảng màu số hóa tham khảo. Khổ cuộn, độ dày, bề mặt và tình trạng cung cấp được xác nhận khi tư vấn.",
+      "Decal PVC màu xanh lime theo bảng màu số hóa tham khảo. Cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu; chọn bề mặt bóng hoặc nhám.",
       "Hình màu minh họa được số hóa từ bảng màu tham khảo; màu nhìn trên màn hình có thể khác vật liệu thực tế. Vui lòng đối chiếu mẫu trước khi xác nhận.",
       "Có thể trao đổi thêm về kích thước cắt, thiết kế, in hoặc thi công theo nhu cầu và khả năng tương thích của vật liệu."
     ],
@@ -3333,7 +3585,14 @@
         "PVC"
       ],
       "quy-cach": [
-        "Xác nhận theo mẫu vật liệu và khổ cuộn thực tế"
+        "Cuộn 1,2 × 50 m"
+      ],
+      "cat-le": [
+        "Cắt lẻ theo yêu cầu"
+      ],
+      "be-mat": [
+        "Bóng",
+        "Nhám"
       ]
     },
     "uses": [

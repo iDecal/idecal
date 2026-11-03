@@ -1,4 +1,4 @@
-interface BookingProduct { slug: string; name: string; code: string; service?: string; }
+interface BookingProduct { slug: string; name: string; code: string; service?: string; pvc?: boolean; }
 const form = document.querySelector<HTMLFormElement>('#booking-form');
 if (form) {
   form.hidden = false;
@@ -12,6 +12,8 @@ if (form) {
   const time = byId<HTMLSelectElement>('booking-time');
   const size = byId<HTMLInputElement>('booking-size');
   const notes = byId<HTMLTextAreaElement>('booking-notes');
+  const finish = byId<HTMLSelectElement>('booking-finish');
+  const pvcType = byId<HTMLSelectElement>('booking-pvc-type');
   const preview = byId<HTMLElement>('booking-preview');
   const message = byId<HTMLTextAreaElement>('booking-message');
   const status = byId<HTMLElement>('booking-copy-status');
@@ -29,6 +31,21 @@ if (form) {
     byId<HTMLElement>('booking-product-info').hidden = false;
     byId<HTMLElement>('booking-product-name').textContent = `${product.name} · ${product.code}`;
     byId<HTMLAnchorElement>('booking-product-link').href = `/san-pham/${encodeURIComponent(product.slug)}`;
+  }
+  if (product?.pvc) {
+    byId<HTMLElement>('booking-pvc-options').hidden = false;
+    finish.disabled = false; finish.required = true; pvcType.disabled = false;
+    const requestedFinish = params.get('be-mat');
+    if (requestedFinish === 'bong' || requestedFinish === 'nham') {
+      finish.value = requestedFinish;
+      finish.selectedOptions[0].defaultSelected = true;
+    }
+    if (params.get('hinh-thuc') === 'cat-le') {
+      pvcType.value = 'cat-le';
+      pvcType.selectedOptions[0].defaultSelected = true;
+      size.value = (params.get('kich-thuoc') ?? '').trim().slice(0,160);
+      size.defaultValue = size.value;
+    }
   }
   const parts = new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Ho_Chi_Minh',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
   const part = (key: string) => parts.find(item => item.type === key)?.value;
@@ -48,6 +65,7 @@ if (form) {
       `Điện thoại: ${phone.value.trim()}`,
       `Dịch vụ: ${service.selectedOptions[0].textContent}`,
       ...(product ? [`Mẫu quan tâm: ${product.name} (${product.code})`] : []),
+      ...(product?.pvc ? [`Bề mặt: ${finish.selectedOptions[0].textContent}`, `Hình thức mua: ${pvcType.selectedOptions[0].textContent}`, 'Quy cách cuộn: 1,2 × 50 m'] : []),
       `Khu vực: ${region.selectedOptions[0].textContent}`,
       `Địa chỉ: ${address.value.trim()}`,
       `Ngày mong muốn: ${selectedDate}`,

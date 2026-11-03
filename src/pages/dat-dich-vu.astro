@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { regions } from '../data/regions';
 import { products } from '../data/catalogue';
+import { isPVCProduct, pvcFinishes } from '../data/pvc-options';
 import { serviceOfferings as services } from '../data/site-offerings';
 import '../styles/booking.css';
-const productOptions = products.map(product=>({slug:product.slug,name:product.name,code:product.code,service:'thi-cong-decal'}));
+import '../styles/pvc-options.css';
+const productOptions = products.map(product=>({slug:product.slug,name:product.name,code:product.code,service:isPVCProduct(product.slug)?'cat-decal':'thi-cong-decal',pvc:isPVCProduct(product.slug)}));
 ---
 <Layout title="Đặt lịch thi công Decal & phim cách nhiệt | iDecal" description="Chuẩn bị yêu cầu thi công Decal: chọn dịch vụ, khu vực, ngày mong muốn và mẫu sản phẩm. Gửi thông tin qua Zalo để iDecal tư vấn, xác nhận lịch.">
   <section class="booking-hero"><div class="container"><p class="booking-kicker">Cùng iDecal chuẩn bị công trình</p><h1 class="brand-heading">Đặt dịch vụ iDecal</h1><p>Chọn thiết kế, in, cắt, thi công hoặc trọn gói. Gửi yêu cầu qua Zalo để iDecal tư vấn phương án, báo giá và xác nhận lịch phù hợp.</p></div></section>
@@ -22,6 +24,7 @@ const productOptions = products.map(product=>({slug:product.slug,name:product.na
           <div class="booking-full"><label for="booking-address">Địa chỉ công trình <span aria-hidden="true">*</span></label><input id="booking-address" name="address" autocomplete="street-address" required maxlength="250" placeholder="Số nhà, đường, phường/xã…" /></div>
           <div><label for="booking-date">Ngày mong muốn</label><input id="booking-date" name="date" type="date" /><p class="booking-field-note">Ngày đề xuất; iDecal sẽ trao đổi để xác nhận lịch.</p></div>
           <div><label for="booking-time">Khung giờ phù hợp</label><select id="booking-time" name="time"><option value="">Linh hoạt, cần trao đổi</option><option>Buổi sáng</option><option>Buổi chiều</option><option>Sau giờ làm việc</option></select></div>
+          <div id="booking-pvc-options" class="booking-full booking-pvc-options" hidden><div><label for="booking-finish">Bề mặt Decal PVC <span aria-hidden="true">*</span></label><select id="booking-finish" name="finish" disabled><option value="">Chọn bề mặt</option>{pvcFinishes.map(finish => <option value={finish.value}>{finish.label}</option>)}</select></div><div><label for="booking-pvc-type">Hình thức mua</label><select id="booking-pvc-type" name="pvc-type" disabled><option value="cuon">Nguyên cuộn · 1,2 × 50 m</option><option value="cat-le">Cắt lẻ theo yêu cầu</option></select></div><p>Quy cách cuộn 1,2 × 50 m, cắt lẻ theo yêu cầu.</p></div>
           <div class="booking-full"><label for="booking-size">Kích thước / khối lượng dự kiến</label><input id="booking-size" name="size" maxlength="160" placeholder="Ví dụ: 4 ô kính, mỗi ô 1m × 2m; hoặc cần khảo sát" /></div>
           <div class="booking-full"><label for="booking-notes">Nhu cầu & ghi chú</label><textarea id="booking-notes" name="notes" rows="4" maxlength="1500" placeholder="Mẫu mong muốn, tình trạng kính, có lớp Decal cũ, yêu cầu về giờ thi công…"></textarea></div>
         </div>
