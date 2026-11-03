@@ -1,0 +1,32 @@
+{
+  "services": [
+    {"title":"Thiết kế Decal kính văn phòng","description":"Bố trí dải mờ, đường kẻ, tên phòng và nhận diện trên từng ô kính; cân đối riêng tư với ánh sáng và tầm nhìn.","image":"/images/catalogue/decal-mo-ke-soc-ngang.jpg","alt":"Minh họa cách bố trí họa tiết trên vách kính văn phòng","tag":"Vách ngăn · Phòng họp"},
+    {"title":"Dàn logo, chữ & slogan","description":"Sắp xếp logo, tên thương hiệu và nội dung chữ theo vị trí dán. Hỗ trợ kiểm tra, chỉnh file và chuẩn bị đường cắt theo phạm vi thống nhất.","image":"/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg","alt":"Minh họa gia công chữ và nhận diện bằng Decal","tag":"Nhận diện · Chữ cắt"},
+    {"title":"Thiết kế quảng cáo trên kính","description":"Thiết kế hình ảnh, ưu đãi và thông điệp cho cửa hàng, showroom hoặc mặt tiền; cân nhắc khoảng nhìn và cách chia khổ.","image":"/images/print-materials/decal-trong.jpg","alt":"Minh họa bố cục quảng cáo trên kính cửa hàng","tag":"Cửa hàng · Showroom"},
+    {"title":"Thiết kế tem nhãn sản phẩm","description":"Dàn tên sản phẩm, thông tin, logo và nội dung do bạn cung cấp theo kích thước nhãn; chuẩn bị bố cục in và đường bế nếu có.","image":"/images/print-materials/tem-nhan.jpg","alt":"Minh họa thiết kế tem nhãn cho bao bì sản phẩm","tag":"Tem nhãn · Bao bì"},
+    {"title":"Thiết kế poster & standee","description":"Bố trí nội dung chương trình, sự kiện và hình ảnh trưng bày theo khoảng nhìn, khổ in và vị trí đặt.","image":"/images/print-materials/pp-standee.webp","alt":"Minh họa poster quảng cáo trên bảng trưng bày","tag":"Quảng cáo · Sự kiện"},
+    {"title":"Họa tiết trang trí theo không gian","description":"Phối hình học, đường kẻ và chi tiết trang trí theo phong cách nội thất; thống nhất tỉ lệ và chiều họa tiết trước khi in hoặc cắt.","image":"/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp","alt":"Minh họa hiệu ứng trang trí trên bề mặt kính","tag":"Trang trí · Phối họa tiết"}
+  ],
+  "startingPoints": [
+    {"title":"Thiết kế từ ý tưởng","description":"Bạn gửi nhu cầu, nội dung và mẫu phong cách yêu thích. iDecal trao đổi bố cục và phạm vi thiết kế trước khi bắt đầu."},
+    {"title":"Chỉnh sửa file đang có","description":"Kiểm tra file, cập nhật nội dung, điều chỉnh kích thước hoặc bố cục để phù hợp với nhu cầu in và gia công."},
+    {"title":"Dàn mẫu theo kích thước","description":"Triển khai thiết kế lên từng ô kính, vị trí dán hoặc khổ trưng bày; làm rõ vị trí nối và các chi tiết cần giữ."}
+  ],
+  "brief": ["Ảnh toàn cảnh và cận cảnh vị trí dán hoặc trưng bày.","Kích thước từng ô kính, bề mặt hoặc khổ sản phẩm cần thiết kế.","Logo, nội dung chữ và hình ảnh cần sử dụng.","Mẫu phong cách, màu sắc hoặc nhận diện thương hiệu đã có.","Yêu cầu in, cắt hay thi công đi kèm; thời gian và ngân sách dự kiến."],
+  "handover": [
+    {"title":"Bản xem trước để duyệt","description":"Bố cục, nội dung và kích thước thể hiện để bạn kiểm tra trước khi xác nhận."},
+    {"title":"File phục vụ in hoặc cắt","description":"Định dạng và phạm vi bàn giao được thống nhất theo hạng mục, vật liệu và cách gia công."},
+    {"title":"Phương án triển khai","description":"Làm rõ cách chia ô, chia khổ hoặc vị trí các chi tiết khi có yêu cầu triển khai thực tế."}
+  ],
+  "reasons": [
+    {"title":"Thiết kế gắn với vật liệu","description":"Cân nhắc màu nền, độ che phủ, vị trí nối và khả năng in hoặc cắt ngay từ khi lên bố cục."},
+    {"title":"Hỗ trợ kiểm tra file","description":"Trao đổi những điểm cần chỉnh ở nội dung, hình ảnh và kích thước trước khi duyệt sản xuất."},
+    {"title":"Phạm vi và chi phí rõ ràng","description":"Thống nhất số phương án, phạm vi chỉnh sửa và định dạng bàn giao trước khi thực hiện."},
+    {"title":"Kết nối đến hoàn thiện","description":"Có thể chọn thêm in, cắt hoặc thi công để cách triển khai được thống nhất với thiết kế."}
+  ],
+  "faqs": [
+    {"question":"Có nhận chỉnh sửa file thiết kế cũ không?","answer":"Có thể gửi file đang có cùng nội dung cần đổi để iDecal kiểm tra. Khả năng chỉnh sửa phụ thuộc định dạng file, chất lượng hình ảnh và phạm vi công việc."},
+    {"question":"Được chỉnh sửa mẫu bao nhiêu lần?","answer":"Số phương án và phạm vi chỉnh sửa được thống nhất khi báo giá. Nếu thay đổi nội dung hoặc hướng thiết kế ngoài phạm vi đã chốt, hai bên trao đổi lại trước khi thực hiện."},
+    {"question":"File gốc có được bàn giao không?","answer":"Định dạng file gốc, file in hoặc file cắt được thống nhất trong phạm vi bàn giao. Bạn nên nêu nhu cầu lưu trữ và sử dụng lại khi gửi yêu cầu thiết kế."}
+  ]
+}

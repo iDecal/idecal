@@ -1,0 +1,37 @@
+---
+import content from '../data/design-service.json';
+---
+<section id="hang-muc-thiet-ke" class="design-services lp-section"><div class="container"><div class="lp-section-heading"><div><p class="lp-kicker">Thiết kế cho từng điểm chạm</p><h2>Bạn muốn thiết kế hạng mục nào?</h2></div><p>Từ kính văn phòng đến hình ảnh quảng cáo và tem nhãn. Chọn cách thể hiện phù hợp với vật liệu và không gian sử dụng.</p></div><div class="design-service-grid">{content.services.map(item=><article><div class="design-service-photo"><img src={item.image} alt={item.alt} width="800" height="600" loading="lazy" /><span>{item.tag}</span></div><div class="design-service-copy"><h3>{item.title}</h3><p>{item.description}</p><a href="/dat-dich-vu?dich-vu=thiet-ke">Trao đổi mẫu thiết kế <span aria-hidden="true">→</span></a></div></article>)}</div></div></section>
+<section id="cach-bat-dau" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">Linh hoạt theo nhu cầu</p><h2>Bắt đầu từ ý tưởng hoặc file bạn đã có</h2></div><p>Không cần chuẩn bị mọi thứ hoàn chỉnh. Cùng xác định phần việc cần hỗ trợ để triển khai đúng hướng.</p></div><div class="design-start-grid">{content.startingPoints.map((item,index)=><article><span aria-hidden="true">0{index+1}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></section>
+<section id="chuan-bi-thiet-ke" class="design-brief lp-section"><div class="container design-brief-grid"><div><p class="lp-kicker">Chuẩn bị để tư vấn sát nhu cầu</p><h2>Gửi thông tin, cùng làm rõ ý tưởng</h2><p>Bạn có thể gửi những thông tin đang có; phần còn thiếu sẽ được trao đổi trước khi bắt đầu thiết kế.</p><a href="/dat-dich-vu?dich-vu=thiet-ke" class="btn-primary-solid">Gửi yêu cầu thiết kế <span aria-hidden="true">→</span></a></div><ul>{content.brief.map(item=><li><span aria-hidden="true">✓</span>{item}</li>)}</ul></div></section>
+<section id="ban-giao-thiet-ke" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">Rõ trước khi thực hiện</p><h2>Thống nhất kết quả bàn giao</h2></div><p>Số phương án, phạm vi chỉnh sửa và định dạng file được xác nhận khi báo giá; các phần in, cắt và thi công được làm rõ riêng.</p></div><div class="design-handover-grid">{content.handover.map(item=><article><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h10l4 4v14H5V3Zm10 0v5h4M8 12h8M8 16h6"/></svg><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></section>
+<section class="design-reasons lp-section"><div class="container"><div class="lp-section-heading"><div><p class="lp-kicker">Từ thiết kế đến ứng dụng</p><h2>Vì sao chọn thiết kế tại iDecal?</h2></div><p>Ưu tiên bố cục có thể triển khai thực tế, không chỉ dừng ở hình ảnh trên màn hình.</p></div><div class="design-reason-grid">{content.reasons.map(item=><article><span aria-hidden="true">✓</span><div><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div></div></section>
+<style>
+.design-services { background: #f3f8fd; border-block: 1px solid #e0eaf5; }
+.design-service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.design-service-grid article { overflow: hidden; border: 1px solid #dce6f2; border-radius: 16px; background: #fff; display: flex; flex-direction: column; }
+.design-service-photo { position: relative; aspect-ratio: 4/3; background: #eaf1f8; overflow: hidden; }
+.design-service-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.design-service-photo > span { position: absolute; left: 12px; right: 12px; bottom: 12px; max-width: calc(100% - 24px); width: fit-content; background: #fffffff0; border-radius: 6px; padding: 6px 10px; color: #52657c; font-size: 12px; }
+.design-service-copy { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+.design-service-copy h3, .design-start-grid h3, .design-handover-grid h3, .design-reason-grid h3 { color: #244766; font-size: 18px; line-height: 1.45; margin: 0 0 12px; }
+.design-service-copy p, .design-start-grid p, .design-handover-grid p, .design-reason-grid p { color: #64748b; font-size: 15px; margin: 0; }
+.design-service-copy a { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 18px; color: #0d6b96; font-size: 14px; }
+.design-start-grid, .design-handover-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.design-start-grid article { padding: 22px; border-left: 2px solid #c7daf0; background: #f8fbff; border-radius: 0 12px 12px 0; }
+.design-start-grid article > span { display: block; font-family: 'Lexend Variable',sans-serif !important; font-size: 25px; color: #3182c5; margin-bottom: 20px; }
+.design-brief { background: #f3f8fd; border-block: 1px solid #e0eaf5; }
+.design-brief-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.design-brief p:not(.lp-kicker) { font-size: 16px; color: #64748b; margin-bottom: 24px; }
+.design-brief ul { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.design-brief li { display: flex; align-items: start; gap: 12px; padding: 16px; background: white; border: 1px solid #e1eaf4; border-radius: 10px; color: #52657c; font-size: 15px; }
+.design-brief li span { color: #0d6b96; }
+.design-handover-grid article { padding: 24px; border: 1px solid #dce6f2; border-radius: 14px; }
+.design-handover-grid svg { width: 26px; height: 26px; color: #0d6b96; margin-bottom: 18px; }
+.design-reasons { background: #f3f8fd; border-block: 1px solid #e0eaf5; }
+.design-reason-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 32px; }
+.design-reason-grid article { display: flex; align-items: start; gap: 14px; }
+.design-reason-grid article > span { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 32px; height: 32px; background: #e4efff; color: #0d6b96; border-radius: 50%; }
+@media(max-width:1023px) { .design-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .design-start-grid, .design-handover-grid { gap: 16px; } .design-brief-grid { gap: 32px; } }
+@media(max-width:767px) { .design-service-grid, .design-start-grid, .design-handover-grid, .design-brief-grid, .design-reason-grid { grid-template-columns: 1fr; gap: 20px; } .design-service-copy { padding: 20px; } .design-handover-grid article { padding: 20px; } }
+</style>
