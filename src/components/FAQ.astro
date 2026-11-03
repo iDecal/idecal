@@ -32,7 +32,7 @@ const faqs = [
     
     <div class="text-center mb-16">
       <h6>Giải đáp thắc mắc</h6>
-      <h2 class="text-h2">Câu hỏi thường gặp</h2>
+      <h2 class="brand-heading text-h2">Câu hỏi thường gặp</h2>
       <p class="italic text-sm">Tất cả các giải đáp về dịch vụ và bảo hành tại iDecal</p>
     </div>
 
@@ -46,14 +46,14 @@ const faqs = [
                 <span class="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary text-[10px] flex items-center justify-center font-black">Q</span>
                 <span class="text-[15px] md:text-base text-secondary">{faq.q}</span>
               </span>
-              <span class="lg:hidden transform group-open:rotate-180 transition-transform duration-300 text-slate-300">
+              <span class="lg:hidden transform group-open:rotate-180 transition-transform duration-300 text-brand-inverse">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
               </span>
             </summary>
             
-            <div class="flex gap-4 p-5 bg-slate-50/80 rounded-2xl animate-fadeIn items-start border border-slate-100/50">
+            <div class="flex gap-4 p-5 bg-surface/80 rounded-2xl animate-fadeIn items-start border border-border/50">
               <span class="flex-shrink-0 w-6 h-6 rounded-full bg-white text-secondary/40 text-[10px] flex items-center justify-center font-black shadow-sm">A</span>
               <p class="text-text-muted text-sm leading-relaxed !mb-0">{faq.a}</p>
             </div>

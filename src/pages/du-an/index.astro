@@ -9,12 +9,12 @@ const categories = ['Tất cả', ...new Set(projects.map(project => project.dat
 ---
 
 <Layout title="Công trình thực tế | Thi công decal iDecal" description="Khám phá các công trình decal dán kính, trang trí văn phòng và showroom do iDecal thực hiện. Xem hình ảnh và thông tin từng công trình.">
-  <section class="border-b border-slate-100 bg-slate-50 py-16 md:py-24">
+  <section class="border-b border-border bg-surface py-16 md:py-24">
     <div class="container">
-      <nav aria-label="Đường dẫn" class="mb-8 text-sm text-slate-500"><a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true" class="mx-3">/</span><span aria-current="page">Công trình</span></nav>
+      <nav aria-label="Đường dẫn" class="mb-8 text-sm text-text-muted"><a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true" class="mx-3">/</span><span aria-current="page">Công trình</span></nav>
       <p class="!mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Hồ sơ công trình iDecal</p>
       <h1 class="max-w-3xl">Công trình thực tế</h1>
-      <p class="!mb-0 max-w-2xl text-lg text-slate-500">Từ ý tưởng đến không gian hoàn thiện. Xem hình ảnh, hạng mục và thông tin các công trình iDecal đã thực hiện.</p>
+      <p class="!mb-0 max-w-2xl text-lg text-text-muted">Từ ý tưởng đến không gian hoàn thiện. Xem hình ảnh, hạng mục và thông tin các công trình iDecal đã thực hiện.</p>
     </div>
   </section>
 
@@ -22,22 +22,22 @@ const categories = ['Tất cả', ...new Set(projects.map(project => project.dat
     <div class="mb-10 flex flex-col gap-6">
       <div class="max-w-lg">
         <label for="project-search" class="mb-2 block text-sm font-semibold text-secondary">Tìm công trình</label>
-        <input id="project-search" type="search" placeholder="Tên công trình, khách hàng, khu vực…" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
+        <input id="project-search" type="search" placeholder="Tên công trình, khách hàng, khu vực…" class="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
       </div>
       <div class="flex flex-wrap gap-3" role="group" aria-label="Lọc theo hạng mục">
         {categories.map(category => (
-          <button type="button" class={`project-filter rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${category === 'Tất cả' ? 'border-primary bg-primary text-white' : 'border-slate-200 bg-white text-slate-600 hover:border-primary'}`} data-category={category} aria-pressed={category === 'Tất cả'}>
+          <button type="button" class={`project-filter rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${category === 'Tất cả' ? 'border-primary bg-primary text-white' : 'border-border bg-white text-text-muted hover:border-primary'}`} data-category={category} aria-pressed={category === 'Tất cả'}>
             {category}
           </button>
         ))}
       </div>
-      <p id="project-count" class="!mb-0 text-sm text-slate-500" role="status" aria-live="polite" aria-atomic="true">Hiển thị {projects.length} công trình</p>
+      <p id="project-count" class="!mb-0 text-sm text-text-muted" role="status" aria-live="polite" aria-atomic="true">Hiển thị {projects.length} công trình</p>
     </div>
 
     <div id="project-grid" class="grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
       {projects.map(project => <ProjectCard project={project} headingLevel="h2" />)}
     </div>
-    <div id="project-empty" hidden class="rounded-3xl border border-dashed border-slate-300 bg-slate-50 p-10 text-center">
+    <div id="project-empty" hidden class="rounded-3xl border border-dashed border-brand-line bg-surface p-10 text-center">
       <h2 class="text-xl">Không tìm thấy công trình phù hợp</h2>
       <p>Thử từ khóa khác hoặc bỏ bộ lọc để xem tất cả công trình.</p>
       <button id="project-reset" type="button" class="btn-primary-solid">Xem tất cả công trình</button>
@@ -45,9 +45,9 @@ const categories = ['Tất cả', ...new Set(projects.map(project => project.dat
   </section>
 
   <section class="container pb-20">
-    <div class="rounded-3xl bg-slate-900 px-6 py-14 text-center md:px-12">
+    <div class="rounded-3xl brand-dark bg-brand-navy px-6 py-14 text-center md:px-12">
       <h2 class="text-white">Bạn đang lên ý tưởng cho công trình mới?</h2>
-      <p class="mx-auto mb-8 max-w-xl text-slate-300">Gửi hình ảnh và nhu cầu của bạn để iDecal tư vấn mẫu decal, phương án thi công và báo giá phù hợp.</p>
+      <p class="mx-auto mb-8 max-w-xl text-brand-inverse">Gửi hình ảnh và nhu cầu của bạn để iDecal tư vấn mẫu decal, phương án thi công và báo giá phù hợp.</p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="tel:0866077040" class="btn-primary-solid">Gọi 0866.077.040</a>
         <a href="https://zalo.me/0866077040" class="rounded-brand border border-white/30 px-8 py-4 font-bold text-white hover:bg-white/10">Chat Zalo nhận báo giá</a>
@@ -81,8 +81,8 @@ const categories = ['Tất cả', ...new Set(projects.map(project => project.dat
       button.classList.toggle('text-white', active);
       button.classList.toggle('border-primary', active);
       button.classList.toggle('bg-white', !active);
-      button.classList.toggle('text-slate-600', !active);
-      button.classList.toggle('border-slate-200', !active);
+      button.classList.toggle('text-text-muted', !active);
+      button.classList.toggle('border-border', !active);
     });
     if (count) count.textContent = `Hiển thị ${visible} / ${cards.length} công trình`;
     if (empty) empty.hidden = visible > 0;

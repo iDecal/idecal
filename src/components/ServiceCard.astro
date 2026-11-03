@@ -39,21 +39,21 @@ const services = [
 ];
 ---
 
-<section id="dich-vu" class="py-20 bg-slate-50/50">
+<section id="dich-vu" class="py-20 bg-surface/50">
   <div class="container">
 
     <div class="text-center mb-16">
       <p class="text-primary font-bold uppercase tracking-[0.2em] text-[10px] mb-3">
         Dịch vụ trọng tâm
       </p>
-      <h2 class="text-h2">Giải pháp dán kính & Nội thất</h2>
+      <h2 class="brand-heading text-h2">Giải pháp dán kính & Nội thất</h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map((item) => (
         <a href={item.link} class="group bg-white rounded-brand border border-border shadow-card hover:shadow-brand transition-all duration-500 overflow-hidden flex flex-col">
 
-          <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+          <div class="aspect-[16/10] overflow-hidden bg-brand-pale">
             <img 
               src={item.image} 
               alt={item.title} 

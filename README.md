@@ -23,6 +23,8 @@ npm audit
 
 ## Nội dung và hình ảnh
 
+Hệ màu dựa trên hai bản thiết kế HTML cũ: xem [bảng màu và cách áp dụng](docs/brand-design.md).
+
 - Khu vực: `src/data/regions.ts`; trang tổng hợp tại `/khu-vuc`, các trang con được tạo từ `src/pages/khu-vuc/[slug].astro`. Dữ liệu cũng dùng cho menu và chân trang.
 - Blog: `src/content/blog/*.md`.
 - Công trình: `src/content/projects/*.md`.
