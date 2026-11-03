@@ -90,3 +90,8 @@
   .btn-primary-solid, .service-card-brand { transition: none; }
   .btn-primary-solid:hover, .service-card-brand:hover { transform: none; }
 }
+
+/* Content uses Inter; shared header and footer retain the existing Lexend font. */
+.page-content, .page-content *, .homepage-original, .homepage-original * {
+  font-family: 'Inter Variable', sans-serif !important;
+}
