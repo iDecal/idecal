@@ -141,3 +141,46 @@
   .homepage-original .consult-quote { width: 100%; gap: 12px; }
   .homepage-original .why-idecal-photo { aspect-ratio: 1; border-radius: 50%; max-width: 400px; justify-self: center; }
 }
+
+/* Readable type and a more compact service section. */
+.homepage-original h1,
+.homepage-original h2,
+.homepage-original h3 { letter-spacing: 0; word-spacing: normal; }
+.homepage-original #gspb_heading-id-gspb-UdG4q3VW8rfFITty4mInj { letter-spacing: 0; line-height: 1.25; margin-bottom: 20px; }
+.homepage-original #gspb_container-id-gsbp-cb40e80 > .wp-block-paragraph { line-height: 1.85; }
+.homepage-original #gspb_iconsList-id-gsbp-0e0111d { display: flex; flex-wrap: wrap; column-gap: 20px; row-gap: 12px; }
+.homepage-original #gspb_iconsList-id-gsbp-0e0111d .gspb_iconsList__item { gap: 8px; margin: 0; }
+.homepage-original #gspb_row-id-gsbp-c9028b0.home-process { padding-top: 48px; padding-bottom: 48px; }
+.homepage-original .process-heading { margin-bottom: 24px; max-width: 760px; }
+.homepage-original .process-heading .home-eyebrow { margin-bottom: 12px; }
+.homepage-original #home-process-title { font-size: 30px; line-height: 1.4; letter-spacing: 0; margin-bottom: 8px; }
+.homepage-original .process-card { padding: 24px; border-radius: 16px; }
+.homepage-original .process-card-top { margin-bottom: 18px; }
+.homepage-original .process-icon { width: 44px; height: 44px; border-radius: 12px; }
+.homepage-original .process-icon svg { width: 23px; height: 23px; }
+.homepage-original .process-card h3 { font-size: 18px; line-height: 1.5; margin-bottom: 8px; }
+.homepage-original .process-card p { margin-bottom: 18px; line-height: 1.75; }
+.homepage-original .process-card a { padding-top: 14px; }
+@media(max-width: 767px) {
+  .homepage-original .entry-content { padding-left: 0 !important; padding-right: 0 !important; }
+  .homepage-original #gspb_container-id-gsbp-cc0ff42,
+  .homepage-original #gspb_container-id-gsbp-a7c2a6f { width: calc(100% - 40px); max-width: none; margin-left: auto; margin-right: auto; }
+  .homepage-original #gspb_row-id-gsbp-2ad1bfb { width: 100%; max-width: none; margin-left: 0; margin-right: 0; padding-bottom: 36px; }
+  .homepage-original #gspb_heading-id-gspb-UdG4q3VW8rfFITty4mInj { font-size: 32px; line-height: 1.35; letter-spacing: 0; margin-top: 0; margin-bottom: 20px; }
+  .homepage-original #gspb_container-id-gsbp-cb40e80 > .wp-block-paragraph { font-size: 15px; line-height: 1.8; }
+  .homepage-original #gspb_iconsList-id-gsbp-0e0111d { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .homepage-original #gspb_row-id-gsbp-c9028b0.home-process,
+  .homepage-original #gspb_row-id-gsbp-c9f30fb.why-idecal { width: 100%; margin-left: 0; margin-right: 0; padding: 36px 20px; }
+  .homepage-original #gspb_row-id-gsbp-aa4530a.home-partner-strip { width: 100%; margin-left: 0; margin-right: 0; padding: 24px 20px; }
+  .homepage-original #home-process-title { font-size: 25px; line-height: 1.4; }
+  .homepage-original .process-heading p { font-size: 14px; line-height: 1.75; }
+  .homepage-original .process-card { padding: 20px; }
+  .homepage-original .process-card-top { margin-bottom: 14px; }
+  .homepage-original .process-card p { font-size: 13px; margin-bottom: 16px; }
+  .homepage-original .process-grid { gap: 12px; }
+  .homepage-original #gspb_container-id-gsbp-36095c7.home-consult,
+  .homepage-original #gspb_row-id-gsbp-d9148c4.home-faq-intro { width: calc(100% - 40px); margin-left: auto; margin-right: auto; }
+  .homepage-original #gspb_container-id-gsbp-36095c7.home-consult { padding: 28px 20px; }
+  .homepage-original #gspb_row-id-gsbp-d95ffc5 { width: calc(100% - 40px); max-width: none; margin-left: auto; margin-right: auto; padding: 24px 0; }
+  .homepage-original #gspb_row-id-gsbp-d95ffc5 > .gspb_row__content { width: 100%; max-width: none; margin: 0; padding: 0; }
+}
