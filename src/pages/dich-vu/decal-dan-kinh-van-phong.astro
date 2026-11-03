@@ -1,4 +1,7 @@
 ---
+import ServiceProducts from '../../components/ServiceProducts.astro';
+import ServiceGallery from '../../components/ServiceGallery.astro';
+import '../../styles/services.css';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import BlogHome from '../../components/BlogHome.astro';
@@ -7,24 +10,25 @@ const officeServices = [
     title: "Decal Mờ Phun Cát",
     desc: "Giải pháp phổ biến nhất cho vách kính văn phòng, tạo không gian riêng tư nhưng vẫn giữ được sự thông thoáng.",
     features: ["Che mờ tầm nhìn", "Dễ dàng vệ sinh", "Chi phí tối ưu"],
-    image: "/images/image-placeholder.svg"
+    image: "/images/catalogue/decal-mo-trang-tron-van-phong.jpg"
   },
   {
     title: "Cắt Chữ & Logo Công Ty",
     desc: "Khẳng định thương hiệu ngay từ cửa ra vào. Cắt CNC chính xác logo và tên công ty trên nền decal mờ hoặc decal màu.",
     features: ["Độ chính xác cao", "Thiết kế theo yêu cầu", "Tăng tính chuyên nghiệp"],
-    image: "/images/image-placeholder.svg"
+    image: "/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png"
   },
   {
     title: "Decal Trang Trí & Chỉ Kẻ",
     desc: "Tạo điểm nhấn hiện đại với các đường kẻ chỉ (line) hoặc họa tiết hình học, giúp không gian bớt đơn điệu.",
     features: ["Thẩm mỹ cao", "Mẫu mã đa dạng", "Tạo cảm hứng làm việc"],
-    image: "/images/image-placeholder.svg"
+    image: "/images/catalogue/decal-mo-ke-soc-ngang.jpg"
   }
 ];
 ---
 
 <Layout title="Decal Dán Kính Văn Phòng | Thiết Kế & Thi Công Trọn Gói">
+<div class="services-redesign">
 
   <PageBanner title="Nâng Tầm Không Gian Làm Việc Với Decal Kính" eyebrow="Dịch vụ iDecal" image="/images/Banner/Dich-vu-dan-Decal-kinh-mo-van-phong-TP-HCM.png" imageAlt="Văn phòng dán decal kính mờ">
     <p slot="description">
@@ -32,6 +36,7 @@ const officeServices = [
         </p>
     <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Nhận tư vấn mẫu &amp; Báo giá</a></Fragment>
   </PageBanner>
+<ServiceGallery service="decal-dan-kinh-van-phong" />
 
   <section class="py-24 bg-white">
     <div class="container">
@@ -93,5 +98,7 @@ const officeServices = [
     </div>
   </section>
 
+<ServiceProducts service="decal-dan-kinh-van-phong" />
   <BlogHome />
+</div>
 </Layout>

@@ -1,4 +1,6 @@
 ---
+import ServiceProducts from '../../components/ServiceProducts.astro';
+import '../../styles/services.css';
 import ServicePricing from '../../components/ServicePricing.astro';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
@@ -13,6 +15,7 @@ const services = [
 ];
 ---
 <Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá 6 dịch vụ iDecal: Decal văn phòng, phim cách nhiệt, Decal 3D, cắt chữ logo, film nội thất và in Decal quảng cáo.">
+<div class="services-redesign">
   <PageBanner title="Thiết kế, in ấn & thi công Decal" eyebrow="Dịch vụ iDecal" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ và logo Decal">
     <p slot="description">Từ trang trí kính đến làm mới nội thất. Chọn dịch vụ phù hợp để xem mẫu, tìm hiểu cách thực hiện và nhận tư vấn cho không gian của bạn.</p>
     <Fragment slot="actions"><a href="/dat-dich-vu" class="btn-primary-solid">Đặt lịch thi công</a><a href="#bang-gia-dich-vu" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
@@ -27,5 +30,7 @@ const services = [
     </div>
   </section>
 
+<ServiceProducts />
   <ServicePricing />
+</div>
 </Layout>

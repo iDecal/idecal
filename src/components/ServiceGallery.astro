@@ -1,0 +1,11 @@
+---
+import { servicePresentation } from '../data/service-presentation';
+interface Props { service: string; }
+const content = servicePresentation[Astro.props.service];
+---
+<section class="service-gallery" aria-label="Hình ảnh và ứng dụng dịch vụ">
+  <div class="container">
+    <div class="service-editorial-heading"><div><p class="service-kicker">Ý tưởng cho không gian</p><h2>{content.title}</h2></div><p>{content.introduction}</p></div>
+    <div class="service-photo-grid">{content.photos.map((photo, index) => <figure><img src={photo.src} alt={photo.caption} width={index === 0 ? 1000 : 600} height="700" loading="lazy" /><figcaption><span aria-hidden="true">0{index + 1}</span>{photo.caption}</figcaption></figure>)}</div>
+  </div>
+</section>

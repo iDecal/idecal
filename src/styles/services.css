@@ -1,0 +1,72 @@
+/* Shared presentation for service pages only. Header, footer and catalogue stay independent. */
+.services-redesign { background: #fff; color: #1b4f7a; }
+.services-redesign > section:not(.compact-page-banner), .services-redesign > .cutting-page > section:not(.compact-page-banner) { padding-top: 56px; padding-bottom: 56px; }
+.services-redesign > section:nth-of-type(even):not(.compact-page-banner):not(.service-featured-products), .services-redesign .cutting-surface { background: #f5f8fc; }
+.services-redesign > section + section, .services-redesign .cutting-page > section + section { border-top: 1px solid #e7edf5; }
+.services-redesign .compact-page-banner { padding: 48px 0; background: radial-gradient(ellipse at 95% 5%,#f0edff,transparent 65%),linear-gradient(120deg,#f3faff,#fff); }
+.services-redesign .compact-page-banner .compact-banner-grid { grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr); gap: 64px; }
+.services-redesign .compact-page-banner .compact-banner-image { width: 100%; height: 350px; max-width: none; aspect-ratio: auto; border-radius: 24px 24px 64px 24px; box-shadow: none; }
+.services-redesign .compact-page-banner .compact-banner-copy h1 { font-size: clamp(29px,3.1vw,40px); line-height: 1.25; max-width: 650px; }
+.services-redesign .compact-page-banner .compact-banner-description { max-width: 620px; }
+.services-redesign .compact-page-banner .compact-banner-eyebrow { background: #fff9; }
+.services-redesign .service-card-brand { border: 1px solid #e0e8f2; border-radius: 18px; padding: 24px; box-shadow: none; background: white; }
+.services-redesign :is(.mb-16,.mb-20) { margin-bottom: 32px; }
+.services-redesign :is(.gap-16,.gap-20) { gap: 40px; }
+.services-redesign :is(.shadow-2xl,.shadow-xl,.shadow-lg) { box-shadow: 0 8px 28px #17365a0a; }
+.services-redesign h2 { font-size: clamp(24px,2.5vw,32px); line-height: 1.3; margin-bottom: 20px; }
+.services-redesign h6 { font-size: 12px; color: #0d6b96; margin-bottom: 12px; }
+.services-redesign img { max-width: 100%; }
+.services-redesign .service-gallery { background: #fff; }
+.service-editorial-heading { display: grid; grid-template-columns: 1.1fr .9fr; gap: 64px; align-items: end; margin-bottom: 28px; }
+.service-editorial-heading h2 { max-width: 600px; color: #173b62; margin: 0; }
+.service-editorial-heading p { margin: 0; font-size: 15px; color: #52657c; }
+.service-editorial-heading .service-kicker { margin-bottom: 12px; color: #0d6b96; font-size: 12px; font-weight: 500; }
+.service-photo-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 18px; }
+.service-photo-grid figure { margin: 0; min-width: 0; overflow: hidden; border-radius: 16px; background: #f3f7fb; }
+.service-photo-grid img { width: 100%; height: 260px; object-fit: cover; display: block; }
+.service-photo-grid figcaption { display: flex; gap: 12px; align-items: baseline; padding: 16px 18px; font-size: 13px; line-height: 1.6; color: #244766; }
+.service-photo-grid figcaption span { font-size: 11px; color: #73879d; }
+.services-redesign .service-featured-products { background: #f1f7fc; }
+.service-inline-link { display: inline-flex; align-items: center; gap: 16px; margin-top: 12px; color: #0d6b96; font-size: 14px; font-weight: 500; }
+.service-inline-link:hover { color: #031245; text-decoration: underline; }
+.service-product-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.service-product-grid-three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.service-product-grid .catalogue-card { box-shadow: none; }
+.service-booking-line { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 24px; margin-top: 28px; border-top: 1px solid #d7e4f1; }
+.service-booking-line p { margin: 0; font-size: 14px; }
+.service-booking-line a { flex-shrink: 0; display: inline-flex; gap: 18px; color: #0d6b96; font-size: 14px; font-weight: 500; }
+.service-booking-line a:hover { color: #031245; text-decoration: underline; }
+.services-redesign .service-overview-card { border-radius: 18px; box-shadow: none; }
+.services-redesign .service-overview-card img { transition: transform .25s; }
+.services-redesign .service-overview-card:hover img { transform: scale(1.025); }
+.services-redesign :is(.service-inline-link,.service-booking-line a):focus-visible { outline: 2px solid #0d6b96; outline-offset: 5px; }
+@media (max-width: 1023px) {
+ .services-redesign .compact-page-banner .compact-banner-grid { gap: 32px; }
+ .services-redesign .compact-page-banner .compact-banner-image { height: 300px; }
+ .service-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .service-editorial-heading { gap: 32px; }
+ .service-photo-grid img { height: 220px; }
+}
+@media (max-width: 767px) {
+ .services-redesign .container { padding-left: 20px; padding-right: 20px; }
+ .services-redesign > section:not(.compact-page-banner), .services-redesign > .cutting-page > section:not(.compact-page-banner) { padding-top: 36px; padding-bottom: 36px; }
+ .services-redesign .compact-page-banner { padding: 28px 0 32px; }
+ .services-redesign .compact-page-banner .compact-banner-grid { grid-template-columns: 1fr; gap: 28px; }
+ .services-redesign .compact-page-banner .compact-banner-image { height: 250px; border-radius: 18px 18px 42px 18px; }
+ .services-redesign .compact-page-banner .compact-banner-copy h1 { font-size: 29px; }
+ .services-redesign :is(.gap-16,.gap-20) { gap: 28px; }
+ .services-redesign .service-card-brand { padding: 20px; }
+ .service-editorial-heading { grid-template-columns: 1fr; gap: 14px; margin-bottom: 24px; }
+ .service-photo-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+ .service-photo-grid figure:first-child { grid-column: 1 / -1; }
+ .service-photo-grid img { height: 160px; }
+ .service-photo-grid figure:first-child img { height: 230px; }
+ .service-photo-grid figcaption { padding: 12px; gap: 8px; font-size: 12px; }
+ .service-product-grid, .service-product-grid-three { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+ .service-product-grid .catalogue-card h3 { font-size: 14px; }
+ .service-booking-line { align-items: flex-start; flex-direction: column; gap: 14px; padding-top: 20px; margin-top: 24px; }
+ .services-redesign .cutting-jump .container { gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .services-redesign .service-overview-card img { transition: none; } }
+.service-mirror-preview { display: flex; height: 100%; align-items: end; padding: 20px; background: linear-gradient(125deg,#b9c4ce 0%,#f4f7fa 30%,#a2b1bf 50%,#e8edf3 72%,#becbd6); }
+.service-mirror-preview span { padding: 5px 10px; border-radius: 5px; background: #ffffffe6; color: #44566b; font-size: 12px; }

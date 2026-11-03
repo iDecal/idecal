@@ -1,16 +1,20 @@
 ---
+import ServiceProducts from '../../components/ServiceProducts.astro';
+import ServiceGallery from '../../components/ServiceGallery.astro';
+import '../../styles/services.css';
+import ProductImage from '../../components/ProductImage.astro';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 
 const interiorFilms = [
   { title: "Vân Gỗ Cao Cấp", desc: "Tái tạo bề mặt tủ bếp, bàn ghế với đường vân sồi, óc chó chân thực.", brands: "Infeel, Octki", image: "/images/film-noi-that/Corance-CAB742.jpg" },
-  { title: "Vân Đá Cẩm Thạch", desc: "Biến mặt bàn, quầy bar thành đá Marble sang trọng, chịu nhiệt tốt.", brands: "GYMak, Infeel", image: "/images/image-placeholder.svg" },
+  { title: "Vân Đá Cẩm Thạch", desc: "Biến mặt bàn, quầy bar thành đá Marble sang trọng, chịu nhiệt tốt.", brands: "GYMak, Infeel", image: "https://idecal.vn/wp-content/uploads/2025/08/Phim-Dan-Noi-That-Van-Da-Cam-Thach-924-04-e1757256689856.png" },
   { title: "Vân Đơn Sắc (Solid)", desc: "Phong cách Minimalist với các tông màu trung tính nhám mờ hiện đại.", brands: "Octki", image: "/images/film-noi-that/DEN001.jpg" },
   { title: "Vân Bê Tông & Xi Măng", desc: "Hiệu ứng Industrial mạnh mẽ cho vách tường và kệ trang trí.", brands: "Infeel", image: "/images/film-noi-that/dan-film-noi-that-nha-pho-hien-dai-mau-be-tong.webp" },
   { title: "Vân Kim Loại & Xước", desc: "Làm mới thang máy, tủ lạnh với bề mặt xước kim loại đẳng cấp.", brands: "Octki", image: "/images/film-noi-that/CORANCE-CAM001-cuon.jpg" },
-  { title: "Vân Tráng Gương", desc: "Bề mặt bóng gương sâu, phù hợp cho các điểm nhấn decor sang trọng.", brands: "GYMak", image: "/images/image-placeholder.svg" },
+  { title: "Vân Tráng Gương", desc: "Bề mặt bóng gương sâu, phù hợp cho các điểm nhấn decor sang trọng.", brands: "GYMak", image: "" },
   { title: "Vân Vải & Da", desc: "Tạo cảm giác ấm cúng, mềm mại cho tủ quần áo và tab đầu giường.", brands: "Infeel", image: "/images/film-noi-that/Van-vai-CAN034-CUON.jpg" },
-  { title: "Vân Bóng Mờ (Satin)", desc: "Độ bóng vừa phải, chống bám vân tay, dễ dàng vệ sinh lau chùi.", brands: "Octki", image: "/images/image-placeholder.svg" }
+  { title: "Vân Bóng Mờ (Satin)", desc: "Độ bóng vừa phải, chống bám vân tay, dễ dàng vệ sinh lau chùi.", brands: "Octki", image: "/images/film-noi-that/DEN001.jpg" }
 ];
 
 const applications = [
@@ -28,6 +32,7 @@ const faqs = [
 ---
 
 <Layout title="Film Nội Thất - Furniture Wrap | Làm Mới Không Gian Không Cần Thay Đồ">
+<div class="services-redesign">
 
   <PageBanner title={"Film Nội Thất - Giải Pháp \"Refresh\" Không Gian Đẳng Cấp"} eyebrow="Dịch vụ iDecal" image="/images/film-noi-that/Phim-dan-noi-that-cao-cap.jpg" imageAlt="Dán film nội thất tủ bếp">
     <p slot="description">
@@ -35,6 +40,7 @@ const faqs = [
         </p>
     <Fragment slot="actions"><a class="btn-primary-solid" href="#samples">Xem bảng màu thực tế</a><a class="btn-idecal-bold" href="https://zalo.me/0866077040">Báo giá qua Zalo</a></Fragment>
   </PageBanner>
+<ServiceGallery service="film-noi-that" />
 
   <section id="samples" class="py-24 bg-surface">
     <div class="container">
@@ -46,7 +52,7 @@ const faqs = [
         {interiorFilms.map((film) => (
           <div class="bg-white rounded-[2rem] overflow-hidden group shadow-sm hover:shadow-xl transition-all border border-border">
             <div class="h-48 overflow-hidden">
-              <img src={film.image} alt={film.title} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              {film.image ? <ProductImage src={film.image} alt={film.title} /> : <div class="service-mirror-preview" role="img" aria-label="Minh họa hiệu ứng bề mặt gương"><span>Hiệu ứng bề mặt · minh họa</span></div>}
             </div>
             <div class="p-6">
               <p class="text-[9px] font-black text-primary uppercase mb-2">{film.brands}</p>
@@ -84,7 +90,8 @@ const faqs = [
     </div>
   </section>
 
-  <section class="py-24 bg-surface">
+  <ServiceProducts service="film-noi-that" />
+<section class="py-24 bg-surface">
     <div class="container max-w-4xl">
       <div class="text-center mb-16">
         <h2 class="brand-heading mb-4">Câu hỏi thường gặp</h2>
@@ -102,4 +109,5 @@ const faqs = [
   </section>
 
 
+</div>
 </Layout>

@@ -1,27 +1,9 @@
 ---
+import ServiceProducts from '../../components/ServiceProducts.astro';
+import ServiceGallery from '../../components/ServiceGallery.astro';
+import '../../styles/services.css';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
-
-const products = [
-  {
-    name: "Phim Cách Nhiệt 3M Crystalline",
-    origin: "USA",
-    feature: "Cản 97% tia hồng ngoại, không cản sóng điện thoại",
-    image: "/images/image-placeholder.svg"
-  },
-  {
-    name: "Phim Llumar Nano-Ceramic",
-    origin: "USA",
-    feature: "Công nghệ men gốm, độ bền cao, màu sắc sang trọng",
-    image: "/images/image-placeholder.svg"
-  },
-  {
-    name: "Phim Phản Quang Silver",
-    origin: "Hàn Quốc",
-    feature: "Chống chói cực tốt, tạo không gian riêng tư 1 chiều",
-    image: "/images/image-placeholder.svg"
-  }
-];
 
 const faqs = [
   { q: "Dán phim cách nhiệt có làm tối phòng không?", a: "iDecal có nhiều dòng phim với độ xuyên sáng khác nhau. Đối với văn phòng, chúng tôi thường tư vấn các dòng phim có độ xuyên sáng từ 35-50%, vừa đảm bảo cách nhiệt tốt vừa giữ được ánh sáng tự nhiên." },
@@ -31,6 +13,7 @@ const faqs = [
 ---
 
 <Layout title="Phim Cách Nhiệt Nhà Kính | Giải Pháp Chống Nóng Văn Phòng & Nhà Ở">
+<div class="services-redesign">
   
   <PageBanner title="Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp" eyebrow="Dịch vụ iDecal" image="/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp" imageAlt="Thi công phim cách nhiệt">
     <p slot="description">
@@ -38,6 +21,7 @@ const faqs = [
         </p>
     <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ báo giá ngay</a><a class="btn-idecal-bold" href="#products">Xem bảng giá sản phẩm</a></Fragment>
   </PageBanner>
+<ServiceGallery service="phim-cach-nhiet" />
 
   <section class="py-24 bg-white">
     <div class="container">
@@ -66,7 +50,6 @@ const faqs = [
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         
         <div class="relative group">
-          <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
           <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-b-4 border-primary">
             <img 
               src="/images/Banner/So sánh khi dán phim cách nhiệt.avif"
@@ -115,28 +98,7 @@ const faqs = [
     </div>
   </section>
 
-  <section id="products" class="py-24 bg-surface">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h6>Danh mục sản phẩm</h6>
-        <h2 class="brand-heading">Thương hiệu Phim Cách Nhiệt hàng đầu</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        {products.map((item) => (
-          <div class="bg-white rounded-[2rem] overflow-hidden shadow-card group transition-all hover:-translate-y-2">
-            <div class="h-56 overflow-hidden">
-              <img src={item.image} alt={item.name} class="w-full h-full object-cover group-hover:scale-110 duration-500" />
-            </div>
-            <div class="p-8">
-              <span class="text-[10px] font-bold text-primary px-3 py-1 bg-primary/10 rounded-full">Xuất xứ: {item.origin}</span>
-              <h4 class="mt-4 mb-2 text-lg text-secondary">{item.name}</h4>
-              <p class="text-xs italic leading-relaxed">{item.feature}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+<div id="products"><ServiceProducts service="phim-cach-nhiet" /></div>
 
   <section class="py-24 bg-white">
     <div class="container">
@@ -161,4 +123,5 @@ const faqs = [
     </div>
   </section>
 
+</div>
 </Layout>

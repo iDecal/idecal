@@ -1,4 +1,7 @@
 ---
+import ServiceProducts from '../../components/ServiceProducts.astro';
+import ServiceGallery from '../../components/ServiceGallery.astro';
+import '../../styles/services.css';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro'; 
 
@@ -14,6 +17,7 @@ const faqs = [
 ---
 
 <Layout title="Thi Công Decal Quảng Cáo, In Ấn & Thiết Kế Trọn Gói | iDecal">
+<div class="services-redesign">
   
   <PageBanner title="In Ấn & Thi Công Decal Quảng Cáo Khổ Lớn" eyebrow="Dịch vụ iDecal" image="/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png" imageAlt="Thi công decal quảng cáo">
     <p slot="description">
@@ -21,6 +25,7 @@ const faqs = [
 </p>
     <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Nhận báo giá ngay</a><a class="btn-idecal-bold" href="#portfolio">Xem công trình thực tế</a></Fragment>
   </PageBanner>
+<ServiceGallery service="decal-quang-cao" />
 
   <section class="py-24 bg-white">
     <div class="container">
@@ -68,7 +73,8 @@ const faqs = [
   </section>
 
 
-  <section class="py-24 bg-surface/80">
+  <ServiceProducts service="decal-quang-cao" />
+<section class="py-24 bg-surface/80">
     <div class="container">
       <div class="text-center mb-16">
         <h6>Giải đáp thắc mắc</h6>
@@ -102,6 +108,7 @@ const faqs = [
     </div>
   </section>
 
+</div>
 </Layout>
 
 <style>

@@ -1,4 +1,7 @@
 ---
+import ServiceProducts from '../../components/ServiceProducts.astro';
+import ServiceGallery from '../../components/ServiceGallery.astro';
+import '../../styles/services.css';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import content from '../../data/decal-cutting.json';
@@ -13,6 +16,7 @@ const icons: Record<string,string> = {
 const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:content.faqs.map(faq=>({'@type':'Question',name:faq.question,acceptedAnswer:{'@type':'Answer',text:faq.answer}}))};
 ---
 <Layout title="Dịch vụ cắt Decal theo yêu cầu tại TP.HCM | iDecal" description="Cắt chữ, logo, tem nhãn và Decal trang trí theo yêu cầu. Xem chất liệu, bảng giá tham khảo, quy trình gửi file và tư vấn tại iDecal." image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg">
+<div class="services-redesign">
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema).replaceAll('<', '\\u003c')} />
   <div class="cutting-page">
     <PageBanner title={content.title} eyebrow="Thiết kế · Cắt · Giao hàng" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ Decal bằng máy cắt vi tính">
@@ -20,6 +24,7 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
       <Fragment slot="actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Gửi file qua Zalo</a><a href="#bang-gia" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
       <p slot="meta">Hoàn thành từ 1–24 giờ, tùy khối lượng và yêu cầu kỹ thuật.</p>
     </PageBanner>
+<ServiceGallery service="cat-decal" />
     <nav aria-label="Nội dung dịch vụ cắt Decal" class="cutting-jump"><div class="container"><a href="#san-pham-dich-vu">Dịch vụ</a><a href="#chat-lieu">Chất liệu</a><a href="#bang-gia">Bảng giá</a><a href="#quy-trinh">Quy trình</a><a href="#cau-hoi">Câu hỏi thường gặp</a></div></nav>
     <section id="san-pham-dich-vu" class="container cutting-section">
       <div class="cutting-section-heading"><p class="cutting-kicker">Sản phẩm & dịch vụ</p><h2 class="brand-heading">Bạn cần cắt loại Decal nào?</h2><p>Đa dạng các loại Decal đáp ứng nhu cầu biển hiệu, tem nhãn và trang trí.</p></div>
@@ -34,6 +39,7 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
       <div class="cutting-price-table"><table><caption class="sr-only">Bảng giá tham khảo dịch vụ cắt Decal từ tài liệu năm 2025</caption><thead><tr><th scope="col">Hạng mục</th><th scope="col">Giá tham khảo</th><th scope="col">Ghi chú</th></tr></thead><tbody>{content.prices.map(price=><tr><th scope="row">{price.name}</th><td>{price.price}</td><td>{price.note}</td></tr>)}</tbody></table></div>
       <div class="cutting-price-note"><p>Gửi file để xác nhận giá hiện hành và thời gian hoàn thành. Tư vấn miễn phí trước khi thực hiện.</p><a href="https://zalo.me/0866077040">Gửi file nhận tư vấn <svg aria-hidden="true" class="cutting-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a></div>
     </section>
+<ServiceProducts service="cat-decal" />
     <section id="quy-trinh" class="cutting-surface"><div class="container cutting-section">
       <div class="cutting-section-heading"><p class="cutting-kicker">Quy trình đặt dịch vụ</p><h2 class="brand-heading">Từ file thiết kế đến thành phẩm</h2></div>
       <ol class="cutting-steps">{content.steps.map((step,index)=><li><span class="cutting-step-number">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol>
@@ -44,4 +50,5 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
     </section>
     <section id="cau-hoi" class="cutting-surface"><div class="container cutting-section cutting-faq-layout"><div><p class="cutting-kicker">Giải đáp thắc mắc</p><h2 class="brand-heading">Câu hỏi thường gặp</h2><p class="cutting-description">Thông tin về gia công, bề mặt dán và giao nhận sản phẩm.</p></div><div class="cutting-faqs">{content.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
   </div>
+</div>
 </Layout>
