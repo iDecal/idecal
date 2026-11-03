@@ -3,9 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
 import '../../styles/projects.css';
+import { projectTypes } from '../../data/project-types';
 const projects = (await getCollection('projects'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || a.id.localeCompare(b.id));
-const categories = ['Tất cả', ...new Set(projects.map(project => project.data.category))];
+const categories = ['Tất cả', ...projectTypes];
 const cover = projects[0];
 ---
 <Layout title="Công trình thực tế | Thi công decal iDecal" description="Xem hình ảnh thực tế các công trình Decal văn phòng, showroom và quảng cáo do iDecal thực hiện. Tham khảo hạng mục, vật liệu và chất lượng hoàn thiện.">
@@ -16,8 +17,9 @@ const cover = projects[0];
     </div></section>
     <section id="cong-trinh" class="container projects-list" aria-label="Danh sách công trình">
       <div class="projects-list-heading"><div><p class="projects-kicker">Dấu ấn iDecal</p><h2>Góc nhìn từ công trình</h2></div><p>Mỗi không gian, một phương án phù hợp.</p></div>
-      <div class="projects-toolbar">{categories.length > 2 && <div class="projects-filters" role="group" aria-label="Lọc theo hạng mục" hidden>{categories.map(category => <button type="button" class="project-filter" data-category={category} aria-pressed={category === 'Tất cả'}>{category}</button>)}</div>}<p id="project-count" role="status" aria-live="polite" aria-atomic="true">{projects.length} công trình</p></div>
+      <div class="projects-toolbar">{categories.length > 2 && <div class="projects-filters" role="group" aria-label="Lọc theo loại công trình" hidden>{categories.map(category => <button type="button" class="project-filter" data-category={category} aria-pressed={category === 'Tất cả'}>{category}</button>)}</div>}<p id="project-count" role="status" aria-live="polite" aria-atomic="true">{projects.length} công trình</p></div>
       <div id="project-grid" class="projects-grid">{projects.map(project => <ProjectCard project={project} headingLevel="h3" />)}</div>
+      <div id="project-empty" class="projects-empty" hidden><h3>Chưa có công trình được cập nhật cho nhóm này</h3><p>Bạn có thể xem các công trình khác hoặc liên hệ iDecal để trao đổi về không gian của mình.</p><button id="project-reset" type="button" class="btn-idecal-bold">Xem tất cả công trình <span aria-hidden="true">→</span></button></div>
     </section>
     <section class="projects-contact"><div class="container projects-contact-grid"><div><p class="projects-kicker">Ý tưởng cho không gian của bạn</p><h2>Bắt đầu từ một mẫu bạn thích</h2><p>Gửi hình ảnh không gian hoặc công trình tham khảo. iDecal sẽ trao đổi về mẫu, vật liệu và phương án thực hiện phù hợp.</p></div><div class="projects-contact-actions"><a href="/dat-dich-vu?dich-vu=dich-vu-tron-goi" class="btn-primary-solid">Trao đổi về công trình <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></span></a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn qua Zalo</a></div></div></section>
   </div>
@@ -27,15 +29,21 @@ const cover = projects[0];
   const cards = document.querySelectorAll<HTMLElement>('#project-grid .project-card');
   const controls = document.querySelector<HTMLElement>('.projects-filters');
   if (controls) controls.hidden = false;
-  filters.forEach(button => button.addEventListener('click', () => {
-    const category = button.dataset.category;
+  const empty = document.getElementById('project-empty');
+  const count = document.getElementById('project-count');
+  const selectCategory = (category: string) => {
     let visible = 0;
     cards.forEach(card => {
       card.hidden = category !== 'Tất cả' && card.dataset.category !== category;
       if (!card.hidden) visible++;
     });
-    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
-    const count = document.getElementById('project-count');
+    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter.dataset.category === category)));
+    if (empty) empty.hidden = visible > 0;
     if (count) count.textContent = category === 'Tất cả' ? `${visible} công trình` : `${visible} / ${cards.length} công trình`;
-  }));
+  };
+  filters.forEach(button => button.addEventListener('click', () => selectCategory(button.dataset.category ?? 'Tất cả')));
+  document.getElementById('project-reset')?.addEventListener('click', () => {
+    selectCategory('Tất cả');
+    filters[0]?.focus();
+  });
 </script>

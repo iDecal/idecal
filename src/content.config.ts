@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
+import { projectTypes } from './data/project-types';
 
 const fallbackImage = '/images/idecal-logo.png';
 
@@ -24,7 +25,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     client: z.string().default('Khách hàng iDecal'),
-    category: z.enum(['Văn phòng', 'Căn hộ', 'Showroom', 'Sự kiện']),
+    category: z.enum([...projectTypes, 'Căn hộ']).transform(value => value === 'Căn hộ' ? 'Nhà ở dân dụng' : value),
     image: z.string().default(fallbackImage),
     description: z.string().default(''),
     pubDate: z.coerce.date(),

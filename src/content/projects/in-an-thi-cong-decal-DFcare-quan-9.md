@@ -1,7 +1,7 @@
 ---
 title: "Decal dán kính phòng khám FDCARE Quận 9"
 client: "FDCARE Việt Nam"
-category: "Showroom"
+category: "Phòng khám"
 image: "/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png"
 description: "Dán decal mờ kết hợp cắt chữ logo cho hệ thống kính phòng khám FDCARE tại Quận 9."
 location: "Quận 9, TP. Hồ Chí Minh"

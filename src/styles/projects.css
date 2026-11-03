@@ -20,14 +20,14 @@
 .projects-kicker { font-size: 13px; color: #0d6b96; margin: 0 0 10px; }
 .projects-list-heading h2, .projects-contact h2 { color: #173b62; font-size: clamp(24px,2.5vw,32px); line-height: 1.3; margin: 0; }
 .projects-list-heading > p { margin: 0; font-size: 15px; color: #64748b; }
-.projects-toolbar { display: flex; gap: 20px; justify-content: space-between; align-items: center; margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid #e3ebf4; }
+.projects-toolbar { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid #e3ebf4; }
 .projects-filters { display: flex; flex-wrap: wrap; gap: 10px; }
-.projects-filters[hidden], .projects-page .project-card[hidden] { display: none !important; }
+.projects-filters[hidden], .projects-page .project-card[hidden], .projects-empty[hidden] { display: none !important; }
 .projects-filters button { min-height: 40px; padding: 8px 16px; border: 1px solid #dce5f0; border-radius: 8px; color: #52657c; background: #fff; font-size: 14px; transition: background .2s,color .2s; }
 .projects-filters button[aria-pressed='true'] { background: #eaf3ff; border-color: #b8d2f0; color: #174b80; }
 .projects-filters button:hover { border-color: #91b3d7; background: #f2f7fd; }
 #project-count { flex-shrink: 0; margin: 0; color: #64748b; font-size: 13px; }
-.projects-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; align-items: stretch; }
+.projects-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; align-items: stretch; }
 .projects-page .project-card { border-radius: 16px; border-color: #dce5f0; box-shadow: none; transition: box-shadow .2s,border-color .2s; }
 .projects-page .project-card:hover { border-color: #b5cbe3; box-shadow: 0 8px 26px #173b620d; }
 .projects-page .project-card > a > div:first-child { aspect-ratio: 4/3; }
@@ -68,3 +68,7 @@
 @media(prefers-reduced-motion:reduce) { .projects-page .project-card, .projects-filters button { transition: none; } }
 .projects-image-caption svg { width: 24px; height: 24px; }
 .projects-contact-actions .btn-primary-solid svg { width: 18px; height: 18px; }
+
+.projects-empty { padding: 36px 24px; border: 1px dashed #bfd0e6; border-radius: 16px; background: #f6f9fd; text-align: center; }
+.projects-empty h3 { font-size: 19px; margin: 0 0 12px; color: #173b62; }
+.projects-empty p { font-size: 15px; color: #52657c; margin: 0 auto 20px; max-width: 620px; }
