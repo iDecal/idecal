@@ -3,7 +3,8 @@ import '../../styles/catalogue.css';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
-import ProductCatalog from '../../components/ProductCatalog.astro';
+import ProductGroupIcon from '../../components/ProductGroupIcon.astro';
+import '../../styles/product-groups.css';
 import { products } from '../../data/catalogue';
 import { productLandings, landingProducts } from '../../data/site-offerings';
 ---
@@ -16,14 +17,13 @@ import { productLandings, landingProducts } from '../../data/site-offerings';
   <section id="danh-muc" class="container scroll-mt-24 py-14 md:py-20">
     <p class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {productLandings.map((category,index) => <article class="category-card group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
+      {productLandings.map(category => <article class="category-card group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
         <a href={`/danh-muc-san-pham/${category.slug}`} class="flex h-full flex-col">
-          <div class="relative aspect-square shrink-0 overflow-hidden"><ProductImage src={category.image} alt={category.name} /><span class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1 text-xs font-medium text-primary">{String(index+1).padStart(2,'0')}</span></div>
-          <div class="flex flex-1 flex-col p-6"><h3 class="text-xl font-semibold">{category.name}</h3><p class="mb-6 text-sm">{category.description}</p><div class="mt-auto flex items-center justify-between gap-3 text-sm"><span class="text-text-muted">{landingProducts(category).length} mẫu</span><span class="font-medium text-primary">Xem nhóm sản phẩm →</span></div></div>
+          <div class="product-group-cover relative aspect-square shrink-0 overflow-hidden"><ProductImage src={category.image} alt={category.name} /><div class="product-group-title"><ProductGroupIcon slug={category.slug} /><h3>{category.name}</h3></div></div>
+          <div class="flex flex-1 flex-col p-6"><p class="mb-6 text-sm">{category.description}</p><div class="mt-auto flex items-center justify-between gap-3 text-sm"><span class="text-text-muted">{landingProducts(category).length} mẫu</span><span class="font-medium text-primary">Xem nhóm sản phẩm →</span></div></div>
         </a>
       </article>)}
     </div>
   </section>
-  <div class="bg-surface"><ProductCatalog items={products} /></div>
 
 </Layout>

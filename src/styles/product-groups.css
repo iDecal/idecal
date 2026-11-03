@@ -1,0 +1,8 @@
+.product-group-cover::after { content: ''; position: absolute; inset: 40% 0 0; background: linear-gradient(transparent,#061d39c9); pointer-events: none; }
+.product-group-title { position: absolute; z-index: 1; left: 22px; right: 22px; bottom: 22px; display: flex; align-items: center; gap: 14px; }
+.product-group-title h3 { margin: 0; color: #fff; font-size: 21px; line-height: 1.4; font-weight: 500; text-shadow: 0 1px 8px #03124533; }
+.category-card > a:focus-visible { outline-offset: -4px; }
+@media(max-width:767px) {
+ .product-group-title { left: 18px; right: 18px; bottom: 18px; gap: 12px; }
+ .product-group-title h3 { font-size: 19px; }
+}

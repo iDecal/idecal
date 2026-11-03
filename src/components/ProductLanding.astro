@@ -1,5 +1,6 @@
 ---
 import PageBanner from './PageBanner.astro';
+import ProductGroupIcon from './ProductGroupIcon.astro';
 import BannerBenefits from './BannerBenefits.astro';
 import ProductCatalog from './ProductCatalog.astro';
 import { landingProducts, serviceOfferings, type ProductLanding } from '../data/site-offerings';
@@ -9,8 +10,9 @@ const { landing } = Astro.props;
 const items = landingProducts(landing);
 const services = serviceOfferings.filter(service => service.slug === landing.service || service.slug === 'dich-vu-tron-goi');
 ---
-<div class="offering-landing">
+<div class="offering-landing product-group-landing">
   <PageBanner title={landing.headline} eyebrow={landing.name} image={landing.image} imageAlt={landing.name}>
+    <a slot="image-badge" class="product-landing-image-badge" href="#mau-san-pham" aria-label={`Xem mẫu ${landing.name.toLocaleLowerCase('vi-VN')}`}><ProductGroupIcon slug={landing.slug} /><span>{landing.name}</span></a>
     <p slot="description">{landing.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn chọn mẫu</a></Fragment>
     <BannerBenefits slot="meta" benefits={landing.benefits.map(title => ({ title, description: '' }))} />

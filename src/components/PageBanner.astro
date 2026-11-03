@@ -12,7 +12,7 @@ const { title, eyebrow, image, imageAlt } = Astro.props;
   <div class="container">
     <div class="compact-banner-grid">
       <div class="compact-banner-copy"><p class="compact-banner-eyebrow">{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="compact-banner-description"><slot name="description" /></div><div class="compact-banner-actions"><slot name="actions" /></div>{Astro.slots.has('meta') && <div class="compact-banner-meta"><slot name="meta" /></div>}</div>
-      <figure class="compact-banner-image"><ProductImage src={image} alt={imageAlt} eager /></figure>
+      <figure class="compact-banner-image"><ProductImage src={image} alt={imageAlt} eager /><slot name="image-badge" /></figure>
     </div>
   </div>
 </section>

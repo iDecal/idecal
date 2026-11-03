@@ -103,7 +103,7 @@ for (const product of catalogueProducts) {
   assert.equal(schema.name, product.name, `Product schema mismatch: ${product.slug}`);
   assert.ok(legacyRedirects.includes(`/${product.slug} /san-pham/${product.slug}/ 301`), `Missing legacy redirect: ${product.slug}`);
 }
-assert.equal((catalogueIndex.match(/class="catalogue-card\b/g) ?? []).length, catalogueProducts.length, 'Catalogue must include every product');
+assert.equal((catalogueIndex.match(/class="catalogue-card\b/g) ?? []).length, 0, 'Product index must show landing groups without repeating the full catalogue');
 
 let references = 0;
 const failures = [];
