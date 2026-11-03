@@ -2,100 +2,40 @@
 import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { getCollection } from 'astro:content';
-
+import '../../styles/projects.css';
 const projects = (await getCollection('projects'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() || a.id.localeCompare(b.id));
 const categories = ['Tất cả', ...new Set(projects.map(project => project.data.category))];
+const cover = projects[0];
 ---
-
-<Layout title="Công trình thực tế | Thi công decal iDecal" description="Khám phá các công trình decal dán kính, trang trí văn phòng và showroom do iDecal thực hiện. Xem hình ảnh và thông tin từng công trình.">
-  <section class="border-b border-border bg-surface py-16 md:py-24">
-    <div class="container">
-
-      <p class="!mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">Hồ sơ công trình iDecal</p>
-      <h1 class="max-w-3xl">Công trình thực tế</h1>
-      <p class="!mb-0 max-w-2xl text-lg text-text-muted">Từ ý tưởng đến không gian hoàn thiện. Xem hình ảnh, hạng mục và thông tin các công trình iDecal đã thực hiện.</p>
-    </div>
-  </section>
-
-  <section class="container py-12 md:py-16" aria-label="Danh sách công trình">
-    <div class="mb-10 flex flex-col gap-6">
-      <div class="max-w-lg">
-        <label for="project-search" class="mb-2 block text-sm font-semibold text-secondary">Tìm công trình</label>
-        <input id="project-search" type="search" placeholder="Tên công trình, khách hàng, khu vực…" class="w-full rounded-xl border border-brand-line bg-white px-4 py-3 text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20" />
-      </div>
-      <div class="flex flex-wrap gap-3" role="group" aria-label="Lọc theo hạng mục">
-        {categories.map(category => (
-          <button type="button" class={`project-filter rounded-full border px-5 py-2.5 text-sm font-semibold transition-colors ${category === 'Tất cả' ? 'border-primary bg-primary text-white' : 'border-border bg-white text-text-muted hover:border-primary'}`} data-category={category} aria-pressed={category === 'Tất cả'}>
-            {category}
-          </button>
-        ))}
-      </div>
-      <p id="project-count" class="!mb-0 text-sm text-text-muted" role="status" aria-live="polite" aria-atomic="true">Hiển thị {projects.length} công trình</p>
-    </div>
-
-    <div id="project-grid" class="grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
-      {projects.map(project => <ProjectCard project={project} headingLevel="h2" />)}
-    </div>
-    <div id="project-empty" hidden class="rounded-3xl border border-dashed border-brand-line bg-surface p-10 text-center">
-      <h2 class="text-xl">Không tìm thấy công trình phù hợp</h2>
-      <p>Thử từ khóa khác hoặc bỏ bộ lọc để xem tất cả công trình.</p>
-      <button id="project-reset" type="button" class="btn-primary-solid">Xem tất cả công trình</button>
-    </div>
-  </section>
-
-  <section class="container pb-20">
-    <div class="rounded-3xl brand-dark bg-brand-navy px-6 py-14 text-center md:px-12">
-      <h2 class="text-white">Bạn đang lên ý tưởng cho công trình mới?</h2>
-      <p class="mx-auto mb-8 max-w-xl text-brand-inverse">Gửi hình ảnh và nhu cầu của bạn để iDecal tư vấn mẫu decal, phương án thi công và báo giá phù hợp.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="tel:0866077040" class="btn-primary-solid">Gọi 0866.077.040</a>
-        <a href="https://zalo.me/0866077040" class="rounded-brand border border-white/30 px-8 py-4 font-bold text-white hover:bg-white/10">Chat Zalo nhận báo giá</a>
-      </div>
-    </div>
-  </section>
+<Layout title="Công trình thực tế | Thi công decal iDecal" description="Xem hình ảnh thực tế các công trình Decal văn phòng, showroom và quảng cáo do iDecal thực hiện. Tham khảo hạng mục, vật liệu và chất lượng hoàn thiện.">
+  <div class="projects-page">
+    <section class="projects-hero"><div class="container projects-hero-grid">
+      <div class="projects-hero-copy"><p class="projects-eyebrow">Không gian thực · Hình ảnh thực</p><h1 class="brand-heading">Công trình thực tế</h1><p class="projects-lead">Từ bản thiết kế đến từng bề mặt hoàn thiện.</p><p>Khám phá các công trình iDecal đã thực hiện cho văn phòng, showroom và cửa hàng. Xem cách phối mẫu, bố trí nhận diện và hoàn thiện Decal trong từng không gian.</p><a class="btn-primary-solid" href="#cong-trinh">Khám phá công trình <span aria-hidden="true">↓</span></a><div class="projects-hero-notes"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v14H4zM4 16l5-5 4 4 3-3 4 4"/><circle cx="8" cy="9" r="1"/></svg>Hình ảnh tại công trình</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Tham khảo cách hoàn thiện</span></div></div>
+      {cover && <a class="projects-hero-image" href={`/du-an/${cover.id}`} aria-label={`Xem công trình ${cover.data.title}`}><img src={cover.data.image} alt={cover.data.title} width="1000" height="800" fetchpriority="high" /><div class="projects-image-caption"><span>{cover.data.category}</span><strong>{cover.data.client}</strong><span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></span></div></a>}
+    </div></section>
+    <section id="cong-trinh" class="container projects-list" aria-label="Danh sách công trình">
+      <div class="projects-list-heading"><div><p class="projects-kicker">Dấu ấn iDecal</p><h2>Góc nhìn từ công trình</h2></div><p>Mỗi không gian, một phương án phù hợp.</p></div>
+      <div class="projects-toolbar">{categories.length > 2 && <div class="projects-filters" role="group" aria-label="Lọc theo hạng mục" hidden>{categories.map(category => <button type="button" class="project-filter" data-category={category} aria-pressed={category === 'Tất cả'}>{category}</button>)}</div>}<p id="project-count" role="status" aria-live="polite" aria-atomic="true">{projects.length} công trình</p></div>
+      <div id="project-grid" class="projects-grid">{projects.map(project => <ProjectCard project={project} headingLevel="h3" />)}</div>
+    </section>
+    <section class="projects-contact"><div class="container projects-contact-grid"><div><p class="projects-kicker">Ý tưởng cho không gian của bạn</p><h2>Bắt đầu từ một mẫu bạn thích</h2><p>Gửi hình ảnh không gian hoặc công trình tham khảo. iDecal sẽ trao đổi về mẫu, vật liệu và phương án thực hiện phù hợp.</p></div><div class="projects-contact-actions"><a href="/dat-dich-vu?dich-vu=dich-vu-tron-goi" class="btn-primary-solid">Trao đổi về công trình <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></span></a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn qua Zalo</a></div></div></section>
+  </div>
 </Layout>
-
 <script>
-  const search = document.querySelector<HTMLInputElement>('#project-search');
-  const filters = document.querySelectorAll<HTMLButtonElement>('.project-filter');
+  const filters = document.querySelectorAll<HTMLButtonElement>('.projects-page .project-filter');
   const cards = document.querySelectorAll<HTMLElement>('#project-grid .project-card');
-  const count = document.getElementById('project-count');
-  const empty = document.getElementById('project-empty');
-  let category = 'Tất cả';
-
-  const normalize = (value: string) => value.toLocaleLowerCase('vi-VN').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').trim();
-
-  function updateProjects() {
-    const query = normalize(search?.value ?? '');
+  const controls = document.querySelector<HTMLElement>('.projects-filters');
+  if (controls) controls.hidden = false;
+  filters.forEach(button => button.addEventListener('click', () => {
+    const category = button.dataset.category;
     let visible = 0;
     cards.forEach(card => {
-      const matches = (category === 'Tất cả' || card.dataset.category === category) && normalize(card.dataset.search ?? '').includes(query);
-      card.hidden = !matches;
-      if (matches) visible++;
+      card.hidden = category !== 'Tất cả' && card.dataset.category !== category;
+      if (!card.hidden) visible++;
     });
-    filters.forEach(button => {
-      const active = button.dataset.category === category;
-      button.setAttribute('aria-pressed', String(active));
-      button.classList.toggle('bg-primary', active);
-      button.classList.toggle('text-white', active);
-      button.classList.toggle('border-primary', active);
-      button.classList.toggle('bg-white', !active);
-      button.classList.toggle('text-text-muted', !active);
-      button.classList.toggle('border-border', !active);
-    });
-    if (count) count.textContent = `Hiển thị ${visible} / ${cards.length} công trình`;
-    if (empty) empty.hidden = visible > 0;
-  }
-  search?.addEventListener('input', updateProjects);
-  filters.forEach(button => button.addEventListener('click', () => {
-    category = button.dataset.category ?? 'Tất cả';
-    updateProjects();
+    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+    const count = document.getElementById('project-count');
+    if (count) count.textContent = category === 'Tất cả' ? `${visible} công trình` : `${visible} / ${cards.length} công trình`;
   }));
-  document.getElementById('project-reset')?.addEventListener('click', () => {
-    category = 'Tất cả';
-    if (search) search.value = '';
-    updateProjects();
-    search?.focus();
-  });
 </script>
