@@ -67,10 +67,31 @@ const legacyRedirects = await readFile('public/_redirects', 'utf8');
 for (const category of catalogueCategories) {
   const categoryPage = path.join(root, 'danh-muc-san-pham', category.slug, 'index.html');
   assert.ok(await exists(categoryPage), `Missing product category: ${category.slug}`);
-  assert.ok(catalogueIndex.includes(`href="/danh-muc-san-pham/${category.slug}"`), `Catalogue must link to ${category.slug}`);
   const html = await readFile(categoryPage, 'utf8');
   const expected = catalogueProducts.filter(product => product.category === category.slug).length;
-  assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Category count mismatch: ${category.slug}`);
+  if (category.slug !== 'decal-mo-dan-kinh') assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Legacy category count mismatch: ${category.slug}`);
+}
+// New navigation groups may overlap by application while preserving original product URLs.
+const landingSamples = [
+  ['decal-mo-dan-kinh', 'decal-mo-in-logo-thuong-hieu'],
+  ['phim-cach-nhiet-nha-kinh', 'phim-cach-nhiet-rs20'],
+  ['film-dan-noi-that', 'film-dan-noi-that-van-go'],
+  ['decal-dan-kinh-van-phong', 'decal-mo-cat-logo-thuong-hieu'],
+  ['film-bao-ve-noi-that', 'phim-ppf-tph'],
+  ['film-trang-tri-kinh', 'decal-mo-3d-van-song'],
+  ['decal-quang-cao', 'decal-trong-dan-kinh-quang-cao'],
+];
+for (const [slug, sample] of landingSamples) {
+  const html = await readFile(path.join(root, 'danh-muc-san-pham', slug, 'index.html'), 'utf8');
+  assert.ok(catalogueIndex.includes(`href="/danh-muc-san-pham/${slug}"`), `Product index must link to landing ${slug}`);
+  assert.ok(html.includes(`data-product-id="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);
+  assert.ok(html.includes('id="mau-san-pham"'), `Landing ${slug} must contain a product catalogue`);
+  if (slug === 'film-bao-ve-noi-that') assert.ok(!html.includes('data-product-id="phim-bao-ve-kinh-safety-4ml"'), 'Glass safety film must not be classified as interior protection');
+}
+const serviceIndex = await readFile(path.join(root, 'dich-vu/index.html'), 'utf8');
+for (const slug of ['thiet-ke','in-decal','cat-decal','thi-cong-decal','dich-vu-tron-goi']) {
+  assert.ok(await exists(path.join(root, 'dich-vu', slug, 'index.html')), `Missing service offering ${slug}`);
+  assert.ok(serviceIndex.includes(`href="/dich-vu/${slug}"`), `Service index must link to ${slug}`);
 }
 for (const product of catalogueProducts) {
   assert.ok(catalogueCategories.some(category => category.slug === product.category), `Unknown category for ${product.slug}`);

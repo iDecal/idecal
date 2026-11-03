@@ -1,0 +1,22 @@
+---
+import PageBanner from './PageBanner.astro';
+import BannerBenefits from './BannerBenefits.astro';
+import ProductCatalog from './ProductCatalog.astro';
+import { landingProducts, serviceOfferings, type ProductLanding } from '../data/site-offerings';
+import '../styles/offering-landings.css';
+interface Props { landing: ProductLanding; }
+const { landing } = Astro.props;
+const items = landingProducts(landing);
+const services = serviceOfferings.filter(service => service.slug === landing.service || service.slug === 'dich-vu-tron-goi');
+---
+<div class="offering-landing">
+  <PageBanner title={landing.headline} eyebrow={landing.name} image={landing.image} imageAlt={landing.name}>
+    <p slot="description">{landing.description}</p>
+    <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn chọn mẫu</a></Fragment>
+    <BannerBenefits slot="meta" benefits={landing.benefits.map(title => ({ title, description: '' }))} />
+  </PageBanner>
+  <section class="offering-section container"><div class="offering-heading"><p class="offering-kicker">Ứng dụng theo không gian</p><h2>{landing.name} phù hợp ở đâu?</h2></div><div class="offering-cards">{landing.uses.map((use,index) => <article><span class="offering-number" aria-hidden="true">0{index+1}</span><h3>{use.title}</h3><p>{use.text}</p></article>)}</div></section>
+  <div class="offering-surface"><ProductCatalog items={items} heading={`Mẫu ${landing.name.toLocaleLowerCase('vi-VN')}`} /></div>
+  <section class="offering-section container offering-advice"><div><p class="offering-kicker">Chọn mẫu phù hợp</p><h2>Đẹp từ mẫu đến công trình</h2><p>{landing.guidance}</p><a class="offering-link" href="/du-an">Xem công trình thực tế <span aria-hidden="true">→</span></a></div><img src={landing.image} alt={`Tham khảo ứng dụng ${landing.name.toLocaleLowerCase('vi-VN')}`} width="800" height="600" loading="lazy" /></section>
+  <section class="offering-section offering-surface"><div class="container"><div class="offering-heading"><p class="offering-kicker">Dịch vụ đi cùng sản phẩm</p><h2>Chọn thêm phần việc bạn cần</h2><p>Có thể mua vật liệu hoặc trao đổi thêm về thiết kế, in, cắt và thi công. Phạm vi công việc được xác nhận trước khi thực hiện.</p></div><div class="offering-service-links">{services.map(service => <a href={`/dich-vu/${service.slug}`}><span>{service.name}</span><span aria-hidden="true">↗</span></a>)}<a href="/dich-vu"><span>Xem tất cả dịch vụ</span><span aria-hidden="true">→</span></a></div></div></section>
+</div>

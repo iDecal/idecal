@@ -1,5 +1,6 @@
 ---
 import { regions } from '../data/regions';
+import { serviceOfferings } from '../data/site-offerings';
 ---
 <footer class="brand-dark bg-brand-navy bg-brand-pattern border-t border-accent-dark pt-16 pb-8">
   <div class="container">
@@ -16,10 +17,7 @@ import { regions } from '../data/regions';
         <h4 class="text-brand-sky font-bold mb-6 text-[17px]">Dịch vụ tiêu biểu</h4>
         <ul class="space-y-3 text-sm text-brand-inverse">
           <li><a href="/dich-vu" class="hover:text-white transition-colors">Xem tất cả dịch vụ →</a></li>
-          <li><a href="/dich-vu/decal-quang-cao" class="hover:text-white transition-colors">Thi công Decal Quảng Cáo</a></li>
-          <li><a href="/dich-vu/decal-dan-kinh-van-phong" class="hover:text-white transition-colors">Decal dán kính văn phòng</a></li>
-          <li><a href="/dich-vu/phim-cach-nhiet" class="hover:text-white transition-colors">Phim cách nhiệt nhà kính</a></li>
-          <li><a href="/dich-vu/film-noi-that" class="hover:text-white transition-colors">Trang trí nội thất</a></li>
+          {serviceOfferings.map(service => <li><a href={`/dich-vu/${service.slug}`} class="hover:text-white transition-colors">{service.name}</a></li>)}
         </ul>
         <a href="/san-pham" class="mt-5 inline-block text-sm font-medium text-brand-sky hover:text-white">Xem danh mục sản phẩm →</a>
       </div>

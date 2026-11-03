@@ -5,23 +5,16 @@ import ServicePricing from '../../components/ServicePricing.astro';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/catalogue.css';
-const services = [
-  { slug: 'decal-dan-kinh-van-phong', name: 'Decal dán kính văn phòng', description: 'Trang trí vách kính, phân chia không gian và tạo sự riêng tư cho văn phòng, phòng họp, showroom.', image: '/images/Banner/Decal dán kính văn Phòng.webp' },
-  { slug: 'phim-cach-nhiet', name: 'Phim cách nhiệt nhà kính', description: 'Tư vấn chọn phim theo hướng nắng, nhu cầu ánh sáng và loại kính cho nhà ở, cửa hàng, văn phòng.', image: '/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp' },
-  { slug: 'decal-mo-3d-van-song', name: 'Decal mờ 3D vân sóng', description: 'Làm mới cửa và vách kính với hiệu ứng vân sóng, kết hợp trang trí và che tầm nhìn theo nhu cầu.', image: '/images/decal-song-3d/Decal-dan-kinh-song-trong-suot-3D-song-to.webp' },
-  { slug: 'cat-decal', name: 'Cắt chữ & logo Decal', description: 'Cắt chữ, logo và họa tiết theo thiết kế để dán kính, bảng hiệu hoặc nhận diện thương hiệu.', image: '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg' },
-  { slug: 'film-noi-that', name: 'Dán film nội thất', description: 'Thay đổi bề mặt tủ, bàn, cửa và các chi tiết nội thất bằng film vân gỗ, vân đá hoặc màu đơn sắc.', image: '/images/Banner/film-dan-noi-that-van-go.jpg' },
-  { slug: 'decal-quang-cao', name: 'Thiết kế & in Decal quảng cáo', description: 'Thiết kế, in và thi công Decal quảng cáo cho kính cửa hàng, showroom và các bề mặt trưng bày.', image: '/images/Banner/gioi-thieu-idecal.jpeg' },
-];
+import { serviceOfferings as services } from '../../data/site-offerings';
 ---
-<Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá 6 dịch vụ iDecal: Decal văn phòng, phim cách nhiệt, Decal 3D, cắt chữ logo, film nội thất và in Decal quảng cáo.">
+<Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá 5 dịch vụ iDecal: thiết kế, in Decal, cắt Decal, thi công Decal và dịch vụ trọn gói.">
 <div class="services-redesign">
   <PageBanner title="Thiết kế, in ấn & thi công Decal" eyebrow="Dịch vụ iDecal" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ và logo Decal">
-    <p slot="description">Từ trang trí kính đến làm mới nội thất. Chọn dịch vụ phù hợp để xem mẫu, tìm hiểu cách thực hiện và nhận tư vấn cho không gian của bạn.</p>
+    <p slot="description">Chọn riêng thiết kế, in, cắt hoặc thi công Decal; hoặc kết hợp trọn gói từ ý tưởng đến hoàn thiện. Tìm vật liệu và mẫu cụ thể tại menu Sản phẩm.</p>
     <Fragment slot="actions"><a href="/dat-dich-vu" class="btn-primary-solid">Đặt lịch thi công</a><a href="#bang-gia-dich-vu" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
   </PageBanner>
   <section id="cac-dich-vu" class="container scroll-mt-28 py-10 md:py-14">
-    <h2 class="brand-heading mb-7 text-2xl md:text-3xl">Giải pháp cho từng không gian</h2>
+    <h2 class="brand-heading mb-7 text-2xl md:text-3xl">Chọn dịch vụ bạn cần</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service,index) => <article class="service-overview-card flex flex-col overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
         <a href={`/dich-vu/${service.slug}`} class="relative block aspect-[16/10] overflow-hidden" aria-label={`Xem dịch vụ ${service.name}`}><img src={service.image} alt={service.name} width="800" height="500" loading="lazy" class="h-full w-full object-cover" /><span class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1 text-xs font-medium text-primary">0{index+1}</span></a>

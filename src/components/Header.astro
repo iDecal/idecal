@@ -1,7 +1,7 @@
 ---
 import SubmenuIcon from './SubmenuIcon.astro';
 import { regions } from '../data/regions';
-import { productCategories } from '../data/catalogue';
+import { productLandings, serviceOfferings } from '../data/site-offerings';
 
 interface NavLink {
   name: string;
@@ -12,16 +12,11 @@ const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
   { name: 'Sản phẩm', href: '/san-pham', dropdown: [
     { name: 'Tất cả sản phẩm', href: '/san-pham', highlight: true },
-    ...productCategories.map(category => ({ name: category.name, href: `/danh-muc-san-pham/${category.slug}` })),
+    ...productLandings.map(landing => ({ name: landing.name, href: `/danh-muc-san-pham/${landing.slug}` })),
   ] },
   { name: 'Dịch vụ', href: '/dich-vu', dropdown: [
     { name: 'Tất cả dịch vụ', href: '/dich-vu', highlight: true },
-    { name: 'Thiết kế - In ấn - Thi công Decal', href: '/dich-vu/decal-quang-cao' },
-    { name: 'Phim Cách Nhiệt', href: '/dich-vu/phim-cach-nhiet' },
-    { name: 'Decal 3D Vân Sóng', href: '/dich-vu/decal-mo-3d-van-song' },
-    { name: 'Decal Cắt Chữ', href: '/dich-vu/cat-decal' },
-    { name: 'Film Dán Nội Thất', href: '/dich-vu/film-noi-that' },
-    { name: 'Decal Dán Kính Văn Phòng', href: '/dich-vu/decal-dan-kinh-van-phong' },
+    ...serviceOfferings.map(service => ({ name: service.name, href: `/dich-vu/${service.slug}` })),
   ] },
   { name: 'Công trình thực tế', href: '/du-an' },
   { name: 'Blog', href: '/blog' },

@@ -1,21 +1,28 @@
 ---
 import '../../styles/catalogue.css';
+import ProductLanding from '../../components/ProductLanding.astro';
+import { productLandings } from '../../data/site-offerings';
 import BannerBenefits from '../../components/BannerBenefits.astro';
 import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
-import { productCategories, productsInCategory, type ProductCategory } from '../../data/catalogue';
-export function getStaticPaths() { return productCategories.map(category => ({ params: { slug: category.slug }, props: { category } })); }
-interface Props { category: ProductCategory; }
-const { category } = Astro.props;
+import { productCategories, productsInCategory } from '../../data/catalogue';
+export function getStaticPaths() {
+  const slugs = [...new Set([...productCategories.map(category => category.slug), ...productLandings.map(landing => landing.slug)])];
+  return slugs.map(slug => ({ params: { slug } }));
+}
+const landing = productLandings.find(item => item.slug === Astro.params.slug);
+const category = productCategories.find(item => item.slug === Astro.params.slug) ?? productCategories[0];
 const items = productsInCategory(category.slug);
 const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';
 ---
-<Layout title={`${category.name} | Mẫu & giá tham khảo iDecal`} description={category.description}>
+<Layout title={`${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={landing?.description ?? category.description}>
+{landing ? <ProductLanding landing={landing} /> : <>
   <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'}>
     <p slot="description">{category.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
     <BannerBenefits slot="meta" benefits={category.benefits} />
   </PageBanner>
   <ProductCatalog items={items} category={category} />
+</>}
 </Layout>

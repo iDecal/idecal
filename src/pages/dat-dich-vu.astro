@@ -1,20 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { regions } from '../data/regions';
-import { products, productCategories } from '../data/catalogue';
+import { products } from '../data/catalogue';
+import { serviceOfferings as services } from '../data/site-offerings';
 import '../styles/booking.css';
-const services = [
- {slug:'decal-dan-kinh-van-phong',name:'Decal dán kính văn phòng'},
- {slug:'phim-cach-nhiet',name:'Phim cách nhiệt nhà kính'},
- {slug:'decal-mo-3d-van-song',name:'Decal mờ 3D vân sóng'},
- {slug:'cat-decal',name:'Cắt chữ & logo Decal'},
- {slug:'film-noi-that',name:'Dán film nội thất'},
- {slug:'decal-quang-cao',name:'Thiết kế & in Decal quảng cáo'},
-];
-const productOptions = products.map(product=>({slug:product.slug,name:product.name,code:product.code,service:productCategories.find(category=>category.slug===product.category)?.service}));
+const productOptions = products.map(product=>({slug:product.slug,name:product.name,code:product.code,service:'thi-cong-decal'}));
 ---
 <Layout title="Đặt lịch thi công Decal & phim cách nhiệt | iDecal" description="Chuẩn bị yêu cầu thi công Decal: chọn dịch vụ, khu vực, ngày mong muốn và mẫu sản phẩm. Gửi thông tin qua Zalo để iDecal tư vấn, xác nhận lịch.">
-  <section class="booking-hero"><div class="container"><p class="booking-kicker">Cùng iDecal chuẩn bị công trình</p><h1 class="brand-heading">Đặt lịch thi công</h1><p>Chọn dịch vụ và ngày mong muốn. Gửi yêu cầu qua Zalo để iDecal tư vấn phương án, báo giá và xác nhận lịch phù hợp.</p></div></section>
+  <section class="booking-hero"><div class="container"><p class="booking-kicker">Cùng iDecal chuẩn bị công trình</p><h1 class="brand-heading">Đặt dịch vụ iDecal</h1><p>Chọn thiết kế, in, cắt, thi công hoặc trọn gói. Gửi yêu cầu qua Zalo để iDecal tư vấn phương án, báo giá và xác nhận lịch phù hợp.</p></div></section>
   <section class="container booking-layout">
     <div class="booking-form-card">
       <div class="booking-form-heading"><h2>Thông tin công trình</h2><p>Các mục có dấu <span aria-hidden="true">*</span> cần được điền.</p></div>
