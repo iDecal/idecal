@@ -2,7 +2,8 @@
 import ServiceGallery from '../../components/ServiceGallery.astro';
 import '../../styles/services.css';
 import ProductImage from '../../components/ProductImage.astro';
-import PageBanner from '../../components/PageBanner.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import '../../styles/service-landing.css';
 import Layout from '../../layouts/Layout.astro';
 
 const interiorFilms = [
@@ -31,14 +32,14 @@ const faqs = [
 ---
 
 <Layout title="Film Nội Thất - Furniture Wrap | Làm Mới Không Gian Không Cần Thay Đồ">
-<div class="services-redesign">
+<div class="services-redesign service-lp service-lp-legacy">
 
-  <PageBanner title={"Film Nội Thất - Giải Pháp \"Refresh\" Không Gian Đẳng Cấp"} eyebrow="Dịch vụ iDecal" image="/images/film-noi-that/Phim-dan-noi-that-cao-cap.jpg" imageAlt="Dán film nội thất tủ bếp">
+  <ServiceHero title={"Film Nội Thất - Giải Pháp \"Refresh\" Không Gian Đẳng Cấp"} eyebrow="Dịch vụ iDecal" image="/images/film-noi-that/Phim-dan-noi-that-cao-cap.jpg" imageAlt="Dán film nội thất tủ bếp">
     <p slot="description">
           Thay đổi diện mạo <strong>tủ bếp, cửa, thang máy</strong> bằng Film cao cấp Octki, Infeel. Thi công sạch sẽ, không bụi bẩn, không mùi sơn, hoàn thiện ngay trong ngày.
         </p>
     <Fragment slot="actions"><a class="btn-primary-solid" href="#samples">Xem bảng màu thực tế</a><a class="btn-idecal-bold" href="https://zalo.me/0866077040">Báo giá qua Zalo</a></Fragment>
-  </PageBanner>
+  </ServiceHero>
 <ServiceGallery service="film-noi-that" />
 
   <section id="samples" class="py-24 bg-surface">

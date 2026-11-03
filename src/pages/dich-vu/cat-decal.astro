@@ -1,7 +1,6 @@
 ---
-import ServiceGallery from '../../components/ServiceGallery.astro';
-import '../../styles/services.css';
-import PageBanner from '../../components/PageBanner.astro';
+import ServiceLanding from '../../components/ServiceLanding.astro';
+import { serviceOfferings } from '../../data/site-offerings';
 import Layout from '../../layouts/Layout.astro';
 import content from '../../data/decal-cutting.json';
 import '../../styles/catalogue.css';
@@ -13,18 +12,13 @@ const icons: Record<string,string> = {
   pen: 'm15 5 4 4M4 20l4-1L20 7a2.8 2.8 0 0 0-4-4L4 15v5Z',
 };
 const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:content.faqs.map(faq=>({'@type':'Question',name:faq.question,acceptedAnswer:{'@type':'Answer',text:faq.answer}}))};
+
+const service = serviceOfferings.find(item => item.slug === 'cat-decal')!;
 ---
-<Layout title="Dịch vụ cắt Decal theo yêu cầu tại TP.HCM | iDecal" description="Cắt chữ, logo, tem nhãn và Decal trang trí theo yêu cầu. Xem chất liệu, bảng giá tham khảo, quy trình gửi file và tư vấn tại iDecal." image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg">
-<div class="services-redesign">
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema).replaceAll('<', '\\u003c')} />
-  <div class="cutting-page">
-    <PageBanner title={content.title} eyebrow="Thiết kế · Cắt · Giao hàng" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ Decal bằng máy cắt vi tính">
-      <Fragment slot="description"><p>{content.intro}</p><p>{content.description}</p></Fragment>
-      <Fragment slot="actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Gửi file qua Zalo</a><a href="#bang-gia" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
-      <p slot="meta">Hoàn thành từ 1–24 giờ, tùy khối lượng và yêu cầu kỹ thuật.</p>
-    </PageBanner>
-<ServiceGallery service="cat-decal" />
-    <nav aria-label="Nội dung dịch vụ cắt Decal" class="cutting-jump"><div class="container"><a href="#san-pham-dich-vu">Dịch vụ</a><a href="#chat-lieu">Chất liệu</a><a href="#bang-gia">Bảng giá</a><a href="#quy-trinh">Quy trình</a><a href="#cau-hoi">Câu hỏi thường gặp</a></div></nav>
+<Layout title="Dịch vụ cắt Decal theo yêu cầu tại TP.HCM | iDecal" description="Cắt chữ, logo, tem nhãn và Decal trang trí theo yêu cầu. Xem chất liệu, bảng giá tham khảo, quy trình gửi file và tư vấn tại iDecal." image={service.image}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema).replaceAll('<', String.fromCharCode(92) + 'u003c')} />
+  <ServiceLanding service={service}>
+    <Fragment slot="details"><div class="cutting-page"><p class="container lp-cutting-intro">{content.intro} {content.description}</p>
     <section id="san-pham-dich-vu" class="container cutting-section">
       <div class="cutting-section-heading"><p class="cutting-kicker">Sản phẩm & dịch vụ</p><h2 class="brand-heading">Bạn cần cắt loại Decal nào?</h2><p>Đa dạng các loại Decal đáp ứng nhu cầu biển hiệu, tem nhãn và trang trí.</p></div>
       <div class="cutting-service-grid">{content.services.map(service=><article class="cutting-service-card"><div class="cutting-card-heading"><span class="cutting-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d={icons[service.icon]} /></svg></span><h3>{service.title}</h3></div><p>{service.description}</p><a href={service.link}>{service.action}<span aria-hidden="true">→</span></a></article>)}</div>
@@ -39,15 +33,12 @@ const faqSchema = {'@context':'https://schema.org','@type':'FAQPage',mainEntity:
       <div class="cutting-price-note"><p>Gửi file để xác nhận giá hiện hành và thời gian hoàn thành. Tư vấn miễn phí trước khi thực hiện.</p><a href="https://zalo.me/0866077040">Gửi file nhận tư vấn <svg aria-hidden="true" class="cutting-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a></div>
     </section>
 
-    <section id="quy-trinh" class="cutting-surface"><div class="container cutting-section">
-      <div class="cutting-section-heading"><p class="cutting-kicker">Quy trình đặt dịch vụ</p><h2 class="brand-heading">Từ file thiết kế đến thành phẩm</h2></div>
-      <ol class="cutting-steps">{content.steps.map((step,index)=><li><span class="cutting-step-number">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol>
-    </div></section>
     <section class="container cutting-section cutting-why">
       <div><p class="cutting-kicker">Tại sao chọn iDecal?</p><h2 class="brand-heading">Trọn gói từ thiết kế đến thi công</h2><p class="cutting-description">Dịch vụ thiết kế mẫu, in, cắt và thi công dán Decal tại các quận TP.HCM và các tỉnh miền Đông Nam Bộ. iDecal đồng hành cùng khách hàng từ lựa chọn chất liệu đến hoàn thiện.</p><img src="/images/Banner/gioi-thieu-idecal.jpeg" alt="Gia công tem nhãn và Decal theo thiết kế" width="900" height="600" loading="lazy" class="cutting-work-photo" /></div>
       <ul class="cutting-benefits">{content.benefits.map(benefit=><li><span aria-hidden="true">✓</span><div><h3>{benefit.title}</h3><p>{benefit.text}</p></div></li>)}</ul>
     </section>
-    <section id="cau-hoi" class="cutting-surface"><div class="container cutting-section cutting-faq-layout"><div><p class="cutting-kicker">Giải đáp thắc mắc</p><h2 class="brand-heading">Câu hỏi thường gặp</h2><p class="cutting-description">Thông tin về gia công, bề mặt dán và giao nhận sản phẩm.</p></div><div class="cutting-faqs">{content.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
-  </div>
-</div>
+    </div></Fragment>
+    <div slot="faq" class="cutting-page">
+    <section id="cau-hoi" class="cutting-surface"><div class="container cutting-section cutting-faq-layout"><div><p class="cutting-kicker">Giải đáp thắc mắc</p><h2 class="brand-heading">Câu hỏi thường gặp</h2><p class="cutting-description">Thông tin về gia công, bề mặt dán và giao nhận sản phẩm.</p></div><div class="cutting-faqs">{content.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>    </div>
+  </ServiceLanding>
 </Layout>

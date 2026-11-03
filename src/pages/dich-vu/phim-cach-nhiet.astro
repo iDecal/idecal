@@ -1,7 +1,8 @@
 ---
 import ServiceGallery from '../../components/ServiceGallery.astro';
 import '../../styles/services.css';
-import PageBanner from '../../components/PageBanner.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import '../../styles/service-landing.css';
 import Layout from '../../layouts/Layout.astro';
 
 const faqs = [
@@ -12,14 +13,14 @@ const faqs = [
 ---
 
 <Layout title="Phim Cách Nhiệt Nhà Kính | Giải Pháp Chống Nóng Văn Phòng & Nhà Ở">
-<div class="services-redesign">
+<div class="services-redesign service-lp service-lp-legacy">
   
-  <PageBanner title="Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp" eyebrow="Dịch vụ iDecal" image="/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp" imageAlt="Thi công phim cách nhiệt">
+  <ServiceHero title="Phim Cách Nhiệt Nhà Kính Chuyên Nghiệp" eyebrow="Dịch vụ iDecal" image="/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp" imageAlt="Thi công phim cách nhiệt">
     <p slot="description">
           Giải pháp chống nóng toàn diện cho <strong>văn phòng, nhà ở và showroom</strong>. Giảm tới 80% sức nóng mặt trời, bảo vệ sức khỏe và tiết kiệm 30% điện năng máy lạnh.
         </p>
     <Fragment slot="actions"><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ báo giá ngay</a><a class="btn-idecal-bold" href="#ung-dung">Xem ứng dụng thực tế</a></Fragment>
-  </PageBanner>
+  </ServiceHero>
 <ServiceGallery service="phim-cach-nhiet" />
 
   <section id="ung-dung" class="py-24 bg-white">

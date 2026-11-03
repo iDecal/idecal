@@ -1,17 +1,18 @@
 ---
 import '../../styles/services.css';
 import ServicePricing from '../../components/ServicePricing.astro';
-import PageBanner from '../../components/PageBanner.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import '../../styles/service-landing.css';
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/catalogue.css';
 import { serviceOfferings as services } from '../../data/site-offerings';
 ---
 <Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá 5 dịch vụ iDecal: thiết kế, in Decal, cắt Decal, thi công Decal và dịch vụ trọn gói.">
-<div class="services-redesign">
-  <PageBanner title="Thiết kế, in ấn & thi công Decal" eyebrow="Dịch vụ iDecal" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ và logo Decal">
+<div class="services-redesign service-lp service-lp-overview">
+  <ServiceHero title="Thiết kế, in ấn & thi công Decal" eyebrow="Dịch vụ iDecal" image="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" imageAlt="Gia công cắt chữ và logo Decal" detailImage="/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png" detailAlt="Hoàn thiện nhận diện trên cửa kính">
     <p slot="description">Chọn riêng thiết kế, in, cắt hoặc thi công Decal; hoặc kết hợp trọn gói từ ý tưởng đến hoàn thiện. Tìm vật liệu và mẫu cụ thể tại menu Sản phẩm.</p>
     <Fragment slot="actions"><a href="/dat-dich-vu" class="btn-primary-solid">Đặt lịch thi công</a><a href="#bang-gia-dich-vu" class="btn-idecal-bold">Xem bảng giá ↓</a></Fragment>
-  </PageBanner>
+  </ServiceHero>
   <section id="cac-dich-vu" class="container scroll-mt-28 py-10 md:py-14">
     <h2 class="brand-heading mb-7 text-2xl md:text-3xl">Chọn dịch vụ bạn cần</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -22,6 +23,8 @@ import { serviceOfferings as services } from '../../data/site-offerings';
     </div>
   </section>
 
+  <section class="lp-overview-fit lp-section"><div class="container"><div class="lp-section-heading"><div><p class="lp-kicker">Dịch vụ theo đúng điểm bắt đầu</p><h2>Bạn đang cần hỗ trợ ở bước nào?</h2></div><p>Không nhất thiết phải làm lại từ đầu. Chọn phần việc còn thiếu hoặc để iDecal đồng hành trọn gói.</p></div><div class="lp-scope-grid"><article><span class="lp-step-number" aria-hidden="true">01</span><h3>Đã có thiết kế</h3><p>Kiểm tra file, chọn vật liệu rồi chuyển sang in hoặc cắt theo yêu cầu.</p><a class="btn-idecal-bold" href="/dich-vu/in-decal">Tìm hiểu in Decal →</a></article><article><span class="lp-step-number" aria-hidden="true">02</span><h3>Đã chọn vật liệu</h3><p>Trao đổi hiện trạng, diện tích và thời gian để lên phương án thi công.</p><a class="btn-idecal-bold" href="/dich-vu/thi-cong-decal">Tìm hiểu thi công →</a></article><article><span class="lp-step-number" aria-hidden="true">03</span><h3>Cần làm trọn gói</h3><p>Kết hợp tư vấn mẫu, thiết kế, gia công và hoàn thiện tại công trình.</p><a class="btn-idecal-bold" href="/dich-vu/dich-vu-tron-goi">Tìm hiểu trọn gói →</a></article></div></div></section>
   <ServicePricing />
+  <section class="container lp-section lp-overview-contact"><div><p class="lp-kicker">Cùng bắt đầu từ nhu cầu của bạn</p><h2>Chọn dịch vụ phù hợp với công trình</h2><p>Gửi ảnh vị trí dán, kích thước, file thiết kế nếu có và thời gian mong muốn để được tư vấn phương án.</p></div><div class="lp-actions"><a href="/dat-dich-vu" class="btn-primary-solid">Gửi yêu cầu tư vấn <span aria-hidden="true">→</span></a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Trao đổi qua Zalo</a></div></section>
 </div>
 </Layout>
