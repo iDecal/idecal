@@ -1,0 +1,43 @@
+{
+  "title": "Dịch vụ cắt Decal theo yêu cầu",
+  "intro": "Cắt chữ, logo, tem nhãn và Decal trang trí với đa dạng chất liệu: phản quang, giấy, PVC và Decal mờ.",
+  "description": "Xưởng cắt Decal iDecal tại TP.HCM cung cấp giải pháp từ thiết kế, cắt đến giao hàng; hỗ trợ thi công dán tận nơi tại TP.HCM và Bình Dương khi có nhu cầu.",
+  "services": [
+    {"title":"Decal cắt chữ","description":"Cắt chữ theo yêu cầu với nhiều font và kích thước, phù hợp biển hiệu, slogan, tên cửa hàng và trang trí.","icon":"letter","link":"/danh-muc-san-pham/cat-va-in-logo","action":"Xem mẫu chữ & logo"},
+    {"title":"Cắt tem nhãn","description":"In và cắt tem nhãn đa dạng mẫu mã, kích thước cho sản phẩm, bao bì và quảng cáo.","icon":"label","link":"/lien-he-idecal","action":"Trao đổi mẫu tem nhãn"},
+    {"title":"Cắt Decal trang trí","description":"Cắt họa tiết trang trí cửa kính, tường, xe và các bề mặt khác theo thiết kế của bạn.","icon":"pattern","link":"/danh-muc-san-pham/decal-mo-dan-kinh","action":"Xem mẫu trang trí"},
+    {"title":"Cắt logo thương hiệu","description":"Cắt logo doanh nghiệp trên Decal mờ, Decal màu hoặc Decal phản quang, theo file và kích thước yêu cầu.","icon":"pen","link":"/lien-he-idecal","action":"Đặt cắt logo"}
+  ],
+  "materials": [
+    {"title":"Decal phản quang","text":"Phản sáng khi có ánh sáng chiếu vào, phù hợp nhu cầu nhận diện và tạo điểm nhấn."},
+    {"title":"Decal PVC (Vinyl)","text":"Chất liệu đa năng cho cắt chữ, logo và các mẫu trang trí."},
+    {"title":"Decal mờ","text":"Dùng cho trang trí vách kính, cắt hoa văn hoặc logo trên kính."},
+    {"title":"Decal giấy","text":"Lựa chọn cho tem nhãn sản phẩm và bao bì; tư vấn theo bề mặt và nhu cầu sử dụng."}
+  ],
+  "priceIntro":"Báo giá cắt Decal vi tính là cơ sở tham khảo. Giá thực tế phụ thuộc chất liệu, kích thước, độ phức tạp của file và khối lượng công việc.",
+  "prices": [
+    {"name":"Cắt gia công Decal","price":"Từ 50.000đ/m²","note":"Decal khách tự mang đến."},
+    {"name":"Cắt chữ Decal","price":"Từ 120.000đ/m²","note":"Tùy kích thước, font chữ."},
+    {"name":"Cắt logo, quote, slogan","price":"Từ 250.000đ/m²","note":"Có thể kết hợp in và cắt."},
+    {"name":"Cắt Decal mờ trang trí","price":"Từ 80.000đ/m²","note":"Dán kính văn phòng."},
+    {"name":"Cắt hashtag quảng cáo","price":"Theo file","note":"Hỗ trợ thiết kế miễn phí."}
+  ],
+  "steps": [
+    {"title":"Gửi file & kích thước","text":"Gửi file AI, Corel hoặc PDF qua Zalo 0866.077.040, kèm kích thước và nhu cầu sử dụng."},
+    {"title":"Tư vấn & báo giá","text":"Thống nhất chất liệu, kích thước, độ phức tạp của mẫu và khối lượng trước khi thực hiện."},
+    {"title":"Tiến hành cắt","text":"Thực hiện cắt theo file đã thống nhất bằng hệ thống máy cắt vi tính."},
+    {"title":"Giao hàng & thi công","text":"Giao sản phẩm; hỗ trợ dán tận nơi tại TP.HCM và Bình Dương khi khách có nhu cầu."}
+  ],
+  "benefits": [
+    {"title":"Máy cắt Mimaki & Roland","text":"Hệ thống máy cắt Nhật Bản hỗ trợ đường cắt sắc nét, họa tiết nhỏ và nét mảnh."},
+    {"title":"Chất liệu đa dạng","text":"Decal mờ Sandblast, Decal sữa, Decal trong, Decal màu từ các dòng vật liệu Avery, 3M, Shinlung."},
+    {"title":"Hỗ trợ thiết kế & tư vấn","text":"Tư vấn chất liệu miễn phí; hỗ trợ vẽ lại vector logo và dàn trang file cắt."},
+    {"title":"Hỗ trợ đơn hàng gấp","text":"Đơn hàng nhỏ có thể cắt và giao trong 1–2 giờ, tùy file và lịch sản xuất; xác nhận thời gian khi đặt."}
+  ],
+  "faqs": [
+    {"question":"Cắt Decal giá rẻ có đảm bảo chất lượng không?","answer":"iDecal sử dụng máy cắt vi tính để tối ưu tốc độ và hạn chế sai sót. Chất lượng thành phẩm phụ thuộc cả file, chất liệu và yêu cầu gia công; các phần này được thống nhất khi tư vấn."},
+    {"question":"Cắt Decal và bế demi khác nhau như thế nào?","answer":"Bế demi cắt lớp Decal phía trên và giữ lại lớp giấy đế để dễ bóc, dán. Cắt Decal có thể thực hiện theo đường chữ, logo hoặc hình dạng yêu cầu. Cách gia công được chọn theo sản phẩm và nhu cầu sử dụng."},
+    {"question":"Có cắt chữ Decal dán tường không?","answer":"Có. Chữ Decal có thể dùng cho tường, kính, gỗ, đá và các bề mặt phù hợp. Gửi ảnh hiện trạng để iDecal tư vấn vật liệu và cách xử lý bề mặt trước khi dán."},
+    {"question":"iDecal có giao hàng ngoài TP.HCM không?","answer":"Có. iDecal hỗ trợ giao nhận sản phẩm sau khi cắt trên toàn quốc. Phương thức, phí và thời gian giao hàng được thống nhất theo địa chỉ nhận."}
+  ]
+}
