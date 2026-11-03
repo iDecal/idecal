@@ -251,3 +251,16 @@
   .homepage-original .home-service-title h3 { font-size: 18px; }
   .homepage-original .home-service-icon { flex-basis: 38px; width: 38px; height: 38px; border-radius: 10px; }
 }
+
+/* Keep the service name and a relevant icon on the image, as in the original cards. */
+.homepage-original .home-service-cover::after { content: ''; position: absolute; inset: 35% 0 0; background: linear-gradient(180deg,transparent,rgba(3,18,69,.78)); pointer-events: none; }
+.homepage-original .home-service-cover .home-service-title { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 1; margin: 0; gap: 12px; }
+.homepage-original .home-service-cover .home-service-title h3 { color: #fff; font-size: 20px; line-height: 1.4; text-shadow: 0 1px 8px #03124533; }
+.homepage-original .home-service-cover .home-service-icon { flex-basis: 46px; width: 46px; height: 46px; border-radius: 12px; background: #fff; color: #0d6b96; }
+.homepage-original .home-service-icon svg { width: 25px; height: 25px; fill: none; }
+.homepage-original .home-service-icon path { fill: none; }
+@media(max-width:767px) {
+  .homepage-original .home-service-cover .home-service-title { left: 16px; right: 16px; bottom: 16px; gap: 10px; }
+  .homepage-original .home-service-cover .home-service-title h3 { font-size: 18px; }
+  .homepage-original .home-service-cover .home-service-icon { flex-basis: 42px; width: 42px; height: 42px; border-radius: 10px; }
+}
