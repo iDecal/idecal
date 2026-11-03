@@ -1,0 +1,34 @@
+{
+  "services": [
+    {"title":"Thi công Decal mờ & họa tiết kính","description":"Dán Decal mờ trơn, họa tiết hoặc đường kẻ theo kích thước từng ô kính; thống nhất mức che phủ, chiều vân và vị trí nối.","image":"/images/cong-trinh/thi-cong-decal-dan-kinh-quan-9.jpg","alt":"Minh họa thi công Decal trên vách kính","tag":"Vách kính · Phòng họp"},
+    {"title":"Dán phim cách nhiệt nhà kính","description":"Tư vấn mã phim theo loại kính và hướng nắng, chuẩn bị bề mặt rồi thi công theo phương án đã duyệt.","image":"/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp","alt":"Minh họa thao tác thi công phim trên kính","tag":"Nhà ở · Văn phòng"},
+    {"title":"Thi công film dán nội thất","description":"Dán film cho bàn, tủ, cửa và các bề mặt tương thích. Kiểm tra nền, bo cạnh và chi tiết góc trước khi chốt cách thực hiện.","image":"/images/film-noi-that/dan-film-noi-that-mat-ban.jpg","alt":"Minh họa film hoàn thiện bề mặt bàn nội thất","tag":"Bàn · Tủ · Cửa"},
+    {"title":"Dán chữ, logo & nhận diện","description":"Định vị tên thương hiệu, logo và thông tin chỉ dẫn theo bản thiết kế; cân đối với mép kính, khung cửa và tầm nhìn.","image":"/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png","alt":"Ứng dụng Decal nhận diện trên kính phòng khám FDCARE","tag":"Logo · Chỉ dẫn"},
+    {"title":"Thi công Decal quảng cáo","description":"Dán hình ảnh quảng cáo trên kính cửa hàng, showroom và bề mặt phù hợp; trao đổi cách chia khổ và xử lý vị trí nối.","image":"/images/cong-trinh/thi-cong-dan-decal-luoi-mat-tien-toyota-tan-binh.jpg","alt":"Ứng dụng Decal quảng cáo trên mặt kính showroom Toyota","tag":"Mặt tiền · Showroom"},
+    {"title":"Tháo lớp cũ & chuẩn bị bề mặt","description":"Đánh giá Decal cũ, lớp keo và hiện trạng nền để thống nhất phạm vi tháo, vệ sinh hoặc xử lý trước khi dán mới.","image":"/images/cong-trinh/dan-decal-kinh-vinhomes-quan-9.jpg","alt":"Minh họa bề mặt kính tại công trình nhà ở","tag":"Làm mới · Xử lý nền"}
+  ],
+  "options": [
+    {"title":"Chỉ cần đội thi công","description":"Bạn đã có vật liệu. Gửi thông tin để kiểm tra khả năng thi công, hiện trạng nền và phạm vi trách nhiệm trước khi nhận việc.","service":"thi-cong-decal"},
+    {"title":"Vật liệu & thi công","description":"Cùng chọn mẫu, khổ vật liệu và cách dán; xác nhận phần vật tư, xử lý nền và công thi công trong báo giá.","service":"thi-cong-decal"},
+    {"title":"Thiết kế đến hoàn thiện","description":"Kết hợp thiết kế, in hoặc cắt và thi công. Duyệt mẫu, vật liệu cùng tiến độ trước khi triển khai.","service":"dich-vu-tron-goi"}
+  ],
+  "brief": ["Ảnh toàn cảnh, ảnh cận bề mặt và các vị trí khó tiếp cận.","Kích thước, số ô kính hoặc diện tích dự kiến cần thực hiện.","Mẫu vật liệu, file thiết kế nếu có và lớp Decal cũ cần tháo.","Địa chỉ, thời gian mong muốn và quy định làm việc của tòa nhà.","Nhu cầu mua vật liệu, thuê riêng thi công hoặc làm trọn gói."],
+  "steps": [
+    {"title":"Khảo sát hiện trạng","text":"Tiếp nhận ảnh, đo đạc và kiểm tra vật liệu nền cùng điều kiện tiếp cận tại vị trí dán."},
+    {"title":"Chốt phương án & lịch","text":"Xác nhận mẫu, kích thước, các công việc xử lý nền, chi phí và thời gian thực hiện."},
+    {"title":"Chuẩn bị & thi công","text":"Chuẩn bị khu vực làm việc, định vị bố cục và dán theo phương án đã thống nhất."},
+    {"title":"Kiểm tra & bàn giao","text":"Đối chiếu bản duyệt, kiểm tra hoàn thiện và hướng dẫn bảo quản theo vật liệu thực tế."}
+  ],
+  "handover": ["Đối chiếu mẫu, vị trí và kích thước với phương án đã duyệt.","Kiểm tra mép, điểm nối và bố cục chữ hoặc logo nếu có.","Thu dọn vật tư, kiểm tra khu vực vừa thực hiện.","Hướng dẫn vệ sinh, bảo quản và làm rõ phạm vi hỗ trợ sau thi công."],
+  "reasons": [
+    {"title":"Tư vấn theo hiện trạng thật","description":"Làm rõ vật liệu, nền cũ và điều kiện thực hiện trước khi chốt phương án."},
+    {"title":"Chủ động phối hợp lịch","description":"Trao đổi thời gian phù hợp với hoạt động tại nhà ở, văn phòng hoặc cửa hàng."},
+    {"title":"Rõ vật tư và công việc","description":"Tách phần vật liệu, tháo lớp cũ, xử lý nền và thi công để biết báo giá bao gồm những gì."},
+    {"title":"Theo sát đến bàn giao","description":"Kiểm tra theo bản duyệt và hướng dẫn cách sử dụng, bảo quản sau khi hoàn thiện."}
+  ],
+  "faqs": [
+    {"question":"Báo giá thi công có bao gồm vật liệu không?","answer":"Bạn có thể thuê riêng thi công hoặc chọn cả vật liệu. Báo giá sẽ làm rõ vật tư, công thi công và các hạng mục đi kèm để tránh tính trùng hoặc hiểu nhầm phạm vi."},
+    {"question":"Tháo Decal và xử lý keo cũ có tính riêng không?","answer":"Phần này được đánh giá theo hiện trạng, diện tích và độ bám của lớp cũ. Phạm vi và chi phí cần được ghi rõ khi chốt phương án trước khi thực hiện."},
+    {"question":"Sau khi dán, khi nào có thể vệ sinh bề mặt?","answer":"Thời gian và cách vệ sinh tùy loại vật liệu cùng điều kiện thi công. Đội thi công sẽ hướng dẫn theo mẫu đã dùng khi bàn giao; bạn nên hỏi rõ trước khi lau rửa hoặc sử dụng chất tẩy."}
+  ]
+}

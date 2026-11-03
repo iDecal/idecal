@@ -1,0 +1,38 @@
+---
+import content from '../data/installation-service.json';
+---
+<section id="hang-muc-thi-cong" class="installation-categories lp-section"><div class="container"><div class="lp-section-heading"><div><p class="lp-kicker">Từ kính đến bề mặt nội thất</p><h2>Các hạng mục thi công</h2></div><p>Phương án được lựa chọn theo vật liệu, vị trí dán và hiện trạng công trình. Hình ảnh giúp bạn tham khảo cách ứng dụng.</p></div><div class="installation-service-grid">{content.services.map(item=><article><figure><img src={item.image} alt={item.alt} width="800" height="600" loading="lazy" /><figcaption>{item.tag}</figcaption></figure><div><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div></div></section>
+<section id="chon-pham-vi-thi-cong" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">Linh hoạt theo nhu cầu</p><h2>Thuê riêng thi công hoặc làm cùng vật liệu</h2></div><p>Có thể chọn phần việc còn thiếu, hoặc phối hợp các công đoạn để hoàn thiện theo một phương án thống nhất.</p></div><div class="installation-options">{content.options.map((item,index)=><article><span aria-hidden="true">0{index+1}</span><h3>{item.title}</h3><p>{item.description}</p><a href={`/dat-dich-vu?dich-vu=${item.service}`}>Trao đổi phương án <span aria-hidden="true">→</span></a></article>)}</div></section>
+<section id="khao-sat-thi-cong" class="installation-brief lp-section"><div class="container installation-brief-grid"><div><p class="lp-kicker">Chuẩn bị để khảo sát và báo giá</p><h2>Gửi đúng thông tin về công trình</h2><p>Chưa có kích thước đầy đủ? Bạn có thể gửi ảnh và nhu cầu trước để iDecal trao đổi phần cần khảo sát thêm.</p><a href="/dat-dich-vu?dich-vu=thi-cong-decal" class="btn-primary-solid">Gửi yêu cầu thi công <span aria-hidden="true">→</span></a></div><ul>{content.brief.map(item=><li><span aria-hidden="true">✓</span>{item}</li>)}</ul></div></section>
+<section id="ban-giao-thi-cong" class="container lp-section installation-handover"><div><p class="lp-kicker">Chốt phương án, kiểm tra kết quả</p><h2>Bàn giao dựa trên phần việc đã thống nhất</h2><p>Kiểm tra cùng khách hàng để làm rõ kết quả hoàn thiện và cách bảo quản vật liệu sau khi dán.</p><a href="/du-an" class="btn-idecal-bold">Tham khảo công trình thực tế →</a></div><ol>{content.handover.map((item,index)=><li><span aria-hidden="true">0{index+1}</span><p>{item}</p></li>)}</ol></section>
+<section class="installation-reasons lp-section"><div class="container"><div class="lp-section-heading"><div><p class="lp-kicker">Đồng hành tại công trình</p><h2>Vì sao chọn đội thi công iDecal?</h2></div><p>Ưu tiên phương án phù hợp bề mặt, lịch làm việc rõ ràng và phạm vi bàn giao được thống nhất từ đầu.</p></div><div class="installation-reason-grid">{content.reasons.map(item=><article><span aria-hidden="true">✓</span><div><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div></div></section>
+<style>
+.installation-categories { background: #f3f8fd; border-block: 1px solid #e0eaf5; }
+.installation-service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+.installation-service-grid article { overflow: hidden; background: #fff; border: 1px solid #dce6f2; border-radius: 16px; }
+.installation-service-grid figure { margin: 0; aspect-ratio: 4/3; position: relative; background: #eaf1f8; }
+.installation-service-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.installation-service-grid figcaption { position: absolute; left: 12px; bottom: 12px; right: 12px; max-width: calc(100% - 24px); width: fit-content; padding: 6px 10px; border-radius: 6px; background: #fffffff0; color: #52657c; font-size: 12px; }
+.installation-service-grid article > div { padding: 22px; }
+.installation-service-grid h3, .installation-options h3, .installation-reason-grid h3 { margin: 0 0 12px; font-size: 18px; line-height: 1.45; color: #244766; }
+.installation-service-grid p, .installation-options p, .installation-reason-grid p { margin: 0; font-size: 15px; color: #64748b; }
+.installation-options { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.installation-options article { padding: 24px; display: flex; flex-direction: column; border: 1px solid #dce6f2; border-radius: 14px; }
+.installation-options article > span { font-family: 'Lexend Variable',sans-serif !important; font-size: 25px; color: #3182c5; margin-bottom: 20px; }
+.installation-options a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 20px; margin-top: auto; color: #0d6b96; font-size: 14px; }
+.installation-brief, .installation-reasons { background: #f3f8fd; border-block: 1px solid #e0eaf5; }
+.installation-brief-grid, .installation-handover { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.installation-brief p:not(.lp-kicker), .installation-handover > div > p:not(.lp-kicker) { font-size: 16px; color: #64748b; margin-bottom: 24px; }
+.installation-brief ul { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.installation-brief li { display: flex; align-items: start; gap: 12px; padding: 16px; border: 1px solid #e1eaf4; border-radius: 10px; background: #fff; color: #52657c; font-size: 15px; }
+.installation-brief li span { color: #0d6b96; }
+.installation-handover ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; }
+.installation-handover li { display: flex; align-items: start; gap: 16px; padding: 18px; border-left: 2px solid #c7daf0; background: #f8fbff; border-radius: 0 10px 10px 0; }
+.installation-handover li span { font-size: 16px; color: #3182c5; }
+.installation-handover li p { font-size: 15px; color: #52657c; margin: 0; }
+.installation-reason-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 32px; }
+.installation-reason-grid article { display: flex; align-items: start; gap: 14px; }
+.installation-reason-grid article > span { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: #e4efff; color: #0d6b96; }
+@media(max-width:1023px) { .installation-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .installation-options { gap: 16px; } .installation-brief-grid, .installation-handover { gap: 32px; } }
+@media(max-width:767px) { .installation-service-grid, .installation-options, .installation-brief-grid, .installation-handover, .installation-reason-grid { grid-template-columns: 1fr; gap: 20px; } .installation-service-grid article > div, .installation-options article { padding: 20px; } }
+</style>
