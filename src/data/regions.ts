@@ -1,3 +1,5 @@
+import { updatedRegionalContent } from './regional-content';
+
 export interface Region {
   slug: string;
   name: string;
@@ -250,3 +252,13 @@ export const regions: Region[] = [
     projectIds: [],
   },
 ];
+
+// Keep regional index previews in sync with the supplied page content.
+for (const region of regions) {
+  const updated = updatedRegionalContent[region.slug];
+  if (updated) {
+    region.description = updated.description;
+    region.introduction = updated.introduction;
+    region.areas = updated.areas;
+  }
+}

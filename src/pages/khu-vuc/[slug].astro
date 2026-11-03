@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import RegionalLanding from '../../components/RegionalLanding.astro';
+import { updatedRegionalContent } from '../../data/regional-content';
 import Layout from '../../layouts/Layout.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import { regions, regionalServices, type Region } from '../../data/regions';
@@ -11,6 +13,7 @@ export function getStaticPaths() {
 interface Props { region: Region }
 const { region } = Astro.props;
 const projects = (await getCollection('projects')).filter(project => region.projectIds.includes(project.id));
+const updatedContent = updatedRegionalContent[region.slug];
 const otherRegions = regions.filter(other => other.slug !== region.slug);
 const steps = [
   { title: 'Gửi hiện trạng', description: 'Chia sẻ địa chỉ, ảnh toàn cảnh và cận bề mặt, kích thước dự kiến cùng mục đích sử dụng.' },
@@ -20,7 +23,7 @@ const steps = [
 ];
 ---
 
-<Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description}>
+{updatedContent ? <RegionalLanding region={region} content={updatedContent} projects={projects} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description}>
   <section class="relative overflow-hidden border-b border-border bg-surface py-14 md:py-20">
     <div class="container">
       <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap items-center gap-2 text-sm text-text-muted">
@@ -196,4 +199,4 @@ const steps = [
       </div>
     </nav>
   </section>
-</Layout>
+</Layout>}

@@ -1,0 +1,295 @@
+{
+  "vung-tau": {
+    "title": "Dịch vụ Decal dán kính Vũng Tàu",
+    "lead": "Trang trí kính, chống nắng và tạo không gian riêng tư cho căn hộ, văn phòng, nhà xưởng tại Vũng Tàu.",
+    "description": "iDecal cung cấp Decal mờ, phim cách nhiệt, film nội thất và Decal quảng cáo tại Vũng Tàu. Tư vấn vật liệu, mẫu và thi công theo nhu cầu.",
+    "introduction": [
+      "iDecal cung cấp và thi công Decal dán kính cho căn hộ gần biển, văn phòng công ty và nhà xưởng tại khu vực Vũng Tàu. Giải pháp được lựa chọn theo hướng nắng, nhu cầu riêng tư và phong cách của không gian.",
+      "Các hạng mục gồm Decal mờ cát, Decal mờ hoa văn, phim cách nhiệt, film vân gỗ trang trí nội thất và Decal quảng cáo thương hiệu."
+    ],
+    "heroImage": "/images/catalogue/decal-mo-trang-tron-van-phong.jpg",
+    "imageAlt": "Ứng dụng Decal mờ trên vách kính văn phòng",
+    "areas": [
+      "Vũng Tàu",
+      "Bà Rịa",
+      "KCN Mỹ Xuân",
+      "KCN Châu Đức",
+      "Khu vực Cái Mép"
+    ],
+    "areaNote": "Gửi địa chỉ cụ thể để thống nhất lịch khảo sát, phạm vi thi công và chi phí di chuyển trước khi thực hiện.",
+    "services": [
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Decal mờ & hoa văn",
+        "text": "Làm mờ cửa, vách kính, tạo sự riêng tư và trang trí cho nhà ở, căn hộ hoặc văn phòng."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim cách nhiệt chống nắng",
+        "text": "Chọn phim theo mặt kính đón nắng, độ sáng mong muốn và điều kiện không gian gần biển."
+      },
+      {
+        "slug": "film-noi-that",
+        "title": "Film trang trí nội thất",
+        "text": "Làm mới cửa, tủ, quầy và các bề mặt phù hợp bằng film vân gỗ hoặc mẫu trang trí."
+      },
+      {
+        "slug": "decal-quang-cao",
+        "title": "Decal quảng cáo thương hiệu",
+        "text": "Thiết kế, in và thi công nhận diện trên kính cho cửa hàng, đại lý và không gian kinh doanh."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Tư vấn theo không gian",
+        "text": "Chọn vật liệu và mẫu theo vị trí, khí hậu, phong cách và nhu cầu của khách hàng."
+      },
+      {
+        "title": "Thi công chuyên nghiệp",
+        "text": "Trao đổi hiện trạng, chuẩn bị bề mặt và thống nhất cách thực hiện trước khi dán."
+      },
+      {
+        "title": "Mẫu mã đa dạng",
+        "text": "Decal mờ trơn, hoa văn và phim cách nhiệt với nhiều lựa chọn vật liệu, sắc độ và mức giá."
+      }
+    ],
+    "prices": [],
+    "priceNote": "Giá phụ thuộc mẫu, diện tích kính, xử lý bề mặt và điều kiện triển khai tại Vũng Tàu.",
+    "references": [
+      "Thi công tranh PP dán tường tại khu vực phường Thắng Tam, Vũng Tàu."
+    ],
+    "faqs": []
+  },
+  "binh-duong": {
+    "title": "Decal dán kính Bình Dương",
+    "lead": "In, cắt và thi công Decal cho văn phòng, nhà xưởng, cửa hàng tại Thuận An, Dĩ An, Thủ Dầu Một và các khu vực lân cận.",
+    "description": "Dịch vụ Decal dán kính Bình Dương: in kỹ thuật số, Decal mờ, phim cách nhiệt, cắt chữ và logo. Thi công tại Thuận An, Dĩ An, Thủ Dầu Một và lân cận.",
+    "introduction": [
+      "iDecal cung cấp vật liệu và thi công Decal mờ cho văn phòng công ty, nhà xưởng, shop bán hàng và nhà ở tại Bình Dương. Decal mờ giúp tăng sự riêng tư cho vách kính nhưng vẫn giữ ánh sáng.",
+      "Khách hàng có thể đặt in, mua vật liệu để tự dán hoặc sử dụng dịch vụ trọn gói từ thiết kế mẫu, đo đạc, sản xuất đến thi công tại công trình."
+    ],
+    "heroImage": "/images/cong-trinh/Thi công Decal lưới dán kính showroom GEELY tại Bình Dương.jpg",
+    "imageAlt": "Thi công Decal trên mặt kính showroom tại Bình Dương",
+    "areas": [
+      "Thuận An",
+      "Dĩ An",
+      "Thủ Dầu Một",
+      "Tân Uyên",
+      "Bàu Bàng",
+      "Dầu Tiếng"
+    ],
+    "areaNote": "Trao đổi địa chỉ và thời gian tiếp cận mặt bằng để sắp xếp thi công phù hợp với hoạt động của văn phòng, nhà xưởng hoặc cửa hàng.",
+    "services": [
+      {
+        "slug": "decal-quang-cao",
+        "title": "In Decal kỹ thuật số",
+        "text": "In Decal mờ, trong, lưới và PP theo yêu cầu cho trang trí nội thất, bao bì và quảng cáo."
+      },
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Decal mờ dán kính",
+        "text": "Cung cấp Decal mờ trơn, hoa văn; thi công vách kính, phòng họp, nhà ở và căn hộ."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim cách nhiệt & chống chói",
+        "text": "Tư vấn phim màu trà, xanh, khói hoặc phản gương theo hướng nắng và nhu cầu sử dụng."
+      },
+      {
+        "slug": "cat-decal",
+        "title": "Cắt chữ & logo theo mẫu",
+        "text": "Cắt logo công ty, tên phòng, chữ bảng hiệu và họa tiết trang trí theo kích thước kính thực tế."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Vật liệu & mẫu đa dạng",
+        "text": "Lựa chọn theo nhu cầu riêng tư, trang trí, nhận diện thương hiệu hoặc kiểm soát nắng."
+      },
+      {
+        "title": "Hỗ trợ thiết kế",
+        "text": "Tư vấn và thiết kế theo ý tưởng; chi phí được xác nhận theo yêu cầu của từng mẫu."
+      },
+      {
+        "title": "Thiết bị chuyên dụng",
+        "text": "Máy in Decal và dụng cụ thi công phục vụ các hạng mục in, cắt và dán hoàn thiện."
+      }
+    ],
+    "prices": [],
+    "priceNote": "Báo giá được lập theo vật liệu, mẫu duyệt, kích thước và hiện trạng công trình tại Bình Dương.",
+    "references": [
+      "Decal mờ cắt logo cho văn phòng công ty RISE Bình Dương.",
+      "Decal quảng cáo xe tải tại Thủ Dầu Một.",
+      "Thi công Decal kính văn phòng và nhận diện showroom tại Bình Dương."
+    ],
+    "faqs": [
+      {
+        "question": "Thời gian in Decal và giao hàng trong bao lâu?",
+        "answer": "Theo nội dung dịch vụ, thời gian thường từ 4 giờ đến 2 ngày, tùy số lượng và loại Decal. Lịch cụ thể được xác nhận khi tiếp nhận đơn hàng."
+      },
+      {
+        "question": "iDecal có hỗ trợ thiết kế theo ý tưởng không?",
+        "answer": "Có. iDecal hỗ trợ thiết kế theo yêu cầu, có thể miễn phí hoặc tính phí tùy độ phức tạp; nội dung và chi phí được thống nhất trước khi thực hiện."
+      }
+    ]
+  },
+  "dong-nai": {
+    "title": "Dịch vụ Decal dán kính Đồng Nai",
+    "lead": "Decal mờ, logo và phim cách nhiệt cho văn phòng, nhà máy và khu công nghiệp tại Biên Hòa, Nhơn Trạch, Long Khánh và lân cận.",
+    "description": "Dịch vụ Decal dán kính Đồng Nai cho văn phòng, nhà máy và khu công nghiệp. Xem hạng mục, địa bàn và bảng giá tham khảo 2026 tại iDecal.",
+    "introduction": [
+      "iDecal cung cấp giải pháp Decal trang trí kính, tạo sự riêng tư và phim cách nhiệt cho văn phòng, showroom, nhà máy tại Đồng Nai.",
+      "Với khu công nghiệp và nhà xưởng, có thể kết hợp nhận diện công ty, biển báo nội bộ, Decal an toàn lao động và phim chống chói theo từng vị trí sử dụng."
+    ],
+    "heroImage": "/images/Banner/iDecal-don-vi-dan-phim-cach-nhiet-nha-kinh-tphcm.jpeg",
+    "imageAlt": "Thợ thi công dán phim trên vách kính",
+    "areas": [
+      "Biên Hòa",
+      "Nhơn Trạch",
+      "Long Khánh",
+      "Cẩm Mỹ"
+    ],
+    "areaNote": "Với nhà máy và khu công nghiệp, cần xác nhận lịch ra vào, quy định an toàn, điều kiện tiếp cận kính và khung giờ thi công.",
+    "services": [
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Decal kính văn phòng",
+        "text": "Decal mờ, hoa văn, cắt logo và tên công ty cho vách kính văn phòng hoặc showroom."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim cách nhiệt nhà kính",
+        "text": "Tư vấn giải pháp chống nắng, giảm chói cho kính nhà xưởng và các khu vực đón nắng."
+      },
+      {
+        "slug": "cat-decal",
+        "title": "Biển báo & nhận diện nội bộ",
+        "text": "Cắt chữ, logo, thông tin chỉ dẫn và Decal an toàn lao động theo nội dung yêu cầu."
+      },
+      {
+        "slug": "decal-quang-cao",
+        "title": "In Decal quảng cáo",
+        "text": "In Decal lưới, Decal sữa hoặc Decal trong cho nhận diện doanh nghiệp và các bề mặt trưng bày."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Giải pháp cho doanh nghiệp",
+        "text": "Phối hợp trang trí, riêng tư và nhận diện theo hoạt động của văn phòng hoặc nhà máy."
+      },
+      {
+        "title": "Thi công theo kế hoạch",
+        "text": "Thống nhất mẫu, khối lượng và thời gian để phù hợp điều kiện vận hành tại công trình."
+      },
+      {
+        "title": "Bảo hành theo hạng mục",
+        "text": "Tài liệu nêu bảo hành 2–5 năm; chính sách cụ thể cần xác nhận theo vật liệu và hạng mục được chọn."
+      }
+    ],
+    "prices": [
+      {
+        "item": "Decal mờ trơn",
+        "price": "135.000 – 150.000đ/m²",
+        "note": ""
+      },
+      {
+        "item": "Decal mờ cắt logo / tên công ty",
+        "price": "200.000 – 250.000đ/tấm",
+        "note": ""
+      },
+      {
+        "item": "Decal chống nắng thường hoặc phản gương",
+        "price": "180.000 – 240.000đ/m²",
+        "note": ""
+      },
+      {
+        "item": "Phim cách nhiệt dán kính",
+        "price": "Chưa cập nhật",
+        "note": ""
+      },
+      {
+        "item": "Decal lưới in kỹ thuật số",
+        "price": "240.000 – 320.000",
+        "note": "Tài liệu chưa ghi đơn vị tính."
+      },
+      {
+        "item": "Decal sữa in kỹ thuật số",
+        "price": "Chưa cập nhật",
+        "note": ""
+      },
+      {
+        "item": "Decal trong",
+        "price": "Chưa cập nhật",
+        "note": ""
+      }
+    ],
+    "priceNote": "Giá tham khảo theo file Đồng Nai 2026. Những mục chưa có giá hoặc đơn vị tính được giữ để xác nhận, không mặc định đã bao gồm vật tư, nhân công hay thuế.",
+    "references": [
+      "Thi công logo mica dán Decal in UV tại Đồng Nai.",
+      "Dán phim cách nhiệt nhà máy Decathlon tại KCN Amata, Biên Hòa.",
+      "Decal kính mờ văn phòng công ty Decathlon tại Biên Hòa."
+    ],
+    "faqs": []
+  },
+  "nha-trang": {
+    "title": "Dịch vụ Decal dán kính Nha Trang",
+    "lead": "Cung cấp vật liệu, thiết kế mẫu và thi công Decal mờ, phim cách nhiệt cho văn phòng, nhà ở và công trình tại Nha Trang, Khánh Hòa.",
+    "description": "iDecal cung cấp Decal mờ, phim cách nhiệt, in Decal và film nội thất tại Nha Trang, Khánh Hòa. Trao đổi giao hàng và thi công theo nhu cầu.",
+    "introduction": [
+      "iDecal tiếp nhận nhu cầu mua giấy Decal dán kính, giao hàng và thi công theo yêu cầu tại Nha Trang. Khách hàng có thể lựa chọn vật liệu hoặc trao đổi dịch vụ hoàn thiện cho công trình.",
+      "Không gian gần biển và các mặt kính đón nắng cần cân đối giữa độ sáng, nhu cầu giảm chói và sự riêng tư. iDecal cung cấp Decal mờ hoa văn, phim cách nhiệt và thiết kế mẫu theo yêu cầu."
+    ],
+    "heroImage": "/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp",
+    "imageAlt": "Thi công phim cách nhiệt cho cửa kính",
+    "areas": [
+      "Nha Trang",
+      "Cam Ranh",
+      "Ninh Hòa",
+      "Các khu vực khác tại Khánh Hòa"
+    ],
+    "areaNote": "Gửi địa chỉ và khối lượng để thống nhất phương án giao vật liệu hoặc lịch thi công. Chi phí vận chuyển, di chuyển và phạm vi thực hiện được xác nhận trước.",
+    "services": [
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Decal mờ cho văn phòng",
+        "text": "Mẫu mờ trơn, hoa văn và cắt sọc cho vách kính công ty, cửa kính và các khu vực cần riêng tư."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim chống nắng & chống chói",
+        "text": "Tư vấn phim theo vị trí kính, sắc độ và nhu cầu kiểm soát ánh sáng trong không gian."
+      },
+      {
+        "slug": "decal-quang-cao",
+        "title": "In Decal & thiết kế mẫu",
+        "text": "In Decal theo yêu cầu cho trang trí kính, nhận diện cửa hàng và các công trình quảng cáo."
+      },
+      {
+        "slug": "film-noi-that",
+        "title": "Film trang trí nội thất",
+        "text": "Lựa chọn film dán nội thất hoặc trao đổi hạng mục trang trí theo hiện trạng công trình."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Vật liệu rõ nguồn gốc",
+        "text": "Tư vấn loại Decal và mẫu phim phù hợp với mục đích sử dụng trước khi đặt hàng."
+      },
+      {
+        "title": "Thiết kế theo yêu cầu",
+        "text": "Trao đổi mẫu, kích thước và cách chia kính để phối hợp trang trí với nhu cầu riêng tư."
+      },
+      {
+        "title": "Linh hoạt giao hàng & thi công",
+        "text": "Có thể đặt vật liệu hoặc thống nhất dịch vụ thi công tại Nha Trang và các khu vực Khánh Hòa."
+      }
+    ],
+    "prices": [],
+    "priceNote": "Tham khảo giá theo từng nhóm dịch vụ; khối lượng, vận chuyển và lịch triển khai tại Khánh Hòa cần được xác nhận riêng.",
+    "references": [
+      "Thi công phim cách nhiệt chung cư tại Cam Ranh, Khánh Hòa.",
+      "Decal kính mờ cắt sọc cho văn phòng công ty tại Nha Trang."
+    ],
+    "faqs": []
+  }
+}

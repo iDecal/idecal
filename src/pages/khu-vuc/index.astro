@@ -1,4 +1,5 @@
 ---
+import { updatedRegionalContent } from '../../data/regional-content';
 import Layout from '../../layouts/Layout.astro';
 import { regions, regionalServices } from '../../data/regions';
 ---
@@ -29,7 +30,7 @@ import { regions, regionalServices } from '../../data/regions';
             <span class="mb-6 text-sm font-medium text-primary" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             <h3 class="!mb-3 text-xl font-semibold">{region.name}</h3>
             <p class="text-xs font-medium text-primary">{region.theme}</p>
-            <p class="mb-6 text-sm leading-relaxed">{region.needs[0].description}</p>
+            <p class="mb-6 text-sm leading-relaxed">{updatedRegionalContent[region.slug]?.lead ?? region.needs[0].description}</p>
             <span class="mt-auto text-sm font-semibold text-primary">Xem khu vực <span aria-hidden="true">→</span></span>
           </a>
         </article>
