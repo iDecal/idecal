@@ -264,3 +264,30 @@
   .homepage-original .home-service-cover .home-service-title h3 { font-size: 18px; }
   .homepage-original .home-service-cover .home-service-icon { flex-basis: 42px; width: 42px; height: 42px; border-radius: 10px; }
 }
+
+/* Compact process cards: one header row and less space between content groups. */
+.homepage-original #gspb_row-id-gsbp-c9028b0.home-process { padding: 36px 24px; }
+.homepage-original .process-heading { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 10px 18px; max-width: none; margin-bottom: 22px; }
+.homepage-original .process-heading .home-eyebrow { margin: 0; padding: 6px 12px; font-size: 12px; }
+.homepage-original .process-heading #home-process-title { margin: 0; font-size: 27px; line-height: 1.4; }
+.homepage-original .process-heading p { grid-column: 1 / -1; font-size: 14px; line-height: 1.7; }
+.homepage-original .process-grid { gap: 18px; }
+.homepage-original .process-card { padding: 20px; border-radius: 14px; }
+.homepage-original .process-card-top { display: grid; grid-template-columns: 36px minmax(0,1fr) auto; align-items: center; gap: 10px; min-height: 44px; margin-bottom: 12px; }
+.homepage-original .process-icon { grid-column: 1; grid-row: 1; width: 36px; height: 36px; border-radius: 10px; }
+.homepage-original .process-icon svg { width: 21px; height: 21px; }
+.homepage-original .process-card-top h3 { grid-column: 2; grid-row: 1; margin: 0; font-size: 16px; line-height: 1.45; }
+.homepage-original .process-number { grid-column: 3; grid-row: 1; font-size: 11px; color: #8595aa; }
+.homepage-original .process-card p { margin-bottom: 16px; font-size: 13px; line-height: 1.7; }
+.homepage-original .process-card a { padding-top: 12px; min-height: 36px; font-size: 13px; }
+.homepage-original .process-card a svg { width: 17px; height: 17px; }
+@media(max-width:767px) {
+  .homepage-original #gspb_row-id-gsbp-c9028b0.home-process { padding: 28px 20px; }
+  .homepage-original .process-heading { display: block; margin-bottom: 18px; }
+  .homepage-original .process-heading .home-eyebrow { margin-bottom: 10px; padding: 5px 10px; font-size: 11px; }
+  .homepage-original .process-heading #home-process-title { margin-bottom: 8px; font-size: 23px; }
+  .homepage-original .process-heading p { font-size: 13px; }
+  .homepage-original .process-grid { gap: 12px; }
+  .homepage-original .process-card { padding: 16px; }
+  .homepage-original .process-card-top { margin-bottom: 10px; min-height: 36px; }
+}
