@@ -95,3 +95,11 @@
 .page-content, .page-content *, .homepage-original, .homepage-original * {
   font-family: 'Inter Variable', sans-serif !important;
 }
+
+/* Headings retain Lexend, including links and highlights nested inside them. */
+.page-content :is(h1, h2, h3, h4, h5, h6),
+.page-content :is(h1, h2, h3, h4, h5, h6) *,
+.homepage-original :is(h1, h2, h3, h4, h5, h6),
+.homepage-original :is(h1, h2, h3, h4, h5, h6) * {
+  font-family: 'Lexend Variable', sans-serif !important;
+}

@@ -235,3 +235,19 @@
 }
 .homepage-original .home-services-heading #gspb_heading-id-gsbp-1942437,
 .homepage-original .home-services-heading #gspb_text-id-gsbp-4eed2ba { text-align: left; }
+
+/* Center the section introduction and restore the original service icons. */
+.homepage-original .home-services-heading { text-align: center; margin-bottom: 32px; }
+.homepage-original .home-services-heading #gspb_heading-id-gsbp-1942437 { text-align: center; margin: 0 auto 16px; max-width: 1000px; }
+.homepage-original .home-services-heading #gspb_text-id-gsbp-4eed2ba { text-align: center; max-width: 760px; margin: 0 auto; font-size: 16px; line-height: 1.75; }
+.homepage-original .home-service-title { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.homepage-original .home-service-title h3 { margin: 0; flex: 1; min-width: 0; line-height: 1.5; }
+.homepage-original .home-service-icon { display: inline-flex; flex: 0 0 42px; width: 42px; height: 42px; align-items: center; justify-content: center; border-radius: 11px; background: #edf4ff; color: #0d6b96; }
+.homepage-original .home-service-icon svg { display: block; width: 22px; height: 22px; fill: currentColor; }
+.homepage-original .home-service-icon path { fill: currentColor; }
+@media(max-width:767px) {
+  .homepage-original .home-services-heading #gspb_text-id-gsbp-4eed2ba { font-size: 15px; }
+  .homepage-original .home-service-title { gap: 10px; margin-bottom: 14px; }
+  .homepage-original .home-service-title h3 { font-size: 18px; }
+  .homepage-original .home-service-icon { flex-basis: 38px; width: 38px; height: 38px; border-radius: 10px; }
+}
