@@ -1,13 +1,77 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { regions, regionalServices } from '../../data/regions';
 ---
-<Layout title="Khu vực phục vụ | iDecal">
-  <section class="container py-24">
-    <h1>Khu vực phục vụ</h1>
-    <p>Dịch vụ tư vấn và thi công decal, phim cách nhiệt tận nơi.</p>
-    <ul class="space-y-6 mt-8">
-      <li><a href="/khu-vuc/tp-hcm" class="btn-idecal-bold">TP. Hồ Chí Minh</a></li>
-      <li><a href="/khu-vuc/binh-duong" class="btn-idecal-bold">Bình Dương</a></li>
-    </ul>
+
+<Layout title="Khu vực tư vấn & thi công decal | iDecal" description="Khám phá giải pháp decal và phim cách nhiệt tại TP.HCM, Vũng Tàu, Đồng Nai, Nha Trang, Quy Nhơn, Bình Dương, Đà Nẵng và Hà Nội. Trao đổi công trình cùng iDecal.">
+  <section class="border-b border-slate-100 bg-slate-50 py-14 md:py-20">
+    <div class="container">
+      <nav aria-label="Đường dẫn" class="mb-8 flex gap-2 text-sm text-slate-500"><a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Khu vực</span></nav>
+      <p class="!mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-primary">Giải pháp cho từng không gian</p>
+      <h1 class="max-w-3xl text-3xl leading-tight md:text-4xl">Dịch vụ decal theo khu vực</h1>
+      <p class="mb-8 max-w-3xl text-lg text-slate-600">Từ văn phòng, showroom đến nhà ở và không gian lưu trú, mỗi công trình có nhu cầu và điều kiện khác nhau. Chọn khu vực để tham khảo giải pháp và chuẩn bị thông tin trước khi trao đổi cùng iDecal.</p>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="#danh-sach-khu-vuc" class="btn-primary-solid">Chọn khu vực của bạn</a>
+        <a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn qua Zalo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="danh-sach-khu-vuc" class="container scroll-mt-24 py-14 md:py-20">
+    <div class="mb-10 max-w-3xl">
+      <h2>Tìm giải pháp tại khu vực của bạn</h2>
+      <p>Thông tin dịch vụ, lưu ý triển khai và câu hỏi thường gặp cho 8 địa phương. Gửi địa chỉ cụ thể để trao đổi lịch khảo sát, phương án thi công và các chi phí liên quan.</p>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {regions.map((region, index) => (
+        <article class="region-card rounded-2xl border border-slate-200 bg-white transition-colors hover:border-primary">
+          <a href={`/khu-vuc/${region.slug}`} class="flex h-full flex-col p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+            <span class="mb-6 text-sm font-medium text-primary" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+            <h3 class="!mb-3 text-xl font-semibold">{region.name}</h3>
+            <p class="text-xs font-medium text-primary">{region.theme}</p>
+            <p class="mb-6 text-sm leading-relaxed">{region.needs[0].description}</p>
+            <span class="mt-auto text-sm font-semibold text-primary">Xem khu vực <span aria-hidden="true">→</span></span>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-14 md:py-20">
+    <div class="container">
+      <h2>Một nhu cầu, nhiều cách ứng dụng</h2>
+      <p class="mb-8 max-w-3xl">Tìm hạng mục phù hợp theo mục đích sử dụng, sau đó trao đổi điều kiện thực tế tại địa phương của bạn.</p>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {Object.entries(regionalServices).map(([slug, service]) => (
+          <article class="rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 class="text-lg font-semibold"><a href={`/dich-vu/${slug}`} class="hover:text-primary">{service.name}</a></h3>
+            <p class="!mb-0 text-sm">{service.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container grid gap-10 py-14 md:py-20 lg:grid-cols-2">
+    <div>
+      <h2>Chuẩn bị đúng thông tin để tư vấn sát nhu cầu</h2>
+      <p>Vị trí và diện tích chỉ là điểm bắt đầu. Ảnh hiện trạng, hướng nắng, tình trạng nền và cách không gian đang hoạt động đều có thể ảnh hưởng lựa chọn vật liệu và kế hoạch thi công.</p>
+      <ul class="mb-8 list-disc space-y-3 pl-5 text-sm text-slate-600">
+        <li>Địa chỉ và hình ảnh toàn cảnh, cận cảnh bề mặt.</li>
+        <li>Kích thước dự kiến, số ô kính hoặc số khu vực cần làm.</li>
+        <li>Nhu cầu che tầm nhìn, kiểm soát nắng, trang trí hay nhận diện.</li>
+        <li>Mẫu mong muốn và thời gian dự kiến thực hiện.</li>
+      </ul>
+      <a href="https://zalo.me/0866077040" class="btn-primary-solid">Gửi thông tin công trình</a>
+    </div>
+    <div class="rounded-3xl border border-slate-200 p-6 md:p-8">
+      <h2 class="text-xl">Điều bạn có thể trao đổi trước khi chốt lịch</h2>
+      <h3 class="text-base font-semibold">Công trình ở xa có thể triển khai không?</h3>
+      <p class="text-sm">iDecal tiếp nhận địa chỉ, quy mô và yêu cầu để kiểm tra phương án. Khả năng bố trí, lịch khảo sát và chi phí di chuyển được trao đổi theo từng công trình.</p>
+      <h3 class="text-base font-semibold">Có báo giá cố định cho mọi khu vực không?</h3>
+      <p class="text-sm">Báo giá cần dựa trên vật liệu, khối lượng, xử lý bề mặt và điều kiện tiếp cận. Các khoản thiết kế, tháo lớp cũ hoặc yêu cầu đặc biệt nên được làm rõ trong phạm vi công việc.</p>
+      <h3 class="text-base font-semibold">Chưa thấy địa điểm của mình trong danh sách?</h3>
+      <p class="!mb-0 text-sm">Gọi <a href="tel:0866077040" class="font-semibold text-primary">0866.077.040</a> hoặc gửi thông tin qua Zalo để trao đổi nhu cầu và địa chỉ cụ thể.</p>
+    </div>
   </section>
 </Layout>

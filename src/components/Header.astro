@@ -1,4 +1,6 @@
 ---
+import { regions } from '../data/regions';
+
 interface NavLink {
   name: string;
   href: string;
@@ -16,7 +18,10 @@ const navLinks: NavLink[] = [
   ] },
   { name: 'Công trình thực tế', href: '/du-an' },
   { name: 'Blog', href: '/blog' },
-  { name: 'Khu vực', href: '/khu-vuc' },
+  { name: 'Khu vực', href: '/khu-vuc', dropdown: [
+    { name: 'Tất cả khu vực', href: '/khu-vuc', highlight: true },
+    ...regions.map(region => ({ name: region.name, href: `/khu-vuc/${region.slug}` })),
+  ] },
   { name: 'Liên hệ', href: '/lien-he-idecal' },
 ];
 ---

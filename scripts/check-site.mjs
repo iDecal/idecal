@@ -34,6 +34,21 @@ assert.equal(homeProjects.length, Math.min(3, projectFiles.length), 'Home must d
 assert.equal(indexProjects.length, projectFiles.length, 'Project index must display every project');
 assert.ok(home.includes('href="/du-an"'), 'Home must link to the full project index');
 
+const regionSlugs = ['tp-hcm', 'vung-tau', 'dong-nai', 'nha-trang', 'quy-nhon', 'binh-duong', 'da-nang', 'ha-noi'];
+const regionIndex = await readFile(path.join(root, 'khu-vuc/index.html'), 'utf8');
+const regionDescriptions = new Set();
+for (const slug of regionSlugs) {
+  const file = path.join(root, 'khu-vuc', slug, 'index.html');
+  assert.ok(await exists(file), `Missing regional page: ${slug}`);
+  assert.ok(regionIndex.includes(`href="/khu-vuc/${slug}"`), `Region index must link to ${slug}`);
+  const html = await readFile(file, 'utf8');
+  const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
+  assert.ok(description, `${slug} must have a description`);
+  regionDescriptions.add(description);
+  assert.ok(html.includes('href="/khu-vuc"'), `${slug} must link back to the regional index`);
+}
+assert.equal(regionDescriptions.size, regionSlugs.length, 'Regional descriptions must be distinct');
+
 let references = 0;
 const failures = [];
 for (const file of files) {

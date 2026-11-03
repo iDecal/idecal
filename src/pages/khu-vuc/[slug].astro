@@ -1,0 +1,199 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import { regions, regionalServices, type Region } from '../../data/regions';
+
+export function getStaticPaths() {
+  return regions.map(region => ({ params: { slug: region.slug }, props: { region } }));
+}
+
+interface Props { region: Region }
+const { region } = Astro.props;
+const projects = (await getCollection('projects')).filter(project => region.projectIds.includes(project.id));
+const otherRegions = regions.filter(other => other.slug !== region.slug);
+const steps = [
+  { title: 'Gửi hiện trạng', description: 'Chia sẻ địa chỉ, ảnh toàn cảnh và cận bề mặt, kích thước dự kiến cùng mục đích sử dụng.' },
+  { title: 'Trao đổi giải pháp', description: 'Làm rõ vật liệu, mẫu thiết kế, mức che phủ, độ sáng và các điều kiện tiếp cận mặt bằng.' },
+  { title: 'Thống nhất báo giá & lịch', description: 'Xác nhận phạm vi công việc, các khoản chi phí, mẫu duyệt và kế hoạch khảo sát hoặc thi công.' },
+  { title: 'Thực hiện & bàn giao', description: 'Đối chiếu hạng mục đã thống nhất, kiểm tra bề mặt hoàn thiện và hướng dẫn vệ sinh, sử dụng.' },
+];
+---
+
+<Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description}>
+  <section class="relative overflow-hidden border-b border-slate-100 bg-slate-50 py-14 md:py-20">
+    <div class="container">
+      <nav aria-label="Đường dẫn" class="mb-8 flex flex-wrap items-center gap-2 text-sm text-slate-500">
+        <a href="/" class="hover:text-primary">Trang chủ</a><span aria-hidden="true">/</span>
+        <a href="/khu-vuc" class="hover:text-primary">Khu vực</a><span aria-hidden="true">/</span>
+        <span aria-current="page">{region.name}</span>
+      </nav>
+      <div class="grid items-start gap-10 lg:grid-cols-[1.6fr_1fr]">
+        <div>
+          <p class="!mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-primary">{region.theme}</p>
+          <h1 class="text-3xl leading-tight md:text-4xl">Thi công decal & phim cách nhiệt tại {region.name}</h1>
+          <p class="mb-8 max-w-3xl text-base leading-relaxed text-slate-600">{region.description}</p>
+          <div class="flex flex-wrap items-center gap-5">
+            <a href="https://zalo.me/0866077040" class="btn-primary-solid">Tư vấn công trình</a>
+            <a href="#dich-vu" class="btn-idecal-bold">Xem dịch vụ <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <aside class="rounded-3xl border border-slate-200 bg-white p-6 md:p-8" aria-label="Thông tin liên hệ">
+          <h2 class="!mb-3 text-xl">Bắt đầu từ nhu cầu của bạn</h2>
+          <p class="text-sm">Gửi ảnh mặt bằng và mẫu mong muốn. iDecal sẽ trao đổi phương án, lịch phù hợp và các chi phí liên quan trước khi xác nhận thực hiện.</p>
+          <a href="tel:0866077040" class="text-xl font-semibold text-primary">0866.077.040</a>
+          <a href="#bao-gia" class="mt-5 block text-sm font-medium text-secondary underline underline-offset-4">Chuẩn bị thông tin báo giá</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-14 md:py-20" aria-labelledby="local-needs-title">
+    <div class="mb-10 max-w-4xl">
+      <h2 id="local-needs-title">Giải pháp phù hợp với không gian tại {region.name}</h2>
+      {region.introduction.map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {region.needs.map((need, index) => (
+        <article class="rounded-2xl border border-slate-200 p-6">
+          <span class="mb-5 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-sm font-semibold text-primary" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+          <h3 class="text-lg font-semibold leading-snug">{need.title}</h3>
+          <p class="!mb-0 text-sm leading-relaxed">{need.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="dich-vu" class="scroll-mt-24 bg-slate-50 py-14 md:py-20">
+    <div class="container">
+      <h2>Dịch vụ gợi ý cho công trình tại {region.name}</h2>
+      <p class="mb-8 max-w-3xl">Lựa chọn theo nhu cầu thực tế của mặt bằng. Mỗi hạng mục có thông tin riêng để bạn tham khảo vật liệu và cách ứng dụng trước khi trao đổi.</p>
+      <div class="grid gap-6 md:grid-cols-3">
+        {region.serviceSlugs.map(slug => (
+          <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6">
+            <h3 class="text-lg font-semibold">{regionalServices[slug].name}</h3>
+            <p class="mb-6 text-sm leading-relaxed">{regionalServices[slug].description}</p>
+            <a href={`/dich-vu/${slug}`} class="mt-auto text-sm font-semibold text-primary hover:underline">Xem dịch vụ <span class="sr-only">{regionalServices[slug].name}</span> <span aria-hidden="true">→</span></a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container grid gap-10 py-14 md:py-20 lg:grid-cols-2" aria-labelledby="planning-title">
+    <div>
+      <h2 id="planning-title">Trao đổi địa điểm và kế hoạch thi công</h2>
+      <p>Cung cấp vị trí cụ thể tại {region.name} để iDecal kiểm tra điều kiện triển khai và thống nhất lịch. Các khu vực dưới đây giúp bạn mô tả địa điểm khi gửi yêu cầu:</p>
+      <ul class="mb-6 space-y-3">
+        {region.areas.map(area => <li class="flex gap-3 text-sm text-secondary"><span aria-hidden="true" class="text-primary">•</span>{area}</li>)}
+      </ul>
+      <p class="!mb-0 text-sm">Với công trình ngoài các khu vực trên, hãy gửi địa chỉ thực tế để trao đổi phương án. Lịch khảo sát, di chuyển và phạm vi công việc được thống nhất theo từng công trình.</p>
+    </div>
+    <div class="space-y-5">
+      {region.planning.map(item => (
+        <article class="rounded-2xl bg-slate-50 p-6">
+          <h3 class="text-lg font-semibold">{item.title}</h3>
+          <p class="!mb-0 text-sm leading-relaxed">{item.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section id="bao-gia" class="scroll-mt-24 border-y border-slate-100 bg-slate-50 py-14 md:py-20">
+    <div class="container">
+      <div class="mb-10 max-w-3xl">
+        <h2>Báo giá tại {region.name} cần những thông tin nào?</h2>
+        <p>Chi phí phụ thuộc vật liệu, kích thước, cách chia ô và điều kiện thực hiện. Thông tin rõ từ đầu giúp xác định phạm vi báo giá và hạn chế thay đổi sau khi duyệt.</p>
+      </div>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="rounded-2xl bg-white p-6 md:p-8">
+          <h3 class="text-lg font-semibold">Thông tin bạn nên gửi</h3>
+          <ul class="list-disc space-y-3 pl-5 text-sm leading-relaxed text-slate-600">
+            <li>Địa chỉ công trình, tầng và điều kiện tiếp cận mặt bằng.</li>
+            <li>Ảnh toàn cảnh, ảnh cận bề mặt và kích thước từng ô hoặc từng hạng mục.</li>
+            <li>Mục đích sử dụng: che tầm nhìn, giảm chói, nhận diện hay làm mới nội thất.</li>
+            <li>File logo, mẫu thiết kế hoặc hình ảnh tham khảo nếu đã có.</li>
+            <li>Hiện trạng phim cũ, vết keo, nền bong tróc và thời gian mong muốn.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-6 md:p-8">
+          <h3 class="text-lg font-semibold">Các phần cần làm rõ trong báo giá</h3>
+          <ul class="list-disc space-y-3 pl-5 text-sm leading-relaxed text-slate-600">
+            <li>Loại vật liệu, mẫu được duyệt, khối lượng và đơn vị tính.</li>
+            <li>Phần thiết kế, in hoặc cắt theo yêu cầu.</li>
+            <li>Tháo lớp cũ, xử lý nền, vệ sinh và công thi công.</li>
+            <li>Phương án tiếp cận kính cao hoặc khu vực có yêu cầu đặc biệt.</li>
+            <li>Chi phí di chuyển, thuế và các điều kiện bàn giao, bảo hành áp dụng cho hạng mục.</li>
+          </ul>
+        </div>
+      </div>
+      <a href="https://zalo.me/0866077040" class="btn-primary-solid mt-8">Gửi thông tin qua Zalo</a>
+    </div>
+  </section>
+
+  <section class="container py-14 md:py-20" aria-labelledby="process-title">
+    <h2 id="process-title">Từ yêu cầu đến phương án thực hiện</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {steps.map((step, index) => (
+        <div class="border-l-2 border-primary/25 pl-5">
+          <span class="mb-3 block text-sm font-semibold text-primary">Bước {index + 1}</span>
+          <h3 class="text-lg font-semibold">{step.title}</h3>
+          <p class="!mb-0 text-sm">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {projects.length > 0 ? (
+    <section class="bg-slate-50 py-14 md:py-20">
+      <div class="container">
+        <h2>Công trình tham khảo tại {region.name}</h2>
+        <p class="mb-8">Xem hình ảnh và thông tin trong hồ sơ công trình iDecal.</p>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map(project => <ProjectCard project={project} />)}
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="container pb-14">
+      <div class="flex flex-col justify-between gap-5 rounded-2xl border border-slate-200 p-6 md:flex-row md:items-center md:p-8">
+        <div><h2 class="!mb-2 text-xl">Tham khảo cách ứng dụng decal trong thực tế</h2><p class="!mb-0 text-sm">Xem hồ sơ công trình iDecal để tìm ý tưởng phù hợp với không gian của bạn.</p></div>
+        <a href="/du-an" class="btn-idecal-bold shrink-0 self-start">Xem công trình</a>
+      </div>
+    </section>
+  )}
+
+  <section class="container py-14 md:py-20" aria-labelledby="faq-title">
+    <div class="mx-auto max-w-4xl">
+      <h2 id="faq-title">Câu hỏi thường gặp tại {region.name}</h2>
+      <div class="divide-y divide-slate-200">
+        {region.faqs.map(faq => (
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-base font-semibold text-secondary [&::-webkit-details-marker]:hidden">
+              {faq.question}<span aria-hidden="true" class="shrink-0 text-xl font-normal text-primary transition-transform group-open:rotate-45">+</span>
+            </summary>
+            <p class="!mb-0 mt-4 pr-6 text-sm leading-relaxed">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container pb-16 md:pb-20">
+    <div class="rounded-3xl bg-slate-900 px-6 py-12 text-center md:px-12">
+      <h2 class="text-white">Trao đổi công trình của bạn tại {region.name}</h2>
+      <p class="mx-auto mb-8 max-w-2xl text-slate-300">Gửi ảnh, địa chỉ và nhu cầu. iDecal sẽ cùng bạn làm rõ giải pháp, khối lượng và kế hoạch phù hợp.</p>
+      <div class="flex flex-wrap items-center justify-center gap-5">
+        <a href="tel:0866077040" class="btn-primary-solid">Gọi 0866.077.040</a>
+        <a href="https://zalo.me/0866077040" class="rounded-lg border border-white/30 px-6 py-4 text-sm font-medium text-white hover:bg-white/10">Chat Zalo với iDecal</a>
+      </div>
+    </div>
+    <nav aria-label="Khu vực khác" class="mt-10">
+      <h2 class="!mb-4 text-lg">Xem khu vực khác</h2>
+      <div class="flex flex-wrap gap-3">
+        {otherRegions.map(other => <a href={`/khu-vuc/${other.slug}`} class="rounded-full border border-slate-200 px-4 py-2 text-sm text-secondary hover:border-primary hover:text-primary">{other.name}</a>)}
+        <a href="/khu-vuc" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-secondary hover:text-primary">Tất cả khu vực</a>
+      </div>
+    </nav>
+  </section>
+</Layout>

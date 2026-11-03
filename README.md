@@ -23,6 +23,7 @@ npm audit
 
 ## Nội dung và hình ảnh
 
+- Khu vực: `src/data/regions.ts`; trang tổng hợp tại `/khu-vuc`, các trang con được tạo từ `src/pages/khu-vuc/[slug].astro`. Dữ liệu cũng dùng cho menu và chân trang.
 - Blog: `src/content/blog/*.md`.
 - Công trình: `src/content/projects/*.md`.
 - Schema tập trung tại `src/content.config.ts`. Cả hai collection yêu cầu `title` và `pubDate`; dự án yêu cầu thêm `category`.

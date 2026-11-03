@@ -1,3 +1,6 @@
+---
+import { regions } from '../data/regions';
+---
 <footer class="bg-blue-50/50 border-t border-blue-100 pt-16 pb-8">
   <div class="container">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
@@ -21,12 +24,10 @@
 
       <div>
         <h4 class="text-secondary font-bold mb-6 text-[17px]">Khu vực phục vụ</h4>
-        <ul class="space-y-3 text-sm text-slate-600">
-          <li>• TP. Hồ Chí Minh (Q.1, 2, 7, 9...)</li>
-          <li>• Bình Dương (Thuận An, Dĩ An)</li>
-          <li>• TP. Quy Nhơn & lân cận</li>
-          <li>• Thi công dự án toàn quốc</li>
+        <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-slate-600">
+          {regions.map(region => <li><a href={`/khu-vuc/${region.slug}`} class="hover:text-primary transition-colors">{region.shortName}</a></li>)}
         </ul>
+        <a href="/khu-vuc" class="mt-5 inline-block text-sm font-medium text-primary hover:underline">Xem tất cả khu vực →</a>
       </div>
 
       <div>
