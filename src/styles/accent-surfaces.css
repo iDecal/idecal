@@ -1,0 +1,44 @@
+/* Secondary color only: blue/lavender lead; mint is a faint edge tint.
+   Explicit surface selectors keep photos, primary buttons and dark areas intact. */
+:root {
+  --idecal-soft-gradient: linear-gradient(115deg,#f2f8fb 0%,#f1f6ff 48%,#f7f3ff 100%);
+  --idecal-faint-gradient: linear-gradient(120deg,#f8fbfc 0%,#f7faff 55%,#faf8ff 100%);
+  --idecal-chip-gradient: linear-gradient(110deg,#f1f8fa,#edf4ff 55%,#f3effb);
+}
+.page-content :is(.compact-page-banner,.catalogue-hero,.lp-hero,.projects-hero,.project-detail-hero,.regional-hero,.contact-hero,.booking-hero) {
+  background-image: var(--idecal-soft-gradient) !important;
+}
+.page-content :is(.offering-surface,.lp-process,.lp-faq,.lp-overview-fit,.regional-soft,.projects-contact,.project-detail-related,.project-detail-gallery-section,.catalogue-detail,.contact-hours,.blog-contact,.blog-featured,.booking-product) {
+  background-image: var(--idecal-faint-gradient) !important;
+}
+.page-content section.bg-surface:not(.brand-dark) {
+  background-image: var(--idecal-faint-gradient);
+}
+.page-content :is(.offering-number,.lp-scope-icon,.contact-channel-icon,.contact-hours-icon,.compact-banner-eyebrow,.lp-cost-parts span) {
+  background-image: var(--idecal-chip-gradient) !important;
+}
+.page-content .projects-filters button[aria-pressed='true'] {
+  background-image: var(--idecal-chip-gradient);
+}
+.homepage-original #gspb_row-id-gsbp-c9028b0.home-process {
+  background-image: var(--idecal-faint-gradient) !important;
+}
+/* Blog keeps its photographic banner with a quieter blue/lavender wash. */
+.page-content .blog-hero-panel {
+  background: var(--idecal-soft-gradient);
+}
+.page-content .blog-hero-panel:after {
+  background: linear-gradient(105deg,#f1f8fb 4%,#f0f6fced 29%,#edf3ffc7 51%,#f0eaff35 100%);
+}
+.page-content .blog-category-grid>a {
+  background-image: var(--idecal-chip-gradient);
+}
+.page-content .blog-category-grid>a:hover {
+  background-image: linear-gradient(110deg,#eaf3f8,#e7effc 55%,#eee8fa);
+}
+.page-content .blog-category-grid>a[aria-current='page'] {
+  background-image: linear-gradient(110deg,#247fa9,#3379c1 55%,#6c59b5);
+}
+.page-content .blog-hero h1 {
+  background-image: linear-gradient(110deg,#1c7598,#286fb7 55%,#6651ad);
+}
