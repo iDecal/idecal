@@ -1,0 +1,23 @@
+---
+import ServiceHero from './ServiceHero.astro';
+import ServiceSupport from './ServiceSupport.astro';
+import { servicePresentation } from '../data/service-presentation';
+import '../styles/service-landing.css';
+interface Props { slug:string; }
+const {slug}=Astro.props;
+const content=servicePresentation[slug];
+const settings:Record<string,{name:string;group:string;description:string;points:string[]}>={
+ 'decal-dan-kinh-van-phong':{name:'Thi công Decal kính văn phòng',group:'decal-dan-kinh-van-phong',description:'Phối Decal mờ, logo và đường kẻ cho cửa, phòng họp và vách ngăn. Chọn mức che phủ theo vị trí làm việc.',points:['Định vị logo và họa tiết theo bản duyệt.','Cân đối dải mờ với từng ô kính.','Kiểm tra hiện trạng trước khi chốt phương án.']},
+ 'phim-cach-nhiet':{name:'Thi công phim cách nhiệt nhà kính',group:'phim-cach-nhiet-nha-kinh',description:'Lựa chọn phim theo loại kính, hướng nắng và nhu cầu giữ sáng cho nhà ở, văn phòng hoặc showroom.',points:['Đối chiếu thông số của mã phim được chọn.','Trao đổi sắc phim và độ xuyên sáng.','Xác nhận cách thi công và điều kiện bảo hành theo vật liệu.']},
+ 'decal-mo-3d-van-song':{name:'Thi công Decal vân sóng 3D',group:'film-trang-tri-kinh',description:'Trang trí cửa và vách kính với vân sóng trong suốt hoặc màu trà. Cân đối chiều vân, ánh sáng và mức độ riêng tư.',points:['Xem mẫu và hiệu ứng dưới ánh sáng thực tế.','Thống nhất chiều vân và vị trí nối.','Chọn phương án theo kích thước từng ô kính.']},
+ 'film-noi-that':{name:'Thi công film dán nội thất',group:'film-dan-noi-that',description:'Làm mới bàn, tủ, cửa và các bề mặt tương thích bằng film vân gỗ, đá, vải hoặc màu đơn sắc.',points:['Kiểm tra nền và độ bám trước khi dán.','Thống nhất chiều vân, góc bo và mép nối.','Làm rõ phần xử lý nền hoặc tháo lớp cũ.']},
+ 'decal-quang-cao':{name:'Thi công Decal quảng cáo',group:'decal-quang-cao',description:'Phối hình ảnh, logo và thông điệp quảng cáo trên kính cửa hàng, showroom hoặc bề mặt phù hợp.',points:['Duyệt bố cục theo kích thước vị trí dán.','Chọn vật liệu và cách chia khổ phù hợp.','Kết hợp thiết kế, in và thi công theo nhu cầu.']},
+};
+const item=settings[slug];
+---
+<div class="service-lp service-lp-legacy">
+  <ServiceHero title={item.name} eyebrow="Dịch vụ iDecal" image={content.photos[0].src} imageAlt={content.photos[0].caption}><p slot="description">{item.description}</p><Fragment slot="actions"><a href="/lien-he-idecal?dich-vu=thi-cong-decal" class="btn-primary-solid">Trao đổi phương án →</a><a href={`/danh-muc-san-pham/${item.group}`} class="btn-idecal-bold">Xem vật liệu & mẫu →</a></Fragment></ServiceHero>
+  <section class="container lp-summary"><h2>Phương án theo không gian</h2><ul>{item.points.map(point=><li><span aria-hidden="true">✓</span>{point}</li>)}</ul></section>
+  <section id="ung-dung" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">Hình ảnh tham khảo</p><h2>{content.title}</h2></div><p>{content.introduction}</p></div><div class="lp-application-grid">{content.photos.map(photo=><figure><img src={photo.src} alt={photo.caption} width="800" height="600" loading="lazy" /><figcaption>{photo.caption}</figcaption></figure>)}</div><a class="lp-material-link" href={`/danh-muc-san-pham/${item.group}`}>Xem mẫu, quy cách và thông tin vật liệu <span aria-hidden="true">→</span></a></section>
+  <ServiceSupport service="thi-cong-decal" />
+</div>
