@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 import { projectTypes } from './data/project-types';
+import { blogCategorySlugs } from './data/blog-categories';
 
 const fallbackImage = '/images/idecal-logo.png';
 
@@ -13,7 +14,8 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     date: z.coerce.date().optional(),
-    category: z.string().default('Kiến thức'),
+    category: z.string().default('Hướng dẫn'),
+    categorySlug: z.enum(blogCategorySlugs).optional(),
     categories: z.array(z.string()).optional(),
     author: z.string().optional(),
     image: z.string().default(fallbackImage),

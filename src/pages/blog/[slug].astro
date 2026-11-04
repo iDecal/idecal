@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, render } from 'astro:content';
+import { blogCategories, postCategory } from '../../data/blog-categories';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
@@ -11,6 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const category = postCategory(entry);
 
 // Render nội dung từ Content Layer
 const { Content, headings } = await render(entry);
@@ -18,7 +20,7 @@ const { Content, headings } = await render(entry);
 // Lấy bài viết liên quan
 const allPosts = await getCollection('blog');
 const relatedPosts = allPosts
-  .filter(p => p.data.category === entry.data.category && p.id !== entry.id)
+  .filter(p => postCategory(p).slug === category.slug && p.id !== entry.id)
   .slice(0, 3);
 ---
 
@@ -40,10 +42,10 @@ const relatedPosts = allPosts
           <div class="flex items-center gap-4 text-sm text-text-muted">
              <span class="flex items-center gap-1">
                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-               {entry.data.pubDate.toLocaleDateString('vi-VN')}
+               {entry.data.pubDate.toLocaleDateString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })}
              </span>
              <span>•</span>
-             <span class="font-bold text-primary uppercase">{entry.data.category}</span>
+             <a href={`/blog/chuyen-muc/${category.slug}`} class="font-medium text-primary">{category.name}</a>
           </div>
         </header>
 
@@ -69,6 +71,7 @@ const relatedPosts = allPosts
       </article>
 
       <aside class="space-y-12">
+        <nav aria-label="Chuyên mục bài viết" class="rounded-2xl border border-border p-6"><h2 class="!mb-4 text-base">Chuyên mục Blog</h2><div class="flex flex-col gap-3">{blogCategories.map(item => <a href={`/blog/chuyen-muc/${item.slug}`} aria-current={category.slug===item.slug?'page':undefined} class="text-sm text-primary hover:underline">{item.name}</a>)}</div></nav>
         {headings.length > 0 && (
           <div class="sticky top-24 bg-white border border-border p-6 rounded-2xl shadow-sm">
             <h4 class="text-secondary font-black text-sm uppercase tracking-widest mb-4 border-b pb-2">Mục lục bài viết</h4>
@@ -82,7 +85,7 @@ const relatedPosts = allPosts
           </div>
         )}
 
-        <div class="space-y-6">
+        {relatedPosts.length > 0 && <div class="space-y-6">
           <h4 class="text-secondary font-black text-sm uppercase tracking-widest border-b pb-2">Cùng chuyên mục</h4>
           {relatedPosts.map(p => (
             <a href={`/blog/${p.id}`} class="group block">
@@ -92,7 +95,7 @@ const relatedPosts = allPosts
               <h5 class="text-sm font-bold text-secondary group-hover:text-primary transition-colors line-clamp-2">{p.data.title}</h5>
             </a>
           ))}
-        </div>
+        </div>}
       </aside>
 
     </div>

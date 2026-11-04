@@ -1,42 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import BlogListing from '../../components/BlogListing.astro';
 import { getCollection } from 'astro:content';
-
-const allPosts = await getCollection('blog');
-
-// Sắp xếp bài viết linh hoạt theo cả hai loại ngày tháng
-allPosts.sort((a, b) => {
-  const dateA = a.data.date || a.data.pubDate || new Date(0);
-  const dateB = b.data.date || b.data.pubDate || new Date(0);
-  return dateB.valueOf() - dateA.valueOf();
-});
-
-
+const posts=await getCollection('blog');
+const description='Hướng dẫn, so sánh vật liệu, mẫu thiết kế, thông tin báo giá và cập nhật ưu đãi Decal, film tại iDecal.';
 ---
-
-<Layout title="Blog iDecal | Tin tức">
-  <div class="bg-white pt-20 pb-24">
-    <div class="container mb-12"><h1>Blog iDecal</h1><p>Tin tức, kiến thức decal và công trình thực tế.</p></div>
-    <div id="blog-grid" class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-      {allPosts.map(post => {
-        // Xử lý Category linh hoạt
-        const displayCategory = (post.data.categories && post.data.categories[0]) || post.data.category || "Kiến thức";
-        
-        const finalSlug = post.id;
-
-        return (
-          <article class="post-card group" data-category={displayCategory}>
-            <a href={`/blog/${finalSlug}`}>
-              <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-brand-pale">
-                <img src={post.data.image || "/images/idecal-logo.png"} alt={post.data.title} class="w-full h-full object-cover" />
-              </div>
-              <span class="text-primary text-[10px] font-black uppercase">{displayCategory}</span>
-              <h2 class="text-xl font-bold text-secondary mt-2">{post.data.title}</h2>
-              <p class="text-text-muted text-sm mt-3 line-clamp-2">{post.data.description}</p>
-            </a>
-          </article>
-        );
-      })}
-    </div>
-  </div>
-</Layout>
+<Layout title="Blog iDecal | Kiến thức, mẫu thiết kế & báo giá" description={description}><BlogListing posts={posts} title="Blog iDecal" description={description} /></Layout>

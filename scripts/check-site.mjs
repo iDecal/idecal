@@ -25,6 +25,19 @@ for (const [collection, route] of [['blog', 'blog'], ['projects', 'du-an']]) {
     assert.ok(await exists(path.join(root, route, id, 'index.html')), `Missing content page: ${route}/${id}`);
   }
 }
+const blogIndex = await readFile(path.join(root, 'blog/index.html'), 'utf8');
+const blogCategorySamples = [
+  ['huong-dan','cach-do-kich-thuoc-kinh-truoc-khi-dat-decal'],
+  ['so-sanh-vat-lieu','so-sanh-decal-sua-trong-va-luoi'],
+  ['mau-thiet-ke','nam-bo-cuc-decal-kinh-van-phong'],
+  ['bao-gia','cach-doc-bao-gia-decal-theo-hang-muc'],
+  ['tin-khuyen-mai','cach-cap-nhat-thong-tin-khuyen-mai-idecal'],
+];
+for (const [category,sample] of blogCategorySamples) {
+  const html = await readFile(path.join(root, 'blog/chuyen-muc', category, 'index.html'), 'utf8');
+  assert.ok(blogIndex.includes(`href="/blog/chuyen-muc/${category}"`), `Blog index must link to ${category}`);
+  assert.ok(html.includes(`href="/blog/${sample}"`), `Category ${category} must include its sample article`);
+}
 const home = await readFile(path.join(root, 'index.html'), 'utf8');
 const projectIndex = await readFile(path.join(root, 'du-an/index.html'), 'utf8');
 const projectFiles = (await walk(path.resolve('src/content/projects'))).filter(file => file.endsWith('.md'));

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { postCategory } from '../data/blog-categories';
 
 // Lấy 3 bài viết mới nhất
 const latestPosts = (await getCollection('blog'))
@@ -39,7 +40,7 @@ const latestPosts = (await getCollection('blog'))
               />
               <div class="absolute top-4 left-4">
                 <span class="bg-white/90 backdrop-blur px-3 py-1 rounded-lg text-[10px] font-black uppercase text-primary tracking-tighter">
-                  {post.data.category}
+                  {postCategory(post).name}
                 </span>
               </div>
             </div>

@@ -2,7 +2,8 @@
 title: "Thi công Backdrop Toyota chuyên nghiệp"
 description: "Dự án lắp đặt backdrop decal tại showroom Toyota với độ sắc nét cao."
 pubDate: 2026-04-20
-category: "Dự án"
+category: "Mẫu thiết kế"
+categorySlug: "mau-thiet-ke"
 image: "/images/cong-trinh/thi-cong-dan-decal-luoi-mat-tien-toyota-tan-binh.jpg"
 ---
 

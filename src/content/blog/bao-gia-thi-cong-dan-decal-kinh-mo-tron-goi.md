@@ -2,7 +2,8 @@
 title: "Bảng Báo Giá Thi Công Decal Dán Kính Mờ Cập Nhật 2025"
 description: "iDecal cung cấp bảng báo giá decal mờ chi tiết theo từng hạng mục và phân tích các yếu tố ảnh hưởng đến chi phí."
 pubDate: 2026-04-21
-category: "Kiến thức"
+category: "Báo giá"
+categorySlug: "bao-gia"
 author: "Anh Lê"
 image: "/images/Banner/gioi-thieu-idecal.jpeg"
 ---

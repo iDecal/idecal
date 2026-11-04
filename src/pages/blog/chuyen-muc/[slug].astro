@@ -1,0 +1,10 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import BlogListing from '../../../components/BlogListing.astro';
+import { blogCategories, postCategory } from '../../../data/blog-categories';
+import { getCollection } from 'astro:content';
+export function getStaticPaths() { return blogCategories.map(category=>({params:{slug:category.slug},props:{category}})); }
+const {category}=Astro.props;
+const posts=(await getCollection('blog')).filter(post=>postCategory(post).slug===category.slug);
+---
+<Layout title={`${category.name} | Blog iDecal`} description={category.description}><BlogListing posts={posts} title={category.name} description={category.description} categorySlug={category.slug} /></Layout>
