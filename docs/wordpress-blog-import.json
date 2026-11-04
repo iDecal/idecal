@@ -1,0 +1,1379 @@
+{
+  "source": "idecal.WordPress.2026-11-04.xml",
+  "publishedPosts": 71,
+  "excludedTrash": 3,
+  "downloadedImages": 309,
+  "imageFailures": [
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Decal-dan-kinh-cho-phong-khach.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Decal-mo-dan-kinh-phong-khach-mau-la-truc-edited.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Decal-mo-hoa-tiet-la-chuoi.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Decal-mo-in-hoa-tiet-hoa-xinh.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Gian-hang-tieu-chuan-3x2x22m-2.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Giay-Decal-mo-dan-kinh-in-hoa-tiet-la.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/Ke-trung-bay-san-pham-edited.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/QUA-TANG-7-01-1024x572-1.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/chuyen-cung-cap-tam-decal-dan-kinh-2-mat.png",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/standee-la-gi.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://3sdecal.com/wp-content/uploads/2024/03/thiet-ke-in-an-wobbler-1024x771-1.jpg",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://idecal.vn/wp-content/uploads/2023/12/63d5d4b139d28032bf9329b424237c4d.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://idecal.vn/wp-content/uploads/2023/12/Decal-trang-tri-bep-1024x819.webp",
+      "error": "HTTP Error 404: Not Found; HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://idecal.vn/wp-content/uploads/2023/12/Tam-op-PVC-van-da.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://idecal.vn/wp-content/uploads/2023/12/Tam-op-bep-kinh-cuong-luc.jpg",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://idecal.vn/wp-content/uploads/2023/12/decal-gach-bong-da-nang-3-min.png",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/C5112AQG6xWLpxq9j9A/article-inline_image-shrink_1000_1488/0/1581417762923?e=1707350400&v=beta&t=N8FOvh9u1b8FGLSpwHO1VqHLneNhjyOpkeQBtb_diM8",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://media.licdn.com/dms/image/C5112AQHmKhvjOteLHQ/article-inline_image-shrink_1000_1488/0/1581417746089?e=1707350400&v=beta&t=oZN4BkOlVwUrL0kXAEuO0Mo7oz50xuoyj0EsviEW-mE",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "missingImagesByPost": [
+    {
+      "slug": "giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90",
+      "urls": [
+        "blob:https://idecal.vn/c6d33754-7bf6-49c1-afba-76256c5d3396",
+        "blob:https://idecal.vn/416deb05-97d2-4199-8bf9-f7740c1692ae",
+        "blob:https://idecal.vn/7cbd724f-1c1e-414a-a799-ab761b5179c5",
+        "blob:https://idecal.vn/010e5222-8e86-4ad2-8503-7d3cfc4ea929"
+      ]
+    },
+    {
+      "slug": "decal-gia-gach-mosaic-tuong-cu-nhung-lai-moi",
+      "urls": [
+        "https://idecal.vn/wp-content/uploads/2023/12/63d5d4b139d28032bf9329b424237c4d.jpg"
+      ]
+    },
+    {
+      "slug": "6-vat-lieu-op-bep-duoc-ua-chuong-nam-2023",
+      "urls": [
+        "https://media.licdn.com/dms/image/C5112AQHmKhvjOteLHQ/article-inline_image-shrink_1000_1488/0/1581417746089?e=1707350400&v=beta&t=oZN4BkOlVwUrL0kXAEuO0Mo7oz50xuoyj0EsviEW-mE",
+        "https://media.licdn.com/dms/image/C5112AQG6xWLpxq9j9A/article-inline_image-shrink_1000_1488/0/1581417762923?e=1707350400&v=beta&t=N8FOvh9u1b8FGLSpwHO1VqHLneNhjyOpkeQBtb_diM8",
+        "https://idecal.vn/wp-content/uploads/2023/12/Decal-trang-tri-bep-1024x819.webp",
+        "https://idecal.vn/wp-content/uploads/2023/12/Tam-op-bep-kinh-cuong-luc.jpg",
+        "https://idecal.vn/wp-content/uploads/2023/12/Tam-op-PVC-van-da.jpg",
+        "https://idecal.vn/wp-content/uploads/2023/12/decal-gach-bong-da-nang-3-min.png"
+      ]
+    },
+    {
+      "slug": "tu-van-chon-decal-dan-kinh-phong-khach-sang-trong",
+      "urls": [
+        "https://3sdecal.com/wp-content/uploads/2024/03/Decal-mo-hoa-tiet-la-chuoi.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/Giay-Decal-mo-dan-kinh-in-hoa-tiet-la.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/Decal-mo-dan-kinh-phong-khach-mau-la-truc-edited.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/Decal-mo-in-hoa-tiet-hoa-xinh.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/chuyen-cung-cap-tam-decal-dan-kinh-2-mat.png",
+        "https://3sdecal.com/wp-content/uploads/2024/03/Decal-dan-kinh-cho-phong-khach.jpg"
+      ]
+    },
+    {
+      "slug": "thi-cong-trang-tri-gian-hang-hoi-cho-trien-lam-gia-tot-tai-tphcm",
+      "urls": [
+        "https://3sdecal.com/wp-content/uploads/2024/03/Ke-trung-bay-san-pham-edited.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/standee-la-gi.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/Gian-hang-tieu-chuan-3x2x22m-2.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/QUA-TANG-7-01-1024x572-1.jpg",
+        "https://3sdecal.com/wp-content/uploads/2024/03/thiet-ke-in-an-wobbler-1024x771-1.jpg"
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "slug": "giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90",
+      "id": 937,
+      "title": "[TÌM HIỂU] 2 Loại Giấy Decal dán kính chống nắng hiệu quả trên 90%",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2024-04-18T07:23:30+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90/"
+    },
+    {
+      "slug": "4-buoc-dan-decal-van-go-vua-nhanh-va-dep",
+      "id": 948,
+      "title": "Hướng dẫn 4 Bước dán Decal vân gỗ vừa nhanh và đẹp",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Hướng dẫn và Mẹo sử dụng Decal"
+      ],
+      "date": "2024-04-18T07:57:08+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/4-buoc-dan-decal-van-go-vua-nhanh-va-dep/"
+    },
+    {
+      "slug": "decal-mo-in-logo-cat-logo-gia-re-tai-tp-hcm",
+      "id": 1198,
+      "title": "Decal mờ in Logo, cắt Logo giá rẻ tại TP HCM",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ in Decal",
+        "Dịch vụ trang trí"
+      ],
+      "date": "2024-04-19T04:28:52+07:00",
+      "replaced": false,
+      "images": 7,
+      "originalUrl": "https://idecal.vn/decal-mo-in-logo-cat-logo-gia-re-tai-tp-hcm/"
+    },
+    {
+      "slug": "decal-gia-gach-mosaic-tuong-cu-nhung-lai-moi",
+      "id": 1205,
+      "title": "Decal Giả Gạch Mosaic – Tưởng cũ nhưng lại mới",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Review sản phẩm"
+      ],
+      "date": "2024-04-19T13:40:08+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/decal-gia-gach-mosaic-tuong-cu-nhung-lai-moi/"
+    },
+    {
+      "slug": "cat-decal-chu-dan-kinh-trang-tri-shop-chi-voi-199k",
+      "id": 1591,
+      "title": "Cắt Decal chữ dán kính - Trang trí SHOP chỉ với 199K",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ in Decal",
+        "Dịch vụ trang trí"
+      ],
+      "date": "2024-04-22T03:35:50+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/cat-decal-chu-dan-kinh-trang-tri-shop-chi-voi-199k/"
+    },
+    {
+      "slug": "50-mau-decal-mo-hoa-van-trang-tri-nha-dep",
+      "id": 1593,
+      "title": "Tổng hợp 50 mẫu Decal mờ hoa văn trang trí nhà đẹp",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Mẫu thiết kế"
+      ],
+      "date": "2024-04-20T18:17:00+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/50-mau-decal-mo-hoa-van-trang-tri-nha-dep/"
+    },
+    {
+      "slug": "bi-quyet-tang-doanh-thu-cuoi-nam-2024-voi-decal-dan-kinh-sieu-an-tuong",
+      "id": 1595,
+      "title": "Bí quyết tăng doanh thu cuối năm  2024 với decal dán kính siêu ấn tượng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2024-10-19T21:57:40+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/bi-quyet-tang-doanh-thu-cuoi-nam-2024-voi-decal-dan-kinh-sieu-an-tuong/"
+    },
+    {
+      "slug": "dich-vu-decal-dan-kinh-quan-tan-binh",
+      "id": 1783,
+      "title": "#1 Dịch vụ Decal dán kính quận Tân Bình",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2024-04-21T09:29:25+07:00",
+      "replaced": false,
+      "images": 6,
+      "originalUrl": "https://idecal.vn/dich-vu-decal-dan-kinh-quan-tan-binh/"
+    },
+    {
+      "slug": "thi-cong-dan-pp-kho-lon-chuyen-nghiep",
+      "id": 1926,
+      "title": "Thi công dán PP khổ lớn chuyên nghiệp #1 TPHCM",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ trang trí"
+      ],
+      "date": "2024-04-22T05:38:08+07:00",
+      "replaced": false,
+      "images": 15,
+      "originalUrl": "https://idecal.vn/thi-cong-dan-pp-kho-lon-chuyen-nghiep/"
+    },
+    {
+      "slug": "dich-vu-in-pp-can-formex-hcm-gia-re-lay-lien",
+      "id": 1999,
+      "title": "Dịch vụ in PP cán formex HCM giá rẻ - lấy liền",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ trang trí"
+      ],
+      "date": "2024-04-22T07:23:00+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/dich-vu-in-pp-can-formex-hcm-gia-re-lay-lien/"
+    },
+    {
+      "slug": "show-window-la-gi-huong-dan-dan-tranh-kinh-show-window",
+      "id": 2115,
+      "title": "Show window là gì? Hướng dẫn dán tranh kính Show window",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2024-04-22T16:48:18+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/show-window-la-gi-huong-dan-dan-tranh-kinh-show-window/"
+    },
+    {
+      "slug": "8-mau-decal-dan-kinh-tiem-nail-xinh-xan",
+      "id": 2122,
+      "title": "8+ mẫu Decal dán kính tiệm Nail xinh xắn bạn nên tham khảo",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Mẫu thiết kế",
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2024-04-22T17:02:24+07:00",
+      "replaced": false,
+      "images": 8,
+      "originalUrl": "https://idecal.vn/8-mau-decal-dan-kinh-tiem-nail-xinh-xan/"
+    },
+    {
+      "slug": "decal-oracal-la-gi-decal-noi-that-cao-cap-tu-germany",
+      "id": 2157,
+      "title": "Decal Oracal là gì? Decal nội thất cao cấp từ Germany",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Góc chia sẽ",
+        "Vật liệu Decal in ấn"
+      ],
+      "date": "2024-04-23T17:31:54+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/decal-oracal-la-gi-decal-noi-that-cao-cap-tu-germany/"
+    },
+    {
+      "slug": "tim-hieu-ve-cac-thong-so-ky-thuat-cua-phim-chong-nang",
+      "id": 17471,
+      "title": "Tìm hiều về các thông số kỹ thuật của Phim chống nắng",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2023-12-01T11:52:12+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/tim-hieu-ve-cac-thong-so-ky-thuat-cua-phim-chong-nang/"
+    },
+    {
+      "slug": "lam-moi-khong-gian-bep-voi-decal-gach-bong-don-gian-va-tien-loi",
+      "id": 17547,
+      "title": "Làm mới không gian bếp với Decal gạch bông: Đơn giản và tiện lợi",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2023-12-06T18:09:44+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/lam-moi-khong-gian-bep-voi-decal-gach-bong-don-gian-va-tien-loi/"
+    },
+    {
+      "slug": "6-vat-lieu-op-bep-duoc-ua-chuong-nam-2023",
+      "id": 17558,
+      "title": "6 Vật liệu ốp bếp được ưa chuộng năm 2023",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2023-12-08T10:17:37+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/6-vat-lieu-op-bep-duoc-ua-chuong-nam-2023/"
+    },
+    {
+      "slug": "decal-dan-kinh-nha-khoa-ngay-mat-tien-kinh",
+      "id": 17605,
+      "title": "Tăng khách hàng với Decal dán kính Nha Khoa ngay mặt tiền kinh doanh",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Góc chia sẽ"
+      ],
+      "date": "2023-12-08T14:34:09+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/decal-dan-kinh-nha-khoa-ngay-mat-tien-kinh/"
+    },
+    {
+      "slug": "kich-thuoc-poster-chuan-va-pho-bien-nhat-hien-nay",
+      "id": 17929,
+      "title": "Kích thước Poster chuẩn và phổ biến nhất hiện nay",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Góc chia sẽ"
+      ],
+      "date": "2023-12-16T20:39:18+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/kich-thuoc-poster-chuan-va-pho-bien-nhat-hien-nay/"
+    },
+    {
+      "slug": "huong-dan-phan-biet-cat-va-in-decal",
+      "id": 17965,
+      "title": "Phân biệt Cắt Decal và Bế Decal khác nhau như thế nào",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Góc chia sẽ"
+      ],
+      "date": "2023-12-16T23:36:06+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/huong-dan-phan-biet-cat-va-in-decal/"
+    },
+    {
+      "slug": "decal-dan-kinh-mo-huong-dan-toan-tap-a-z-cho-van-phong-nha-o",
+      "id": 34194,
+      "title": "Decal Dán Kính Mờ: Hướng Dẫn Toàn Tập A-Z Cho Văn Phòng & Nhà Ở",
+      "category": "huong-dan",
+      "originalCategories": [],
+      "date": "2025-11-19T12:00:00+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/decal-dan-kinh-mo-huong-dan-toan-tap-a-z-cho-van-phong-nha-o/"
+    },
+    {
+      "slug": "tu-van-chon-decal-dan-kinh-phong-khach-sang-trong",
+      "id": 18038,
+      "title": "Tư vấn chọn Decal dán kính phòng khách sang trọng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Góc chia sẽ"
+      ],
+      "date": "2023-12-18T13:54:39+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/tu-van-chon-decal-dan-kinh-phong-khach-sang-trong/"
+    },
+    {
+      "slug": "xu-huong-trang-tri-noi-that-voi-decal-moi-nhat",
+      "id": 18411,
+      "title": "Xu hướng trang trí nội thất với Decal mới nhất.",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2024-03-14T17:52:26+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/xu-huong-trang-tri-noi-that-voi-decal-moi-nhat/"
+    },
+    {
+      "slug": "dich-vu-in-pp-gia-re-lay-gap",
+      "id": 18866,
+      "title": "Dịch vụ in PP giá rẻ – In PP gấp lấy ngay 4h tại TP.HCM & Bình Dương",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ in Decal"
+      ],
+      "date": "2024-03-19T20:00:06+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/dich-vu-in-pp-gia-re-lay-gap/"
+    },
+    {
+      "slug": "video-5-buoc-huong-dan-dan-decal-kinh-don-gian",
+      "id": 19047,
+      "title": "Video 5 bước hướng dẫn dán Decal kính đơn giản",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Hướng dẫn và Mẹo sử dụng Decal"
+      ],
+      "date": "2024-03-21T18:18:09+07:00",
+      "replaced": false,
+      "images": 6,
+      "originalUrl": "https://idecal.vn/video-5-buoc-huong-dan-dan-decal-kinh-don-gian/"
+    },
+    {
+      "slug": "thi-cong-trang-tri-gian-hang-hoi-cho-trien-lam-gia-tot-tai-tphcm",
+      "id": 19190,
+      "title": "Thi công trang trí gian hàng, hội chợ, triễn lãm giá tốt tại TPHCM",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ trang trí"
+      ],
+      "date": "2024-03-23T07:42:36+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/thi-cong-trang-tri-gian-hang-hoi-cho-trien-lam-gia-tot-tai-tphcm/"
+    },
+    {
+      "slug": "10-mau-decal-dan-kinh-spa-quang-cao-show-window-thu-hut",
+      "id": 19211,
+      "title": "10+ Mẫu Decal dán kính Spa quảng cáo show window thu hút",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Mẫu thiết kế",
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2024-03-23T10:14:48+07:00",
+      "replaced": false,
+      "images": 9,
+      "originalUrl": "https://idecal.vn/10-mau-decal-dan-kinh-spa-quang-cao-show-window-thu-hut/"
+    },
+    {
+      "slug": "huong-dan-ban-trang-tri-kinh-tiem-nail-thu-hut-bat-mat",
+      "id": 19894,
+      "title": "Hướng dẫn bạn trang trí kính Tiệm Nail thu hút & bắt mắt",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal quảng cáo"
+      ],
+      "date": "2024-04-27T17:02:58+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/huong-dan-ban-trang-tri-kinh-tiem-nail-thu-hut-bat-mat/"
+    },
+    {
+      "slug": "in-an-thi-cong-backlit-film-tron-goi",
+      "id": 20606,
+      "title": "In Backlit Film: Chất Lượng Hình Ảnh Hoàn Hảo Trong Hộp Đèn Siêu Mỏng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ in Decal"
+      ],
+      "date": "2024-05-10T14:12:13+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/in-an-thi-cong-backlit-film-tron-goi/"
+    },
+    {
+      "slug": "thi-cong-mo-hinh-quang-cao-posm-pp-can-formex",
+      "id": 21078,
+      "title": "Thi công POSM mô hình quảng cáo - PP cán formex",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal quảng cáo"
+      ],
+      "date": "2024-05-14T16:37:59+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/thi-cong-mo-hinh-quang-cao-posm-pp-can-formex/"
+    },
+    {
+      "slug": "thi-cong-trang-tri-vm-gian-hang-chuyen-nghiep",
+      "id": 21142,
+      "title": "Thi công trang trí VM gian hàng chuyên nghiệp",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ trang trí"
+      ],
+      "date": "2024-05-16T17:35:12+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/thi-cong-trang-tri-vm-gian-hang-chuyen-nghiep/"
+    },
+    {
+      "slug": "99-mau-decal-dan-kinh-van-phong-dep-2026",
+      "id": 25139,
+      "title": "99+ Mẫu Decal dán kính văn phòng đẹp 2026",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Mẫu thiết kế"
+      ],
+      "date": "2025-03-29T22:14:59+07:00",
+      "replaced": false,
+      "images": 34,
+      "originalUrl": "https://idecal.vn/99-mau-decal-dan-kinh-van-phong-dep-2026/"
+    },
+    {
+      "slug": "9-loai-decal-dan-kinh-cua-so-cho-ngoi-nha-ban",
+      "id": 25623,
+      "title": "9+ loại Decal dán kính cửa sổ cho ngôi nhà bạn",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-04-09T16:15:18+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/9-loai-decal-dan-kinh-cua-so-cho-ngoi-nha-ban/"
+    },
+    {
+      "slug": "10-y-tuong-decal-dan-kinh-phong-tam-hien-dai",
+      "id": 26406,
+      "title": "10+ ý tưởng Decal dán kính phòng tắm hiện đại - Đẹp, riêng tư, Tối giản",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-04-18T05:38:44+07:00",
+      "replaced": false,
+      "images": 7,
+      "originalUrl": "https://idecal.vn/10-y-tuong-decal-dan-kinh-phong-tam-hien-dai/"
+    },
+    {
+      "slug": "in-decal-quang-cao-gia-re-tai-idecal",
+      "id": 26468,
+      "title": "In decal quảng cáo giá rẻ tại iDecal – Nhanh & Chất Lượng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal quảng cáo",
+        "Dịch vụ in Decal"
+      ],
+      "date": "2025-04-19T02:09:05+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/in-decal-quang-cao-gia-re-tai-idecal/"
+    },
+    {
+      "slug": "su-dung-kinh-hay-dan-ppf-cho-mat-ban-noi-that",
+      "id": 26872,
+      "title": "Sử dụng kính hay dán PPF cho mặt bàn nội thất?",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-04-21T22:43:19+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/su-dung-kinh-hay-dan-ppf-cho-mat-ban-noi-that/"
+    },
+    {
+      "slug": "dan-decal-thang-may-giai-phap-refresh-khong-gian",
+      "id": 26885,
+      "title": "dán Decal thang máy - Giải pháp 'refresh' không gian",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal quảng cáo"
+      ],
+      "date": "2025-04-21T23:51:16+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/dan-decal-thang-may-giai-phap-refresh-khong-gian/"
+    },
+    {
+      "slug": "thi-cong-dan-decal-gian-hang-trien-lam-hong-son-llc",
+      "id": 26946,
+      "title": "Thi công dán Decal gian hàng triễn lãm Hồng sơn LLC",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Công trình hoàn thành"
+      ],
+      "date": "2025-04-24T10:23:28+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/thi-cong-dan-decal-gian-hang-trien-lam-hong-son-llc/"
+    },
+    {
+      "slug": "thi-cong-decal-mo-dan-kinh-bep-can-ho-chi-ruby-quan-2",
+      "id": 27108,
+      "title": "Thi công decal dán kính bếp căn hộ chị ruby - quận 2",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Công trình hoàn thành"
+      ],
+      "date": "2025-04-25T21:48:25+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/thi-cong-decal-mo-dan-kinh-bep-can-ho-chi-ruby-quan-2/"
+    },
+    {
+      "slug": "dan-decal-quang-cao-xe-tai-cho-ubc-tivi",
+      "id": 27362,
+      "title": "Dán decal quảng cáo xe tải - thương hiệu UBC tivi",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Công trình hoàn thành",
+        "Review sản phẩm"
+      ],
+      "date": "2025-04-30T00:54:28+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/dan-decal-quang-cao-xe-tai-cho-ubc-tivi/"
+    },
+    {
+      "slug": "thi-cong-dan-decal-bang-hieu-cong-ty-hoa-dat-thu-duc",
+      "id": 27384,
+      "title": "Thi công dán Decal bảng hiệu công ty Hoa Đạt -CN Thủ Đức",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Công trình hoàn thành"
+      ],
+      "date": "2025-05-04T10:14:41+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/thi-cong-dan-decal-bang-hieu-cong-ty-hoa-dat-thu-duc/"
+    },
+    {
+      "slug": "xu-huong-decal-dan-kinh-van-phong-hot-nhat-nam-2025",
+      "id": 27478,
+      "title": "Xu hướng decal dán kính văn phòng hot nhất năm 2025",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Decal kính văn phòng",
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-05-06T16:20:18+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/xu-huong-decal-dan-kinh-van-phong-hot-nhat-nam-2025/"
+    },
+    {
+      "slug": "dich-vu-dan-decal-chong-nang-phim-cach-nhiet-tai-binh-duong",
+      "id": 28185,
+      "title": "Dịch vụ dán Decal chống nắng, Phim cách nhiệt tại Bình Dương",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2025-05-13T00:19:31+07:00",
+      "replaced": false,
+      "images": 8,
+      "originalUrl": "https://idecal.vn/dich-vu-dan-decal-chong-nang-phim-cach-nhiet-tai-binh-duong/"
+    },
+    {
+      "slug": "mien-phi-thiet-ke-decal-mo-dan-kinh-van-phong",
+      "id": 28306,
+      "title": "Miễn phí 100% - Thiết kế Decal dán kính văn phòng",
+      "category": "tin-khuyen-mai",
+      "originalCategories": [
+        "Decal kính văn phòng",
+        "Tin khuyến mãi"
+      ],
+      "date": "2025-05-14T22:21:34+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/mien-phi-thiet-ke-decal-mo-dan-kinh-van-phong/"
+    },
+    {
+      "slug": "thi-cong-decal-luoi-dan-kinh-hcm-binh-duong",
+      "id": 28332,
+      "title": "Thi Công Decal Lưới Dán Kính Quảng Cáo Mặt Tiền Showroom",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal quảng cáo"
+      ],
+      "date": "2025-05-14T23:20:47+07:00",
+      "replaced": false,
+      "images": 11,
+      "originalUrl": "https://idecal.vn/thi-cong-decal-luoi-dan-kinh-hcm-binh-duong/"
+    },
+    {
+      "slug": "in-decal-dan-kinh-quan-1-giao-nhanh-gia-tot",
+      "id": 28417,
+      "title": "In Decal dán kính Quận 1 - Giao nhanh, giá tốt",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ in Decal"
+      ],
+      "date": "2025-05-15T13:38:29+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/in-decal-dan-kinh-quan-1-giao-nhanh-gia-tot/"
+    },
+    {
+      "slug": "lam-moi-be-mat-tu-bep-voi-phim-dan-noi-that",
+      "id": 28573,
+      "title": "Làm mới bề mặt tủ bếp với phim dán nội thất",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-05-18T12:01:26+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/lam-moi-be-mat-tu-bep-voi-phim-dan-noi-that/"
+    },
+    {
+      "slug": "in-an-va-thi-cong-decal-trang-tri-phong-game",
+      "id": 28673,
+      "title": "In ấn và thi công Decal trang trí Phòng Game",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ trang trí"
+      ],
+      "date": "2025-05-22T01:53:16+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/in-an-va-thi-cong-decal-trang-tri-phong-game/"
+    },
+    {
+      "slug": "tieu-chuan-thiet-ke-decal-mo-dan-kinh-van-phong",
+      "id": 28703,
+      "title": "Tiêu chuẩn thiết kế Decal mờ dán kính văn phòng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal kính văn phòng"
+      ],
+      "date": "2025-05-25T17:00:53+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/tieu-chuan-thiet-ke-decal-mo-dan-kinh-van-phong/"
+    },
+    {
+      "slug": "in-an-thi-cong-dan-decal-kinh-tiem-nail",
+      "id": 28841,
+      "title": "In ấn & Thi công dán decal kính tiệm Nail theo phong cách riêng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ in Decal",
+        "Dịch vụ trang trí"
+      ],
+      "date": "2025-05-31T23:55:54+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/in-an-thi-cong-dan-decal-kinh-tiem-nail/"
+    },
+    {
+      "slug": "sale-phim-cach-nhiet-nha-kinh-gia-chi-180k-m2",
+      "id": 28852,
+      "title": "SALE Phim cách nhiệt nhà kính giá chỉ 180K/m2 - Miễn phí công thợ",
+      "category": "tin-khuyen-mai",
+      "originalCategories": [
+        "Tin khuyến mãi"
+      ],
+      "date": "2025-06-01T13:59:36+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/sale-phim-cach-nhiet-nha-kinh-gia-chi-180k-m2/"
+    },
+    {
+      "slug": "tan-trang-quay-bar-voi-decal-gach-bong",
+      "id": 28973,
+      "title": "Tân trang quầy bar với Decal gạch bông – Đẹp, tiết kiệm, dễ thi công",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Dịch vụ trang trí",
+        "Góc chia sẽ"
+      ],
+      "date": "2025-06-06T23:36:49+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/tan-trang-quay-bar-voi-decal-gach-bong/"
+    },
+    {
+      "slug": "phim-dan-noi-that-quay-bar",
+      "id": 28981,
+      "title": "Thay áo mới cho quầy bar với Phim dán nội thất – Sang trọng và hiện đại",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Góc chia sẽ",
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-06-06T23:57:27+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/phim-dan-noi-that-quay-bar/"
+    },
+    {
+      "slug": "decal-luoi-la-gi-tim-hieu-ve-vat-lieu-decal-luoi-trong-in-an",
+      "id": 30356,
+      "title": "Decal lưới là gì? Tìm hiểu về vât liệu Decal lưới trong in ấn",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Vật liệu Decal in ấn"
+      ],
+      "date": "2025-09-07T19:41:45+07:00",
+      "replaced": false,
+      "images": 21,
+      "originalUrl": "https://idecal.vn/decal-luoi-la-gi-tim-hieu-ve-vat-lieu-decal-luoi-trong-in-an/"
+    },
+    {
+      "slug": "5-ly-do-ban-nen-chon-decal-dan-kinh-cho-khong-gian-song",
+      "id": 32198,
+      "title": "5 Lý do bạn nên chọn decal dán kính cho không gian sống",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2025-10-08T00:02:44+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/5-ly-do-ban-nen-chon-decal-dan-kinh-cho-khong-gian-song/"
+    },
+    {
+      "slug": "loi-ich-cua-decal-dan-kinh-chong-nang",
+      "id": 32210,
+      "title": "Lợi ích của decal dán kính chống nắng",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2025-10-08T00:13:59+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/loi-ich-cua-decal-dan-kinh-chong-nang/"
+    },
+    {
+      "slug": "top-4-mau-decal-3d-dan-kinh-cao-cap",
+      "id": 32250,
+      "title": "Top 4 mẫu Decal 3D dán kính cao cấp cho không gian sang trọng",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2025-10-09T00:12:55+07:00",
+      "replaced": false,
+      "images": 9,
+      "originalUrl": "https://idecal.vn/top-4-mau-decal-3d-dan-kinh-cao-cap/"
+    },
+    {
+      "slug": "cat-decal-vi-tinh-va-ung-dung",
+      "id": 32479,
+      "title": "Cắt Decal vi tính là gì? Ứng dụng cắt Decal",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Góc chia sẽ"
+      ],
+      "date": "2025-10-13T11:06:22+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/cat-decal-vi-tinh-va-ung-dung/"
+    },
+    {
+      "slug": "bao-gia-decal-mo-dan-kinh-van-phong-thang-11-2025",
+      "id": 33477,
+      "title": "Báo giá Decal mờ dán kính văn phòng tháng 11/2025",
+      "category": "bao-gia",
+      "originalCategories": [
+        "Decal kính văn phòng"
+      ],
+      "date": "2025-11-02T21:00:12+07:00",
+      "replaced": false,
+      "images": 1,
+      "originalUrl": "https://idecal.vn/bao-gia-decal-mo-dan-kinh-van-phong-thang-11-2025/"
+    },
+    {
+      "slug": "loi-ich-cua-decal-mo-dan-kinh-van-phong",
+      "id": 33583,
+      "title": "Lợi ích của Decal mờ dán kính văn phòng – Tăng riêng tư & thẩm mỹ",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal kính văn phòng"
+      ],
+      "date": "2025-11-03T13:06:37+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/loi-ich-cua-decal-mo-dan-kinh-van-phong/"
+    },
+    {
+      "slug": "bao-gia-decal-chong-nang-phim-cach-nhiet-dan-kinh-2025",
+      "id": 33603,
+      "title": "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2025",
+      "category": "bao-gia",
+      "originalCategories": [
+        "Phim cách nhiệt dán kính"
+      ],
+      "date": "2025-11-03T22:35:24+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/bao-gia-decal-chong-nang-phim-cach-nhiet-dan-kinh-2025/"
+    },
+    {
+      "slug": "gioi-thieu-phim-trang-tri-kinh-cao-cap-pov-tu-han-quoc",
+      "id": 29041,
+      "title": "Giới thiệu Phim trang trí kính cao cấp POV từ Hàn Quốc",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Phim dán nội thất"
+      ],
+      "date": "2025-06-12T12:33:08+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/gioi-thieu-phim-trang-tri-kinh-cao-cap-pov-tu-han-quoc/"
+    },
+    {
+      "slug": "decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao",
+      "id": 29048,
+      "title": "Decal Avery – Giải pháp vật liệu cao cấp cho ngành in ấn quảng cáo",
+      "category": "so-sanh-vat-lieu",
+      "originalCategories": [
+        "Góc chia sẽ",
+        "Vật liệu Decal in ấn"
+      ],
+      "date": "2025-06-12T14:11:02+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao/"
+    },
+    {
+      "slug": "dich-vu-decal-show-window-bien-cua-hang-thanh-tam-diem-hut-khach",
+      "id": 33722,
+      "title": "Dịch Vụ Decal Show Window: BIẾN CỬA HÀNG THÀNH TÂM ĐIỂM HÚT KHÁCH!",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Decal quảng cáo"
+      ],
+      "date": "2025-11-05T13:07:27+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/dich-vu-decal-show-window-bien-cua-hang-thanh-tam-diem-hut-khach/"
+    },
+    {
+      "slug": "loi-ich-cua-phim-dan-noi-that",
+      "id": 33752,
+      "title": "Lợi ích của phim dán nội thất",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Phim dán nội thất"
+      ],
+      "date": "2025-11-08T22:26:24+07:00",
+      "replaced": false,
+      "images": 2,
+      "originalUrl": "https://idecal.vn/loi-ich-cua-phim-dan-noi-that/"
+    },
+    {
+      "slug": "decal-chong-nang-loai-nao-tot-nhat-2025",
+      "id": 33813,
+      "title": "Decal Chống Nắng Loại Nào Tốt Nhất 2025? Phân Tích & Báo Giá Chi Tiết",
+      "category": "bao-gia",
+      "originalCategories": [
+        "Chưa phân loại"
+      ],
+      "date": "2025-11-12T23:19:23+07:00",
+      "replaced": false,
+      "images": 10,
+      "originalUrl": "https://idecal.vn/decal-chong-nang-loai-nao-tot-nhat-2025/"
+    },
+    {
+      "slug": "199-mau-decal-dan-kinh-trang-tri-quan-cafe-dep",
+      "id": 33822,
+      "title": "199+ mẫu Decal dán kính trang trí quán cafe đẹp – sáng tạo – thu hút",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Mẫu thiết kế",
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2025-11-12T23:39:40+07:00",
+      "replaced": false,
+      "images": 17,
+      "originalUrl": "https://idecal.vn/199-mau-decal-dan-kinh-trang-tri-quan-cafe-dep/"
+    },
+    {
+      "slug": "bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi",
+      "id": 34197,
+      "title": "Báo giá Thi công dán Decal kính mờ trọn gói - Cập nhật tháng 04/2026",
+      "category": "bao-gia",
+      "originalCategories": [
+        "Báo giá"
+      ],
+      "date": "2025-11-20T12:00:00+07:00",
+      "replaced": false,
+      "images": 0,
+      "originalUrl": "https://idecal.vn/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/"
+    },
+    {
+      "slug": "tuyen-chon-25-mau-decal-dan-kinh-khach-san-sang-trong-nang-tam-khong-gian",
+      "id": 34308,
+      "title": "25+ Mẫu Decal dán kính Khách sạn sang trọng, nâng tầm không gian.",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Mẫu thiết kế"
+      ],
+      "date": "2025-12-02T22:49:13+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/tuyen-chon-25-mau-decal-dan-kinh-khach-san-sang-trong-nang-tam-khong-gian/"
+    },
+    {
+      "slug": "mau-decal-mo-dan-kinh-van-phong-hr",
+      "id": 34610,
+      "title": "Nâng Tầm Thương Hiệu Với 3 Mẫu Decal Mờ Dán Kính Văn Phòng HR",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Decal kính văn phòng",
+        "Mẫu thiết kế"
+      ],
+      "date": "2026-01-13T23:41:00+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/mau-decal-mo-dan-kinh-van-phong-hr/"
+    },
+    {
+      "slug": "decal-dan-san-quang-cao",
+      "id": 34640,
+      "title": "Decal dán sàn Quảng Cáo - Giải pháp Marketing 3D Ấn tượng & Giá rẻ",
+      "category": "mau-thiet-ke",
+      "originalCategories": [
+        "Decal quảng cáo",
+        "Ý tưởng trang trí Decal"
+      ],
+      "date": "2026-01-14T00:28:56+07:00",
+      "replaced": false,
+      "images": 3,
+      "originalUrl": "https://idecal.vn/decal-dan-san-quang-cao/"
+    },
+    {
+      "slug": "cach-thao-decal-dan-kinh-nhanh-sach",
+      "id": 35594,
+      "title": "Cách tháo Decal dán kính Nhanh – Sạch",
+      "category": "huong-dan",
+      "originalCategories": [
+        "Góc chia sẽ"
+      ],
+      "date": "2026-03-27T21:44:16+07:00",
+      "replaced": false,
+      "images": 4,
+      "originalUrl": "https://idecal.vn/cach-thao-decal-dan-kinh-nhanh-sach/"
+    }
+  ],
+  "assets": {
+    "https://idecal.vn/wp-content/uploads/2022/05/6-Vat-lieu-op-bep-duoc-ua-chuong-nam-2023-1024x861.png": "/images/blog-wordpress/f671bba1b65d1c394f01.png",
+    "https://idecal.vn/wp-content/uploads/2022/05/Dan-phim-cach-nhiet-chong-nang-Quan-2-1024x732.jpg": "/images/blog-wordpress/3604c06899961d0583d0.jpg",
+    "https://idecal.vn/wp-content/uploads/2022/05/Dan-phim-cach-nhiet-gieng-troi-1024x773.jpg": "/images/blog-wordpress/711e052da151ae36a5f4.jpg",
+    "https://idecal.vn/wp-content/uploads/2022/05/Thay-trang-Decal-dan-kinh-van-phong-TOYOTA-Ly-thuong-kiet-1024x768.jpg": "/images/blog-wordpress/a80f02cecf744a9e79de.jpg",
+    "https://idecal.vn/wp-content/uploads/2022/05/Thay-tranh-PP-backdrop-TOYOTA-Ly-thuong-kiet.jpg": "/images/blog-wordpress/e03b8aafe9b73a813947.jpg",
+    "https://idecal.vn/wp-content/uploads/2022/05/Thi-cong-Decal-luoi-dan-kinh-mat-tien-TOYOTA-Tan-Binh-1012x1024.jpg": "/images/blog-wordpress/a3e5f7e43aa505025e24.jpg",
+    "https://idecal.vn/wp-content/uploads/2023/12/Decal-cat-chu-dan-kinh-Nha-Khoa.jpg": "/images/blog-wordpress/37be09a362270d3a2d5b.jpg",
+    "https://idecal.vn/wp-content/uploads/2023/12/Decal-dan-kinh-nha-khoa-quang-cao-dich-vu.jpg": "/images/blog-wordpress/60d7dd93e8956ca7c9df.jpg",
+    "https://idecal.vn/wp-content/uploads/2023/12/Kich-thuoc-Poster-chuan-va-pho-bien-hien-nay.png": "/images/blog-wordpress/c7fa5df0d4c5f66b3c3d.png",
+    "https://idecal.vn/wp-content/uploads/2023/12/Thi-cong-Decal-luoi-dan-kinh-mat-tien-nha-khoa-1024x621.jpg": "/images/blog-wordpress/c52fe5cb4f71e9eb6fa7.jpg",
+    "https://idecal.vn/wp-content/uploads/2023/12/Ti-le-kich-thuoc-POster-dan-tuong-1024x768.png": "/images/blog-wordpress/acece84ae3e1e7c791f8.png",
+    "https://idecal.vn/wp-content/uploads/2023/12/Ung-dung-Decal-dan-kinh.jpg": "/images/blog-wordpress/90739e01dc829e2cf50a.jpg",
+    "https://idecal.vn/wp-content/uploads/2023/12/decal-dan-bep-hinh-mo-ta-3-01-52fc2bd9-a591-4ff6-9a45-0c780f311104-1024x1024.webp": "/images/blog-wordpress/90965593de33f792f12f.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/ChatGPT-Image-22_23_18-17-thg-4-2025.png": "/images/blog-wordpress/889e0f2aa0237500c415.png",
+    "https://idecal.vn/wp-content/uploads/2024/03/Decal-luoi-nhin-1-chieu-e1746707306779.jpg": "/images/blog-wordpress/897173456ecc6b860c25.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-cat-hoa-tiet-song.webp": "/images/blog-wordpress/bc0a0905d0d32a025d70.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/Lam-sach-be-mat-kinh-truoc-khi-dan-Decal-1024x640.jpg": "/images/blog-wordpress/790379990d0b74dd7926.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/03/Thi-cong-dan-Decal-luoi-Showroom-Suzuki-Sai-Gon-ngoi-sao-Quoc-lo-13-1-1024x768.jpg": "/images/blog-wordpress/e12eee52016ab9fbc90e.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/03/decal-cat-chu-logo-spa.webp": "/images/blog-wordpress/ec8c3f2d60cfc0a056e4.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/decal-cat-chu-vi-tinh-cho-spa.webp": "/images/blog-wordpress/c6b6d29c81f9d6218458.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/decal-dan-kinh-cho-mat-tien-spa.webp": "/images/blog-wordpress/fd41c08622a15d99a225.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/decal-dan-kinh-cua-ra-vao-thong-tin-mo-cua-hotline-1.webp": "/images/blog-wordpress/581014e7068315a32649.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/decal-dan-kinh-in-dich-vu-tone-mau-trang-cho-spa.webp": "/images/blog-wordpress/c89646e45e07c45a79ed.webp",
+    "https://idecal.vn/wp-content/uploads/2024/03/decal-trang-in-slogan-khung-hoa-nhe.webp": "/images/blog-wordpress/f71168071f778e55e744.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/2-2-300x225-1.jpg": "/images/blog-wordpress/3fb10beb8beeb26055f1.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/98294242_102130701517482_4812038052283154432_n-1024x473.jpg": "/images/blog-wordpress/2221f3a2b69e7ee54038.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Asset-1.webp": "/images/blog-wordpress/301bb51a379fab64be20.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Asset-2.webp": "/images/blog-wordpress/f7c0ee3983585a0533f4.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Bang-mau-Decal-Oracal-651.jpg": "/images/blog-wordpress/b01b8d11953b211d7f50.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Cac-loai-Decal-van-go-1024x1024.webp": "/images/blog-wordpress/4b74d7abe9d7e7501297.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Cat-dan-Decal-trang-tri.jpg": "/images/blog-wordpress/c01257b561c24825ca37.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Cat-decal-1024x576.jpg": "/images/blog-wordpress/7520db8aa29a926a739e.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Cat-decal-thua.jpg": "/images/blog-wordpress/fd23b2279315447f892c.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Chat-lieu-PP-trong-nha-dung-de-thi-cong-dan-PP-trang-tri.jpg": "/images/blog-wordpress/05840768a42f4b57f39a.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Chu-Decal-Welcome.webp": "/images/blog-wordpress/0772a48449deecb13b19.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Chu-decal-dan-kinh-gioi-thieu-dich-vu-Nail.png": "/images/blog-wordpress/07b9f773164505ef3105.png",
+    "https://idecal.vn/wp-content/uploads/2024/04/Cong-trinh-thi-cong-dan-Decal-mo-hoa-tiet-hoa-bo-cong-anh.png": "/images/blog-wordpress/e4ab93305997997447e4.png",
+    "https://idecal.vn/wp-content/uploads/2024/04/Decal-in-hinh-kim-cuong.jpg": "/images/blog-wordpress/f47dea5dd928bea1e81d.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Decal-luoi-dan-kinh-tiem-Nail-1024x683.webp": "/images/blog-wordpress/3464cc8b5b218f0e61e6.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Decal-oracal-651.jpg": "/images/blog-wordpress/396c0ea2195d65d7fdca.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Dich-vu-in-Decal-dan-kinh-kho-lon.webp": "/images/blog-wordpress/7f2c7e512d69365f8934.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Huong-dan-dan-Decal-van-go-len-nhieu-be-mat-1.jpg": "/images/blog-wordpress/787a236365a0a416b384.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Mau-Decal-mo-dan-kinh-hinh-Tam-giac-1024x773.jpg": "/images/blog-wordpress/0a802c29b586f0a8e1cf.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Phieu-bao-hanh-Dich-vu-Decal-edited-1-e1713694015132-1024x795.jpg": "/images/blog-wordpress/1fae6bb32d8ec15b5adc.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Poster-Decal-dan-kinh-tiem-Nail-chao-mung-khach-hang.jpeg": "/images/blog-wordpress/872cc97cb108460eb905.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Retail-display_nikon-display-v1.webp": "/images/blog-wordpress/28982b0d77215847b005.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/Thi-cong-dan-PP-1024x768.jpg": "/images/blog-wordpress/6635d8cd4490eaeac422.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Thi-cong-dan-PP-quan-2-1024x821.jpg": "/images/blog-wordpress/48bcf199ad288bb69ad7.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Thi-cong-dan-PP-quan-Binh-Thanh-1024x752.jpg": "/images/blog-wordpress/e68efd308e633207abc3.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Thi-cong-dan-PP-tranh-backdrop-Quan-Tan-Binh-1024x768.jpg": "/images/blog-wordpress/fadc3360257e1b8959a9.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Tran-tri-show-window-nhan-hang-Asics.jpg": "/images/blog-wordpress/32f115fb5f2db4da55cc.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Trang-tri-kinh-tiem-nail-dep-voi-decal.jpg": "/images/blog-wordpress/a88ebefc92c7ddb8b3e4.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/Tranh-dan-kinh-tiem-Nails.png": "/images/blog-wordpress/a92bb39ad2372dd001c0.png",
+    "https://idecal.vn/wp-content/uploads/2024/04/Tranh-standee-PP-can-formex.jpg": "/images/blog-wordpress/86453a151f8f5434a5d0.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/decal-dan-kinh-in-hinh-ban-tay-dep-1.webp": "/images/blog-wordpress/d614da6fef52c7604ff2.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/decal-dan-kinh-in-logo-va-ten-cua-tiem-nail.webp": "/images/blog-wordpress/e2d093a04366c77fd693.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/decal-dan-kinh-mo-in-lo-son-va-ban-tay-dep-cho-tiem-nail-1-1024x558.webp": "/images/blog-wordpress/5e04ab6786491e66432e.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/decal-dan-kinh-mo-ta-dich-vu-tiem-nail-1024x449.webp": "/images/blog-wordpress/9f4c8ee25382582fe19c.webp",
+    "https://idecal.vn/wp-content/uploads/2024/04/frosted-02.jpg": "/images/blog-wordpress/d4d716e2f7928db7697e.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/in-pp_53670657564_o-1024x576.jpg": "/images/blog-wordpress/8c68e1ac54c1251570bc.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/in-tranh-pp_53670755755_o-1024x576.jpg": "/images/blog-wordpress/00faf2f76af41f9c1b1e.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/store-window-decals.jpg": "/images/blog-wordpress/5c3a0e9d4ab6e583580e.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/thi-cng-dn-pp-backdrop_53401799635_o-1024x768.jpg": "/images/blog-wordpress/1d07139794fce892b6ec.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/thi-cng-dn-pp-trang-tr-knh_53670755615_o-1024x768.jpg": "/images/blog-wordpress/79aa85fe6e26d3102218.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/thi-cng-dn-pp_53401555833_o-1024x768.jpg": "/images/blog-wordpress/7bf711e81278c706f57c.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/thi-cng-dn-pp_53669428502_o-1024x767.jpg": "/images/blog-wordpress/9983df4d18b188f9983d.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/thi-cng-dn-pp_53670657589_o-1024x768.jpg": "/images/blog-wordpress/54f9bec979de24f53fc4.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/tong-hop-20-mau-ve-tranh-tuong-tiem-nail-dep-cuon-hut-488-8.jpg": "/images/blog-wordpress/b60e662caa0805681f21.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z1659525861872_041_b57b74510370f3204184b39e1bc6d055-1-1536x1152-1-1024x768.jpg": "/images/blog-wordpress/5cb497d099dfa4aa5998.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z3648136260982_c39824ef434b7aa99b52a0dcf966c9fd-1024x767.jpg": "/images/blog-wordpress/277d63b620591d9397a0.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z3648136304148_2627a838433f785687837f2dcc2d7c6d-1024x767.jpg": "/images/blog-wordpress/a1450f3f7c81bcf2afd8.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z3648136309680_5831d09d5f352a1000ff9f7268455ce6-1024x767.jpg": "/images/blog-wordpress/63242cc436408c4aad71.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z4216912857232_41663dbca94ace133832badfaff0c8d4-1536x1152-1-1024x768.jpg": "/images/blog-wordpress/7d8add1557bcdf655bfb.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z4981253248945_1bae6e446284a3b4831a90efd19cf0c7_53400444157_o-823x1024.jpg": "/images/blog-wordpress/1549463424b8229c1bc4.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z4981255938850_3db14f0ac16a6ffc62f5e97cc6107e8b_53401560428_o-1024x768.jpg": "/images/blog-wordpress/c57dd0ffb99d4fd435cb.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/04/z5366369730678_e2248efe56d2d7c3680775133aea8da3-460x1024.jpg": "/images/blog-wordpress/ad0c86f192e97227d40f.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/05/Dich-vu-in-PP-gia-re-giao-nhanh.jpg": "/images/blog-wordpress/3806b7f8fae9b46630b7.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/05/Dung-cu-dan-decal-kinh-chuyen-nghiep.jpg": "/images/blog-wordpress/c3e6d0389f894b239028.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/05/Huong-dan-dan-Decal-chong-nang-edited.jpg": "/images/blog-wordpress/069411d2855a43d7aafd.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/05/Thi-cong-Mo-hinh-quang-cao-POSM-–-PP-can-formex-1024x576.jpg": "/images/blog-wordpress/bdb4f17a4638117c019f.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/05/Thiet-ke-bannner-dan-kinh-nha-khoa.jpg": "/images/blog-wordpress/710611577177e144b069.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/Dan-phim-cach-nhiet-mau-khoi-dam-1024x576.jpg": "/images/blog-wordpress/37827e186f51e0c5b487.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/Dan-phim-cach-nhiet-mau-khoi-dam.jpg": "/images/blog-wordpress/f4e5641a33ef86dc58fd.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/Decal-mo-3D-trang-tri-vach-ngan-kinh.jpg": "/images/blog-wordpress/3bf98c03de9c76be9446.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/Decal-mo-dan-k-van-phong-cat-LOGO.webp": "/images/blog-wordpress/4f6fedc53619c856fb43.webp",
+    "https://idecal.vn/wp-content/uploads/2024/10/Decal-mo-dan-kinh-in-LOGO.webp": "/images/blog-wordpress/5b312ecd440aa6467f23.webp",
+    "https://idecal.vn/wp-content/uploads/2024/10/Thi-cong-dan-Decal-luoi-OGA.webp": "/images/blog-wordpress/2c96f7ef9cc8e0192eb1.webp",
+    "https://idecal.vn/wp-content/uploads/2024/10/fb_img_17157490458783605700033094932430-800x800.jpg": "/images/blog-wordpress/83615341ccf826cda29a.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/fb_img_17293650358104015468920058445814-800x800.jpg": "/images/blog-wordpress/7a69ae0a0ef89c36cd3d.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/fb_img_17293650455323787442671883531828-800x800.jpg": "/images/blog-wordpress/e3d325e6a5b1b482e493.jpg",
+    "https://idecal.vn/wp-content/uploads/2024/10/glass_static_Fallingleaves_Fenster_V_5.jpg": "/images/blog-wordpress/a075bb725d741e12076d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/03/Decal-dan-kinh-chuyen-sac.jpg": "/images/blog-wordpress/4d545a696b34d863b499.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/03/Decal-mo-in-hoa-tiet-hoa-la-xanh-thien-nhien-.jpg": "/images/blog-wordpress/0f6f3132a2cec34974e0.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/03/Dich-vu-dan-Decal-kinh-mo-van-phong-TP-HCM-1024x559.png": "/images/blog-wordpress/38a1f217addf11a15d94.png",
+    "https://idecal.vn/wp-content/uploads/2025/03/Mau-Decal-dan-kinh-van-phong-in-phong-canh-Nhat-ban.jpg": "/images/blog-wordpress/7bc7a1bc31c60c0dbe2b.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-chuyen-sac-1-chieu-mau-xanh.webp": "/images/blog-wordpress/1f3e36a4caf2f34afe31.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-chuyen-sac-1-dau.webp": "/images/blog-wordpress/29bc729bda2094936f2f.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-chuyen-sac-nhieu-mau-3.webp": "/images/blog-wordpress/e81b1a5f4396c099fb1d.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-hoa-tiet-hinh-chu-nhat.webp": "/images/blog-wordpress/0437be01eb3a223f39a2.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-hoa-tiet-la.webp": "/images/blog-wordpress/77c809616b73999e16fd.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-hoa-tiet-luc-giac-cho-van-phong.webp": "/images/blog-wordpress/69c5d822b5ced15f48bb.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-in-nghe-thuat-nen-xanh.webp": "/images/blog-wordpress/06437bbb405d45bfcde5.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-in-nhieu-mau.webp": "/images/blog-wordpress/151bdf59946d25056cfa.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-in-y-tuong-cho-cong-ty.webp": "/images/blog-wordpress/c15f843361bc339da09c.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-in-y-tuong-cong-ty-1-1024x768.webp": "/images/blog-wordpress/33c4d271e7d6440ea1da.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-mo-cat-logo-am-ban.webp": "/images/blog-wordpress/4eea524c52522eac7e33.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-mo-cat-slogan-chu-chim.webp": "/images/blog-wordpress/94cdf979e7b722b6171d.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-mo-cat-soc-doc.webp": "/images/blog-wordpress/bf61b10e917654c6868e.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-mo-hoan-toan.webp": "/images/blog-wordpress/acbd6bc85d5691b5c207.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-mo-soc-cheo-2.webp": "/images/blog-wordpress/797ca75c2b17c2ffb59a.webp",
+    "https://idecal.vn/wp-content/uploads/2025/03/decal-dan-kinh-thong-tin-cong-ty-1024x997.webp": "/images/blog-wordpress/98f0a43a8305f2b53869.webp",
+    "https://idecal.vn/wp-content/uploads/2025/04/20180628_105211281291441435461130364274-1024x576.jpg": "/images/blog-wordpress/c194ed089deea23e5704.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/20180628_120214281298643521070381457537-1024x576.jpg": "/images/blog-wordpress/efae0ca4cf891733a89c.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/20180628_120219281291847007400122400661.jpg": "/images/blog-wordpress/d0f42badc0edb8fcfd3e.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/20180628_1202395056293138738989075-1024x576.jpg": "/images/blog-wordpress/0a3d000ab69c9c000036.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/3-buoc-dat-in-decal-don-gian.png": "/images/blog-wordpress/3bd40ec6f4c17e45f37d.png",
+    "https://idecal.vn/wp-content/uploads/2025/04/53366025834_688dd135b1_o2122047762618902065.jpg": "/images/blog-wordpress/8530569cae97334a5d88.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Chuyen-gia-thi-cong-Decal-dan-kinh.jpg": "/images/blog-wordpress/0613c3f642810cceb725.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Dan-Decal-thang-may-quang-cao-dich-vu-Lalamove.jpg": "/images/blog-wordpress/a2f9f181cefe59b99fd7.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Dan-phim-noi-that-thang-may.jpg": "/images/blog-wordpress/4d5fe254a5aa077c53e1.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Decal-dan-kinh-song-3D-mau-tra-song-to-trong-suot.webp": "/images/blog-wordpress/efcd772c81092c73f88f.webp",
+    "https://idecal.vn/wp-content/uploads/2025/04/Decal-dan-kinh-tiem-Nails-hoa-tiet-hoa-sen-edited.jpg": "/images/blog-wordpress/4d4e2f70cfd97f32375a.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Decal-mo-dan-kinh-phong-tam-hoa-tiet-hinh-tron.jpg": "/images/blog-wordpress/9798b14ac41e2b845232.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Decal-mo-dan-kinh-phong-tam-nghe-thuat-1024x1024.webp": "/images/blog-wordpress/a143b94405d974392a21.webp",
+    "https://idecal.vn/wp-content/uploads/2025/04/Decal-phim-dan-kinh-trang-tri-cua-so.jpg": "/images/blog-wordpress/d7c75d283559f69999ce.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Decal-trong-suot-dan-kinh-quang-cao-Spa.jpg": "/images/blog-wordpress/b2e3d4c497a603414a4c.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Dich-vu-dan-Decal-thang-may-cho-chien-dich-quang-cao.jpg": "/images/blog-wordpress/dd5df887a7c23883100d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Dich-vu-in-Decal-chat-luong-cao-tai-iDecal-1.jpg": "/images/blog-wordpress/2acb04f1463ebd16e33e.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Dich-vu-in-Decal-luoi-gia-re-HCM.jpg": "/images/blog-wordpress/a71351a0cc363f0c6c7d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/H35f5c5b5b80f4a3b8023a1d4a54aa4807.webp": "/images/blog-wordpress/690e628eb5c51878cd4d.webp",
+    "https://idecal.vn/wp-content/uploads/2025/04/IMG_20250410_162149.jpg": "/images/blog-wordpress/53fe9e529d54b9b0f20f.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Mau-Decal-dan-kinh-cho-phong-tam-hien-dai.jpg": "/images/blog-wordpress/02ed0efd11f7159e83ce.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Thi-cong-Decal-luoi-1024x768.jpeg": "/images/blog-wordpress/b0e8ec57a692f9c20fb4.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Thi-cong-da-phim-PPF-mat-ban-1024x767.jpg": "/images/blog-wordpress/eddce8573d608eb574e8.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Thi-cong-da-phim-PPF-mat-ban.jpg": "/images/blog-wordpress/4b073cf41688488caca1.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Thi-cong-dan-Decal-kinh-VM-cho-cua-hang-The-Blue-Tshirt-tai-Quan-1-992x1024-1.jpg": "/images/blog-wordpress/9da6d4f7203013119d9d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/Thi-cong-dan-phim-PPF-bao-ve-mat-ban-da-marble-1024x568.jpg": "/images/blog-wordpress/37a2bca4deb64469d5e6.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/fb_img_17433510982904878530289861848991-1024x768.jpg": "/images/blog-wordpress/c2be31c51b653fecbce2.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/fb_img_17446448130132443192815503925562.jpg": "/images/blog-wordpress/e17ed2e555ed62e01f60.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/fb_img_17448744268382447741069917152571-990x1024.jpg": "/images/blog-wordpress/7be106c66bb3cd80fd95.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/fb_img_17453010404004408529490327810834.jpg": "/images/blog-wordpress/77ed2733d3a5c01dae1e.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/film-dan-noi-that-trang-tri-thang-may-nhat-ban.jpg": "/images/blog-wordpress/9dda0d44bac993d75b30.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745407965052_17454648492371266209741309130906-768x1024.jpg": "/images/blog-wordpress/b4e737c63ccf4c47df77.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745407965065_17454648495394865252677859141350-768x1024.jpg": "/images/blog-wordpress/32270e276378fb659b71.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745407965077_17454648498028237468585558422397-768x1024.jpg": "/images/blog-wordpress/bbbc152cc9b88b34577e.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745407965088_1745464850078597630719988663940-768x1024.jpg": "/images/blog-wordpress/583505e0d22598bc61b8.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745564931779_17455649964573469445206769937522-1024x485.jpg": "/images/blog-wordpress/0537b679fcc4f7a666c2.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745564931779_17455649964573469445206769937522.jpg": "/images/blog-wordpress/0db356a704cd8479dea0.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_1745564931881_17455650000898672992763196365193-1024x485.jpg": "/images/blog-wordpress/180468cc7dff1b6709ab.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20210519_154652444409871123810208-1024x768.jpg": "/images/blog-wordpress/6c760e910e87e9a5bda4.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20210519_154654281291594334188898891195-1024x768.jpg": "/images/blog-wordpress/3d929b90247f9897847b.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20210519_154654281291594334188898891195.jpg": "/images/blog-wordpress/216f131adaf3f33086df.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20220728_16132028129739511021287448555-1024x768.jpg": "/images/blog-wordpress/722ef49ef6b82e8c00a0.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20220728_16132028129739511021287448555.jpg": "/images/blog-wordpress/17f435b41346c68e0bfa.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20230218_212035281297915304526837471463-1024x461.jpg": "/images/blog-wordpress/c9cf5db36039c7f1f2fa.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20250316_1203081462932628873001278-1024x768.jpg": "/images/blog-wordpress/6ab4a6c869bae20394ff.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20250423_130916905975346147409865.jpg": "/images/blog-wordpress/d19c3a97acd27741145a.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20250425_1056588371239121000590284-1024x767.jpg": "/images/blog-wordpress/9f0bb1ac1b4403e4c7b9.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/img_20250425_1056598733077877356419-1024x767.jpg": "/images/blog-wordpress/d22ddf681e07e283ea8d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/04/in-decal-quang-cao.webp": "/images/blog-wordpress/76d0d0b04bb1e4ee33ee.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/20200801-phim-noi-that-van-go-sangetsu-reatec-tc-series-105399386056043805499.jpeg": "/images/blog-wordpress/66bcefb73f9c99930fc5.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Boc-giay-Decal-mo-khoi-lop-nilon-edited.jpg": "/images/blog-wordpress/371ce141ada7d5371900.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Bodaq-UMI01-Shiny-Metal-6-1024x768-1.jpg": "/images/blog-wordpress/8b8186f03cb8b5c77b51.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Decal-dan-kinh-chu-tiem-Nail.jpg": "/images/blog-wordpress/9cf76e5589993ec1ebd5.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Huong-dan-dan-phim-noi-that-cho-tu-bep-1024x576.webp": "/images/blog-wordpress/b9dc9270d07b7e82d5f2.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/Mat-ben-trong-Decal-luoi-e1759392370460.jpg": "/images/blog-wordpress/526274a73ab18914e926.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Mat-ben-trong-Decal-luoi-edited.jpg": "/images/blog-wordpress/748acdbe16f5f7c04290.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Mien-phi-thiet-ke-Decal-mo-dan-kinh-van-phong.jpg": "/images/blog-wordpress/f42ec3bd61de37b0411f.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/Thi-cong-Decal-dan-kinh-van-phong-chuyen-nghiep.webp": "/images/blog-wordpress/aa230623b9a211131c99.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/Vi-du-dien-hinh-ve-mau-Decal-mo-dan-kinh-van-phong.jpg": "/images/blog-wordpress/b56e1d45ffe5e703cffe.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/chua_co_ten__1200_x_630_px__d20a3def7fb14a9587ca7cd67e27ac76_1024x10245583132236955828505.png": "/images/blog-wordpress/a5469e65d437f4af2054.png",
+    "https://idecal.vn/wp-content/uploads/2025/05/decal-dan-kinh-in-hinh-ban-tay-dep2.webp": "/images/blog-wordpress/95e41a0eb0f2b7cd0683.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/decal-dan-kinh-tiem-nail.webp": "/images/blog-wordpress/46ed84a270b667e7534e.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/decal-gach-bong-hoa-tiet-den-trang838487421988322601.jpeg": "/images/blog-wordpress/cc30724c811d860fee74.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/decal-gach-bong-hoa-tiet-hoa-xanh-hg3710438419848546304.jpeg": "/images/blog-wordpress/78c14dbf752f5cb0fe3a.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/decal-luoi-in-theo-thiet-ke-33192572152172738953.jpg": "/images/blog-wordpress/906f228966d5f1bbf4bf.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_1668680855339281298258606158970614825-edited.jpg": "/images/blog-wordpress/5963a657f21e374c136a.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_1745944220742271987222122510569-1024x515.jpg": "/images/blog-wordpress/e33a9e226ec38bedd36b.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_1745944220742271987222122510569-edited.jpg": "/images/blog-wordpress/44bf52004309693ea53b.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17459442360203571891267230321303-1024x768.jpg": "/images/blog-wordpress/98712434a7fac4a5bee6.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17462488060899028820686006952477-768x1024.jpg": "/images/blog-wordpress/29ad7356e267184037ea.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17462488081915497419209520169940-768x1024.jpg": "/images/blog-wordpress/228fcb927438dc80ccfc.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_174624881067618029545487148588-768x1024.jpg": "/images/blog-wordpress/85a12539cbf12336a8f5.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17462488124321829767366862255493-768x1024.jpg": "/images/blog-wordpress/5fa1b288aeea7658f120.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17462488141822259046042228793437-768x1024.jpg": "/images/blog-wordpress/e55e4a5640ef1c903124.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17462488170484619845150766294193-768x1024.jpg": "/images/blog-wordpress/3003b9da53116ff3994d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17464351419527988746561476574289-1024x768.jpg": "/images/blog-wordpress/60b39942b409fbcf34ef.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17469457420628564263487379268550-1024x768.jpg": "/images/blog-wordpress/d2a2ff35c2a5d38266f0.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/fb_img_17478012271498138033065024623452.jpg": "/images/blog-wordpress/353dc5683be069abf14b.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/iai-phap-tan-trang-nha-bep-voi-chi-phi-toi-uu-bang-phim-dan-noi-that-5.webp": "/images/blog-wordpress/1f25d8f5d3b170c488bf.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250310_2059017312679366667395421.jpg": "/images/blog-wordpress/d7bf10d8aa2bcae5aab8.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250430_000548233648958249699185-1024x767.jpg": "/images/blog-wordpress/f7b1e0ad3647e9ac40af.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250430_0006177712437118267162286-1024x792.jpg": "/images/blog-wordpress/49207e7faf5994529652.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250528_153047673410561252579784-1024x768.jpg": "/images/blog-wordpress/8d248a152981872453f0.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250529_1030427381841380906110735-1024x765.jpg": "/images/blog-wordpress/a64619d5e01e2e4392a8.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250529_1030541162098683161837179-1024x683.jpg": "/images/blog-wordpress/d2eef4dbf907f34daea7.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250529_1031046958020286567379811-1024x717.jpg": "/images/blog-wordpress/d297cfeb8b6fb9ec4919.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250529_1031144963077864362231786-1024x683.jpg": "/images/blog-wordpress/8bc68a96838f021db108.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/img_20250529_1031174004979414976878459.jpg": "/images/blog-wordpress/3cc00e3972dd98423480.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/in-decal-quang-cao-edited.webp": "/images/blog-wordpress/a62768385eeb641ad278.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/tC3A1c-dE1BBA5ng-decal-lC6B0E1BB9Bi7678964524400651778.jpg": "/images/blog-wordpress/afcd193ce7db4a4b2459.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/thi-cong-dan-decal-phong-game.webp": "/images/blog-wordpress/d283dc1e299d26e9cc7d.webp",
+    "https://idecal.vn/wp-content/uploads/2025/05/thi-cong-decal-luoi-dan-kinh-mat-tien-toyota-tan-binh-1012x10244033430693252705453-1.jpg": "/images/blog-wordpress/64b1f8e0cd60fdd5a882.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/05/z6637612703917_09f61cfefd31aaae161518aaabd9108b-1024x353.jpg": "/images/blog-wordpress/dbed0e3ebde0e1a64497.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/Bang-mau-Decal-Avery-dung-wrap-o-to-1024x682.jpg": "/images/blog-wordpress/3e3cce214f51bf09e48d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/Decal-Avery-Dennison-Xuyen-Sang-Lam-Bang-Hieu-Hop-Den-Quang-Cao.jpg": "/images/blog-wordpress/b495026061b615fa7418.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/Decal-mo-dan-kinh-tao-su-rieng-tu-cho-phong-tam-edited.webp": "/images/blog-wordpress/934857ef90bca0fa4fdf.webp",
+    "https://idecal.vn/wp-content/uploads/2025/06/Hinh-thuc-quang-cao-pho-bien-9-1.png": "/images/blog-wordpress/fee4e715ecb267bd3fb3.png",
+    "https://idecal.vn/wp-content/uploads/2025/06/Tan-trang-quay-Bar-voi-Decal-gach-bong-hoa-tiet-xanh-edited.jpg": "/images/blog-wordpress/47a00215235f2713708a.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/Thi-cong-Decal-luoi-cho-tiem-Banh-PIZZA-1024x576.webp": "/images/blog-wordpress/07ec9f4c81d88cf387a9.webp",
+    "https://idecal.vn/wp-content/uploads/2025/06/Thiet-ke-Banner-SALE-iDecal.jpg": "/images/blog-wordpress/802c78b29b7d450f1d61.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/avery-mpi-3803-decal-in-an-do-hoa-sac-net.jpg": "/images/blog-wordpress/e2439d04f899fa85b59c.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/bar-nha-hang-dung-gach-bong.jpg": "/images/blog-wordpress/45a28955dc11efabae92.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/decal-luoi-in-theo-thiet-ke-33192572152172738953-edited.jpg": "/images/blog-wordpress/06040dba7567992d21ca.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/06/trang-tri-quay-pha-che__1__2675b0bc907b4ea698e2286222ed327c.webp": "/images/blog-wordpress/54403e84c7b6aed10b70.webp",
+    "https://idecal.vn/wp-content/uploads/2025/06/z6679685108327_5c8c6cbb724c7809e84f0ffbf46b1faf-edited.jpg": "/images/blog-wordpress/f7ca6f0f043e714ccdad.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/08/Cat-decal-FB-COVER-1024x388.png": "/images/blog-wordpress/0fe725f5ba0ea45e58ce.png",
+    "https://idecal.vn/wp-content/uploads/2025/08/img.jpg": "/images/blog-wordpress/8310f13fc7ddebc0c8d3.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/09/Decal-dan-kinh-tiem-Nails-openclose-edited.jpg": "/images/blog-wordpress/0aa4d184d271a60efece.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/09/Decal-mo-cat-LOGO-1024x768.jpg": "/images/blog-wordpress/c81819bcb732b6dbbaee.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/09/Decal-mo-chuyen-sac-2-dau-dan-kinh-van-phong.jpg": "/images/blog-wordpress/218d6282235d9b155057.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/09/z6978623179412_d12a925b543472c5e4c913b7805ecd42-edited.jpg": "/images/blog-wordpress/d7c4279d31534f51a3b9.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/09/z6978623226952_8933b512698543f2ba21be9147f8d6f3.jpg": "/images/blog-wordpress/d3842a48a3a83612c2a1.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/10/35b60196ed2d7d353c195fa50405d1d9.jpg": "/images/blog-wordpress/eb9d73bceb59273713aa.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/10/BB_US_Blog_Best-Practices-for-Removing-Window-Decals-from-Glass-Without-Damage_02-1024x441-1.avif": "/images/blog-wordpress/0fe3ff86597a8f670cef.avif",
+    "https://idecal.vn/wp-content/uploads/2025/10/Dan-Decal-kinh-song-3D-cho-khu-vuc-cua-so.webp": "/images/blog-wordpress/26a32bc75d08b4055f0b.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Decal-dan-kinh-song-3D-cho-khu-vuc-bep.webp": "/images/blog-wordpress/02b22eea96fec8592b9f.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Decal-dan-kinh-song-3D-trong-suot-cho-vach-ngan.webp": "/images/blog-wordpress/c3093681bcd4a8593450.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Decal-dan-kinh-song-to.webp": "/images/blog-wordpress/08c7a2130b1b56a422bd.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Decal-dan-kinh-song-trong-suot.webp": "/images/blog-wordpress/e3e881ad6f3d0d84501c.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Decal-mo-dan-kinh-tao-su-rieng-tu-cho-phong-tam-edited.webp": "/images/blog-wordpress/20f8b26d26d8205a62b0.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Dich-vu-in-Decal-1024x470.webp": "/images/blog-wordpress/82ebd40ec6576a425320.webp",
+    "https://idecal.vn/wp-content/uploads/2025/10/Dich-vu-in-PP-gia-re-giao-nhanh-edited.jpg": "/images/blog-wordpress/6cdf14c941be9f2cbea4.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/10/z7079873118344_18f3a27516973a506a31d99f9051ab03-1024x682.jpg": "/images/blog-wordpress/3e08609cc61fda5bc1ed.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/10/z7079873161523_9423cdc51e0dc76f57e5c1696b9caf4b-1024x899.jpg": "/images/blog-wordpress/e0901cc506abb36382cd.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/71q08Q5V5L._AC_UF8941000_QL80_.jpg": "/images/blog-wordpress/e195794956a4204fe3ff.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/96a2d2695895b2a0c0e15a11e62f6d9864ab65a6-1000x1000-1.jpeg": "/images/blog-wordpress/451da1b6f54c65f97011.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/Asset-4.png": "/images/blog-wordpress/7a0b621ba5d22342ddef.png",
+    "https://idecal.vn/wp-content/uploads/2025/11/Asset-6.png": "/images/blog-wordpress/0312f1d1b78a66f0390b.png",
+    "https://idecal.vn/wp-content/uploads/2025/11/Bao-gia-Decal-chong-nang-phim-cach-nhiet-dan-kinh-2025-e1762183300182.png": "/images/blog-wordpress/5c5b0efbffd7d87c8ab4.png",
+    "https://idecal.vn/wp-content/uploads/2025/11/Bao-gia-thi-cong-decal-mo-dan-kinh-van-phong-1.jpg": "/images/blog-wordpress/1165789c1e3a94e122e4.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/Decal-chong-nang-cach-nhiet.jpg": "/images/blog-wordpress/e9d2d789cfd50192b0f0.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/Decal-chong-nang.webp": "/images/blog-wordpress/da0a82ba2f2d3216be32.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/Decal-mo-dan-kinh-quan-cafe.webp": "/images/blog-wordpress/95c72faf9fa4b4b80ad8.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/Gemini_Generated_Image_a62o58a62o58a62o.png": "/images/blog-wordpress/9a47d5ae53fb7a391b29.png",
+    "https://idecal.vn/wp-content/uploads/2025/11/H98c96df6792a4af2a9668f70160cb77aN.avif": "/images/blog-wordpress/6c03a3d18518bcb73ebc.avif",
+    "https://idecal.vn/wp-content/uploads/2025/11/Mau-Decal-dan-kinh-trang-tri-quan-cafe.jpg": "/images/blog-wordpress/bcf6bd4e4185b3990f8b.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/article_26357_1763536766.jpg": "/images/blog-wordpress/90a26a27a6cf934d0826.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/article_26358_1763536855.jpg": "/images/blog-wordpress/26e342c60ed7dfb32295.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-3d-giup-khong-gian-quan-ca-phe-thoang-dang-hon.webp": "/images/blog-wordpress/dfc0b2db4e9ab6d03f40.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-3d-giup-tao-chieu-sau-cho-khong-gian-quan-ca-phe.webp": "/images/blog-wordpress/d87242a60de141064ee1.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-cay-xanh-cho-quan-ca-phe-1.webp": "/images/blog-wordpress/08a4aa131f5c78b1b1b3.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-hoa-tiet-noel-cho-quan-ca-phe.webp": "/images/blog-wordpress/0fc35f65564981c98e34.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-in-hinh-ly-ca-phe-mau-nau-tram-1024x762.webp": "/images/blog-wordpress/56e0345e71d98fb05eb1.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-in-ly-ca-phe-mau-nau-1.webp": "/images/blog-wordpress/5209de4475a352fb6f60.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-mau-paster-cho-quan-ca-phe-731x1024.webp": "/images/blog-wordpress/d8782456bc9ef1e6c42d.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-phong-cach-retro-cho-quan-ca-phe.webp": "/images/blog-wordpress/2d1763cf7367791953b9.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-quan-ca-phe-phong-cach-retro.webp": "/images/blog-wordpress/17220f07112fc550bcf0.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-dan-kinh-trang-tri-quan-ca-phe-1-1024x751.webp": "/images/blog-wordpress/ebe7e183ba8d5b22acd3.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-trang-tri-quan-ca-phe.webp": "/images/blog-wordpress/4e7fcb2b0a40588410ea.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/decal-trong-in-hinh-nghe-thuat-kem-chu.webp": "/images/blog-wordpress/cfcda67e9ad372b9324b.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/quy-trinh-dat-dich-vu-dan-decal-kinh-mo-van-phong.jpg": "/images/blog-wordpress/6bcf678ef5bcec355f3e.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/s-l1200-3.jpg": "/images/blog-wordpress/7f687dbde6d6d3429a48.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7190601099643_609157a5eeed8cdb66eb04b41b24f5fe.jpg": "/images/blog-wordpress/04a5bbbd8fd06c53a96d.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7203655401852_45fdfb105b0278426a9e30281d12f1ab.jpg": "/images/blog-wordpress/2506f9ad0d4f7df05433.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7203655482271_d76003add1339ae4efb6fa9a7e0278f1-767x1024.jpg": "/images/blog-wordpress/252164ffecb65a531f7a.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7203655490605_3ae57bf2b71fc100875ed1cb5d0402a4-575x1024.jpg": "/images/blog-wordpress/430a6ca78352e999edad.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7750788141242_f1cb4b02e81b4707f6b8ffaa216c1bb4.webp": "/images/blog-wordpress/b1b046dbc1834b66962f.webp",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7750788146340_d572977ea4439a2d5b7847d1c0690f65-768x1024.webp": "/images/blog-wordpress/3ffc1e07a306af12950d.webp",
+    "https://idecal.vn/wp-content/uploads/2025/12/2-LesMuses_vitrophanie-lobby-hotel-luexe-decoration-sur-mesur-1024x1024-1.jpg": "/images/blog-wordpress/3b228ae70caab33b1f38.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/12/Asset-4-100.jpg": "/images/blog-wordpress/baed1f8bc3dc8a2c1607.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/12/Decal-dan-kinh-khach-san.jpg": "/images/blog-wordpress/eea3929be457eabd9750.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/12/Decal-dan-kinh.jpg": "/images/blog-wordpress/c6e37462b5fd5a881565.jpg",
+    "https://idecal.vn/wp-content/uploads/2025/12/z7369974417068_f2f70e1d716bbbbfba8cfb988c98d81e.jpg": "/images/blog-wordpress/fa43a98d26d2f06afa08.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Cong-ty-iDecal.jpg": "/images/blog-wordpress/f77fd1e4a72cf19febd0.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Decal-dan-san-1024x538.jpg": "/images/blog-wordpress/42173962ecf827b03223.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Decal-dan-san-hien-thi-thong-tin-SALE.jpg": "/images/blog-wordpress/694dd195e2e9ed307dde.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Decal-dan-san-huong-dan-loi-di.jpg": "/images/blog-wordpress/dc6d8abf64b33fe8f4bd.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Gemini_Generated_Image_lt04t7lt04t7lt04-1024x535.png": "/images/blog-wordpress/833ac0a08d7a6e78dee9.png",
+    "https://idecal.vn/wp-content/uploads/2026/01/Hoan-thien-thi-cong-Decal-dan-kinh-gia-lua-cho-vach-ngan-kinh-768x1024.jpg": "/images/blog-wordpress/9a93f781e66a7d11643c.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Mau-Decal-mo-dan-kinh-van-phong-cong-ty-nhan-su.jpeg": "/images/blog-wordpress/0cb88e0d7fbd6900b49b.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/01/Nang-Tam-Thuong-Hieu-Voi-Mau-Decal-Mo-Dan-Kinh-Cho-Van-Phong-HR.png": "/images/blog-wordpress/f7903ab799f8d43f7f6d.png",
+    "https://idecal.vn/wp-content/uploads/2026/01/thiet-ke-decal-mo-dan-kinh-van-phong-HR-theo-phong-cach-Pattern-hinh-hoc-Mang-luoi-ket-noi-e1768321712600.png": "/images/blog-wordpress/102337cee1d26530cd9f.png",
+    "https://idecal.vn/wp-content/uploads/2026/01/thiet-ke-decal-mo-dan-kinh-van-phong-HR-theo-phong-cach-Thiet-ke-Typographic-edited.png": "/images/blog-wordpress/91ae47fb01a56a2e822e.png",
+    "https://idecal.vn/wp-content/uploads/2026/01/thiet-ke-decal-mo-dan-kinh-van-phong-HR-theo-phong-cach-Toi-gian-voi-Logo-Slogan-edited.png": "/images/blog-wordpress/d23820a5869e93413158.png",
+    "https://idecal.vn/wp-content/uploads/2026/03/Banner-dan-kinh-edited.webp": "/images/blog-wordpress/46f10f9ae727bee0e338.webp",
+    "https://idecal.vn/wp-content/uploads/2026/03/Decal-dan-kinh-spa-sang-trong-edited.jpg": "/images/blog-wordpress/8323ae6b053c676cdd29.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/Dung-cu-ho-tro-thao-Decal-dan-kinh-hieu-qua.webp": "/images/blog-wordpress/240ef07b2b0193145cdc.webp",
+    "https://idecal.vn/wp-content/uploads/2026/03/Huong-dan-Cach-thao-decal-dan-kinh-nhanh-1024x682.jpg": "/images/blog-wordpress/0a8c79284cee93ddd3d2.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/Huong-dan-Cach-thao-decal-dan-kinh-nhanh-khong-de-lai-keo.jpg": "/images/blog-wordpress/2b601067ffbfa9bfc6a3.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/Lau-kinh-sau-khi-thao-Decal.jpg": "/images/blog-wordpress/e8c51151ef9c5164137e.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/Mau-Decal-mo-cat-hoa-tiet-tam-giac-cho-van-phong-cong-ty.jpg": "/images/blog-wordpress/6faed6dc34ae28e2bbd0.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/Say-Decal-1024x627.jpg": "/images/blog-wordpress/8643ee328752b3c18921.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/Thi-cong-dan-film-noi-that-tu-bep-tai-Quan-2.jpg": "/images/blog-wordpress/88a32f8d2069e05b4424.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/03/thiet-ke-decal-mo-dan-kinh-van-phong-HR-theo-phong-cach-Toi-gian-voi-Logo-Slogan-edited.png": "/images/blog-wordpress/270e4d5ae2da29cc4815.png",
+    "https://idecal.vn/wp-content/uploads/2026/04/Mau-Decal-cham-bi-ket-hop-thiet-ke-song-edited.jpg": "/images/blog-wordpress/07184e019c1cad099c7b.jpg",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-cat-ten-cong-ty-edited.webp": "/images/blog-wordpress/13eecff527e1810147a6.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-chuyen-sac-2-dau-edited.webp": "/images/blog-wordpress/80616626dcb22de5476d.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-mo-cat-logo-cho-quan-ca-phe-edited.webp": "/images/blog-wordpress/b5c29e6b344a6117521b.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-mo-cat-soc-deu-phia-tren-1-edited.webp": "/images/blog-wordpress/37d32dc1033a3be70764.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-mo-cat-soc-ngang-2-2-edited.webp": "/images/blog-wordpress/edcdb45b1ec33dff3780.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-mo-hoa-tiet-o-vuong-edited.webp": "/images/blog-wordpress/3d276c9dbbcb74749b47.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-mo-soc-cheo-cho-van-phong-2-edited.webp": "/images/blog-wordpress/013944e6f7f8d96dd809.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-phong-cach-hien-dai-cho-quan-ca-phe-3-edited.webp": "/images/blog-wordpress/844b32e88e57e7bb1d1e.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-dan-kinh-soc-ngang-mau-trang-cho-van-phong-edited.webp": "/images/blog-wordpress/6b161bc160e43be41315.webp",
+    "https://idecal.vn/wp-content/uploads/2026/04/decal-mo-to-ong-2-1-edited-1.webp": "/images/blog-wordpress/8c363a8daaa6c35ba4ba.webp",
+    "https://unica.vn/media/imagesck/1604981434_kich-thuoc-poster-3.jpg?v=1604981434": "/images/blog-wordpress/c6712454425e55648990.jpg",
+    "https://unica.vn/media/imagesck/1604981501_kich-thuoc-poster-4.jpg?v=1604981501": "/images/blog-wordpress/bb2e908dea8716269637.jpg",
+    "https://unica.vn/media/imagesck/1604981632_kich-thuoc-poster-6.jpg?v=1604981632": "/images/blog-wordpress/5894abbc45129e5985db.jpg"
+  }
+}

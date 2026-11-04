@@ -18,6 +18,8 @@ const blog = defineCollection({
     categorySlug: z.enum(blogCategorySlugs).optional(),
     categories: z.array(z.string()).optional(),
     author: z.string().optional(),
+    wordpressId: z.number().int().optional(),
+    originalUrl: z.url().optional(),
     image: z.string().default(fallbackImage),
   }),
 });
