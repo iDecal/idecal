@@ -2,13 +2,13 @@
 .blog-hero{position:relative;isolation:isolate;overflow:hidden;padding:52px 0 44px;background:linear-gradient(115deg,#edf7ff,#f7f3ff);border-bottom:1px solid #e6edf5}
 .blog-hero .container{position:relative;z-index:1}
 .blog-hero-art{position:absolute;inset:0 0 0 53%;z-index:0;background:url('/images/blog-header-pattern.svg') center right/auto 100% no-repeat;opacity:.65;pointer-events:none;mask-image:linear-gradient(to right,transparent,#000 35%)}
-.blog-kicker{font-size:13px;color:#0d6b96;margin:0 0 14px;letter-spacing:.04em}
+.blog-kicker{font-size:13px;color:#08577e;margin:0 0 14px;letter-spacing:.04em}
 .blog-hero h1{font-size:clamp(32px,4vw,48px);line-height:1.2;margin:0 0 18px;font-weight:600}
-.blog-hero .container>p:last-child{margin:0;max-width:680px}.blog-hero h1{max-width:760px}
+.blog-hero .container>p:last-child{margin:0;max-width:680px;color:#3e536d}.blog-hero h1{max-width:760px;background-image:linear-gradient(110deg,#087ac5,#4930c5)}
 .blog-list-section{padding-top:28px;padding-bottom:64px}
 .blog-category-nav{margin-bottom:32px}
 .blog-category-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-.blog-category-grid>a{display:flex;align-items:center;justify-content:center;min-height:60px;padding:15px 18px;text-align:center;font-size:16px;font-weight:550;color:#1b4f7a;border:1px solid #accdf1;border-radius:12px;background:linear-gradient(135deg,#edf7ff,#f3efff);box-shadow:0 4px 12px #1559a00b;transition:background .2s,border-color .2s,box-shadow .2s}
+.blog-category-grid>a{display:flex;align-items:center;justify-content:center;min-height:60px;padding:15px 18px;text-align:center;font-size:16px;font-weight:550;color:#123e65;border:1px solid #accdf1;border-radius:12px;background:linear-gradient(135deg,#edf7ff,#f3efff);box-shadow:0 4px 12px #1559a00b;transition:background .2s,border-color .2s,box-shadow .2s}
 .blog-category-grid>a:hover{background:#e0edff;border-color:#6f9fe0;box-shadow:0 5px 18px #1559a01a}
 .blog-category-grid>a[aria-current=page]{color:#fff;background:linear-gradient(110deg,#078fe0,#6434e8);border-color:transparent;box-shadow:0 5px 16px #4d58cf30}
 .blog-all-link,.blog-back{display:inline-block;font-size:14px;color:#0d6b96;margin-bottom:20px}
