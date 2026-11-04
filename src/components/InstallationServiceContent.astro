@@ -2,7 +2,7 @@
 import content from '../data/installation-service.json';
 ---
 <section id="hang-muc-thi-cong" class="installation-categories lp-section"><div class="container"><div class="lp-section-heading"><div><p class="lp-kicker">Từ kính đến bề mặt nội thất</p><h2>Các hạng mục thi công</h2></div><p>Phương án được lựa chọn theo vật liệu, vị trí dán và hiện trạng công trình. Hình ảnh giúp bạn tham khảo cách ứng dụng.</p></div><div class="installation-service-grid">{content.services.map(item=><article><figure><img src={item.image} alt={item.alt} width="800" height="600" loading="lazy" /><figcaption>{item.tag}</figcaption></figure><div><h3>{item.title}</h3><p>{item.description}</p></div></article>)}</div></div></section>
-<section id="ban-giao-thi-cong" class="container lp-section installation-handover"><div><p class="lp-kicker">Chốt phương án, kiểm tra kết quả</p><h2>Bàn giao dựa trên phần việc đã thống nhất</h2><p>Kiểm tra cùng khách hàng để làm rõ kết quả hoàn thiện và cách bảo quản vật liệu sau khi dán.</p><a href="/du-an" class="btn-idecal-bold">Tham khảo công trình thực tế →</a></div><ol>{content.handover.map((item,index)=><li><span aria-hidden="true">0{index+1}</span><p>{item}</p></li>)}</ol></section>
+<section id="ban-giao-thi-cong" class="container lp-section"><div class="lp-detail-list"><details><summary>Kiểm tra & bàn giao sau thi công</summary><ul>{content.handover.map(item=><li>{item}</li>)}</ul><a href="/du-an">Xem công trình thực tế →</a></details></div></section>
 <style>
 .installation-categories { background: #f3f8fd; border-block: 1px solid #e0eaf5; }
 .installation-service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
