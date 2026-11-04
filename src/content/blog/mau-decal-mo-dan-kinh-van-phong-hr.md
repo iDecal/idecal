@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/f7903ab799f8d43f7f6d.png"
 wordpressId: 34610
 originalUrl: "https://idecal.vn/mau-decal-mo-dan-kinh-van-phong-hr/"
+focusKeyword: "Decal mờ dán kính văn phòng HR"
 ---
 
 Bạn có biết văn phòng tuyển dụng là nơi đầu tiên chạm đến cảm xúc của ứng viên? Một không gian chuyên nghiệp không chỉ đến từ nội thất mà còn từ những chi tiết nhỏ như **decal dán kính mờ**. Không chỉ tạo sự riêng tư, decal còn là công cụ "marketing ngầm" cực kỳ hiệu quả.

@@ -8,10 +8,15 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	image?: string;
-	description?: string; // Thêm mô tả để tốt cho SEO
+	description?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  structuredData?: Record<string,unknown>[];
 }
 
-const { title, image, description = "Dịch vụ decal dán kính cách nhiệt & trang trí chuyên nghiệp" } = Astro.props;
+const { title, image, type, noindex, publishedTime, modifiedTime, structuredData, description = "Dịch vụ decal dán kính cách nhiệt & trang trí chuyên nghiệp" } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +26,7 @@ const { title, image, description = "Dịch vụ decal dán kính cách nhiệt 
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/images/idecal-logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<SEO title={title} description={description} image={image} />
+		<SEO title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
 	</head>
 	<body class="bg-background font-body text-secondary">
 		<Header />

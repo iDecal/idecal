@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/32f115fb5f2db4da55cc.jpg"
 wordpressId: 21142
 originalUrl: "https://idecal.vn/thi-cong-trang-tri-vm-gian-hang-chuyen-nghiep/"
+focusKeyword: "trang trí VM,thi công VM"
 ---
 
 VM là cụm từ viết tắt của Visual Merchandise ̣( Bố trí hiển thị )

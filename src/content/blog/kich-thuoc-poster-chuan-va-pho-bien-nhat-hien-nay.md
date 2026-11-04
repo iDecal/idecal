@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/c7fa5df0d4c5f66b3c3d.png"
 wordpressId: 17929
 originalUrl: "https://idecal.vn/kich-thuoc-poster-chuan-va-pho-bien-nhat-hien-nay/"
+focusKeyword: "Kích thước poster chuẩn"
 ---
 
 **Kích thước Poster chuẩn là bao nhiêu? vẫn là một vấn đề mà rất nhiều người quan tâm, đặc biệt là đối với những người làm thiết kế khi mà đứa con tinh thần của mình đã hoàn thành nhưng chỉ vì không đúng kích cỡ ban đầu mà phải "đập đi xây lại", vừa tốn công sức vừa mất thời gian.**

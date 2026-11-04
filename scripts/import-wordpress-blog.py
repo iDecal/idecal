@@ -146,6 +146,8 @@ for item in posts:
  image=assets.get(featured.get(slug,'')) or next((im.get('src') for im in soup.find_all('img') if im.get('src','').startswith('/images/')), '/images/idecal-logo.png')
  date=field(item,'w:post_date').replace(' ','T')+'+07:00'
  front={'title':title,'description':description or title,'category':cat_name,'categorySlug':cat_slug,'categories':original_categories,'pubDate':date,'author':'iDecal','image':image,'wordpressId':int(field(item,'w:post_id')),'originalUrl':field(item,'link')}
+ for old_key,new_key in [('rank_math_title','seoTitle'),('rank_math_description','seoDescription'),('rank_math_focus_keyword','focusKeyword')]:
+  if meta(item,old_key):front[new_key]=html.unescape(meta(item,old_key))
  dest=Path('src/content/blog')/(slug+'.md');existed=dest.exists() and 'wordpressId:' not in dest.read_text()
  dest.write_text('---\n'+'\n'.join(f'{key}: {json.dumps(value,ensure_ascii=False)}' for key,value in front.items())+'\n---\n\n'+body+'\n')
  records.append({'slug':slug,'id':front['wordpressId'],'title':title,'category':cat_slug,'originalCategories':original_categories,'date':date,'replaced':existed,'images':len(soup.find_all('img')),'originalUrl':field(item,'link')})

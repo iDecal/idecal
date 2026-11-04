@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/e3e881ad6f3d0d84501c.webp"
 wordpressId: 32198
 originalUrl: "https://idecal.vn/5-ly-do-ban-nen-chon-decal-dan-kinh-cho-khong-gian-song/"
+focusKeyword: "decal dán kính"
 ---
 
 Trong thiết kế nội thất hiện đại, kính không chỉ là vật liệu lấy sáng mà còn là "cánh cửa" kết nối không gian bên trong và bên ngoài. Tuy nhiên, đi kèm với sự tiện nghi đó là các vấn đề về nắng nóng, sự riêng tư và an toàn.

@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/45a28955dc11efabae92.jpg"
 wordpressId: 28973
 originalUrl: "https://idecal.vn/tan-trang-quay-bar-voi-decal-gach-bong/"
+seoTitle: "Dán decal gạch bông quầy bar – Làm mới không gian dễ dàng %sep% %sitename%"
+seoDescription: "Tân trang quầy bar bằng decal gạch bông đẹp, tiết kiệm và dễ thi công. Gợi ý phong cách vintage, tropical, phù hợp quán cà phê, nhà ở, nhà hàng."
 ---
 
 <span id="ban-muon-lam-moi-quay-bar-nhung-ngan-sach-han-che"></span>

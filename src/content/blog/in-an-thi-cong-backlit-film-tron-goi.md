@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/3806b7f8fae9b46630b7.jpg"
 wordpressId: 20606
 originalUrl: "https://idecal.vn/in-an-thi-cong-backlit-film-tron-goi/"
+focusKeyword: "in backlit film"
 ---
 
 <span id="7a4b"></span>

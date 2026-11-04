@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/1165789c1e3a94e122e4.jpg"
 wordpressId: 33477
 originalUrl: "https://idecal.vn/bao-gia-decal-mo-dan-kinh-van-phong-thang-11-2025/"
+focusKeyword: "báo giá decal mờ dán kính văn phòng"
 ---
 
 iDecal trân trọng gửi đến Quý khách hàng Bảng Báo giá Decal mờ dán kính văn phòng câp nhật tháng 11/2025 của công ty chúng tôi:

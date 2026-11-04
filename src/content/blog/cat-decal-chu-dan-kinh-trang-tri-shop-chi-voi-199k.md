@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/e17ed2e555ed62e01f60.jpg"
 wordpressId: 1591
 originalUrl: "https://idecal.vn/cat-decal-chu-dan-kinh-trang-tri-shop-chi-voi-199k/"
+focusKeyword: "decal chữ dán kính"
+seoDescription: "Ghé qua cửa hàng iDecal để tham khảo các mẫu Decal cắt chữ dán kính trang trí hoặc đặt dịch vụ Cắt Decal chữ dán kính theo yêu cầu thực tế từ chúng tôi nhé."
 ---
 
 <span id="nhung-mau-decal-chu-dan-kinh-trang-tri-shop-chi-tu-199k"></span>

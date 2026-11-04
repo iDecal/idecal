@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/bdb4f17a4638117c019f.jpg"
 wordpressId: 21078
 originalUrl: "https://idecal.vn/thi-cong-mo-hinh-quang-cao-posm-pp-can-formex/"
+focusKeyword: "Thi công POsm"
 ---
 
 Bạn đang cần Thi công POSM Mô hình bằng chất liệu PP cán formex gắn lên khung sắt cho mục đích Quảng cáo sản phẩm hay chiến dịch quảng cáo thương hiệu

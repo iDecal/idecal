@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/a88ebefc92c7ddb8b3e4.jpg"
 wordpressId: 19894
 originalUrl: "https://idecal.vn/huong-dan-ban-trang-tri-kinh-tiem-nail-thu-hut-bat-mat/"
+focusKeyword: "trang trí kính tiệm Nail"
+seoDescription: "Trang trí kính Tiệm Nail là phương pháp tuyệt vời giúp bạn biến không gian tiệm nail thành một tác phẩm nghệ thuật. Với những thiết kế đậm chất riêng biệt"
 ---
 
 ## Mục mục

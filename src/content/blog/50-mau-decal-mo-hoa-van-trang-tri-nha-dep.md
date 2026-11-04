@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/0a802c29b586f0a8e1cf.jpg"
 wordpressId: 1593
 originalUrl: "https://idecal.vn/50-mau-decal-mo-hoa-van-trang-tri-nha-dep/"
+seoDescription: "Hiện nay, có 2 loại Decal mờ hoa văn phổ biến : Decal kính mờ hoa văn in sẵn và decal dán kính hoa văn in/cắt theo thiết kế. Cùng iDecal tìm hiểu từng loại riêng biệt dưới đây nhé"
+focusKeyword: "decal mờ hoa văn, decal kính mờ hoa văn"
 ---
 
 <span id="gioi-thieu-ve-decal-mo-hoa-van-la-gi"></span>

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Đặt dịch vụ | Liên hệ iDecal" description="Gửi yêu cầu tư vấn và đặt dịch vụ tại trang Liên hệ iDecal."><section class="container py-14"><h1>Liên hệ & đặt dịch vụ iDecal</h1><p>Trang đặt dịch vụ đã được gộp vào trang Liên hệ.</p><a id="contact-redirect" href="/lien-he-idecal#yeu-cau" class="btn-primary-solid">Đến trang Liên hệ →</a></section></Layout>
+<Layout noindex title="Đặt dịch vụ | Liên hệ iDecal" description="Gửi yêu cầu tư vấn và đặt dịch vụ tại trang Liên hệ iDecal."><section class="container py-14"><h1>Liên hệ & đặt dịch vụ iDecal</h1><p>Trang đặt dịch vụ đã được gộp vào trang Liên hệ.</p><a id="contact-redirect" href="/lien-he-idecal#yeu-cau" class="btn-primary-solid">Đến trang Liên hệ →</a></section></Layout>
 <script is:inline>
 const destination='/lien-he-idecal'+location.search+'#yeu-cau';
 document.getElementById('contact-redirect').href=destination;

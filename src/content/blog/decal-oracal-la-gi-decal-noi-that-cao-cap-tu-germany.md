@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/396c0ea2195d65d7fdca.jpg"
 wordpressId: 2157
 originalUrl: "https://idecal.vn/decal-oracal-la-gi-decal-noi-that-cao-cap-tu-germany/"
+focusKeyword: "decal oracal"
 ---
 
 <span id="decal-oracal-la-gi"></span>

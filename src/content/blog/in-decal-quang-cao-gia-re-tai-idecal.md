@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/76d0d0b04bb1e4ee33ee.webp"
 wordpressId: 26468
 originalUrl: "https://idecal.vn/in-decal-quang-cao-gia-re-tai-idecal/"
+focusKeyword: "in decal quảng cáo"
+seoDescription: "Bạn muốn decal dán kính, dán tường, dán xe hoặc dán cửa hàng nhưng vẫn tối ưu chi phí? Dịch vụ in decal quảng cáo giá rẻ tại iDecal sẽ là lựa chọn đúng đắn dành cho bạn!"
 ---
 
 Bạn đang tìm một giải pháp quảng cáo **hiệu quả – tiết kiệm – dễ thi công**?  

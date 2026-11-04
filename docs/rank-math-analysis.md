@@ -1,5 +1,7 @@
 # Phân tích Rank Math và đối chiếu website mới
 
+> Đã triển khai các mục phù hợp sau phân tích. Xem [trạng thái áp dụng](rank-math-migration.md). Phần dưới là ảnh chụp tình trạng trước khi triển khai.
+
 Ngày đối chiếu: 04/11/2026. Nguồn: file `rank-math-settings-2026-11-04T05-42-47-361Z.json` do người dùng cung cấp; XML WordPress và bản dựng hiện tại.
 
 Đây là phân tích cấu hình, không phải báo cáo thứ hạng hay dữ liệu Search Console. Chưa áp dụng cấu hình Rank Math vào website mới. Không đưa file cấu hình gốc hoặc dữ liệu xác thực vào mã nguồn.

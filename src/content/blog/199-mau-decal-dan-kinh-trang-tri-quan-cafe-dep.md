@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/bcf6bd4e4185b3990f8b.jpg"
 wordpressId: 33822
 originalUrl: "https://idecal.vn/199-mau-decal-dan-kinh-trang-tri-quan-cafe-dep/"
+focusKeyword: "decal dán kính trang trí quán cafe, decal dán cửa kính quán cafe"
 ---
 
 <span id="1-gioi-thieu-ve-decal-dan-kinh-trang-tri-quan-cafe"></span>

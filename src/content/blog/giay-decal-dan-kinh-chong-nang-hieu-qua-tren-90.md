@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/f47dea5dd928bea1e81d.jpg"
 wordpressId: 937
 originalUrl: "https://idecal.vn/giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90/"
+focusKeyword: "Decal dán kính chống nắng"
+seoDescription: "Mùa hè đến, nắng oi ả. Hãy thử sử dụng 2 loại giấy Decal dán kính cản sáng sau đây để nhà cửa, văn phòng lúc nào cũng thoáng đãng, mát mẻ khi hè tới nhé."
 ---
 
 Không cần rèm che hay điều hòa, nếu sử dụng 2 loại **giấy Decal dán kính chống nắng** này bạn có thể chống lại cái nóng oi bức “tấn công” hiệu quả.

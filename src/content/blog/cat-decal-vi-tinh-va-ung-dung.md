@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/77ed2733d3a5c01dae1e.jpg"
 wordpressId: 32479
 originalUrl: "https://idecal.vn/cat-decal-vi-tinh-va-ung-dung/"
+focusKeyword: "cắt decal vi tính"
+seoTitle: "%title% - Ứng dụng cắt Decal trong lĩnh vực trang trí %sep% %sitename%"
 ---
 
 **Cắt decal vi tính** (hay còn gọi là cắt decal bằng máy tính, cắt chữ decal) là kỹ thuật sử dụng **máy cắt decal chuyên dụng** được kết nối và điều khiển bằng **phần mềm thiết kế đồ họa vector** (như CorelDRAW, Adobe Illustrator - AI) trên máy tính.

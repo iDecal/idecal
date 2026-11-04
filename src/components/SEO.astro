@@ -1,27 +1,43 @@
 ---
+import { brandedTitle, seoDefaults } from '../data/seo';
 interface Props {
   title: string;
   description: string;
   image?: string;
   canonicalURL?: string | URL;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  structuredData?: Record<string,unknown>[];
 }
-
-const { 
-  title = "idecal - Dịch vụ Decal Kính Cách Nhiệt & Trang Trí", 
-  description = "Chuyên thi công decal dán kính cách nhiệt, decal mờ văn phòng tại TP.HCM. Chống nóng hiệu quả, thẩm mỹ cao.", 
-  image = "/images/idecal-logo.png",
-  canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url)
-} = Astro.props;
+const {title,description,image='/images/idecal-logo.png',canonicalURL=new URL(Astro.url.pathname,Astro.site ?? Astro.url),type='website',noindex=false,publishedTime,modifiedTime,structuredData=[]}=Astro.props;
+const seoTitle=brandedTitle(title);
+const imageURL=new URL(image,canonicalURL).href;
+const origin=Astro.site ?? new URL('https://idecal.vn');
+const organizationID=new URL('/#organization',origin).href;
+const graph=[
+ {'@type':'Organization','@id':organizationID,name:'iDecal',url:origin.href,logo:new URL('/images/idecal-logo.png',origin).href,contactPoint:{'@type':'ContactPoint',telephone:'+84866077040',contactType:'customer support',email:'hi@idecal.vn',availableLanguage:'vi'}},
+ {'@type':'WebSite','@id':new URL('/#website',origin).href,url:origin.href,name:'iDecal',inLanguage:'vi-VN',publisher:{'@id':organizationID}},
+ ...structuredData,
+];
 ---
-
-<title>{title}</title>
+<title>{seoTitle}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
-
-<meta property="og:type" content="website" />
+<meta property="og:type" content={type} />
+<meta property="og:locale" content="vi_VN" />
+<meta property="og:site_name" content="iDecal" />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={seoTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, canonicalURL)} />
-
-<meta name="robots" content="index, follow" />
+<meta property="og:image" content={imageURL} />
+<meta property="og:image:alt" content={title} />
+{type==='article'&&publishedTime&&<meta property="article:published_time" content={publishedTime} />}
+{type==='article'&&modifiedTime&&<meta property="article:modified_time" content={modifiedTime} />}
+<meta name="twitter:card" content={seoDefaults.twitterCard} />
+<meta name="twitter:title" content={seoTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={imageURL} />
+<meta name="robots" content={noindex?'noindex, follow':seoDefaults.robots} />
+<script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@graph':graph}).replaceAll('<',String.fromCharCode(92)+'u003c')} />

@@ -120,7 +120,8 @@ for (const product of catalogueProducts) {
   const productPage = path.join(root, 'san-pham', product.slug, 'index.html');
   assert.ok(await exists(productPage), `Missing product page: ${product.slug}`);
   const html = await readFile(productPage, 'utf8');
-  const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)?.[1] ?? '{}');
+  const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match => JSON.parse(match[1]));
+  const schema = schemas.flatMap(item => item['@graph'] ?? [item]).find(item => item['@type'] === 'Product') ?? {};
   assert.equal(schema['@type'], 'Product', `Missing Product structured data: ${product.slug}`);
   assert.equal(schema.name, product.name, `Product schema mismatch: ${product.slug}`);
   assert.ok(legacyRedirects.includes(`/${product.slug} /san-pham/${product.slug}/ 301`), `Missing legacy redirect: ${product.slug}`);

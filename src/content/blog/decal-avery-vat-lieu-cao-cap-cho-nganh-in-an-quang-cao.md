@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/e2439d04f899fa85b59c.jpg"
 wordpressId: 29048
 originalUrl: "https://idecal.vn/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao/"
+seoDescription: "Tìm hiểu về decal Avery – thương hiệu vật liệu in ấn hàng đầu thế giới với đầy đủ CO, CQ. Ứng dụng đa dạng trong quảng cáo, dán kính, wrap xe. Mua hàng chính hãng tại iDecal."
+focusKeyword: "decal avery"
 ---
 
 Tìm hiểu về decal Avery – thương hiệu vật liệu in ấn hàng đầu thế giới với đầy đủ CO, CQ. Ứng dụng đa dạng trong quảng cáo, dán kính, wrap xe. Mua hàng chính hãng tại iDecal.

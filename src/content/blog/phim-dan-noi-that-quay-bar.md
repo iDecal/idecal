@@ -9,6 +9,9 @@ author: "iDecal"
 image: "/images/blog-wordpress/54403e84c7b6aed10b70.webp"
 wordpressId: 28981
 originalUrl: "https://idecal.vn/phim-dan-noi-that-quay-bar/"
+seoTitle: "Phim dán nội thất quầy bar – Nâng cấp sang trọng, hiện đại %sep% %sitename%"
+seoDescription: "Trang trí quầy bar với phim dán nội thất vân gỗ, vân đá cao cấp – giải pháp sang trọng, dễ thi công, chống nước, phù hợp nhà ở, quán cà phê, khách sạn."
+focusKeyword: "Phim dán nội thất quầy bar"
 ---
 
 Bạn yêu thích sự tinh tế, sang trọng hoặc tối giản trong thiết kế?  

@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/26e342c60ed7dfb32295.jpg"
 wordpressId: 34197
 originalUrl: "https://idecal.vn/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/"
+focusKeyword: "thi công decal"
 ---
 
 Bạn đang tìm kiếm giải pháp dán kính mờ cho văn phòng, nhà ở nhưng băn khoăn về chi phí? iDecal cung cấp bảng báo giá decal mờ chi tiết theo từng hạng mục và phân tích các yếu tố ảnh hưởng, giúp bạn dự toán ngân sách một cách chính xác và minh bạch nhất cho dự án của mình.

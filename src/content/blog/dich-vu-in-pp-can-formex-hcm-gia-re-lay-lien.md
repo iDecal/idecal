@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/f7c0ee3983585a0533f4.webp"
 wordpressId: 1999
 originalUrl: "https://idecal.vn/dich-vu-in-pp-can-formex-hcm-gia-re-lay-lien/"
+focusKeyword: "in PP cán formex"
 ---
 
 ## Mục lục

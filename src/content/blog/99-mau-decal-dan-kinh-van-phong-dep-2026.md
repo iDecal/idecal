@@ -9,6 +9,8 @@ author: "iDecal"
 image: "/images/blog-wordpress/6faed6dc34ae28e2bbd0.jpg"
 wordpressId: 25139
 originalUrl: "https://idecal.vn/99-mau-decal-dan-kinh-van-phong-dep-2026/"
+focusKeyword: "mẫu Decal dán kính văn phòng,decal dán kính văn phòng đẹp"
+seoDescription: "Khám phá ngay 99+ mẫu Decal dán kính văn phòng đẹp nhất 2026. Từ mẫu decal mờ trơn, kẻ chỉ tinh tế đến cắt logo CNC sắc nét. Tư vấn mẫu miễn phí, thi công nhanhtrong ngày tại iDecal. Xem ngay!"
 ---
 
 Bạn muốn tạo một không gian làm việc chuyên nghiệp, riêng tư và đầy tính thẩm mỹ? Decal dán kính văn phòng chính là giải pháp hoàn hảo dành cho bạn!

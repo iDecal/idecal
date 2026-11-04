@@ -9,6 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/9cf76e5589993ec1ebd5.jpg"
 wordpressId: 28841
 originalUrl: "https://idecal.vn/in-an-thi-cong-dan-decal-kinh-tiem-nail/"
+focusKeyword: "in decal dán kính tiệm nail, Tranh dán kính tiệm nail, dán decal kính tiệm nail"
 ---
 
 Bạn đang tìm một giải pháp để tiệm Nail của mình trông nổi bật và chuyên nghiệp hơn? iDecal mang đến dịch vụ in ấn và thi công decal dán kính, dán tường ngay tại tiệm – nhanh chóng, chỉnh chu và đúng theo mong muốn của bạn.
