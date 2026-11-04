@@ -11,3 +11,7 @@ Liên kết đi từ nội dung bài sang vật liệu, sản phẩm, dịch v�
 Nguồn: [Nghị quyết 1685/NQ-UBTVQH15](https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1685-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-thanh-pho-ho-chi-minh-nam-2025-119250616211341304.htm), hoạt động từ 01/07/2025. Danh sách chứa 168 đơn vị: 113 phường, 54 xã và đặc khu Côn Đảo, bao gồm địa bàn Bình Dương và Bà Rịa–Vũng Tàu trước sắp xếp.
 
 Tên đơn vị hiện hành được ưu tiên; tên quận/huyện cũ giúp định hướng, không mô tả ranh giới pháp lý chính xác. Trang quận cũ và URL vẫn giữ để tham chiếu; mục chọn quận/huyện bị gỡ khỏi menu. Chọn phường/xã chuyển thông tin sang form liên hệ. Danh mục hành chính không đồng nghĩa cam kết khảo sát hoặc thi công ở mọi địa chỉ; phạm vi thực hiện được xác nhận theo công trình.
+
+### Điều chỉnh phạm vi theo yêu cầu
+
+Trang TP.HCM và lựa chọn phường/xã trong form chỉ hiển thị 102 phường/xã thuộc TP.HCM trước sáp nhập. Không hiển thị địa bàn Bình Dương, Bà Rịa–Vũng Tàu và Côn Đảo trong danh sách này. Dữ liệu nguồn 168 đơn vị vẫn giữ để đối chiếu. Thêm danh sách liên kết trực tiếp tới 22 trang quận/huyện/TP. Thủ Đức cũ ngay trên các nhóm phường/xã; không đưa trở lại menu chính.
