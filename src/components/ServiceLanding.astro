@@ -18,7 +18,7 @@ const extraFaqs = service.slug === 'thiet-ke' ? designContent.faqs : service.slu
 const faqs = [...content.faqs, ...extraFaqs];
 ---
 <div class="service-lp">
-  <ServiceHero title={service.headline} eyebrow={service.slug==='dich-vu-tron-goi'?service.name:`Dịch vụ ${service.name.toLocaleLowerCase('vi-VN')}`} image={service.image} imageAlt={service.name} detailImage={content.image} detailAlt={content.imageAlt}>
+  <ServiceHero title={service.headline} eyebrow={service.slug==='dich-vu-tron-goi'?service.name:`Dịch vụ ${service.name.toLocaleLowerCase('vi-VN')}`} image={service.image} imageAlt={service.slug==='in-decal'?'Ảnh minh họa máy in quảng cáo khổ lớn':service.name} detailImage={content.image} detailAlt={content.imageAlt}>
     <p slot="description">{service.description}</p><Fragment slot="actions"><a href={booking} class="btn-primary-solid">Nhận tư vấn dịch vụ <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a><a href="#pham-vi" class="btn-idecal-bold">Khám phá dịch vụ ↓</a></Fragment>
   </ServiceHero>
   <section id="pham-vi" class="container lp-summary"><h2>Phạm vi dịch vụ</h2><ul>{service.deliverables.map(title=><li><span aria-hidden="true">✓</span>{title}</li>)}</ul></section>
