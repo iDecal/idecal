@@ -1,4 +1,5 @@
 ---
+import RelatedGuides from './RelatedGuides.astro';
 import ServiceHero from './ServiceHero.astro';
 import PrintingServiceContent from './PrintingServiceContent.astro';
 import DesignServiceContent from './DesignServiceContent.astro';
@@ -29,6 +30,7 @@ const faqs = [...content.faqs, ...extraFaqs];
   {hasDetails && <div class="lp-details"><slot name="details" /></div>}
   {hasDetails ? <slot name="faq" /> : <section id="lp-cau-hoi" class="lp-faq lp-section"><div class="container lp-faq-grid"><div><p class="lp-kicker">Giải đáp trước khi bắt đầu</p><h2>Một vài điều cần biết</h2><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Trao đổi qua Zalo →</a></div><div>{faqs.slice(0,3).map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>}
 
+  <RelatedGuides context={service.slug} />
   <ServiceSupport service={service.slug} />
 
 </div>

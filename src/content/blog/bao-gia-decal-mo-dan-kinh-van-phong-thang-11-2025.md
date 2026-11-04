@@ -1,6 +1,6 @@
 ---
-title: "Báo giá Decal mờ dán kính văn phòng tháng 11/2025"
-description: "iDecal trân trọng gửi đến Quý khách hàng Bảng Báo giá Decal mờ dán kính văn phòng câp nhật tháng 11/2025 của công ty chúng tôi: Decal mờ (hay Decal cát mờ, Đề can…"
+title: "Báo giá Decal mờ 2025: vật liệu, gia công và thi công"
+description: "Báo giá Decal mờ 2025 nên được đọc cùng quy cách vật liệu và phạm vi công việc đi kèm."
 category: "Báo giá"
 categorySlug: "bao-gia"
 categories: ["Decal kính văn phòng"]
@@ -9,27 +9,34 @@ author: "iDecal"
 image: "/images/blog-wordpress/1165789c1e3a94e122e4.jpg"
 wordpressId: 33477
 originalUrl: "https://idecal.vn/bao-gia-decal-mo-dan-kinh-van-phong-thang-11-2025/"
-focusKeyword: "báo giá decal mờ dán kính văn phòng"
+focusKeyword: "Báo giá Decal mờ 2025"
+seoTitle: "Báo giá Decal mờ 2025: vật liệu, gia công và thi công"
+contentTopics: ["pricing"]
+seoDescription: "Báo giá Decal mờ 2025 nên được đọc cùng quy cách vật liệu và phạm vi công việc đi kèm."
+updatedDate: "2026-11-04T21:01:39+07:00"
+editorialReview: "2026-11-04"
 ---
 
-iDecal trân trọng gửi đến Quý khách hàng Bảng Báo giá Decal mờ dán kính văn phòng câp nhật tháng 11/2025 của công ty chúng tôi:
+Báo giá Decal mờ 2025 nên được đọc cùng quy cách vật liệu và phạm vi công việc đi kèm. Bảng trong bài ghi nhận thời điểm cũ; gửi kích thước và mẫu để xác nhận đơn giá hiện hành.
 
 Decal mờ (hay Decal cát mờ, Đề can kính mờ) là giải pháp hàng đầu cho các văn phòng, công ty nhằm tăng tính riêng tư, giảm độ chói sáng và trang trí không gian một cách tinh tế, chuyên nghiệp.
 
 <span id="gspb_heading-id-gsbp-07456bc"></span>
 
-## Bảng Giá Decal Mờ Dán Kính Văn Phòng (Cập nhật Quý 4/2025)
+<span id="bảng-giá-decal-mờ-dán-kính-văn-phòng-cập-nhật-quý-42025"></span>
+
+## Báo giá Decal mờ 2025: bảng Giá Decal Mờ Dán Kính Văn Phòng (Cập nhật Quý 4/2025)
 
 | **Loại Dịch Vụ Decal Mờ** | **Đơn Giá Trọn Gói (VNĐ/m²)** |
 | --- | --- |
-| **[Decal Mờ Trơn](https://idecal.vn/decal-mo-cat/)** | **125.000 – 135.000** |
+| **[Decal Mờ Trơn](/san-pham/decal-mo-cat/)** | **125.000 – 135.000** |
 | **[Decal Mờ Cắt Chỉ Sọc/Kẻ Line](https://idecal.vn/decal-mo-ke-chi-ke-line/)** | **135.000 – 150.000** |
 | **[Decal Mờ in/ Cắt Logo Công Ty](https://idecal.vn/decal-cat-logo-ten-cong-ty/)** | **120.000 – 180.000** |
-| **[Decal Mờ In Màu/In UV (In logo/hình ảnh)](https://idecal.vn/decal-mo-in-logo-thuong-hieu/)** | **195.000 – 350.000** |
+| **[Decal Mờ In Màu/In UV (In logo/hình ảnh)](/san-pham/decal-mo-in-logo-thuong-hieu/)** | **195.000 – 350.000** |
 
 **Lưu ý:**
 
-- **Giá Trọn Gói (VNĐ/m²)**: Đã bao gồm **Vật Tư Decal Mờ chất lượng tốt** và **Nhân Công Thi Công** hoàn thiện.
+- **Giá Trọn Gói (VNĐ/m²)**: Đã bao gồm **Vật Tư Decal Mờ chất lượng tốt** và **Nhân Công [Thi Công](/dich-vu/thi-cong-decal)** hoàn thiện.
 - **Chi Phí Tối Thiểu**: Áp dụng cho các công trình nhỏ (dưới 10m²).
 - **Giá bán vật tư lẻ (chưa dán)**: 55.000 – 60.000 VNĐ/m dài (Khổ 1.2m).
 - Giá trên **chưa bao gồm VAT** (Nếu cần xuất hóa đơn).
@@ -38,7 +45,7 @@ Decal mờ (hay Decal cát mờ, Đề can kính mờ) là giải pháp hàng đ
 
 ### Bạn đang cần **thi công phim cách nhiệt cho văn phòng, nhà ở hay ô tô**?
 
-👉 Hãy tham khảo ngay **[Bảng báo giá Phim cách nhiệt tại iDecal](https://idecal.vn/phim-cach-nhiet-nha-kinh/)** – cập nhật **mới nhất tháng 11/2025**, với **giá trọn gói cạnh tranh**, vật liệu **chính hãng**, và **đội ngũ thi công chuyên nghiệp**.
+👉 Hãy tham khảo ngay **[Bảng báo giá Phim cách nhiệt tại iDecal](https://idecal.vn/phim-cach-nhiet-nha-kinh/)** – cập nhật **mới nhất tháng 11/2025**, với **giá trọn gói cạnh tranh**, [vật liệu](/dich-vu/in-decal#vat-lieu-in) **chính hãng**, và **đội ngũ thi công chuyên nghiệp**.
 
 iDecal cam kết:
 
@@ -46,7 +53,7 @@ iDecal cam kết:
 - **Tư vấn loại phim phù hợp** với nhu cầu và ngân sách.
 - **Thi công nhanh**, bảo hành **chính hãng lâu dài**.
 
-Liên hệ ngay để được tư vấn miễn phí và nhận báo giá chi tiết!
+Liên hệ ngay để được tư vấn miễn phí và nhận [báo giá](/dich-vu#bang-gia-dich-vu) chi tiết!
 
 <span id="gspb_heading-id-gsbp-3132cf7"></span>
 
@@ -92,3 +99,7 @@ Chi phí nhân công dán decal mờ dao động từ **40.000 – 90.000 VNĐ/m
 <img src="/images/blog-wordpress/6bcf678ef5bcec355f3e.jpg" alt="Báo giá decal mờ dán kính văn phòng mới nhất 2025 &amp; Quy trình đặt dịch vụ thi công decal dán kính văn phòng tại công t iDecal" loading="lazy" decoding="async" width="800" height="800" />
 
 **Liên hệ ngay với [iDecal – Dịch vụ Decal dán kính văn phòng chuyên nghiệp](https://idecal.vn/decal-dan-kinh-van-phong/)** để được **tư vấn miễn phí, khảo sát tận nơi và nhận báo giá chi tiết trong ngày!**
+
+## Tham khảo để chọn phần việc phù hợp
+
+Khi cần đơn giá đang áp dụng, đối chiếu [bảng giá dịch vụ tham khảo](/dich-vu#bang-gia-dich-vu) và [cách đọc báo giá theo hạng mục](/blog/cach-doc-bao-gia-decal-theo-hang-muc). Nội dung cần nêu rõ phần đã bao gồm trong vật liệu, thiết kế, in/gia công và thi công.

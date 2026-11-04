@@ -1,4 +1,5 @@
 ---
+import HcmLanding from '../../components/HcmLanding.astro';
 import DistrictDirectory from '../../components/DistrictDirectory.astro';
 import { getCollection } from 'astro:content';
 import RegionalLanding from '../../components/RegionalLanding.astro';
@@ -24,7 +25,7 @@ const steps = [
 ];
 ---
 
-{updatedContent ? <RegionalLanding region={region} content={updatedContent} projects={projects} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description}>
+{region.slug==='tp-hcm'?<HcmLanding />:updatedContent ? <RegionalLanding region={region} content={updatedContent} projects={projects} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description}>
   <section class="relative overflow-hidden border-b border-border bg-surface py-14 md:py-20">
     <div class="container">
 

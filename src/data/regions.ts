@@ -46,7 +46,7 @@ export const regions: Region[] = [
   {
     slug: 'tp-hcm', name: 'TP. Hồ Chí Minh', shortName: 'TP.HCM',
     theme: 'Văn phòng · Cửa hàng · Không gian sống',
-    description: 'Tư vấn decal dán kính, phim cách nhiệt và film nội thất tại TP.HCM. Giải pháp cho văn phòng, cửa hàng, phòng khám và nhà ở; liên hệ iDecal để trao đổi báo giá.',
+    description: 'Tư vấn Decal dán kính, phim cách nhiệt và film nội thất tại TP.HCM theo phường/xã hiện tại. Đối chiếu địa danh cũ và gửi hiện trạng để trao đổi phương án.',
     introduction: [
       'Vách kính trong văn phòng, mặt tiền cửa hàng và cửa sổ căn hộ cần những giải pháp khác nhau. Tại TP.HCM, iDecal tiếp nhận nhu cầu dán decal mờ, trang trí nhận diện và tư vấn phim cách nhiệt theo đặc điểm từng không gian.',
       'Với văn phòng đang hoạt động hoặc cửa hàng có giờ kinh doanh cố định, việc thống nhất mẫu, khung giờ tiếp cận mặt bằng và trình tự thi công giúp hạn chế ảnh hưởng đến sinh hoạt. Bạn có thể gửi ảnh hiện trạng và kích thước sơ bộ trước khi trao đổi lịch khảo sát.',

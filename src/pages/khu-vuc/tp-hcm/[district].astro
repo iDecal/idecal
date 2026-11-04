@@ -13,7 +13,7 @@ const canonical=new URL(Astro.url.pathname,Astro.site).href;
 const schemas=[{'@type':'Service','@id':canonical+'#service',name:title,serviceType:'Thi công Decal và film',url:canonical,provider:{'@id':new URL('/#organization',Astro.site).href},areaServed:{'@type':'Place',name:`Khu vực ${district.name}`,containedInPlace:{'@type':'Place',name:'TP. Hồ Chí Minh'}}},{'@type':'FAQPage',mainEntity:[{'@type':'Question',name:district.question,acceptedAnswer:{'@type':'Answer',text:district.answer}}]}];
 const normalize=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase();
 const labels=district.slug==='thanh-pho-thu-duc'?['Thủ Đức','Quận 2','Quận 9']:[district.name];
-const posts=(await getCollection('blog')).filter(post=>labels.some(label=>new RegExp(`\\b${normalize(label)}\\b`).test(normalize(post.data.title)))).slice(0,3);
+const posts=(await getCollection('blog')).filter(post=>labels.some(label=>new RegExp(`\\b${normalize(label)}\\b`).test(normalize(post.data.title+' '+(post.data.originalUrl??'').replace(/-/g,' '))))).slice(0,3);
 const project=district.slug==='thanh-pho-thu-duc'?(await getCollection('projects')).find(item=>item.id.toLowerCase().includes('dfcare')):undefined;
 const otherAreas=districts.filter(item=>item.group===district.group&&item.slug!==district.slug).slice(0,4);
 ---

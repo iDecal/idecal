@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 import { projectTypes } from './data/project-types';
+import { contentTopics } from './data/content-topics';
 import { blogCategorySlugs } from './data/blog-categories';
 
 const fallbackImage = '/images/idecal-logo.png';
@@ -21,6 +22,8 @@ const blog = defineCollection({
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
     focusKeyword: z.string().optional(),
+    contentTopics: z.array(z.enum(contentTopics)).optional(),
+    editorialReview: z.string().optional(),
     wordpressId: z.number().int().optional(),
     originalUrl: z.url().optional(),
     image: z.string().default(fallbackImage),

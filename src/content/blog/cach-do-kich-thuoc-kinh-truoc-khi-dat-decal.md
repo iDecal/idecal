@@ -1,16 +1,24 @@
 ---
-title: "Cách đo kích thước kính trước khi đặt Decal"
-description: "Hướng dẫn ghi kích thước từng ô kính, tính diện tích tham khảo và chuẩn bị ảnh để tư vấn mẫu, vật liệu và cách chia khổ."
+title: "Đo kích thước kính: chuẩn bị số liệu trước khi đặt Decal"
+description: "Đo kích thước kính theo từng ô giúp chia khổ vật liệu và kiểm tra bố cục chính xác hơn."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
-pubDate: 2026-11-03
+pubDate: "2026-11-03"
 author: "iDecal"
 image: "/images/cong-trinh/thi-cong-decal-dan-kinh-quan-9.jpg"
+seoTitle: "Đo kích thước kính: chuẩn bị số liệu trước khi đặt Decal"
+focusKeyword: "Đo kích thước kính"
+contentTopics: ["installation"]
+seoDescription: "Đo kích thước kính theo từng ô giúp chia khổ vật liệu và kiểm tra bố cục chính xác hơn."
+updatedDate: "2026-11-04T21:01:39+07:00"
+editorialReview: "2026-11-04"
 ---
 
-Đo trước kích thước giúp bạn mô tả nhu cầu rõ hơn khi hỏi mẫu hoặc báo giá. Số đo ban đầu dùng để trao đổi; với thiết kế nhiều ô kính, logo hoặc vị trí khó đo, nên thống nhất lại kích thước trước khi sản xuất.
+Đo kích thước kính theo từng ô giúp chia khổ vật liệu và kiểm tra bố cục chính xác hơn. Ghi rõ chiều rộng, chiều cao, khung, tay nắm và phần cần dán; số đo sơ bộ không thay thế việc xác nhận trước sản xuất.
 
-## Ghi riêng từng ô kính
+<span id="ghi-riêng-từng-ô-kính"></span>
+
+## Đo kích thước kính: ghi riêng từng ô kính
 
 Đánh số các ô từ trái sang phải và ghi **rộng × cao**, kèm đơn vị mm, cm hoặc m. Phân biệt phần kính nhìn thấy với kích thước phủ cả khung. Không cộng các ô có khung ngăn thành một mặt kính liền.
 
@@ -31,3 +39,7 @@ Chuẩn bị ảnh toàn cảnh, ảnh cận mép khung, tay nắm và lớp Dec
 Kiểm tra lại số lượng ô, chiều vân, vị trí nối và nội dung chữ. Với [dịch vụ thi công](/dich-vu/thi-cong-decal/), bạn có thể gửi số đo và ảnh trước để trao đổi phần cần khảo sát thêm.
 
 [Gửi yêu cầu tư vấn cho công trình](/lien-he-idecal?dich-vu=thi-cong-decal).
+
+## Tham khảo để chọn phần việc phù hợp
+
+Nếu cần kiểm tra hiện trạng trước khi làm, xem [phạm vi thi công Decal và film](/dich-vu/thi-cong-decal). Bạn cũng có thể chuẩn bị theo hướng dẫn đo kính và gửi ảnh các vị trí cần xử lý.

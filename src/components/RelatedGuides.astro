@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import { relatedGuides, type ContentTopic } from '../data/content-topics';
+interface Props {topics?:ContentTopic[];context?:string;exclude?:string;heading?:string;}
+const {topics,context,exclude,heading='Hướng dẫn liên quan'}=Astro.props;
+const posts=relatedGuides(await getCollection('blog'),{topics,context,exclude});
+---
+{posts.length>0&&<section class="container related-guides"><div><h2>{heading}</h2><a href="/blog">Xem Blog iDecal →</a></div><nav aria-label={heading}>{posts.map(post=><a href={`/blog/${post.id}`}><span>{post.data.title}</span><span aria-hidden="true">→</span></a>)}</nav></section>}
+<style>
+.related-guides{padding-top:28px;padding-bottom:32px}.related-guides>div{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:16px}.related-guides h2{font-size:21px;font-weight:500;line-height:1.5;margin:0}.related-guides>div>a{font-size:13px;color:#0d6b96}.related-guides nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.related-guides nav a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-top:1px solid #e1eaf4;padding-top:14px;color:#315574;font-size:14px;line-height:1.8}.related-guides a:focus-visible{outline:2px solid #0d6b96;outline-offset:4px}@media(max-width:767px){.related-guides nav{grid-template-columns:1fr;gap:14px}.related-guides>div{flex-wrap:wrap;gap:10px}}
+</style>

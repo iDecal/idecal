@@ -1,6 +1,6 @@
 ---
-title: "Kích thước Poster chuẩn và phổ biến nhất hiện nay"
-description: "Kích thước Poster chuẩn là bao nhiêu? vẫn là một vấn đề mà rất nhiều người quan tâm, đặc biệt là đối với những người làm thiết kế khi mà đứa con tinh thần của mình đã…"
+title: "Kích thước poster: chọn khổ theo vị trí trưng bày"
+description: "Kích thước poster nên được chọn theo khoảng nhìn, nội dung và khung hoặc giá trưng bày."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
 categories: ["Góc chia sẽ"]
@@ -9,16 +9,23 @@ author: "iDecal"
 image: "/images/blog-wordpress/c7fa5df0d4c5f66b3c3d.png"
 wordpressId: 17929
 originalUrl: "https://idecal.vn/kich-thuoc-poster-chuan-va-pho-bien-nhat-hien-nay/"
-focusKeyword: "Kích thước poster chuẩn"
+focusKeyword: "Kích thước poster"
+seoTitle: "Kích thước poster: chọn khổ theo vị trí trưng bày"
+contentTopics: ["printing"]
+seoDescription: "Kích thước poster nên được chọn theo khoảng nhìn, nội dung và khung hoặc giá trưng bày."
+updatedDate: "2026-11-04T21:01:39+07:00"
+editorialReview: "2026-11-04"
 ---
 
-**Kích thước Poster chuẩn là bao nhiêu? vẫn là một vấn đề mà rất nhiều người quan tâm, đặc biệt là đối với những người làm thiết kế khi mà đứa con tinh thần của mình đã hoàn thành nhưng chỉ vì không đúng kích cỡ ban đầu mà phải "đập đi xây lại", vừa tốn công sức vừa mất thời gian.**
+Kích thước poster nên được chọn theo khoảng nhìn, nội dung và khung hoặc giá trưng bày. Các khổ phổ biến là điểm bắt đầu; file sản xuất vẫn phải xác nhận tỉ lệ, phần chừa và kích thước thành phẩm.
 
 **Để tránh gặp phải tình huống như vậy trong bài viết này iDecal sẽ giới thiệu những thông tin cần thiết về poster cũng như kích thước poster chuẩn dành cho bạn.**
 
 <span id="h2_1"></span>
 
-## Poster là gì?
+<span id="poster-là-gì"></span>
+
+## Kích thước poster: poster là gì?
 
 <img src="/images/blog-wordpress/acece84ae3e1e7c791f8.png" alt="Kích thước poster chuẩn khi tiết kế Poster treo tường" loading="lazy" decoding="async" />
 
@@ -26,7 +33,7 @@ Cũng giống như banner, poster là một loại hình quảng cáo khá phổ
 
 Đây cũng là một loại hình quảng cáo được các nhà quảng cáo rất ưa chuộng vì chi phí rẻ,  khả năng tác động và thu hút lớn với nhóm đối tượng khách hàng tiềm năng, đặc biệt là đối với nhóm khách hàng mục tiêu thực tế bên ngoài. Do vậy các poster thường được đặt ở vị trí dễ nhìn, cao và nổi bật  nhất (trạm xe bus, bên đường, trước cửa hàng, trung tâm mua sắm,...)
 
-Việc thiết kế ra được một poster truyền tải đúng nội dung và ấn tượng với người xem đòi hỏi người thiết kế rất am hiểu về sáng tạo, lồng ghép khéo léo, thông minh thông điệp truyền thông vào từng câu nói, hình ảnh trong poster. Ngoài ra để có thể đem poster thành "hiện vật" bên ngoài những người làm thiết kế cũng cần phải tuân thủ các kích thước poster chuẩn trước khi in.
+Việc [thiết kế](/dich-vu/thiet-ke) ra được một poster truyền tải đúng nội dung và ấn tượng với người xem đòi hỏi người thiết kế rất am hiểu về sáng tạo, lồng ghép khéo léo, thông minh thông điệp truyền thông vào từng câu nói, hình ảnh trong poster. Ngoài ra để có thể đem poster thành "hiện vật" bên ngoài những người làm thiết kế cũng cần phải tuân thủ các kích thước poster chuẩn trước khi in.
 
 <span id="h2_2"></span>
 
@@ -36,7 +43,9 @@ Việc thiết kế ra được một poster truyền tải đúng nội dung v�
 
 ### *1. Poster quảng cáo*
 
-Đây là dạng poster phổ biến nhất hiện nay khi chỉ cần nhìn xung quanh bạn cũng có thể thấy, đặc biệt là tại các cửa hàng kinh doanh, các trung tâm mua sắm hay được treo bên đường . Đặc điểm của chúng đó là sử dụng hình ảnh, câu từ hấp dẫn, bắt mắt và ấn tượng nhanh chóng để thu hút người xem, bởi người xem chỉ chịu dành ra cho bạn 1 - 3 giây lướt qua poster quảng cáo đó, do vậy cần làm sao để poster vừa ấn tượng vừa quảng cáo thu hút người xem tới cửa hàng và mua chúng.
+Đây là dạng poster phổ biến nhất hiện nay khi chỉ cần nhìn xung quanh bạn cũng có thể thấy, đặc biệt là tại các cửa hàng kinh doanh, các trung tâm mua sắm hay được treo bên đường .
+
+Đặc điểm của chúng đó là sử dụng hình ảnh, câu từ hấp dẫn, bắt mắt và ấn tượng nhanh chóng để thu hút người xem, bởi người xem chỉ chịu dành ra cho bạn 1 - 3 giây lướt qua poster quảng cáo đó, do vậy cần làm sao để poster vừa ấn tượng vừa quảng cáo thu hút người xem tới cửa hàng và mua chúng.
 
 <img src="/images/blog-wordpress/c6712454425e55648990.jpg" alt="kích thước poster 2" loading="lazy" decoding="async" />
 
@@ -108,3 +117,7 @@ Các dạng poster lớn sẽ xuất hiện ở những nơi đông người nh�
 Hi vọng với những thông tin về poster cũng như kích thước poster chuẩn này bạn đã biết cách thiết kế poster một cách chuẩn chỉnh để khi in ấn sẽ không gặp bất cứ sự cố gì.
 
 **Xin cảm ơn và chúc bạn thành công!**
+
+## Tham khảo để chọn phần việc phù hợp
+
+Khi đã rõ cách sử dụng, xem [các vật liệu và công nghệ in](/dich-vu/in-decal#vat-lieu-in). Nếu file chưa đúng khổ, hãy làm rõ [phạm vi thiết kế](/dich-vu/thiet-ke) trước khi chốt bản sản xuất.

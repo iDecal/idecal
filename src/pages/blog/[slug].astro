@@ -1,4 +1,5 @@
 ---
+import { relatedGuides } from '../../data/content-topics';
 import { expandSeoTemplate } from '../../data/seo';
 import Layout from '../../layouts/Layout.astro';
 import '../../styles/blog.css';
@@ -21,9 +22,8 @@ const { Content, headings } = await render(entry);
 
 // Lấy bài viết liên quan
 const allPosts = await getCollection('blog');
-const relatedPosts = allPosts
-  .filter(p => postCategory(p).slug === category.slug && p.id !== entry.id)
-  .slice(0, 3);
+const relatedPosts = relatedGuides(allPosts,{topics:entry.data.contentTopics,context:entry.data.focusKeyword??entry.data.title,exclude:entry.id});
+
 const seoTitle=expandSeoTemplate(entry.data.seoTitle ?? entry.data.title,{title:entry.data.title,description:entry.data.description});
 const seoDescription=expandSeoTemplate(entry.data.seoDescription ?? entry.data.description,{title:entry.data.title,description:entry.data.description});
 const canonical=new URL(Astro.url.pathname,Astro.site).href;
@@ -37,7 +37,7 @@ const articleSchema={'@type':'BlogPosting','@id':canonical+'#article',headline:e
     <div class="blog-article-layout">
       <article class="blog-article">
         <header class="blog-article-header">
-          <div class="blog-card-meta"><a href={`/blog/chuyen-muc/${category.slug}`}>{category.name}</a><time datetime={entry.data.pubDate.toISOString()}>{entry.data.pubDate.toLocaleDateString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'})}</time></div>
+          <div class="blog-card-meta"><a href={`/blog/chuyen-muc/${category.slug}`}>{category.name}</a><time datetime={entry.data.pubDate.toISOString()}>{entry.data.pubDate.toLocaleDateString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'})}</time>{entry.data.updatedDate&&<span>Cập nhật {entry.data.updatedDate.toLocaleDateString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'})}</span>}</div>
           <h1>{entry.data.title}</h1><p class="blog-article-intro">{entry.data.description}</p>
         </header>
         <img class="blog-article-cover" src={entry.data.image} alt={entry.data.title} width="1000" height="625" fetchpriority="high" />
@@ -49,6 +49,6 @@ const articleSchema={'@type':'BlogPosting','@id':canonical+'#article',headline:e
         <nav class="blog-sidebar-categories" aria-label="Chuyên mục bài viết"><h2>Khám phá chuyên mục</h2>{blogCategories.map(item=><a href={`/blog/chuyen-muc/${item.slug}`} aria-current={category.slug===item.slug?'page':undefined}>{item.name}<span aria-hidden="true">→</span></a>)}</nav>
       </aside>
     </div>
-    {relatedPosts.length>0&&<section class="blog-related"><div class="blog-section-title"><h2>Cùng chuyên mục</h2><a href={`/blog/chuyen-muc/${category.slug}`}>Xem thêm →</a></div><div class="blog-post-grid">{relatedPosts.map(post=><article class="post-card"><a class="blog-card-image" href={`/blog/${post.id}`}><img src={post.data.image} alt={post.data.title} width="800" height="500" loading="lazy" /></a><div class="blog-card-content"><h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3><a class="blog-read-link" href={`/blog/${post.id}`}>Đọc bài viết <span aria-hidden="true">→</span></a></div></article>)}</div></section>}
+    {relatedPosts.length>0&&<section class="blog-related"><div class="blog-section-title"><h2>Bài cùng chủ đề</h2><a href={`/blog/chuyen-muc/${category.slug}`}>Xem thêm →</a></div><div class="blog-post-grid">{relatedPosts.map(post=><article class="post-card"><a class="blog-card-image" href={`/blog/${post.id}`}><img src={post.data.image} alt={post.data.title} width="800" height="500" loading="lazy" /></a><div class="blog-card-content"><h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3><a class="blog-read-link" href={`/blog/${post.id}`}>Đọc bài viết <span aria-hidden="true">→</span></a></div></article>)}</div></section>}
   </div>
 </Layout>

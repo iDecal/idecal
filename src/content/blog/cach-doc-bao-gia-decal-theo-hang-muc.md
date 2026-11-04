@@ -1,24 +1,32 @@
 ---
-title: "Cách đọc báo giá Decal: vật liệu, thiết kế, gia công và thi công"
-description: "Những hạng mục cần làm rõ khi hỏi giá Decal, cách phân biệt đơn vị tính và kiểm tra phần đã bao gồm để tránh tính trùng."
+title: "Đọc báo giá Decal: tách vật liệu và công việc"
+description: "Đọc báo giá Decal nên bắt đầu từ vật liệu, đơn vị tính và các phần đã bao gồm."
 category: "Báo giá"
 categorySlug: "bao-gia"
-pubDate: 2026-11-03
+pubDate: "2026-11-03"
 author: "iDecal"
 image: "/images/decal-quang-cao/gioi-thieu-idecal.jpeg"
+seoTitle: "Đọc báo giá Decal: tách vật liệu và công việc"
+focusKeyword: "Đọc báo giá Decal"
+contentTopics: ["pricing"]
+seoDescription: "Đọc báo giá Decal nên bắt đầu từ vật liệu, đơn vị tính và các phần đã bao gồm."
+updatedDate: "2026-11-04T21:01:39+07:00"
+editorialReview: "2026-11-04"
 ---
 
-Một đơn giá thấp chưa đủ để so sánh hai phương án nếu vật liệu, khối lượng và phạm vi công việc khác nhau. Cách dễ hiểu hơn là nhìn báo giá theo từng hạng mục và kiểm tra phần đã bao gồm.
+Đọc báo giá Decal nên bắt đầu từ vật liệu, đơn vị tính và các phần đã bao gồm. Sau đó so sánh thiết kế, in/gia công, xử lý nền và thi công để tránh đối chiếu hai phương án có phạm vi khác nhau.
 
-## Bốn phần thường gặp trong báo giá
+<span id="bốn-phần-thường-gặp-trong-báo-giá"></span>
 
-**Vật liệu:** loại Decal hoặc film, màu, khổ cuộn, bề mặt và lượng sử dụng. Với hình in, cần xác định nền vật liệu và lớp cán nếu có.
+## Đọc báo giá Decal: bốn phần thường gặp trong báo giá
+
+**[Vật liệu](/dich-vu/in-decal#vat-lieu-in):** loại Decal hoặc film, màu, khổ cuộn, bề mặt và lượng sử dụng. Với hình in, cần xác định nền vật liệu và lớp cán nếu có.
 
 **Thiết kế:** bố cục, chỉnh sửa file, triển khai theo kích thước hoặc chuẩn bị đường cắt. Làm rõ số phương án, phạm vi chỉnh sửa và định dạng bàn giao khi cần thuê thiết kế.
 
 **In hoặc gia công:** in UV hay mực dầu, cắt chữ, bế hình, cán màng, chia khổ hoặc bồi bảng. Không phải sản phẩm nào cũng cần tất cả các công đoạn.
 
-**Thi công:** công dán, xử lý bề mặt, tháo lớp cũ và điều kiện tiếp cận. Báo giá trọn gói cần ghi rõ những phần đã tính trong đơn giá để tránh cộng lại.
+**[Thi công](/dich-vu/thi-cong-decal):** công dán, xử lý bề mặt, tháo lớp cũ và điều kiện tiếp cận. [Báo giá](/dich-vu#bang-gia-dich-vu) trọn gói cần ghi rõ những phần đã tính trong đơn giá để tránh cộng lại.
 
 ## Kiểm tra đơn vị tính
 
@@ -33,3 +41,7 @@ Gửi kích thước, số lượng, ảnh hiện trạng, file thiết kế n�
 Kiểm tra lại phần bao gồm, phần tùy chọn, cách xử lý khi thay đổi khối lượng và lịch bàn giao. Bài viết này hướng dẫn đọc báo giá, không thay thế báo giá theo công trình.
 
 Bạn có thể xem [bảng giá dịch vụ tham khảo](/dich-vu/#bang-gia-dich-vu) hoặc [gửi yêu cầu](/lien-he-idecal) để trao đổi theo nhu cầu thực tế.
+
+## Tham khảo để chọn phần việc phù hợp
+
+Khi cần đơn giá đang áp dụng, đối chiếu [bảng giá dịch vụ tham khảo](/dich-vu#bang-gia-dich-vu) và cách đọc báo giá theo hạng mục. Nội dung cần nêu rõ phần đã bao gồm trong vật liệu, thiết kế, in/gia công và thi công.

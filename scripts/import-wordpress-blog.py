@@ -21,7 +21,7 @@ class ContentConverter(MarkdownConverter):
   anchor=el.get('id')
   return ('\n<span id="'+html.escape(anchor,quote=True)+'"></span>\n' if anchor else '')+text
 
-parser=argparse.ArgumentParser();parser.add_argument('xml');parser.add_argument('--retry-images',action='store_true');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('xml');parser.add_argument('--retry-images',action='store_true');parser.add_argument('--overwrite-reviewed',action='store_true');args=parser.parse_args()
 ns={'w':'http://wordpress.org/export/1.2/','c':'http://purl.org/rss/1.0/modules/content/','e':'http://wordpress.org/export/1.2/excerpt/'}
 root=ET.parse(args.xml).getroot();items=root.findall('./channel/item')
 def field(item,key): return item.findtext(key,'',ns)
@@ -100,8 +100,16 @@ def link_target(value):
  return value if parts.netloc else 'https://idecal.vn/'+value.lstrip('/')
 
 records=[];missing_by_post=[]
+prior_import={}
+if Path('docs/wordpress-blog-import.json').exists():
+ prior_import={p['slug']:p for p in json.loads(Path('docs/wordpress-blog-import.json').read_text()).get('posts',[])}
 for item in posts:
- slug=field(item,'w:post_name');soup=soups[slug];title=html.unescape(field(item,'title'));missing=[]
+ slug=field(item,'w:post_name');existing_review=Path('src/content/blog')/(slug+'.md')
+ if existing_review.exists() and 'editorialReview:' in existing_review.read_text() and not args.overwrite_reviewed:
+  print('Keeping editorial revision: '+slug,flush=True)
+  if slug in prior_import:records.append({**prior_import[slug],'preservedEditorial':True})
+  continue
+ soup=soups[slug];title=html.unescape(field(item,'title'));missing=[]
  for tag in soup.find_all(['script','style','iframe','object','embed','form','input','button','meta','svg','nav']):tag.decompose()
  for comment in soup.find_all(string=lambda value:isinstance(value,Comment)):comment.extract()
  for heading in soup.find_all('h1'):heading.name='h2'

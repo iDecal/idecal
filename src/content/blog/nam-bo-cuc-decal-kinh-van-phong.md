@@ -1,16 +1,24 @@
 ---
-title: "5 bố cục Decal kính cho văn phòng dễ ứng dụng"
-description: "Gợi ý bố cục dải mờ, đường kẻ, logo và họa tiết để cân bằng riêng tư, ánh sáng và nhận diện thương hiệu trong văn phòng."
+title: "Bố cục Decal văn phòng: năm cách sắp xếp dễ ứng dụng"
+description: "Bố cục Decal văn phòng nên bắt đầu từ logo, vùng cần riêng tư và khoảng kính muốn giữ trong."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
-pubDate: 2026-11-03
+pubDate: "2026-11-03"
 author: "iDecal"
 image: "/images/catalogue/decal-mo-ke-soc-ngang.jpg"
+seoTitle: "Bố cục Decal văn phòng: năm cách sắp xếp dễ ứng dụng"
+focusKeyword: "Bố cục Decal văn phòng"
+contentTopics: ["design"]
+seoDescription: "Bố cục Decal văn phòng nên bắt đầu từ logo, vùng cần riêng tư và khoảng kính muốn giữ trong."
+updatedDate: "2026-11-04T21:01:39+07:00"
+editorialReview: "2026-11-04"
 ---
 
-Một bố cục đẹp cần hợp với cách sử dụng căn phòng. Trước khi chọn họa tiết, hãy xác định góc nhìn cần che, vị trí người ngồi và phần kính muốn giữ thoáng.
+Bố cục Decal văn phòng nên bắt đầu từ logo, vùng cần riêng tư và khoảng kính muốn giữ trong. Năm hướng sắp xếp dưới đây là gợi ý để điều chỉnh theo từng ô cửa, không phải một kích thước cố định cho mọi công trình.
 
-## Năm cách bố trí tham khảo
+<span id="năm-cách-bố-trí-tham-khảo"></span>
+
+## Bố cục Decal văn phòng: năm cách bố trí tham khảo
 
 ### 1. Dải mờ ngang tầm mắt
 
@@ -37,3 +45,7 @@ Hiệu ứng vân sóng có thể dùng ở cửa hoặc một phần vách tran
 Gửi ảnh toàn cảnh, kích thước từng ô kính, logo và một vài mẫu phong cách bạn thích. Thống nhất bản duyệt, vật liệu và vị trí dán trước khi in hoặc cắt.
 
 Xem [nhóm Decal kính văn phòng](/danh-muc-san-pham/decal-dan-kinh-van-phong/) để tham khảo mẫu, hoặc [dịch vụ Thiết kế](/dich-vu/thiet-ke/) nếu cần hỗ trợ dàn bố cục theo không gian thực tế.
+
+## Tham khảo để chọn phần việc phù hợp
+
+Bạn có thể xem [dịch vụ thiết kế](/dich-vu/thiet-ke) để làm rõ phần chỉnh file, dàn bố cục và bàn giao. [Mẫu Decal kính văn phòng](/danh-muc-san-pham/decal-dan-kinh-van-phong) giúp đối chiếu cách ứng dụng trên vật liệu.

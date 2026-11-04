@@ -1,0 +1,1520 @@
+{
+  "source": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1685-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-thanh-pho-ho-chi-minh-nam-2025-119250616211341304.htm",
+  "resolution": "1685/NQ-UBTVQH15",
+  "effectiveOperations": "2025-07-01",
+  "checkedOn": "2026-11-04",
+  "units": [
+    {
+      "clause": 1,
+      "type": "phường",
+      "name": "Sài Gòn",
+      "slug": "phuong-sai-gon",
+      "formerArea": "Quận 1",
+      "districtSlug": "quan-1",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 2,
+      "type": "phường",
+      "name": "Tân Định",
+      "slug": "phuong-tan-dinh",
+      "formerArea": "Quận 1",
+      "districtSlug": "quan-1",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 3,
+      "type": "phường",
+      "name": "Bến Thành",
+      "slug": "phuong-ben-thanh",
+      "formerArea": "Quận 1",
+      "districtSlug": "quan-1",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 4,
+      "type": "phường",
+      "name": "Cầu Ông Lãnh",
+      "slug": "phuong-cau-ong-lanh",
+      "formerArea": "Quận 1",
+      "districtSlug": "quan-1",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 5,
+      "type": "phường",
+      "name": "Bàn Cờ",
+      "slug": "phuong-ban-co",
+      "formerArea": "Quận 3",
+      "districtSlug": "quan-3",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 6,
+      "type": "phường",
+      "name": "Xuân Hòa",
+      "slug": "phuong-xuan-hoa",
+      "formerArea": "Quận 3",
+      "districtSlug": "quan-3",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 7,
+      "type": "phường",
+      "name": "Nhiêu Lộc",
+      "slug": "phuong-nhieu-loc",
+      "formerArea": "Quận 3",
+      "districtSlug": "quan-3",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 8,
+      "type": "phường",
+      "name": "Xóm Chiếu",
+      "slug": "phuong-xom-chieu",
+      "formerArea": "Quận 4",
+      "districtSlug": "quan-4",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 9,
+      "type": "phường",
+      "name": "Khánh Hội",
+      "slug": "phuong-khanh-hoi",
+      "formerArea": "Quận 4",
+      "districtSlug": "quan-4",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 10,
+      "type": "phường",
+      "name": "Vĩnh Hội",
+      "slug": "phuong-vinh-hoi",
+      "formerArea": "Quận 4",
+      "districtSlug": "quan-4",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 11,
+      "type": "phường",
+      "name": "Chợ Quán",
+      "slug": "phuong-cho-quan",
+      "formerArea": "Quận 5",
+      "districtSlug": "quan-5",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 12,
+      "type": "phường",
+      "name": "An Đông",
+      "slug": "phuong-an-dong",
+      "formerArea": "Quận 5",
+      "districtSlug": "quan-5",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 13,
+      "type": "phường",
+      "name": "Chợ Lớn",
+      "slug": "phuong-cho-lon",
+      "formerArea": "Quận 5",
+      "districtSlug": "quan-5",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 14,
+      "type": "phường",
+      "name": "Bình Tây",
+      "slug": "phuong-binh-tay",
+      "formerArea": "Quận 6",
+      "districtSlug": "quan-6",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 15,
+      "type": "phường",
+      "name": "Bình Tiên",
+      "slug": "phuong-binh-tien",
+      "formerArea": "Quận 6",
+      "districtSlug": "quan-6",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 16,
+      "type": "phường",
+      "name": "Bình Phú",
+      "slug": "phuong-binh-phu",
+      "formerArea": "Quận 6",
+      "districtSlug": "quan-6",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 17,
+      "type": "phường",
+      "name": "Phú Lâm",
+      "slug": "phuong-phu-lam",
+      "formerArea": "Quận 6",
+      "districtSlug": "quan-6",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 18,
+      "type": "phường",
+      "name": "Tân Thuận",
+      "slug": "phuong-tan-thuan",
+      "formerArea": "Quận 7",
+      "districtSlug": "quan-7",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 19,
+      "type": "phường",
+      "name": "Phú Thuận",
+      "slug": "phuong-phu-thuan",
+      "formerArea": "Quận 7",
+      "districtSlug": "quan-7",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 20,
+      "type": "phường",
+      "name": "Tân Mỹ",
+      "slug": "phuong-tan-my",
+      "formerArea": "Quận 7",
+      "districtSlug": "quan-7",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 21,
+      "type": "phường",
+      "name": "Tân Hưng",
+      "slug": "phuong-tan-hung",
+      "formerArea": "Quận 7",
+      "districtSlug": "quan-7",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 22,
+      "type": "phường",
+      "name": "Chánh Hưng",
+      "slug": "phuong-chanh-hung",
+      "formerArea": "Quận 8",
+      "districtSlug": "quan-8",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 23,
+      "type": "phường",
+      "name": "Phú Định",
+      "slug": "phuong-phu-dinh",
+      "formerArea": "Quận 8",
+      "districtSlug": "quan-8",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 24,
+      "type": "phường",
+      "name": "Bình Đông",
+      "slug": "phuong-binh-dong",
+      "formerArea": "Quận 8",
+      "districtSlug": "quan-8",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 25,
+      "type": "phường",
+      "name": "Diên Hồng",
+      "slug": "phuong-dien-hong",
+      "formerArea": "Quận 10",
+      "districtSlug": "quan-10",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 26,
+      "type": "phường",
+      "name": "Vườn Lài",
+      "slug": "phuong-vuon-lai",
+      "formerArea": "Quận 10",
+      "districtSlug": "quan-10",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 27,
+      "type": "phường",
+      "name": "Hòa Hưng",
+      "slug": "phuong-hoa-hung",
+      "formerArea": "Quận 10",
+      "districtSlug": "quan-10",
+      "group": "Trung tâm & khu Nam"
+    },
+    {
+      "clause": 28,
+      "type": "phường",
+      "name": "Minh Phụng",
+      "slug": "phuong-minh-phung",
+      "formerArea": "Quận 11",
+      "districtSlug": "quan-11",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 29,
+      "type": "phường",
+      "name": "Bình Thới",
+      "slug": "phuong-binh-thoi",
+      "formerArea": "Quận 11",
+      "districtSlug": "quan-11",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 30,
+      "type": "phường",
+      "name": "Hòa Bình",
+      "slug": "phuong-hoa-binh",
+      "formerArea": "Quận 11",
+      "districtSlug": "quan-11",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 31,
+      "type": "phường",
+      "name": "Phú Thọ",
+      "slug": "phuong-phu-tho",
+      "formerArea": "Quận 11",
+      "districtSlug": "quan-11",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 32,
+      "type": "phường",
+      "name": "Đông Hưng Thuận",
+      "slug": "phuong-dong-hung-thuan",
+      "formerArea": "Quận 12",
+      "districtSlug": "quan-12",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 33,
+      "type": "phường",
+      "name": "Trung Mỹ Tây",
+      "slug": "phuong-trung-my-tay",
+      "formerArea": "Quận 12",
+      "districtSlug": "quan-12",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 34,
+      "type": "phường",
+      "name": "Tân Thới Hiệp",
+      "slug": "phuong-tan-thoi-hiep",
+      "formerArea": "Quận 12",
+      "districtSlug": "quan-12",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 35,
+      "type": "phường",
+      "name": "Thới An",
+      "slug": "phuong-thoi-an",
+      "formerArea": "Quận 12",
+      "districtSlug": "quan-12",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 36,
+      "type": "phường",
+      "name": "An Phú Đông",
+      "slug": "phuong-an-phu-dong",
+      "formerArea": "Quận 12",
+      "districtSlug": "quan-12",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 37,
+      "type": "phường",
+      "name": "An Lạc",
+      "slug": "phuong-an-lac",
+      "formerArea": "Bình Tân",
+      "districtSlug": "quan-binh-tan",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 38,
+      "type": "phường",
+      "name": "Bình Tân",
+      "slug": "phuong-binh-tan",
+      "formerArea": "Bình Tân",
+      "districtSlug": "quan-binh-tan",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 39,
+      "type": "phường",
+      "name": "Tân Tạo",
+      "slug": "phuong-tan-tao",
+      "formerArea": "Bình Tân",
+      "districtSlug": "quan-binh-tan",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 40,
+      "type": "phường",
+      "name": "Bình Trị Đông",
+      "slug": "phuong-binh-tri-dong",
+      "formerArea": "Bình Tân",
+      "districtSlug": "quan-binh-tan",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 41,
+      "type": "phường",
+      "name": "Bình Hưng Hòa",
+      "slug": "phuong-binh-hung-hoa",
+      "formerArea": "Bình Tân",
+      "districtSlug": "quan-binh-tan",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 42,
+      "type": "phường",
+      "name": "Gia Định",
+      "slug": "phuong-gia-dinh",
+      "formerArea": "Bình Thạnh",
+      "districtSlug": "quan-binh-thanh",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 43,
+      "type": "phường",
+      "name": "Bình Thạnh",
+      "slug": "phuong-binh-thanh",
+      "formerArea": "Bình Thạnh",
+      "districtSlug": "quan-binh-thanh",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 44,
+      "type": "phường",
+      "name": "Bình Lợi Trung",
+      "slug": "phuong-binh-loi-trung",
+      "formerArea": "Bình Thạnh",
+      "districtSlug": "quan-binh-thanh",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 45,
+      "type": "phường",
+      "name": "Thạnh Mỹ Tây",
+      "slug": "phuong-thanh-my-tay",
+      "formerArea": "Bình Thạnh",
+      "districtSlug": "quan-binh-thanh",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 46,
+      "type": "phường",
+      "name": "Bình Quới",
+      "slug": "phuong-binh-quoi",
+      "formerArea": "Bình Thạnh",
+      "districtSlug": "quan-binh-thanh",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 47,
+      "type": "phường",
+      "name": "Hạnh Thông",
+      "slug": "phuong-hanh-thong",
+      "formerArea": "Gò Vấp",
+      "districtSlug": "quan-go-vap",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 48,
+      "type": "phường",
+      "name": "An Nhơn",
+      "slug": "phuong-an-nhon",
+      "formerArea": "Gò Vấp",
+      "districtSlug": "quan-go-vap",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 49,
+      "type": "phường",
+      "name": "Gò Vấp",
+      "slug": "phuong-go-vap",
+      "formerArea": "Gò Vấp",
+      "districtSlug": "quan-go-vap",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 50,
+      "type": "phường",
+      "name": "An Hội Đông",
+      "slug": "phuong-an-hoi-dong",
+      "formerArea": "Gò Vấp",
+      "districtSlug": "quan-go-vap",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 51,
+      "type": "phường",
+      "name": "Thông Tây Hội",
+      "slug": "phuong-thong-tay-hoi",
+      "formerArea": "Gò Vấp",
+      "districtSlug": "quan-go-vap",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 52,
+      "type": "phường",
+      "name": "An Hội Tây",
+      "slug": "phuong-an-hoi-tay",
+      "formerArea": "Gò Vấp",
+      "districtSlug": "quan-go-vap",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 53,
+      "type": "phường",
+      "name": "Đức Nhuận",
+      "slug": "phuong-duc-nhuan",
+      "formerArea": "Phú Nhuận",
+      "districtSlug": "quan-phu-nhuan",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 54,
+      "type": "phường",
+      "name": "Cầu Kiệu",
+      "slug": "phuong-cau-kieu",
+      "formerArea": "Phú Nhuận",
+      "districtSlug": "quan-phu-nhuan",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 55,
+      "type": "phường",
+      "name": "Phú Nhuận",
+      "slug": "phuong-phu-nhuan",
+      "formerArea": "Phú Nhuận",
+      "districtSlug": "quan-phu-nhuan",
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+    },
+    {
+      "clause": 56,
+      "type": "phường",
+      "name": "Tân Sơn Hòa",
+      "slug": "phuong-tan-son-hoa",
+      "formerArea": "Tân Bình",
+      "districtSlug": "quan-tan-binh",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 57,
+      "type": "phường",
+      "name": "Tân Sơn Nhất",
+      "slug": "phuong-tan-son-nhat",
+      "formerArea": "Tân Bình",
+      "districtSlug": "quan-tan-binh",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 58,
+      "type": "phường",
+      "name": "Tân Hòa",
+      "slug": "phuong-tan-hoa",
+      "formerArea": "Tân Bình",
+      "districtSlug": "quan-tan-binh",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 59,
+      "type": "phường",
+      "name": "Bảy Hiền",
+      "slug": "phuong-bay-hien",
+      "formerArea": "Tân Bình",
+      "districtSlug": "quan-tan-binh",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 60,
+      "type": "phường",
+      "name": "Tân Bình",
+      "slug": "phuong-tan-binh",
+      "formerArea": "Tân Bình",
+      "districtSlug": "quan-tan-binh",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 61,
+      "type": "phường",
+      "name": "Tân Sơn",
+      "slug": "phuong-tan-son",
+      "formerArea": "Tân Bình",
+      "districtSlug": "quan-tan-binh",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 62,
+      "type": "phường",
+      "name": "Tây Thạnh",
+      "slug": "phuong-tay-thanh",
+      "formerArea": "Tân Phú",
+      "districtSlug": "quan-tan-phu",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 63,
+      "type": "phường",
+      "name": "Tân Sơn Nhì",
+      "slug": "phuong-tan-son-nhi",
+      "formerArea": "Tân Phú",
+      "districtSlug": "quan-tan-phu",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 64,
+      "type": "phường",
+      "name": "Phú Thọ Hòa",
+      "slug": "phuong-phu-tho-hoa",
+      "formerArea": "Tân Phú",
+      "districtSlug": "quan-tan-phu",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 65,
+      "type": "phường",
+      "name": "Tân Phú",
+      "slug": "phuong-tan-phu",
+      "formerArea": "Tân Phú",
+      "districtSlug": "quan-tan-phu",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 66,
+      "type": "phường",
+      "name": "Phú Thạnh",
+      "slug": "phuong-phu-thanh",
+      "formerArea": "Tân Phú",
+      "districtSlug": "quan-tan-phu",
+      "group": "Phía Tây & Tây Bắc"
+    },
+    {
+      "clause": 67,
+      "type": "phường",
+      "name": "Hiệp Bình",
+      "slug": "phuong-hiep-binh",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 68,
+      "type": "phường",
+      "name": "Thủ Đức",
+      "slug": "phuong-thu-duc",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 69,
+      "type": "phường",
+      "name": "Tam Bình",
+      "slug": "phuong-tam-binh",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 70,
+      "type": "phường",
+      "name": "Linh Xuân",
+      "slug": "phuong-linh-xuan",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 71,
+      "type": "phường",
+      "name": "Tăng Nhơn Phú",
+      "slug": "phuong-tang-nhon-phu",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 72,
+      "type": "phường",
+      "name": "Long Bình",
+      "slug": "phuong-long-binh",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 73,
+      "type": "phường",
+      "name": "Long Phước",
+      "slug": "phuong-long-phuoc",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 74,
+      "type": "phường",
+      "name": "Long Trường",
+      "slug": "phuong-long-truong",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 75,
+      "type": "phường",
+      "name": "Cát Lái",
+      "slug": "phuong-cat-lai",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 76,
+      "type": "phường",
+      "name": "Bình Trưng",
+      "slug": "phuong-binh-trung",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 77,
+      "type": "phường",
+      "name": "Phước Long",
+      "slug": "phuong-phuoc-long",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 78,
+      "type": "phường",
+      "name": "An Khánh",
+      "slug": "phuong-an-khanh",
+      "formerArea": "TP. Thủ Đức",
+      "districtSlug": "thanh-pho-thu-duc",
+      "group": "Phía Đông · Thủ Đức"
+    },
+    {
+      "clause": 79,
+      "type": "phường",
+      "name": "Đông Hòa",
+      "slug": "phuong-dong-hoa",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 80,
+      "type": "phường",
+      "name": "Dĩ An",
+      "slug": "phuong-di-an",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 81,
+      "type": "phường",
+      "name": "Tân Đông Hiệp",
+      "slug": "phuong-tan-dong-hiep",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 82,
+      "type": "phường",
+      "name": "An Phú",
+      "slug": "phuong-an-phu",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 83,
+      "type": "phường",
+      "name": "Bình Hòa",
+      "slug": "phuong-binh-hoa",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 84,
+      "type": "phường",
+      "name": "Lái Thiêu",
+      "slug": "phuong-lai-thieu",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 85,
+      "type": "phường",
+      "name": "Thuận An",
+      "slug": "phuong-thuan-an",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 86,
+      "type": "phường",
+      "name": "Thuận Giao",
+      "slug": "phuong-thuan-giao",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 87,
+      "type": "phường",
+      "name": "Thủ Dầu Một",
+      "slug": "phuong-thu-dau-mot",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 88,
+      "type": "phường",
+      "name": "Phú Lợi",
+      "slug": "phuong-phu-loi",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 89,
+      "type": "phường",
+      "name": "Chánh Hiệp",
+      "slug": "phuong-chanh-hiep",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 90,
+      "type": "phường",
+      "name": "Bình Dương",
+      "slug": "phuong-binh-duong",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 91,
+      "type": "phường",
+      "name": "Hòa Lợi",
+      "slug": "phuong-hoa-loi",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 92,
+      "type": "phường",
+      "name": "Phú An",
+      "slug": "phuong-phu-an",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 93,
+      "type": "phường",
+      "name": "Tây Nam",
+      "slug": "phuong-tay-nam",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 94,
+      "type": "phường",
+      "name": "Long Nguyên",
+      "slug": "phuong-long-nguyen",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 95,
+      "type": "phường",
+      "name": "Bến Cát",
+      "slug": "phuong-ben-cat",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 96,
+      "type": "phường",
+      "name": "Chánh Phú Hòa",
+      "slug": "phuong-chanh-phu-hoa",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 97,
+      "type": "phường",
+      "name": "Vĩnh Tân",
+      "slug": "phuong-vinh-tan",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 98,
+      "type": "phường",
+      "name": "Bình Cơ",
+      "slug": "phuong-binh-co",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 99,
+      "type": "phường",
+      "name": "Tân Uyên",
+      "slug": "phuong-tan-uyen",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 100,
+      "type": "phường",
+      "name": "Tân Hiệp",
+      "slug": "phuong-tan-hiep",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 101,
+      "type": "phường",
+      "name": "Tân Khánh",
+      "slug": "phuong-tan-khanh",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 102,
+      "type": "phường",
+      "name": "Vũng Tàu",
+      "slug": "phuong-vung-tau",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 103,
+      "type": "phường",
+      "name": "Tam Thắng",
+      "slug": "phuong-tam-thang",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 104,
+      "type": "phường",
+      "name": "Rạch Dừa",
+      "slug": "phuong-rach-dua",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 105,
+      "type": "phường",
+      "name": "Phước Thắng",
+      "slug": "phuong-phuoc-thang",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 106,
+      "type": "phường",
+      "name": "Long Hương",
+      "slug": "phuong-long-huong",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 107,
+      "type": "phường",
+      "name": "Bà Rịa",
+      "slug": "phuong-ba-ria",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 108,
+      "type": "phường",
+      "name": "Tam Long",
+      "slug": "phuong-tam-long",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 109,
+      "type": "phường",
+      "name": "Tân Hải",
+      "slug": "phuong-tan-hai",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 110,
+      "type": "phường",
+      "name": "Tân Phước",
+      "slug": "phuong-tan-phuoc",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 111,
+      "type": "phường",
+      "name": "Phú Mỹ",
+      "slug": "phuong-phu-my",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 112,
+      "type": "phường",
+      "name": "Tân Thành",
+      "slug": "phuong-tan-thanh",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 113,
+      "type": "xã",
+      "name": "Vĩnh Lộc",
+      "slug": "xa-vinh-loc",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 114,
+      "type": "xã",
+      "name": "Tân Vĩnh Lộc",
+      "slug": "xa-tan-vinh-loc",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 115,
+      "type": "xã",
+      "name": "Bình Lợi",
+      "slug": "xa-binh-loi",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 116,
+      "type": "xã",
+      "name": "Tân Nhựt",
+      "slug": "xa-tan-nhut",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 117,
+      "type": "xã",
+      "name": "Bình Chánh",
+      "slug": "xa-binh-chanh",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 118,
+      "type": "xã",
+      "name": "Hưng Long",
+      "slug": "xa-hung-long",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 119,
+      "type": "xã",
+      "name": "Bình Hưng",
+      "slug": "xa-binh-hung",
+      "formerArea": "Bình Chánh",
+      "districtSlug": "huyen-binh-chanh",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 120,
+      "type": "xã",
+      "name": "Bình Khánh",
+      "slug": "xa-binh-khanh",
+      "formerArea": "Cần Giờ",
+      "districtSlug": "huyen-can-gio",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 121,
+      "type": "xã",
+      "name": "An Thới Đông",
+      "slug": "xa-an-thoi-dong",
+      "formerArea": "Cần Giờ",
+      "districtSlug": "huyen-can-gio",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 122,
+      "type": "xã",
+      "name": "Cần Giờ",
+      "slug": "xa-can-gio",
+      "formerArea": "Cần Giờ",
+      "districtSlug": "huyen-can-gio",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 123,
+      "type": "xã",
+      "name": "Củ Chi",
+      "slug": "xa-cu-chi",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 124,
+      "type": "xã",
+      "name": "Tân An Hội",
+      "slug": "xa-tan-an-hoi",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 125,
+      "type": "xã",
+      "name": "Thái Mỹ",
+      "slug": "xa-thai-my",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 126,
+      "type": "xã",
+      "name": "An Nhơn Tây",
+      "slug": "xa-an-nhon-tay",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 127,
+      "type": "xã",
+      "name": "Nhuận Đức",
+      "slug": "xa-nhuan-duc",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 128,
+      "type": "xã",
+      "name": "Phú Hòa Đông",
+      "slug": "xa-phu-hoa-dong",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 129,
+      "type": "xã",
+      "name": "Bình Mỹ",
+      "slug": "xa-binh-my",
+      "formerArea": "Củ Chi",
+      "districtSlug": "huyen-cu-chi",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 130,
+      "type": "xã",
+      "name": "Đông Thạnh",
+      "slug": "xa-dong-thanh",
+      "formerArea": "Hóc Môn",
+      "districtSlug": "huyen-hoc-mon",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 131,
+      "type": "xã",
+      "name": "Hóc Môn",
+      "slug": "xa-hoc-mon",
+      "formerArea": "Hóc Môn",
+      "districtSlug": "huyen-hoc-mon",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 132,
+      "type": "xã",
+      "name": "Xuân Thới Sơn",
+      "slug": "xa-xuan-thoi-son",
+      "formerArea": "Hóc Môn",
+      "districtSlug": "huyen-hoc-mon",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 133,
+      "type": "xã",
+      "name": "Bà Điểm",
+      "slug": "xa-ba-diem",
+      "formerArea": "Hóc Môn",
+      "districtSlug": "huyen-hoc-mon",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 134,
+      "type": "xã",
+      "name": "Nhà Bè",
+      "slug": "xa-nha-be",
+      "formerArea": "Nhà Bè",
+      "districtSlug": "huyen-nha-be",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 135,
+      "type": "xã",
+      "name": "Hiệp Phước",
+      "slug": "xa-hiep-phuoc",
+      "formerArea": "Nhà Bè",
+      "districtSlug": "huyen-nha-be",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    },
+    {
+      "clause": 136,
+      "type": "xã",
+      "name": "Thường Tân",
+      "slug": "xa-thuong-tan",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 137,
+      "type": "xã",
+      "name": "Bắc Tân Uyên",
+      "slug": "xa-bac-tan-uyen",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 138,
+      "type": "xã",
+      "name": "Phú Giáo",
+      "slug": "xa-phu-giao",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 139,
+      "type": "xã",
+      "name": "Phước Hòa",
+      "slug": "xa-phuoc-hoa",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 140,
+      "type": "xã",
+      "name": "Phước Thành",
+      "slug": "xa-phuoc-thanh",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 141,
+      "type": "xã",
+      "name": "An Long",
+      "slug": "xa-an-long",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 142,
+      "type": "xã",
+      "name": "Trừ Văn Thố",
+      "slug": "xa-tru-van-tho",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 143,
+      "type": "xã",
+      "name": "Bàu Bàng",
+      "slug": "xa-bau-bang",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 144,
+      "type": "xã",
+      "name": "Long Hòa",
+      "slug": "xa-long-hoa",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 145,
+      "type": "xã",
+      "name": "Thanh An",
+      "slug": "xa-thanh-an-binh-duong",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 146,
+      "type": "xã",
+      "name": "Dầu Tiếng",
+      "slug": "xa-dau-tieng",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 147,
+      "type": "xã",
+      "name": "Minh Thạnh",
+      "slug": "xa-minh-thanh",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 148,
+      "type": "xã",
+      "name": "Châu Pha",
+      "slug": "xa-chau-pha",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 149,
+      "type": "xã",
+      "name": "Long Hải",
+      "slug": "xa-long-hai",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 150,
+      "type": "xã",
+      "name": "Long Điền",
+      "slug": "xa-long-dien",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 151,
+      "type": "xã",
+      "name": "Phước Hải",
+      "slug": "xa-phuoc-hai",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 152,
+      "type": "xã",
+      "name": "Đất Đỏ",
+      "slug": "xa-dat-do",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 153,
+      "type": "xã",
+      "name": "Nghĩa Thành",
+      "slug": "xa-nghia-thanh",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 154,
+      "type": "xã",
+      "name": "Ngãi Giao",
+      "slug": "xa-ngai-giao",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 155,
+      "type": "xã",
+      "name": "Kim Long",
+      "slug": "xa-kim-long",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 156,
+      "type": "xã",
+      "name": "Châu Đức",
+      "slug": "xa-chau-duc",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 157,
+      "type": "xã",
+      "name": "Bình Giã",
+      "slug": "xa-binh-gia",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 158,
+      "type": "xã",
+      "name": "Xuân Sơn",
+      "slug": "xa-xuan-son",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 159,
+      "type": "xã",
+      "name": "Hồ Tràm",
+      "slug": "xa-ho-tram",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 160,
+      "type": "xã",
+      "name": "Xuyên Mộc",
+      "slug": "xa-xuyen-moc",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 161,
+      "type": "xã",
+      "name": "Hòa Hội",
+      "slug": "xa-hoa-hoi",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 162,
+      "type": "xã",
+      "name": "Bàu Lâm",
+      "slug": "xa-bau-lam",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 163,
+      "type": "đặc khu",
+      "name": "Côn Đảo",
+      "slug": "dac-khu-con-dao",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 164,
+      "type": "phường",
+      "name": "Thới Hòa",
+      "slug": "phuong-thoi-hoa",
+      "formerArea": "Bình Dương trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bình Dương trước đây"
+    },
+    {
+      "clause": 164,
+      "type": "xã",
+      "name": "Long Sơn",
+      "slug": "xa-long-son",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 164,
+      "type": "xã",
+      "name": "Hòa Hiệp",
+      "slug": "xa-hoa-hiep",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 164,
+      "type": "xã",
+      "name": "Bình Châu",
+      "slug": "xa-binh-chau",
+      "formerArea": "Bà Rịa – Vũng Tàu trước đây",
+      "districtSlug": null,
+      "group": "Khu vực Bà Rịa – Vũng Tàu trước đây"
+    },
+    {
+      "clause": 164,
+      "type": "xã",
+      "name": "Thạnh An",
+      "slug": "xa-thanh-an-can-gio",
+      "formerArea": "Cần Giờ",
+      "districtSlug": "huyen-can-gio",
+      "group": "Các xã phía Tây Bắc & phía Nam"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 ---
 import '../../styles/catalogue.css';
 import filmSpecifications from '../../data/film-specifications.json';
+import RelatedGuides from '../../components/RelatedGuides.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -76,6 +77,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
     </div>
   </section>
   {related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
+<RelatedGuides context={product.category+' '+product.slug} />
 </Layout>
 <script>
   document.querySelectorAll<HTMLElement>('[data-product-detail]').forEach(root => {

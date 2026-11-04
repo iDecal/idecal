@@ -1,4 +1,5 @@
 ---
+import RelatedGuides from './RelatedGuides.astro';
 import DistrictDirectory from './DistrictDirectory.astro';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
@@ -27,6 +28,7 @@ const steps = [
     <section id="quy-trinh" class="regional-soft"><div class="container regional-section"><div class="regional-heading"><p class="regional-kicker">Cách đặt dịch vụ</p><h2 class="brand-heading">Bốn bước từ tư vấn đến bàn giao</h2></div><ol class="regional-steps">{steps.map((step,index)=><li><span aria-hidden="true">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div></section>
     {(projects.length>0 || content.references.length>0) && <section class="container regional-section"><div class="regional-heading"><p class="regional-kicker">Ứng dụng thực tế</p><h2 class="brand-heading">Công trình tham khảo</h2></div>{projects.length>0 && <div class="regional-projects">{projects.map(project=><ProjectCard project={project} />)}</div>}{content.references.length>0 && <details class="regional-references"><summary>Hạng mục được giới thiệu tại {region.name}<span aria-hidden="true">+</span></summary><ul>{content.references.map(reference=><li>{reference}</li>)}</ul></details>}<a href="/du-an" class="regional-project-link">Xem hồ sơ công trình iDecal →</a></section>}
     <section id="cau-hoi" class="regional-soft"><div class="container regional-section regional-faq-grid"><div><p class="regional-kicker">Giải đáp thắc mắc</p><h2 class="brand-heading">Câu hỏi thường gặp</h2><p class="regional-body">Thông tin về vật liệu, thiết kế và triển khai công trình tại {region.name}.</p></div><div class="regional-faqs">{faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
+    <RelatedGuides context={region.slug+' '+region.serviceSlugs.join(' ')} />
     <nav class="container regional-other" aria-label="Khu vực khác"><h2>Khu vực phục vụ khác</h2><div>{regions.filter(other=>other.slug!==region.slug).map(other=><a href={`/khu-vuc/${other.slug}`}>{other.name}</a>)}<a href="/khu-vuc">Tất cả khu vực →</a></div></nav>
   </div>
 </Layout>
