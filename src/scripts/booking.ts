@@ -8,6 +8,8 @@ if (form) {
   const service = byId<HTMLSelectElement>('booking-service');
   const region = byId<HTMLSelectElement>('booking-region');
   const address = byId<HTMLInputElement>('booking-address');
+  const district = byId<HTMLSelectElement>('booking-district');
+  const districtGroup = byId<HTMLElement>('booking-district-group');
   const date = byId<HTMLInputElement>('booking-date');
   const time = byId<HTMLSelectElement>('booking-time');
   const size = byId<HTMLInputElement>('booking-size');
@@ -20,7 +22,26 @@ if (form) {
   const products: BookingProduct[] = JSON.parse(document.getElementById('booking-product-data')?.textContent ?? '[]');
   const params = new URLSearchParams(location.search);
   const product = products.find(item => item.slug === params.get('san-pham'));
-  if (params.has('san-pham') || params.has('dich-vu')) {
+  const desiredRegion=params.get('khu-vuc');
+  const desiredDistrict=params.get('dia-ban');
+  const validDistrict=desiredDistrict && Array.from(district.options).some(option=>option.value===desiredDistrict);
+  if (desiredRegion && Array.from(region.options).some(option=>option.value===desiredRegion)) {
+    region.value=desiredRegion;region.selectedOptions[0].defaultSelected=true;
+  } else if (!desiredRegion && validDistrict) {
+    region.value='tp-hcm';region.selectedOptions[0].defaultSelected=true;
+  }
+  const updateDistrict=()=>{
+    const enabled=region.value==='tp-hcm';
+    districtGroup.hidden=!enabled;district.disabled=!enabled;
+    if (!enabled) district.value='';
+  };
+  updateDistrict();
+  if (region.value==='tp-hcm' && validDistrict) {
+    district.value=desiredDistrict!;district.selectedOptions[0].defaultSelected=true;
+  }
+  region.addEventListener('change',updateDistrict);
+
+  if (params.has('san-pham') || params.has('dich-vu') || params.has('dia-ban') || params.has('khu-vuc')) {
     requestAnimationFrame(() => document.getElementById('yeu-cau')?.scrollIntoView({block:'start'}));
   }
   const requestedService = params.get('dich-vu') || product?.service;
@@ -70,6 +91,7 @@ if (form) {
       ...(product ? [`Mẫu quan tâm: ${product.name} (${product.code})`] : []),
       ...(product?.pvc ? [`Bề mặt: ${finish.selectedOptions[0].textContent}`, `Hình thức mua: ${pvcType.selectedOptions[0].textContent}`, 'Quy cách cuộn: 1,2 × 50 m'] : []),
       `Khu vực: ${region.selectedOptions[0].textContent}`,
+      ...(region.value==='tp-hcm' && district.value ? [`Địa bàn: ${district.selectedOptions[0].textContent}`] : []),
       `Địa chỉ: ${address.value.trim()}`,
       `Ngày mong muốn: ${selectedDate}`,
       `Khung giờ: ${time.value || 'Linh hoạt, cần trao đổi'}`,
@@ -95,6 +117,7 @@ if (form) {
     }
   });
   form.addEventListener('reset', () => {
+    requestAnimationFrame(updateDistrict);
     phone.setCustomValidity(''); name.setCustomValidity(''); address.setCustomValidity('');
     preview.hidden = true;
     message.value = ''; status.textContent = '';

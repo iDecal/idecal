@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import { districts, districtServiceTypes, districtUrl, districtBookingUrl, type District } from '../../../data/districts';
+import '../../../styles/districts.css';
+export function getStaticPaths(){return districts.map(district=>({params:{district:district.slug},props:{district}}));}
+interface Props {district:District;}
+const {district}=Astro.props;
+const services=district.services.map(key=>districtServiceTypes[key]);
+const booking=districtBookingUrl(district.slug);
+const title=`Thi công Decal & film tại khu vực ${district.name}`;
+const canonical=new URL(Astro.url.pathname,Astro.site).href;
+const schemas=[{'@type':'Service','@id':canonical+'#service',name:title,serviceType:'Thi công Decal và film',url:canonical,provider:{'@id':new URL('/#organization',Astro.site).href},areaServed:{'@type':'Place',name:`Khu vực ${district.name}`,containedInPlace:{'@type':'Place',name:'TP. Hồ Chí Minh'}}},{'@type':'FAQPage',mainEntity:[{'@type':'Question',name:district.question,acceptedAnswer:{'@type':'Answer',text:district.answer}}]}];
+const normalize=(text:string)=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').replace(/Đ/g,'D').toLowerCase();
+const labels=district.slug==='thanh-pho-thu-duc'?['Thủ Đức','Quận 2','Quận 9']:[district.name];
+const posts=(await getCollection('blog')).filter(post=>labels.some(label=>new RegExp(`\\b${normalize(label)}\\b`).test(normalize(post.data.title)))).slice(0,3);
+const project=district.slug==='thanh-pho-thu-duc'?(await getCollection('projects')).find(item=>item.id.toLowerCase().includes('dfcare')):undefined;
+const otherAreas=districts.filter(item=>item.group===district.group&&item.slug!==district.slug).slice(0,4);
+---
+<Layout title={title} description={district.intro} image={services[0].image} structuredData={schemas}>
+  <div class="district-page">
+    <section class="district-hero"><div class="container district-hero-grid"><div><p class="district-kicker">iDecal · Khu vực phục vụ TP.HCM</p><h1>{title}</h1><p class="district-lead">{district.intro}</p><div class="district-actions"><a class="btn-primary-solid" href={booking}>Tư vấn tại {district.name} <span aria-hidden="true">→</span></a><a class="btn-idecal-bold" href="tel:0866077040">0866.077.040</a></div></div><figure><img src={services[0].image} alt={`Ảnh minh họa ${services[0].title.toLocaleLowerCase('vi-VN')}`} width="900" height="675" fetchpriority="high" /><figcaption>Minh họa giải pháp · Chọn theo hiện trạng công trình</figcaption></figure></div></section>
+    <section class="container district-section"><div class="district-section-heading"><div><p class="district-kicker">Chọn phần việc bạn cần</p><h2>Giải pháp cho công trình</h2></div><a href="/dich-vu">Các dịch vụ iDecal →</a></div><div class="district-service-grid">{services.map(service=><article><a class="district-service-photo" href={`/dich-vu/${service.service}`}><img src={service.image} alt={`Minh họa ${service.title.toLocaleLowerCase('vi-VN')}`} width="800" height="600" loading="lazy" /></a><h3><a href={`/dich-vu/${service.service}`}>{service.title}</a></h3><p>{service.text}</p><a class="district-material-link" href={`/danh-muc-san-pham/${service.product}`}>Xem vật liệu & mẫu <span aria-hidden="true">→</span></a></article>)}</div></section>
+    <section class="district-note-surface"><div class="container district-section district-local-note"><div><p class="district-kicker">Chuẩn bị theo vị trí thực tế</p><h2>Trước khi hẹn khảo sát tại {district.name}</h2></div><div><p>{district.siteNote}</p><p class="district-address-note">Tên khu vực dùng để tìm dịch vụ theo cách gọi quen thuộc; địa chỉ và phạm vi thi công được xác nhận theo phường/xã hiện tại.</p><a href={booking}>Gửi địa chỉ & hiện trạng →</a></div></div></section>
+    {project&&<section class="container district-section"><div class="district-section-heading"><div><p class="district-kicker">Hồ sơ đã có tại iDecal</p><h2>Công trình tham khảo</h2></div></div><a class="district-project" href={`/du-an/${project.id}`}><img src={project.data.image} alt={project.data.title} width="800" height="600" loading="lazy" /><div><h3>{project.data.title}</h3><p>{project.data.description}</p><span>Xem hồ sơ công trình →</span></div></a></section>}
+    <section class="container district-section district-faq"><h2>Trao đổi thêm trước khi chọn</h2><details><summary>{district.question}</summary><p>{district.answer}</p></details></section>
+    {posts.length>0&&<section class="container district-related-posts"><h2>Bài viết liên quan</h2><div>{posts.map(post=><a href={`/blog/${post.id}`}><span>{post.data.title}</span><span aria-hidden="true">→</span></a>)}</div></section>}
+    <section class="container district-contact"><div><h2>Nhận tư vấn cho công trình của bạn</h2><p>Báo giá tách rõ vật liệu, thiết kế, in/gia công và thi công. Lịch và các chi phí liên quan được thống nhất theo địa chỉ, khối lượng thực tế.</p></div><a class="btn-primary-solid" href={booking}>Gửi yêu cầu <span aria-hidden="true">→</span></a><nav aria-label="Thông tin đặt dịch vụ"><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/lien-he-idecal#yeu-cau">Thông tin đặt dịch vụ →</a><a href="/khu-vuc/tp-hcm#quan-huyen">Chọn khu vực khác tại TP.HCM →</a></nav></section>
+    <nav class="container district-other-areas" aria-label="Khám phá khu vực khác"><span>Khu vực khác</span>{otherAreas.map(item=><a href={districtUrl(item.slug)}>{item.name}</a>)}</nav>
+  </div>
+</Layout>

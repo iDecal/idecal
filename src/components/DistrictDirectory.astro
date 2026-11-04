@@ -1,0 +1,5 @@
+---
+import { districts, districtGroups, districtUrl } from '../data/districts';
+import '../styles/districts.css';
+---
+<section id="quan-huyen" class="container district-directory"><div class="district-section-heading"><div><p class="district-kicker">Dịch vụ tại TP.HCM</p><h2>Chọn khu vực công trình của bạn</h2></div><p>Tìm theo tên quận/huyện thường dùng. Khi đặt dịch vụ, vui lòng ghi địa chỉ theo phường/xã hiện tại.</p></div><div class="district-directory-groups">{districtGroups.map(group=><div><h3>{group}</h3><nav aria-label={`Khu vực ${group.toLocaleLowerCase('vi-VN')}`}>{districts.filter(item=>item.group===group).map(item=><a href={districtUrl(item.slug)}><span>{item.name}</span><span aria-hidden="true">→</span></a>)}</nav></div>)}</div></section>

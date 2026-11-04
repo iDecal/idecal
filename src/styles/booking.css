@@ -48,3 +48,5 @@
  .booking-form input, .booking-form select, .booking-form textarea { font-size: 17px; }
  .booking-aside > div { padding: 20px; }
 }
+
+#booking-district-group[hidden]{display:none!important}

@@ -21,6 +21,7 @@ const navLinks: NavLink[] = [
   { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
   { name: 'Khu vực', href: '/khu-vuc', dropdown: [
     { name: 'Tất cả khu vực', href: '/khu-vuc', highlight: true },
+    { name: 'Chọn quận/huyện tại TP.HCM', href: '/khu-vuc/tp-hcm#quan-huyen', showIcon: false },
     ...regions.map(region => ({ name: region.name, href: `/khu-vuc/${region.slug}` })),
   ] },
   { name: 'Liên hệ', href: '/lien-he-idecal' },
