@@ -1,18 +1,18 @@
 .blog-listing,.blog-detail{background:#fff;color:#244766}
 .blog-hero{padding-top:24px;padding-bottom:0}
-.blog-hero-panel{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;background:#f0f5fa;min-height:264px;display:flex;align-items:center}
+.blog-hero-panel{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;background:linear-gradient(115deg,#e5faf6 0%,#eaf4ff 52%,#f1eaff 100%);min-height:264px;display:flex;align-items:center}
 .blog-hero-copy{position:relative;z-index:1;padding:40px 44px;max-width:710px}
-.blog-hero-art{position:absolute;inset:0 0 0 36%;z-index:0;background:url('/images/Banner/dich-vu-thiet-ke-decal.webp') center 56%/cover no-repeat;pointer-events:none;opacity:.68;mask-image:linear-gradient(to right,transparent,#000 65%)}
-.blog-hero-panel:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f0f5fa 16%,#f0f5fae8 40%,#f0f5fa00 85%);pointer-events:none}
+.blog-hero-art{position:absolute;inset:0 0 0 36%;z-index:0;background:url('/images/Banner/dich-vu-thiet-ke-decal.webp') center 56%/cover no-repeat;pointer-events:none;opacity:.48;mask-image:linear-gradient(to right,transparent,#000 65%)}
+.blog-hero-panel:after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,#e5faf6 4%,#e8f7f4ec 29%,#eaf3ffc7 51%,#eee7ff35 100%);pointer-events:none}
 .blog-kicker{font-size:12px;color:#41617b;margin:0 0 16px;letter-spacing:.04em}
-.blog-hero h1{font-size:clamp(32px,3.6vw,46px);line-height:1.2;margin:0 0 16px;font-weight:550;color:#173d5a}
+.blog-hero h1{font-size:clamp(32px,3.6vw,46px);line-height:1.2;margin:0 0 16px;font-weight:550;color:#173d5a;background:linear-gradient(110deg,#087f86 0%,#176ec1 55%,#6544c1 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;width:fit-content}
 .blog-hero-copy>p:last-child{margin:0;max-width:560px;color:#40576d;font-size:16px;line-height:1.8}
 .blog-list-section{padding-top:24px;padding-bottom:64px}
 .blog-category-nav{margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid #e7edf3}
 .blog-category-grid{display:flex;flex-wrap:wrap;gap:10px}
-.blog-category-grid>a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:11px 22px;text-align:center;font-size:14px;font-weight:500;line-height:1.5;color:#294961;border:1px solid #d9e3ed;border-radius:999px;background:#fff;transition:background .2s,border-color .2s,color .2s}
-.blog-category-grid>a:hover{background:#f0f6fc;border-color:#88aacc;color:#173d5a}
-.blog-category-grid>a[aria-current=page]{color:#fff;background:#173f61;border-color:#173f61;box-shadow:0 3px 10px #173f6115}
+.blog-category-grid>a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:11px 22px;text-align:center;font-size:14px;font-weight:500;line-height:1.5;color:#294961;border:1px solid #d9e3ed;border-radius:999px;background:linear-gradient(115deg,#f0fcf8,#edf5ff 58%,#f5f0ff);transition:background .2s,border-color .2s,color .2s}
+.blog-category-grid>a:hover{background:linear-gradient(115deg,#dcf7ec,#dfedff 58%,#eee5ff);border-color:#8bbbd3;color:#173d5a}
+.blog-category-grid>a[aria-current=page]{color:#fff;background:linear-gradient(110deg,#098d89,#1979ce 55%,#7350cd);border-color:transparent;box-shadow:0 4px 14px #287ebc30}
 .blog-all-link,.blog-back{display:inline-block;font-size:14px;color:#0d6b96;margin-bottom:20px}
 .blog-featured{display:grid;grid-template-columns:1.15fr 1fr;border:1px solid #e1eaf4;border-radius:20px;overflow:hidden;background:#f6faff;margin-bottom:44px}
 .blog-featured-image{position:relative;display:block;min-height:320px;background:#eaf2f9}
