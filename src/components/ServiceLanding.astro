@@ -14,7 +14,7 @@ const {service}=Astro.props;
 const content=serviceLandingContent[service.slug];
 const steps=service.slug==='cat-decal'?cut.steps.map(step=>({title:step.title,text:step.text})):service.slug==='thi-cong-decal'?installationContent.steps:service.steps;
 const hasDetails=Astro.slots.has('details');
-const booking=`/dat-dich-vu?dich-vu=${service.slug}`;
+const booking=`/lien-he-idecal?dich-vu=${service.slug}`;
 const extraFaqs = service.slug === 'thiet-ke' ? designContent.faqs : service.slug === 'thi-cong-decal' ? installationContent.faqs : [];
 const faqs = [...content.faqs, ...extraFaqs];
 ---

@@ -28,6 +28,6 @@ Chuẩn bị mẫu quan tâm, kích thước, số lượng, thời gian mong mu
 
 ## Theo dõi thông báo chính thức
 
-Các thông báo có chương trình cụ thể cần ghi rõ nội dung và điều kiện trong từng bài. Bạn có thể [liên hệ iDecal](/lien-he-idecal) hoặc [gửi yêu cầu dịch vụ](/dat-dich-vu) để xác nhận thông tin hiện hành.
+Các thông báo có chương trình cụ thể cần ghi rõ nội dung và điều kiện trong từng bài. Bạn có thể [liên hệ iDecal](/lien-he-idecal) hoặc [gửi yêu cầu dịch vụ](/lien-he-idecal) để xác nhận thông tin hiện hành.
 
 Trong lúc tham khảo, xem [các nhóm sản phẩm](/san-pham) và [dịch vụ iDecal](/dich-vu) để chọn đúng phần việc cần trao đổi.

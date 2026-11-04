@@ -13,7 +13,7 @@ const related = (await getCollection('projects'))
   .filter(project => project.id !== entry.id)
   .sort((a,b) => Number(b.data.category === entry.data.category) - Number(a.data.category === entry.data.category) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0,4);
-const bookingUrl = '/dat-dich-vu?dich-vu=dich-vu-tron-goi';
+const bookingUrl = '/lien-he-idecal?dich-vu=dich-vu-tron-goi';
 ---
 <Layout title={`${entry.data.title} | iDecal`} description={entry.data.description} image={entry.data.image}>
   <div class="project-detail">

@@ -30,4 +30,4 @@ Chuẩn bị ảnh toàn cảnh, ảnh cận mép khung, tay nắm và lớp Dec
 
 Kiểm tra lại số lượng ô, chiều vân, vị trí nối và nội dung chữ. Với [dịch vụ thi công](/dich-vu/thi-cong-decal/), bạn có thể gửi số đo và ảnh trước để trao đổi phần cần khảo sát thêm.
 
-[Gửi yêu cầu tư vấn cho công trình](/dat-dich-vu?dich-vu=thi-cong-decal).
+[Gửi yêu cầu tư vấn cho công trình](/lien-he-idecal?dich-vu=thi-cong-decal).

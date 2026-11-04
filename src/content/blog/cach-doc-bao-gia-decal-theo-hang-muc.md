@@ -32,4 +32,4 @@ Gửi kích thước, số lượng, ảnh hiện trạng, file thiết kế n�
 
 Kiểm tra lại phần bao gồm, phần tùy chọn, cách xử lý khi thay đổi khối lượng và lịch bàn giao. Bài viết này hướng dẫn đọc báo giá, không thay thế báo giá theo công trình.
 
-Bạn có thể xem [bảng giá dịch vụ tham khảo](/dich-vu/#bang-gia-dich-vu) hoặc [gửi yêu cầu](/dat-dich-vu) để trao đổi theo nhu cầu thực tế.
+Bạn có thể xem [bảng giá dịch vụ tham khảo](/dich-vu/#bang-gia-dich-vu) hoặc [gửi yêu cầu](/lien-he-idecal) để trao đổi theo nhu cầu thực tế.

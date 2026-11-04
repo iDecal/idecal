@@ -20,6 +20,9 @@ if (form) {
   const products: BookingProduct[] = JSON.parse(document.getElementById('booking-product-data')?.textContent ?? '[]');
   const params = new URLSearchParams(location.search);
   const product = products.find(item => item.slug === params.get('san-pham'));
+  if (params.has('san-pham') || params.has('dich-vu')) {
+    requestAnimationFrame(() => document.getElementById('yeu-cau')?.scrollIntoView({block:'start'}));
+  }
   const requestedService = params.get('dich-vu') || product?.service;
   const legacyServices: Record<string,string> = { 'decal-dan-kinh-van-phong':'thi-cong-decal', 'phim-cach-nhiet':'thi-cong-decal', 'decal-mo-3d-van-song':'thi-cong-decal', 'film-noi-that':'thi-cong-decal', 'decal-quang-cao':'in-decal' };
   const desiredService = requestedService ? legacyServices[requestedService] || requestedService : undefined;
