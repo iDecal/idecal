@@ -1,7 +1,6 @@
 ---
 import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
 import LocalAreaFaq from './LocalAreaFaq.astro';
-import LocalRelatedPosts from './LocalRelatedPosts.astro';
 import LocalNearbyAreas from './LocalNearbyAreas.astro';
 import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 import Layout from '../layouts/Layout.astro';
@@ -21,7 +20,6 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
     <section class="container q12-section"><div class="q12-section-heading"><p class="q12-eyebrow">Từ ý tưởng đến hoàn thiện</p><h2>Các bước thực hiện</h2></div><div class="q12-steps">{data.steps.map(step=><article><span class="q12-step-number">{step.number}</span><div><h3 id={step.id}>{step.title}</h3><p>{step.description}</p></div></article>)}</div></section>
     <LocalInstallationPhotos areaKey="quan-12" areaName="Quận 12" />
     <LocalAreaFaq title={localFaq.title} items={localFaq.items} />
-    <LocalRelatedPosts areaKey="quan-12" areaName="Quận 12" services={['decal-dan-kinh-van-phong','decal-quang-cao','phim-cach-nhiet']} />
     <section class="container q12-contact"><div><h2>Gửi ảnh kính, nhận tư vấn phù hợp</h2><p>Chuẩn bị ảnh hiện trạng, kích thước và mẫu bạn quan tâm để trao đổi vật liệu, thiết kế và lịch thực hiện.</p></div><a class="btn-primary-solid" href={booking}>Gửi yêu cầu tại Quận 12 →</a></section>
     <LocalNearbyAreas areaKey="quan-12" />
   </article>

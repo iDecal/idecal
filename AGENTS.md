@@ -6,4 +6,6 @@
 
 - Trang Quận 12 dùng nội dung gốc từ HTML của chủ website: `src/data/quan-12-original.json`. Giữ toàn bộ 47 khối chữ gốc, đề mục, giá và ảnh; kiểm tra với `docs/quan-12-original-content.json`. URL chính là `/vi-tri/decal-dan-kinh-quan-12/`; không đổi URL hoặc viết lại nội dung chỉ để tối ưu SEO.
 
-- Các trang khu vực có thư viện ảnh thi công lẻ riêng, đặt trước phần hồ sơ công trình lớn. Ảnh quản lý qua `/quan-ly-anh-khu-vuc` và thư mục `public/images/khu-vuc/<slug>/`; chỉ hiển thị ảnh thực tế đúng địa bàn, không thay bằng ảnh stock hoặc tự tạo hồ sơ dự án cho mỗi ảnh.
+- Các trang khu vực có thư viện ảnh thi công lẻ riêng, không hiển thị phần hồ sơ công trình lớn trong nội dung khu vực. Ảnh quản lý qua `/quan-ly-anh-khu-vuc` và thư mục `public/images/khu-vuc/<slug>/`; chỉ hiển thị ảnh thực tế đúng địa bàn, không thay bằng ảnh stock hoặc tự tạo hồ sơ dự án cho mỗi ảnh.
+
+- Cập nhật yêu cầu: trên trang khu vực chỉ giữ thư viện ảnh thi công; không hiển thị thẻ bài Blog liên quan, hồ sơ công trình hoặc CTA dẫn công trình trong nội dung khu vực. Giữ FAQ và liên kết địa bàn.

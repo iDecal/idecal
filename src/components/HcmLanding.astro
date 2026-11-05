@@ -1,7 +1,6 @@
 ---
 import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
 import LocalAreaFaq from './LocalAreaFaq.astro';
-import LocalRelatedPosts from './LocalRelatedPosts.astro';
 import LocalNearbyAreas from './LocalNearbyAreas.astro';
 import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 
@@ -26,7 +25,6 @@ const schema=[{'@type':'Service',name:'Tư vấn và thi công Decal, film tại
 <HcmWardDirectory />
 <LocalInstallationPhotos areaKey="tp-hcm" areaName="TP.HCM" />
 <LocalAreaFaq title={localFaq.title} items={localFaq.items} />
-<LocalRelatedPosts areaKey="tp-hcm" areaName="TP.HCM" services={services.map(service=>service.service)} />
-<section id="bao-gia" class="container hcm-contact"><div><h2>Bắt đầu từ ảnh và địa chỉ của bạn</h2><p>Chuẩn bị kích thước dự kiến, vị trí dán, mẫu hoặc file logo nếu có. iDecal trao đổi phương án, phạm vi chi phí và lịch phù hợp trước khi thực hiện.</p></div><a href="/lien-he-idecal?khu-vuc=tp-hcm#yeu-cau" class="btn-primary-solid">Gửi yêu cầu tại TP.HCM →</a><nav><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/lien-he-idecal#yeu-cau">Thông tin đặt dịch vụ →</a><a href="/du-an">Công trình thực tế →</a></nav></section>
+<section id="bao-gia" class="container hcm-contact"><div><h2>Bắt đầu từ ảnh và địa chỉ của bạn</h2><p>Chuẩn bị kích thước dự kiến, vị trí dán, mẫu hoặc file logo nếu có. iDecal trao đổi phương án, phạm vi chi phí và lịch phù hợp trước khi thực hiện.</p></div><a href="/lien-he-idecal?khu-vuc=tp-hcm#yeu-cau" class="btn-primary-solid">Gửi yêu cầu tại TP.HCM →</a><nav><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/lien-he-idecal#yeu-cau">Thông tin đặt dịch vụ →</a></nav></section>
 <LocalNearbyAreas areaKey="tp-hcm" />
 </div></Layout>

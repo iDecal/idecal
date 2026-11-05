@@ -1,16 +1,13 @@
 ---
 import LocalInstallationPhotos from '../../components/LocalInstallationPhotos.astro';
 import LocalAreaFaq from '../../components/LocalAreaFaq.astro';
-import LocalRelatedPosts from '../../components/LocalRelatedPosts.astro';
 import LocalNearbyAreas from '../../components/LocalNearbyAreas.astro';
 import {getAreaFaqs,areaFaqSchema} from '../../data/local-area-content';
 import HcmLanding from '../../components/HcmLanding.astro';
 import DistrictDirectory from '../../components/DistrictDirectory.astro';
-import { getCollection } from 'astro:content';
 import RegionalLanding from '../../components/RegionalLanding.astro';
 import { updatedRegionalContent } from '../../data/regional-content';
 import Layout from '../../layouts/Layout.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
 import { regions, regionalServices, type Region } from '../../data/regions';
 
 export function getStaticPaths() {
@@ -19,7 +16,6 @@ export function getStaticPaths() {
 
 interface Props { region: Region }
 const { region } = Astro.props;
-const projects = (await getCollection('projects')).filter(project => region.projectIds.includes(project.id));
 const updatedContent = updatedRegionalContent[region.slug];
 const localFaq=getAreaFaqs(region.slug,region.faqs);
 const steps = [
@@ -30,7 +26,7 @@ const steps = [
 ];
 ---
 
-{region.slug==='tp-hcm'?<HcmLanding />:updatedContent ? <RegionalLanding region={region} content={updatedContent} projects={projects} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description} structuredData={[areaFaqSchema(localFaq.items)]}>
+{region.slug==='tp-hcm'?<HcmLanding />:updatedContent ? <RegionalLanding region={region} content={updatedContent} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description} structuredData={[areaFaqSchema(localFaq.items)]}>
   <section class="relative overflow-hidden border-b border-border bg-surface py-14 md:py-20">
     <div class="container">
 
@@ -151,28 +147,8 @@ const steps = [
     </div>
   </section>
 
-  <LocalInstallationPhotos areaKey={region.slug} areaName={region.name} showProjectsLink={false} />
-  {projects.length > 0 ? (
-    <section class="bg-surface py-14 md:py-20">
-      <div class="container">
-        <h2 class="brand-heading">Công trình tham khảo tại {region.name}</h2>
-        <p class="mb-8">Xem hình ảnh và thông tin trong hồ sơ công trình iDecal.</p>
-        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map(project => <ProjectCard project={project} />)}
-        </div>
-      </div>
-    </section>
-  ) : (
-    <section class="container pb-14">
-      <div class="flex flex-col justify-between gap-5 rounded-2xl border border-border p-6 md:flex-row md:items-center md:p-8">
-        <div><h2 class="!mb-2 text-xl">Tham khảo cách ứng dụng decal trong thực tế</h2><p class="!mb-0 text-sm">Xem hồ sơ công trình iDecal để tìm ý tưởng phù hợp với không gian của bạn.</p></div>
-        <a href="/du-an" class="btn-idecal-bold shrink-0 self-start">Xem công trình</a>
-      </div>
-    </section>
-  )}
-
+  <LocalInstallationPhotos areaKey={region.slug} areaName={region.name} />
   <LocalAreaFaq title={localFaq.title} items={localFaq.items} />
-  <LocalRelatedPosts areaKey={region.slug} areaName={region.shortName} services={region.serviceSlugs} />
 
   <section class="container pb-16 md:pb-20">
     <div class="rounded-3xl brand-dark bg-brand-navy px-6 py-12 text-center md:px-12">

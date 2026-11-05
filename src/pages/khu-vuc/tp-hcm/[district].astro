@@ -1,9 +1,7 @@
 ---
 import LocalAreaFaq from '../../../components/LocalAreaFaq.astro';
-import LocalRelatedPosts from '../../../components/LocalRelatedPosts.astro';
 import LocalNearbyAreas from '../../../components/LocalNearbyAreas.astro';
 import {getAreaFaqs,areaFaqSchema} from '../../../data/local-area-content';
-import { getCollection } from 'astro:content';
 import LocalInstallationPhotos from '../../../components/LocalInstallationPhotos.astro';
 import Quan12Landing from '../../../components/Quan12Landing.astro';
 import Layout from '../../../layouts/Layout.astro';
@@ -18,17 +16,14 @@ const title=`Thi công Decal & film tại khu vực ${district.name}`;
 const localFaq=getAreaFaqs(district.slug,[{question:district.question,answer:district.answer}]);
 const canonical=new URL(Astro.url.pathname,Astro.site).href;
 const schemas=[{'@type':'Service','@id':canonical+'#service',name:title,serviceType:'Thi công Decal và film',url:canonical,provider:{'@id':new URL('/#organization',Astro.site).href},areaServed:{'@type':'Place',name:`Khu vực ${district.name}`,containedInPlace:{'@type':'Place',name:'TP. Hồ Chí Minh'}}},areaFaqSchema(localFaq.items)];
-const project=district.slug==='thanh-pho-thu-duc'?(await getCollection('projects')).find(item=>item.id.toLowerCase().includes('dfcare')):undefined;
 ---
 {district.slug==='quan-12'?<Quan12Landing />:<Layout title={title} description={district.intro} image={services[0].image} structuredData={schemas}>
   <div class="district-page">
     <section class="district-hero"><div class="container district-hero-grid"><div><p class="district-kicker">iDecal · Khu vực phục vụ TP.HCM</p><h1>{title}</h1><p class="district-lead">{district.intro}</p><div class="district-actions"><a class="btn-primary-solid" href={booking}>Tư vấn tại {district.name} <span aria-hidden="true">→</span></a><a class="btn-idecal-bold" href="tel:0866077040">0866.077.040</a></div></div><figure><img src={services[0].image} alt={`Ảnh minh họa ${services[0].title.toLocaleLowerCase('vi-VN')}`} width="900" height="675" fetchpriority="high" /><figcaption>Minh họa giải pháp · Chọn theo hiện trạng công trình</figcaption></figure></div></section>
     <section class="container district-section"><div class="district-section-heading"><div><p class="district-kicker">Chọn phần việc bạn cần</p><h2>Giải pháp cho công trình</h2></div><a href="/dich-vu">Các dịch vụ iDecal →</a></div><div class="district-service-grid">{services.map(service=><article><a class="district-service-photo" href={`/dich-vu/${service.service}`}><img src={service.image} alt={`Minh họa ${service.title.toLocaleLowerCase('vi-VN')}`} width="800" height="600" loading="lazy" /></a><h3><a href={`/dich-vu/${service.service}`}>{service.title}</a></h3><p>{service.text}</p><a class="district-material-link" href={`/danh-muc-san-pham/${service.product}`}>Xem vật liệu & mẫu <span aria-hidden="true">→</span></a></article>)}</div></section>
     <section class="district-note-surface"><div class="container district-section district-local-note"><div><p class="district-kicker">Chuẩn bị theo vị trí thực tế</p><h2>Trước khi hẹn khảo sát tại {district.name}</h2></div><div><p>{district.siteNote}</p><p class="district-address-note">Tên khu vực dùng để tìm dịch vụ theo cách gọi quen thuộc; địa chỉ và phạm vi thi công được xác nhận theo phường/xã hiện tại.</p><a href={booking}>Gửi địa chỉ & hiện trạng →</a></div></div></section>
-    <LocalInstallationPhotos areaKey={district.slug} areaName={district.name} showProjectsLink={!project} />
-    {project&&<section class="container district-section"><div class="district-section-heading"><div><p class="district-kicker">Hồ sơ đã có tại iDecal</p><h2>Công trình tham khảo</h2></div></div><a class="district-project" href={`/du-an/${project.id}`}><img src={project.data.image} alt={project.data.title} width="800" height="600" loading="lazy" /><div><h3>{project.data.title}</h3><p>{project.data.description}</p><span>Xem hồ sơ công trình →</span></div></a></section>}
+    <LocalInstallationPhotos areaKey={district.slug} areaName={district.name} />
     <LocalAreaFaq title={localFaq.title} items={localFaq.items} />
-    <LocalRelatedPosts areaKey={district.slug} areaName={district.name} services={services.map(service=>service.service)} />
     <section class="container district-contact"><div><h2>Nhận tư vấn cho công trình của bạn</h2><p>Báo giá tách rõ vật liệu, thiết kế, in/gia công và thi công. Lịch và các chi phí liên quan được thống nhất theo địa chỉ, khối lượng thực tế.</p></div><a class="btn-primary-solid" href={booking}>Gửi yêu cầu <span aria-hidden="true">→</span></a><nav aria-label="Thông tin đặt dịch vụ"><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/lien-he-idecal#yeu-cau">Thông tin đặt dịch vụ →</a><a href="/khu-vuc/tp-hcm#quan-huyen">Chọn khu vực khác tại TP.HCM →</a></nav></section>
     <LocalNearbyAreas areaKey={district.slug} />
   </div>

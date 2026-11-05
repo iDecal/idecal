@@ -22,3 +22,7 @@ Tùy chọn: tải thêm `captions.json` cùng thư mục:
 Thư viện nằm trước hồ sơ công trình trên mọi trang khu vực. Chưa có ảnh thì hiển thị trạng thái đang cập nhật; không dùng ảnh mẫu để giả làm ảnh thi công tại địa phương. Ảnh gốc trong trang Quận 12 do chủ website cung cấp được dùng khởi tạo cho Quận 12 và TP.HCM. Bấm ảnh để xem lớn; khi không có JavaScript vẫn mở được ảnh gốc.
 
 Giữ nguyên mọi nội dung XML và 47 khối chữ gốc Quận 12. Chỉ bổ sung thư viện; các liên kết hồ sơ công trình lớn vẫn ở sau thư viện.
+
+## Cập nhật hiển thị
+
+Theo yêu cầu mới, các trang khu vực chỉ giữ thư viện ảnh; bỏ phần hồ sơ công trình, CTA dẫn công trình và thẻ bài liên quan trong nội dung khu vực. Trang quản lý và thao tác tải ảnh giữ nguyên.

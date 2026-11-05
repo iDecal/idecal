@@ -12,8 +12,8 @@ for(const [key,area] of Object.entries(config)){
  assert.ok(faq[0].mainEntity.length>=3);assert.equal((section.match(/<details/g)||[]).length,faq[0].mainEntity.length);
  for(const item of faq[0].mainEntity){assert.ok(text(section).includes(item.name),`Visible schema question ${key}`);assert.ok(text(section).includes(item.acceptedAnswer.text),`Visible schema answer ${key}`);}
  for(const item of area.items)assert.ok(faq[0].mainEntity.some(question=>question.name===item.question));questions+=faq[0].mainEntity.length;
- const related=html.match(/<section class="container local-related-posts"[\s\S]*?<\/section>/)?.[0];assert.ok(related,`Related cards ${key}`);assert.equal((related.match(/class="local-related-photo"/g)||[]).length,3);assert.ok(html.indexOf(related)>html.indexOf(section));
+ assert.ok(!html.includes('local-related-posts'),`Related post section removed ${key}`);
  assert.ok(area.nearby.length>=2&&area.nearby.length<=4);assert.ok(!area.nearby.includes(key));assert.equal(new Set(area.nearby).size,area.nearby.length);for(const neighbor of area.nearby)assert.ok(config[neighbor]);
  assert.ok(html.includes('local-nearby-areas'));
 }
-console.log(`Local FAQ passed: 30 unique headings, ${questions} visible answers matching FAQ schema, three illustrated related posts per area and curated cross-links.`);
+console.log(`Local FAQ passed: 30 unique headings, ${questions} visible answers matching FAQ schema, no related-post sections and curated cross-links.`);
