@@ -8,5 +8,5 @@ export const districtServiceTypes = {
 export interface District {slug:string;name:string;group:string;intro:string;siteNote:string;question:string;answer:string;services:(keyof typeof districtServiceTypes)[];}
 export const districts=data as District[];
 export const districtGroups=[...new Set(districts.map(item=>item.group))];
-export const districtUrl=(slug:string)=>`/khu-vuc/tp-hcm/${slug}`;
+export const districtUrl=(slug:string)=>slug==='quan-12'?'/vi-tri/decal-dan-kinh-quan-12/':`/khu-vuc/tp-hcm/${slug}`;
 export const districtBookingUrl=(slug:string)=>`/lien-he-idecal?dich-vu=thi-cong-decal&khu-vuc=tp-hcm&dia-ban=${slug}#yeu-cau`;

@@ -295,12 +295,10 @@
 /locations/ho-chi-minh/ /khu-vuc/tp-hcm/ 301
 /vi-tri/decal-dan-kinh-quan-12-2/amp /khu-vuc/tp-hcm/ 301
 /vi-tri/decal-dan-kinh-quan-12-2/amp/ /khu-vuc/tp-hcm/ 301
-/vi-tri/decal-dan-kinh-quan-12/amp /khu-vuc/tp-hcm/quan-12/ 301
-/vi-tri/decal-dan-kinh-quan-12/amp/ /khu-vuc/tp-hcm/quan-12/ 301
+/vi-tri/decal-dan-kinh-quan-12/amp /vi-tri/decal-dan-kinh-quan-12/ 301
+/vi-tri/decal-dan-kinh-quan-12/amp/ /vi-tri/decal-dan-kinh-quan-12/ 301
 /vi-tri/decal-dan-kinh-quan-12-2 /khu-vuc/tp-hcm/ 301
 /vi-tri/decal-dan-kinh-quan-12-2/ /khu-vuc/tp-hcm/ 301
-/vi-tri/decal-dan-kinh-quan-12 /khu-vuc/tp-hcm/quan-12/ 301
-/vi-tri/decal-dan-kinh-quan-12/ /khu-vuc/tp-hcm/quan-12/ 301
 /thi-cong-decal-mo-dan-kinh-binh-duong /khu-vuc/binh-duong/ 301
 /thi-cong-decal-mo-dan-kinh-binh-duong/ /khu-vuc/binh-duong/ 301
 /dich-vu-decal-dan-kinh-binh-duong /khu-vuc/binh-duong/ 301
@@ -673,8 +671,8 @@
 /thi-cong-decal/quan-10/ /khu-vuc/tp-hcm/quan-10/ 301
 /thi-cong-decal/quan-11 /khu-vuc/tp-hcm/quan-11/ 301
 /thi-cong-decal/quan-11/ /khu-vuc/tp-hcm/quan-11/ 301
-/thi-cong-decal/quan-12 /khu-vuc/tp-hcm/quan-12/ 301
-/thi-cong-decal/quan-12/ /khu-vuc/tp-hcm/quan-12/ 301
+/thi-cong-decal/quan-12 /vi-tri/decal-dan-kinh-quan-12/ 301
+/thi-cong-decal/quan-12/ /vi-tri/decal-dan-kinh-quan-12/ 301
 /thi-cong-decal/quan-tan-binh /khu-vuc/tp-hcm/quan-tan-binh/ 301
 /thi-cong-decal/quan-tan-binh/ /khu-vuc/tp-hcm/quan-tan-binh/ 301
 /thi-cong-decal/quan-binh-tan /khu-vuc/tp-hcm/quan-binh-tan/ 301
@@ -751,3 +749,7 @@
 /thi-cong-decal/binh-chanh/ /khu-vuc/tp-hcm/huyen-binh-chanh/ 301
 /khu-vuc/tp-hcm/binh-chanh /khu-vuc/tp-hcm/huyen-binh-chanh/ 301
 /khu-vuc/tp-hcm/binh-chanh/ /khu-vuc/tp-hcm/huyen-binh-chanh/ 301
+
+# Preserve the ranked Quận 12 URL from the original WordPress page
+/khu-vuc/tp-hcm/quan-12 /vi-tri/decal-dan-kinh-quan-12/ 301
+/khu-vuc/tp-hcm/quan-12/ /vi-tri/decal-dan-kinh-quan-12/ 301

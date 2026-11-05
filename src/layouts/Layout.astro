@@ -7,6 +7,7 @@ import '@fontsource-variable/inter';
 import '../styles/global.css';
 interface Props {
 	title: string;
+  canonicalURL?: string | URL;
 	image?: string;
 	description?: string;
   type?: 'website' | 'article';
@@ -16,7 +17,7 @@ interface Props {
   structuredData?: Record<string,unknown>[];
 }
 
-const { title, image, type, noindex, publishedTime, modifiedTime, structuredData, description = "Dịch vụ decal dán kính cách nhiệt & trang trí chuyên nghiệp" } = Astro.props;
+const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, structuredData, description = "Dịch vụ decal dán kính cách nhiệt & trang trí chuyên nghiệp" } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,7 +27,7 @@ const { title, image, type, noindex, publishedTime, modifiedTime, structuredData
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/images/idecal-logo.png" />
 		<meta name="generator" content={Astro.generator} />
-		<SEO title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
+		<SEO canonicalURL={canonicalURL} title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
 	</head>
 	<body class="bg-background font-body text-secondary">
 		<Header />
