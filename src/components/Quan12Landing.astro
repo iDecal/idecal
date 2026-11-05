@@ -1,4 +1,5 @@
 ---
+import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
 import Layout from '../layouts/Layout.astro';
 import data from '../data/quan-12-original.json';
 import { districts, districtUrl, districtBookingUrl } from '../data/districts';
@@ -13,6 +14,7 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
     <section id="vat-lieu" class="container q12-section"><div class="q12-section-heading"><p class="q12-eyebrow">Vật liệu & ứng dụng</p><h2>Chọn Decal cho không gian của bạn</h2></div><div class="q12-materials">{data.materials.map((item,index)=><article><span class="q12-material-number" aria-hidden="true">0{index+1}</span><h3 id={item.id}>{item.title}</h3><p>{item.description}</p><div class="q12-material-features"><p class="q12-label">{item.label}</p><ul>{item.features.map(feature=><li>{feature}</li>)}</ul></div><div class="q12-price-row"><strong>{item.price}</strong><a href={item.href}>{item.linkText} <span aria-hidden="true">→</span></a></div></article>)}</div></section>
     <section class="q12-soft"><div class="container q12-section q12-coverage"><div><p class="q12-eyebrow">Khu vực phục vụ</p><h2 id={data.coverage.id}>{data.coverage.title}</h2><p>{data.coverage.intro}</p></div><div><ul>{data.coverage.wards.map(ward=><li>{ward}</li>)}</ul><p class="q12-address-note">Tên khu vực được giữ theo nội dung bài gốc. Khi gửi yêu cầu, vui lòng ghi địa chỉ phường/xã hiện tại để xác nhận vị trí công trình.</p><a href="/khu-vuc/tp-hcm#phuong-xa">Đối chiếu phường/xã hiện tại →</a></div></div></section>
     <section class="container q12-section"><div class="q12-section-heading"><p class="q12-eyebrow">Từ ý tưởng đến hoàn thiện</p><h2>Các bước thực hiện</h2></div><div class="q12-steps">{data.steps.map(step=><article><span class="q12-step-number">{step.number}</span><div><h3 id={step.id}>{step.title}</h3><p>{step.description}</p></div></article>)}</div></section>
+    <LocalInstallationPhotos areaKey="quan-12" areaName="Quận 12" />
     <section class="container q12-section q12-faq"><h2>Trao đổi thêm trước khi chọn</h2><details><summary>{district.question}</summary><p>{district.answer}</p></details></section>
     <section class="container q12-contact"><div><h2>Gửi ảnh kính, nhận tư vấn phù hợp</h2><p>Chuẩn bị ảnh hiện trạng, kích thước và mẫu bạn quan tâm để trao đổi vật liệu, thiết kế và lịch thực hiện.</p></div><a class="btn-primary-solid" href={booking}>Gửi yêu cầu tại Quận 12 →</a></section>
     <nav class="container q12-nearby" aria-label="Khu vực khác"><a href="/khu-vuc/tp-hcm">Các khu vực tại TP.HCM →</a>{districts.filter(item=>['quan-go-vap','quan-tan-binh','huyen-hoc-mon','huyen-cu-chi'].includes(item.slug)).map(item=><a href={districtUrl(item.slug)}>{item.name}</a>)}</nav>

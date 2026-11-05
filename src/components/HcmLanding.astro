@@ -1,4 +1,5 @@
 ---
+import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
 import RelatedGuides from './RelatedGuides.astro';
 import Layout from '../layouts/Layout.astro';
 import HcmWardDirectory from './HcmWardDirectory.astro';
@@ -18,6 +19,7 @@ const schema=[{'@type':'Service',name:'Tư vấn và thi công Decal, film tại
 <section id="dich-vu" class="container hcm-section"><div class="hcm-section-heading"><div><p class="hcm-kicker">Vật liệu & cách ứng dụng</p><h2>Bạn muốn thay đổi điều gì?</h2></div><a href="/dich-vu">Xem các dịch vụ →</a></div><div class="hcm-services">{services.map(item=><article><a href={`/dich-vu/${item.service}`}><img src={item.image} alt={`Minh họa ${item.title.toLocaleLowerCase('vi-VN')}`} width="800" height="600" loading="lazy" /><h3>{item.title}</h3></a><p>{item.text}</p><a href={`/danh-muc-san-pham/${item.product}`}>Vật liệu & mẫu tham khảo →</a></article>)}</div></section>
 <section class="hcm-soft"><div class="container hcm-section"><div class="hcm-section-heading"><div><p class="hcm-kicker">Địa chỉ mới, khu vực vẫn quen</p><h2>Chọn giải pháp theo cách sử dụng</h2></div></div><div class="hcm-contexts">{areas.map(area=><article><h3>{area.title}</h3><p>{area.text}</p><a href={area.link}>Tìm hiểu giải pháp →</a></article>)}</div></div></section>
 <HcmWardDirectory />
+<LocalInstallationPhotos areaKey="tp-hcm" areaName="TP.HCM" />
 <section class="container hcm-section hcm-faq"><div><p class="hcm-kicker">Trước khi gửi yêu cầu</p><h2>Một vài điều cần biết</h2></div><div>{faq.map(item=><details><summary>{item.q}</summary><p>{item.a}</p></details>)}</div></section>
 <RelatedGuides topics={['local','installation']} context="TP.HCM" />
 <section id="bao-gia" class="container hcm-contact"><div><h2>Bắt đầu từ ảnh và địa chỉ của bạn</h2><p>Chuẩn bị kích thước dự kiến, vị trí dán, mẫu hoặc file logo nếu có. iDecal trao đổi phương án, phạm vi chi phí và lịch phù hợp trước khi thực hiện.</p></div><a href="/lien-he-idecal?khu-vuc=tp-hcm#yeu-cau" class="btn-primary-solid">Gửi yêu cầu tại TP.HCM →</a><nav><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/lien-he-idecal#yeu-cau">Thông tin đặt dịch vụ →</a><a href="/du-an">Công trình thực tế →</a></nav></section>

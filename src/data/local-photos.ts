@@ -1,0 +1,27 @@
+import { readdir, readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { regions } from './regions';
+import { districts, districtUrl } from './districts';
+import originalQuan12 from './quan-12-original.json';
+export const photoAreas=[...regions.map(region=>({key:region.slug,name:region.shortName,url:`/khu-vuc/${region.slug}`,type:'region' as const})),...districts.map(district=>({key:district.slug,name:district.name,url:districtUrl(district.slug),type:'district' as const}))];
+export interface LocalPhoto {src:string;alt:string;caption:string;area:string;}
+const root=path.resolve('public/images/khu-vuc');
+const extensions=/\.(?:jpe?g|png|webp|avif)$/i;
+export async function getLocalPhotos(key:string):Promise<LocalPhoto[]>{
+ const area=photoAreas.find(item=>item.key===key);if(!area)return [];
+ const keys=key==='tp-hcm'?[key,...districts.map(item=>item.slug)]:[key];
+ const photos:LocalPhoto[]=[];
+ for(const areaKey of keys){
+  const item=photoAreas.find(item=>item.key===areaKey)!;const folder=path.join(root,areaKey);
+  let files:string[];try{files=await readdir(folder);}catch(error){if((error as NodeJS.ErrnoException).code==='ENOENT')continue;throw error;}
+  let captions:Record<string,{caption?:string;alt?:string}>={};
+  try{captions=JSON.parse(await readFile(path.join(folder,'captions.json'),'utf8'));}catch(error){if((error as NodeJS.ErrnoException).code!=='ENOENT')throw new Error(`Kiểm tra captions.json trong thư mục ảnh ${areaKey}: ${String(error)}`);}
+  for(const file of files.filter(file=>extensions.test(file)).sort((a,b)=>a.localeCompare(b,'vi',{numeric:true}))){
+   const detail=captions[file];const caption=detail?.caption?.trim()||`Thi công Decal tại ${item.name}`;
+   photos.push({src:`/images/khu-vuc/${areaKey}/${encodeURIComponent(file)}`,caption,alt:detail?.alt?.trim()||caption,area:item.name});
+  }
+ }
+ // Photo provided by the owner with the original Quận 12 page; never substitute stock images.
+ if(key==='quan-12'||key==='tp-hcm')photos.push({src:originalQuan12.hero.image,alt:originalQuan12.hero.imageAlt,caption:'Decal mờ vách ngăn văn phòng · Quận 12',area:'Quận 12'});
+ return photos.filter((photo,index,list)=>list.findIndex(other=>other.src===photo.src)===index);
+}

@@ -1,4 +1,5 @@
 ---
+import LocalInstallationPhotos from '../../components/LocalInstallationPhotos.astro';
 import HcmLanding from '../../components/HcmLanding.astro';
 import DistrictDirectory from '../../components/DistrictDirectory.astro';
 import { getCollection } from 'astro:content';
@@ -146,6 +147,7 @@ const steps = [
     </div>
   </section>
 
+  <LocalInstallationPhotos areaKey={region.slug} areaName={region.name} showProjectsLink={false} />
   {projects.length > 0 ? (
     <section class="bg-surface py-14 md:py-20">
       <div class="container">
