@@ -1,5 +1,5 @@
 ---
-title: "In Decal kính tiệm nail: từ file đến mặt tiền"
+title: "In ấn & Thi công dán decal kính tiệm Nail theo phong cách riêng"
 description: "In Decal kính tiệm nail cần phối hợp thiết kế, chia khổ và vị trí dán trên cửa."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/9cf76e5589993ec1ebd5.jpg"
 wordpressId: 28841
 originalUrl: "https://idecal.vn/in-an-thi-cong-dan-decal-kinh-tiem-nail/"
 focusKeyword: "In Decal kính tiệm nail"
-seoTitle: "In Decal kính tiệm nail: từ file đến mặt tiền"
+seoTitle: "In ấn & Thi công dán decal kính tiệm Nail theo phong cách riêng"
 contentTopics: ["advertising"]
 seoDescription: "In Decal kính tiệm nail cần phối hợp thiết kế, chia khổ và vị trí dán trên cửa."
 updatedDate: "2026-11-04T21:01:39+07:00"

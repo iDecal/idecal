@@ -1,5 +1,5 @@
 ---
-title: "Decal dán kính chống nắng: phân biệt che sáng và cách nhiệt"
+title: "[TÌM HIỂU] 2 Loại Giấy Decal dán kính chống nắng hiệu quả trên 90%"
 description: "Decal dán kính chống nắng thường được dùng để gọi nhiều loại vật liệu khác nhau."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 937
 originalUrl: "https://idecal.vn/giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90/"
 focusKeyword: "Decal dán kính chống nắng"
 seoDescription: "Decal dán kính chống nắng thường được dùng để gọi nhiều loại vật liệu khác nhau."
-seoTitle: "Decal dán kính chống nắng: phân biệt che sáng và cách nhiệt"
+seoTitle: "[TÌM HIỂU] 2 Loại Giấy Decal dán kính chống nắng hiệu quả trên 90%"
 contentTopics: ["thermal"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

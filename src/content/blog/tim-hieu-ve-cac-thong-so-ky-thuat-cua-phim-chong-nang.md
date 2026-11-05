@@ -1,5 +1,5 @@
 ---
-title: "Thông số phim cách nhiệt: đọc đúng trước khi so sánh"
+title: "Tìm hiều về các thông số kỹ thuật của Phim chống nắng"
 description: "Thông số phim cách nhiệt chỉ có ý nghĩa khi biết đúng mã phim, phương pháp đo và hệ kính được thử."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/idecal-logo.png"
 wordpressId: 17471
 originalUrl: "https://idecal.vn/tim-hieu-ve-cac-thong-so-ky-thuat-cua-phim-chong-nang/"
-seoTitle: "Thông số phim cách nhiệt: đọc đúng trước khi so sánh"
+seoTitle: "Tìm hiều về các thông số kỹ thuật của Phim chống nắng"
 focusKeyword: "Thông số phim cách nhiệt"
 contentTopics: ["thermal"]
 seoDescription: "Thông số phim cách nhiệt chỉ có ý nghĩa khi biết đúng mã phim, phương pháp đo và hệ kính được thử."

@@ -1,5 +1,5 @@
 ---
-title: "Ưu đãi phim cách nhiệt 180K: thông tin chương trình cũ"
+title: "SALE Phim cách nhiệt nhà kính giá chỉ 180K/m2 - Miễn phí công thợ"
 description: "Ưu đãi phim cách nhiệt 180K trong bài là thông tin lưu từ chương trình đã công bố trước đây."
 category: "Tin khuyến mãi"
 categorySlug: "tin-khuyen-mai"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/802c78b29b7d450f1d61.jpg"
 wordpressId: 28852
 originalUrl: "https://idecal.vn/sale-phim-cach-nhiet-nha-kinh-gia-chi-180k-m2/"
-seoTitle: "Ưu đãi phim cách nhiệt 180K: thông tin chương trình cũ"
+seoTitle: "SALE Phim cách nhiệt nhà kính giá chỉ 180K/m2 - Miễn phí công thợ"
 focusKeyword: "Ưu đãi phim cách nhiệt 180K"
 contentTopics: ["thermal"]
 seoDescription: "Ưu đãi phim cách nhiệt 180K trong bài là thông tin lưu từ chương trình đã công bố trước đây."

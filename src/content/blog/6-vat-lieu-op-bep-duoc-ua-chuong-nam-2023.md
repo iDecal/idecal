@@ -1,5 +1,5 @@
 ---
-title: "Vật liệu ốp bếp: so sánh theo nền và cách sử dụng"
+title: "6 Vật liệu ốp bếp được ưa chuộng năm 2023"
 description: "Vật liệu ốp bếp cần được so sánh theo vị trí gần nhiệt, độ ẩm và cách vệ sinh."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/idecal-logo.png"
 wordpressId: 17558
 originalUrl: "https://idecal.vn/6-vat-lieu-op-bep-duoc-ua-chuong-nam-2023/"
-seoTitle: "Vật liệu ốp bếp: so sánh theo nền và cách sử dụng"
+seoTitle: "6 Vật liệu ốp bếp được ưa chuộng năm 2023"
 focusKeyword: "Vật liệu ốp bếp"
 contentTopics: ["interior"]
 seoDescription: "Vật liệu ốp bếp cần được so sánh theo vị trí gần nhiệt, độ ẩm và cách vệ sinh."

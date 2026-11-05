@@ -1,5 +1,5 @@
 ---
-title: "Decal dán kính phòng tắm: riêng tư và dễ chăm sóc"
+title: "10+ ý tưởng Decal dán kính phòng tắm hiện đại - Đẹp, riêng tư, Tối giản"
 description: "Decal dán kính phòng tắm cần được chọn theo mức che tầm nhìn và vị trí tiếp xúc nước."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -11,7 +11,7 @@ wordpressId: 26406
 originalUrl: "https://idecal.vn/10-y-tuong-decal-dan-kinh-phong-tam-hien-dai/"
 focusKeyword: "Decal dán kính phòng tắm"
 seoDescription: "Decal dán kính phòng tắm cần được chọn theo mức che tầm nhìn và vị trí tiếp xúc nước."
-seoTitle: "Decal dán kính phòng tắm: riêng tư và dễ chăm sóc"
+seoTitle: "10+ ý tưởng Decal dán kính phòng tắm hiện đại - Đẹp, riêng tư, Tối giản"
 contentTopics: ["frosted"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

@@ -1,5 +1,5 @@
 ---
-title: "Thiết kế kính văn phòng 2025: ý tưởng còn có thể ứng dụng"
+title: "Xu hướng decal dán kính văn phòng hot nhất năm 2025"
 description: "Thiết kế kính văn phòng 2025 trong bài là tập hợp ý tưởng từ thời điểm công bố."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/aa230623b9a211131c99.webp"
 wordpressId: 27478
 originalUrl: "https://idecal.vn/xu-huong-decal-dan-kinh-van-phong-hot-nhat-nam-2025/"
-seoTitle: "Thiết kế kính văn phòng 2025: ý tưởng còn có thể ứng dụng"
+seoTitle: "Xu hướng decal dán kính văn phòng hot nhất năm 2025"
 focusKeyword: "Thiết kế kính văn phòng 2025"
 contentTopics: ["frosted"]
 seoDescription: "Thiết kế kính văn phòng 2025 trong bài là tập hợp ý tưởng từ thời điểm công bố."

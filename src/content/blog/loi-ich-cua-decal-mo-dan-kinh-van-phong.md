@@ -1,5 +1,5 @@
 ---
-title: "Decal mờ văn phòng: riêng tư, nhận diện và ánh sáng"
+title: "Lợi ích của Decal mờ dán kính văn phòng – Tăng riêng tư & thẩm mỹ"
 description: "Decal mờ văn phòng giúp điều chỉnh tầm nhìn qua kính và bổ sung nhận diện theo bố cục."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/4f6fedc53619c856fb43.webp"
 wordpressId: 33583
 originalUrl: "https://idecal.vn/loi-ich-cua-decal-mo-dan-kinh-van-phong/"
-seoTitle: "Decal mờ văn phòng: riêng tư, nhận diện và ánh sáng"
+seoTitle: "Lợi ích của Decal mờ dán kính văn phòng – Tăng riêng tư & thẩm mỹ"
 focusKeyword: "Decal mờ văn phòng"
 contentTopics: ["frosted"]
 seoDescription: "Decal mờ văn phòng giúp điều chỉnh tầm nhìn qua kính và bổ sung nhận diện theo bố cục."

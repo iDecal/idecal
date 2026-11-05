@@ -1,5 +1,5 @@
 ---
-title: "Cắt Decal chữ dán kính: chọn bố cục và xác nhận giá"
+title: "Cắt Decal chữ dán kính - Trang trí SHOP chỉ với 199K"
 description: "Cắt Decal chữ dán kính phù hợp với tên shop, giờ mở cửa và thông điệp ngắn."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 1591
 originalUrl: "https://idecal.vn/cat-decal-chu-dan-kinh-trang-tri-shop-chi-voi-199k/"
 focusKeyword: "Cắt Decal chữ dán kính"
 seoDescription: "Cắt Decal chữ dán kính phù hợp với tên shop, giờ mở cửa và thông điệp ngắn."
-seoTitle: "Cắt Decal chữ dán kính: chọn bố cục và xác nhận giá"
+seoTitle: "Cắt Decal chữ dán kính - Trang trí SHOP chỉ với 199K"
 contentTopics: ["cutting"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

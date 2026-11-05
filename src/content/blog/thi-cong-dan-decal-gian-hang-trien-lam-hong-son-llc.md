@@ -1,5 +1,5 @@
 ---
-title: "Decal gian hàng Hồng Sơn: hình ảnh ứng dụng tại triển lãm"
+title: "Thi công dán Decal gian hàng triễn lãm Hồng sơn LLC"
 description: "Decal gian hàng Hồng Sơn trong bài giúp tham khảo cách đưa hình ảnh nhận diện lên không gian trưng bày."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/d19c3a97acd27741145a.jpg"
 wordpressId: 26946
 originalUrl: "https://idecal.vn/thi-cong-dan-decal-gian-hang-trien-lam-hong-son-llc/"
-seoTitle: "Decal gian hàng Hồng Sơn: hình ảnh ứng dụng tại triển lãm"
+seoTitle: "Thi công dán Decal gian hàng triễn lãm Hồng sơn LLC"
 focusKeyword: "Decal gian hàng Hồng Sơn"
 contentTopics: ["event"]
 seoDescription: "Decal gian hàng Hồng Sơn trong bài giúp tham khảo cách đưa hình ảnh nhận diện lên không gian trưng bày."

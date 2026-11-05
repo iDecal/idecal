@@ -1,5 +1,5 @@
 ---
-title: "Decal kính phòng khách: chọn độ che và họa tiết"
+title: "Tư vấn chọn Decal dán kính phòng khách sang trọng"
 description: "Decal kính phòng khách nên được chọn theo nhu cầu nhìn ra ngoài, ánh sáng và phong cách nội thất."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/idecal-logo.png"
 wordpressId: 18038
 originalUrl: "https://idecal.vn/tu-van-chon-decal-dan-kinh-phong-khach-sang-trong/"
 focusKeyword: "Decal kính phòng khách"
-seoTitle: "Decal kính phòng khách: chọn độ che và họa tiết"
+seoTitle: "Tư vấn chọn Decal dán kính phòng khách sang trọng"
 contentTopics: ["frosted"]
 seoDescription: "Decal kính phòng khách nên được chọn theo nhu cầu nhìn ra ngoài, ánh sáng và phong cách nội thất."
 updatedDate: "2026-11-04T21:01:40+07:00"

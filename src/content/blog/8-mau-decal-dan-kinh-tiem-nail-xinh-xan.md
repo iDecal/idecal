@@ -1,5 +1,5 @@
 ---
-title: "Mẫu Decal kính tiệm nail: bố cục dễ nhận diện"
+title: "8+ mẫu Decal dán kính tiệm Nail xinh xắn bạn nên tham khảo"
 description: "Mẫu Decal kính tiệm nail nên làm rõ tên tiệm và dịch vụ, đồng thời phối với màu nội thất."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/4d4e2f70cfd97f32375a.jpg"
 wordpressId: 2122
 originalUrl: "https://idecal.vn/8-mau-decal-dan-kinh-tiem-nail-xinh-xan/"
 focusKeyword: "Mẫu Decal kính tiệm nail"
-seoTitle: "Mẫu Decal kính tiệm nail: bố cục dễ nhận diện"
+seoTitle: "8+ mẫu Decal dán kính tiệm Nail xinh xắn bạn nên tham khảo"
 contentTopics: ["advertising"]
 seoDescription: "Mẫu Decal kính tiệm nail nên làm rõ tên tiệm và dịch vụ, đồng thời phối với màu nội thất."
 updatedDate: "2026-11-04T21:01:39+07:00"

@@ -1,5 +1,5 @@
 ---
-title: "Phim trang trí kính POV: chọn hiệu ứng và quy cách"
+title: "Giới thiệu Phim trang trí kính cao cấp POV từ Hàn Quốc"
 description: "Phim trang trí kính POV được giới thiệu qua nhiều họa tiết và hiệu ứng bề mặt."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/3cc00e3972dd98423480.jpg"
 wordpressId: 29041
 originalUrl: "https://idecal.vn/gioi-thieu-phim-trang-tri-kinh-cao-cap-pov-tu-han-quoc/"
 seoDescription: "Phim trang trí kính POV được giới thiệu qua nhiều họa tiết và hiệu ứng bề mặt."
-seoTitle: "Phim trang trí kính POV: chọn hiệu ứng và quy cách"
+seoTitle: "Giới thiệu Phim trang trí kính cao cấp POV từ Hàn Quốc"
 focusKeyword: "Phim trang trí kính POV"
 contentTopics: ["materials"]
 updatedDate: "2026-11-04T21:01:39+07:00"

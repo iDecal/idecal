@@ -1,5 +1,5 @@
 ---
-title: "Trang trí nội thất bằng Decal: chọn theo bề mặt thực tế"
+title: "Xu hướng trang trí nội thất với Decal mới nhất."
 description: "Trang trí nội thất bằng Decal cần kết hợp mẫu hình với hiện trạng nền và cách sử dụng không gian."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/idecal-logo.png"
 wordpressId: 18411
 originalUrl: "https://idecal.vn/xu-huong-trang-tri-noi-that-voi-decal-moi-nhat/"
-seoTitle: "Trang trí nội thất bằng Decal: chọn theo bề mặt thực tế"
+seoTitle: "Xu hướng trang trí nội thất với Decal mới nhất."
 focusKeyword: "Trang trí nội thất bằng Decal"
 contentTopics: ["interior"]
 seoDescription: "Trang trí nội thất bằng Decal cần kết hợp mẫu hình với hiện trạng nền và cách sử dụng không gian."

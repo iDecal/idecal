@@ -1,5 +1,5 @@
 ---
-title: "In PP gấp: kiểm tra file và xác nhận lịch nhận"
+title: "Dịch vụ in PP giá rẻ – In PP gấp lấy ngay 4h tại TP.HCM & Bình Dương"
 description: "In PP gấp cần bắt đầu bằng file đúng khổ và yêu cầu hoàn thiện rõ ràng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/3806b7f8fae9b46630b7.jpg"
 wordpressId: 18866
 originalUrl: "https://idecal.vn/dich-vu-in-pp-gia-re-lay-gap/"
 focusKeyword: "In PP gấp"
-seoTitle: "In PP gấp: kiểm tra file và xác nhận lịch nhận"
+seoTitle: "Dịch vụ in PP giá rẻ – In PP gấp lấy ngay 4h tại TP.HCM & Bình Dương"
 contentTopics: ["printing"]
 seoDescription: "In PP gấp cần bắt đầu bằng file đúng khổ và yêu cầu hoàn thiện rõ ràng."
 updatedDate: "2026-11-04T21:01:39+07:00"

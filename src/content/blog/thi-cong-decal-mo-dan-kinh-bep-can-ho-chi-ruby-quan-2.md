@@ -1,5 +1,5 @@
 ---
-title: "Decal kính bếp căn hộ Ruby: ý tưởng từ công trình cũ"
+title: "Thi công decal dán kính bếp căn hộ chị ruby - quận 2"
 description: "Decal kính bếp căn hộ Ruby trong bài là tư liệu công trình tại khu vực Quận 2 trước đây."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/0db356a704cd8479dea0.jpg"
 wordpressId: 27108
 originalUrl: "https://idecal.vn/thi-cong-decal-mo-dan-kinh-bep-can-ho-chi-ruby-quan-2/"
-seoTitle: "Decal kính bếp căn hộ Ruby: ý tưởng từ công trình cũ"
+seoTitle: "Thi công decal dán kính bếp căn hộ chị ruby - quận 2"
 focusKeyword: "Decal kính bếp căn hộ Ruby"
 contentTopics: ["frosted"]
 seoDescription: "Decal kính bếp căn hộ Ruby trong bài là tư liệu công trình tại khu vực Quận 2 trước đây."

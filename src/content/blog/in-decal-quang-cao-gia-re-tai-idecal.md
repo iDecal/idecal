@@ -1,5 +1,5 @@
 ---
-title: "In Decal quảng cáo: chọn vật liệu và kiểm tra file"
+title: "In decal quảng cáo giá rẻ tại iDecal – Nhanh & Chất Lượng"
 description: "In Decal quảng cáo cần chọn nền vật liệu và cách hoàn thiện theo vị trí sử dụng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 26468
 originalUrl: "https://idecal.vn/in-decal-quang-cao-gia-re-tai-idecal/"
 focusKeyword: "In Decal quảng cáo"
 seoDescription: "In Decal quảng cáo cần chọn nền vật liệu và cách hoàn thiện theo vị trí sử dụng."
-seoTitle: "In Decal quảng cáo: chọn vật liệu và kiểm tra file"
+seoTitle: "In decal quảng cáo giá rẻ tại iDecal – Nhanh & Chất Lượng"
 contentTopics: ["printing"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

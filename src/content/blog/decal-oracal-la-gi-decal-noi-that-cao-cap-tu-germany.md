@@ -1,5 +1,5 @@
 ---
-title: "Decal ORACAL: phân biệt dòng in và dòng cắt màu"
+title: "Decal Oracal là gì? Decal nội thất cao cấp từ Germany"
 description: "Decal ORACAL có nhiều mã dành cho những ứng dụng khác nhau; không nên suy ra toàn bộ đặc tính từ tên thương hiệu."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/396c0ea2195d65d7fdca.jpg"
 wordpressId: 2157
 originalUrl: "https://idecal.vn/decal-oracal-la-gi-decal-noi-that-cao-cap-tu-germany/"
 focusKeyword: "Decal ORACAL"
-seoTitle: "Decal ORACAL: phân biệt dòng in và dòng cắt màu"
+seoTitle: "Decal Oracal là gì? Decal nội thất cao cấp từ Germany"
 contentTopics: ["materials"]
 seoDescription: "Decal ORACAL có nhiều mã dành cho những ứng dụng khác nhau; không nên suy ra toàn bộ đặc tính từ tên thương hiệu."
 updatedDate: "2026-11-04T21:01:39+07:00"

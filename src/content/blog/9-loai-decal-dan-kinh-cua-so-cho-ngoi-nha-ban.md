@@ -1,5 +1,5 @@
 ---
-title: "Decal dán kính cửa sổ: so sánh hiệu ứng và độ che"
+title: "9+ loại Decal dán kính cửa sổ cho ngôi nhà bạn"
 description: "Decal dán kính cửa sổ có nhiều hiệu ứng, từ mờ trơn đến họa tiết và màu phản gương."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -11,7 +11,7 @@ wordpressId: 25623
 originalUrl: "https://idecal.vn/9-loai-decal-dan-kinh-cua-so-cho-ngoi-nha-ban/"
 focusKeyword: "Decal dán kính cửa sổ"
 seoDescription: "Decal dán kính cửa sổ có nhiều hiệu ứng, từ mờ trơn đến họa tiết và màu phản gương."
-seoTitle: "Decal dán kính cửa sổ: so sánh hiệu ứng và độ che"
+seoTitle: "9+ loại Decal dán kính cửa sổ cho ngôi nhà bạn"
 contentTopics: ["frosted"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

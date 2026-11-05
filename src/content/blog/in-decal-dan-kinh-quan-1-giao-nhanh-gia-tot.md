@@ -1,5 +1,5 @@
 ---
-title: "In Decal Quận 1: chuẩn bị file và địa chỉ nhận"
+title: "In Decal dán kính Quận 1 - Giao nhanh, giá tốt"
 description: "In Decal Quận 1 trong bài được hiểu theo khu vực tìm kiếm quen thuộc."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 28417
 originalUrl: "https://idecal.vn/in-decal-dan-kinh-quan-1-giao-nhanh-gia-tot/"
 focusKeyword: "In Decal Quận 1"
 seoDescription: "In Decal Quận 1 trong bài được hiểu theo khu vực tìm kiếm quen thuộc."
-seoTitle: "In Decal Quận 1: chuẩn bị file và địa chỉ nhận"
+seoTitle: "In Decal dán kính Quận 1 - Giao nhanh, giá tốt"
 contentTopics: ["local"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

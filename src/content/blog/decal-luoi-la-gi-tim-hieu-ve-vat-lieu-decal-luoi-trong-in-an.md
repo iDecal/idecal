@@ -1,5 +1,5 @@
 ---
-title: "Decal lưới là gì: cấu trúc và cách nhìn qua kính"
+title: "Decal lưới là gì? Tìm hiểu về vât liệu Decal lưới trong in ấn"
 description: "Decal lưới là gì và vì sao thường xuất hiện trên kính quảng cáo? Cấu trúc lỗ nhỏ tạo sự kết hợp giữa vùng thể hiện hình ảnh và khoảng quan sát, nhưng hiệu ứng…"
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/a71351a0cc363f0c6c7d.jpg"
 wordpressId: 30356
 originalUrl: "https://idecal.vn/decal-luoi-la-gi-tim-hieu-ve-vat-lieu-decal-luoi-trong-in-an/"
-seoTitle: "Decal lưới là gì: cấu trúc và cách nhìn qua kính"
+seoTitle: "Decal lưới là gì? Tìm hiểu về vât liệu Decal lưới trong in ấn"
 focusKeyword: "Decal lưới là gì"
 contentTopics: ["materials"]
 seoDescription: "Decal lưới là gì và vì sao thường xuất hiện trên kính quảng cáo? Cấu trúc lỗ nhỏ tạo sự kết hợp giữa vùng thể hiện hình ảnh và khoảng quan sát, nhưng hiệu ứng…"

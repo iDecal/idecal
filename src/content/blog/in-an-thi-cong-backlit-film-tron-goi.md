@@ -1,5 +1,5 @@
 ---
-title: "In backlit film: chọn hình cho hộp đèn"
+title: "In Backlit Film: Chất Lượng Hình Ảnh Hoàn Hảo Trong Hộp Đèn Siêu Mỏng"
 description: "In backlit film cần tính đến nguồn sáng phía sau và cách lắp bản in vào hộp đèn."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/3806b7f8fae9b46630b7.jpg"
 wordpressId: 20606
 originalUrl: "https://idecal.vn/in-an-thi-cong-backlit-film-tron-goi/"
 focusKeyword: "In backlit film"
-seoTitle: "In backlit film: chọn hình cho hộp đèn"
+seoTitle: "In Backlit Film: Chất Lượng Hình Ảnh Hoàn Hảo Trong Hộp Đèn Siêu Mỏng"
 contentTopics: ["printing"]
 seoDescription: "In backlit film cần tính đến nguồn sáng phía sau và cách lắp bản in vào hộp đèn."
 updatedDate: "2026-11-04T21:01:39+07:00"

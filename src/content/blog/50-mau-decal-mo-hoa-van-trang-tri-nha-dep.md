@@ -1,5 +1,5 @@
 ---
-title: "Decal mờ hoa văn: cách chọn họa tiết cho nhà ở"
+title: "Tổng hợp 50 mẫu Decal mờ hoa văn trang trí nhà đẹp"
 description: "Decal mờ hoa văn vừa tạo điểm nhấn vừa thay đổi mức nhìn xuyên qua kính."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -11,7 +11,7 @@ wordpressId: 1593
 originalUrl: "https://idecal.vn/50-mau-decal-mo-hoa-van-trang-tri-nha-dep/"
 seoDescription: "Decal mờ hoa văn vừa tạo điểm nhấn vừa thay đổi mức nhìn xuyên qua kính."
 focusKeyword: "Decal mờ hoa văn"
-seoTitle: "Decal mờ hoa văn: cách chọn họa tiết cho nhà ở"
+seoTitle: "Tổng hợp 50 mẫu Decal mờ hoa văn trang trí nhà đẹp"
 contentTopics: ["frosted"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

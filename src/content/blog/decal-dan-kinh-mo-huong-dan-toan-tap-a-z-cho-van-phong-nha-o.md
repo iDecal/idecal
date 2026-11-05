@@ -1,5 +1,5 @@
 ---
-title: "Decal kính mờ: hướng dẫn chọn mẫu cho văn phòng và nhà ở"
+title: "Decal Dán Kính Mờ: Hướng Dẫn Toàn Tập A-Z Cho Văn Phòng & Nhà Ở"
 description: "Decal kính mờ phù hợp khi muốn giảm tầm nhìn xuyên kính và bổ sung họa tiết nhận diện."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/90a26a27a6cf934d0826.jpg"
 wordpressId: 34194
 originalUrl: "https://idecal.vn/decal-dan-kinh-mo-huong-dan-toan-tap-a-z-cho-van-phong-nha-o/"
-seoTitle: "Decal kính mờ: hướng dẫn chọn mẫu cho văn phòng và nhà ở"
+seoTitle: "Decal Dán Kính Mờ: Hướng Dẫn Toàn Tập A-Z Cho Văn Phòng & Nhà Ở"
 focusKeyword: "Decal kính mờ"
 contentTopics: ["frosted"]
 seoDescription: "Decal kính mờ phù hợp khi muốn giảm tầm nhìn xuyên kính và bổ sung họa tiết nhận diện."

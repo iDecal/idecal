@@ -1,5 +1,5 @@
 ---
-title: "Kích thước poster: chọn khổ theo vị trí trưng bày"
+title: "Kích thước Poster chuẩn và phổ biến nhất hiện nay"
 description: "Kích thước poster nên được chọn theo khoảng nhìn, nội dung và khung hoặc giá trưng bày."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/c7fa5df0d4c5f66b3c3d.png"
 wordpressId: 17929
 originalUrl: "https://idecal.vn/kich-thuoc-poster-chuan-va-pho-bien-nhat-hien-nay/"
 focusKeyword: "Kích thước poster"
-seoTitle: "Kích thước poster: chọn khổ theo vị trí trưng bày"
+seoTitle: "Kích thước Poster chuẩn và phổ biến nhất hiện nay"
 contentTopics: ["printing"]
 seoDescription: "Kích thước poster nên được chọn theo khoảng nhìn, nội dung và khung hoặc giá trưng bày."
 updatedDate: "2026-11-04T21:01:39+07:00"

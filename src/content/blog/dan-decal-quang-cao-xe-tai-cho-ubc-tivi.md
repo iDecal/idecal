@@ -1,5 +1,5 @@
 ---
-title: "Decal xe tải UBC Tivi: hình ảnh nhận diện tham khảo"
+title: "Dán decal quảng cáo xe tải - thương hiệu UBC tivi"
 description: "Decal xe tải UBC Tivi trong bài là nội dung dự án được ghi nhận trước đây."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/d0f42badc0edb8fcfd3e.jpg"
 wordpressId: 27362
 originalUrl: "https://idecal.vn/dan-decal-quang-cao-xe-tai-cho-ubc-tivi/"
-seoTitle: "Decal xe tải UBC Tivi: hình ảnh nhận diện tham khảo"
+seoTitle: "Dán decal quảng cáo xe tải - thương hiệu UBC tivi"
 focusKeyword: "Decal xe tải UBC Tivi"
 contentTopics: ["advertising"]
 seoDescription: "Decal xe tải UBC Tivi trong bài là nội dung dự án được ghi nhận trước đây."

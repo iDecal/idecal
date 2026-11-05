@@ -1,5 +1,5 @@
 ---
-title: "Mẫu Decal kính văn phòng: chọn theo độ riêng tư"
+title: "99+ Mẫu Decal dán kính văn phòng đẹp 2026"
 description: "Mẫu Decal kính văn phòng nên được chọn theo chức năng từng phòng và tầm nhìn qua vách."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -11,7 +11,7 @@ wordpressId: 25139
 originalUrl: "https://idecal.vn/99-mau-decal-dan-kinh-van-phong-dep-2026/"
 focusKeyword: "Mẫu Decal kính văn phòng"
 seoDescription: "Mẫu Decal kính văn phòng nên được chọn theo chức năng từng phòng và tầm nhìn qua vách."
-seoTitle: "Mẫu Decal kính văn phòng: chọn theo độ riêng tư"
+seoTitle: "99+ Mẫu Decal dán kính văn phòng đẹp 2026"
 contentTopics: ["frosted"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

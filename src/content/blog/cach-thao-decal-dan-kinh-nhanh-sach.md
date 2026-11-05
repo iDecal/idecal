@@ -1,5 +1,5 @@
 ---
-title: "Cách tháo Decal dán kính: dụng cụ và xử lý keo cũ"
+title: "Cách tháo Decal dán kính Nhanh – Sạch"
 description: "Cách tháo Decal dán kính phụ thuộc vào tuổi lớp dán, loại keo và hiện trạng kính."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/2b601067ffbfa9bfc6a3.jpg"
 wordpressId: 35594
 originalUrl: "https://idecal.vn/cach-thao-decal-dan-kinh-nhanh-sach/"
 focusKeyword: "Cách tháo Decal dán kính"
-seoTitle: "Cách tháo Decal dán kính: dụng cụ và xử lý keo cũ"
+seoTitle: "Cách tháo Decal dán kính Nhanh – Sạch"
 seoDescription: "Cách tháo Decal dán kính phụ thuộc vào tuổi lớp dán, loại keo và hiện trạng kính."
 contentTopics: ["installation"]
 updatedDate: "2026-11-04T21:01:39+07:00"

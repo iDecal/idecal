@@ -15,3 +15,7 @@ Tên đơn vị hiện hành được ưu tiên; tên quận/huyện cũ giúp �
 ### Điều chỉnh phạm vi theo yêu cầu
 
 Trang TP.HCM và lựa chọn phường/xã trong form chỉ hiển thị 102 phường/xã thuộc TP.HCM trước sáp nhập. Không hiển thị địa bàn Bình Dương, Bà Rịa–Vũng Tàu và Côn Đảo trong danh sách này. Dữ liệu nguồn 168 đơn vị vẫn giữ để đối chiếu. Thêm danh sách liên kết trực tiếp tới 22 trang quận/huyện/TP. Thủ Đức cũ ngay trên các nhóm phường/xã; không đưa trở lại menu chính.
+
+### Giữ nguyên tiêu đề XML — 05/11/2026
+
+Theo yêu cầu của chủ website, khôi phục nguyên văn 71 tiêu đề bài WordPress theo XML (đối chiếu wordpressId), áp dụng cả title và seoTitle. `wordpress-original-titles.json` lưu bản đối chiếu; kiểm tra tiêu đề gốc thay cho yêu cầu bắt buộc chứa từ khóa chính. Không tự viết lại tiêu đề bài từ XML trong các lượt tối ưu tiếp theo. Các bài có sẵn ngoài XML không bị đổi trong lượt khôi phục này.

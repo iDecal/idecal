@@ -1,5 +1,5 @@
 ---
-title: "Decal dán kính quán cafe: ý tưởng theo phong cách quán"
+title: "199+ mẫu Decal dán kính trang trí quán cafe đẹp – sáng tạo – thu hút"
 description: "Decal dán kính quán cafe có thể thể hiện tên quán, đồ uống hoặc họa tiết nhận diện mà vẫn giữ khoảng sáng."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/bcf6bd4e4185b3990f8b.jpg"
 wordpressId: 33822
 originalUrl: "https://idecal.vn/199-mau-decal-dan-kinh-trang-tri-quan-cafe-dep/"
 focusKeyword: "Decal dán kính quán cafe"
-seoTitle: "Decal dán kính quán cafe: ý tưởng theo phong cách quán"
+seoTitle: "199+ mẫu Decal dán kính trang trí quán cafe đẹp – sáng tạo – thu hút"
 contentTopics: ["advertising"]
 seoDescription: "Decal dán kính quán cafe có thể thể hiện tên quán, đồ uống hoặc họa tiết nhận diện mà vẫn giữ khoảng sáng."
 updatedDate: "2026-11-04T21:01:39+07:00"

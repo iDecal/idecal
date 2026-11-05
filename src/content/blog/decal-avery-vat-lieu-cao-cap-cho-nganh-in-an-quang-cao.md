@@ -1,5 +1,5 @@
 ---
-title: "Decal Avery: chọn dòng vật liệu theo ứng dụng"
+title: "Decal Avery – Giải pháp vật liệu cao cấp cho ngành in ấn quảng cáo"
 description: "Decal Avery là tên gọi rộng cho nhiều dòng vật liệu, không phải một quy cách duy nhất."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -11,7 +11,7 @@ wordpressId: 29048
 originalUrl: "https://idecal.vn/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao/"
 seoDescription: "Decal Avery là tên gọi rộng cho nhiều dòng vật liệu, không phải một quy cách duy nhất."
 focusKeyword: "Decal Avery"
-seoTitle: "Decal Avery: chọn dòng vật liệu theo ứng dụng"
+seoTitle: "Decal Avery – Giải pháp vật liệu cao cấp cho ngành in ấn quảng cáo"
 contentTopics: ["materials"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

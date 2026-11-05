@@ -1,5 +1,5 @@
 ---
-title: "Decal mờ văn phòng HR: bố cục nhận diện tham khảo"
+title: "Nâng Tầm Thương Hiệu Với 3 Mẫu Decal Mờ Dán Kính Văn Phòng HR"
 description: "Decal mờ văn phòng HR trong bài được dùng để tham khảo cách kết hợp nhận diện và vùng che trên kính."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/f7903ab799f8d43f7f6d.png"
 wordpressId: 34610
 originalUrl: "https://idecal.vn/mau-decal-mo-dan-kinh-van-phong-hr/"
 focusKeyword: "Decal mờ văn phòng HR"
-seoTitle: "Decal mờ văn phòng HR: bố cục nhận diện tham khảo"
+seoTitle: "Nâng Tầm Thương Hiệu Với 3 Mẫu Decal Mờ Dán Kính Văn Phòng HR"
 contentTopics: ["frosted"]
 seoDescription: "Decal mờ văn phòng HR trong bài được dùng để tham khảo cách kết hợp nhận diện và vùng che trên kính."
 updatedDate: "2026-11-04T21:01:39+07:00"

@@ -1,5 +1,5 @@
 ---
-title: "Decal gạch bông bếp: phối mẫu và chọn vị trí dán"
+title: "Làm mới không gian bếp với Decal gạch bông: Đơn giản và tiện lợi"
 description: "Decal gạch bông bếp tạo điểm nhấn bằng họa tiết, nhưng cần chọn đúng vị trí và nền bề mặt."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/78c14dbf752f5cb0fe3a.jpg"
 wordpressId: 17547
 originalUrl: "https://idecal.vn/lam-moi-khong-gian-bep-voi-decal-gach-bong-don-gian-va-tien-loi/"
-seoTitle: "Decal gạch bông bếp: phối mẫu và chọn vị trí dán"
+seoTitle: "Làm mới không gian bếp với Decal gạch bông: Đơn giản và tiện lợi"
 focusKeyword: "Decal gạch bông bếp"
 contentTopics: ["interior"]
 seoDescription: "Decal gạch bông bếp tạo điểm nhấn bằng họa tiết, nhưng cần chọn đúng vị trí và nền bề mặt."

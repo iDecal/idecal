@@ -1,5 +1,5 @@
 ---
-title: "Thi công PP khổ lớn: chia hình và chuẩn bị nền"
+title: "Thi công dán PP khổ lớn chuyên nghiệp #1 TPHCM"
 description: "Thi công PP khổ lớn cần thống nhất cách chia bản in, xử lý nền và vị trí nối trước khi dán."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/353dc5683be069abf14b.jpg"
 wordpressId: 1926
 originalUrl: "https://idecal.vn/thi-cong-dan-pp-kho-lon-chuyen-nghiep/"
 focusKeyword: "Thi công PP khổ lớn"
-seoTitle: "Thi công PP khổ lớn: chia hình và chuẩn bị nền"
+seoTitle: "Thi công dán PP khổ lớn chuyên nghiệp #1 TPHCM"
 contentTopics: ["installation"]
 seoDescription: "Thi công PP khổ lớn cần thống nhất cách chia bản in, xử lý nền và vị trí nối trước khi dán."
 updatedDate: "2026-11-04T21:01:39+07:00"

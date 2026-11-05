@@ -1,5 +1,5 @@
 ---
-title: "Trang trí VM: đưa hình ảnh vào không gian trưng bày"
+title: "Thi công trang trí VM gian hàng chuyên nghiệp"
 description: "Trang trí VM cần làm rõ câu chuyện trưng bày, điểm nhìn và cách phối hình với sản phẩm."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/32f115fb5f2db4da55cc.jpg"
 wordpressId: 21142
 originalUrl: "https://idecal.vn/thi-cong-trang-tri-vm-gian-hang-chuyen-nghiep/"
 focusKeyword: "Trang trí VM"
-seoTitle: "Trang trí VM: đưa hình ảnh vào không gian trưng bày"
+seoTitle: "Thi công trang trí VM gian hàng chuyên nghiệp"
 contentTopics: ["event"]
 seoDescription: "Trang trí VM cần làm rõ câu chuyện trưng bày, điểm nhìn và cách phối hình với sản phẩm."
 updatedDate: "2026-11-04T21:01:40+07:00"

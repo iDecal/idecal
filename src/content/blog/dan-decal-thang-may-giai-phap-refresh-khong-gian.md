@@ -1,5 +1,5 @@
 ---
-title: "Decal thang máy: làm mới bề mặt và lưu ý thi công"
+title: "dán Decal thang máy - Giải pháp 'refresh' không gian"
 description: "Decal thang máy có thể thay đổi diện mạo bề mặt mà vẫn giữ kết cấu sẵn có nếu nền phù hợp."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/dd5df887a7c23883100d.jpg"
 wordpressId: 26885
 originalUrl: "https://idecal.vn/dan-decal-thang-may-giai-phap-refresh-khong-gian/"
 focusKeyword: "Decal thang máy"
-seoTitle: "Decal thang máy: làm mới bề mặt và lưu ý thi công"
+seoTitle: "dán Decal thang máy - Giải pháp 'refresh' không gian"
 seoDescription: "Decal thang máy có thể thay đổi diện mạo bề mặt mà vẫn giữ kết cấu sẵn có nếu nền phù hợp."
 contentTopics: ["interior"]
 updatedDate: "2026-11-04T21:01:39+07:00"

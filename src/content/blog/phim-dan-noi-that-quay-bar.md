@@ -1,5 +1,5 @@
 ---
-title: "Film dán quầy bar: phối vân và kiểm tra nền"
+title: "Thay áo mới cho quầy bar với Phim dán nội thất – Sang trọng và hiện đại"
 description: "Film dán quầy bar có thể làm mới cách nhìn của bề mặt nếu nền và chi tiết cạnh phù hợp."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/54403e84c7b6aed10b70.webp"
 wordpressId: 28981
 originalUrl: "https://idecal.vn/phim-dan-noi-that-quay-bar/"
-seoTitle: "Film dán quầy bar: phối vân và kiểm tra nền"
+seoTitle: "Thay áo mới cho quầy bar với Phim dán nội thất – Sang trọng và hiện đại"
 seoDescription: "Film dán quầy bar có thể làm mới cách nhìn của bề mặt nếu nền và chi tiết cạnh phù hợp."
 focusKeyword: "Film dán quầy bar"
 contentTopics: ["interior"]

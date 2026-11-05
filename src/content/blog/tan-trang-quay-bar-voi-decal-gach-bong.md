@@ -1,5 +1,5 @@
 ---
-title: "Decal gạch bông quầy bar: chọn tỉ lệ và cách chia mẫu"
+title: "Tân trang quầy bar với Decal gạch bông – Đẹp, tiết kiệm, dễ thi công"
 description: "Decal gạch bông quầy bar nên được xem từ khoảng nhìn tổng thể để tránh họa tiết quá dày hoặc lệch ở mép nối."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/45a28955dc11efabae92.jpg"
 wordpressId: 28973
 originalUrl: "https://idecal.vn/tan-trang-quay-bar-voi-decal-gach-bong/"
-seoTitle: "Decal gạch bông quầy bar: chọn tỉ lệ và cách chia mẫu"
+seoTitle: "Tân trang quầy bar với Decal gạch bông – Đẹp, tiết kiệm, dễ thi công"
 seoDescription: "Decal gạch bông quầy bar nên được xem từ khoảng nhìn tổng thể để tránh họa tiết quá dày hoặc lệch ở mép nối."
 focusKeyword: "Decal gạch bông quầy bar"
 contentTopics: ["interior"]

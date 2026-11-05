@@ -1,5 +1,5 @@
 ---
-title: "Decal kính khách sạn: phối mẫu theo từng khu chức năng"
+title: "25+ Mẫu Decal dán kính Khách sạn sang trọng, nâng tầm không gian."
 description: "Decal kính khách sạn có thể dùng cho nhận diện, phân chia tầm nhìn hoặc trang trí."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/baed1f8bc3dc8a2c1607.jpg"
 wordpressId: 34308
 originalUrl: "https://idecal.vn/tuyen-chon-25-mau-decal-dan-kinh-khach-san-sang-trong-nang-tam-khong-gian/"
-seoTitle: "Decal kính khách sạn: phối mẫu theo từng khu chức năng"
+seoTitle: "25+ Mẫu Decal dán kính Khách sạn sang trọng, nâng tầm không gian."
 focusKeyword: "Decal kính khách sạn"
 contentTopics: ["frosted"]
 seoDescription: "Decal kính khách sạn có thể dùng cho nhận diện, phân chia tầm nhìn hoặc trang trí."

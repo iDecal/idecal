@@ -1,5 +1,5 @@
 ---
-title: "Film dán tủ bếp: kiểm tra nền và xử lý cạnh"
+title: "Làm mới bề mặt tủ bếp với phim dán nội thất"
 description: "Film dán tủ bếp cần được xem cùng tình trạng cánh tủ, góc bo và vùng tiếp xúc ẩm hoặc nhiệt."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/1f25d8f5d3b170c488bf.webp"
 wordpressId: 28573
 originalUrl: "https://idecal.vn/lam-moi-be-mat-tu-bep-voi-phim-dan-noi-that/"
-seoTitle: "Film dán tủ bếp: kiểm tra nền và xử lý cạnh"
+seoTitle: "Làm mới bề mặt tủ bếp với phim dán nội thất"
 focusKeyword: "Film dán tủ bếp"
 contentTopics: ["interior"]
 seoDescription: "Film dán tủ bếp cần được xem cùng tình trạng cánh tủ, góc bo và vùng tiếp xúc ẩm hoặc nhiệt."

@@ -1,5 +1,5 @@
 ---
-title: "Decal mờ in logo: so sánh với logo cắt trên kính"
+title: "Decal mờ in Logo, cắt Logo giá rẻ tại TP HCM"
 description: "Decal mờ in logo và logo cắt tạo hai cách thể hiện nhận diện khác nhau trên kính."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 1198
 originalUrl: "https://idecal.vn/decal-mo-in-logo-cat-logo-gia-re-tai-tp-hcm/"
 focusKeyword: "Decal mờ in logo"
 seoDescription: "Decal mờ in logo và logo cắt tạo hai cách thể hiện nhận diện khác nhau trên kính."
-seoTitle: "Decal mờ in logo: so sánh với logo cắt trên kính"
+seoTitle: "Decal mờ in Logo, cắt Logo giá rẻ tại TP HCM"
 contentTopics: ["frosted"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

@@ -1,5 +1,5 @@
 ---
-title: "Decal phòng game: chọn hình và chia mảng trang trí"
+title: "In ấn và thi công Decal trang trí Phòng Game"
 description: "Decal phòng game nên được chọn theo diện tích tường hoặc kính và điều kiện ánh sáng trong phòng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/d283dc1e299d26e9cc7d.webp"
 wordpressId: 28673
 originalUrl: "https://idecal.vn/in-an-va-thi-cong-decal-trang-tri-phong-game/"
-seoTitle: "Decal phòng game: chọn hình và chia mảng trang trí"
+seoTitle: "In ấn và thi công Decal trang trí Phòng Game"
 focusKeyword: "Decal phòng game"
 contentTopics: ["advertising"]
 seoDescription: "Decal phòng game nên được chọn theo diện tích tường hoặc kính và điều kiện ánh sáng trong phòng."

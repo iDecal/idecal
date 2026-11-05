@@ -1,5 +1,5 @@
 ---
-title: "Dán Decal kính: các bước chuẩn bị và thao tác cơ bản"
+title: "Video 5 bước hướng dẫn dán Decal kính đơn giản"
 description: "Dán Decal kính cần đo đúng khổ, làm sạch nền và thao tác theo hướng dẫn của loại vật liệu đang dùng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 19047
 originalUrl: "https://idecal.vn/video-5-buoc-huong-dan-dan-decal-kinh-don-gian/"
 focusKeyword: "Dán Decal kính"
 seoDescription: "Dán Decal kính cần đo đúng khổ, làm sạch nền và thao tác theo hướng dẫn của loại vật liệu đang dùng."
-seoTitle: "Dán Decal kính: các bước chuẩn bị và thao tác cơ bản"
+seoTitle: "Video 5 bước hướng dẫn dán Decal kính đơn giản"
 contentTopics: ["installation"]
 updatedDate: "2026-11-04T21:01:40+07:00"
 editorialReview: "2026-11-04"

@@ -1,5 +1,5 @@
 ---
-title: "Trang trí gian hàng triển lãm: phối hình và lịch lắp đặt"
+title: "Thi công trang trí gian hàng, hội chợ, triễn lãm giá tốt tại TPHCM"
 description: "Trang trí gian hàng triển lãm cần phối hợp thiết kế hình ảnh, nền trưng bày và điều kiện lắp đặt tại sự kiện."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/d19c3a97acd27741145a.jpg"
 wordpressId: 19190
 originalUrl: "https://idecal.vn/thi-cong-trang-tri-gian-hang-hoi-cho-trien-lam-gia-tot-tai-tphcm/"
-seoTitle: "Trang trí gian hàng triển lãm: phối hình và lịch lắp đặt"
+seoTitle: "Thi công trang trí gian hàng, hội chợ, triễn lãm giá tốt tại TPHCM"
 focusKeyword: "Trang trí gian hàng triển lãm"
 contentTopics: ["event"]
 seoDescription: "Trang trí gian hàng triển lãm cần phối hợp thiết kế hình ảnh, nền trưng bày và điều kiện lắp đặt tại sự kiện."

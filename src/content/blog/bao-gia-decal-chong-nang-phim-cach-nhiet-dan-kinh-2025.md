@@ -1,5 +1,5 @@
 ---
-title: "Báo giá phim cách nhiệt 2025: cách đọc từng hạng mục"
+title: "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2025"
 description: "Báo giá phim cách nhiệt 2025 trong bài là thông tin tại thời điểm đăng, phù hợp để tham khảo cách chia hạng mục."
 category: "Báo giá"
 categorySlug: "bao-gia"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/5c5b0efbffd7d87c8ab4.png"
 wordpressId: 33603
 originalUrl: "https://idecal.vn/bao-gia-decal-chong-nang-phim-cach-nhiet-dan-kinh-2025/"
-seoTitle: "Báo giá phim cách nhiệt 2025: cách đọc từng hạng mục"
+seoTitle: "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2025"
 focusKeyword: "Báo giá phim cách nhiệt 2025"
 contentTopics: ["thermal"]
 seoDescription: "Báo giá phim cách nhiệt 2025 trong bài là thông tin tại thời điểm đăng, phù hợp để tham khảo cách chia hạng mục."

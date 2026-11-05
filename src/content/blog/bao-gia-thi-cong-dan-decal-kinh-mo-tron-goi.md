@@ -1,5 +1,5 @@
 ---
-title: "Báo giá Decal kính mờ trọn gói: hiểu đúng phần đã gồm"
+title: "Báo giá Thi công dán Decal kính mờ trọn gói - Cập nhật tháng 04/2026"
 description: "Báo giá Decal kính mờ trọn gói cần làm rõ phần vật liệu, thiết kế, gia công và công dán."
 category: "Báo giá"
 categorySlug: "bao-gia"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/26e342c60ed7dfb32295.jpg"
 wordpressId: 34197
 originalUrl: "https://idecal.vn/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/"
 focusKeyword: "Báo giá Decal kính mờ trọn gói"
-seoTitle: "Báo giá Decal kính mờ trọn gói: hiểu đúng phần đã gồm"
+seoTitle: "Báo giá Thi công dán Decal kính mờ trọn gói - Cập nhật tháng 04/2026"
 contentTopics: ["pricing"]
 seoDescription: "Báo giá Decal kính mờ trọn gói cần làm rõ phần vật liệu, thiết kế, gia công và công dán."
 updatedDate: "2026-11-04T21:01:39+07:00"

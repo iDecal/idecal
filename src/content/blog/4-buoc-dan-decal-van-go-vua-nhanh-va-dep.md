@@ -1,5 +1,5 @@
 ---
-title: "Dán Decal vân gỗ: chuẩn bị nền và xử lý mép"
+title: "Hướng dẫn 4 Bước dán Decal vân gỗ vừa nhanh và đẹp"
 description: "Dán Decal vân gỗ cần bắt đầu từ độ phẳng, độ sạch và khả năng bám dính của nền."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 948
 originalUrl: "https://idecal.vn/4-buoc-dan-decal-van-go-vua-nhanh-va-dep/"
 focusKeyword: "Dán Decal vân gỗ"
 seoDescription: "Dán Decal vân gỗ cần bắt đầu từ độ phẳng, độ sạch và khả năng bám dính của nền."
-seoTitle: "Dán Decal vân gỗ: chuẩn bị nền và xử lý mép"
+seoTitle: "Hướng dẫn 4 Bước dán Decal vân gỗ vừa nhanh và đẹp"
 contentTopics: ["interior"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

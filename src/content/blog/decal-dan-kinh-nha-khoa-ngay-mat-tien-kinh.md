@@ -1,5 +1,5 @@
 ---
-title: "Decal dán kính nha khoa: nhận diện và riêng tư"
+title: "Tăng khách hàng với Decal dán kính Nha Khoa ngay mặt tiền kinh doanh"
 description: "Decal dán kính nha khoa cần cân bằng hình ảnh mặt tiền với mức kín đáo của khu vực tư vấn."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/60d7dd93e8956ca7c9df.jpg"
 wordpressId: 17605
 originalUrl: "https://idecal.vn/decal-dan-kinh-nha-khoa-ngay-mat-tien-kinh/"
 focusKeyword: "Decal dán kính nha khoa"
-seoTitle: "Decal dán kính nha khoa: nhận diện và riêng tư"
+seoTitle: "Tăng khách hàng với Decal dán kính Nha Khoa ngay mặt tiền kinh doanh"
 contentTopics: ["advertising"]
 seoDescription: "Decal dán kính nha khoa cần cân bằng hình ảnh mặt tiền với mức kín đáo của khu vực tư vấn."
 updatedDate: "2026-11-04T21:01:39+07:00"

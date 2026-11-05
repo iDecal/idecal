@@ -1,5 +1,5 @@
 ---
-title: "Chiều cao Decal mờ: chọn theo tầm nhìn văn phòng"
+title: "Tiêu chuẩn thiết kế Decal mờ dán kính văn phòng"
 description: "Chiều cao Decal mờ không có một con số phù hợp cho mọi văn phòng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/b56e1d45ffe5e703cffe.jpg"
 wordpressId: 28703
 originalUrl: "https://idecal.vn/tieu-chuan-thiet-ke-decal-mo-dan-kinh-van-phong/"
-seoTitle: "Chiều cao Decal mờ: chọn theo tầm nhìn văn phòng"
+seoTitle: "Tiêu chuẩn thiết kế Decal mờ dán kính văn phòng"
 focusKeyword: "Chiều cao Decal mờ"
 contentTopics: ["design"]
 seoDescription: "Chiều cao Decal mờ không có một con số phù hợp cho mọi văn phòng."

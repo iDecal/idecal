@@ -1,5 +1,5 @@
 ---
-title: "Trang trí kính tiệm nail: sắp xếp hình và thông tin"
+title: "Hướng dẫn bạn trang trí kính Tiệm Nail thu hút & bắt mắt"
 description: "Trang trí kính tiệm nail nên giúp khách nhận ra tên tiệm và dịch vụ trước khi chú ý đến các chi tiết phụ."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -11,7 +11,7 @@ wordpressId: 19894
 originalUrl: "https://idecal.vn/huong-dan-ban-trang-tri-kinh-tiem-nail-thu-hut-bat-mat/"
 focusKeyword: "Trang trí kính tiệm nail"
 seoDescription: "Trang trí kính tiệm nail nên giúp khách nhận ra tên tiệm và dịch vụ trước khi chú ý đến các chi tiết phụ."
-seoTitle: "Trang trí kính tiệm nail: sắp xếp hình và thông tin"
+seoTitle: "Hướng dẫn bạn trang trí kính Tiệm Nail thu hút & bắt mắt"
 contentTopics: ["advertising"]
 updatedDate: "2026-11-04T21:01:39+07:00"
 editorialReview: "2026-11-04"

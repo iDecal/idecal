@@ -1,5 +1,5 @@
 ---
-title: "In PP cán formex: độ dày nền và cách trưng bày"
+title: "Dịch vụ in PP cán formex HCM giá rẻ - lấy liền"
 description: "In PP cán formex kết hợp bản in với tấm nền để làm hình trưng bày, mô hình hoặc bảng thông tin."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/f7c0ee3983585a0533f4.webp"
 wordpressId: 1999
 originalUrl: "https://idecal.vn/dich-vu-in-pp-can-formex-hcm-gia-re-lay-lien/"
 focusKeyword: "In PP cán formex"
-seoTitle: "In PP cán formex: độ dày nền và cách trưng bày"
+seoTitle: "Dịch vụ in PP cán formex HCM giá rẻ - lấy liền"
 contentTopics: ["printing"]
 seoDescription: "In PP cán formex kết hợp bản in với tấm nền để làm hình trưng bày, mô hình hoặc bảng thông tin."
 updatedDate: "2026-11-04T21:01:39+07:00"

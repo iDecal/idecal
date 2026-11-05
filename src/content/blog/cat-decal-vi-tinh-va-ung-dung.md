@@ -1,5 +1,5 @@
 ---
-title: "Cắt Decal vi tính: file, vật liệu và ứng dụng"
+title: "Cắt Decal vi tính là gì? Ứng dụng cắt Decal"
 description: "Cắt Decal vi tính dùng đường cắt từ file thiết kế để tạo chữ, logo hoặc họa tiết."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/77ed2733d3a5c01dae1e.jpg"
 wordpressId: 32479
 originalUrl: "https://idecal.vn/cat-decal-vi-tinh-va-ung-dung/"
 focusKeyword: "Cắt Decal vi tính"
-seoTitle: "Cắt Decal vi tính: file, vật liệu và ứng dụng"
+seoTitle: "Cắt Decal vi tính là gì? Ứng dụng cắt Decal"
 contentTopics: ["cutting"]
 seoDescription: "Cắt Decal vi tính dùng đường cắt từ file thiết kế để tạo chữ, logo hoặc họa tiết."
 updatedDate: "2026-11-04T21:01:39+07:00"

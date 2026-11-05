@@ -1,5 +1,5 @@
 ---
-title: "Decal dán sàn: hình ảnh, bề mặt và cách hoàn thiện"
+title: "Decal dán sàn Quảng Cáo - Giải pháp Marketing 3D Ấn tượng & Giá rẻ"
 description: "Decal dán sàn cần được chọn theo nền, mức đi lại và yêu cầu bề mặt, không chỉ theo hình in."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/dc6d8abf64b33fe8f4bd.jpg"
 wordpressId: 34640
 originalUrl: "https://idecal.vn/decal-dan-san-quang-cao/"
-seoTitle: "Decal dán sàn: hình ảnh, bề mặt và cách hoàn thiện"
+seoTitle: "Decal dán sàn Quảng Cáo - Giải pháp Marketing 3D Ấn tượng & Giá rẻ"
 seoDescription: "Decal dán sàn cần được chọn theo nền, mức đi lại và yêu cầu bề mặt, không chỉ theo hình in."
 focusKeyword: "Decal dán sàn"
 contentTopics: ["advertising"]

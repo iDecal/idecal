@@ -1,5 +1,5 @@
 ---
-title: "Báo giá Decal mờ 2025: vật liệu, gia công và thi công"
+title: "Báo giá Decal mờ dán kính văn phòng tháng 11/2025"
 description: "Báo giá Decal mờ 2025 nên được đọc cùng quy cách vật liệu và phạm vi công việc đi kèm."
 category: "Báo giá"
 categorySlug: "bao-gia"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/1165789c1e3a94e122e4.jpg"
 wordpressId: 33477
 originalUrl: "https://idecal.vn/bao-gia-decal-mo-dan-kinh-van-phong-thang-11-2025/"
 focusKeyword: "Báo giá Decal mờ 2025"
-seoTitle: "Báo giá Decal mờ 2025: vật liệu, gia công và thi công"
+seoTitle: "Báo giá Decal mờ dán kính văn phòng tháng 11/2025"
 contentTopics: ["pricing"]
 seoDescription: "Báo giá Decal mờ 2025 nên được đọc cùng quy cách vật liệu và phạm vi công việc đi kèm."
 updatedDate: "2026-11-04T21:01:39+07:00"

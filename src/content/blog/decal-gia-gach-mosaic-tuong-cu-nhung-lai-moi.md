@@ -1,5 +1,5 @@
 ---
-title: "Decal giả gạch mosaic: chọn mẫu và kiểm tra nền"
+title: "Decal Giả Gạch Mosaic – Tưởng cũ nhưng lại mới"
 description: "Decal giả gạch mosaic giúp tham khảo một phương án trang trí bề mặt mà không thay toàn bộ kết cấu."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/f671bba1b65d1c394f01.png"
 wordpressId: 1205
 originalUrl: "https://idecal.vn/decal-gia-gach-mosaic-tuong-cu-nhung-lai-moi/"
-seoTitle: "Decal giả gạch mosaic: chọn mẫu và kiểm tra nền"
+seoTitle: "Decal Giả Gạch Mosaic – Tưởng cũ nhưng lại mới"
 focusKeyword: "Decal giả gạch mosaic"
 contentTopics: ["interior"]
 seoDescription: "Decal giả gạch mosaic giúp tham khảo một phương án trang trí bề mặt mà không thay toàn bộ kết cấu."

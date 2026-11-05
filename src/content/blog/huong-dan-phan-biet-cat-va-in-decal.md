@@ -1,5 +1,5 @@
 ---
-title: "Cắt Decal và bế Decal: khác nhau ở phần gia công"
+title: "Phân biệt Cắt Decal và Bế Decal khác nhau như thế nào"
 description: "Cắt Decal và bế Decal cần được trao đổi theo thành phẩm mong muốn, không chỉ theo tên công đoạn."
 category: "So sánh vật liệu"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,7 +10,7 @@ image: "/images/idecal-logo.png"
 wordpressId: 17965
 originalUrl: "https://idecal.vn/huong-dan-phan-biet-cat-va-in-decal/"
 focusKeyword: "Cắt Decal và bế Decal"
-seoTitle: "Cắt Decal và bế Decal: khác nhau ở phần gia công"
+seoTitle: "Phân biệt Cắt Decal và Bế Decal khác nhau như thế nào"
 contentTopics: ["cutting"]
 seoDescription: "Cắt Decal và bế Decal cần được trao đổi theo thành phẩm mong muốn, không chỉ theo tên công đoạn."
 updatedDate: "2026-11-04T21:01:39+07:00"

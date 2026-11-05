@@ -1,5 +1,5 @@
 ---
-title: "Decal dán kính Tân Bình: từ địa chỉ đến phương án"
+title: "#1 Dịch vụ Decal dán kính quận Tân Bình"
 description: "Decal dán kính Tân Bình có thể dùng cho văn phòng, cửa hàng hoặc nhà ở với những yêu cầu khác nhau."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/64b1f8e0cd60fdd5a882.jpg"
 wordpressId: 1783
 originalUrl: "https://idecal.vn/dich-vu-decal-dan-kinh-quan-tan-binh/"
 focusKeyword: "Decal dán kính Tân Bình"
-seoTitle: "Decal dán kính Tân Bình: từ địa chỉ đến phương án"
+seoTitle: "#1 Dịch vụ Decal dán kính quận Tân Bình"
 contentTopics: ["local"]
 seoDescription: "Decal dán kính Tân Bình có thể dùng cho văn phòng, cửa hàng hoặc nhà ở với những yêu cầu khác nhau."
 updatedDate: "2026-11-04T21:01:39+07:00"

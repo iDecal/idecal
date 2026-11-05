@@ -1,5 +1,5 @@
 ---
-title: "Lợi ích phim chống nắng: đọc theo thông số từng mã"
+title: "Lợi ích của decal dán kính chống nắng"
 description: "Lợi ích phim chống nắng cần được đánh giá theo thông số của mã phim và loại kính sử dụng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/f4e5641a33ef86dc58fd.jpg"
 wordpressId: 32210
 originalUrl: "https://idecal.vn/loi-ich-cua-decal-dan-kinh-chong-nang/"
-seoTitle: "Lợi ích phim chống nắng: đọc theo thông số từng mã"
+seoTitle: "Lợi ích của decal dán kính chống nắng"
 focusKeyword: "Lợi ích phim chống nắng"
 contentTopics: ["thermal"]
 seoDescription: "Lợi ích phim chống nắng cần được đánh giá theo thông số của mã phim và loại kính sử dụng."

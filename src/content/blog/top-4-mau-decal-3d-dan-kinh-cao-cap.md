@@ -1,5 +1,5 @@
 ---
-title: "Decal 3D dán kính: so sánh vân và hiệu ứng sáng"
+title: "Top 4 mẫu Decal 3D dán kính cao cấp cho không gian sang trọng"
 description: "Decal 3D dán kính tạo điểm nhấn bằng họa tiết và hiệu ứng bề mặt."
 category: "Mẫu thiết kế"
 categorySlug: "mau-thiet-ke"
@@ -9,7 +9,7 @@ author: "iDecal"
 image: "/images/blog-wordpress/218d6282235d9b155057.jpg"
 wordpressId: 32250
 originalUrl: "https://idecal.vn/top-4-mau-decal-3d-dan-kinh-cao-cap/"
-seoTitle: "Decal 3D dán kính: so sánh vân và hiệu ứng sáng"
+seoTitle: "Top 4 mẫu Decal 3D dán kính cao cấp cho không gian sang trọng"
 seoDescription: "Decal 3D dán kính tạo điểm nhấn bằng họa tiết và hiệu ứng bề mặt."
 focusKeyword: "Decal 3D dán kính"
 contentTopics: ["frosted"]

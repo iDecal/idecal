@@ -1,5 +1,5 @@
 ---
-title: "POSM PP cán formex: chọn nền và kết cấu mô hình"
+title: "Thi công POSM mô hình quảng cáo - PP cán formex"
 description: "POSM PP cán formex cần có bản vẽ hoặc bố cục thể hiện kích thước, đường cắt và cách dựng."
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
@@ -10,7 +10,7 @@ image: "/images/blog-wordpress/bdb4f17a4638117c019f.jpg"
 wordpressId: 21078
 originalUrl: "https://idecal.vn/thi-cong-mo-hinh-quang-cao-posm-pp-can-formex/"
 focusKeyword: "POSM PP cán formex"
-seoTitle: "POSM PP cán formex: chọn nền và kết cấu mô hình"
+seoTitle: "Thi công POSM mô hình quảng cáo - PP cán formex"
 contentTopics: ["event"]
 seoDescription: "POSM PP cán formex cần có bản vẽ hoặc bố cục thể hiện kích thước, đường cắt và cách dựng."
 updatedDate: "2026-11-04T21:01:39+07:00"
