@@ -20,7 +20,6 @@ const navLinks: NavLink[] = [
   { name: 'Công trình thực tế', href: '/du-an' },
   { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
   { name: 'Khu vực', href: '/khu-vuc', dropdown: [
-    { name: 'Tất cả khu vực', href: '/khu-vuc', highlight: true },
     ...regions.map(region => ({ name: region.name, href: `/khu-vuc/${region.slug}` })),
   ] },
   { name: 'Liên hệ', href: '/lien-he-idecal' },
