@@ -11,7 +11,8 @@
       "slug": "phuong-sai-gon",
       "formerArea": "Quận 1",
       "districtSlug": "quan-1",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 1"
     },
     {
       "clause": 2,
@@ -20,7 +21,8 @@
       "slug": "phuong-tan-dinh",
       "formerArea": "Quận 1",
       "districtSlug": "quan-1",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 1"
     },
     {
       "clause": 3,
@@ -29,7 +31,8 @@
       "slug": "phuong-ben-thanh",
       "formerArea": "Quận 1",
       "districtSlug": "quan-1",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 1"
     },
     {
       "clause": 4,
@@ -38,7 +41,8 @@
       "slug": "phuong-cau-ong-lanh",
       "formerArea": "Quận 1",
       "districtSlug": "quan-1",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 1"
     },
     {
       "clause": 5,
@@ -47,7 +51,8 @@
       "slug": "phuong-ban-co",
       "formerArea": "Quận 3",
       "districtSlug": "quan-3",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 3"
     },
     {
       "clause": 6,
@@ -56,7 +61,8 @@
       "slug": "phuong-xuan-hoa",
       "formerArea": "Quận 3",
       "districtSlug": "quan-3",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 3"
     },
     {
       "clause": 7,
@@ -65,7 +71,8 @@
       "slug": "phuong-nhieu-loc",
       "formerArea": "Quận 3",
       "districtSlug": "quan-3",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 3"
     },
     {
       "clause": 8,
@@ -74,7 +81,8 @@
       "slug": "phuong-xom-chieu",
       "formerArea": "Quận 4",
       "districtSlug": "quan-4",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 4"
     },
     {
       "clause": 9,
@@ -83,7 +91,8 @@
       "slug": "phuong-khanh-hoi",
       "formerArea": "Quận 4",
       "districtSlug": "quan-4",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 4"
     },
     {
       "clause": 10,
@@ -92,7 +101,8 @@
       "slug": "phuong-vinh-hoi",
       "formerArea": "Quận 4",
       "districtSlug": "quan-4",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 4"
     },
     {
       "clause": 11,
@@ -101,7 +111,8 @@
       "slug": "phuong-cho-quan",
       "formerArea": "Quận 5",
       "districtSlug": "quan-5",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 5"
     },
     {
       "clause": 12,
@@ -110,7 +121,8 @@
       "slug": "phuong-an-dong",
       "formerArea": "Quận 5",
       "districtSlug": "quan-5",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 5"
     },
     {
       "clause": 13,
@@ -119,7 +131,8 @@
       "slug": "phuong-cho-lon",
       "formerArea": "Quận 5",
       "districtSlug": "quan-5",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 5"
     },
     {
       "clause": 14,
@@ -128,7 +141,8 @@
       "slug": "phuong-binh-tay",
       "formerArea": "Quận 6",
       "districtSlug": "quan-6",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 6"
     },
     {
       "clause": 15,
@@ -137,7 +151,8 @@
       "slug": "phuong-binh-tien",
       "formerArea": "Quận 6",
       "districtSlug": "quan-6",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 6"
     },
     {
       "clause": 16,
@@ -146,7 +161,8 @@
       "slug": "phuong-binh-phu",
       "formerArea": "Quận 6",
       "districtSlug": "quan-6",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 6"
     },
     {
       "clause": 17,
@@ -155,7 +171,8 @@
       "slug": "phuong-phu-lam",
       "formerArea": "Quận 6",
       "districtSlug": "quan-6",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 6"
     },
     {
       "clause": 18,
@@ -164,7 +181,8 @@
       "slug": "phuong-tan-thuan",
       "formerArea": "Quận 7",
       "districtSlug": "quan-7",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 7"
     },
     {
       "clause": 19,
@@ -173,7 +191,8 @@
       "slug": "phuong-phu-thuan",
       "formerArea": "Quận 7",
       "districtSlug": "quan-7",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 7"
     },
     {
       "clause": 20,
@@ -182,7 +201,8 @@
       "slug": "phuong-tan-my",
       "formerArea": "Quận 7",
       "districtSlug": "quan-7",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 7"
     },
     {
       "clause": 21,
@@ -191,7 +211,8 @@
       "slug": "phuong-tan-hung",
       "formerArea": "Quận 7",
       "districtSlug": "quan-7",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 7"
     },
     {
       "clause": 22,
@@ -200,7 +221,8 @@
       "slug": "phuong-chanh-hung",
       "formerArea": "Quận 8",
       "districtSlug": "quan-8",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 8"
     },
     {
       "clause": 23,
@@ -209,7 +231,8 @@
       "slug": "phuong-phu-dinh",
       "formerArea": "Quận 8",
       "districtSlug": "quan-8",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 8"
     },
     {
       "clause": 24,
@@ -218,7 +241,8 @@
       "slug": "phuong-binh-dong",
       "formerArea": "Quận 8",
       "districtSlug": "quan-8",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 8"
     },
     {
       "clause": 25,
@@ -227,7 +251,8 @@
       "slug": "phuong-dien-hong",
       "formerArea": "Quận 10",
       "districtSlug": "quan-10",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 10"
     },
     {
       "clause": 26,
@@ -236,7 +261,8 @@
       "slug": "phuong-vuon-lai",
       "formerArea": "Quận 10",
       "districtSlug": "quan-10",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 10"
     },
     {
       "clause": 27,
@@ -245,7 +271,8 @@
       "slug": "phuong-hoa-hung",
       "formerArea": "Quận 10",
       "districtSlug": "quan-10",
-      "group": "Trung tâm & khu Nam"
+      "group": "Trung tâm & khu Nam",
+      "formerDistrict": "Quận 10"
     },
     {
       "clause": 28,
@@ -254,7 +281,8 @@
       "slug": "phuong-minh-phung",
       "formerArea": "Quận 11",
       "districtSlug": "quan-11",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 11"
     },
     {
       "clause": 29,
@@ -263,7 +291,8 @@
       "slug": "phuong-binh-thoi",
       "formerArea": "Quận 11",
       "districtSlug": "quan-11",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 11"
     },
     {
       "clause": 30,
@@ -272,7 +301,8 @@
       "slug": "phuong-hoa-binh",
       "formerArea": "Quận 11",
       "districtSlug": "quan-11",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 11"
     },
     {
       "clause": 31,
@@ -281,7 +311,8 @@
       "slug": "phuong-phu-tho",
       "formerArea": "Quận 11",
       "districtSlug": "quan-11",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 11"
     },
     {
       "clause": 32,
@@ -290,7 +321,8 @@
       "slug": "phuong-dong-hung-thuan",
       "formerArea": "Quận 12",
       "districtSlug": "quan-12",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 12"
     },
     {
       "clause": 33,
@@ -299,7 +331,8 @@
       "slug": "phuong-trung-my-tay",
       "formerArea": "Quận 12",
       "districtSlug": "quan-12",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 12"
     },
     {
       "clause": 34,
@@ -308,7 +341,8 @@
       "slug": "phuong-tan-thoi-hiep",
       "formerArea": "Quận 12",
       "districtSlug": "quan-12",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 12"
     },
     {
       "clause": 35,
@@ -317,7 +351,8 @@
       "slug": "phuong-thoi-an",
       "formerArea": "Quận 12",
       "districtSlug": "quan-12",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 12"
     },
     {
       "clause": 36,
@@ -326,7 +361,8 @@
       "slug": "phuong-an-phu-dong",
       "formerArea": "Quận 12",
       "districtSlug": "quan-12",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Quận 12"
     },
     {
       "clause": 37,
@@ -335,7 +371,8 @@
       "slug": "phuong-an-lac",
       "formerArea": "Bình Tân",
       "districtSlug": "quan-binh-tan",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Bình Tân"
     },
     {
       "clause": 38,
@@ -344,7 +381,8 @@
       "slug": "phuong-binh-tan",
       "formerArea": "Bình Tân",
       "districtSlug": "quan-binh-tan",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Bình Tân"
     },
     {
       "clause": 39,
@@ -353,7 +391,8 @@
       "slug": "phuong-tan-tao",
       "formerArea": "Bình Tân",
       "districtSlug": "quan-binh-tan",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Bình Tân"
     },
     {
       "clause": 40,
@@ -362,7 +401,8 @@
       "slug": "phuong-binh-tri-dong",
       "formerArea": "Bình Tân",
       "districtSlug": "quan-binh-tan",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Bình Tân"
     },
     {
       "clause": 41,
@@ -371,7 +411,8 @@
       "slug": "phuong-binh-hung-hoa",
       "formerArea": "Bình Tân",
       "districtSlug": "quan-binh-tan",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Bình Tân"
     },
     {
       "clause": 42,
@@ -380,7 +421,8 @@
       "slug": "phuong-gia-dinh",
       "formerArea": "Bình Thạnh",
       "districtSlug": "quan-binh-thanh",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Bình Thạnh"
     },
     {
       "clause": 43,
@@ -389,7 +431,8 @@
       "slug": "phuong-binh-thanh",
       "formerArea": "Bình Thạnh",
       "districtSlug": "quan-binh-thanh",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Bình Thạnh"
     },
     {
       "clause": 44,
@@ -398,7 +441,8 @@
       "slug": "phuong-binh-loi-trung",
       "formerArea": "Bình Thạnh",
       "districtSlug": "quan-binh-thanh",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Bình Thạnh"
     },
     {
       "clause": 45,
@@ -407,7 +451,8 @@
       "slug": "phuong-thanh-my-tay",
       "formerArea": "Bình Thạnh",
       "districtSlug": "quan-binh-thanh",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Bình Thạnh"
     },
     {
       "clause": 46,
@@ -416,7 +461,8 @@
       "slug": "phuong-binh-quoi",
       "formerArea": "Bình Thạnh",
       "districtSlug": "quan-binh-thanh",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Bình Thạnh"
     },
     {
       "clause": 47,
@@ -425,7 +471,8 @@
       "slug": "phuong-hanh-thong",
       "formerArea": "Gò Vấp",
       "districtSlug": "quan-go-vap",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Gò Vấp"
     },
     {
       "clause": 48,
@@ -434,7 +481,8 @@
       "slug": "phuong-an-nhon",
       "formerArea": "Gò Vấp",
       "districtSlug": "quan-go-vap",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Gò Vấp"
     },
     {
       "clause": 49,
@@ -443,7 +491,8 @@
       "slug": "phuong-go-vap",
       "formerArea": "Gò Vấp",
       "districtSlug": "quan-go-vap",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Gò Vấp"
     },
     {
       "clause": 50,
@@ -452,7 +501,8 @@
       "slug": "phuong-an-hoi-dong",
       "formerArea": "Gò Vấp",
       "districtSlug": "quan-go-vap",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Gò Vấp"
     },
     {
       "clause": 51,
@@ -461,7 +511,8 @@
       "slug": "phuong-thong-tay-hoi",
       "formerArea": "Gò Vấp",
       "districtSlug": "quan-go-vap",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Gò Vấp"
     },
     {
       "clause": 52,
@@ -470,7 +521,8 @@
       "slug": "phuong-an-hoi-tay",
       "formerArea": "Gò Vấp",
       "districtSlug": "quan-go-vap",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Gò Vấp"
     },
     {
       "clause": 53,
@@ -479,7 +531,8 @@
       "slug": "phuong-duc-nhuan",
       "formerArea": "Phú Nhuận",
       "districtSlug": "quan-phu-nhuan",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Phú Nhuận"
     },
     {
       "clause": 54,
@@ -488,7 +541,8 @@
       "slug": "phuong-cau-kieu",
       "formerArea": "Phú Nhuận",
       "districtSlug": "quan-phu-nhuan",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Phú Nhuận"
     },
     {
       "clause": 55,
@@ -497,7 +551,8 @@
       "slug": "phuong-phu-nhuan",
       "formerArea": "Phú Nhuận",
       "districtSlug": "quan-phu-nhuan",
-      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận"
+      "group": "Bình Thạnh · Gò Vấp · Phú Nhuận",
+      "formerDistrict": "Phú Nhuận"
     },
     {
       "clause": 56,
@@ -506,7 +561,8 @@
       "slug": "phuong-tan-son-hoa",
       "formerArea": "Tân Bình",
       "districtSlug": "quan-tan-binh",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Bình"
     },
     {
       "clause": 57,
@@ -515,7 +571,8 @@
       "slug": "phuong-tan-son-nhat",
       "formerArea": "Tân Bình",
       "districtSlug": "quan-tan-binh",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Bình"
     },
     {
       "clause": 58,
@@ -524,7 +581,8 @@
       "slug": "phuong-tan-hoa",
       "formerArea": "Tân Bình",
       "districtSlug": "quan-tan-binh",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Bình"
     },
     {
       "clause": 59,
@@ -533,7 +591,8 @@
       "slug": "phuong-bay-hien",
       "formerArea": "Tân Bình",
       "districtSlug": "quan-tan-binh",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Bình"
     },
     {
       "clause": 60,
@@ -542,7 +601,8 @@
       "slug": "phuong-tan-binh",
       "formerArea": "Tân Bình",
       "districtSlug": "quan-tan-binh",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Bình"
     },
     {
       "clause": 61,
@@ -551,7 +611,8 @@
       "slug": "phuong-tan-son",
       "formerArea": "Tân Bình",
       "districtSlug": "quan-tan-binh",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Bình"
     },
     {
       "clause": 62,
@@ -560,7 +621,8 @@
       "slug": "phuong-tay-thanh",
       "formerArea": "Tân Phú",
       "districtSlug": "quan-tan-phu",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Phú"
     },
     {
       "clause": 63,
@@ -569,7 +631,8 @@
       "slug": "phuong-tan-son-nhi",
       "formerArea": "Tân Phú",
       "districtSlug": "quan-tan-phu",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Phú"
     },
     {
       "clause": 64,
@@ -578,7 +641,8 @@
       "slug": "phuong-phu-tho-hoa",
       "formerArea": "Tân Phú",
       "districtSlug": "quan-tan-phu",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Phú"
     },
     {
       "clause": 65,
@@ -587,7 +651,8 @@
       "slug": "phuong-tan-phu",
       "formerArea": "Tân Phú",
       "districtSlug": "quan-tan-phu",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Phú"
     },
     {
       "clause": 66,
@@ -596,7 +661,8 @@
       "slug": "phuong-phu-thanh",
       "formerArea": "Tân Phú",
       "districtSlug": "quan-tan-phu",
-      "group": "Phía Tây & Tây Bắc"
+      "group": "Phía Tây & Tây Bắc",
+      "formerDistrict": "Tân Phú"
     },
     {
       "clause": 67,
@@ -605,7 +671,8 @@
       "slug": "phuong-hiep-binh",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận Thủ Đức"
     },
     {
       "clause": 68,
@@ -614,7 +681,8 @@
       "slug": "phuong-thu-duc",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận Thủ Đức"
     },
     {
       "clause": 69,
@@ -623,7 +691,8 @@
       "slug": "phuong-tam-binh",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận Thủ Đức"
     },
     {
       "clause": 70,
@@ -632,7 +701,8 @@
       "slug": "phuong-linh-xuan",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận Thủ Đức"
     },
     {
       "clause": 71,
@@ -641,7 +711,8 @@
       "slug": "phuong-tang-nhon-phu",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 9"
     },
     {
       "clause": 72,
@@ -650,7 +721,8 @@
       "slug": "phuong-long-binh",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 9"
     },
     {
       "clause": 73,
@@ -659,7 +731,8 @@
       "slug": "phuong-long-phuoc",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 9"
     },
     {
       "clause": 74,
@@ -668,7 +741,8 @@
       "slug": "phuong-long-truong",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 9"
     },
     {
       "clause": 75,
@@ -677,7 +751,8 @@
       "slug": "phuong-cat-lai",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 2"
     },
     {
       "clause": 76,
@@ -686,7 +761,8 @@
       "slug": "phuong-binh-trung",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 2"
     },
     {
       "clause": 77,
@@ -695,7 +771,8 @@
       "slug": "phuong-phuoc-long",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 9"
     },
     {
       "clause": 78,
@@ -704,7 +781,8 @@
       "slug": "phuong-an-khanh",
       "formerArea": "TP. Thủ Đức",
       "districtSlug": "thanh-pho-thu-duc",
-      "group": "Phía Đông · Thủ Đức"
+      "group": "Phía Đông · Thủ Đức",
+      "formerDistrict": "Quận 2"
     },
     {
       "clause": 79,
@@ -1019,7 +1097,8 @@
       "slug": "xa-vinh-loc",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 114,
@@ -1028,7 +1107,8 @@
       "slug": "xa-tan-vinh-loc",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 115,
@@ -1037,7 +1117,8 @@
       "slug": "xa-binh-loi",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 116,
@@ -1046,7 +1127,8 @@
       "slug": "xa-tan-nhut",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 117,
@@ -1055,7 +1137,8 @@
       "slug": "xa-binh-chanh",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 118,
@@ -1064,7 +1147,8 @@
       "slug": "xa-hung-long",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 119,
@@ -1073,7 +1157,8 @@
       "slug": "xa-binh-hung",
       "formerArea": "Bình Chánh",
       "districtSlug": "huyen-binh-chanh",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Bình Chánh"
     },
     {
       "clause": 120,
@@ -1082,7 +1167,8 @@
       "slug": "xa-binh-khanh",
       "formerArea": "Cần Giờ",
       "districtSlug": "huyen-can-gio",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Cần Giờ"
     },
     {
       "clause": 121,
@@ -1091,7 +1177,8 @@
       "slug": "xa-an-thoi-dong",
       "formerArea": "Cần Giờ",
       "districtSlug": "huyen-can-gio",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Cần Giờ"
     },
     {
       "clause": 122,
@@ -1100,7 +1187,8 @@
       "slug": "xa-can-gio",
       "formerArea": "Cần Giờ",
       "districtSlug": "huyen-can-gio",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Cần Giờ"
     },
     {
       "clause": 123,
@@ -1109,7 +1197,8 @@
       "slug": "xa-cu-chi",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 124,
@@ -1118,7 +1207,8 @@
       "slug": "xa-tan-an-hoi",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 125,
@@ -1127,7 +1217,8 @@
       "slug": "xa-thai-my",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 126,
@@ -1136,7 +1227,8 @@
       "slug": "xa-an-nhon-tay",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 127,
@@ -1145,7 +1237,8 @@
       "slug": "xa-nhuan-duc",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 128,
@@ -1154,7 +1247,8 @@
       "slug": "xa-phu-hoa-dong",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 129,
@@ -1163,7 +1257,8 @@
       "slug": "xa-binh-my",
       "formerArea": "Củ Chi",
       "districtSlug": "huyen-cu-chi",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Củ Chi"
     },
     {
       "clause": 130,
@@ -1172,7 +1267,8 @@
       "slug": "xa-dong-thanh",
       "formerArea": "Hóc Môn",
       "districtSlug": "huyen-hoc-mon",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Hóc Môn"
     },
     {
       "clause": 131,
@@ -1181,7 +1277,8 @@
       "slug": "xa-hoc-mon",
       "formerArea": "Hóc Môn",
       "districtSlug": "huyen-hoc-mon",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Hóc Môn"
     },
     {
       "clause": 132,
@@ -1190,7 +1287,8 @@
       "slug": "xa-xuan-thoi-son",
       "formerArea": "Hóc Môn",
       "districtSlug": "huyen-hoc-mon",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Hóc Môn"
     },
     {
       "clause": 133,
@@ -1199,7 +1297,8 @@
       "slug": "xa-ba-diem",
       "formerArea": "Hóc Môn",
       "districtSlug": "huyen-hoc-mon",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Hóc Môn"
     },
     {
       "clause": 134,
@@ -1208,7 +1307,8 @@
       "slug": "xa-nha-be",
       "formerArea": "Nhà Bè",
       "districtSlug": "huyen-nha-be",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Nhà Bè"
     },
     {
       "clause": 135,
@@ -1217,7 +1317,8 @@
       "slug": "xa-hiep-phuoc",
       "formerArea": "Nhà Bè",
       "districtSlug": "huyen-nha-be",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Nhà Bè"
     },
     {
       "clause": 136,
@@ -1514,7 +1615,8 @@
       "slug": "xa-thanh-an-can-gio",
       "formerArea": "Cần Giờ",
       "districtSlug": "huyen-can-gio",
-      "group": "Các xã phía Tây Bắc & phía Nam"
+      "group": "Các xã phía Tây Bắc & phía Nam",
+      "formerDistrict": "Cần Giờ"
     }
   ]
 }
