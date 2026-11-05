@@ -19,3 +19,9 @@ Trang TP.HCM và lựa chọn phường/xã trong form chỉ hiển thị 102 ph
 ### Giữ nguyên tiêu đề XML — 05/11/2026
 
 Theo yêu cầu của chủ website, khôi phục nguyên văn 71 tiêu đề bài WordPress theo XML (đối chiếu wordpressId), áp dụng cả title và seoTitle. `wordpress-original-titles.json` lưu bản đối chiếu; kiểm tra tiêu đề gốc thay cho yêu cầu bắt buộc chứa từ khóa chính. Không tự viết lại tiêu đề bài từ XML trong các lượt tối ưu tiếp theo. Các bài có sẵn ngoài XML không bị đổi trong lượt khôi phục này.
+
+### Khôi phục toàn văn XML — 05/11/2026
+
+Yêu cầu mới thay thế việc biên tập SEO đối với 71 bài WordPress: khôi phục toàn bộ bản nhập XML trước lượt biên tập, gồm nội dung, đề mục, tiêu đề, mô tả và metadata Rank Math có sẵn. Loại bỏ các đoạn viết thêm, từ khóa gán lại và liên kết chèn trong lượt biên tập. Giữ ảnh đã tải về và cách chuyển đổi HTML WordPress sang Markdown tương thích website. Các liên kết gốc đã ánh xạ trong quá trình nhập vẫn dùng địa chỉ tương ứng của website hiện tại.
+
+`wordpress-original-titles.json` bổ sung SHA-256 của từng tệp đã khôi phục để kiểm tra toàn văn, không chỉ tiêu đề. Metadata `xmlPreserved: true` bảo vệ bản gốc khỏi nhập ghi đè mặc định. Các bài ngoài XML và bố cục website (mục lục thu gọn, bộ lọc) giữ nguyên. Khoảng trắng cuối dòng Markdown được giữ vì biểu diễn xuống dòng trong nội dung gốc.

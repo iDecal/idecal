@@ -105,7 +105,7 @@ if Path('docs/wordpress-blog-import.json').exists():
  prior_import={p['slug']:p for p in json.loads(Path('docs/wordpress-blog-import.json').read_text()).get('posts',[])}
 for item in posts:
  slug=field(item,'w:post_name');existing_review=Path('src/content/blog')/(slug+'.md')
- if existing_review.exists() and 'editorialReview:' in existing_review.read_text() and not args.overwrite_reviewed:
+ if existing_review.exists() and ('editorialReview:' in existing_review.read_text() or 'xmlPreserved: true' in existing_review.read_text()) and not args.overwrite_reviewed:
   print('Keeping editorial revision: '+slug,flush=True)
   if slug in prior_import:records.append({**prior_import[slug],'preservedEditorial':True})
   continue

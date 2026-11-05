@@ -23,6 +23,7 @@ const blog = defineCollection({
     seoDescription: z.string().optional(),
     focusKeyword: z.string().optional(),
     contentTopics: z.array(z.enum(contentTopics)).optional(),
+    xmlPreserved: z.boolean().optional(),
     editorialReview: z.string().optional(),
     wordpressId: z.number().int().optional(),
     originalUrl: z.url().optional(),
