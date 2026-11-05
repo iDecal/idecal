@@ -1,16 +1,21 @@
 ---
 import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
-import RelatedGuides from './RelatedGuides.astro';
+import LocalAreaFaq from './LocalAreaFaq.astro';
+import LocalRelatedPosts from './LocalRelatedPosts.astro';
+import LocalNearbyAreas from './LocalNearbyAreas.astro';
+import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
+
 import DistrictDirectory from './DistrictDirectory.astro';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ProjectCard from './ProjectCard.astro';
-import { regions, type Region } from '../data/regions';
+import { type Region } from '../data/regions';
 import type { RegionalPageContent } from '../data/regional-content';
 import '../styles/regional-landing.css';
 interface Props { region: Region; content: RegionalPageContent; projects: CollectionEntry<'projects'>[]; }
 const {region,content,projects} = Astro.props;
 const faqs = content.faqs.length ? content.faqs : region.faqs;
+const localFaq=getAreaFaqs(region.slug,faqs);
 const steps = [
   {title:'Gửi hiện trạng',text:'Chia sẻ địa chỉ, ảnh kính, kích thước và mẫu mong muốn.'},
   {title:'Chọn mẫu & vật liệu',text:'Tư vấn chất liệu, thiết kế và cách chia ô theo không gian.'},
@@ -18,7 +23,7 @@ const steps = [
   {title:'Thi công & bàn giao',text:'Chuẩn bị bề mặt, thi công và hướng dẫn vệ sinh, sử dụng.'},
 ];
 ---
-<Layout title={`${content.title} | iDecal`} description={content.description} image={content.heroImage}>
+<Layout title={`${content.title} | iDecal`} description={content.description} image={content.heroImage} structuredData={[areaFaqSchema(localFaq.items)]}>
   <div class="regional-landing">
     <section class="regional-hero"><div class="container"><div class="regional-hero-grid"><div><p class="regional-eyebrow">Dịch vụ tại {region.name}</p><h1 class="brand-heading">{content.title}</h1><p class="regional-lead">{content.lead}</p><div class="regional-actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Tư vấn qua Zalo</a><a href="#dich-vu" class="btn-idecal-bold">Xem dịch vụ ↓</a></div><a href="tel:0866077040" class="regional-phone">Hotline 0866.077.040</a></div><figure class="regional-hero-photo"><img src={content.heroImage} alt={content.imageAlt} width="900" height="675" fetchpriority="high" /></figure></div></div></section>
     <nav class="regional-jump" aria-label={`Nội dung trang ${region.name}`}><div class="container"><a href="#dich-vu">Dịch vụ</a><a href="#dia-ban">Địa bàn</a><a href="#bao-gia">{content.prices.length ? 'Bảng giá' : 'Thông tin báo giá'}</a><a href="#quy-trinh">Quy trình</a><a href="#cau-hoi">Câu hỏi thường gặp</a></div></nav>
@@ -29,8 +34,8 @@ const steps = [
     <section id="quy-trinh" class="regional-soft"><div class="container regional-section"><div class="regional-heading"><p class="regional-kicker">Cách đặt dịch vụ</p><h2 class="brand-heading">Bốn bước từ tư vấn đến bàn giao</h2></div><ol class="regional-steps">{steps.map((step,index)=><li><span aria-hidden="true">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div></section>
     <LocalInstallationPhotos areaKey={region.slug} areaName={region.name} showProjectsLink={projects.length===0 && content.references.length===0} />
     {(projects.length>0 || content.references.length>0) && <section class="container regional-section"><div class="regional-heading"><p class="regional-kicker">Ứng dụng thực tế</p><h2 class="brand-heading">Công trình tham khảo</h2></div>{projects.length>0 && <div class="regional-projects">{projects.map(project=><ProjectCard project={project} />)}</div>}{content.references.length>0 && <details class="regional-references"><summary>Hạng mục được giới thiệu tại {region.name}<span aria-hidden="true">+</span></summary><ul>{content.references.map(reference=><li>{reference}</li>)}</ul></details>}<a href="/du-an" class="regional-project-link">Xem hồ sơ công trình iDecal →</a></section>}
-    <section id="cau-hoi" class="regional-soft"><div class="container regional-section regional-faq-grid"><div><p class="regional-kicker">Giải đáp thắc mắc</p><h2 class="brand-heading">Câu hỏi thường gặp</h2><p class="regional-body">Thông tin về vật liệu, thiết kế và triển khai công trình tại {region.name}.</p></div><div class="regional-faqs">{faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
-    <RelatedGuides context={region.slug+' '+region.serviceSlugs.join(' ')} />
-    <nav class="container regional-other" aria-label="Khu vực khác"><h2>Khu vực phục vụ khác</h2><div>{regions.filter(other=>other.slug!==region.slug).map(other=><a href={`/khu-vuc/${other.slug}`}>{other.name}</a>)}<a href="/khu-vuc">Tất cả khu vực →</a></div></nav>
+    <LocalAreaFaq title={localFaq.title} items={localFaq.items} />
+    <LocalRelatedPosts areaKey={region.slug} areaName={region.shortName} services={region.serviceSlugs} />
+    <LocalNearbyAreas areaKey={region.slug} />
   </div>
 </Layout>

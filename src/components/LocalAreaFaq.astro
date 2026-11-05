@@ -1,0 +1,9 @@
+---
+import type {AreaQuestion} from '../data/local-area-content';
+interface Props {title:string;items:AreaQuestion[];}
+const {title,items}=Astro.props;
+---
+<section id="cau-hoi" class="container local-area-faq" aria-labelledby="local-faq-title"><div><p class="area-faq-kicker">Thông tin trước khi đặt dịch vụ</p><h2 id="local-faq-title">{title}</h2></div><div class="area-faq-list">{items.map((item,index)=><details><summary><span class="area-faq-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><span>{item.question}</span><span class="area-faq-toggle" aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>
+<style>
+.local-area-faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;padding-top:36px;padding-bottom:36px;color:#244766;scroll-margin-top:110px}.area-faq-kicker{font-size:12px;color:#64748b;margin:0 0 14px}.local-area-faq h2{font-size:clamp(23px,2.4vw,29px);line-height:1.45;font-weight:550;margin:0}.area-faq-list details{border-bottom:1px solid #dfe8f2}.area-faq-list details:first-child{border-top:1px solid #dfe8f2}.area-faq-list summary{display:flex;align-items:baseline;gap:14px;padding:20px 0;cursor:pointer;list-style:none;font-size:15px;font-weight:500;line-height:1.8}.area-faq-list summary::-webkit-details-marker{display:none}.area-faq-number{font-size:11px;color:#8495a7;flex-shrink:0}.area-faq-toggle{margin-left:auto;font-size:18px;color:#0d6b96;flex-shrink:0}.area-faq-list details[open] .area-faq-toggle{transform:rotate(45deg)}.area-faq-list details[open] summary{color:#0d6b96}.area-faq-list p{margin:0 0 22px;padding-left:29px;font-size:14px;line-height:1.9;color:#52677c}.area-faq-list summary:focus-visible{outline:2px solid #0d6b96;outline-offset:4px}@media(max-width:767px){.local-area-faq{grid-template-columns:1fr;gap:22px;padding-top:28px;padding-bottom:28px}.area-faq-list summary{padding:17px 0}.area-faq-list p{padding-left:0}}
+</style>

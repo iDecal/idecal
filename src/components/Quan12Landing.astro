@@ -1,12 +1,17 @@
 ---
 import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
+import LocalAreaFaq from './LocalAreaFaq.astro';
+import LocalRelatedPosts from './LocalRelatedPosts.astro';
+import LocalNearbyAreas from './LocalNearbyAreas.astro';
+import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 import Layout from '../layouts/Layout.astro';
 import data from '../data/quan-12-original.json';
-import { districts, districtUrl, districtBookingUrl } from '../data/districts';
+import { districts, districtBookingUrl } from '../data/districts';
 import '../styles/quan-12.css';
 const district=districts.find(item=>item.slug==='quan-12')!;
+const localFaq=getAreaFaqs('quan-12',[{question:district.question,answer:district.answer}]);
 const booking=districtBookingUrl(district.slug);
-const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceType:'Decal dán kính',provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 12',containedInPlace:{'@type':'Place',name:'TP. Hồ Chí Minh'}}},{'@type':'FAQPage',mainEntity:[{'@type':'Question',name:district.question,acceptedAnswer:{'@type':'Answer',text:district.answer}}]}];
+const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceType:'Decal dán kính',provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 12',containedInPlace:{'@type':'Place',name:'TP. Hồ Chí Minh'}}},areaFaqSchema(localFaq.items)];
 ---
 <Layout title={data.title} description={data.description} image={data.hero.image} canonicalURL={data.originalUrl} structuredData={schema}>
   <article class="q12-page">
@@ -15,8 +20,9 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
     <section class="q12-soft"><div class="container q12-section q12-coverage"><div><p class="q12-eyebrow">Khu vực phục vụ</p><h2 id={data.coverage.id}>{data.coverage.title}</h2><p>{data.coverage.intro}</p></div><div><ul>{data.coverage.wards.map(ward=><li>{ward}</li>)}</ul><p class="q12-address-note">Tên khu vực được giữ theo nội dung bài gốc. Khi gửi yêu cầu, vui lòng ghi địa chỉ phường/xã hiện tại để xác nhận vị trí công trình.</p><a href="/khu-vuc/tp-hcm#phuong-xa">Đối chiếu phường/xã hiện tại →</a></div></div></section>
     <section class="container q12-section"><div class="q12-section-heading"><p class="q12-eyebrow">Từ ý tưởng đến hoàn thiện</p><h2>Các bước thực hiện</h2></div><div class="q12-steps">{data.steps.map(step=><article><span class="q12-step-number">{step.number}</span><div><h3 id={step.id}>{step.title}</h3><p>{step.description}</p></div></article>)}</div></section>
     <LocalInstallationPhotos areaKey="quan-12" areaName="Quận 12" />
-    <section class="container q12-section q12-faq"><h2>Trao đổi thêm trước khi chọn</h2><details><summary>{district.question}</summary><p>{district.answer}</p></details></section>
+    <LocalAreaFaq title={localFaq.title} items={localFaq.items} />
+    <LocalRelatedPosts areaKey="quan-12" areaName="Quận 12" services={['decal-dan-kinh-van-phong','decal-quang-cao','phim-cach-nhiet']} />
     <section class="container q12-contact"><div><h2>Gửi ảnh kính, nhận tư vấn phù hợp</h2><p>Chuẩn bị ảnh hiện trạng, kích thước và mẫu bạn quan tâm để trao đổi vật liệu, thiết kế và lịch thực hiện.</p></div><a class="btn-primary-solid" href={booking}>Gửi yêu cầu tại Quận 12 →</a></section>
-    <nav class="container q12-nearby" aria-label="Khu vực khác"><a href="/khu-vuc/tp-hcm">Các khu vực tại TP.HCM →</a>{districts.filter(item=>['quan-go-vap','quan-tan-binh','huyen-hoc-mon','huyen-cu-chi'].includes(item.slug)).map(item=><a href={districtUrl(item.slug)}>{item.name}</a>)}</nav>
+    <LocalNearbyAreas areaKey="quan-12" />
   </article>
 </Layout>

@@ -1,0 +1,16 @@
+---
+import {nearbyAreaKeys} from '../data/local-area-content';
+import {regions} from '../data/regions';
+import {districts,districtUrl} from '../data/districts';
+interface Props {areaKey:string;}
+const {areaKey}=Astro.props;
+const isDistrict=districts.some(item=>item.slug===areaKey);
+const links=nearbyAreaKeys(areaKey).flatMap(key=>{
+ const district=districts.find(item=>item.slug===key);if(district)return [{name:district.name,url:districtUrl(key)}];
+ const region=regions.find(item=>item.slug===key);return region?[{name:region.shortName,url:`/khu-vuc/${key}`}]:[];
+});
+---
+<nav class="container local-nearby-areas" aria-label="Tham khảo khu vực phục vụ khác"><span>{isDistrict?'Khu vực lân cận':'Khu vực phục vụ khác'}</span><div>{links.map(link=><a href={link.url}>{link.name}</a>)}<a class="local-nearby-all" href={isDistrict?'/khu-vuc/tp-hcm':'/khu-vuc'}>{isDistrict?'Xem toàn bộ TP.HCM':'Xem tất cả khu vực'} <span aria-hidden="true">→</span></a></div></nav>
+<style>
+.local-nearby-areas{display:flex;align-items:baseline;gap:20px;padding-top:26px;padding-bottom:36px;border-top:1px solid #e4ebf3}.local-nearby-areas>span{font-size:12px;color:#64748b;flex-shrink:0}.local-nearby-areas>div{display:flex;flex-wrap:wrap;gap:9px}.local-nearby-areas a{display:inline-flex;align-items:center;gap:10px;padding:8px 13px;border:1px solid #dfe8f1;border-radius:8px;font-size:13px;color:#315574;background:var(--idecal-faint-gradient)}.local-nearby-areas a:hover{border-color:#a7c4dd;color:#0d6b96}.local-nearby-areas .local-nearby-all{border-color:transparent;background:transparent;color:#0d6b96}.local-nearby-areas a:focus-visible{outline:2px solid #0d6b96;outline-offset:4px}@media(max-width:639px){.local-nearby-areas{align-items:start;flex-direction:column;gap:14px;padding-bottom:28px}}
+</style>
