@@ -38,14 +38,14 @@ const articleSchema={'@type':'BlogPosting','@id':canonical+'#article',headline:e
       <article class="blog-article">
         <header class="blog-article-header">
           <div class="blog-card-meta"><a href={`/blog/chuyen-muc/${category.slug}`}>{category.name}</a><time datetime={entry.data.pubDate.toISOString()}>{entry.data.pubDate.toLocaleDateString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'})}</time>{entry.data.updatedDate&&<span>Cập nhật {entry.data.updatedDate.toLocaleDateString('vi-VN',{timeZone:'Asia/Ho_Chi_Minh'})}</span>}</div>
-          <h1>{entry.data.title}</h1><p class="blog-article-intro">{entry.data.description}</p>
+          <h1>{entry.data.title}</h1>
         </header>
         <img class="blog-article-cover" src={entry.data.image} alt={entry.data.title} width="1000" height="625" fetchpriority="high" />
         <div class="blog-article-body"><Content /></div>
         <div class="blog-contact"><div><h2>Cần tư vấn cho không gian của bạn?</h2><p>Gửi hình ảnh và kích thước để iDecal tư vấn vật liệu, thiết kế và thi công.</p></div><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ iDecal →</a></div>
       </article>
       <aside class="blog-sidebar">
-        {headings.length>0&&<details class="blog-toc" open><summary>Mục lục bài viết</summary><nav aria-label="Mục lục bài viết">{headings.filter(h=>h.depth<=3).map(h=><a href={`#${h.slug}`} class={h.depth===3?'blog-toc-child':undefined}>{h.text}</a>)}</nav></details>}
+        {headings.length>0&&<details class="blog-toc"><summary>Mục lục bài viết</summary><nav aria-label="Mục lục bài viết">{headings.filter(h=>h.depth<=3).map(h=><a href={`#${h.slug}`} class={h.depth===3?'blog-toc-child':undefined}>{h.text}</a>)}</nav></details>}
         <nav class="blog-sidebar-categories" aria-label="Chuyên mục bài viết"><h2>Khám phá chuyên mục</h2>{blogCategories.map(item=><a href={`/blog/chuyen-muc/${item.slug}`} aria-current={category.slug===item.slug?'page':undefined}>{item.name}<span aria-hidden="true">→</span></a>)}</nav>
       </aside>
     </div>
