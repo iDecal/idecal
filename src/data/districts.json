@@ -14,6 +14,20 @@
     ]
   },
   {
+    "slug": "quan-2",
+    "name": "Quận 2",
+    "group": "Khu Đông",
+    "intro": "iDecal là lựa chọn uy tín cho nhiều nhà thầu, khách hàng có nhu cầu về dịch vụ decal dán kính Quận 2.",
+    "siteNote": "Gửi ảnh từng ô kính, địa chỉ phường hiện tại và điều kiện tiếp cận tại tòa nhà để trao đổi vật liệu và lịch thực hiện.",
+    "question": "iDecal có phục vụ khảo sát tại Quận 2 không?",
+    "answer": "Có! Chúng tôi khảo sát miễn phí tại Quận 1 , Quận 2 và các quận lân cận. Đội kỹ thuật sẽ đến tận nơi trong vòng 24h để đo đạc, tư vấn và báo giá chi tiết.",
+    "services": [
+      "office",
+      "heat",
+      "ads"
+    ]
+  },
+  {
     "slug": "quan-3",
     "name": "Quận 3",
     "group": "Trung tâm",

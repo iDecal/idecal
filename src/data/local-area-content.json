@@ -547,5 +547,15 @@
       "da-nang",
       "tp-hcm"
     ]
+  },
+  "quan-2": {
+    "title": "Câu hỏi thường gặp",
+    "items": [],
+    "nearby": [
+      "thanh-pho-thu-duc",
+      "quan-binh-thanh",
+      "quan-1",
+      "quan-7"
+    ]
   }
 }

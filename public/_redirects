@@ -271,10 +271,8 @@
 /dan-decal-bang-hieu/ /dich-vu/cat-decal/ 301
 /dich-vu-dan-decal-bang-hieu-chuyen-nghiep /dich-vu/cat-decal/ 301
 /dich-vu-dan-decal-bang-hieu-chuyen-nghiep/ /dich-vu/cat-decal/ 301
-/dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re /khu-vuc/tp-hcm/ 301
-/dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re/ /khu-vuc/tp-hcm/ 301
-/vi-tri/decal-dan-kinh-quan-2 /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
-/vi-tri/decal-dan-kinh-quan-2/ /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
+/dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re /vi-tri/decal-dan-kinh-quan-2/ 301
+/dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re/ /vi-tri/decal-dan-kinh-quan-2/ 301
 /bao-gia-decal-dan-kinh-mo-tron-goi-2025-chi-tiet-minh-bach/amp /blog/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/ 301
 /bao-gia-decal-dan-kinh-mo-tron-goi-2025-chi-tiet-minh-bach/amp/ /blog/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/ 301
 /bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/amp /blog/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/ 301
@@ -331,16 +329,14 @@
 /thi-cong-decal-dan-kinh/decal-dan-kinh-binh-thanh/ /khu-vuc/tp-hcm/quan-binh-thanh/ 301
 /decal-dan-kinh-binh-thanh /khu-vuc/tp-hcm/quan-binh-thanh/ 301
 /decal-dan-kinh-binh-thanh/ /khu-vuc/tp-hcm/quan-binh-thanh/ 301
-/decal-dan-kinh-quan-1 /khu-vuc/tp-hcm/quan-1/ 301
-/decal-dan-kinh-quan-1/ /khu-vuc/tp-hcm/quan-1/ 301
-/vi-tri/decal-dan-kinh-quan-1 /khu-vuc/tp-hcm/quan-1/ 301
-/vi-tri/decal-dan-kinh-quan-1/ /khu-vuc/tp-hcm/quan-1/ 301
+/decal-dan-kinh-quan-1 /vi-tri/decal-dan-kinh-quan-1/ 301
+/decal-dan-kinh-quan-1/ /vi-tri/decal-dan-kinh-quan-1/ 301
 /dich-vu-decal-dan-kinh-tai-dong-nai /khu-vuc/dong-nai/ 301
 /dich-vu-decal-dan-kinh-tai-dong-nai/ /khu-vuc/dong-nai/ 301
 /dich-vu-decal-dan-kinh-dong-nai /khu-vuc/dong-nai/ 301
 /dich-vu-decal-dan-kinh-dong-nai/ /khu-vuc/dong-nai/ 301
-/vi-tri/quan-2 /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
-/vi-tri/quan-2/ /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
+/vi-tri/quan-2 /vi-tri/decal-dan-kinh-quan-2/ 301
+/vi-tri/quan-2/ /vi-tri/decal-dan-kinh-quan-2/ 301
 /thi-cong-decal-dan-kinh/thanh-pho-thu-duc/amp /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
 /thi-cong-decal-dan-kinh/thanh-pho-thu-duc/amp/ /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
 /thanh-pho-thu-duc/amp /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
@@ -653,8 +649,8 @@
 /blog/cach-thao-decal-dan-kinh-nhanh-sach/amp/ /blog/cach-thao-decal-dan-kinh-nhanh-sach/ 301
 
 # Local district aliases from the supplied DecalPro route names
-/thi-cong-decal/quan-1 /khu-vuc/tp-hcm/quan-1/ 301
-/thi-cong-decal/quan-1/ /khu-vuc/tp-hcm/quan-1/ 301
+/thi-cong-decal/quan-1 /vi-tri/decal-dan-kinh-quan-1/ 301
+/thi-cong-decal/quan-1/ /vi-tri/decal-dan-kinh-quan-1/ 301
 /thi-cong-decal/quan-3 /khu-vuc/tp-hcm/quan-3/ 301
 /thi-cong-decal/quan-3/ /khu-vuc/tp-hcm/quan-3/ 301
 /thi-cong-decal/quan-4 /khu-vuc/tp-hcm/quan-4/ 301
@@ -697,10 +693,10 @@
 /thi-cong-decal/huyen-binh-chanh/ /khu-vuc/tp-hcm/huyen-binh-chanh/ 301
 /thi-cong-decal/huyen-can-gio /khu-vuc/tp-hcm/huyen-can-gio/ 301
 /thi-cong-decal/huyen-can-gio/ /khu-vuc/tp-hcm/huyen-can-gio/ 301
-/thi-cong-decal/quan-2 /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
-/thi-cong-decal/quan-2/ /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
-/khu-vuc/tp-hcm/quan-2 /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
-/khu-vuc/tp-hcm/quan-2/ /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
+/thi-cong-decal/quan-2 /vi-tri/decal-dan-kinh-quan-2/ 301
+/thi-cong-decal/quan-2/ /vi-tri/decal-dan-kinh-quan-2/ 301
+/khu-vuc/tp-hcm/quan-2 /vi-tri/decal-dan-kinh-quan-2/ 301
+/khu-vuc/tp-hcm/quan-2/ /vi-tri/decal-dan-kinh-quan-2/ 301
 /thi-cong-decal/quan-9 /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
 /thi-cong-decal/quan-9/ /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
 /khu-vuc/tp-hcm/quan-9 /khu-vuc/tp-hcm/thanh-pho-thu-duc/ 301
@@ -753,3 +749,7 @@
 # Preserve the ranked Quận 12 URL from the original WordPress page
 /khu-vuc/tp-hcm/quan-12 /vi-tri/decal-dan-kinh-quan-12/ 301
 /khu-vuc/tp-hcm/quan-12/ /vi-tri/decal-dan-kinh-quan-12/ 301
+/khu-vuc/tp-hcm/quan-1 /vi-tri/decal-dan-kinh-quan-1/ 301
+/khu-vuc/tp-hcm/quan-1/ /vi-tri/decal-dan-kinh-quan-1/ 301
+/decal-dan-kinh-quan-2/ /vi-tri/decal-dan-kinh-quan-2/ 301
+/decal-dan-kinh-quan-2 /vi-tri/decal-dan-kinh-quan-2/ 301

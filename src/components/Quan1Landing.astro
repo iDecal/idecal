@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
+import LocalAreaFaq from './LocalAreaFaq.astro';
+import LocalNearbyAreas from './LocalNearbyAreas.astro';
+import data from '../data/quan-1-original.json';
+import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
+import {districts,districtBookingUrl} from '../data/districts';
+import '../styles/quan-1.css';
+const district=districts.find(item=>item.slug==='quan-1')!;
+const faq=getAreaFaqs('quan-1',[{question:district.question,answer:district.answer}]);
+const booking=districtBookingUrl('quan-1');
+const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceType:'In ấn và thi công Decal dán kính',provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 1'}},areaFaqSchema(faq.items)];
+---
+<Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
+<article class="q1-page">
+  <header class="q1-hero"><div class="container q1-hero-layout"><div class="q1-original-hero" set:html={data.heroHtml}></div><aside class="q1-consult"><p>Tư vấn</p><a href="tel:0866077040">0866.077.040</a><span>Gửi ảnh kính và nhu cầu của bạn</span><a class="btn-primary-solid" href={booking}>Nhận tư vấn →</a></aside></div></header>
+  <section class="container q1-about" set:html={data.aboutHtml}></section>
+  <section class="container q1-price-layout"><div class="q1-pricing" set:html={data.pricingHtml}></div><aside class="q1-offers" set:html={data.offersHtml}></aside></section>
+  <span id={data.galleryAlias} class="q1-anchor" aria-hidden="true"></span>
+  <LocalInstallationPhotos areaKey="quan-1" areaName="Quận 1" heading={data.galleryTitle} headingId={data.galleryHeadingId} />
+  <p class="container q1-address-note">Địa chỉ được đối chiếu theo phường/xã hiện tại; có thể kèm tên Quận 1 cũ khi gửi yêu cầu. Phạm vi, thời gian và ưu đãi được xác nhận theo hạng mục cụ thể.</p>
+  <LocalAreaFaq title={faq.title} items={faq.items} />
+  <LocalNearbyAreas areaKey="quan-1" />
+</article>
+</Layout>

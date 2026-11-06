@@ -1,12 +1,12 @@
 ---
 import {getLocalPhotos} from '../data/local-photos';
 import '../styles/local-photos.css';
-interface Props {areaKey:string;areaName:string;}
-const {areaKey,areaName}=Astro.props;
+interface Props {areaKey:string;areaName:string;heading?:string;headingId?:string;}
+const {areaKey,heading=`Hình ảnh thi công thực tế tại ${Astro.props.areaName}`,headingId='local-installation-title'}=Astro.props;
 const photos=await getLocalPhotos(areaKey);
 ---
-<section id="anh-thi-cong" class="container local-installations" aria-labelledby="local-installation-title" data-photo-area={areaKey}>
-  <div class="local-photo-heading"><div><p class="local-photo-kicker">Góc thi công</p><h2 id="local-installation-title">Hình ảnh thi công thực tế tại {areaName}</h2></div>{photos.length>0&&<span>{photos.length} ảnh</span>}</div>
+<section id="anh-thi-cong" class="container local-installations" aria-labelledby={headingId} data-photo-area={areaKey}>
+  <div class="local-photo-heading"><div><p class="local-photo-kicker">Góc thi công</p><h2 id={headingId}>{heading}</h2></div>{photos.length>0&&<span>{photos.length} ảnh</span>}</div>
   {photos.length>0?<div class="local-photo-grid">{photos.map(photo=><figure><a href={photo.src} class="local-photo-open" data-local-photo data-caption={photo.caption} aria-label={`Xem ảnh lớn: ${photo.caption}`} target="_blank" rel="noopener"><img src={photo.src} alt={photo.alt} width="1200" height="900" loading="lazy" decoding="async" /><span aria-hidden="true">Xem ảnh →</span></a><figcaption>{photo.caption}</figcaption></figure>)}</div>:<p class="local-photo-empty">Ảnh thi công tại khu vực này đang được cập nhật.</p>}
   {photos.length>0&&<dialog id="local-photo-viewer" class="local-photo-viewer" aria-label="Ảnh thi công thực tế"><button type="button" data-photo-close aria-label="Đóng ảnh">Đóng ×</button><img alt="Ảnh thi công phóng lớn" /><p></p></dialog>}
 </section>

@@ -9,3 +9,5 @@
 - Các trang khu vực có thư viện ảnh thi công lẻ riêng, không hiển thị phần hồ sơ công trình lớn trong nội dung khu vực. Ảnh quản lý qua `/quan-ly-anh-khu-vuc` và thư mục `public/images/khu-vuc/<slug>/`; chỉ hiển thị ảnh thực tế đúng địa bàn, không thay bằng ảnh stock hoặc tự tạo hồ sơ dự án cho mỗi ảnh.
 
 - Cập nhật yêu cầu: trên trang khu vực chỉ giữ thư viện ảnh thi công; không hiển thị thẻ bài Blog liên quan, hồ sơ công trình hoặc CTA dẫn công trình trong nội dung khu vực. Giữ FAQ và liên kết địa bàn.
+
+- Quận 1 và Quận 2 dùng hai bố cục riêng (`Quan1Landing`, `Quan2Landing`), giữ toàn bộ nội dung biên tập, ảnh, đề mục và canonical từ HTML nguồn trong `quan-1-original.json` / `quan-2-original.json`. Không rút gọn thành mẫu trang khu vực chung; không đưa lại thẻ Blog/hồ sơ công trình.
