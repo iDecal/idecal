@@ -11,7 +11,9 @@ const { src, alt, eager = false } = Astro.props;
 </div>
 <script>
   document.querySelectorAll<HTMLImageElement>('[data-product-photo]').forEach(image => {
+    const placeholder = image.closest('[data-product-image]')?.querySelector<HTMLElement>('[data-image-placeholder]');
     const fallback = () => {
+      if (placeholder) placeholder.style.display = '';
       image.hidden = true;
       const container = image.closest('[data-product-image]');
       container?.setAttribute('role', 'img');
@@ -20,9 +22,11 @@ const { src, alt, eager = false } = Astro.props;
     image.addEventListener('error', fallback);
     image.addEventListener('load', () => {
       image.hidden = false;
+      if (placeholder) placeholder.style.display = 'none';
       image.closest('[data-product-image]')?.removeAttribute('role');
       image.closest('[data-product-image]')?.removeAttribute('aria-label');
     });
     if (image.complete && !image.naturalWidth) fallback();
+    else if (image.complete && image.naturalWidth && placeholder) placeholder.style.display = 'none';
   });
 </script>
