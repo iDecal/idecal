@@ -12,6 +12,7 @@ import Quan12Landing from '../../../components/Quan12Landing.astro';
 import Layout from '../../../layouts/Layout.astro';
 import { districts, districtServiceTypes, districtBookingUrl, type District } from '../../../data/districts';
 import '../../../styles/districts.css';
+import '../../../styles/district-clean.css';
 export function getStaticPaths(){return districts.map(district=>({params:{district:district.slug},props:{district}}));}
 interface Props {district:District;}
 const {district}=Astro.props;

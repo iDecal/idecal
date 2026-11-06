@@ -13,3 +13,5 @@
 - Quận 1 và Quận 2 dùng hai bố cục riêng (`Quan1Landing`, `Quan2Landing`), giữ toàn bộ nội dung biên tập, ảnh, đề mục và canonical từ HTML nguồn trong `quan-1-original.json` / `quan-2-original.json`. Không rút gọn thành mẫu trang khu vực chung; không đưa lại thẻ Blog/hồ sơ công trình.
 
 - Quận 3, Quận 4 và Tân Bình dùng các bố cục riêng (`Quan3Landing`, `Quan4Landing`, `TanBinhLanding`) và dữ liệu HTML gốc trong các tệp `*-original.json`. Giữ nguyên nội dung biên tập, ảnh, đề mục, URL theo `district-routes.json`; chỉ bổ sung ghi chú hiện tại bên ngoài đoạn gốc. Mục lục Tân Bình đóng mặc định. Ảnh minh họa không được gán thành ảnh thi công thực tế của địa bàn.
+
+- Thiết kế trang quận/huyện: ưu tiên nền trắng, ít viền/khối màu và nhãn trang trí, chữ phân cấp rõ, ảnh cân đối. Dùng `district-clean.css` để thống nhất nhịp trình bày; vẫn giữ bố cục riêng của các bài nhập gốc, không cắt nội dung hoặc ép về cùng mẫu.

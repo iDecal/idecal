@@ -7,6 +7,7 @@ import data from '../data/quan-4-original.json';
 import {districts,districtBookingUrl} from '../data/districts';
 import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 import '../styles/quan-4.css';
+import '../styles/district-clean.css';
 const district=districts.find(item=>item.slug==='quan-4')!;
 const faq=getAreaFaqs('quan-4',[{question:district.question,answer:district.answer}]);
 const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 4'}},areaFaqSchema(faq.items)];

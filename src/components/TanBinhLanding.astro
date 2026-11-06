@@ -7,6 +7,7 @@ import data from '../data/quan-tan-binh-original.json';
 import {districts,districtBookingUrl} from '../data/districts';
 import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 import '../styles/tan-binh.css';
+import '../styles/district-clean.css';
 const district=districts.find(item=>item.slug==='quan-tan-binh')!;
 const faq=getAreaFaqs(district.slug,[{question:district.question,answer:district.answer}]);
 const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Tân Bình'}},areaFaqSchema(faq.items)];

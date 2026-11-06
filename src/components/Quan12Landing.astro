@@ -7,6 +7,7 @@ import Layout from '../layouts/Layout.astro';
 import data from '../data/quan-12-original.json';
 import { districts, districtBookingUrl } from '../data/districts';
 import '../styles/quan-12.css';
+import '../styles/district-clean.css';
 const district=districts.find(item=>item.slug==='quan-12')!;
 const localFaq=getAreaFaqs('quan-12',[{question:district.question,answer:district.answer}]);
 const booking=districtBookingUrl(district.slug);

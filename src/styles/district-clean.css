@@ -1,0 +1,121 @@
+/* A quieter visual hierarchy for district pages; original copy and layouts stay intact. */
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page){--district-line:#e9eef4;--district-muted:#617185;color:#26465f}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .container{max-width:1120px;min-width:0;padding-left:28px;padding-right:28px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) h1{font-size:clamp(28px,3.1vw,38px);line-height:1.4;font-weight:550;letter-spacing:-.025em;max-width:790px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) h2{font-size:clamp(22px,2.2vw,27px);line-height:1.5;font-weight:550;letter-spacing:-.015em}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) h3,:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) h4{font-size:18px;line-height:1.65;font-weight:500}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) p{color:#53677a}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) strong{font-weight:550}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .btn-primary-solid{border-radius:8px;box-shadow:none;font-size:14px;padding:12px 20px;min-height:46px;white-space:normal;text-align:center}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .btn-primary-solid:hover{box-shadow:0 3px 12px #284b7014}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) img{border-radius:10px}
+/* Use a single quiet wash at the top rather than alternating colored bands. */
+.district-page .district-hero,.q1-page .q1-hero,.q2-page .q2-intro,.q3-page .q3-cover,.q4-page .q4-hero,.q12-page .q12-hero,.tb-page .tb-hero{padding-top:38px;padding-bottom:38px;background:linear-gradient(120deg,#f5f8ff,#fafaff 72%,#fff);border-bottom:1px solid var(--district-line)}
+.district-page .district-note-surface,.q2-page .q2-benefits,.q3-page .q3-trends,.q4-page .q4-applications,.q4-page .q4-workflow,.q12-page .q12-soft{background:#fff;border:0}
+.district-page .district-hero-grid,.q1-page .q1-hero-layout,.q2-page .q2-intro .gspb_row__content,.q3-page .q3-cover>.container>.gspb_container>.gspb_row>.gspb_row__content,.q4-page .q4-hero .gspb_row__content,.q12-page .q12-hero-grid{gap:38px}
+.district-page .district-hero img,.q2-page .q2-intro img,.q3-page .q3-cover img,.q4-page .q4-hero img{height:auto;max-height:340px;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.district-page .district-hero figcaption{position:static;padding:10px 0 0;color:#748394;background:transparent;font-size:11px}
+.district-page .district-kicker,.q12-page .q12-eyebrow,.tb-page .tb-eyebrow{font-size:11px;color:#758496;letter-spacing:.035em}
+/* Service choices read as rows, with fewer repeated images and decorations. */
+.district-page .district-service-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.district-page .district-service-grid article{padding:0;border:0;background:transparent}
+.district-page .district-service-photo{aspect-ratio:3/2;border-radius:10px}
+.district-page .district-service-grid h3{font-size:17px;margin-top:16px}
+.district-page .district-service-grid p{font-size:14px;line-height:1.85}
+.district-page .district-material-link{font-size:13px;justify-content:start;gap:12px}
+.district-page .district-local-note{grid-template-columns:.8fr 1.2fr;gap:34px;border-top:1px solid var(--district-line)}
+.district-page .district-local-note h2{font-size:23px}
+.district-page .district-local-note p{font-size:14px}
+/* Preserve individual editorial layouts while calming their panels. */
+.q1-page .q1-consult{padding-left:24px;gap:12px;border-color:var(--district-line)}
+.q1-page .q1-offers,.q4-page .q4-conclusion,.tb-page .tb-contact ul{background:#f8fafc;border:0;border-radius:10px}
+.q1-page .q1-price-layout{gap:30px;border:0}
+.q1-page .q1-about>.gspb_row>.gspb_row__content{gap:32px}
+.q1-page .q1-pricing table{font-size:13px}
+.q1-page .q1-pricing th,.q1-page .q1-pricing td{padding:15px 16px;border-color:var(--district-line)}
+.q2-page .q2-needs>.gspb_row>.gspb_row__content{gap:28px}
+.q2-page .q2-needs .gspb_row__col--8 .gspb_row__col--4{border-color:var(--district-line)}
+.q2-page .q2-needs .gspb_row__col--8 .gspb_row__col--4:before{color:#8794a4;margin-bottom:12px}
+.q2-page .q2-benefits .gspb_row__content{gap:34px}
+.q2-page .q2-benefits .gspb_iconsList{gap:16px}
+.q2-page .q2-faq-groups{gap:32px}
+.q3-page .q3-overview{gap:32px}
+.q3-page .q3-overview>section+section{padding-left:30px;border-color:var(--district-line)}
+.q3-page .q3-materials,.q3-page .q3-process,.q3-page .q3-contact,.q3-page .q3-current-note{max-width:920px}
+.q3-page .q3-materials h3,.q3-page .q3-materials h4{border-color:var(--district-line)}
+.q3-page .q3-trends .wp-block-gallery{gap:18px;margin:22px 0 28px}
+.q3-page .q3-trends .wp-block-gallery img{aspect-ratio:4/3;border-radius:8px}
+.q3-page .q3-contact .gspb_infoBox{background:#f8fafc}
+.q3-page .q3-process ol>li{padding-bottom:18px}
+.q4-page .q4-jump{gap:22px;padding-top:15px;padding-bottom:15px;border-color:var(--district-line)}
+.q4-page .q4-reason-columns{gap:26px}
+.q4-page .q4-reason-columns>div{border-color:var(--district-line)}
+.q4-page .q4-reasons h3{font-size:17px}
+.q4-page .q4-design{gap:0 30px}
+.q4-page .q4-design figure img{max-height:440px}
+.q4-page .q4-workflow ol{gap:22px}
+.q4-page .q4-workflow ol>li{border-color:var(--district-line)}
+.q4-page .q4-workflow h3{font-size:16px}
+.q4-page .q4-finish{gap:30px}
+.q12-page .q12-materials{gap:0 30px}
+.q12-page .q12-materials>article{border:0;border-top:1px solid var(--district-line);border-radius:0;padding:24px 0;background:#fff}
+.q12-page .q12-material-number{display:none}
+.q12-page .q12-price-row{border:0;padding-top:10px}
+.q12-page .q12-material-features ul{margin-bottom:14px}
+.q12-page .q12-coverage{gap:32px}
+.q12-page .q12-coverage li{background:#f8fafc;border:0;border-radius:6px;padding:8px 12px}
+.q12-page .q12-steps{gap:24px 32px}
+.q12-page .q12-steps article{border-color:var(--district-line)}
+.tb-page .tb-layout{grid-template-columns:210px minmax(0,1fr);gap:36px}
+.tb-page .tb-outline{background:#fff;border-color:var(--district-line);border-radius:8px}
+.tb-page .tb-outline summary{padding:16px;font-size:13px}
+.tb-page .tb-phone{border-color:var(--district-line);padding:12px 16px}
+.tb-page .tb-copy>section{border-color:var(--district-line);padding-bottom:22px;margin-bottom:26px}
+.tb-page .tb-copy h3{font-size:20px}
+.tb-page .tb-company figure{max-width:530px;margin:24px auto}
+.tb-page .tb-process figure{max-width:420px}
+/* Photos remain the focus: calm grid, larger lone image and no panel chrome. */
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) section.local-installations{padding-top:32px;padding-bottom:32px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-kicker{display:none}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-heading{align-items:baseline;margin-bottom:22px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid{gap:20px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid:has(>figure:only-child){grid-template-columns:minmax(0,560px)}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-empty{border:0;border-radius:0;padding:4px 0 10px;background:#fff;color:#8290a0;font-size:13px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid figcaption{font-size:12px;line-height:1.8;margin-top:9px;color:#718195}
+/* Secondary information is quieter and consolidated. */
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) section.local-area-faq{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:36px;padding-top:34px;padding-bottom:34px;border-top:1px solid var(--district-line)}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-kicker{display:none}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-number{display:none}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-list details{border-color:var(--district-line)}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-list details:first-child{border-top:0}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-list summary{padding:17px 0;font-size:14px;font-weight:450}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-list p{padding-left:0;font-size:14px;line-height:1.9}
+.district-page .district-contact,.q12-page .q12-contact{background:#f8fafc;border:0;border-radius:10px;padding-top:24px;padding-bottom:24px;margin-top:12px}
+.district-page .district-contact h2,.q12-page .q12-contact h2{font-size:22px}
+.district-page .district-contact nav,.q12-page .q12-contact nav{border:0;padding-top:6px;gap:12px 22px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) nav.local-nearby-areas{gap:18px;border-color:var(--district-line);padding-top:24px;padding-bottom:28px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-nearby-areas>div{gap:10px 20px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-nearby-areas a{padding:3px 0;background:none;border:0;border-radius:0;font-size:13px}
+@media(max-width:900px){.tb-page .tb-layout{grid-template-columns:190px minmax(0,1fr);gap:26px}.q1-page .q1-price-layout{grid-template-columns:minmax(0,1fr)}.district-page .district-service-grid{gap:22px}.q1-page .q1-offers{padding:22px}}
+@media(max-width:767px){
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .container{padding-left:22px;padding-right:22px}
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) h1{font-size:29px;line-height:1.4;letter-spacing:-.02em}
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) h2{font-size:23px;line-height:1.5}
+ .district-page .district-hero,.q1-page .q1-hero,.q2-page .q2-intro,.q3-page .q3-cover,.q4-page .q4-hero,.q12-page .q12-hero,.tb-page .tb-hero{padding-top:28px;padding-bottom:28px}
+ .district-page .district-section,.q1-page .q1-about,.q2-page .q2-needs,.q2-page .q2-benefits,.q3-page .q3-overview,.q3-page .q3-trends,.q4-page .q4-reasons,.q4-page .q4-applications,.q4-page .q4-design,.q4-page .q4-workflow,.q12-page .q12-section{padding-top:28px;padding-bottom:28px}
+ .district-page .district-hero-grid,.q1-page .q1-hero-layout,.q2-page .q2-intro .gspb_row__content,.q3-page .q3-cover>.container>.gspb_container>.gspb_row>.gspb_row__content,.q4-page .q4-hero .gspb_row__content,.q12-page .q12-hero-grid{gap:24px}
+ .district-page .district-hero img,.q2-page .q2-intro img,.q3-page .q3-cover img,.q4-page .q4-hero img{max-height:270px;aspect-ratio:4/3}
+ .district-page .district-service-grid{grid-template-columns:1fr;gap:26px}.district-page .district-service-grid article{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:16px;align-items:start}
+ .district-page .district-service-photo{grid-row:1/4;aspect-ratio:1}.district-page .district-service-grid h3{font-size:16px;margin:0 0 8px}.district-page .district-service-grid p{font-size:13px;margin-bottom:10px}.district-page .district-material-link{font-size:12px}
+ .district-page .district-local-note,.q12-page .q12-coverage{grid-template-columns:1fr;gap:18px}.district-page .district-local-note h2{font-size:22px}
+ .q3-page .q3-overview>section+section{border-left:0;padding-left:0;padding-top:22px}.q3-page .q3-trends .wp-block-gallery{gap:14px}
+ .q4-page .q4-design{display:block}.q4-page .q4-design>figure{margin-top:22px}.q4-page .q4-design figure img{max-height:360px}
+ .q12-page .q12-materials{gap:0}.q12-page .q12-materials>article{padding:22px 0}.q12-page .q12-steps{gap:22px}
+ .tb-page .tb-layout{grid-template-columns:1fr;gap:24px;padding-top:24px}.tb-page .tb-outline{position:static;max-height:none}.tb-page .tb-company figure{max-width:100%}
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) section.local-area-faq{grid-template-columns:1fr;gap:20px;padding-top:28px;padding-bottom:28px}
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) section.local-installations{padding-top:28px;padding-bottom:28px}
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid{grid-template-columns:1fr}
+ :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) nav.local-nearby-areas{align-items:start;flex-direction:column;gap:10px}
+}
+
+.district-page .district-section .district-kicker,.q12-page .q12-section .q12-eyebrow{display:none}

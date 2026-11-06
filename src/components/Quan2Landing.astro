@@ -6,6 +6,7 @@ import data from '../data/quan-2-original.json';
 import {areaFaqSchema} from '../data/local-area-content';
 import {districtBookingUrl} from '../data/districts';
 import '../styles/quan-2.css';
+import '../styles/district-clean.css';
 const questions=data.faqGroups.flatMap(group=>group.items);
 const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceType:'Decal dán kính, phim cách nhiệt và film nội thất',provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 2'}},areaFaqSchema(questions)];
 ---
