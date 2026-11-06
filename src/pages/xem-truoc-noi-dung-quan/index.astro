@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import drafts from '../../data/district-docx-preview.json';
+import '../../styles/district-preview.css';
+---
+<Layout title="Duyệt nội dung khu vực từ DOCX" description="Bản đề xuất nội dung 21 khu vực dành cho chủ website duyệt trước khi áp dụng." noindex={true}>
+<div class="draft-wrap">
+<p class="draft-label">BẢN DUYỆT NỘI DUNG · CHƯA ÁP DỤNG</p>
+<h1>Nội dung mới cho các khu vực</h1>
+<p class="draft-lead">21 bản đề xuất từ tệp DOCX của bạn. Chọn khu vực để xem cách trình bày và đối chiếu với trang hiện tại.</p>
+<div class="draft-review"><h2>Đánh giá trước khi thay thế</h2><p>Phần mở bài, nhu cầu và lưu ý từng địa bàn rõ ràng, dễ đọc. Tuy nhiên, phần vật liệu, quy trình, tiêu đề SEO và mô tả còn giống nhau giữa nhiều trang. Bản mới ngắn hơn đáng kể so với một số bài gốc đã có thứ hạng; cần duyệt kỹ trước khi thay toàn bộ.</p><p>Giữ URL hiện có. Email, địa chỉ, phí di chuyển, VAT và lịch ngoài giờ cần xác nhận. Các ghi chú trong ngoặc vuông được giữ ở phần kiểm duyệt của từng trang. Quận 2 và Cần Giờ không có trong tệp này.</p><p>Bản duyệt không đưa vào sitemap và có thẻ noindex. Đây là đường dẫn xem trước công khai, không phải trang có mật khẩu.</p></div>
+<div class="draft-grid">{drafts.map((item,index)=><a class="draft-card" href={`/xem-truoc-noi-dung-quan/${item.slug}`}><span>{String(index+1).padStart(2,'0')}</span><h2>{item.name}</h2><p>Xem bản đề xuất <span aria-hidden="true">↗</span></p></a>)}</div>
+</div>
+</Layout>
