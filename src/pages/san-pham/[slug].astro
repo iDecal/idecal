@@ -22,8 +22,8 @@ const related = products.filter(other => other.slug !== product.slug && (
 const relatedCategoryUrl = `/danh-muc-san-pham/${isPVC ? 'decal-pvc' : category.slug}`;
 const galleryImages = isPVC ? [
   ...pvcFinishes.map(finish => ({ src: finishImages[finish.value as keyof typeof finishImages], label: `${product.name} – minh họa bề mặt ${finish.label.toLocaleLowerCase('vi-VN')}`, finish: finish.value })),
-  ...product.images.filter(src => !src.startsWith('/images/pvc-colors/')).map((src,index) => ({ src, label: `${product.name} – ảnh ${index+1}`, finish: '' })),
-] : product.images.map((src,index) => ({ src, label: `${product.name} – ảnh ${index+1}`, finish: '' }));
+  ...product.images.filter(src => !src.startsWith('/images/pvc-colors/')).map((src,index) => ({ src, label: product.catalogue?.label?.startsWith("SOLAR") ? `Bảng thông số catalogue: ${product.name}` : `${product.name} – ảnh ${index+1}`, finish: '' })),
+] : product.images.map((src,index) => ({ src, label: product.catalogue?.label?.startsWith("SOLAR") ? `Bảng thông số catalogue: ${product.name}` : `${product.name} – ảnh ${index+1}`, finish: '' }));
 const specs = productSpecs(product).filter(spec => spec.label !== 'Thương hiệu');
 const normalizeText = (text: string) => text.replace(/\s+/g, ' ').trim();
 const descriptionParagraphs = [...new Set([product.description, ...product.paragraphs].map(normalizeText))].filter(Boolean);
@@ -54,7 +54,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
         {product.price != null && <div class="mb-6"><p class="!mb-1 text-lg font-semibold text-brand-navy">{formatPrice(product.price)}</p><p class="!mb-0 text-xs">Giá tham khảo, xác nhận theo quy cách và khối lượng thực tế.</p></div>}
         <p class="product-short-description">{shortDescription}</p>
         {isPVC ? <form class="pvc-product-options" action="/lien-he-idecal" method="get"><input type="hidden" name="san-pham" value={product.slug} /><input type="hidden" name="dich-vu" value="cat-decal" /><p class="pvc-options-size">Quy cách cuộn <strong>{pvcRollSize}</strong><span>Cắt lẻ theo yêu cầu</span></p><fieldset><legend>Chọn bề mặt</legend><div class="pvc-finish-options">{pvcFinishes.map((finish,index) => <label><input type="radio" name="be-mat" value={finish.value} checked={index===0} required /><span>{finish.label}</span></label>)}</div></fieldset><div class="product-actions"><button type="submit" class="btn-primary-solid">Gửi yêu cầu mẫu <span aria-hidden="true">→</span></button><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn qua Zalo</a></div></form> : <div class="product-actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Tư vấn qua Zalo</a><a href={`/lien-he-idecal?san-pham=${encodeURIComponent(product.slug)}&dich-vu=${encodeURIComponent(category.service)}`} class="btn-idecal-bold">Đặt lịch thi công</a></div>}
-        {product.catalogue && <div class="pov-source">{product.catalogue.note && <p class="pov-stock-note">{product.catalogue.note}</p>}<p>Ảnh mẫu từ catalogue POV 2025 · Đối chiếu mẫu thật trước khi đặt.</p><a href={`${product.catalogue.pdf}#page=${product.catalogue.page}`} target="_blank" rel="noopener">Xem catalogue gốc · trang {product.catalogue.page} →</a>{product.catalogue.collection && <a href={`/san-pham/${product.catalogue.collection}`}>Xem đủ 23 mẫu POV →</a>}</div>}
+        {product.catalogue && <div class="pov-source">{product.catalogue.note && <p class="pov-stock-note">{product.catalogue.note}</p>}<p>{product.catalogue.imageNote ?? "Ảnh mẫu từ catalogue POV 2025 · Đối chiếu mẫu thật trước khi đặt."}</p><a href={`${product.catalogue.pdf}#page=${product.catalogue.page}`} target="_blank" rel="noopener">Xem catalogue gốc · trang {product.catalogue.page} →</a>{product.catalogue.collection && <a href={`/san-pham/${product.catalogue.collection}`}>{product.catalogue.collectionLabel ?? "Xem đủ 23 mẫu POV"} →</a>}</div>}
         <div class="product-information" aria-label="Thông tin sản phẩm">
           <details class="product-information-item">
             <summary><h2>Mô tả sản phẩm</h2><span aria-hidden="true">+</span></summary>
@@ -70,7 +70,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
           </details>
           {filmSpecs && <details class="product-information-item" data-film-specifications>
             <summary><h2>Thông số phim cách nhiệt</h2><span aria-hidden="true">+</span></summary>
-            <div class="product-information-content"><dl class="product-specs">{filmFields.map(field => <div><dt>{field.label}</dt><dd>{filmSpecs[field.key] != null && filmSpecs[field.key] !== '' ? `${filmSpecs[field.key]} ${field.unit}` : 'Chưa cập nhật'}</dd></div>)}</dl></div>
+            <div class="product-information-content"><dl class="product-specs">{filmFields.map(field => <div><dt>{field.label}</dt><dd>{filmSpecs[field.key] != null && filmSpecs[field.key] !== '' ? `${filmSpecs[field.key]} ${field.unit}` : 'Chưa cập nhật'}</dd></div>)}</dl>{product.catalogue && <p class="product-spec-note">Thông số theo catalogue nhà sản xuất, không phải mức giảm nhiệt độ hoặc tỷ lệ tiết kiệm điện. Hiệu quả phụ thuộc kính và điều kiện thi công.</p>}</div>
           </details>}
         </div>
         <a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a>
@@ -78,7 +78,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
     </div>
     </div>
   </section>
-  {collectionModels.length > 0 && <section class="product-related" aria-labelledby="pov-models-title"><div class="container"><div class="product-extras-heading"><div><p>Catalogue POV 2025</p><h2 id="pov-models-title" class="brand-heading">23 mẫu film trang trí kính</h2></div></div><div class="product-related-grid">{collectionModels.map(model => <ProductCard product={model} />)}</div></div></section>}
+  {collectionModels.length > 0 && <section class="product-related" aria-labelledby="pov-models-title"><div class="container"><div class="product-extras-heading"><div><p>Catalogue {product.catalogue?.label ?? "POV 2025"}</p><h2 id="pov-models-title" class="brand-heading">{product.catalogue?.modelsTitle ?? "23 mẫu film trang trí kính"}</h2></div></div><div class="product-related-grid">{collectionModels.map(model => <ProductCard product={model} />)}</div></div></section>}
   {collectionModels.length === 0 && related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
 <RelatedGuides context={product.category+' '+product.slug} />
 </Layout>

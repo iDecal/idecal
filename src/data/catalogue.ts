@@ -13,7 +13,7 @@ export interface Product {
   paragraphs: string[];
   images: string[];
   variantSlugs?: string[];
-  catalogue?: { pdf: string; page: number; note?: string; collection?: string };
+  catalogue?: { pdf: string; page: number; note?: string; collection?: string; label?: string; imageNote?: string; collectionLabel?: string; modelsTitle?: string };
   installationImages?: { src: string; alt: string; caption?: string; projectSlug?: string }[];
   attributes: Partial<Record<string, string[]>>;
   uses: string[];
