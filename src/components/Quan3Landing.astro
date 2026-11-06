@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
+import LocalAreaFaq from './LocalAreaFaq.astro';
+import LocalNearbyAreas from './LocalNearbyAreas.astro';
+import data from '../data/quan-3-original.json';
+import {districts,districtBookingUrl} from '../data/districts';
+import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
+import '../styles/quan-3.css';
+const district=districts.find(item=>item.slug==='quan-3')!;
+const faq=getAreaFaqs(district.slug,[{question:district.question,answer:district.answer}]);
+const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 3'}},areaFaqSchema(faq.items)];
+---
+<Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
+<article class="q3-page">
+<header class="q3-cover"><div class="container" set:html={data.heroHtml}></div></header>
+<div class="container q3-overview"><section set:html={data.conceptHtml}></section><section set:html={data.whyHtml}></section></div>
+<section class="container q3-materials" set:html={data.materialsHtml}></section>
+<section class="q3-trends"><div class="container" set:html={data.trendsHtml}></div></section>
+<section class="container q3-process"><div set:html={data.processHeaderHtml}></div><ol>{data.processItems.map(item=><li set:html={item}></li>)}</ol></section>
+<section class="container q3-contact" set:html={data.contactHtml}></section>
+<p class="container q3-current-note">Các ưu đãi tháng 10/2025 được giữ theo bài gốc. Khi gửi yêu cầu, vui lòng xác nhận giá, mã vật liệu, phạm vi và điều kiện bảo hành hiện tại; gửi địa chỉ phường/xã hiện tại kèm tên Quận 3 cũ để đối chiếu vị trí.</p>
+<LocalInstallationPhotos areaKey="quan-3" areaName="Quận 3" heading={data.galleryTitle} headingId={data.galleryHeadingId} />
+<div class="container q3-action"><a class="btn-primary-solid" href={districtBookingUrl('quan-3')}>Trao đổi hiện trạng kính →</a></div>
+<LocalAreaFaq title={faq.title} items={faq.items} />
+<LocalNearbyAreas areaKey="quan-3" />
+</article>
+</Layout>

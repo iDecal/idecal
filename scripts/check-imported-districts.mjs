@@ -3,10 +3,11 @@ import {readFile} from 'node:fs/promises';
 const decode=value=>value.replace(/&#x([0-9a-f]+);/gi,(_,v)=>String.fromCodePoint(parseInt(v,16))).replace(/&#(\d+);/g,(_,v)=>String.fromCodePoint(Number(v))).replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&nbsp;',' ');
 const normalize=value=>decode(value).replace(/\s+/g,' ').trim();
 const redirects=await readFile('public/_redirects','utf8');const sitemap=await readFile('dist/sitemap.xml','utf8');
-for(const number of [1,2]){
+for(const number of [1,2,3,4,'tan-binh']){
  const proof=JSON.parse(await readFile(`docs/quan-${number}-original-content.json`,'utf8'));
- const html=await readFile(`dist/vi-tri/decal-dan-kinh-quan-${number}/index.html`,'utf8');
- const body=html.match(new RegExp(`<article class="q${number}-page">([\\s\\S]*?)<\\/article>`))?.[1];assert.ok(body);
+ const html=await readFile(`dist${new URL(proof.originalUrl).pathname}index.html`,'utf8');
+ const className=number==='tan-binh'?'tb':`q${number}`;
+ const body=html.match(new RegExp(`<article class="${className}-page">([\\s\\S]*?)<\\/article>`))?.[1];assert.ok(body);
  const visible=normalize(body.replace(/<[^>]*>/g,' '));let cursor=0;
  for(const node of proof.textNodes){const expected=normalize(node);const index=visible.indexOf(expected,cursor);assert.ok(index>=cursor,`Q${number}: missing/reordered original text: ${expected}`);cursor=index+expected.length;}
  for(const id of proof.headingIds)assert.ok(body.includes(`id="${id}"`),`Q${number} heading ${id}`);

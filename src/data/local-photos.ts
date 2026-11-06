@@ -4,6 +4,7 @@ import { regions } from './regions';
 import { districts, districtUrl } from './districts';
 import originalQuan1 from './quan-1-original.json';
 import originalQuan2 from './quan-2-original.json';
+import originalTanBinh from './quan-tan-binh-original.json';
 import originalQuan12 from './quan-12-original.json';
 export const photoAreas=[...regions.map(region=>({key:region.slug,name:region.shortName,url:`/khu-vuc/${region.slug}`,type:'region' as const})),...districts.map(district=>({key:district.slug,name:district.name,url:districtUrl(district.slug),type:'district' as const}))];
 export interface LocalPhoto {src:string;alt:string;caption:string;area:string;}
@@ -28,5 +29,6 @@ export async function getLocalPhotos(key:string):Promise<LocalPhoto[]>{
  for(const [district,images] of [['quan-1',originalQuan1.images.slice(1)],['quan-2',originalQuan2.images.slice(2)]] as const){
   if(key===district||key==='tp-hcm')for(const image of images)photos.push({src:image.src,alt:image.alt,caption:('caption' in image?image.caption:undefined)??image.alt,area:district==='quan-1'?'Quận 1':'Quận 2'});
  }
+ if(key==='quan-tan-binh'||key==='tp-hcm')for(const image of originalTanBinh.images.slice(2))photos.push({src:image.src,alt:image.alt,caption:image.caption??image.alt,area:'Tân Bình'});
  return photos.filter((photo,index,list)=>list.findIndex(other=>other.src===photo.src)===index);
 }

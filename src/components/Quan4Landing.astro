@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
+import LocalAreaFaq from './LocalAreaFaq.astro';
+import LocalNearbyAreas from './LocalNearbyAreas.astro';
+import data from '../data/quan-4-original.json';
+import {districts,districtBookingUrl} from '../data/districts';
+import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
+import '../styles/quan-4.css';
+const district=districts.find(item=>item.slug==='quan-4')!;
+const faq=getAreaFaqs('quan-4',[{question:district.question,answer:district.answer}]);
+const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 4'}},areaFaqSchema(faq.items)];
+---
+<Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
+<article class="q4-page">
+<header class="q4-hero"><div class="container" set:html={data.heroHtml}></div></header>
+<nav class="container q4-jump" aria-label="Nội dung trang Quận 4"><a href="#ung-dung-thuc-te-cua-decal-dan-kinh-quan-4">Ứng dụng</a><a href="#thiet-ke-decal-su-hoa-quyen-giua-nghe-thuat-va-cong-nghe">Mẫu & chất liệu</a><a href="#quy-trinh-thi-cong-decal-dan-kinh-quan-4-nhanh-gon-chuyen-nghiep">Quy trình</a><a href="#anh-thi-cong">Ảnh thi công</a></nav>
+<section class="container q4-reasons"><div set:html={data.reasonsHeaderHtml}></div><div class="q4-reason-columns">{data.reasonsItems.map(item=><div set:html={item}></div>)}</div></section>
+<section class="q4-applications"><div class="container" set:html={data.applicationsHtml}></div></section>
+<section class="container q4-design" set:html={data.designHtml}></section>
+<section class="q4-workflow"><div class="container"><div set:html={data.processHeaderHtml}></div><ol>{data.processItems.map(item=><li set:html={item}></li>)}</ol></div></section>
+<div class="container q4-finish"><section class="q4-tips" set:html={data.tipsHtml}></section><section class="q4-conclusion" set:html={data.conclusionHtml}></section></div>
+<LocalInstallationPhotos areaKey="quan-4" areaName="Quận 4" />
+<p class="container q4-note">Ảnh trong phần giới thiệu minh họa ứng dụng vật liệu từ bài gốc, không dùng để xác nhận công trình tại Quận 4. Khi trao đổi nhu cầu, gửi địa chỉ phường/xã hiện tại và hiện trạng kính để xác nhận phạm vi thực hiện.</p>
+<div class="container q4-action"><a class="btn-primary-solid" href={districtBookingUrl('quan-4')}>Trao đổi công trình của bạn →</a></div>
+<LocalAreaFaq title={faq.title} items={faq.items} />
+<LocalNearbyAreas areaKey="quan-4" />
+</article>
+</Layout>
