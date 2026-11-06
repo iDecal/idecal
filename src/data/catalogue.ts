@@ -12,6 +12,8 @@ export interface Product {
   description: string;
   paragraphs: string[];
   images: string[];
+  variantSlugs?: string[];
+  catalogue?: { pdf: string; page: number; note?: string; collection?: string };
   installationImages?: { src: string; alt: string; caption?: string; projectSlug?: string }[];
   attributes: Partial<Record<string, string[]>>;
   uses: string[];

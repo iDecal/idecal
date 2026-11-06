@@ -15,8 +15,9 @@ const { product } = Astro.props;
 const category = productCategories.find(group => group.slug === product.category)!;
 const isPVC = isPVCProduct(product.slug);
 const finishImages = pvcFinishImages(product.slug);
+const collectionModels = (product.variantSlugs ?? []).map(slug => products.find(item => item.slug === slug)).filter((item): item is Product => Boolean(item));
 const related = products.filter(other => other.slug !== product.slug && (
-  isPVC ? isPVCProduct(other.slug) : !isPVCProduct(other.slug) && other.category === product.category
+  product.catalogue ? other.catalogue?.collection === product.catalogue.collection && Boolean(product.catalogue.collection) : isPVC ? isPVCProduct(other.slug) : !isPVCProduct(other.slug) && other.category === product.category
 )).slice(0,4);
 const relatedCategoryUrl = `/danh-muc-san-pham/${isPVC ? 'decal-pvc' : category.slug}`;
 const galleryImages = isPVC ? [
@@ -42,7 +43,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
 ---
 <Layout title={`${product.name} | iDecal`} description={product.description.slice(0,170)} image={galleryImages[0].src}>
   <script type="application/ld+json" set:html={JSON.stringify(schema).replaceAll('<', String.fromCharCode(92) + 'u003c')} />
-  <section class="catalogue-detail py-10 md:py-14" data-product-detail>
+  <section class="catalogue-detail py-10 md:py-14" data-product-detail data-pov={product.catalogue ? true : undefined}>
     <div class="container">
 
     <div class="product-detail-layout grid min-w-0 items-start gap-8 lg:grid-cols-2 lg:gap-12">
@@ -53,6 +54,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
         {product.price != null && <div class="mb-6"><p class="!mb-1 text-lg font-semibold text-brand-navy">{formatPrice(product.price)}</p><p class="!mb-0 text-xs">Giá tham khảo, xác nhận theo quy cách và khối lượng thực tế.</p></div>}
         <p class="product-short-description">{shortDescription}</p>
         {isPVC ? <form class="pvc-product-options" action="/lien-he-idecal" method="get"><input type="hidden" name="san-pham" value={product.slug} /><input type="hidden" name="dich-vu" value="cat-decal" /><p class="pvc-options-size">Quy cách cuộn <strong>{pvcRollSize}</strong><span>Cắt lẻ theo yêu cầu</span></p><fieldset><legend>Chọn bề mặt</legend><div class="pvc-finish-options">{pvcFinishes.map((finish,index) => <label><input type="radio" name="be-mat" value={finish.value} checked={index===0} required /><span>{finish.label}</span></label>)}</div></fieldset><div class="product-actions"><button type="submit" class="btn-primary-solid">Gửi yêu cầu mẫu <span aria-hidden="true">→</span></button><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn qua Zalo</a></div></form> : <div class="product-actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid">Tư vấn qua Zalo</a><a href={`/lien-he-idecal?san-pham=${encodeURIComponent(product.slug)}&dich-vu=${encodeURIComponent(category.service)}`} class="btn-idecal-bold">Đặt lịch thi công</a></div>}
+        {product.catalogue && <div class="pov-source">{product.catalogue.note && <p class="pov-stock-note">{product.catalogue.note}</p>}<p>Ảnh mẫu từ catalogue POV 2025 · Đối chiếu mẫu thật trước khi đặt.</p><a href={`${product.catalogue.pdf}#page=${product.catalogue.page}`} target="_blank" rel="noopener">Xem catalogue gốc · trang {product.catalogue.page} →</a>{product.catalogue.collection && <a href={`/san-pham/${product.catalogue.collection}`}>Xem đủ 23 mẫu POV →</a>}</div>}
         <div class="product-information" aria-label="Thông tin sản phẩm">
           <details class="product-information-item">
             <summary><h2>Mô tả sản phẩm</h2><span aria-hidden="true">+</span></summary>
@@ -76,7 +78,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
     </div>
     </div>
   </section>
-  {related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
+  {collectionModels.length > 0 && <section class="product-related" aria-labelledby="pov-models-title"><div class="container"><div class="product-extras-heading"><div><p>Catalogue POV 2025</p><h2 id="pov-models-title" class="brand-heading">23 mẫu film trang trí kính</h2></div></div><div class="product-related-grid">{collectionModels.map(model => <ProductCard product={model} />)}</div></div></section>}
+  {collectionModels.length === 0 && related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
 <RelatedGuides context={product.category+' '+product.slug} />
 </Layout>
 <script>
@@ -111,3 +114,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
     }
   });
 </script>
+
+<style>
+:global([data-pov] [data-main-gallery] img){object-fit:contain}.pov-stock-note{color:#87602c!important;font-weight:500}.pov-source{margin:24px 0;font-size:13px;line-height:1.8;color:#5b7084}.pov-source p{font-size:12px;margin:0 0 8px}.pov-source a{display:block;color:#17668f;margin:6px 0;text-decoration:underline;text-underline-offset:3px}
+</style>

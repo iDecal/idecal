@@ -92,21 +92,54 @@
     "name": "Decal POV, Hyundai Sheet bộ sưu tập 2025",
     "category": "decal-mo-dan-kinh",
     "subcategory": "film trang trí kính",
-    "brand": "Hyundai Sheet",
+    "brand": "Hyundae Sheet",
     "price": null,
     "code": "IDC-005",
-    "description": "Bộ sưu tập decal dán kính POV 2025 của Hyundai Sheet.",
+    "description": "Bộ sưu tập film trang trí kính POV 2025 của Hyundae Sheet: 23 mã chuyển sắc, chấm, sọc, lưới và họa tiết. Xem mẫu, quy cách và trang catalogue từng mã.",
     "paragraphs": [
-      "Bộ sưu tập decal dán kính POV 2025 của Hyundai Sheet."
+      "Bộ sưu tập film trang trí kính POV 2025 của Hyundae Sheet: 23 mã chuyển sắc, chấm, sọc, lưới và họa tiết. Xem mẫu, quy cách và trang catalogue từng mã.",
+      "Hình ảnh được trích từ catalogue POV 2025; màu sắc thực tế cần đối chiếu mẫu. Các mẫu có hai khổ 1270 mm hoặc 1525 mm, chiều dài cuộn 30 m theo từng mã. Không có giá bán trong catalogue.",
+      "Hai mã 88214 và 88215 có ghi chú dự kiến ngừng khi hết tồn kho; cần xác nhận trước khi đặt."
     ],
     "images": [
-      "/images/catalogue/decal-pov-hyundai-sheet-2025.jpg"
+      "/images/pov-2025/88001.webp",
+      "/images/pov-2025/88294.webp",
+      "/images/pov-2025/88212.webp"
     ],
     "attributes": {},
     "uses": [
       "Văn phòng",
       "Cửa hàng"
-    ]
+    ],
+    "variantSlugs": [
+      "film-trang-tri-kinh-pov-88001",
+      "film-trang-tri-kinh-pov-88201",
+      "film-trang-tri-kinh-pov-88091",
+      "film-trang-tri-kinh-pov-88092",
+      "film-trang-tri-kinh-pov-88292",
+      "film-trang-tri-kinh-pov-88090",
+      "film-trang-tri-kinh-pov-88290",
+      "film-trang-tri-kinh-pov-88099",
+      "film-trang-tri-kinh-pov-88294",
+      "film-trang-tri-kinh-pov-88093",
+      "film-trang-tri-kinh-pov-88000",
+      "film-trang-tri-kinh-pov-88005",
+      "film-trang-tri-kinh-pov-88205",
+      "film-trang-tri-kinh-pov-88016",
+      "film-trang-tri-kinh-pov-88212",
+      "film-trang-tri-kinh-pov-88011",
+      "film-trang-tri-kinh-pov-88012",
+      "film-trang-tri-kinh-pov-88095",
+      "film-trang-tri-kinh-pov-88098",
+      "film-trang-tri-kinh-pov-88214",
+      "film-trang-tri-kinh-pov-88215",
+      "film-trang-tri-kinh-pov-88231",
+      "film-trang-tri-kinh-pov-88041"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 2
+    }
   },
   {
     "slug": "tranh-standee-pp-can-formex-kho-a3-a2",
@@ -3614,5 +3647,930 @@
       "Cắt chữ và logo",
       "Làm nền nhận diện"
     ]
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88001",
+    "name": "Film trang trí kính POV 88001 – chấm chuyển sắc",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88001",
+    "description": "Film trang trí kính POV 88001 – chấm chuyển sắc, mẫu Dot Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88001 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Dot Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88001.webp",
+      "/images/pov-2025/88001-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Dot Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 11,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88201",
+    "name": "Film trang trí kính POV 88201 – chấm chuyển sắc khổ rộng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88201",
+    "description": "Film trang trí kính POV 88201 – chấm chuyển sắc khổ rộng, mẫu Dot Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88201 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Dot Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88201.webp",
+      "/images/pov-2025/88201-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Dot Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 12,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88091",
+    "name": "Film trang trí kính POV 88091 – chấm chuyển sắc đen",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88091",
+    "description": "Film trang trí kính POV 88091 – chấm chuyển sắc đen, mẫu Dot Gradation (Black) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88091 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Dot Gradation (Black). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88091.webp",
+      "/images/pov-2025/88091-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Dot Gradation (Black)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 13,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88092",
+    "name": "Film trang trí kính POV 88092 – chuyển sắc trung tâm",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88092",
+    "description": "Film trang trí kính POV 88092 – chuyển sắc trung tâm, mẫu Center Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88092 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Center Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88092.webp",
+      "/images/pov-2025/88092-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Center Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 14,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88292",
+    "name": "Film trang trí kính POV 88292 – chuyển sắc trung tâm khổ rộng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88292",
+    "description": "Film trang trí kính POV 88292 – chuyển sắc trung tâm khổ rộng, mẫu Center Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88292 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Center Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88292.webp",
+      "/images/pov-2025/88292-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Center Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 15,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88090",
+    "name": "Film trang trí kính POV 88090 – chuyển sắc trung tâm đen",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88090",
+    "description": "Film trang trí kính POV 88090 – chuyển sắc trung tâm đen, mẫu Center Gradation (Black) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88090 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Center Gradation (Black). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88090.webp",
+      "/images/pov-2025/88090-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Center Gradation (Black)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 16,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88290",
+    "name": "Film trang trí kính POV 88290 – chuyển sắc trung tâm đen khổ rộng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88290",
+    "description": "Film trang trí kính POV 88290 – chuyển sắc trung tâm đen khổ rộng, mẫu Center Gradation (Black) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88290 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Center Gradation (Black). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88290.webp",
+      "/images/pov-2025/88290-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Center Gradation (Black)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 17,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88099",
+    "name": "Film trang trí kính POV 88099 – vệt mưa chuyển sắc",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88099",
+    "description": "Film trang trí kính POV 88099 – vệt mưa chuyển sắc, mẫu Rain Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88099 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Rain Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88099.webp",
+      "/images/pov-2025/88099-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Rain Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 18,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88294",
+    "name": "Film trang trí kính POV 88294 – kim cương chuyển sắc",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88294",
+    "description": "Film trang trí kính POV 88294 – kim cương chuyển sắc, mẫu Dia Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88294 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Dia Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88294.webp",
+      "/images/pov-2025/88294-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Dia Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 19,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88093",
+    "name": "Film trang trí kính POV 88093 – sương mờ chuyển sắc",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88093",
+    "description": "Film trang trí kính POV 88093 – sương mờ chuyển sắc, mẫu Frost Gradation trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88093 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Frost Gradation. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88093.webp",
+      "/images/pov-2025/88093-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Frost Gradation"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 20,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88000",
+    "name": "Film trang trí kính POV 88000 – trắng mờ",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88000",
+    "description": "Film trang trí kính POV 88000 – trắng mờ, mẫu White Matt trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88000 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là White Matt. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88000.webp",
+      "/images/pov-2025/88000-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "White Matt"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 21,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88005",
+    "name": "Film trang trí kính POV 88005 – chấm trắng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88005",
+    "description": "Film trang trí kính POV 88005 – chấm trắng, mẫu White Dot trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88005 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là White Dot. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88005.webp",
+      "/images/pov-2025/88005-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "White Dot"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 23,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88205",
+    "name": "Film trang trí kính POV 88205 – chấm nhỏ",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88205",
+    "description": "Film trang trí kính POV 88205 – chấm nhỏ, mẫu Pin Dot trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88205 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Pin Dot. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88205.webp",
+      "/images/pov-2025/88205-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Pin Dot"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 24,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88016",
+    "name": "Film trang trí kính POV 88016 – vệt trắng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88016",
+    "description": "Film trang trí kính POV 88016 – vệt trắng, mẫu White Drip trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88016 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là White Drip. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88016.webp",
+      "/images/pov-2025/88016-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "White Drip"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 25,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88212",
+    "name": "Film trang trí kính POV 88212 – sọc dệt",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88212",
+    "description": "Film trang trí kính POV 88212 – sọc dệt, mẫu Woven Stripe trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88212 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Woven Stripe. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88212.webp",
+      "/images/pov-2025/88212-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Woven Stripe"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 26,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88011",
+    "name": "Film trang trí kính POV 88011 – sọc trắng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88011",
+    "description": "Film trang trí kính POV 88011 – sọc trắng, mẫu GM Stripe (White) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88011 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là GM Stripe (White). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88011.webp",
+      "/images/pov-2025/88011-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "GM Stripe (White)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 27,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88012",
+    "name": "Film trang trí kính POV 88012 – sọc đen",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88012",
+    "description": "Film trang trí kính POV 88012 – sọc đen, mẫu GM Stripe (Black) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88012 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là GM Stripe (Black). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88012.webp",
+      "/images/pov-2025/88012-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "GM Stripe (Black)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 28,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88095",
+    "name": "Film trang trí kính POV 88095 – lưới trắng",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88095",
+    "description": "Film trang trí kính POV 88095 – lưới trắng, mẫu Safety Mesh (White) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88095 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Safety Mesh (White). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88095.webp",
+      "/images/pov-2025/88095-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Safety Mesh (White)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 29,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88098",
+    "name": "Film trang trí kính POV 88098 – lưới đen",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88098",
+    "description": "Film trang trí kính POV 88098 – lưới đen, mẫu Safety Mesh (Black) trong catalogue POV 2025 của Hyundae Sheet. Khổ 1270 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88098 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Safety Mesh (Black). Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1270 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88098.webp",
+      "/images/pov-2025/88098-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1270 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Safety Mesh (Black)"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 30,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88214",
+    "name": "Film trang trí kính POV 88214 – ô sọc",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88214",
+    "description": "Film trang trí kính POV 88214 – ô sọc, mẫu Stripe Tile trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88214 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Stripe Tile. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Lưu ý cung ứng: catalogue ghi dự kiến ngừng mẫu khi hết tồn kho. Cần kiểm tra lại tình trạng hàng trước khi đặt.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88214.webp",
+      "/images/pov-2025/88214-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Stripe Tile"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 31,
+      "collection": "decal-pov-hyundai-sheet-2025",
+      "note": "Catalogue ghi dự kiến ngừng mẫu khi hết tồn kho. Vui lòng xác nhận còn hàng trước khi đặt."
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88215",
+    "name": "Film trang trí kính POV 88215 – tam giác vân vải",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88215",
+    "description": "Film trang trí kính POV 88215 – tam giác vân vải, mẫu Fabric Triangle trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88215 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Fabric Triangle. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Lưu ý cung ứng: catalogue ghi dự kiến ngừng mẫu khi hết tồn kho. Cần kiểm tra lại tình trạng hàng trước khi đặt.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88215.webp",
+      "/images/pov-2025/88215-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Fabric Triangle"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 32,
+      "collection": "decal-pov-hyundai-sheet-2025",
+      "note": "Catalogue ghi dự kiến ngừng mẫu khi hết tồn kho. Vui lòng xác nhận còn hàng trước khi đặt."
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88231",
+    "name": "Film trang trí kính POV 88231 – bản đồ sao",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88231",
+    "description": "Film trang trí kính POV 88231 – bản đồ sao, mẫu Star Map trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88231 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Star Map. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết."
+    ],
+    "images": [
+      "/images/pov-2025/88231.webp",
+      "/images/pov-2025/88231-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Star Map"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 33,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
+  },
+  {
+    "slug": "film-trang-tri-kinh-pov-88041",
+    "name": "Film trang trí kính POV 88041 – chấm nhận diện kính cho chim",
+    "category": "decal-mo-dan-kinh",
+    "subcategory": "Film trang trí kính POV",
+    "brand": "Hyundae Sheet",
+    "price": null,
+    "code": "88041",
+    "description": "Film trang trí kính POV 88041 – chấm nhận diện kính cho chim, mẫu Bird Guard Window Film trong catalogue POV 2025 của Hyundae Sheet. Khổ 1525 mm, cuộn dài 30 m theo catalogue.",
+    "paragraphs": [
+      "Mẫu 88041 thuộc bộ sưu tập POV (Point of View), tên mẫu trong catalogue là Bird Guard Window Film. Hình ảnh trên trang được trích từ catalogue, dùng để tham khảo thiết kế trên kính; không phải ảnh công trình iDecal đã thi công.",
+      "Quy cách theo catalogue: khổ 1525 mm × dài 30 m/cuộn. Giá bán, cắt lẻ và tình trạng cung ứng cần xác nhận khi tư vấn.",
+      "Film nền PET dùng trên kính. Theo hướng dẫn của catalogue, ưu tiên thi công phía trong và kiểm tra bề mặt kính trước khi dán. Đối chiếu mẫu thật để xác nhận màu sắc, mức độ che tầm nhìn và hướng họa tiết.",
+      "Catalogue xếp mã 88041 vào nhóm Bird Guard Window Film, có sơ đồ bố trí chấm 50 mm. Hiệu quả nhận diện kính phụ thuộc cách lắp đặt và điều kiện thực tế; không coi đây là cam kết ngăn mọi va chạm."
+    ],
+    "images": [
+      "/images/pov-2025/88041.webp",
+      "/images/pov-2025/88041-catalogue.webp"
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1525 mm × 30 m/cuộn"
+      ],
+      "chat-lieu": [
+        "Film nền PET"
+      ],
+      "Tên mẫu catalogue": [
+        "Bird Guard Window Film"
+      ]
+    },
+    "uses": [
+      "Vách kính văn phòng",
+      "Cửa kính và cửa sổ",
+      "Kính trưng bày"
+    ],
+    "catalogue": {
+      "pdf": "/catalogues/pov-2025.pdf",
+      "page": 34,
+      "collection": "decal-pov-hyundai-sheet-2025"
+    }
   }
 ]

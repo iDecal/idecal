@@ -1,0 +1,212 @@
+{
+  "source": "2025POV_low.pdf",
+  "models": [
+    {
+      "code": "88001",
+      "name": "Dot Gradation",
+      "page": 11,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88001",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88201",
+      "name": "Dot Gradation",
+      "page": 12,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88201",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88091",
+      "name": "Dot Gradation (Black)",
+      "page": 13,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88091",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88092",
+      "name": "Center Gradation",
+      "page": 14,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88092",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88292",
+      "name": "Center Gradation",
+      "page": 15,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88292",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88090",
+      "name": "Center Gradation (Black)",
+      "page": 16,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88090",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88290",
+      "name": "Center Gradation (Black)",
+      "page": 17,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88290",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88099",
+      "name": "Rain Gradation",
+      "page": 18,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88099",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88294",
+      "name": "Dia Gradation",
+      "page": 19,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88294",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88093",
+      "name": "Frost Gradation",
+      "page": 20,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88093",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88000",
+      "name": "White Matt",
+      "page": 21,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88000",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88005",
+      "name": "White Dot",
+      "page": 23,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88005",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88205",
+      "name": "Pin Dot",
+      "page": 24,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88205",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88016",
+      "name": "White Drip",
+      "page": 25,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88016",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88212",
+      "name": "Woven Stripe",
+      "page": 26,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88212",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88011",
+      "name": "GM Stripe (White)",
+      "page": 27,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88011",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88012",
+      "name": "GM Stripe (Black)",
+      "page": 28,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88012",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88095",
+      "name": "Safety Mesh (White)",
+      "page": 29,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88095",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88098",
+      "name": "Safety Mesh (Black)",
+      "page": 30,
+      "widthMm": 1270,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88098",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88214",
+      "name": "Stripe Tile",
+      "page": 31,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88214",
+      "discontinuationNote": true
+    },
+    {
+      "code": "88215",
+      "name": "Fabric Triangle",
+      "page": 32,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88215",
+      "discontinuationNote": true
+    },
+    {
+      "code": "88231",
+      "name": "Star Map",
+      "page": 33,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88231",
+      "discontinuationNote": false
+    },
+    {
+      "code": "88041",
+      "name": "Bird Guard Window Film",
+      "page": 34,
+      "widthMm": 1525,
+      "lengthM": 30,
+      "slug": "film-trang-tri-kinh-pov-88041",
+      "discontinuationNote": false
+    }
+  ]
+}
