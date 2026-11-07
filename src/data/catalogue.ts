@@ -32,7 +32,15 @@ export interface ProductCategory {
   image: string;
   needs: { label: string; tip: string; keywords: string[] }[];
 }
-export const products: Product[] = productData;
+// CMS omits empty optional fields; keep stable defaults for catalogue rendering.
+export const products: Product[] = productData.map(product => ({
+  ...product,
+  price: product.price ?? null,
+  subcategory: product.subcategory ?? '',
+  code: product.code ?? '',
+  paragraphs: product.paragraphs ?? [],
+  uses: product.uses ?? [],
+}));
 export const productCategories: ProductCategory[] = categoryData;
 export const productsInCategory = (slug: string) => products.filter(product => product.category === slug);
 export const formatPrice = (price: number | null) => price ? `${price.toLocaleString('vi-VN')} ₫` : 'Liên hệ báo giá';

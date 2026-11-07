@@ -9,6 +9,12 @@ assert.equal(config.output.yaml.quote, 'double');
 assert.equal(config.media_folder, 'public/images/uploads');
 assert.equal(config.public_folder, '/images/uploads');
 assert.equal(new Set(config.collections.map(collection => collection.name)).size, config.collections.length);
+const catalogue = config.collections.find(collection => collection.name === 'catalogue');
+assert.equal(catalogue.file, 'src/data/products.json', 'Products must be individual CMS entries');
+assert.equal(catalogue.files, undefined, 'Do not wrap the product list in one editor');
+assert.equal(catalogue.preview_path, 'san-pham/{{fields.slug}}/');
+assert.ok(catalogue.fields.find(field => field.name === 'installationImages').fields.some(field => field.name === 'src'));
+
 
 // Ensure required fields fit the existing content, especially root JSON arrays and merged areas.
 let records = 0;
@@ -44,6 +50,14 @@ for (const collection of config.collections) {
       assert.ok(match, `Missing front matter: ${name}`);
       checkFields(collection.fields, { ...parse(match[1]), body: match[2] }, name);
     }
+  } else if (collection.file) {
+    const entries = JSON.parse(await readFile(collection.file, 'utf8'));
+    assert.ok(Array.isArray(entries) && entries.length > 0);
+    assert.equal(collection.identifier_field, 'name');
+    assert.equal(collection.delete, false);
+    assert.equal(collection.fields.find(field => field.name === 'slug').readonly, true);
+    assert.equal(new Set(entries.map(entry => entry.slug)).size, entries.length);
+    for (const entry of entries) checkFields(collection.fields, entry, entry.slug);
   } else {
     for (const file of collection.files) {
       const data = JSON.parse(await readFile(file.file, 'utf8'));

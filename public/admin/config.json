@@ -236,145 +236,158 @@
     {
       "name": "catalogue",
       "label": "Sản phẩm",
-      "description": "Cập nhật sản phẩm hiện có. Đường dẫn giữ nguyên. Không đưa ghi chú tồn kho/ngừng mẫu lên nội dung bán hàng.",
-      "files": [
+      "label_singular": "Sản phẩm",
+      "description": "Chọn từng sản phẩm để chỉnh tên, mã, giá, nội dung và ảnh. Có thể tìm theo tên hoặc mã; URL sản phẩm hiện có được giữ nguyên.",
+      "file": "src/data/products.json",
+      "identifier_field": "name",
+      "create": false,
+      "delete": false,
+      "duplicate": false,
+      "summary": "{{name}} · {{code}}",
+      "sortable_fields": [
+        "name",
+        "code",
+        "category"
+      ],
+      "preview_path": "san-pham/{{fields.slug}}/",
+      "fields": [
         {
-          "name": "products",
-          "label": "Danh sách sản phẩm",
-          "file": "src/data/products.json",
-          "fields": [
+          "name": "slug",
+          "label": "Đường dẫn sản phẩm",
+          "widget": "string",
+          "readonly": true
+        },
+        {
+          "name": "name",
+          "label": "Tên sản phẩm",
+          "widget": "string"
+        },
+        {
+          "name": "category",
+          "label": "Danh mục",
+          "widget": "select",
+          "options": [
             {
-              "name": "products",
-              "label": "Sản phẩm",
-              "widget": "list",
-              "fields": [
-                {
-                  "name": "slug",
-                  "label": "Đường dẫn sản phẩm",
-                  "widget": "string",
-                  "readonly": true
-                },
-                {
-                  "name": "name",
-                  "label": "Tên sản phẩm",
-                  "widget": "string"
-                },
-                {
-                  "name": "category",
-                  "label": "Danh mục",
-                  "widget": "select",
-                  "options": [
-                    {
-                      "label": "Decal mờ dán kính",
-                      "value": "decal-mo-dan-kinh"
-                    },
-                    {
-                      "label": "Phim cách nhiệt",
-                      "value": "phim-cach-nhiet"
-                    },
-                    {
-                      "label": "Film nội thất",
-                      "value": "film-noi-that"
-                    },
-                    {
-                      "label": "Cắt và in logo",
-                      "value": "cat-va-in-logo"
-                    },
-                    {
-                      "label": "Open time, thông báo",
-                      "value": "open-time-thong-bao"
-                    },
-                    {
-                      "label": "Quảng cáo, standee",
-                      "value": "decal-quang-cao-standee"
-                    },
-                    {
-                      "label": "Decal PVC",
-                      "value": "decal-pvc"
-                    }
-                  ]
-                },
-                {
-                  "name": "subcategory",
-                  "label": "Nhóm ứng dụng",
-                  "widget": "string",
-                  "required": false
-                },
-                {
-                  "name": "brand",
-                  "label": "Thương hiệu",
-                  "widget": "string"
-                },
-                {
-                  "name": "price",
-                  "label": "Giá tham khảo (đồng)",
-                  "widget": "number",
-                  "required": false,
-                  "value_type": "float",
-                  "min": 0
-                },
-                {
-                  "name": "code",
-                  "label": "Mã sản phẩm",
-                  "widget": "string",
-                  "required": false
-                },
-                {
-                  "name": "description",
-                  "label": "Mô tả ngắn",
-                  "widget": "text"
-                },
-                {
-                  "name": "paragraphs",
-                  "label": "Nội dung chi tiết",
-                  "widget": "list",
-                  "field": {
-                    "name": "value",
-                    "label": "Nội dung",
-                    "widget": "text"
-                  },
-                  "required": false
-                },
-                {
-                  "name": "images",
-                  "label": "Ảnh sản phẩm",
-                  "widget": "list",
-                  "field": {
-                    "name": "value",
-                    "label": "Nội dung",
-                    "widget": "image"
-                  }
-                },
-                {
-                  "name": "installationImages",
-                  "label": "Ảnh ứng dụng",
-                  "widget": "list",
-                  "field": {
-                    "name": "value",
-                    "label": "Nội dung",
-                    "widget": "image"
-                  },
-                  "required": false
-                },
-                {
-                  "name": "uses",
-                  "label": "Ứng dụng",
-                  "widget": "list",
-                  "field": {
-                    "name": "value",
-                    "label": "Nội dung",
-                    "widget": "string"
-                  },
-                  "required": false
-                }
-              ],
-              "root": true,
-              "summary": "{{fields.name}}",
-              "allow_add": false,
-              "allow_remove": false,
-              "allow_reorder": false
+              "label": "Decal mờ dán kính",
+              "value": "decal-mo-dan-kinh"
+            },
+            {
+              "label": "Phim cách nhiệt",
+              "value": "phim-cach-nhiet"
+            },
+            {
+              "label": "Film nội thất",
+              "value": "film-noi-that"
+            },
+            {
+              "label": "Cắt và in logo",
+              "value": "cat-va-in-logo"
+            },
+            {
+              "label": "Open time, thông báo",
+              "value": "open-time-thong-bao"
+            },
+            {
+              "label": "Quảng cáo, standee",
+              "value": "decal-quang-cao-standee"
+            },
+            {
+              "label": "Decal PVC",
+              "value": "decal-pvc"
             }
           ]
+        },
+        {
+          "name": "subcategory",
+          "label": "Nhóm ứng dụng",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "brand",
+          "label": "Thương hiệu",
+          "widget": "string"
+        },
+        {
+          "name": "price",
+          "label": "Giá tham khảo (đồng)",
+          "widget": "number",
+          "required": false,
+          "value_type": "float",
+          "min": 0
+        },
+        {
+          "name": "code",
+          "label": "Mã sản phẩm",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "description",
+          "label": "Mô tả ngắn",
+          "widget": "text"
+        },
+        {
+          "name": "paragraphs",
+          "label": "Nội dung chi tiết",
+          "widget": "list",
+          "field": {
+            "name": "value",
+            "label": "Nội dung",
+            "widget": "text"
+          },
+          "required": false
+        },
+        {
+          "name": "images",
+          "label": "Ảnh sản phẩm",
+          "widget": "list",
+          "field": {
+            "name": "value",
+            "label": "Nội dung",
+            "widget": "image"
+          }
+        },
+        {
+          "name": "installationImages",
+          "label": "Ảnh ứng dụng",
+          "widget": "list",
+          "required": false,
+          "fields": [
+            {
+              "name": "src",
+              "label": "Ảnh thi công",
+              "widget": "image"
+            },
+            {
+              "name": "alt",
+              "label": "Mô tả ảnh",
+              "widget": "string"
+            },
+            {
+              "name": "caption",
+              "label": "Chú thích",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "projectSlug",
+              "label": "Mã hồ sơ công trình",
+              "widget": "string",
+              "required": false
+            }
+          ]
+        },
+        {
+          "name": "uses",
+          "label": "Ứng dụng",
+          "widget": "list",
+          "field": {
+            "name": "value",
+            "label": "Nội dung",
+            "widget": "string"
+          },
+          "required": false
         }
       ]
     },

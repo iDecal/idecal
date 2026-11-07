@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
+import {parse} from 'yaml';
 const plan=JSON.parse(await readFile('docs/blog-editorial-plan.json','utf8'));
 const decode=text=>text.replace(/&#x([0-9a-f]+);/gi,(_,n)=>String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n))).replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&nbsp;',' ');
 const text=html=>decode(html.replace(/<[^>]+>/g,' ')).replace(/\s+/g,' ').trim();
@@ -15,7 +16,13 @@ for(const [slug,item] of Object.entries(plan)){
  const headings=[...body.matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/g)].map(match=>text(match[1]));
  const links=[...body.matchAll(/<a\b[^>]*href="([^\"]+)"/g)].map(match=>decode(match[1])).filter(href=>href.startsWith('/')&&!/\.(?:jpg|png|webp|avif|jpeg)(?:\?|$)/i.test(href));
  if(originals[slug]){
-  assert.equal(createHash('sha256').update(source).digest('hex'),originals[slug].sha256,`Preserved XML article: ${slug}`);
+  // CMS may reorder front matter or edit categories; preserve the original title and body.
+  const parts=source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  assert.ok(parts,`Front matter: ${slug}`);
+  const metadata=parse(parts[1]);
+  assert.equal(metadata.title,originals[slug].title,`Preserved XML title: ${slug}`);
+  assert.equal(metadata.wordpressId,originals[slug].wordpressId,`Preserved WordPress ID: ${slug}`);
+  assert.equal(createHash('sha256').update(parts[2]).digest('hex'),originals[slug].bodySha256,`Preserved XML body: ${slug}`);
   assert.equal(text(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]??''),originals[slug].title.replace(/\s+/g,' ').trim());
   audit.push({slug,preservedXml:true,words:visible.split(/\s+/).length});continue;
  }
