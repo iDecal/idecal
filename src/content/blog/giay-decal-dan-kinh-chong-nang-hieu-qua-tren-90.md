@@ -95,6 +95,6 @@ Phim dán kính màu đen cho cửa kính với khả năng che ánh sáng và t
 
 ## Tổng kết
 
-Tóm lại**, giấy dán kính chống ánh sáng** là giải pháp tiết kiệm và hiệu quả. Nó giúp bạn chống lại cái nắng gay gắt, oi bức, nhất là khi hè đến. Với 2 loại giấy dán kính hữu ích mà chúng tôi vừa giới thiệu ở trên, bạn còn chần chờ gì mà không trang hoàng ngôi nhà, văn phòng của mình bằng việc dán giấy dán kính chống ánh sáng ngay thôi nào.
+Tóm lại, giấy dán kính chống ánh sáng là giải pháp tiết kiệm và hiệu quả. Nó giúp bạn chống lại cái nắng gay gắt, oi bức, nhất là khi hè đến. Với 2 loại giấy dán kính hữu ích mà chúng tôi vừa giới thiệu ở trên, bạn còn chần chờ gì mà không trang hoàng ngôi nhà, văn phòng của mình bằng việc dán giấy dán kính chống ánh sáng ngay thôi nào.
 
-Nếu vẫn chưa biết nên chọn nơi nào để “gửi gắm niềm tin” thì **Decal dán kính iDecal**chính là lựa chọn tuyệt vời nhất. Quý khách có thể liên hệ với chúng tôi qua số Hotline **0981.851.815 – 08666.93.125** để được hỗ trợ tư vấn tận tình nhất.
+Nếu vẫn chưa biết nên chọn nơi nào để “gửi gắm niềm tin” thì **Decal dán kính iDecal**chính là lựa chọn tuyệt vời nhất. Quý khách có thể liên hệ với chúng tôi qua số Hotline **0866-077-040** để được hỗ trợ tư vấn tận tình nhất.
