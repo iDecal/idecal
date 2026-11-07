@@ -9,9 +9,9 @@ const shortDescription = descriptionWords.length > 15
   ? `${descriptionWords.slice(0, 15).join(' ').replace(/[.,;:!?–—-]+$/u, '')}…`
   : descriptionWords.join(' ');
 ---
-<article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-paper-catalogue={product.catalogue?.label?.startsWith("SOLAR") || undefined} data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
+<article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
   <a href={`/san-pham/${product.slug}`} class="relative block aspect-square overflow-hidden" aria-label={`Xem ${product.name}`}>
-    <ProductImage src={product.images[0]} alt={product.catalogue?.label?.startsWith("SOLAR") ? `Bảng thông số catalogue: ${product.name}` : product.name} />
+    <ProductImage src={product.images[0]} alt={product.name} />
     <span class="absolute left-3 top-3 rounded bg-white/60 px-2.5 py-1 text-xs font-medium text-brand-navy backdrop-blur-sm" data-product-code>{product.code}</span>
   </a>
   <div class="flex flex-1 flex-col gap-3 p-3 md:p-5">
@@ -23,7 +23,3 @@ const shortDescription = descriptionWords.length > 15
     </div>
   </div>
 </article>
-
-<style>
-:global([data-paper-catalogue] [data-product-photo]){object-fit:contain}
-</style>
