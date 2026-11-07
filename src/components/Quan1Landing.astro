@@ -8,6 +8,7 @@ import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 import {districts,districtBookingUrl} from '../data/districts';
 import '../styles/quan-1.css';
 import '../styles/district-clean.css';
+import '../styles/local-context.css';
 const district=districts.find(item=>item.slug==='quan-1')!;
 const faq=getAreaFaqs('quan-1',[{question:district.question,answer:district.answer}]);
 const booking=districtBookingUrl('quan-1');
@@ -19,6 +20,7 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
   <section class="container q1-about" set:html={data.aboutHtml}></section>
   <section class="container q1-price-layout"><div class="q1-pricing" set:html={data.pricingHtml}></div><aside class="q1-offers" set:html={data.offersHtml}></aside></section>
   <span id={data.galleryAlias} class="q1-anchor" aria-hidden="true"></span>
+  <p class="container local-context-note">{district.localContext}</p>
   <LocalInstallationPhotos areaKey="quan-1" areaName="Quận 1" heading={data.galleryTitle} headingId={data.galleryHeadingId} />
   <p class="container q1-address-note">Địa chỉ được đối chiếu theo phường/xã hiện tại; có thể kèm tên Quận 1 cũ khi gửi yêu cầu. Phạm vi, thời gian và ưu đãi được xác nhận theo hạng mục cụ thể.</p>
   <LocalAreaFaq title={faq.title} items={faq.items} />

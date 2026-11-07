@@ -8,6 +8,7 @@ import {districts,districtBookingUrl} from '../data/districts';
 import {getAreaFaqs,areaFaqSchema} from '../data/local-area-content';
 import '../styles/tan-binh.css';
 import '../styles/district-clean.css';
+import '../styles/local-context.css';
 const district=districts.find(item=>item.slug==='quan-tan-binh')!;
 const faq=getAreaFaqs(district.slug,[{question:district.question,answer:district.answer}]);
 const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Tân Bình'}},areaFaqSchema(faq.items)];
@@ -16,7 +17,8 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{
 <article class="tb-page">
 <header class="tb-hero"><div class="container"><p class="tb-eyebrow">iDecal · In ấn & thi công</p><h1>{data.heading}</h1><div class="tb-lead" set:html={data.introHtml}></div><a class="btn-primary-solid" href={districtBookingUrl(district.slug)}>Gửi ảnh và nhu cầu →</a></div></header>
 <div class="container tb-layout"><aside class="tb-outline"><details><summary>Mục lục bài viết<span aria-hidden="true">+</span></summary><div set:html={data.tocHtml}></div></details><a href="tel:0866077040" class="tb-phone">Tư vấn: 0866.077.040</a></aside><div class="tb-copy"><section class="tb-benefits" set:html={data.benefitsHtml}></section><section class="tb-company" set:html={data.companyHtml}></section><section class="tb-services" set:html={data.servicesHtml}></section><section class="tb-process" set:html={data.processHtml}></section><section class="tb-contact" set:html={data.contactHtml}></section></div></div>
-<LocalInstallationPhotos areaKey="quan-tan-binh" areaName="Tân Bình" heading={data.galleryTitle} headingId={data.galleryHeadingId} />
+<p class="container local-context-note">{district.localContext}</p>
+  <LocalInstallationPhotos areaKey="quan-tan-binh" areaName="Tân Bình" heading={data.galleryTitle} headingId={data.galleryHeadingId} />
 <div class="container tb-current"><p>Thông tin trong bài gốc được giữ nguyên. Số liên hệ hiện tại: <a href="tel:0866077040">0866.077.040</a>. Khi đặt dịch vụ, vui lòng xác nhận mã vật liệu, thời hạn bảo hành và địa chỉ phường/xã hiện tại.</p><a href={districtBookingUrl(district.slug)} class="btn-primary-solid">Trao đổi dịch vụ tại Tân Bình →</a></div>
 <LocalAreaFaq title={faq.title} items={faq.items} />
 <LocalNearbyAreas areaKey="quan-tan-binh" />

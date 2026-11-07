@@ -152,6 +152,7 @@ export const regions: Region[] = [
     theme: 'Nhà phố · Quán cà phê · Lưu trú',
     description: 'Giải pháp decal trang trí, nhận diện cửa hàng và phim cách nhiệt tại Quy Nhơn. Trao đổi nhu cầu cho nhà phố, quán cà phê, homestay và văn phòng với iDecal.',
     introduction: [
+      'Với quán cà phê ven đường Xuân Diệu hoặc cơ sở lưu trú ở Ghềnh Ráng, decal có thể tạo điểm nhận diện ở cửa mà vẫn dành khoảng kính cho cảnh quan. Phần phim giảm chói nên chọn theo hướng nắng và chỗ ngồi thực tế.',
       'Nhà phố, quán cà phê và cơ sở lưu trú tại Quy Nhơn có thể sử dụng decal để làm rõ phong cách mà vẫn giữ sự gọn gàng của mặt kính. Một phương án phù hợp cần xem đồng thời ánh sáng, tầm nhìn, màu nền và nội dung muốn thể hiện.',
       'iDecal tư vấn từ decal mờ tạo riêng tư, cắt chữ thương hiệu đến phim cách nhiệt cho các ô kính đón nắng. Hình ảnh hiện trạng và thông tin sử dụng giúp xác định hạng mục cần ưu tiên thay vì lựa chọn vật liệu chỉ theo tên gọi.',
     ],
@@ -204,6 +205,7 @@ export const regions: Region[] = [
     theme: 'Văn phòng · Khách sạn · Thương hiệu dịch vụ',
     description: 'Tư vấn decal kính, film dán nội thất và nhận diện cửa hàng tại Đà Nẵng. Giải pháp cho văn phòng, khách sạn và không gian dịch vụ; trao đổi kế hoạch cùng iDecal.',
     introduction: [
+      'Từ cửa hàng gần cầu Rồng đến không gian lưu trú quanh biển Mỹ Khê, mỗi mặt kính có một vai trò khác nhau. Có thể giữ mặt tiền gọn với logo, dùng mờ cho vách cần riêng tư và xem mẫu phim riêng ở cửa sổ đón nắng.',
       'Văn phòng, khách sạn và cửa hàng dịch vụ ở Đà Nẵng thường cần giữ sự sáng thoáng nhưng vẫn có điểm nhấn thương hiệu. Decal kính, film nội thất và chữ cắt có thể được phối hợp để làm mới không gian theo một ngôn ngữ thiết kế thống nhất.',
       'iDecal tiếp nhận thông tin công trình để tư vấn phương án và điều kiện triển khai tại Đà Nẵng. Với mặt bằng đang hoạt động, hãy chia sẻ giờ kinh doanh, khu vực ưu tiên và tiến độ mong muốn để trao đổi kế hoạch phù hợp.',
     ],
@@ -230,6 +232,7 @@ export const regions: Region[] = [
     theme: 'Văn phòng tòa nhà · Cửa hàng · Căn hộ',
     description: 'Tư vấn decal mờ văn phòng, chữ logo và film nội thất tại Hà Nội. Tiếp nhận thông tin công trình, mẫu thiết kế và nhu cầu để trao đổi phương án với iDecal.',
     introduction: [
+      'Với cửa hàng quanh hồ Hoàn Kiếm hoặc văn phòng phía hồ Tây, bố cục decal nên hợp với tỷ lệ cửa và phong cách nội thất sẵn có. Nhà có mặt tiền hẹp cần chữ dễ đọc; phòng có nhiều kính nên xem mẫu dưới cả ánh sáng ban ngày lẫn đèn tối.',
       'Văn phòng trong tòa nhà, cửa hàng mặt phố và căn hộ tại Hà Nội có những điều kiện tiếp cận và sử dụng khác nhau. Giải pháp decal cần xuất phát từ vị trí kính, mức riêng tư mong muốn và cách không gian vận hành hằng ngày.',
       'iDecal tiếp nhận yêu cầu tư vấn thiết kế, vật liệu và kế hoạch triển khai tại Hà Nội. Để trao đổi sát nhu cầu, bạn nên gửi ảnh hiện trạng, kích thước, địa chỉ và yêu cầu của ban quản lý nếu công trình nằm trong tòa nhà.',
     ],

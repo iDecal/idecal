@@ -4,9 +4,11 @@ import LocalInstallationPhotos from './LocalInstallationPhotos.astro';
 import LocalNearbyAreas from './LocalNearbyAreas.astro';
 import data from '../data/quan-2-original.json';
 import {areaFaqSchema} from '../data/local-area-content';
-import {districtBookingUrl} from '../data/districts';
+import {districts,districtBookingUrl} from '../data/districts';
 import '../styles/quan-2.css';
 import '../styles/district-clean.css';
+import '../styles/local-context.css';
+const district=districts.find(item=>item.slug==='quan-2')!;
 const questions=data.faqGroups.flatMap(group=>group.items);
 const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceType:'Decal dán kính, phim cách nhiệt và film nội thất',provider:{'@id':'https://idecal.vn/#organization'},areaServed:{'@type':'Place',name:'Khu vực Quận 2'}},areaFaqSchema(questions)];
 ---
@@ -15,6 +17,7 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
   <header class="q2-intro"><div class="container" set:html={data.heroHtml}></div></header>
   <section class="container q2-needs" set:html={data.needsHtml}></section>
   <section class="q2-benefits"><div class="container" set:html={data.benefitsHtml}></div></section>
+  <p class="container local-context-note">{district.localContext}</p>
   <LocalInstallationPhotos areaKey="quan-2" areaName="Quận 2" heading={data.galleryTitle} headingId={data.galleryHeadingId} />
   <section id="cau-hoi" class="container q2-faq"><h2 id={data.faqHeadingId}>{data.faqTitle}</h2><div class="q2-faq-groups">{data.faqGroups.map(group=><div><h3>{group.title}</h3>{group.items.map(item=><details id={item.id}><summary>{item.question}<span aria-hidden="true">+</span></summary><div class="q2-answer" set:html={item.answerHtml}></div></details>)}</div>)}</div></section>
   <aside class="container q2-current-note"><p>Đối chiếu địa bàn: các phường An Khánh, Bình Trưng và Cát Lái thuộc khu vực Quận 2 cũ. Số phường và các thông tin dịch vụ trong bài gốc được giữ nguyên; khi đặt dịch vụ, vui lòng gửi địa chỉ phường/xã hiện tại để xác nhận vị trí, thời gian, vật liệu và điều kiện bảo hành.</p><a href="/khu-vuc/tp-hcm#phuong-xa">Tra cứu phường hiện tại →</a></aside>

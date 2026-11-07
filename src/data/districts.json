@@ -11,7 +11,8 @@
       "office",
       "ads",
       "heat"
-    ]
+    ],
+    "localContext": "Quanh chợ Bến Thành và phố đi bộ Nguyễn Huệ, mặt tiền cửa hàng cần dễ nhận ra mà vẫn thoáng tầm nhìn. Logo và giờ mở cửa có thể đặt gọn trên kính, dành phần còn lại cho trưng bày và ánh sáng."
   },
   {
     "slug": "quan-2",
@@ -25,7 +26,8 @@
       "office",
       "heat",
       "ads"
-    ]
+    ],
+    "localContext": "Với căn hộ ở Thảo Điền hoặc không gian làm việc tại Thủ Thiêm, có thể ưu tiên giữ tầm nhìn qua kính, rồi xử lý riêng phần bị chói và phần cần che nhìn. Mẫu phim nên được xem ngay trên ô kính sử dụng thay vì chỉ chọn theo màu."
   },
   {
     "slug": "quan-3",
@@ -39,7 +41,8 @@
       "office",
       "interior",
       "heat"
-    ]
+    ],
+    "localContext": "Ở những tuyến phố quanh Hồ Con Rùa hay đường Nguyễn Đình Chiểu, cửa hàng và văn phòng có thể nằm trong cùng một căn nhà. Bố cục decal nên phân biệt rõ phần nhận diện ở tầng trệt với vùng riêng tư của phòng làm việc phía trên."
   },
   {
     "slug": "quan-4",
@@ -53,7 +56,8 @@
       "ads",
       "office",
       "heat"
-    ]
+    ],
+    "localContext": "Với mặt bằng quanh chợ Xóm Chiếu và đường Vĩnh Khánh, tên cửa hàng và giờ mở cửa nên được đọc rõ khi khách đi ngang. Một khoảng kính trong cạnh lối vào giúp nhìn thấy không gian bên trong mà không cần phủ kín quảng cáo."
   },
   {
     "slug": "quan-5",
@@ -67,7 +71,8 @@
       "ads",
       "office",
       "interior"
-    ]
+    ],
+    "localContext": "Không khí buôn bán của Chợ Lớn, quanh chợ An Đông và đường Trần Hưng Đạo, gợi cách làm mặt kính rõ thông tin nhưng có khoảng nghỉ. Nếu dùng cả chữ Việt và chữ Hoa, nên duyệt kỹ từng dòng và cân đối cỡ chữ trước khi cắt decal."
   },
   {
     "slug": "quan-6",
@@ -81,7 +86,8 @@
       "ads",
       "interior",
       "heat"
-    ]
+    ],
+    "localContext": "Với cửa hàng quanh chợ Bình Tây và trục Hậu Giang, phần kính trưng bày nên dành chỗ cho sản phẩm. Tên thương hiệu, ngành hàng và giờ mở cửa có thể gom thành một cụm gọn, dễ đọc từ vỉa hè."
   },
   {
     "slug": "quan-7",
@@ -109,9 +115,11 @@
           "heat",
           "interior",
           "office"
-        ]
+        ],
+        "localContext": "Với nhà ở dọc đường Huỳnh Tấn Phát hoặc văn phòng trong khu vực Hiệp Phước, hãy gửi ảnh từng hướng cửa và vị trí cần giữ sáng. Nội dung được tư vấn chung trên trang Quận 7, còn địa chỉ và điều kiện thi công vẫn xác nhận theo công trình tại Nhà Bè."
       }
-    ]
+    ],
+    "localContext": "Từ khu Phú Mỹ Hưng đến các mặt bằng quanh SECC, kính căn hộ, văn phòng và showroom có cách sử dụng khác nhau. Có thể giữ phần kính nhìn ra cảnh quan, bố trí logo ở lối vào và chọn phim giảm chói riêng cho hướng chịu nắng."
   },
   {
     "slug": "quan-8",
@@ -125,7 +133,8 @@
       "heat",
       "ads",
       "office"
-    ]
+    ],
+    "localContext": "Dọc kênh Đôi và khu bến Bình Đông, một mặt tiền có thể vừa là cửa hàng vừa là lối vào nhà. Khi chia mảng decal, nên giữ khoảng nhìn ở cửa ra vào và tách phần quảng cáo khỏi vùng kính cần riêng tư."
   },
   {
     "slug": "quan-10",
@@ -139,7 +148,8 @@
       "office",
       "ads",
       "heat"
-    ]
+    ],
+    "localContext": "Quanh đường Sư Vạn Hạnh và khu Việt Nam Quốc Tự, với mặt bằng dùng làm phòng khám, lớp học hoặc cửa hàng, nên phân biệt rõ biển tên bên ngoài và vùng che nhìn bên trong. Dải mờ được chọn theo chỗ ngồi thực tế để không làm phòng tối hơn cần thiết."
   },
   {
     "slug": "quan-11",
@@ -153,7 +163,8 @@
       "ads",
       "interior",
       "office"
-    ]
+    ],
+    "localContext": "Với cửa hàng trên đường Lạc Long Quân hoặc quanh Đầm Sen, có thể giữ logo cố định và dành một ô kính riêng cho chương trình theo mùa. Cách chia này giúp thay thông tin mà ít tác động tới phần nhận diện lâu dài."
   },
   {
     "slug": "quan-12",
@@ -167,7 +178,8 @@
       "office",
       "heat",
       "ads"
-    ]
+    ],
+    "localContext": "Với công trình quanh Công viên phần mềm Quang Trung hoặc trục Hà Huy Giáp, hãy gửi ảnh tổng thể từng dãy kính trước khi chia mẫu. Vách phòng họp cần riêng tư, trong khi mặt tiền và ô kính đón nắng cần được xem theo công năng riêng."
   },
   {
     "slug": "quan-tan-binh",
@@ -181,7 +193,8 @@
       "office",
       "ads",
       "interior"
-    ]
+    ],
+    "localContext": "Với văn phòng quanh sân bay Tân Sơn Nhất hoặc cửa hàng gần chợ Tân Bình, logo trên kính cần dễ nhận biết ở đúng khoảng cách khách tiếp cận. Khi thi công trong tòa nhà đang hoạt động, nên thống nhất trước giờ vận chuyển vật tư và lối ra vào."
   },
   {
     "slug": "quan-binh-tan",
@@ -195,7 +208,8 @@
       "office",
       "ads",
       "heat"
-    ]
+    ],
+    "localContext": "Với mặt bằng gần Aeon Mall Bình Tân hoặc khu công nghiệp Tân Tạo, nhu cầu có thể là nhận diện cửa hàng hoặc phân chia văn phòng trong nhà xưởng. Cần xem riêng ánh sáng, bụi và nhịp hoạt động ở vị trí dán để chọn vật liệu và giờ làm phù hợp."
   },
   {
     "slug": "quan-go-vap",
@@ -209,7 +223,8 @@
       "heat",
       "ads",
       "interior"
-    ]
+    ],
+    "localContext": "Quanh chợ Hạnh Thông Tây và trục Quang Trung, mặt kính cửa hàng nên có một điểm nhận diện chính thay vì nhiều dòng chữ cùng nổi bật. Với nhà ở phía sau hoặc tầng trên, có thể chọn mức che nhìn riêng theo từng ô cửa."
   },
   {
     "slug": "quan-phu-nhuan",
@@ -223,7 +238,8 @@
       "office",
       "interior",
       "ads"
-    ]
+    ],
+    "localContext": "Với văn phòng trên đường Phan Xích Long hoặc gần ngã tư Phú Nhuận, dải mờ có thể tập trung ở vùng nhìn vào bàn làm việc, còn cửa ra vào giữ logo và chỉ dẫn gọn. Cách bố trí cần tính cả tầm nhìn từ hành lang lẫn bên trong phòng."
   },
   {
     "slug": "quan-binh-thanh",
@@ -237,7 +253,8 @@
       "heat",
       "office",
       "ads"
-    ]
+    ],
+    "localContext": "Với căn hộ quanh Vinhomes Central Park hoặc văn phòng trên đường Điện Biên Phủ, nên xem mẫu phim theo hướng kính và nhu cầu ngắm cảnh. Riêng phần kính cao cần làm rõ khả năng thao tác từ trong nhà và quy định của ban quản lý."
   },
   {
     "slug": "quan-tan-phu",
@@ -251,7 +268,8 @@
       "ads",
       "office",
       "interior"
-    ]
+    ],
+    "localContext": "Với shop quanh Aeon Mall Tân Phú Celadon hoặc dọc đường Tân Sơn Nhì, bộ decal nên thống nhất màu và kiểu chữ nhưng điều chỉnh bố cục cho từng khổ cửa. Khoảng kính trưng bày và lối vào được giữ thoáng để khách dễ quan sát."
   },
   {
     "slug": "thanh-pho-thu-duc",
@@ -265,7 +283,8 @@
       "office",
       "heat",
       "ads"
-    ]
+    ],
+    "localContext": "Từ khu vực chợ Thủ Đức đến Khu Công nghệ cao, tên Thủ Đức bao quát nhiều vị trí có điều kiện tiếp cận khác nhau. Hãy kèm điểm bản đồ và ảnh công trình để trao đổi đúng phần kính cần dán, giờ ra vào và quy mô thực hiện."
   },
   {
     "slug": "huyen-hoc-mon",
@@ -279,7 +298,8 @@
       "heat",
       "ads",
       "office"
-    ]
+    ],
+    "localContext": "Với cửa hàng quanh chợ Hóc Môn hoặc công trình gần di tích Ngã Ba Giồng, có thể gửi thêm điểm bản đồ để dễ xác định đường vào. Ảnh mặt tiền nên chụp cả mái che và khoảng sân trước, giúp xem vùng nắng chiếu và cách tiếp cận kính."
   },
   {
     "slug": "huyen-cu-chi",
@@ -293,7 +313,8 @@
       "heat",
       "office",
       "ads"
-    ]
+    ],
+    "localContext": "Với công trình ở khu vực thường được nhắc đến cùng địa đạo Củ Chi hay Bến Dược, hãy gửi vị trí cụ thể thay vì chỉ tên địa danh. Nếu có nhiều khu nhà, nên gom ảnh và đánh số từng hạng mục để trao đổi lịch khảo sát cùng một đợt."
   },
   {
     "slug": "huyen-binh-chanh",
@@ -307,7 +328,8 @@
       "office",
       "heat",
       "ads"
-    ]
+    ],
+    "localContext": "Với nhà ở quanh khu Trung Sơn hoặc công trình gần chợ Bình Chánh, cần xem cả hướng cửa và tiến độ hoàn thiện trước khi chọn ngày dán. Phần kính chỉ nên thi công khi bề mặt đã sạch và các việc sơn, khoan xung quanh được phối hợp ổn thỏa."
   },
   {
     "slug": "huyen-can-gio",
@@ -321,6 +343,7 @@
       "heat",
       "ads",
       "interior"
-    ]
+    ],
+    "localContext": "Ở khu vực biển 30/4 và Cần Thạnh, kính của nhà ở hoặc cơ sở lưu trú cần được xem theo mức tiếp xúc nắng, hơi ẩm và nước. Nên phân biệt rõ mặt dán trong nhà với vị trí ngoài trời trước khi chọn decal hoặc phim."
   }
 ]
