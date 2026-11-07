@@ -15,3 +15,5 @@
 - Quận 3, Quận 4 và Tân Bình dùng các bố cục riêng (`Quan3Landing`, `Quan4Landing`, `TanBinhLanding`) và dữ liệu HTML gốc trong các tệp `*-original.json`. Giữ nguyên nội dung biên tập, ảnh, đề mục, URL theo `district-routes.json`; chỉ bổ sung ghi chú hiện tại bên ngoài đoạn gốc. Mục lục Tân Bình đóng mặc định. Ảnh minh họa không được gán thành ảnh thi công thực tế của địa bàn.
 
 - Thiết kế trang quận/huyện: ưu tiên nền trắng, ít viền/khối màu và nhãn trang trí, chữ phân cấp rõ, ảnh cân đối. Dùng `district-clean.css` để thống nhất nhịp trình bày; vẫn giữ bố cục riêng của các bài nhập gốc, không cắt nội dung hoặc ép về cùng mẫu.
+
+- Không hiển thị thông tin tồn kho, hết hàng, ngừng mẫu hoặc yêu cầu xác nhận tình trạng cung ứng trên trang sản phẩm; giữ các ghi chú quản lý hàng ở tài liệu nội bộ.
