@@ -95,6 +95,22 @@
       "heat",
       "office",
       "interior"
+    ],
+    "mergedAreas": [
+      {
+        "slug": "huyen-nha-be",
+        "name": "Nhà Bè",
+        "group": "Đông & Nam",
+        "intro": "Với nhà ở và không gian sinh hoạt có nhiều cửa kính ở Nhà Bè, cần xác định phòng nào cần giữ sáng, phòng nào cần che tầm nhìn. Film cách nhiệt và film làm mới nội thất được chọn theo hai bề mặt khác nhau.",
+        "siteNote": "Gửi ảnh theo từng phòng, hướng cửa và tình trạng nền nội thất nếu muốn thực hiện nhiều hạng mục trong cùng đợt.",
+        "question": "Có thể dùng một mẫu phim cho mọi phòng không?",
+        "answer": "Có thể cân nhắc, nhưng cần xem hướng nắng, nhu cầu nhìn ra ngoài và loại kính từng phòng. Màu giống nhau không có nghĩa mọi vị trí đều cho cùng hiệu ứng.",
+        "services": [
+          "heat",
+          "interior",
+          "office"
+        ]
+      }
     ]
   },
   {
@@ -277,20 +293,6 @@
       "heat",
       "office",
       "ads"
-    ]
-  },
-  {
-    "slug": "huyen-nha-be",
-    "name": "Nhà Bè",
-    "group": "Đông & Nam",
-    "intro": "Với nhà ở và không gian sinh hoạt có nhiều cửa kính ở Nhà Bè, cần xác định phòng nào cần giữ sáng, phòng nào cần che tầm nhìn. Film cách nhiệt và film làm mới nội thất được chọn theo hai bề mặt khác nhau.",
-    "siteNote": "Gửi ảnh theo từng phòng, hướng cửa và tình trạng nền nội thất nếu muốn thực hiện nhiều hạng mục trong cùng đợt.",
-    "question": "Có thể dùng một mẫu phim cho mọi phòng không?",
-    "answer": "Có thể cân nhắc, nhưng cần xem hướng nắng, nhu cầu nhìn ra ngoài và loại kính từng phòng. Màu giống nhau không có nghĩa mọi vị trí đều cho cùng hiệu ứng.",
-    "services": [
-      "heat",
-      "interior",
-      "office"
     ]
   },
   {

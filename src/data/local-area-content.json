@@ -94,7 +94,7 @@
     ]
   },
   "quan-7": {
-    "title": "Câu hỏi về Decal và phim cách nhiệt Quận 7",
+    "title": "Câu hỏi về Decal và phim cách nhiệt Quận 7, Nhà Bè",
     "items": [
       {
         "question": "Căn hộ ở Quận 7 cần giảm chói nhưng vẫn giữ sáng nên chọn phim thế nào?",
@@ -103,12 +103,23 @@
       {
         "question": "Dán mờ phòng họp có thay thế phim chống nóng không?",
         "answer": "Decal mờ chủ yếu điều chỉnh tầm nhìn, còn hiệu quả giảm nhiệt cần xem thông số của từng vật liệu. Nếu văn phòng tại Quận 7 cần cả hai, hãy nêu riêng yêu cầu che nhìn và giảm nắng để được tư vấn phương án phù hợp."
+      },
+      {
+        "question": "Có thể dùng một mẫu phim cho mọi phòng không?",
+        "answer": "Có thể cân nhắc, nhưng cần xem hướng nắng, nhu cầu nhìn ra ngoài và loại kính từng phòng. Màu giống nhau không có nghĩa mọi vị trí đều cho cùng hiệu ứng."
+      },
+      {
+        "question": "Cửa kính các phòng ở Nhà Bè có nên dùng cùng một mã phim?",
+        "answer": "Cần so sánh hướng cửa, ánh sáng và mục đích của từng phòng. Phòng làm việc, phòng ngủ và cửa cần nhìn rõ ra ngoài có thể yêu cầu độ truyền sáng khác nhau; chọn theo vị trí thực tế thay vì chỉ đồng nhất màu."
+      },
+      {
+        "question": "Vách kính phòng tắm nên chọn Decal như thế nào?",
+        "answer": "Cần xem mức che nhìn, độ ẩm, khả năng tiếp xúc nước và hướng dẫn sử dụng của vật liệu. Gửi ảnh cả hai mặt kính tại công trình Nhà Bè để đánh giá vùng dán, mép keo và cách vệ sinh phù hợp."
       }
     ],
     "nearby": [
       "quan-4",
       "quan-8",
-      "huyen-nha-be",
       "thanh-pho-thu-duc"
     ]
   },
@@ -356,24 +367,6 @@
       "quan-12"
     ]
   },
-  "huyen-nha-be": {
-    "title": "Hỏi đáp về phim kính và Decal tại Nhà Bè",
-    "items": [
-      {
-        "question": "Cửa kính các phòng ở Nhà Bè có nên dùng cùng một mã phim?",
-        "answer": "Cần so sánh hướng cửa, ánh sáng và mục đích của từng phòng. Phòng làm việc, phòng ngủ và cửa cần nhìn rõ ra ngoài có thể yêu cầu độ truyền sáng khác nhau; chọn theo vị trí thực tế thay vì chỉ đồng nhất màu."
-      },
-      {
-        "question": "Vách kính phòng tắm nên chọn Decal như thế nào?",
-        "answer": "Cần xem mức che nhìn, độ ẩm, khả năng tiếp xúc nước và hướng dẫn sử dụng của vật liệu. Gửi ảnh cả hai mặt kính tại công trình Nhà Bè để đánh giá vùng dán, mép keo và cách vệ sinh phù hợp."
-      }
-    ],
-    "nearby": [
-      "quan-7",
-      "huyen-binh-chanh",
-      "huyen-can-gio"
-    ]
-  },
   "huyen-binh-chanh": {
     "title": "Những câu hỏi khi đặt Decal tại Bình Chánh",
     "items": [
@@ -389,7 +382,7 @@
     "nearby": [
       "quan-binh-tan",
       "quan-8",
-      "huyen-nha-be",
+      "quan-7",
       "huyen-hoc-mon"
     ]
   },
@@ -406,8 +399,8 @@
       }
     ],
     "nearby": [
-      "huyen-nha-be",
-      "quan-7"
+      "quan-7",
+      "huyen-binh-chanh"
     ]
   },
   "tp-hcm": {

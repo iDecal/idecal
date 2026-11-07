@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 const config=JSON.parse(await readFile('src/data/local-area-content.json','utf8'));
-assert.equal(Object.keys(config).length,31);assert.equal(new Set(Object.values(config).map(area=>area.title)).size,31);
+assert.equal(Object.keys(config).length,30);assert.equal(new Set(Object.values(config).map(area=>area.title)).size,30);
 const districts=JSON.parse(await readFile('src/data/districts.json','utf8'));
 const restoredRoutes=JSON.parse(await readFile('src/data/district-routes.json','utf8'));
 const decode=value=>value.replace(/&#x([0-9a-f]+);/gi,(_,v)=>String.fromCodePoint(parseInt(v,16))).replace(/&#(\d+);/g,(_,v)=>String.fromCodePoint(Number(v))).replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&nbsp;',' ');
@@ -17,4 +17,4 @@ for(const [key,area] of Object.entries(config)){
  assert.ok(area.nearby.length>=2&&area.nearby.length<=4);assert.ok(!area.nearby.includes(key));assert.equal(new Set(area.nearby).size,area.nearby.length);for(const neighbor of area.nearby)assert.ok(config[neighbor]);
  assert.ok(html.includes('local-nearby-areas'));
 }
-console.log(`Local FAQ passed: 31 unique headings, ${questions} visible answers matching FAQ schema, no related-post sections and curated cross-links.`);
+console.log(`Local FAQ passed: 30 unique headings, ${questions} visible answers matching FAQ schema, no related-post sections and curated cross-links.`);

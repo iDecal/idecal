@@ -685,8 +685,8 @@
 /thi-cong-decal/huyen-hoc-mon/ /khu-vuc/tp-hcm/huyen-hoc-mon/ 301
 /thi-cong-decal/huyen-cu-chi /khu-vuc/tp-hcm/huyen-cu-chi/ 301
 /thi-cong-decal/huyen-cu-chi/ /khu-vuc/tp-hcm/huyen-cu-chi/ 301
-/thi-cong-decal/huyen-nha-be /khu-vuc/tp-hcm/huyen-nha-be/ 301
-/thi-cong-decal/huyen-nha-be/ /khu-vuc/tp-hcm/huyen-nha-be/ 301
+/thi-cong-decal/huyen-nha-be /khu-vuc/tp-hcm/quan-7/ 301
+/thi-cong-decal/huyen-nha-be/ /khu-vuc/tp-hcm/quan-7/ 301
 /thi-cong-decal/huyen-binh-chanh /khu-vuc/tp-hcm/huyen-binh-chanh/ 301
 /thi-cong-decal/huyen-binh-chanh/ /khu-vuc/tp-hcm/huyen-binh-chanh/ 301
 /thi-cong-decal/huyen-can-gio /khu-vuc/tp-hcm/huyen-can-gio/ 301
@@ -723,10 +723,10 @@
 /thi-cong-decal/binh-tan/ /khu-vuc/tp-hcm/quan-binh-tan/ 301
 /khu-vuc/tp-hcm/binh-tan /khu-vuc/tp-hcm/quan-binh-tan/ 301
 /khu-vuc/tp-hcm/binh-tan/ /khu-vuc/tp-hcm/quan-binh-tan/ 301
-/thi-cong-decal/nha-be /khu-vuc/tp-hcm/huyen-nha-be/ 301
-/thi-cong-decal/nha-be/ /khu-vuc/tp-hcm/huyen-nha-be/ 301
-/khu-vuc/tp-hcm/nha-be /khu-vuc/tp-hcm/huyen-nha-be/ 301
-/khu-vuc/tp-hcm/nha-be/ /khu-vuc/tp-hcm/huyen-nha-be/ 301
+/thi-cong-decal/nha-be /khu-vuc/tp-hcm/quan-7/ 301
+/thi-cong-decal/nha-be/ /khu-vuc/tp-hcm/quan-7/ 301
+/khu-vuc/tp-hcm/nha-be /khu-vuc/tp-hcm/quan-7/ 301
+/khu-vuc/tp-hcm/nha-be/ /khu-vuc/tp-hcm/quan-7/ 301
 /thi-cong-decal/can-gio /khu-vuc/tp-hcm/huyen-can-gio/ 301
 /thi-cong-decal/can-gio/ /khu-vuc/tp-hcm/huyen-can-gio/ 301
 /khu-vuc/tp-hcm/can-gio /khu-vuc/tp-hcm/huyen-can-gio/ 301
@@ -782,3 +782,6 @@
 /film-trang-tri-kinh-pov-88215 /san-pham/film-trang-tri-kinh-pov-88215/ 301
 /film-trang-tri-kinh-pov-88231 /san-pham/film-trang-tri-kinh-pov-88231/ 301
 /film-trang-tri-kinh-pov-88041 /san-pham/film-trang-tri-kinh-pov-88041/ 301
+
+/khu-vuc/tp-hcm/huyen-nha-be /khu-vuc/tp-hcm/quan-7/ 301
+/khu-vuc/tp-hcm/huyen-nha-be/ /khu-vuc/tp-hcm/quan-7/ 301

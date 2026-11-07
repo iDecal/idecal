@@ -6,16 +6,16 @@ import originalQuan1 from './quan-1-original.json';
 import originalQuan2 from './quan-2-original.json';
 import originalTanBinh from './quan-tan-binh-original.json';
 import originalQuan12 from './quan-12-original.json';
-export const photoAreas=[...regions.map(region=>({key:region.slug,name:region.shortName,url:`/khu-vuc/${region.slug}`,type:'region' as const})),...districts.map(district=>({key:district.slug,name:district.name,url:districtUrl(district.slug),type:'district' as const}))];
+export const photoAreas=[...regions.map(region=>({key:region.slug,name:region.shortName,url:`/khu-vuc/${region.slug}`,type:'region' as const})),...districts.flatMap(district=>[district,...(district.mergedAreas??[])]).map(district=>({key:district.slug,name:district.name,url:districtUrl(district.slug),type:'district' as const}))];
 export interface LocalPhoto {src:string;alt:string;caption:string;area:string;}
 const root=path.resolve('public/images/khu-vuc');
 const extensions=/\.(?:jpe?g|png|webp|avif)$/i;
 export async function getLocalPhotos(key:string):Promise<LocalPhoto[]>{
  const area=photoAreas.find(item=>item.key===key);if(!area)return [];
- const keys=key==='tp-hcm'?[key,...districts.map(item=>item.slug)]:[key];
+ const keys=key==='tp-hcm'?[key,...districts.flatMap(item=>[item.slug,...(item.mergedAreas??[]).map(area=>area.slug)])]:[key,...(districts.find(item=>item.slug===key)?.mergedAreas??[]).map(area=>area.slug)];
  const photos:LocalPhoto[]=[];
  for(const areaKey of keys){
-  const item=photoAreas.find(item=>item.key===areaKey)!;const folder=path.join(root,areaKey);
+  const item=photoAreas.find(item=>item.key===areaKey)??districts.flatMap(district=>district.mergedAreas??[]).find(area=>area.slug===areaKey)!;const folder=path.join(root,areaKey);
   let files:string[];try{files=await readdir(folder);}catch(error){if((error as NodeJS.ErrnoException).code==='ENOENT')continue;throw error;}
   let captions:Record<string,{caption?:string;alt?:string}>={};
   try{captions=JSON.parse(await readFile(path.join(folder,'captions.json'),'utf8'));}catch(error){if((error as NodeJS.ErrnoException).code!=='ENOENT')throw new Error(`Kiểm tra captions.json trong thư mục ảnh ${areaKey}: ${String(error)}`);}
