@@ -1,4 +1,5 @@
 ---
+import regionContext from '../../data/region-context.json';
 import LocalInstallationPhotos from '../../components/LocalInstallationPhotos.astro';
 import LocalAreaFaq from '../../components/LocalAreaFaq.astro';
 import LocalNearbyAreas from '../../components/LocalNearbyAreas.astro';
@@ -54,7 +55,7 @@ const steps = [
   <section class="container py-14 md:py-20" aria-labelledby="local-needs-title">
     <div class="mb-10 max-w-4xl">
       <h2 id="local-needs-title" class="brand-heading">Giải pháp phù hợp với không gian tại {region.name}</h2>
-      {region.introduction.map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}
+      {region.introduction.map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}<p class="leading-relaxed">{regionContext[region.slug as keyof typeof regionContext]}</p>
     </div>
     <div class="grid gap-6 md:grid-cols-3">
       {region.needs.map((need, index) => (

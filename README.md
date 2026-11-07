@@ -38,6 +38,10 @@ Hệ màu dựa trên hai bản thiết kế HTML cũ: xem [bảng màu và các
 - Ảnh tĩnh ở `public/images`. Các ảnh còn thiếu dùng `image-placeholder.svg` có nhãn “Hình ảnh đang cập nhật”; thay bằng ảnh thật khi có tư liệu.
 - Cấu hình tên miền chính tại `astro.config.mjs` (`https://idecal.vn`).
 
+## Quản lý nội dung
+
+Mở `/admin/` trên bản web hoặc `/admin/index.html` khi chạy máy chủ phát triển. Hướng dẫn đăng nhập tại `/quan-ly-noi-dung/`; cấu hình, quyền GitHub và phạm vi biểu mẫu xem [quản lý nội dung CMS](docs/content-management.md). Không đặt token trong repository hoặc cấu hình build.
+
 ## Triển khai Cloudflare Pages
 
 Build command: `npm run build`. Output directory: `dist`.

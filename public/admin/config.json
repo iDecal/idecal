@@ -1,0 +1,2423 @@
+{
+  "$schema": "https://unpkg.com/@sveltia/cms@0.261.0/schema/sveltia-cms.json",
+  "backend": {
+    "name": "github",
+    "repo": "iDecal/idecal",
+    "branch": "main",
+    "auth_methods": [
+      "token"
+    ]
+  },
+  "app_title": "iDecal · Quản lý nội dung",
+  "site_url": "https://idecal.pages.dev",
+  "display_url": "https://idecal.pages.dev",
+  "logo_url": "https://idecal.pages.dev/images/idecal-logo.png",
+  "media_folder": "public/images/uploads",
+  "public_folder": "/images/uploads",
+  "output": {
+    "omit_empty_optional_fields": true,
+    "yaml": {
+      "quote": "double"
+    }
+  },
+  "collections": [
+    {
+      "name": "blog",
+      "label": "Bài viết",
+      "label_singular": "Bài viết",
+      "description": "Chỉnh sửa hoặc thêm bài. Giữ URL và nội dung gốc khi chưa có yêu cầu thay đổi.",
+      "folder": "src/content/blog",
+      "create": true,
+      "delete": false,
+      "duplicate": false,
+      "slug": "{{slug}}",
+      "preview_path": "blog/{{slug}}/",
+      "summary": "{{title}}",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Tiêu đề",
+          "widget": "string"
+        },
+        {
+          "name": "description",
+          "label": "Mô tả",
+          "widget": "text"
+        },
+        {
+          "name": "pubDate",
+          "label": "Ngày đăng",
+          "widget": "datetime",
+          "format": "YYYY-MM-DDTHH:mm:ssZ"
+        },
+        {
+          "name": "updatedDate",
+          "label": "Ngày cập nhật",
+          "widget": "datetime",
+          "required": false,
+          "format": "YYYY-MM-DDTHH:mm:ssZ"
+        },
+        {
+          "name": "category",
+          "label": "Tên chuyên mục",
+          "widget": "string",
+          "default": "Hướng dẫn"
+        },
+        {
+          "name": "categorySlug",
+          "label": "Chuyên mục",
+          "widget": "select",
+          "required": false,
+          "options": [
+            {
+              "label": "Hướng dẫn",
+              "value": "huong-dan"
+            },
+            {
+              "label": "So sánh vật liệu",
+              "value": "so-sanh-vat-lieu"
+            },
+            {
+              "label": "Mẫu thiết kế",
+              "value": "mau-thiet-ke"
+            },
+            {
+              "label": "Báo giá",
+              "value": "bao-gia"
+            },
+            {
+              "label": "Tin khuyến mãi",
+              "value": "tin-khuyen-mai"
+            }
+          ]
+        },
+        {
+          "name": "categories",
+          "label": "Nhãn chuyên mục",
+          "widget": "list",
+          "field": {
+            "name": "value",
+            "label": "Nội dung",
+            "widget": "string"
+          },
+          "required": false
+        },
+        {
+          "name": "author",
+          "label": "Tác giả",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "image",
+          "label": "Ảnh đại diện",
+          "widget": "image",
+          "default": "/images/idecal-logo.png"
+        },
+        {
+          "name": "seoTitle",
+          "label": "Tiêu đề SEO",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "seoDescription",
+          "label": "Mô tả SEO",
+          "widget": "text",
+          "required": false
+        },
+        {
+          "name": "focusKeyword",
+          "label": "Từ khóa chính",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "body",
+          "label": "Nội dung",
+          "widget": "markdown",
+          "modes": [
+            "raw",
+            "rich_text"
+          ],
+          "hint": "Giữ nguyên nội dung và đề mục bài nhập gốc khi chưa có yêu cầu chỉnh sửa. Không đổi tên tệp bài cũ để giữ URL."
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "label": "Hồ sơ công trình",
+      "label_singular": "Công trình",
+      "folder": "src/content/projects",
+      "create": true,
+      "delete": false,
+      "duplicate": false,
+      "preview_path": "du-an/{{slug}}/",
+      "fields": [
+        {
+          "name": "title",
+          "label": "Tên công trình",
+          "widget": "string"
+        },
+        {
+          "name": "client",
+          "label": "Khách hàng",
+          "widget": "string",
+          "default": "Khách hàng iDecal"
+        },
+        {
+          "name": "category",
+          "label": "Loại công trình",
+          "widget": "select",
+          "options": [
+            "Văn phòng",
+            "Nhà ở dân dụng",
+            "Bệnh viện",
+            "Trung tâm thương mại",
+            "Showroom",
+            "Phòng khám",
+            "Khách sạn & nhà hàng",
+            "Trường học",
+            "Sự kiện",
+            "Khác",
+            "Căn hộ"
+          ]
+        },
+        {
+          "name": "image",
+          "label": "Ảnh đại diện",
+          "widget": "image"
+        },
+        {
+          "name": "description",
+          "label": "Mô tả",
+          "widget": "text"
+        },
+        {
+          "name": "pubDate",
+          "label": "Ngày đăng",
+          "widget": "datetime",
+          "format": "YYYY-MM-DD"
+        },
+        {
+          "name": "location",
+          "label": "Địa điểm",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "service",
+          "label": "Dịch vụ",
+          "widget": "string",
+          "required": false
+        },
+        {
+          "name": "gallery",
+          "label": "Ảnh công trình",
+          "widget": "list",
+          "field": {
+            "name": "value",
+            "label": "Nội dung",
+            "widget": "image"
+          },
+          "required": false
+        },
+        {
+          "name": "body",
+          "label": "Nội dung",
+          "widget": "markdown",
+          "modes": [
+            "raw",
+            "rich_text"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "catalogue",
+      "label": "Sản phẩm",
+      "description": "Cập nhật sản phẩm hiện có. Đường dẫn giữ nguyên. Không đưa ghi chú tồn kho/ngừng mẫu lên nội dung bán hàng.",
+      "files": [
+        {
+          "name": "products",
+          "label": "Danh sách sản phẩm",
+          "file": "src/data/products.json",
+          "fields": [
+            {
+              "name": "products",
+              "label": "Sản phẩm",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "slug",
+                  "label": "Đường dẫn sản phẩm",
+                  "widget": "string",
+                  "readonly": true
+                },
+                {
+                  "name": "name",
+                  "label": "Tên sản phẩm",
+                  "widget": "string"
+                },
+                {
+                  "name": "category",
+                  "label": "Danh mục",
+                  "widget": "select",
+                  "options": [
+                    {
+                      "label": "Decal mờ dán kính",
+                      "value": "decal-mo-dan-kinh"
+                    },
+                    {
+                      "label": "Phim cách nhiệt",
+                      "value": "phim-cach-nhiet"
+                    },
+                    {
+                      "label": "Film nội thất",
+                      "value": "film-noi-that"
+                    },
+                    {
+                      "label": "Cắt và in logo",
+                      "value": "cat-va-in-logo"
+                    },
+                    {
+                      "label": "Open time, thông báo",
+                      "value": "open-time-thong-bao"
+                    },
+                    {
+                      "label": "Quảng cáo, standee",
+                      "value": "decal-quang-cao-standee"
+                    },
+                    {
+                      "label": "Decal PVC",
+                      "value": "decal-pvc"
+                    }
+                  ]
+                },
+                {
+                  "name": "subcategory",
+                  "label": "Nhóm ứng dụng",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "brand",
+                  "label": "Thương hiệu",
+                  "widget": "string"
+                },
+                {
+                  "name": "price",
+                  "label": "Giá tham khảo (đồng)",
+                  "widget": "number",
+                  "required": false,
+                  "value_type": "float",
+                  "min": 0
+                },
+                {
+                  "name": "code",
+                  "label": "Mã sản phẩm",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "description",
+                  "label": "Mô tả ngắn",
+                  "widget": "text"
+                },
+                {
+                  "name": "paragraphs",
+                  "label": "Nội dung chi tiết",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  },
+                  "required": false
+                },
+                {
+                  "name": "images",
+                  "label": "Ảnh sản phẩm",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "image"
+                  }
+                },
+                {
+                  "name": "installationImages",
+                  "label": "Ảnh ứng dụng",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "image"
+                  },
+                  "required": false
+                },
+                {
+                  "name": "uses",
+                  "label": "Ứng dụng",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "required": false
+                }
+              ],
+              "root": true,
+              "summary": "{{fields.name}}",
+              "allow_add": false,
+              "allow_remove": false,
+              "allow_reorder": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "districts",
+      "label": "Quận / huyện",
+      "description": "Chỉnh nội dung theo mẫu và đặc điểm địa phương. Phần bài nhập gốc giữ riêng để bảo toàn nội dung. Nhà Bè được quản lý trong Quận 7.",
+      "files": [
+        {
+          "name": "districts",
+          "label": "Nội dung quận / huyện",
+          "file": "src/data/districts.json",
+          "fields": [
+            {
+              "name": "districts",
+              "label": "Khu vực",
+              "widget": "list",
+              "fields": [
+                {
+                  "name": "slug",
+                  "label": "Mã khu vực",
+                  "widget": "string",
+                  "readonly": true
+                },
+                {
+                  "name": "name",
+                  "label": "Tên khu vực",
+                  "widget": "string",
+                  "readonly": true
+                },
+                {
+                  "name": "group",
+                  "label": "Nhóm địa bàn",
+                  "widget": "string",
+                  "readonly": true
+                },
+                {
+                  "name": "localContext",
+                  "label": "Đặc điểm địa phương & gợi ý ứng dụng",
+                  "widget": "text"
+                },
+                {
+                  "name": "intro",
+                  "label": "Giới thiệu cho trang theo mẫu",
+                  "widget": "text",
+                  "hint": "Các trang bài gốc Quận 1, 2, 3, 4, 12 và Tân Bình giữ phần giới thiệu riêng; trường này áp dụng cho trang dùng mẫu chung."
+                },
+                {
+                  "name": "siteNote",
+                  "label": "Chuẩn bị khảo sát cho trang theo mẫu",
+                  "widget": "text"
+                },
+                {
+                  "name": "question",
+                  "label": "Câu hỏi chính",
+                  "widget": "string"
+                },
+                {
+                  "name": "answer",
+                  "label": "Trả lời câu hỏi chính",
+                  "widget": "text"
+                },
+                {
+                  "name": "mergedAreas",
+                  "label": "Địa bàn được gộp",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "slug",
+                      "label": "Mã khu vực",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "name",
+                      "label": "Tên khu vực",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "group",
+                      "label": "Nhóm địa bàn",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "localContext",
+                      "label": "Đặc điểm địa phương & gợi ý ứng dụng",
+                      "widget": "text"
+                    },
+                    {
+                      "name": "intro",
+                      "label": "Giới thiệu cho trang theo mẫu",
+                      "widget": "text",
+                      "hint": "Các trang bài gốc Quận 1, 2, 3, 4, 12 và Tân Bình giữ phần giới thiệu riêng; trường này áp dụng cho trang dùng mẫu chung."
+                    },
+                    {
+                      "name": "siteNote",
+                      "label": "Chuẩn bị khảo sát cho trang theo mẫu",
+                      "widget": "text"
+                    },
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi chính",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời câu hỏi chính",
+                      "widget": "text"
+                    }
+                  ],
+                  "required": false,
+                  "allow_add": false,
+                  "allow_remove": false,
+                  "summary": "{{fields.name}}"
+                }
+              ],
+              "root": true,
+              "summary": "{{fields.name}}",
+              "allow_add": false,
+              "allow_remove": false,
+              "allow_reorder": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional_context",
+      "label": "Đặc điểm tỉnh / thành phố",
+      "files": [
+        {
+          "name": "context",
+          "label": "Nét địa phương & gợi ý ứng dụng",
+          "file": "src/data/region-context.json",
+          "fields": [
+            {
+              "name": "tp-hcm",
+              "label": "TP.HCM",
+              "widget": "text"
+            },
+            {
+              "name": "vung-tau",
+              "label": "Vũng Tàu",
+              "widget": "text"
+            },
+            {
+              "name": "dong-nai",
+              "label": "Đồng Nai",
+              "widget": "text"
+            },
+            {
+              "name": "nha-trang",
+              "label": "Nha Trang",
+              "widget": "text"
+            },
+            {
+              "name": "quy-nhon",
+              "label": "Quy Nhơn",
+              "widget": "text"
+            },
+            {
+              "name": "binh-duong",
+              "label": "Bình Dương",
+              "widget": "text"
+            },
+            {
+              "name": "da-nang",
+              "label": "Đà Nẵng",
+              "widget": "text"
+            },
+            {
+              "name": "ha-noi",
+              "label": "Hà Nội",
+              "widget": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "regional_pages",
+      "label": "Trang tỉnh / thành phố",
+      "description": "Các trang có nội dung biên tập riêng: Vũng Tàu, Bình Dương, Đồng Nai và Nha Trang.",
+      "files": [
+        {
+          "name": "regional",
+          "label": "Nội dung trang",
+          "file": "src/data/regional-content.json",
+          "fields": [
+            {
+              "name": "vung-tau",
+              "label": "Vũng Tàu",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề",
+                  "widget": "string"
+                },
+                {
+                  "name": "lead",
+                  "label": "Đoạn dẫn",
+                  "widget": "text"
+                },
+                {
+                  "name": "description",
+                  "label": "Mô tả SEO",
+                  "widget": "text"
+                },
+                {
+                  "name": "introduction",
+                  "label": "Nội dung giới thiệu",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  }
+                },
+                {
+                  "name": "heroImage",
+                  "label": "Ảnh giới thiệu",
+                  "widget": "image"
+                },
+                {
+                  "name": "imageAlt",
+                  "label": "Mô tả ảnh",
+                  "widget": "string"
+                },
+                {
+                  "name": "areas",
+                  "label": "Địa bàn phục vụ",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "name": "areaNote",
+                  "label": "Ghi chú địa bàn",
+                  "widget": "text"
+                },
+                {
+                  "name": "services",
+                  "label": "Dịch vụ",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "slug",
+                      "label": "Đường dẫn dịch vụ",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "title",
+                      "label": "Tên dịch vụ",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ],
+                  "allow_add": false,
+                  "allow_remove": false
+                },
+                {
+                  "name": "benefits",
+                  "label": "Điểm nổi bật",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Tiêu đề",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "prices",
+                  "label": "Bảng giá",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "item",
+                      "label": "Hạng mục",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "price",
+                      "label": "Giá",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "note",
+                      "label": "Ghi chú",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                },
+                {
+                  "name": "priceNote",
+                  "label": "Ghi chú giá",
+                  "widget": "text"
+                },
+                {
+                  "name": "references",
+                  "label": "Thông tin công trình tham khảo",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  },
+                  "required": false
+                },
+                {
+                  "name": "faqs",
+                  "label": "Câu hỏi bổ sung",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ],
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "binh-duong",
+              "label": "Bình Dương",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề",
+                  "widget": "string"
+                },
+                {
+                  "name": "lead",
+                  "label": "Đoạn dẫn",
+                  "widget": "text"
+                },
+                {
+                  "name": "description",
+                  "label": "Mô tả SEO",
+                  "widget": "text"
+                },
+                {
+                  "name": "introduction",
+                  "label": "Nội dung giới thiệu",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  }
+                },
+                {
+                  "name": "heroImage",
+                  "label": "Ảnh giới thiệu",
+                  "widget": "image"
+                },
+                {
+                  "name": "imageAlt",
+                  "label": "Mô tả ảnh",
+                  "widget": "string"
+                },
+                {
+                  "name": "areas",
+                  "label": "Địa bàn phục vụ",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "name": "areaNote",
+                  "label": "Ghi chú địa bàn",
+                  "widget": "text"
+                },
+                {
+                  "name": "services",
+                  "label": "Dịch vụ",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "slug",
+                      "label": "Đường dẫn dịch vụ",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "title",
+                      "label": "Tên dịch vụ",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ],
+                  "allow_add": false,
+                  "allow_remove": false
+                },
+                {
+                  "name": "benefits",
+                  "label": "Điểm nổi bật",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Tiêu đề",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "prices",
+                  "label": "Bảng giá",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "item",
+                      "label": "Hạng mục",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "price",
+                      "label": "Giá",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "note",
+                      "label": "Ghi chú",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                },
+                {
+                  "name": "priceNote",
+                  "label": "Ghi chú giá",
+                  "widget": "text"
+                },
+                {
+                  "name": "references",
+                  "label": "Thông tin công trình tham khảo",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  },
+                  "required": false
+                },
+                {
+                  "name": "faqs",
+                  "label": "Câu hỏi bổ sung",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ],
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "dong-nai",
+              "label": "Đồng Nai",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề",
+                  "widget": "string"
+                },
+                {
+                  "name": "lead",
+                  "label": "Đoạn dẫn",
+                  "widget": "text"
+                },
+                {
+                  "name": "description",
+                  "label": "Mô tả SEO",
+                  "widget": "text"
+                },
+                {
+                  "name": "introduction",
+                  "label": "Nội dung giới thiệu",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  }
+                },
+                {
+                  "name": "heroImage",
+                  "label": "Ảnh giới thiệu",
+                  "widget": "image"
+                },
+                {
+                  "name": "imageAlt",
+                  "label": "Mô tả ảnh",
+                  "widget": "string"
+                },
+                {
+                  "name": "areas",
+                  "label": "Địa bàn phục vụ",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "name": "areaNote",
+                  "label": "Ghi chú địa bàn",
+                  "widget": "text"
+                },
+                {
+                  "name": "services",
+                  "label": "Dịch vụ",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "slug",
+                      "label": "Đường dẫn dịch vụ",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "title",
+                      "label": "Tên dịch vụ",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ],
+                  "allow_add": false,
+                  "allow_remove": false
+                },
+                {
+                  "name": "benefits",
+                  "label": "Điểm nổi bật",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Tiêu đề",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "prices",
+                  "label": "Bảng giá",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "item",
+                      "label": "Hạng mục",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "price",
+                      "label": "Giá",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "note",
+                      "label": "Ghi chú",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                },
+                {
+                  "name": "priceNote",
+                  "label": "Ghi chú giá",
+                  "widget": "text"
+                },
+                {
+                  "name": "references",
+                  "label": "Thông tin công trình tham khảo",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  },
+                  "required": false
+                },
+                {
+                  "name": "faqs",
+                  "label": "Câu hỏi bổ sung",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ],
+                  "required": false
+                }
+              ]
+            },
+            {
+              "name": "nha-trang",
+              "label": "Nha Trang",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề",
+                  "widget": "string"
+                },
+                {
+                  "name": "lead",
+                  "label": "Đoạn dẫn",
+                  "widget": "text"
+                },
+                {
+                  "name": "description",
+                  "label": "Mô tả SEO",
+                  "widget": "text"
+                },
+                {
+                  "name": "introduction",
+                  "label": "Nội dung giới thiệu",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  }
+                },
+                {
+                  "name": "heroImage",
+                  "label": "Ảnh giới thiệu",
+                  "widget": "image"
+                },
+                {
+                  "name": "imageAlt",
+                  "label": "Mô tả ảnh",
+                  "widget": "string"
+                },
+                {
+                  "name": "areas",
+                  "label": "Địa bàn phục vụ",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  }
+                },
+                {
+                  "name": "areaNote",
+                  "label": "Ghi chú địa bàn",
+                  "widget": "text"
+                },
+                {
+                  "name": "services",
+                  "label": "Dịch vụ",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "slug",
+                      "label": "Đường dẫn dịch vụ",
+                      "widget": "string",
+                      "readonly": true
+                    },
+                    {
+                      "name": "title",
+                      "label": "Tên dịch vụ",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ],
+                  "allow_add": false,
+                  "allow_remove": false
+                },
+                {
+                  "name": "benefits",
+                  "label": "Điểm nổi bật",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "title",
+                      "label": "Tiêu đề",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "text",
+                      "label": "Nội dung",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "prices",
+                  "label": "Bảng giá",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "item",
+                      "label": "Hạng mục",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "price",
+                      "label": "Giá",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "note",
+                      "label": "Ghi chú",
+                      "widget": "string",
+                      "required": false
+                    }
+                  ],
+                  "required": false
+                },
+                {
+                  "name": "priceNote",
+                  "label": "Ghi chú giá",
+                  "widget": "text"
+                },
+                {
+                  "name": "references",
+                  "label": "Thông tin công trình tham khảo",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "text"
+                  },
+                  "required": false
+                },
+                {
+                  "name": "faqs",
+                  "label": "Câu hỏi bổ sung",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ],
+                  "required": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "area_faqs",
+      "label": "Hỏi đáp theo khu vực",
+      "files": [
+        {
+          "name": "faqs",
+          "label": "Câu hỏi & liên kết lân cận",
+          "file": "src/data/local-area-content.json",
+          "fields": [
+            {
+              "name": "quan-1",
+              "label": "Quận 1",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-3",
+              "label": "Quận 3",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-4",
+              "label": "Quận 4",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-5",
+              "label": "Quận 5",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-6",
+              "label": "Quận 6",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-7",
+              "label": "Quận 7",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-8",
+              "label": "Quận 8",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-10",
+              "label": "Quận 10",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-11",
+              "label": "Quận 11",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-12",
+              "label": "Quận 12",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-tan-binh",
+              "label": "Tân Bình",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-binh-tan",
+              "label": "Bình Tân",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-go-vap",
+              "label": "Gò Vấp",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-phu-nhuan",
+              "label": "Phú Nhuận",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-binh-thanh",
+              "label": "Bình Thạnh",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-tan-phu",
+              "label": "Tân Phú",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "thanh-pho-thu-duc",
+              "label": "Thủ Đức",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "huyen-hoc-mon",
+              "label": "Hóc Môn",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "huyen-cu-chi",
+              "label": "Củ Chi",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "huyen-binh-chanh",
+              "label": "Bình Chánh",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "huyen-can-gio",
+              "label": "Cần Giờ",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "tp-hcm",
+              "label": "TP.HCM",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "vung-tau",
+              "label": "Vũng Tàu",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "dong-nai",
+              "label": "Đồng Nai",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "nha-trang",
+              "label": "Nha Trang",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quy-nhon",
+              "label": "Quy Nhơn",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "binh-duong",
+              "label": "Bình Dương",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "da-nang",
+              "label": "Đà Nẵng",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "ha-noi",
+              "label": "Hà Nội",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            },
+            {
+              "name": "quan-2",
+              "label": "Quận 2",
+              "widget": "object",
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "Tiêu đề phần hỏi đáp",
+                  "widget": "string"
+                },
+                {
+                  "name": "items",
+                  "label": "Câu hỏi",
+                  "widget": "list",
+                  "fields": [
+                    {
+                      "name": "question",
+                      "label": "Câu hỏi",
+                      "widget": "string"
+                    },
+                    {
+                      "name": "answer",
+                      "label": "Trả lời",
+                      "widget": "text"
+                    }
+                  ]
+                },
+                {
+                  "name": "nearby",
+                  "label": "Mã khu vực lân cận",
+                  "widget": "list",
+                  "field": {
+                    "name": "value",
+                    "label": "Nội dung",
+                    "widget": "string"
+                  },
+                  "readonly": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "asset_collections": [
+    {
+      "name": "images",
+      "label": "Thư viện ảnh",
+      "media_folder": "public/images",
+      "public_folder": "/images"
+    }
+  ]
+}
