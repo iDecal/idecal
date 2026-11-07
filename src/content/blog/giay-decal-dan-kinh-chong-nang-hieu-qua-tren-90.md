@@ -1,16 +1,17 @@
 ---
 title: "[TÌM HIỂU] 2 Loại Giấy Decal dán kính chống nắng hiệu quả trên 90%"
 description: "Mùa hè đến, nắng oi ả. Hãy thử sử dụng 2 loại giấy Decal dán kính cản sáng sau đây để nhà cửa, văn phòng lúc nào cũng thoáng đãng, mát mẻ khi hè tới nhé."
+pubDate: "2024-04-18T07:23:30+07:00"
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
-categories: ["Chưa phân loại"]
-pubDate: "2024-04-18T07:23:30+07:00"
+categories:
+  - "ácâcscsac"
 author: "iDecal"
 image: "/images/blog-wordpress/f47dea5dd928bea1e81d.jpg"
-wordpressId: 937
-originalUrl: "https://idecal.vn/giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90/"
-focusKeyword: "Decal dán kính chống nắng"
 seoDescription: "Mùa hè đến, nắng oi ả. Hãy thử sử dụng 2 loại giấy Decal dán kính cản sáng sau đây để nhà cửa, văn phòng lúc nào cũng thoáng đãng, mát mẻ khi hè tới nhé."
+focusKeyword: "Decal dán kính chống nắng"
+originalUrl: "https://idecal.vn/giay-decal-dan-kinh-chong-nang-hieu-qua-tren-90/"
+wordpressId: 937
 xmlPreserved: true
 ---
 
