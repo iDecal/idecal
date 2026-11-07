@@ -45,11 +45,7 @@ Tuy nhiên, việc sử dụng **giấy Decal dán kính trang trí hoa văn**
 
 #### Một số mẫu giấy dán kính chống ánh sáng có hoa văn cho cửa kính
 
-<img src="/images/blog-wordpress/f47dea5dd928bea1e81d.jpg" alt="[TÌM HIỂU] 2 Loại Giấy Decal dán kính chống nắng hiệu quả trên 90%" loading="lazy" decoding="async" />
-
-Giấy dán kính trang trí hoa văn góp phần tăng khả vẻ đẹp cho không gian sống của bạn
-
-[Cửa kính trông ấn tượng hơn nhờ giấy dán kính trang trí hoa văn](https://idecal.vn/blob:https://idecal.vn/c6d33754-7bf6-49c1-afba-76256c5d3396)
+)
 
 Cửa kính trông ấn tượng hơn nhờ giấy dán kính trang trí hoa văn
 
