@@ -725,19 +725,9 @@
       "https://idecal.vn/wp-content/uploads/2025/04/Phim-dan-noi-that-van-go-01.jpg",
       "https://idecal.vn/wp-content/uploads/2025/04/5_1d9935f6a00349debdf554601b375e15_master-1.webp",
       "https://idecal.vn/wp-content/uploads/2025/04/2_2d9282774df04adfa8384a79aacefb00_master-1.webp",
-      "https://idecal.vn/wp-content/uploads/2025/04/4_467afebf41c84ecf90c112fa0df5f57d_master-2.webp"
+      "https://idecal.vn/wp-content/uploads/2025/04/4_467afebf41c84ecf90c112fa0df5f57d_master-2.webp",
+      "/images/uploads/922_20.png"
     ],
-    "attributes": {
-      "quy-cach": [
-        "1,22m x 50m"
-      ],
-      "xuat-xu": [
-        "Thái Lan"
-      ],
-      "thuong-hieu": [
-        "TODA"
-      ]
-    },
     "uses": [
       "Tủ bếp",
       "Tủ quần áo",
@@ -747,7 +737,18 @@
       "Cửa MDF",
       "Cửa sắt sơn tĩnh điện",
       "Tường"
-    ]
+    ],
+    "attributes": {
+      "quy-cach": [
+        "1,22m x 50m"
+      ],
+      "thuong-hieu": [
+        "TODA"
+      ],
+      "xuat-xu": [
+        "Thái Lan"
+      ]
+    }
   },
   {
     "slug": "decal-logo-cong-ty",
