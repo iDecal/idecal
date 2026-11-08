@@ -339,7 +339,11 @@
     "wordpressId": 937,
     "title": "[TÌM HIỂU] 2 Loại Giấy Decal dán kính chống nắng hiệu quả trên 90%",
     "sha256": "112dc29fda9c531e95a931e6ac92643c82dfa86d9e53d15c2e8351289f61b8c6",
-    "bodySha256": "77d35aeddc1d0ec705bbf17ae44e3f0b2002caf922005f7eed6bf6e88b3d4caa"
+    "bodySha256": "77d35aeddc1d0ec705bbf17ae44e3f0b2002caf922005f7eed6bf6e88b3d4caa",
+    "cmsRevision": {
+      "commit": "5b92d51d593f630967354b7eda962d9684e960e6",
+      "bodySha256": "94e02367a2edcce4bd4dcb2e25916964ae8735f449ccd7b7cbce3aa3fcff804b"
+    }
   },
   "thi-cong-dan-decal-gian-hang-trien-lam-hong-son-llc": {
     "wordpressId": 26946,

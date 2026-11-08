@@ -392,6 +392,41 @@
       ]
     },
     {
+      "name": "image_seo",
+      "label": "Tiêu đề & ALT ảnh",
+      "label_singular": "Thông tin ảnh",
+      "description": "Mỗi ảnh là một mục riêng. Viết ALT mô tả nội dung ảnh; không gán địa điểm hoặc công trình khi chưa xác nhận. Ảnh thuần trang trí được xử lý riêng.",
+      "file": "src/data/image-seo.json",
+      "identifier_field": "title",
+      "create": false,
+      "delete": false,
+      "duplicate": false,
+      "summary": "{{title}}",
+      "sortable_fields": [
+        "title",
+        "src"
+      ],
+      "thumbnail": "{{fields.src}}",
+      "fields": [
+        {
+          "name": "src",
+          "label": "Đường dẫn ảnh",
+          "widget": "image",
+          "readonly": true
+        },
+        {
+          "name": "title",
+          "label": "Tiêu đề ảnh",
+          "widget": "string"
+        },
+        {
+          "name": "alt",
+          "label": "Văn bản thay thế ALT",
+          "widget": "text"
+        }
+      ]
+    },
+    {
       "name": "districts",
       "label": "Quận / huyện",
       "description": "Chỉnh nội dung theo mẫu và đặc điểm địa phương. Phần bài nhập gốc giữ riêng để bảo toàn nội dung. Nhà Bè được quản lý trong Quận 7.",

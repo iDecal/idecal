@@ -22,7 +22,7 @@ for(const [slug,item] of Object.entries(plan)){
   const metadata=parse(parts[1]);
   assert.equal(metadata.title,originals[slug].title,`Preserved XML title: ${slug}`);
   assert.equal(metadata.wordpressId,originals[slug].wordpressId,`Preserved WordPress ID: ${slug}`);
-  assert.equal(createHash('sha256').update(parts[2]).digest('hex'),originals[slug].bodySha256,`Preserved XML body: ${slug}`);
+  assert.equal(createHash('sha256').update(parts[2]).digest('hex'),(originals[slug].cmsRevision?.bodySha256??originals[slug].bodySha256),`Preserved XML body: ${slug}`);
   assert.equal(text(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1]??''),originals[slug].title.replace(/\s+/g,' ').trim());
   audit.push({slug,preservedXml:true,words:visible.split(/\s+/).length});continue;
  }

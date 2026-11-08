@@ -93,6 +93,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
       if (!image || !src) return;
       image.hidden = false;
       image.alt = button.dataset.galleryLabel ?? image.alt;
+      image.title = button.dataset.galleryTitle ?? image.alt;
       image.src = src;
       buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
       const finish = button.dataset.galleryFinish;

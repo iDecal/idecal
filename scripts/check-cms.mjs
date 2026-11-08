@@ -53,10 +53,11 @@ for (const collection of config.collections) {
   } else if (collection.file) {
     const entries = JSON.parse(await readFile(collection.file, 'utf8'));
     assert.ok(Array.isArray(entries) && entries.length > 0);
-    assert.equal(collection.identifier_field, 'name');
+    assert.ok(['name', 'title'].includes(collection.identifier_field));
     assert.equal(collection.delete, false);
-    assert.equal(collection.fields.find(field => field.name === 'slug').readonly, true);
-    assert.equal(new Set(entries.map(entry => entry.slug)).size, entries.length);
+    const identity = collection.name === 'catalogue' ? 'slug' : 'src';
+    assert.equal(collection.fields.find(field => field.name === identity).readonly, true);
+    assert.equal(new Set(entries.map(entry => entry[identity])).size, entries.length);
     for (const entry of entries) checkFields(collection.fields, entry, entry.slug);
   } else {
     for (const file of collection.files) {
