@@ -7,7 +7,7 @@ import InstallationServiceContent from './InstallationServiceContent.astro';
 import installationContent from '../data/installation-service.json';
 import designContent from '../data/design-service.json';
 import { serviceLandingContent } from '../data/service-landing-content';
-import { serviceOfferings, type ServiceOffering } from '../data/site-offerings';
+import { type ServiceOffering } from '../data/site-offerings';
 import ServiceSupport from './ServiceSupport.astro';
 import '../styles/service-landing.css';
 interface Props { service:ServiceOffering; }
@@ -19,14 +19,13 @@ const extraFaqs = service.slug === 'thiet-ke' ? designContent.faqs : service.slu
 const faqs = [...content.faqs, ...extraFaqs];
 ---
 <div class="service-lp">
-  <ServiceHero title={service.headline} eyebrow={service.slug==='dich-vu-tron-goi'?service.name:`Dịch vụ ${service.name.toLocaleLowerCase('vi-VN')}`} image={service.image} imageAlt={service.slug==='in-decal'?'Ảnh minh họa máy in quảng cáo khổ lớn':service.name} detailImage={content.image} detailAlt={content.imageAlt}>
+  <ServiceHero title={service.headline} eyebrow={`Dịch vụ ${service.name.toLocaleLowerCase('vi-VN')}`} image={service.image} imageAlt={service.slug==='in-decal'?'Ảnh minh họa máy in quảng cáo khổ lớn':service.name} detailImage={content.image} detailAlt={content.imageAlt}>
     <p slot="description">{service.description}</p><Fragment slot="actions"><a href={booking} class="btn-primary-solid">Nhận tư vấn dịch vụ <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a><a href="#pham-vi" class="btn-idecal-bold">Khám phá dịch vụ ↓</a></Fragment>
   </ServiceHero>
   <section id="pham-vi" class="container lp-summary"><h2>Phạm vi dịch vụ</h2><ul>{service.deliverables.map(title=><li><span aria-hidden="true">✓</span>{title}</li>)}</ul></section>
   {service.slug === 'in-decal' && <PrintingServiceContent />}
   {service.slug === 'thiet-ke' && <DesignServiceContent />}
   {service.slug === 'thi-cong-decal' && <InstallationServiceContent />}
-  {service.slug === 'dich-vu-tron-goi' && <section class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">Một phương án xuyên suốt</p><h2>Chọn phần việc trong gói của bạn</h2></div><p>Thống nhất phạm vi trước khi triển khai. Hạng mục đã nằm trong đơn giá sẽ được ghi rõ.</p></div><div class="lp-package-links">{serviceOfferings.filter(item=>item.slug!=='dich-vu-tron-goi').map(item=><a href={`/dich-vu/${item.slug}`}><h3>{item.name}</h3><p>{item.deliverables[0]}</p><span aria-hidden="true">→</span></a>)}</div></section>}
   {hasDetails && <div class="lp-details"><slot name="details" /></div>}
   {hasDetails ? <slot name="faq" /> : <section id="lp-cau-hoi" class="lp-faq lp-section"><div class="container lp-faq-grid"><div><p class="lp-kicker">Giải đáp trước khi bắt đầu</p><h2>Một vài điều cần biết</h2><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Trao đổi qua Zalo →</a></div><div>{faqs.slice(0,3).map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>}
 

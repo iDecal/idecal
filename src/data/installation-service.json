@@ -10,7 +10,7 @@
   "options": [
     {"title":"Chỉ cần đội thi công","description":"Bạn đã có vật liệu. Gửi thông tin để kiểm tra khả năng thi công, hiện trạng nền và phạm vi trách nhiệm trước khi nhận việc.","service":"thi-cong-decal"},
     {"title":"Vật liệu & thi công","description":"Cùng chọn mẫu, khổ vật liệu và cách dán; xác nhận phần vật tư, xử lý nền và công thi công trong báo giá.","service":"thi-cong-decal"},
-    {"title":"Thiết kế đến hoàn thiện","description":"Kết hợp thiết kế, in hoặc cắt và thi công. Duyệt mẫu, vật liệu cùng tiến độ trước khi triển khai.","service":"dich-vu-tron-goi"}
+    {"title":"Thiết kế đến hoàn thiện","description":"Kết hợp thiết kế, in hoặc cắt và thi công. Duyệt mẫu, vật liệu cùng tiến độ trước khi triển khai.","service":"thi-cong-decal"}
   ],
   "brief": ["Ảnh toàn cảnh, ảnh cận bề mặt và các vị trí khó tiếp cận.","Kích thước, số ô kính hoặc diện tích dự kiến cần thực hiện.","Mẫu vật liệu, file thiết kế nếu có và lớp Decal cũ cần tháo.","Địa chỉ, thời gian mong muốn và quy định làm việc của tòa nhà.","Nhu cầu mua vật liệu, thuê riêng thi công hoặc làm trọn gói."],
   "steps": [

@@ -10,7 +10,7 @@ import '../styles/offering-landings.css';
 interface Props { landing: ProductLanding; }
 const { landing } = Astro.props;
 const items = landingProducts(landing);
-const services = serviceOfferings.filter(service => service.slug === landing.service || service.slug === 'dich-vu-tron-goi');
+const services = serviceOfferings.filter(service => service.slug === landing.service);
 ---
 <div class="offering-landing product-group-landing">
   <PageBanner title={landing.headline} eyebrow={landing.name} image={landing.image} imageAlt={landing.name}>

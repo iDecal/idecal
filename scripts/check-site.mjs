@@ -111,7 +111,7 @@ for (const color of pvcPalette.colors) {
   assert.match(color.hex, /^#[0-9a-f]{6}$/i, `Invalid swatch color: ${color.name}`);
 }
 const serviceIndex = await readFile(path.join(root, 'dich-vu/index.html'), 'utf8');
-for (const slug of ['thiet-ke','in-decal','cat-decal','thi-cong-decal','dich-vu-tron-goi']) {
+for (const slug of ['thiet-ke','in-decal','cat-decal','thi-cong-decal']) {
   assert.ok(await exists(path.join(root, 'dich-vu', slug, 'index.html')), `Missing service offering ${slug}`);
   assert.ok(serviceIndex.includes(`href="/dich-vu/${slug}"`), `Service index must link to ${slug}`);
 }
