@@ -1,9 +1,7 @@
 ---
-import ServiceProcessIcon from './ServiceProcessIcon.astro';
 import { productGroupIcons } from '../data/product-group-icons';
 interface Props { href: string; }
 const { href } = Astro.props;
-const serviceSlug=href.match(/^\/dich-vu\/(thiet-ke|in-decal|cat-decal|thi-cong-decal)\/?$/)?.[1];
 const productIcon = href.startsWith('/danh-muc-san-pham/') ? productGroupIcons[href.split('/').filter(Boolean).at(-1) ?? ''] : undefined;
 const path = href.startsWith('/khu-vuc')
   ? 'M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'
@@ -25,9 +23,8 @@ const path = href.startsWith('/khu-vuc')
   ? 'M5 3h14v14H5zM12 17v4M8 21h8M8 7h8M8 11h5'
   : 'M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z';
 ---
-{serviceSlug?<span class="service-menu-icon"><ServiceProcessIcon slug={serviceSlug} /></span>:<span class="submenu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={productIcon ?? `<path d="${path}" />`} /></svg></span>}
+<span class="submenu-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><Fragment set:html={productIcon ?? `<path d="${path}" />`} /></svg></span>
 <style>
-  .service-menu-icon{display:inline-flex;flex:0 0 38px;width:38px;height:38px;align-items:center;justify-content:center}.service-menu-icon :global(.process-icon){width:38px;height:38px}
   .submenu-icon { display: inline-flex; flex: 0 0 30px; width: 30px; height: 30px; align-items: center; justify-content: center; border-radius: 8px; background: #edf4ff; color: #006edc; }
   svg { width: 17px; height: 17px; }
 </style>
