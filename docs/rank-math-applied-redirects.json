@@ -93,13 +93,13 @@
     {
       "source": "/dan-decal-kinh-van-phong-tphcm/",
       "oldDestination": "https://idecal.vn/decal-dan-kinh-van-phong/thi-cong-decal-tphcm/",
-      "destination": "/dich-vu/decal-dan-kinh-van-phong/",
+      "destination": "/decal-dan-kinh-van-phong/",
       "code": 301
     },
     {
       "source": "/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm/",
       "oldDestination": "https://idecal.vn/decal-dan-kinh-van-phong/thi-cong-decal-tphcm/",
-      "destination": "/dich-vu/decal-dan-kinh-van-phong/",
+      "destination": "/decal-dan-kinh-van-phong/",
       "code": 301
     },
     {
@@ -252,12 +252,12 @@
     "/thi-cong-decal-mo-dan-kinh-binh-duong/": "/khu-vuc/binh-duong/",
     "/dich-vu-decal-dan-kinh-binh-duong": "/khu-vuc/binh-duong/",
     "/dich-vu-decal-dan-kinh-binh-duong/": "/khu-vuc/binh-duong/",
-    "/dan-decal-kinh-van-phong-tphcm": "/dich-vu/decal-dan-kinh-van-phong/",
-    "/dan-decal-kinh-van-phong-tphcm/": "/dich-vu/decal-dan-kinh-van-phong/",
-    "/decal-dan-kinh-van-phong/thi-cong-decal-tphcm": "/dich-vu/decal-dan-kinh-van-phong/",
-    "/decal-dan-kinh-van-phong/thi-cong-decal-tphcm/": "/dich-vu/decal-dan-kinh-van-phong/",
-    "/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm": "/dich-vu/decal-dan-kinh-van-phong/",
-    "/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm/": "/dich-vu/decal-dan-kinh-van-phong/",
+    "/dan-decal-kinh-van-phong-tphcm": "/decal-dan-kinh-van-phong/",
+    "/dan-decal-kinh-van-phong-tphcm/": "/decal-dan-kinh-van-phong/",
+    "/decal-dan-kinh-van-phong/thi-cong-decal-tphcm": "/decal-dan-kinh-van-phong/",
+    "/decal-dan-kinh-van-phong/thi-cong-decal-tphcm/": "/decal-dan-kinh-van-phong/",
+    "/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm": "/decal-dan-kinh-van-phong/",
+    "/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm/": "/decal-dan-kinh-van-phong/",
     "/21-mau-decal-mo-dan-kinh-van-phong-dep-mat": "/blog/99-mau-decal-dan-kinh-van-phong-dep-2026/",
     "/21-mau-decal-mo-dan-kinh-van-phong-dep-mat/": "/blog/99-mau-decal-dan-kinh-van-phong-dep-2026/",
     "/decal-mo-dan-kinh-van-phong/amp": "/decal-mo-dan-kinh/",

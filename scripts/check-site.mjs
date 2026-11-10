@@ -98,6 +98,10 @@ const landingSamples = [
 for (const [slug, sample] of landingSamples) {
   const html = await readFile(path.join(root, slug, 'index.html'), 'utf8');
   assert.ok(catalogueIndex.includes(`href="/${slug}"`), `Product index must link to landing ${slug}`);
+  if (slug === 'decal-dan-kinh-van-phong') {
+    assert.ok(html.includes('office-glass-page') && html.includes('id="bao-gia-van-phong"'), 'Office landing must render imported editorial content and prices');
+    continue;
+  }
   assert.ok(html.includes(`data-product-id="${sample}"`) || html.includes(`data-protection-film="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);
   assert.ok(html.includes('id="mau-san-pham"'), `Landing ${slug} must contain a product catalogue`);
   if (slug === 'film-bao-ve-noi-that') assert.ok(html.includes('data-protection-film="phim-bao-ve-kinh-safety-4ml"'), 'Protection landing must include glass safety film alongside PPF');

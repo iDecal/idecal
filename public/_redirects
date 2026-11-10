@@ -1,3 +1,6 @@
+# Office glass content consolidated at the original canonical URL.
+/dich-vu/decal-dan-kinh-van-phong /decal-dan-kinh-van-phong/ 301
+/dich-vu/decal-dan-kinh-van-phong/ /decal-dan-kinh-van-phong/ 301
 /phim-bao-ve /film-bao-ve-noi-that/ 301
 /phim-bao-ve/ /film-bao-ve-noi-that/ 301
 # Flat solution/material URLs; preserve inbound links with a single 301 hop.
@@ -336,12 +339,12 @@
 /thi-cong-decal-mo-dan-kinh-binh-duong/ /khu-vuc/binh-duong/ 301
 /dich-vu-decal-dan-kinh-binh-duong /khu-vuc/binh-duong/ 301
 /dich-vu-decal-dan-kinh-binh-duong/ /khu-vuc/binh-duong/ 301
-/dan-decal-kinh-van-phong-tphcm /dich-vu/decal-dan-kinh-van-phong/ 301
-/dan-decal-kinh-van-phong-tphcm/ /dich-vu/decal-dan-kinh-van-phong/ 301
-/decal-dan-kinh-van-phong/thi-cong-decal-tphcm /dich-vu/decal-dan-kinh-van-phong/ 301
-/decal-dan-kinh-van-phong/thi-cong-decal-tphcm/ /dich-vu/decal-dan-kinh-van-phong/ 301
-/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm /dich-vu/decal-dan-kinh-van-phong/ 301
-/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm/ /dich-vu/decal-dan-kinh-van-phong/ 301
+/dan-decal-kinh-van-phong-tphcm /decal-dan-kinh-van-phong/ 301
+/dan-decal-kinh-van-phong-tphcm/ /decal-dan-kinh-van-phong/ 301
+/decal-dan-kinh-van-phong/thi-cong-decal-tphcm /decal-dan-kinh-van-phong/ 301
+/decal-dan-kinh-van-phong/thi-cong-decal-tphcm/ /decal-dan-kinh-van-phong/ 301
+/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm /decal-dan-kinh-van-phong/ 301
+/decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm/ /decal-dan-kinh-van-phong/ 301
 /21-mau-decal-mo-dan-kinh-van-phong-dep-mat /blog/99-mau-decal-dan-kinh-van-phong-dep-2026/ 301
 /21-mau-decal-mo-dan-kinh-van-phong-dep-mat/ /blog/99-mau-decal-dan-kinh-van-phong-dep-2026/ 301
 /decal-mo-dan-kinh-van-phong/amp /decal-mo-dan-kinh/ 301

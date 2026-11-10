@@ -17,3 +17,5 @@
 - Thiết kế trang quận/huyện: ưu tiên nền trắng, ít viền/khối màu và nhãn trang trí, chữ phân cấp rõ, ảnh cân đối. Dùng `district-clean.css` để thống nhất nhịp trình bày; vẫn giữ bố cục riêng của các bài nhập gốc, không cắt nội dung hoặc ép về cùng mẫu.
 
 - Không hiển thị thông tin tồn kho, hết hàng, ngừng mẫu hoặc yêu cầu xác nhận tình trạng cung ứng trên trang sản phẩm; giữ các ghi chú quản lý hàng ở tài liệu nội bộ.
+
+- Trang `/decal-dan-kinh-van-phong/` dùng nội dung chủ website gửi từ HTML, lưu tại `src/data/office-glass-original.json`, bố cục `OfficeGlassLanding`. Giữ tiêu đề, 69 khối nội dung, 8 ảnh nguồn, bảng giá và 7 FAQ; chỉ đổi liên kết tới trang hiện có. Kiểm tra bằng `node scripts/check-office-glass.mjs`.
