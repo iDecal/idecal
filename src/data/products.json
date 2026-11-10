@@ -755,7 +755,7 @@
   {
     "slug": "phim-cach-nhiet-xanh-duong-phan-guong",
     "name": "Phim cách nhiệt xanh dương phản Gương",
-    "category": "phim-cach-nhiet",
+    "category": "decal-trang-tri",
     "subcategory": "Phim cách nhiệt",
     "brand": "iDecal",
     "price": 315000,
@@ -766,7 +766,7 @@
       "Lớp phim mỏng nhưng có cấu tạo nhiều lớp: màng polyester chịu nhiệt, lớp phản quang tráng kim loại, lớp chống trầy, keo dán cao cấp không bong tróc. Sản phẩm dễ thi công và có thể tháo gỡ khi cần thay mới mà không làm hư hại bề mặt kính."
     ],
     "images": [
-      "https://idecal.vn/wp-content/uploads/2025/04/phim-cach-nhiet-xanh-duong-phan-guong.webp",
+      "/images/uploads/webp-rouleau-glass-206x-70e5a4e0-0993-4fac-8734-85d46d5b024c.webp",
       "https://idecal.vn/wp-content/uploads/2025/04/Phim-cach-nhiet-xanh-da-troi-trang-guong-ngan-tia-UV-hieu-qua.webp",
       "https://idecal.vn/wp-content/uploads/2025/04/Phim-cach-nhiet-xanh-duong.jpg",
       "https://idecal.vn/wp-content/uploads/2025/04/Hinh-anh-thi-cong-phim-cach-nhiet-phan-guong.webp",
@@ -780,6 +780,43 @@
       "Nhà kính",
       "Căn hộ ban công",
       "Showroom"
+    ],
+    "imageMetadata": [
+      {
+        "src": "/images/uploads/webp-rouleau-glass-206x-70e5a4e0-0993-4fac-8734-85d46d5b024c.webp",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/04/Phim-cach-nhiet-xanh-da-troi-trang-guong-ngan-tia-UV-hieu-qua.webp",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/04/Phim-cach-nhiet-xanh-duong.jpg",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/04/Hinh-anh-thi-cong-phim-cach-nhiet-phan-guong.webp",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/04/853854cd-7ffd-416d-903a-5898c14d41be.e604cf6db0e4652a76275a45588fef0f.webp",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/04/Hinh-anh-truoc-va-sau-khi-dan-phim-cach-nhiet-xanh-duong-phan-guong.jpg",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      },
+      {
+        "src": "/images/uploads/cuon-film-phan-guong-xanh.png",
+        "alt": "Phim cách nhiệt xanh dương phản Gương",
+        "title": "Phim cách nhiệt xanh dương phản Gương | iDecal"
+      }
     ]
   },
   {
