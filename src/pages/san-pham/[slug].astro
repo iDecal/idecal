@@ -20,7 +20,7 @@ const collectionModels = (product.variantSlugs ?? []).map(slug => products.find(
 const related = products.filter(other => other.slug !== product.slug && (
   product.catalogue ? other.catalogue?.collection === product.catalogue.collection && Boolean(product.catalogue.collection) : isPVC ? isPVCProduct(other.slug) : !isPVCProduct(other.slug) && other.category === product.category
 )).slice(0,4);
-const relatedCategoryUrl = `/${isPVC ? 'decal-pvc' : category.slug}`;
+const relatedCategoryUrl = `/${isPVC ? 'decal-pvc' : /ppf|safety/.test(product.slug) || product.category === 'phim-bao-ve' ? 'film-bao-ve-noi-that' : category.slug}`;
 const galleryImages = isPVC ? [
   ...pvcFinishes.map(finish => ({ src: finishImages[finish.value as keyof typeof finishImages], label: `${product.name} – minh họa bề mặt ${finish.label.toLocaleLowerCase('vi-VN')}`, finish: finish.value })),
   ...product.images.filter(src => !src.startsWith('/images/pvc-colors/')).map((src,index) => ({ src, label: `${product.name} – ảnh ${index+1}`, finish: '' })),

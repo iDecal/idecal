@@ -1,3 +1,5 @@
+/phim-bao-ve /film-bao-ve-noi-that/ 301
+/phim-bao-ve/ /film-bao-ve-noi-that/ 301
 # Flat solution/material URLs; preserve inbound links with a single 301 hop.
 /danh-muc-san-pham/cat-va-in-logo /cat-va-in-logo/ 301
 /danh-muc-san-pham/cat-va-in-logo/ /cat-va-in-logo/ 301
@@ -27,8 +29,8 @@
 /danh-muc-san-pham/film-trang-tri-kinh/ /film-trang-tri-kinh/ 301
 /danh-muc-san-pham/open-time-thong-bao /open-time-thong-bao/ 301
 /danh-muc-san-pham/open-time-thong-bao/ /open-time-thong-bao/ 301
-/danh-muc-san-pham/phim-bao-ve /phim-bao-ve/ 301
-/danh-muc-san-pham/phim-bao-ve/ /phim-bao-ve/ 301
+/danh-muc-san-pham/phim-bao-ve /film-bao-ve-noi-that/ 301
+/danh-muc-san-pham/phim-bao-ve/ /film-bao-ve-noi-that/ 301
 /danh-muc-san-pham/phim-cach-nhiet /phim-cach-nhiet/ 301
 /danh-muc-san-pham/phim-cach-nhiet/ /phim-cach-nhiet/ 301
 /danh-muc-san-pham/phim-cach-nhiet-nha-kinh /phim-cach-nhiet-nha-kinh/ 301

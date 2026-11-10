@@ -12,7 +12,7 @@ export function getStaticPaths() {
   const slugs = [...new Set([...productCategories.map(category => category.slug), ...productLandings.map(landing => landing.slug)])];
   return slugs.map(slug => ({ params: { slug } }));
 }
-const landing = productLandings.find(item => item.slug === Astro.params.slug);
+const landing = productLandings.find(item => item.slug === (Astro.params.slug === 'phim-bao-ve' ? 'film-bao-ve-noi-that' : Astro.params.slug));
 const category = productCategories.find(item => item.slug === Astro.params.slug) ?? productCategories[0];
 const items = productsInCategory(category.slug);
 const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';

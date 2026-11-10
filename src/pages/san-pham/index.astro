@@ -7,7 +7,7 @@ import ProductGroupIcon from '../../components/ProductGroupIcon.astro';
 import '../../styles/product-groups.css';
 import { products, productCategories, productsInCategory } from '../../data/catalogue';
 import { productLandings, landingProducts } from '../../data/site-offerings';
-const addedCategories = productCategories.filter(category => category.editorCreated);
+const addedCategories = productCategories.filter(category => category.editorCreated && category.slug !== 'phim-bao-ve');
 const totalGroups = productLandings.length + addedCategories.length;
 ---
 <Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description={"Khám phá " + totalGroups + " nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt, film nội thất và các vật liệu trang trí, bảo vệ."}>
