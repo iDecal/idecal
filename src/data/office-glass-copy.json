@@ -1,0 +1,24 @@
+{
+  "h1": "Decal dán kính văn phòng cho công ty & phòng ban",
+  "seoTitle": "Decal dán kính văn phòng cho công ty | iDecal",
+  "description": "Thiết kế và thi công Decal dán kính văn phòng cho phòng họp, phòng giám đốc, các phòng ban; tư vấn mẫu cho công ty vận tải, logistics, du lịch tại TP.HCM và Bình Dương.",
+  "eyebrow": "Thi công tại TP.HCM & Bình Dương",
+  "headings": {
+    "services": "Thiết kế, in & thi công Decal văn phòng",
+    "solutions": "Các giải pháp Decal dán kính văn phòng",
+    "audiences": "Chọn Decal dán kính theo phòng ban & ngành nghề",
+    "why": "Vì sao chọn iDecal thi công Decal văn phòng?",
+    "benefits": "Decal kính văn phòng mang lại lợi ích gì?",
+    "pricing": "Báo giá Decal dán kính văn phòng theo diện tích",
+    "faq": "Câu hỏi về Decal dán kính văn phòng",
+    "gallery": "Hình ảnh thi công Decal kính văn phòng"
+  },
+  "audiences": [
+    {"title": "Phòng họp & phòng giám đốc", "text": "Phối dải mờ hoặc phủ kính để tạo riêng tư, kết hợp tên phòng và logo công ty."},
+    {"title": "Phòng nhân sự & kế toán", "text": "Che tầm nhìn tại khu vực làm việc, tiếp khách hoặc xử lý hồ sơ; chọn độ che phủ theo vị trí ngồi."},
+    {"title": "Phòng kinh doanh & chăm sóc khách hàng", "text": "Dán tên phòng, slogan và nhận diện trên vách kính, giữ khoảng trong cần thiết để giao tiếp."},
+    {"title": "Công ty vận tải & logistics", "text": "Gợi ý Decal cho phòng điều hành, phòng giao dịch và vách ngăn văn phòng; phối logo và chỉ dẫn rõ ràng."},
+    {"title": "Công ty du lịch & lữ hành", "text": "Kết hợp logo, hình ảnh điểm đến hoặc thông tin tour tại quầy tư vấn, phòng họp và kính mặt tiền."},
+    {"title": "Công ty công nghệ & bất động sản", "text": "Phối Decal mờ, họa tiết hoặc thông điệp thương hiệu cho phòng dự án, khu tiếp khách và không gian làm việc."}
+  ]
+}

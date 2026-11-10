@@ -145,3 +145,11 @@
 .office-why-contact>.office-solution-button { flex-shrink:0; margin-top:0; }
 @media(max-width:767px) { .office-why-contact { flex-direction:column; align-items:stretch; gap:18px; margin-top:24px; } }
 @media(prefers-reduced-motion:reduce) { .office-service-card { transition:none; } }
+
+.office-audiences { padding-top:0; padding-bottom:44px; }
+.office-audience-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px 30px; }
+.office-audience-grid article { padding-top:16px; border-top:1px solid #e1eaf4; min-width:0; }
+.office-audience-grid h3 { font-size:17px; margin-bottom:9px; }
+.office-audience-grid p { font-size:14px; margin:0; }
+@media(max-width:1023px) { .office-audience-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:639px) { .office-audiences { padding-bottom:32px; } .office-audience-grid { grid-template-columns:1fr; gap:18px; } }

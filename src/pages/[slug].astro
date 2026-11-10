@@ -2,7 +2,7 @@
 import '../styles/catalogue.css';
 import ProductBrands from '../components/ProductBrands.astro';
 import OfficeGlassLanding from '../components/OfficeGlassLanding.astro';
-import officeGlass from '../data/office-glass-original.json';
+import officeGlassCopy from '../data/office-glass-copy.json';
 import ProductLanding from '../components/ProductLanding.astro';
 import { productLandings } from '../data/site-offerings';
 import BannerBenefits from '../components/BannerBenefits.astro';
@@ -20,7 +20,7 @@ const items = productsInCategory(category.slug);
 const isOffice = Astro.params.slug === 'decal-dan-kinh-van-phong';
 const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';
 ---
-<Layout title={isOffice ? officeGlass.sourceTitle : `${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={isOffice ? officeGlass.description : landing?.description ?? category.description}>
+<Layout title={isOffice ? officeGlassCopy.seoTitle : `${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={isOffice ? officeGlassCopy.description : landing?.description ?? category.description}>
 {isOffice ? <OfficeGlassLanding /> : landing ? <ProductLanding landing={landing} /> : <>
   <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'}>
     <p slot="description">{category.description}</p>
