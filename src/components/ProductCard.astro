@@ -4,22 +4,34 @@ import { formatPrice, type Product } from '../data/catalogue';
 interface Props { product: Product; heading?: 'h2' | 'h3'; }
 const { product, heading = 'h3' } = Astro.props;
 const Heading = heading;
-const descriptionWords = product.description.trim().split(/\s+/);
-const shortDescription = descriptionWords.length > 15
-  ? `${descriptionWords.slice(0, 15).join(' ').replace(/[.,;:!?–—-]+$/u, '')}…`
-  : descriptionWords.join(' ');
 ---
 <article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
   <a href={`/san-pham/${product.slug}`} class="relative block aspect-square overflow-hidden" aria-label={`Xem ${product.name}`}>
     <ProductImage src={product.images[0]} alt={product.name} productSlug={product.slug} />
     <span class="absolute left-3 top-3 rounded bg-white/60 px-2.5 py-1 text-xs font-medium text-brand-navy backdrop-blur-sm" data-product-code>{product.code}</span>
   </a>
-  <div class="flex flex-1 flex-col gap-3 p-3 md:p-5">
-    <Heading class="!mb-0 text-sm font-medium leading-snug md:text-base"><a href={`/san-pham/${product.slug}`} class="hover:text-primary">{product.name}</a></Heading>
-    <p class="product-card-description hidden md:block !mb-0 text-xs leading-relaxed text-text-muted">{shortDescription}</p>
-    {product.price != null && <p class="!mb-1 mt-auto pt-2 text-base font-semibold text-brand-navy">{formatPrice(product.price)}</p>}
-    <div class="mt-auto grid pt-2">
-      <a href={`/san-pham/${product.slug}`} class="inline-flex min-h-10 flex-1 items-center justify-center rounded-lg border border-brand-line bg-surface px-3 text-xs font-medium text-secondary transition-colors hover:border-secondary hover:bg-secondary hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Chi tiết<span class="sr-only"> {product.name}</span></a>
+  <div class="product-card-copy">
+    <Heading class="product-card-title"><a href={`/san-pham/${product.slug}`} class="hover:text-primary">{product.name}</a></Heading>
+    <div class="product-card-footer">
+      {product.price != null && <span class="product-card-price">{formatPrice(product.price)}</span>}
+      <a href={`/san-pham/${product.slug}`} class="product-card-read">Đọc thêm<span class="sr-only"> về {product.name}</span><span aria-hidden="true">→</span></a>
     </div>
   </div>
 </article>
+<style>
+  .catalogue-card { border-radius:16px; border-color:#e1eaf4; box-shadow:none; }
+  .product-card-copy { display:flex; flex:1; flex-direction:column; padding:20px; }
+  .product-card-title { margin:0 0 20px; font-size:16px; line-height:1.55; font-weight:500; color:#244766; }
+  .product-card-footer { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:auto; padding-top:14px; border-top:1px solid #e1eaf4; }
+  .product-card-price { white-space:nowrap; font-size:14px; font-weight:600; color:#244766; }
+  .product-card-read { display:inline-flex; align-items:center; justify-content:flex-end; gap:8px; min-height:44px; margin-left:auto; white-space:nowrap; font-size:13px; color:#0d6b96; }
+  .product-card-read:hover { text-decoration:underline; }
+  .product-card-read:focus-visible { outline:2px solid #0d6b96; outline-offset:3px; border-radius:3px; }
+  @media(max-width:639px) {
+    .product-card-copy { padding:10px; }
+    .product-card-title { font-size:14px; margin-bottom:16px; }
+    .product-card-footer { gap:5px; padding-top:8px; }
+    .product-card-price { font-size:11px; }
+    .product-card-read { gap:4px; font-size:11px; }
+  }
+</style>
