@@ -232,64 +232,287 @@
     "faqs": []
   },
   "nha-trang": {
-    "title": "Dịch vụ Decal dán kính Nha Trang",
-    "lead": "Cung cấp vật liệu, thiết kế mẫu và thi công Decal mờ, phim cách nhiệt cho văn phòng, nhà ở và công trình tại Nha Trang, Khánh Hòa.",
-    "description": "iDecal cung cấp Decal mờ, phim cách nhiệt, in Decal và film nội thất tại Nha Trang, Khánh Hòa. Trao đổi giao hàng và thi công theo nhu cầu.",
+    "title": "Decal dán kính Nha Trang cho khách sạn, spa & cửa hàng",
+    "lead": "Giữ không gian đón sáng, tạo riêng tư đúng chỗ và làm rõ dấu ấn thương hiệu. iDecal tư vấn Decal kính, phim cách nhiệt và film trang trí nội thất cho công trình tại Nha Trang.",
+    "description": "Decal dán kính Nha Trang cho khách sạn, homestay, spa và cửa hàng. Tư vấn riêng tư, nhận diện, phim cách nhiệt và làm mới nội thất cùng iDecal.",
     "introduction": [
-      "iDecal tiếp nhận nhu cầu mua giấy Decal dán kính, giao hàng và thi công theo yêu cầu tại Nha Trang. Khách hàng có thể lựa chọn vật liệu hoặc trao đổi dịch vụ hoàn thiện cho công trình.",
-      "Không gian gần biển và các mặt kính đón nắng cần cân đối giữa độ sáng, nhu cầu giảm chói và sự riêng tư. iDecal cung cấp Decal mờ hoa văn, phim cách nhiệt và thiết kế mẫu theo yêu cầu."
+      "Một vách kính trong spa cần che tầm nhìn khác với cửa sổ phòng nghỉ hay mặt tiền quán cà phê. Tại Nha Trang, giải pháp trang trí nên bắt đầu từ trải nghiệm của khách: nhìn thấy gì khi bước vào, chỗ nào cần kín đáo và khoảng nào nên giữ cảnh quan.",
+      "iDecal tư vấn Decal mờ, hoa văn, logo và film nội thất theo màu sắc đang có. Với công trình lưu trú, có thể lập danh sách từng phòng hoặc từng tầng để duyệt mẫu thống nhất và trao đổi trình tự thực hiện phù hợp lịch đón khách."
     ],
-    "heroImage": "/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp",
-    "imageAlt": "Thi công phim cách nhiệt cho cửa kính",
     "areas": [
-      "Nha Trang",
-      "Cam Ranh",
-      "Ninh Hòa",
-      "Các khu vực khác tại Khánh Hòa"
+      "Khu trung tâm Nha Trang",
+      "Trục Trần Phú và khu ven biển",
+      "Khu vực Hòn Chồng, Vĩnh Hải",
+      "Khu vực Phước Hải và lân cận"
     ],
-    "areaNote": "Gửi địa chỉ và khối lượng để thống nhất phương án giao vật liệu hoặc lịch thi công. Chi phí vận chuyển, di chuyển và phạm vi thực hiện được xác nhận trước.",
+    "areaNote": "Gửi vị trí thực tế, số phòng hoặc số khu cần làm cùng lịch sử dụng mặt bằng. Phạm vi tiếp nhận, lịch khảo sát và chi phí triển khai được trao đổi theo từng địa chỉ tại Nha Trang.",
+    "priceNote": "Chi phí công trình Nha Trang phụ thuộc vật liệu, số lượng ô kính, độ lặp mẫu, xử lý bề mặt và cách chia đợt thi công. Hãy đối chiếu phần vật tư, in/cắt, công dán và các chi phí tiếp cận, di chuyển trong báo giá hoàn chỉnh.",
+    "heroImage": "/images/catalogue/decal-mo-trang-tron-van-phong.jpg",
+    "imageAlt": "Minh họa ứng dụng Decal mờ trên vách kính văn phòng",
     "services": [
       {
-        "slug": "decal-dan-kinh-van-phong",
-        "title": "Decal mờ cho văn phòng",
-        "text": "Mẫu mờ trơn, hoa văn và cắt sọc cho vách kính công ty, cửa kính và các khu vực cần riêng tư."
-      },
-      {
-        "slug": "phim-cach-nhiet",
-        "title": "Phim chống nắng & chống chói",
-        "text": "Tư vấn phim theo vị trí kính, sắc độ và nhu cầu kiểm soát ánh sáng trong không gian."
-      },
-      {
-        "slug": "decal-quang-cao",
-        "title": "In Decal & thiết kế mẫu",
-        "text": "In Decal theo yêu cầu cho trang trí kính, nhận diện cửa hàng và các công trình quảng cáo."
+        "slug": "decal-mo-3d-van-song",
+        "title": "Vách kính spa & không gian riêng tư",
+        "text": "Chọn Decal mờ hoặc vân sóng theo mức che cần thiết. Nên xem mẫu dưới ánh sáng sử dụng thực tế vì bóng người và chi tiết phía sau có thể thay đổi theo khoảng cách."
       },
       {
         "slug": "film-noi-that",
-        "title": "Film trang trí nội thất",
-        "text": "Lựa chọn film dán nội thất hoặc trao đổi hạng mục trang trí theo hiện trạng công trình."
+        "title": "Làm mới nội thất lưu trú",
+        "text": "Phối film cho quầy lễ tân, cửa phòng và cánh tủ còn nền phù hợp. Kiểm tra lớp phủ, cạnh tủ và vùng gần nước để xác định phần cần xử lý trước khi dán."
+      },
+      {
+        "slug": "decal-quang-cao",
+        "title": "Logo & thông tin trên kính",
+        "text": "Sắp xếp thương hiệu, giờ mở cửa và thông tin chính ở nơi khách dễ đọc. Thiết kế tính đến khe cánh cửa để nội dung không bị chia cắt tại vị trí quan trọng."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim kính cho phòng đón nắng",
+        "text": "Cân đối độ truyền sáng, sắc độ và thông số kiểm soát nhiệt theo loại kính. Với cửa sổ có cảnh quan, nên xem khả năng nhìn ra ngoài cùng cảm nhận ánh sáng trong phòng."
       }
     ],
     "benefits": [
       {
-        "title": "Vật liệu rõ nguồn gốc",
-        "text": "Tư vấn loại Decal và mẫu phim phù hợp với mục đích sử dụng trước khi đặt hàng."
+        "title": "Phối mẫu theo không gian",
+        "text": "Dùng ảnh nội thất, màu tường và ánh sáng để chọn mẫu thay vì xem một miếng vật liệu riêng lẻ."
       },
       {
-        "title": "Thiết kế theo yêu cầu",
-        "text": "Trao đổi mẫu, kích thước và cách chia kính để phối hợp trang trí với nhu cầu riêng tư."
+        "title": "Quản lý theo từng phòng",
+        "text": "Thống kê kích thước và vị trí giúp đối chiếu vật liệu, số lượng và trình tự bàn giao."
       },
       {
-        "title": "Linh hoạt giao hàng & thi công",
-        "text": "Có thể đặt vật liệu hoặc thống nhất dịch vụ thi công tại Nha Trang và các khu vực Khánh Hòa."
+        "title": "Chú trọng bề mặt sử dụng",
+        "text": "Trao đổi cách vệ sinh, điều kiện ẩm và tình trạng lớp nền ngay từ bước tư vấn."
       }
     ],
     "prices": [],
-    "priceNote": "Tham khảo giá theo từng nhóm dịch vụ; khối lượng, vận chuyển và lịch triển khai tại Khánh Hòa cần được xác nhận riêng.",
-    "references": [
-      "Thi công phim cách nhiệt chung cư tại Cam Ranh, Khánh Hòa.",
-      "Decal kính mờ cắt sọc cho văn phòng công ty tại Nha Trang."
+    "references": [],
+    "faqs": [
+      {
+        "question": "Có thể dùng Decal mờ cho kính phòng tắm tại Nha Trang không?",
+        "answer": "Có thể xem xét nếu vật liệu và mặt dán phù hợp điều kiện sử dụng. Cần làm rõ mức riêng tư, vị trí nước bắn và khả năng vệ sinh; nên xem mẫu với ánh sáng bật trong phòng."
+      },
+      {
+        "question": "Film nội thất có dán được lên mọi tủ cũ không?",
+        "answer": "Không phải bề mặt nào cũng phù hợp. Nền cần chắc, khô và có khả năng bám dính; tủ ẩm, lớp sơn bong hoặc cạnh hư cần được kiểm tra và xử lý trước."
+      },
+      {
+        "question": "Khách sạn nhiều phòng cần chuẩn bị bảng khối lượng ra sao?",
+        "answer": "Lập danh sách theo tầng hoặc số phòng, ghi số ô và kích thước từng loại. Kèm ảnh các mẫu cửa khác nhau để chia file và tính vật liệu chính xác hơn."
+      }
+    ]
+  },
+  "da-nang": {
+    "title": "Decal dán kính Đà Nẵng – Trang trí, nhận diện & cách nhiệt",
+    "lead": "Một mặt kính đẹp cần hợp cả không gian bên trong lẫn góc nhìn từ đường phố. iDecal tư vấn Decal mờ, logo kính, phim cách nhiệt và film nội thất cho văn phòng, cửa hàng, nhà ở và cơ sở lưu trú tại Đà Nẵng.",
+    "description": "Tư vấn Decal dán kính Đà Nẵng cho văn phòng, cửa hàng và cơ sở lưu trú. Chọn Decal mờ, logo, phim cách nhiệt và film nội thất cùng iDecal.",
+    "introduction": [
+      "Văn phòng cần một phòng họp kín đáo; cửa hàng cần khách nhận ra thương hiệu; phòng lưu trú cần ánh sáng dễ chịu. Với công trình tại Đà Nẵng, iDecal bắt đầu từ mục đích sử dụng để tách rõ phần kính cần che, phần cần giữ thoáng và phần dành cho nhận diện.",
+      "Bạn có thể phối Decal mờ ở tầm mắt, logo cắt ở lối vào và phim cách nhiệt tại ô kính chịu nắng. Mỗi vật liệu đảm nhận một chức năng riêng. Bản thiết kế cần thể hiện khe kính, tay nắm và chiều mở cửa để bố cục liền mạch khi sử dụng."
     ],
-    "faqs": []
+    "areas": [
+      "Khu vực Hải Châu và Thanh Khê",
+      "Khu vực Sơn Trà và ven biển Mỹ Khê",
+      "Khu vực Ngũ Hành Sơn",
+      "Khu vực Cẩm Lệ, Liên Chiểu và lân cận"
+    ],
+    "areaNote": "Các tên địa bàn giúp mô tả vị trí công trình. Hãy gửi địa chỉ hiện tại và vị trí bản đồ để trao đổi phạm vi phục vụ, điều kiện di chuyển và lịch thực hiện tại Đà Nẵng.",
+    "priceNote": "Báo giá tại Đà Nẵng được xác định theo mã vật liệu, kích thước từng ô, phần in/cắt và hiện trạng bề mặt. Cần làm rõ công dán, tháo lớp cũ, phương tiện tiếp cận và di chuyển trong tổng chi phí trước khi xác nhận.",
+    "heroImage": "/images/catalogue/decal-mo-trang-tron-van-phong.jpg",
+    "imageAlt": "Minh họa ứng dụng Decal mờ trên vách kính văn phòng",
+    "services": [
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Decal mờ cho phòng họp & vách ngăn",
+        "text": "Bố trí dải mờ, hoa văn hoặc logo theo tầm nhìn người ngồi và người đi qua. Giữ các khoảng kính sáng ở nơi không cần che để phòng làm việc vẫn nhẹ và thoáng."
+      },
+      {
+        "slug": "decal-quang-cao",
+        "title": "Nhận diện kính cửa hàng",
+        "text": "Thiết kế tên thương hiệu, hình ảnh sản phẩm và thông tin liên hệ theo tỷ lệ mặt tiền. Với không gian trưng bày, dành khoảng trong để khách nhìn thấy hàng hóa bên trong."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim cho cửa kính đón nắng",
+        "text": "Đối chiếu loại kính, hướng nắng và độ truyền sáng của mã phim. Xem màu phim cùng nội thất thay vì chọn chỉ theo mức tối của mẫu."
+      },
+      {
+        "slug": "film-noi-that",
+        "title": "Film làm mới quầy, cửa & tủ",
+        "text": "Gợi ý vân gỗ, vân đá hoặc màu đơn sắc cho bề mặt còn chắc và khô. Kiểm tra góc cạnh, lớp phủ cũ và vị trí tiếp xúc nước trước khi xác định phương án dán."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Bố cục theo mặt tiền",
+        "text": "Thống nhất vùng nhận diện và vùng kính thoáng trên ảnh công trình trước khi sản xuất."
+      },
+      {
+        "title": "Phối hợp nhiều hạng mục",
+        "text": "Chọn màu Decal, film và logo theo cùng phong cách, đồng thời kiểm tra điều kiện riêng của từng bề mặt."
+      },
+      {
+        "title": "Kế hoạch theo giờ hoạt động",
+        "text": "Trao đổi thứ tự thi công, khu vực cần bàn giao và quy định ra vào để phối hợp với cửa hàng hoặc nơi lưu trú."
+      }
+    ],
+    "prices": [],
+    "references": [],
+    "faqs": [
+      {
+        "question": "Cửa hàng tại Đà Nẵng có nên dán kín toàn bộ mặt tiền?",
+        "answer": "Chỉ nên phủ kín khi thiết kế và mục đích sử dụng cần mức che đó. Nếu cần trưng bày hoặc đón sáng, có thể dùng logo cắt, Decal lưới hoặc chia vùng hình ảnh và kính trong sau khi xem hiện trạng."
+      },
+      {
+        "question": "Dán Decal cho khách sạn đang đón khách được tổ chức thế nào?",
+        "answer": "Hãy cung cấp lịch trống phòng, giờ hoạt động và quy định về vệ sinh, tiếng ồn. Hai bên thống nhất từng khu vực và thời điểm bàn giao trước khi triển khai."
+      },
+      {
+        "question": "Cần duyệt những gì trước khi in logo kính ở Đà Nẵng?",
+        "answer": "Duyệt nội dung, chính tả, màu, file logo và kích thước trên từng ô kính. Bản duyệt nên thể hiện tay nắm, khe cửa và mặt dán để tránh mất chữ khi mở cửa."
+      }
+    ]
+  },
+  "ha-noi": {
+    "title": "Decal dán kính Hà Nội – Vách văn phòng, logo & film nội thất",
+    "lead": "Từ dải mờ phòng họp đến logo cửa hàng, mỗi chi tiết cần đúng tỷ lệ và đúng mục đích. iDecal tiếp nhận tư vấn thiết kế, vật liệu và phương án triển khai Decal cho công trình tại Hà Nội.",
+    "description": "Tư vấn Decal dán kính Hà Nội: dải mờ phòng họp, logo cửa hàng, phim cách nhiệt và film nội thất. Gửi hiện trạng để trao đổi thiết kế và báo giá.",
+    "introduction": [
+      "Kính văn phòng vừa ngăn phòng vừa kết nối không gian; cửa kính mặt phố lại là nơi khách nhận ra thương hiệu. iDecal tư vấn cách bố trí Decal tại Hà Nội dựa trên tầm nhìn, ánh sáng và kích thước thực tế, để phần trang trí phục vụ rõ nhu cầu sử dụng.",
+      "Với mặt bằng trong tòa nhà, phương án cần tính cả giờ vận chuyển, lối tiếp cận và quy định thi công. Với nhà ở hoặc cửa hàng, ảnh mép kính, lớp dán cũ và bề mặt nội thất giúp xác định bước chuẩn bị trước khi chọn vật liệu."
+    ],
+    "areas": [
+      "Khu vực Hoàn Kiếm, Ba Đình",
+      "Khu vực Đống Đa, Hai Bà Trưng",
+      "Khu vực Cầu Giấy và phía Tây Hà Nội",
+      "Khu vực Tây Hồ, Long Biên và lân cận"
+    ],
+    "areaNote": "Các địa danh quen thuộc dùng để định hướng vị trí. Cung cấp địa chỉ phường/xã hiện tại, tên tòa nhà và quy định ra vào để trao đổi khả năng triển khai, lịch và chi phí tại Hà Nội.",
+    "priceNote": "Tổng diện tích giúp ước tính ban đầu nhưng chưa đủ chốt giá tại Hà Nội. Số ô kính, loại mẫu, lượng chữ cắt, lớp phim cũ và điều kiện tòa nhà ảnh hưởng khối lượng. Lịch, chi phí di chuyển và phạm vi thi công cần được xác nhận cùng báo giá.",
+    "heroImage": "/images/catalogue/decal-mo-trang-tron-van-phong.jpg",
+    "imageAlt": "Minh họa ứng dụng Decal mờ trên vách kính văn phòng",
+    "services": [
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Dải mờ & logo phòng họp",
+        "text": "Chọn cao độ che theo vị trí bàn và lối đi. Logo, đường chỉ và khoảng trong được chia theo từng ô để giữ bố cục thống nhất trên vách dài."
+      },
+      {
+        "slug": "cat-decal",
+        "title": "Cắt chữ cho cửa kính mặt phố",
+        "text": "Tạo tên cửa hàng, giờ hoạt động và chỉ dẫn bằng chữ cắt. Ưu tiên độ tương phản, nét chữ dễ đọc và vị trí không vướng tay nắm hoặc khe cánh."
+      },
+      {
+        "slug": "film-noi-that",
+        "title": "Film cho cửa, tủ & quầy",
+        "text": "Lựa chọn vân gỗ, vân đá hoặc màu đơn sắc theo nội thất sẵn có. Kiểm tra tình trạng sơn, độ khô và các mép cạnh trước khi thống nhất phạm vi làm mới."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim cho phòng có nhiều kính",
+        "text": "Đánh giá hướng nắng và loại kính để so sánh mã phim. Cân đối giảm chói với ánh sáng làm việc, đặc biệt ở phòng chỉ có một mặt lấy sáng."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Thiết kế theo từng ô kính",
+        "text": "Đối chiếu số đo, khe cánh và chiều dán trước khi gia công logo hoặc họa tiết."
+      },
+      {
+        "title": "Làm rõ điều kiện tòa nhà",
+        "text": "Ghi nhận giờ được làm việc, thủ tục vận chuyển và khu vực cần bảo vệ khi lập kế hoạch."
+      },
+      {
+        "title": "Báo giá theo phạm vi thực tế",
+        "text": "Tách rõ vật liệu, gia công và xử lý lớp cũ để có cơ sở kiểm tra khối lượng."
+      }
+    ],
+    "prices": [],
+    "references": [],
+    "faqs": [
+      {
+        "question": "Văn phòng Hà Nội cần dán mờ cao bao nhiêu?",
+        "answer": "Cao độ phụ thuộc bàn ghế, vị trí người ngồi và tầm nhìn từ hành lang. Gửi ảnh hai phía vách kính để xác định vùng che; không cần mặc định một chiều cao cho mọi phòng."
+      },
+      {
+        "question": "Logo đi qua nhiều ô kính có làm được không?",
+        "answer": "Có thể thiết kế chia theo từng ô. Cần đo khe và xác định phần chữ quan trọng để tránh bị ngắt ở mối nối; bản duyệt phải thể hiện toàn bộ vách và số thứ tự các ô."
+      },
+      {
+        "question": "Thi công trong tòa nhà cần cung cấp quy định gì?",
+        "answer": "Cung cấp giờ được làm việc, thủ tục đăng ký, lối vận chuyển và yêu cầu bảo vệ sàn, đồ đạc. Các điều kiện này được tính vào phương án và lịch trước khi xác nhận."
+      }
+    ]
+  },
+  "quy-nhon": {
+    "title": "iDecal Quy Nhơn – Decal dán kính, quảng cáo & phim cách nhiệt",
+    "lead": "Làm mới cửa kính, tạo điểm nhận diện cho cửa hàng và lựa chọn vật liệu phù hợp cho nhà ở, văn phòng, quán cà phê. Liên hệ iDecal Quy Nhơn tại 675 Nguyễn Thái Học, Quy Nhơn Nam, Gia Lai.",
+    "description": "iDecal Quy Nhơn tại 675 Nguyễn Thái Học: tư vấn Decal mờ, logo kính, Decal quảng cáo và phim cách nhiệt. Xem bản đồ, gửi hiện trạng và nhận tư vấn.",
+    "introduction": [
+      "Cửa kính có thể giúp một quán cà phê nổi bật, một văn phòng kín đáo hơn hoặc một căn phòng dễ chịu khi có nắng. iDecal Quy Nhơn tư vấn Decal và phim kính theo việc bạn cần giải quyết, từ bố cục logo đến mức che phủ và sắc độ vật liệu.",
+      "Bạn có thể gửi ảnh công trình, kích thước từng ô và mẫu mong muốn trước khi trao đổi. Với cửa hàng cần thay nhận diện, nên thống nhất phần chữ, hình ảnh và kính trống; với nhà ở, cần làm rõ riêng tư ban ngày, ban đêm và nguồn sáng trong phòng."
+    ],
+    "areas": [
+      "Khu vực trung tâm Quy Nhơn",
+      "Trục Nguyễn Thái Học và Nguyễn Tất Thành",
+      "Khu vực Xuân Diệu, Ghềnh Ráng",
+      "Khu vực Nhơn Hội và lân cận"
+    ],
+    "areaNote": "Liên hệ 0866.077.040 trước khi đến hoặc gửi nhu cầu qua hi@idecal.vn. Công trình tại các khu vực khác được trao đổi theo địa chỉ, quy mô và điều kiện triển khai thực tế.",
+    "priceNote": "Báo giá tại Quy Nhơn dựa trên mã Decal hoặc phim, diện tích từng ô, thiết kế và hiện trạng. Gửi ảnh lớp dán cũ và vị trí kính cao để làm rõ phần tháo gỡ, vệ sinh, công dán cùng chi phí tiếp cận hoặc di chuyển nếu có.",
+    "heroImage": "/images/catalogue/decal-mo-trang-tron-van-phong.jpg",
+    "imageAlt": "Minh họa ứng dụng Decal mờ trên vách kính văn phòng",
+    "services": [
+      {
+        "slug": "cat-decal",
+        "title": "Logo & chữ cắt cho cửa hàng",
+        "text": "Bố trí tên thương hiệu, giờ mở cửa và thông tin liên hệ theo khổ kính. Chọn màu và nét chữ đủ rõ khi nhìn từ lối vào, giữ khoảng thoáng cho trưng bày."
+      },
+      {
+        "slug": "decal-dan-kinh-van-phong",
+        "title": "Decal mờ cho nhà ở & văn phòng",
+        "text": "Tạo vùng riêng tư cho phòng họp, vách ngăn và cửa nhìn sang nhà bên. Chọn mờ trơn hoặc hoa văn theo mức che và phong cách nội thất."
+      },
+      {
+        "slug": "phim-cach-nhiet",
+        "title": "Phim kính giảm nắng chói",
+        "text": "Xem loại kính, hướng nắng và vị trí chỗ ngồi trước khi chọn mã phim. Độ truyền sáng, màu và thông số vật liệu cần được cân đối cùng nhu cầu sử dụng."
+      },
+      {
+        "slug": "decal-quang-cao",
+        "title": "Decal in cho mặt tiền & nhận diện",
+        "text": "Đưa hình ảnh, thông điệp hoặc chương trình của cửa hàng lên kính với bố cục rõ ràng. Kiểm tra chất lượng file và hướng nhìn trước khi duyệt sản xuất."
+      }
+    ],
+    "benefits": [
+      {
+        "title": "Có thông tin địa điểm rõ ràng",
+        "text": "Xem bản đồ 675 Nguyễn Thái Học và dùng số liên hệ để trao đổi nhu cầu trước khi đến."
+      },
+      {
+        "title": "Chọn vật liệu theo công năng",
+        "text": "Phân biệt che tầm nhìn, trang trí thương hiệu và kiểm soát nắng để lựa chọn đúng hạng mục."
+      },
+      {
+        "title": "Duyệt mẫu trước khi làm",
+        "text": "Thống nhất nội dung, tỷ lệ, kích thước và phạm vi thi công trước khi in hoặc cắt."
+      }
+    ],
+    "prices": [],
+    "references": [],
+    "faqs": [
+      {
+        "question": "Địa chỉ iDecal Quy Nhơn ở đâu?",
+        "answer": "Điểm liên hệ nằm tại 675 Nguyễn Thái Học, Quy Nhơn Nam, Gia Lai. Bạn có thể mở liên kết Google Maps trong phần bản đồ trên trang và gọi 0866.077.040 để trao đổi trước khi đến."
+      },
+      {
+        "question": "Quán cà phê Quy Nhơn nên chọn chữ cắt hay Decal in?",
+        "answer": "Chữ cắt hợp với logo và thông tin gọn, giữ được nhiều kính thoáng. Decal in phù hợp khi cần hình ảnh hoặc bố cục nhiều màu; lựa chọn dựa trên mức che phủ và cách nhìn từ ngoài cửa."
+      },
+      {
+        "question": "Decal mờ có thay phim cách nhiệt được không?",
+        "answer": "Decal mờ chủ yếu che tầm nhìn và trang trí. Nếu cần xử lý nắng nóng hoặc chói, hãy trao đổi riêng về phim cách nhiệt, thông số của mã phim và loại kính đang dùng."
+      }
+    ]
   }
 }
