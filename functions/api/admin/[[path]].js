@@ -53,6 +53,7 @@ export async function onRequest({ request, env }) {
   const route = url.pathname.replace(/^\/api\/admin\/?/, '').replace(/\/$/, '');
   const method = request.method;
   if (method !== 'GET' && request.headers.get('Origin') !== url.origin) return json({ error: 'origin' }, 403);
+  let stage = 'configuration';
   try {
     if (route === 'logout' && method === 'POST') return new Response(null, { status: 204, headers: { 'Set-Cookie': clearSession(), 'Cache-Control': 'no-store' } });
     const issues = configurationIssues(env);
@@ -62,6 +63,7 @@ export async function onRequest({ request, env }) {
       return json({ error: 'configuration' }, 503);
     }
     if (route === 'auth' && method === 'GET') {
+      stage = 'oauth_start';
       const state = b64(crypto.getRandomValues(new Uint8Array(32)));
       const verifier = b64(crypto.getRandomValues(new Uint8Array(32)));
       const challenge = b64(new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(verifier))));
@@ -70,20 +72,29 @@ export async function onRequest({ request, env }) {
       return redirect(target.href, [cookie(STATE, await seal(env, { state, verifier, expires: Date.now() + 600000 }, 'oauth'), 600)]);
     }
     if (route === 'callback' && method === 'GET') {
+      stage = 'oauth_state';
       const state = await unseal(env, readCookie(request, STATE) ?? '', 'oauth');
       if (!state || state.state !== url.searchParams.get('state') || !url.searchParams.get('code') || url.searchParams.has('error')) return redirect('/admin/?error=authentication', [clearState()]);
-      const exchange = await fetch('https://github.com/login/oauth/access_token', { method: 'POST', redirect: 'error', headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, client_secret: env.GITHUB_CLIENT_SECRET, code: url.searchParams.get('code'), redirect_uri: url.origin + '/api/admin/callback', code_verifier: state.verifier }) });
+      stage = 'oauth_exchange';
+      const exchange = await fetch('https://github.com/login/oauth/access_token', { method: 'POST', redirect: 'error', headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'iDecal-Admin' }, body: new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, client_secret: env.GITHUB_CLIENT_SECRET, code: url.searchParams.get('code'), redirect_uri: url.origin + '/api/admin/callback', code_verifier: state.verifier }) });
       const result = exchange.ok ? await exchange.json() : {};
-      if (typeof result.access_token !== 'string') return redirect('/admin/?error=authentication', [clearState()]);
+      if (typeof result.access_token !== 'string') {
+        const failures = { incorrect_client_credentials: 'oauth_credentials', bad_verification_code: 'oauth_code', redirect_uri_mismatch: 'oauth_callback' };
+        return redirect('/admin/?error=' + (failures[result.error] || 'authentication'), [clearState()]);
+      }
+      stage = 'github_permissions';
       const user = await profile(result.access_token);
       if (!user) return redirect('/admin/?error=permission', [clearState()]);
+      stage = 'session_create';
       const session = await seal(env, { token: result.access_token, user, expires: Date.now() + ttl * 1000 }, 'session');
       if (session.length > 3800) return redirect('/admin/?error=authentication', [clearState()]);
       return redirect('/admin/', [clearState(), cookie(SESSION, session, ttl)]);
     }
+    stage = 'session_read';
     const session = await unseal(env, readCookie(request, SESSION) ?? '', 'session');
     if (route === 'session' && method === 'GET') {
       if (!session) return json({ authenticated: false, configured: true });
+      stage = 'session_permissions';
       const user = await profile(session.token);
       return user ? json({ authenticated: true, configured: true, user }) : new Response(JSON.stringify({ authenticated: false, configured: true }), { headers: { 'Content-Type': 'application/json', 'Set-Cookie': clearSession(), 'Cache-Control': 'no-store' } });
     }
@@ -93,6 +104,7 @@ export async function onRequest({ request, env }) {
     const getAllowed = method === 'GET' && ['/user', REPO, FILE + '?ref=main'].includes(destination);
     const putAllowed = method === 'PUT' && destination === FILE;
     if (!getAllowed && !putAllowed) return json({ error: 'forbidden' }, 403);
+    stage = 'github_permissions';
     if (!(await profile(session.token))) return json({ error: 'permission' }, 403);
     let body;
     if (putAllowed) {
@@ -103,6 +115,7 @@ export async function onRequest({ request, env }) {
       if (payload.branch !== 'main' || typeof payload.sha !== 'string' || typeof payload.content !== 'string' || typeof payload.message !== 'string') return json({ error: 'payload' }, 400);
       body = JSON.stringify({ branch: 'main', sha: payload.sha, content: payload.content, message: payload.message.slice(0, 250) });
     }
+    stage = 'github_request';
     const response = await github(session.token, destination, { method, ...(body ? { body } : {}) });
     if (!response.ok) return json({ error: 'github' }, response.status);
     const data = await response.json();
@@ -110,5 +123,12 @@ export async function onRequest({ request, env }) {
     if (destination === FILE + '?ref=main') return json({ sha: data.sha, encoding: data.encoding, content: data.content });
     if (destination === '/user') return json({ login: data.login });
     return json({ permissions: { push: data.permissions?.push === true } });
-  } catch { return json({ error: 'service_unavailable' }, 502); }
+  } catch (error) {
+    // Expose only fixed stage identifiers, never upstream bodies, codes or credentials.
+    const failure = error?.name === 'SyntaxError' ? 'response' : error?.name === 'TypeError' ? 'network' : 'runtime';
+    if (method === 'GET' && (route === 'auth' || route === 'callback')) {
+      return redirect('/admin/?error=service&stage=' + stage + '&failure=' + failure, [clearState()]);
+    }
+    return json({ error: 'service_unavailable', stage, failure }, 502);
+  }
 }

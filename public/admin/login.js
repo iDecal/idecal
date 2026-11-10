@@ -3,12 +3,25 @@ const accountView = document.getElementById('account-view');
 const button = document.getElementById('github-login');
 const statusEl = document.getElementById('status');
 const errors = { configuration: 'Đăng nhập GitHub chưa được kích hoạt. Vui lòng liên hệ người quản trị để hoàn tất cấu hình.', authentication: 'Đăng nhập chưa hoàn tất hoặc phiên xác thực đã hết hạn. Vui lòng thử lại.', permission: 'Tài khoản này chưa có quyền chỉnh sửa website iDecal.' };
-const error = new URLSearchParams(location.search).get('error');
+const query = new URLSearchParams(location.search);
+const error = query.get('error');
+const stages = { oauth_start: 'khởi tạo đăng nhập', oauth_state: 'kiểm tra phiên xác thực', oauth_exchange: 'nhận kết quả từ GitHub', github_permissions: 'kiểm tra quyền GitHub', session_create: 'tạo phiên đăng nhập', session_read: 'đọc phiên đăng nhập', session_permissions: 'kiểm tra lại tài khoản', github_request: 'đọc hoặc lưu sản phẩm' };
+const stage = query.get('stage');
+const serviceMessage = code => 'Đăng nhập tạm thời gặp lỗi ở bước ' + (stages[code] || 'kết nối máy chủ') + '. Vui lòng thử lại. Mã hỗ trợ: ' + (Object.hasOwn(stages, code) ? code : 'service') + '.';
+errors.service = serviceMessage(stage);
+errors.oauth_credentials = 'GitHub chưa chấp nhận Client ID hoặc Client Secret. Kiểm tra đúng cặp thông tin của OAuth App trong Cloudflare Production rồi triển khai lại.';
+errors.oauth_code = 'Mã đăng nhập đã hết hạn hoặc đã dùng. Hãy bấm đăng nhập GitHub lại từ đầu.';
+errors.oauth_callback = 'Địa chỉ callback trong GitHub OAuth App chưa khớp. Cần dùng https://idecal.pages.dev/api/admin/callback.';
 if (error) history.replaceState(null, '', location.pathname);
 async function check() {
   try {
     const response = await fetch('/api/admin/session', { cache: 'no-store', credentials: 'same-origin' });
-    if (!response.ok) throw new Error();
+    if (!response.ok) {
+      const result = await response.json().catch(() => ({}));
+      statusEl.textContent = serviceMessage(result.stage);
+      statusEl.setAttribute('data-error', '');
+      return;
+    }
     const session = await response.json();
     loginView.hidden = session.authenticated === true;
     accountView.hidden = session.authenticated !== true;
