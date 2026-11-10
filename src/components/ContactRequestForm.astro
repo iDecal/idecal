@@ -5,7 +5,7 @@ import { regions } from '../data/regions';
 import { products } from '../data/catalogue';
 import { isPVCProduct, pvcFinishes } from '../data/pvc-options';
 import { serviceOfferings as services } from '../data/site-offerings';
-const productOptions = products.map(product=>({slug:product.slug,name:product.name,code:product.code,service:isPVCProduct(product.slug)?'cat-decal':'thi-cong-decal',pvc:isPVCProduct(product.slug)}));
+const productOptions = products.map(product=>({slug:product.slug,name:product.name,service:isPVCProduct(product.slug)?'cat-decal':'thi-cong-decal',pvc:isPVCProduct(product.slug)}));
 ---
     <div class="booking-form-card">
       <div class="booking-form-heading"><h2>Gửi yêu cầu tư vấn & đặt dịch vụ</h2><p>Điền thông tin, sau đó sao chép yêu cầu để gửi qua Zalo. Các mục có dấu <span aria-hidden="true">*</span> cần được điền.</p></div>

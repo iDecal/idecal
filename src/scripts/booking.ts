@@ -1,4 +1,4 @@
-interface BookingProduct { slug: string; name: string; code: string; service?: string; pvc?: boolean; }
+interface BookingProduct { slug: string; name: string; service?: string; pvc?: boolean; }
 const form = document.querySelector<HTMLFormElement>('#booking-form');
 if (form) {
   form.hidden = false;
@@ -63,7 +63,7 @@ if (form) {
   }
   if (product) {
     byId<HTMLElement>('booking-product-info').hidden = false;
-    byId<HTMLElement>('booking-product-name').textContent = `${product.name} · ${product.code}`;
+    byId<HTMLElement>('booking-product-name').textContent = product.name;
     byId<HTMLAnchorElement>('booking-product-link').href = `/san-pham/${encodeURIComponent(product.slug)}`;
   }
   if (product?.pvc) {
@@ -98,7 +98,7 @@ if (form) {
       `Họ tên: ${name.value.trim()}`,
       `Điện thoại: ${phone.value.trim()}`,
       `Dịch vụ: ${service.selectedOptions[0].textContent}`,
-      ...(product ? [`Mẫu quan tâm: ${product.name} (${product.code})`] : []),
+      ...(product ? [`Mẫu quan tâm: ${product.name}`] : []),
       ...(product?.pvc ? [`Bề mặt: ${finish.selectedOptions[0].textContent}`, `Hình thức mua: ${pvcType.selectedOptions[0].textContent}`, 'Quy cách cuộn: 1,2 × 50 m'] : []),
       `Khu vực: ${region.selectedOptions[0].textContent}`,
       ...(region.value==='tp-hcm' && ward.value ? [`Phường/xã: ${ward.selectedOptions[0].textContent}`] : []),
