@@ -42,7 +42,7 @@ with sync_playwright() as p:
  page.route('**/api/admin/**',api)
  page.goto('http://127.0.0.1:4321/san-pham/'+slug,wait_until='networkidle')
  assert page.locator('[data-editor-open]').is_hidden()
- assert page.locator('[data-editor-login]').get_attribute('href')=='/admin/'
+ assert page.locator('[data-editor-login]').count()==0
  state['auth']=True
  page.reload(wait_until='networkidle')
  page.locator('[data-editor-open]').wait_for(state='visible');page.locator('[data-editor-open]').click();page.locator('[data-editor-form]').wait_for(state='visible')
@@ -112,6 +112,6 @@ with sync_playwright() as p:
  state['auth']=False
  page.evaluate("window.dispatchEvent(new Event('focus'))")
  page.locator('[data-editor-open]').wait_for(state='hidden')
- assert page.locator('[data-editor-login]').is_visible()
+ assert page.locator('[data-editor-login]').count()==0
  b.close()
 print('Passed: brand selection/addition, image upload/URL/ALT/title, verified login, write-permission denial, UTF-8 save, sibling/metadata preservation, concurrent-edit protection, unsafe-image rejection, GitHub conflict, mobile dialog and logout. GitHub calls mocked; no real repository writes.')

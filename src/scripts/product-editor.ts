@@ -36,7 +36,6 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-product-editor]
   const dialog = root.querySelector<HTMLDialogElement>('[data-editor-dialog]')!;
   const form = root.querySelector<HTMLFormElement>('[data-editor-form]')!;
   const status = root.querySelector<HTMLElement>('[data-editor-status]')!;
-  const login = root.querySelector<HTMLAnchorElement>('[data-editor-login]')!;
   const open = root.querySelector<HTMLButtonElement>('[data-editor-open]')!;
   const logout = root.querySelector<HTMLButtonElement>('[data-editor-logout]')!;
   const slug = root.dataset.productSlug!;
@@ -54,7 +53,7 @@ for (const root of document.querySelectorAll<HTMLElement>('[data-product-editor]
   let authenticated = false;
   const message = (text: string, error = false) => { status.textContent = text; status.toggleAttribute('data-error', error); };
   const fail = (error: unknown) => message(error instanceof EditorError ? error.message : 'Không kết nối được GitHub. Kiểm tra kết nối rồi thử lại.', true);
-  const controls = () => { login.hidden = authenticated; open.hidden = !authenticated; logout.hidden = !authenticated; };
+  const controls = () => { root.classList.toggle('is-authenticated', authenticated); open.hidden = !authenticated; logout.hidden = !authenticated; };
   const task = async (action: () => Promise<void>) => {
     if (busy) return;
     busy = true;

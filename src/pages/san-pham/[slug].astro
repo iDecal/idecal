@@ -76,7 +76,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
             <div class="product-information-content"><dl class="product-specs">{filmFields.map(field => <div><dt>{field.label}</dt><dd>{filmSpecs[field.key] != null && filmSpecs[field.key] !== '' ? `${filmSpecs[field.key]} ${field.unit}` : 'Chưa cập nhật'}</dd></div>)}</dl></div>
           </details>}
         </div>
-        <a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a>
+        <nav class="product-help-links" aria-label="Hỗ trợ chọn và đặt sản phẩm"><a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a><a class="product-measuring-guide" href="/blog/cach-do-kich-thuoc-kinh-truoc-khi-dat-decal"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 14-14 4 4L7 21zM14 6l2 2M11 9l2 2M8 12l2 2M5 15l2 2" /></svg><span>Hướng dẫn đo kính</span><span aria-hidden="true">→</span></a></nav>
         <ProductEditor product={product} />
       </div>
     </div>
@@ -122,4 +122,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
 
 <style>
 :global([data-pov] [data-main-gallery] img){object-fit:contain}.pov-source{margin:24px 0;font-size:13px;line-height:1.8;color:#5b7084}.pov-source p{font-size:12px;margin:0 0 8px}.pov-source a{display:block;color:#17668f;margin:6px 0;text-decoration:underline;text-underline-offset:3px}
+</style>
+
+<style>
+.product-help-links{display:flex;flex-wrap:wrap;align-items:center;gap:18px 26px;margin-top:24px}.product-help-links .product-service-link{margin:0}.product-measuring-guide{display:inline-flex;align-items:center;gap:9px;color:#0d6b96;font-size:14px;line-height:1.6;padding:8px 0}.product-measuring-guide svg{flex-shrink:0}.product-measuring-guide:hover{text-decoration:underline;text-underline-offset:4px}.product-measuring-guide:focus-visible{outline:2px solid #0d6b96;outline-offset:5px;border-radius:3px}@media(max-width:639px){.product-help-links{align-items:flex-start;flex-direction:column;gap:12px}}
 </style>
