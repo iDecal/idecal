@@ -2171,12 +2171,12 @@
   },
   {
     "slug": "phim-cach-nhiet-rs20",
-    "name": "Phim cách nhiệt RS20",
+    "name": "Phim cách nhiệt R20S",
     "category": "phim-cach-nhiet",
     "subcategory": "Phim cách nhiệt",
     "brand": "Rainier",
     "price": 280000,
-    "code": "IDC-074",
+    "code": "R20S",
     "description": "Phim cách nhiệt nhà kính thương hiệu Rainier là dòng phim dán kính phổ thông",
     "paragraphs": [
       "Phim cách nhiệt nhà kính thương hiệu Rainier là dòng phim dán kính phổ thông"
@@ -2200,6 +2200,23 @@
       "Nhà kính",
       "Căn hộ ban công",
       "Showroom"
+    ],
+    "imageMetadata": [
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2026/09/rainier-rs20.webp",
+        "alt": "Phim cách nhiệt RS20",
+        "title": "Phim cách nhiệt RS20 | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2026/09/ky-thuat-vien-ppf-14684dba.webp",
+        "alt": "Phim cách nhiệt RS20",
+        "title": "Phim cách nhiệt RS20 | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2026/09/phim-cach-nhiet-rs220-ben-ngoai-nhin-vao.webp",
+        "alt": "Phim cách nhiệt RS20",
+        "title": "Phim cách nhiệt RS20 | iDecal"
+      }
     ]
   },
   {
