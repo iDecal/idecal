@@ -506,5 +506,20 @@
     "image": "/images/catalogue/decal-mo-chuyen-mau-gradient.jpg",
     "needs": [],
     "editorCreated": true
+  },
+  {
+    "slug": "phim-bao-ve",
+    "name": "Phim bảo vệ",
+    "headline": "Phim bảo vệ",
+    "description": "Khám phá mẫu Phim bảo vệ tại iDecal. Xem hình ảnh, thông tin vật liệu và liên hệ tư vấn theo nhu cầu.",
+    "benefits": [],
+    "priceTitle": "Báo giá Phim bảo vệ",
+    "priceNote": "Liên hệ để trao đổi mã vật liệu, quy cách và khối lượng.",
+    "prices": [],
+    "faqs": [],
+    "service": "phim-cach-nhiet",
+    "image": "/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp",
+    "needs": [],
+    "editorCreated": true
   }
 ]
