@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { parse } from 'yaml';
 
-const config = JSON.parse(await readFile('public/admin/config.json', 'utf8'));
+const config = JSON.parse(await readFile('dist/admin/config.json', 'utf8'));
 assert.deepEqual(config.backend, { name: 'github', repo: 'iDecal/idecal', branch: 'main', auth_methods: ['token'] });
 assert.equal(config.output.omit_empty_optional_fields, true);
 assert.equal(config.output.yaml.quote, 'double');
@@ -11,6 +11,8 @@ assert.equal(config.public_folder, '/images/uploads');
 assert.equal(new Set(config.collections.map(collection => collection.name)).size, config.collections.length);
 const catalogue = config.collections.find(collection => collection.name === 'catalogue');
 assert.equal(catalogue.file, 'src/data/products.json', 'Products must be individual CMS entries');
+const categories = JSON.parse(await readFile('src/data/product-categories.json', 'utf8'));
+assert.deepEqual(catalogue.fields.find(field => field.name === 'category').options.map(option => option.value), categories.map(category => category.slug), 'Published CMS must include categories created in the product popup');
 assert.equal(catalogue.files, undefined, 'Do not wrap the product list in one editor');
 assert.equal(catalogue.preview_path, 'san-pham/{{fields.slug}}/');
 assert.ok(catalogue.fields.find(field => field.name === 'installationImages').fields.some(field => field.name === 'src'));

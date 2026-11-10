@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GlassMeasurementDiagram from '../components/GlassMeasurementDiagram.astro';
+import '../styles/glass-measurement.css';
+const quoteTemplate = [
+  'Mã/tên mẫu decal:',
+  'Nhu cầu: dán toàn ô / dải mờ cao ... cm / logo',
+  'Mặt dán: 1 mặt / 2 mặt',
+  'Đơn vị đo: cm',
+  'Ô A1: ngang ... × cao ... — số lượng ...',
+  'Ô A2: ngang ... × cao ... — số lượng ...',
+  'Tổng diện tích kính dự kiến: ... m²',
+  'Có decal/phim cũ cần tháo: có / không',
+  'Vị trí kính: tầng ..., có thể tiếp cận từ ...',
+  'Địa chỉ công trình:',
+  'Thời gian mong muốn:',
+  'Ảnh gửi kèm: toàn cảnh kính + cận khung, tay nắm, lớp dán cũ.',
+].join('\n');
+---
+<Layout title="Hướng dẫn đo kính để báo giá decal | iDecal" description="Cách đo ngang, cao từng ô kính, tính diện tích m² và chuẩn bị ảnh, mã mẫu để nhận báo giá decal. Có sơ đồ đo và mẫu thông tin gửi iDecal.">
+  <div class="glass-guide">
+    <header class="glass-guide-hero container">
+      <div>
+        <a href="/san-pham" class="glass-guide-back">← Sản phẩm iDecal</a>
+        <p class="glass-guide-eyebrow">Hướng dẫn chọn kích thước</p>
+        <h1>Hướng dẫn đo kính<br />để báo giá decal</h1>
+        <p class="glass-guide-lead">Một chiếc thước dây, ảnh mặt kính và vài số đo rõ ràng là đủ để bắt đầu. Đo riêng từng ô, ghi đúng đơn vị và cho biết phần bạn muốn dán.</p>
+        <a href="#mau-gui-bao-gia" class="btn-idecal-bold">Lấy mẫu gửi báo giá ↓</a>
+      </div>
+      <figure><GlassMeasurementDiagram /><figcaption>Đo phần kính cần dán bên trong khung. Sơ đồ minh họa cách ghi ngang (W) × cao (H). <a href="/blog/cach-do-kich-thuoc-kinh-truoc-khi-dat-decal">Xem hình minh họa từng bước →</a></figcaption></figure>
+    </header>
+    <nav class="glass-guide-nav container" aria-label="Nội dung hướng dẫn"><a href="#cach-do">Cách đo</a><a href="#tinh-dien-tich">Tính diện tích</a><a href="#anh-can-gui">Ảnh cần gửi</a><a href="#mau-gui-bao-gia">Mẫu báo giá</a></nav>
+    <div class="container glass-guide-content">
+      <section id="cach-do" aria-labelledby="measure-steps-title">
+        <p class="glass-guide-eyebrow">01 · Lấy kích thước</p>
+        <h2 id="measure-steps-title">Đo từng ô, ghi từng dòng</h2>
+        <ol class="glass-guide-steps">
+          <li><h3>Chuẩn bị thước và đánh số ô kính</h3><p>Dùng thước dây hoặc thước đo phù hợp, giấy ghi chép và điện thoại chụp ảnh. Đánh số A1, A2, A3… trên ảnh để đối chiếu số đo; cửa hai cánh ghi riêng từng cánh.</p></li>
+          <li><h3>Đo ngang và cao của phần kính</h3><p>Đo phần kính cần dán bên trong khung, không tính phần nhôm, gỗ hoặc nẹp. Ghi <strong>ngang × cao</strong> và chọn cùng một đơn vị <strong>cm</strong> hoặc <strong>mm</strong> cho cả danh sách.</p><p>Kiểm tra chiều ngang ở trên, giữa, dưới và chiều cao ở trái, giữa, phải. Nếu các số khác nhau, gửi đủ số đo kèm ảnh để đối chiếu trước khi cắt vật liệu.</p></li>
+          <li><h3>Ghi rõ phạm vi muốn dán</h3><p>Dán toàn ô thì ghi kích thước phần kính. Dán dải mờ thì ghi chiều ngang, chiều cao dải và vị trí mép dưới so với sàn. Với logo, thêm kích thước logo dự kiến và vị trí đặt trên kính.</p><p>Cho biết dán một mặt hay cả hai mặt. Nếu hai mặt có yêu cầu khác nhau, lập dòng riêng cho từng mặt; giữ rõ số lượng ô để tránh tính lặp.</p></li>
+          <li><h3>Đối chiếu số lượng trước khi gửi</h3><p>Gộp các ô cùng kích thước và cùng cách dán vào một dòng, ghi số lượng. Với kính cong, vát, tam giác hoặc có lỗ khoét, gửi ảnh và kích thước bao ngoài để trao đổi cách lấy mẫu cụ thể.</p></li>
+        </ol>
+        <aside class="glass-guide-note"><strong>Ghi kích thước thực tế, chưa cộng bù.</strong><p>iDecal sẽ trao đổi phần chừa mép, khổ cuộn, chiều hoa văn và cách chia tấm khi chốt phương án. Chỉ đo ở vị trí tiếp cận an toàn; kính cao hoặc khó với nên gửi ảnh trước để sắp xếp khảo sát.</p></aside>
+      </section>
+      <section id="tinh-dien-tich" aria-labelledby="measure-area-title">
+        <p class="glass-guide-eyebrow">02 · Ước tính khối lượng</p>
+        <h2 id="measure-area-title">Tính diện tích kính cần dán</h2>
+        <p>Với các ô chữ nhật cùng kích thước: <strong>diện tích = ngang (m) × cao (m) × số lượng</strong>. Đổi cm sang m bằng cách chia cho 100; đổi mm sang m bằng cách chia cho 1.000.</p>
+        <div class="glass-guide-table" tabindex="0" role="region" aria-label="Ví dụ tính diện tích kính">
+          <table><caption>Ví dụ: dán toàn ô, một mặt kính</caption><thead><tr><th scope="col">Ô kính</th><th scope="col">Ngang × cao (cm)</th><th scope="col">Số lượng</th><th scope="col">Diện tích</th></tr></thead><tbody><tr><th scope="row">A1</th><td>120 × 180</td><td>2</td><td>4,32 m²</td></tr><tr><th scope="row">A2</th><td>80 × 200</td><td>1</td><td>1,60 m²</td></tr></tbody><tfoot><tr><th scope="row" colspan="3">Tổng diện tích kính</th><td>5,92 m²</td></tr></tfoot></table>
+        </div>
+        <p>Nếu chỉ dán dải mờ cao 90 cm trên hai ô rộng 120 cm, diện tích phần dán là <strong>1,20 × 0,90 × 2 = 2,16 m²</strong>. Dùng chiều cao phần dán thay cho chiều cao toàn ô.</p>
+        <p class="glass-guide-muted">Diện tích giúp ước tính ban đầu. Giá hoàn thiện còn phụ thuộc mã vật liệu, khổ cuộn, phần in/cắt logo, tháo lớp cũ, công dán và điều kiện tiếp cận kính. Hãy làm rõ các hạng mục này khi nhận báo giá.</p>
+      </section>
+      <section id="anh-can-gui" aria-labelledby="measure-photos-title">
+        <p class="glass-guide-eyebrow">03 · Cho biết hiện trạng</p>
+        <h2 id="measure-photos-title">Gửi ảnh để tư vấn sát với công trình</h2>
+        <ul class="glass-guide-list">
+          <li><strong>Ảnh toàn cảnh:</strong> thấy đủ các ô kính, lối vào và khu vực xung quanh; đánh số trên ảnh khớp bảng kích thước.</li>
+          <li><strong>Ảnh cận bề mặt:</strong> khung, gioăng, tay nắm, bản lề, mép kính và lớp decal/phim cũ nếu có.</li>
+          <li><strong>Ảnh từ hai phía:</strong> giúp trao đổi mặt dán, ánh sáng và mức che riêng tư; kính chống nắng nên cho biết hướng nắng và thời điểm bị chói.</li>
+          <li><strong>Mã mẫu hoặc hình mong muốn:</strong> kèm file logo nếu cần in/cắt, địa chỉ, tầng và thời gian dự kiến làm.</li>
+        </ul>
+        <p>Với kính ở tòa nhà, gửi thêm giờ được thi công và quy định vận chuyển vật tư. Nếu chưa đo đủ, cứ gửi phần đã có và ghi rõ số nào là ước lượng để cùng kiểm tra lại.</p>
+      </section>
+      <section id="mau-gui-bao-gia" aria-labelledby="measure-template-title">
+        <p class="glass-guide-eyebrow">04 · Gửi yêu cầu</p>
+        <h2 id="measure-template-title">Sao chép mẫu và điền số đo của bạn</h2>
+        <pre class="glass-guide-template" data-quote-template>{quoteTemplate}</pre>
+        <div class="glass-guide-actions"><button type="button" data-copy-measurements class="glass-guide-copy">Sao chép mẫu thông tin</button><a href="/lien-he-idecal#yeu-cau" data-measurement-contact class="btn-primary-solid">Gửi kích thước báo giá →</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhắn Zalo iDecal</a></div>
+        <p data-copy-status class="glass-guide-copy-status" role="status" aria-live="polite"></p>
+        <p class="glass-guide-muted">Kích thước bạn gửi dùng để trao đổi báo giá ban đầu. Trước khi sản xuất hoặc cắt theo yêu cầu, hai bên cần xác nhận lại kích thước và phương án thực hiện.</p>
+      </section>
+    </div>
+  </div>
+</Layout>
+<script>
+  const copy = document.querySelector<HTMLButtonElement>('[data-copy-measurements]');
+  copy?.addEventListener('click', async () => {
+    const template = document.querySelector<HTMLElement>('[data-quote-template]')!;
+    const status = document.querySelector<HTMLElement>('[data-copy-status]')!;
+    try {
+      await navigator.clipboard.writeText(template.textContent ?? '');
+      status.textContent = 'Đã sao chép. Điền số đo và gửi kèm ảnh công trình để được tư vấn.';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(template);
+      const selection = window.getSelection();
+      selection?.removeAllRanges();
+      selection?.addRange(range);
+      status.textContent = 'Đã chọn mẫu thông tin. Bạn có thể sao chép bằng menu của trình duyệt.';
+    }
+  });
+  const product = new URLSearchParams(location.search).get('san-pham');
+  if (product && /^[a-z0-9-]+$/.test(product)) {
+    const contact = document.querySelector<HTMLAnchorElement>('[data-measurement-contact]')!;
+    contact.href = '/lien-he-idecal?san-pham=' + encodeURIComponent(product) + '#yeu-cau';
+  }
+</script>

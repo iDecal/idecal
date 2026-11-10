@@ -1,0 +1,49 @@
+---
+import GlassMeasurementDiagram from './GlassMeasurementDiagram.astro';
+interface Props { productSlug: string; }
+const { productSlug } = Astro.props;
+const guideURL = '/huong-dan-do-kinh/?san-pham=' + encodeURIComponent(productSlug);
+---
+<div class="product-measurement-guide" data-measurement-guide>
+  <a href={guideURL} class="measurement-guide-link" data-measurement-open aria-haspopup="dialog" aria-controls="glass-measurement-dialog">
+    <svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 13-13 5 5L8 21 3 16Z"/><path d="m7 12 2 2m2-6 2 2m2-6 2 2"/></svg>
+    <span>Hướng dẫn đo kính</span>
+  </a>
+  <dialog id="glass-measurement-dialog" class="measurement-dialog" aria-labelledby="measurement-dialog-title">
+    <div class="measurement-dialog-header">
+      <div><p>Chuẩn bị kích thước báo giá</p><h2 id="measurement-dialog-title">Đo kính trong 3 bước</h2></div>
+      <button type="button" data-measurement-close aria-label="Đóng hướng dẫn đo kính">×</button>
+    </div>
+    <GlassMeasurementDiagram />
+    <ol class="measurement-quick-steps">
+      <li><strong>Đo từng ô kính.</strong> Ghi ngang × cao của phần kính cần dán, bên trong khung. Dùng cùng một đơn vị cm hoặc mm.</li>
+      <li><strong>Ghi số lượng và phần cần dán.</strong> Đánh số A1, A2…; dán một dải mờ thì ghi riêng chiều cao dải. Nêu rõ dán một hay hai mặt.</li>
+      <li><strong>Gửi ảnh kèm kích thước.</strong> Thêm mã mẫu, địa chỉ, tình trạng lớp dán cũ để iDecal trao đổi vật liệu và báo giá.</li>
+    </ol>
+    <p class="measurement-example"><strong>Ví dụ:</strong> 2 ô, mỗi ô 120 × 180 cm → 1,20 × 1,80 × 2 = <strong>4,32 m²</strong>.</p>
+    <p class="measurement-note">Gửi kích thước thực tế, chưa cộng hao hụt. Khổ cuộn, chiều hoa văn, công dán và xử lý lớp cũ được tính khi chốt báo giá.</p>
+    <div class="measurement-dialog-actions">
+      <a href="/blog/cach-do-kich-thuoc-kinh-truoc-khi-dat-decal" target="_blank" rel="noopener noreferrer">Xem hình minh họa từng bước<span class="sr-only"> (mở trong tab mới)</span></a>
+      <a href={guideURL} target="_blank" rel="noopener noreferrer">Xem hướng dẫn đầy đủ <span aria-hidden="true">→</span><span class="sr-only"> (mở trong tab mới)</span></a>
+      <a href={'/lien-he-idecal?san-pham=' + encodeURIComponent(productSlug) + '#yeu-cau'}>Gửi kích thước báo giá</a>
+    </div>
+  </dialog>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-measurement-guide]').forEach(root => {
+    const dialog = root.querySelector<HTMLDialogElement>('dialog')!;
+    root.querySelector<HTMLAnchorElement>('[data-measurement-open]')!.addEventListener('click', event => {
+      if (typeof dialog.showModal !== 'function') return;
+      event.preventDefault();
+      dialog.showModal();
+    });
+    root.querySelector('[data-measurement-close]')!.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+      const bounds = dialog.getBoundingClientRect();
+      if (event.target === dialog && (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom)) dialog.close();
+    });
+  });
+</script>
+<style>
+.product-measurement-guide{margin-top:10px}.measurement-guide-link{display:inline-flex;align-items:center;gap:8px;min-height:40px;color:#1b4f7a;font-size:13px;font-weight:500;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#d1b581}.measurement-guide-link:hover{color:#0d6b96}.measurement-guide-link svg{flex-shrink:0}.measurement-dialog{width:min(620px,calc(100% - 28px));max-height:90dvh;border:1px solid #e3e9ef;border-radius:18px;padding:26px;color:#1b4f7a;overflow-y:auto;box-shadow:0 20px 70px #03124526}.measurement-dialog::backdrop{background:#03124588}.measurement-dialog-header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.measurement-dialog-header p{font-size:12px;color:#64748b;margin:0 0 8px;border-left:3px solid #d1b581;padding-left:9px}.measurement-dialog-header h2{font-size:24px;line-height:1.4;margin:0}.measurement-dialog-header button{display:grid;place-items:center;flex-shrink:0;width:38px;height:38px;border:1px solid #e1e8ef;border-radius:50%;color:#1b4f7a;background:white;font-size:28px;line-height:1}.measurement-dialog :global(.glass-measurement-diagram){max-width:330px;margin-block:18px}.measurement-quick-steps{list-style:decimal;padding-left:21px;margin:0;display:grid;gap:13px;font-size:14px;line-height:1.8;color:#44566b}.measurement-quick-steps strong{color:#1b4f7a;font-weight:600}.measurement-dialog .measurement-example{margin:20px 0 12px;border-left:3px solid #d1b581;padding:12px 15px;background:#faf7f1;font-size:14px;line-height:1.8}.measurement-dialog .measurement-note{font-size:12px;line-height:1.8;color:#64748b;margin:0}.measurement-dialog-actions{display:flex;flex-wrap:wrap;gap:16px 24px;margin-top:22px;padding-top:18px;border-top:1px solid #e1e8ef}.measurement-dialog-actions a{font-size:13px;font-weight:500;color:#0d6b96;text-decoration:underline;text-underline-offset:4px}:is(a,button):focus-visible{outline:2px solid #0d6b96;outline-offset:4px}@media(max-width:540px){.measurement-dialog{padding:20px}.measurement-dialog-header h2{font-size:21px}.measurement-dialog :global(.glass-measurement-diagram){max-width:270px}}
+</style>

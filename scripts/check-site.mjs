@@ -137,6 +137,8 @@ for (const product of catalogueProducts) {
   const schema = schemas.flatMap(item => item['@graph'] ?? [item]).find(item => item['@type'] === 'Product') ?? {};
   assert.equal(schema['@type'], 'Product', `Missing Product structured data: ${product.slug}`);
   assert.equal(schema.name, product.name, `Product schema mismatch: ${product.slug}`);
+  assert.ok(html.includes('data-measurement-open'), 'Product must offer a glass measurement guide: ' + product.slug);
+  assert.ok(html.includes('/huong-dan-do-kinh/?san-pham=' + encodeURIComponent(product.slug)), 'Measurement guide must preserve product context: ' + product.slug);
   assert.ok(legacyRedirects.includes(`/${product.slug} /san-pham/${product.slug}/ 301`), `Missing legacy redirect: ${product.slug}`);
 }
 assert.equal((catalogueIndex.match(/class="catalogue-card\b/g) ?? []).length, 0, 'Product index must show landing groups without repeating the full catalogue');

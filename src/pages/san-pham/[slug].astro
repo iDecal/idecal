@@ -1,5 +1,6 @@
 ---
 import '../../styles/catalogue.css';
+import GlassMeasurementGuide from '../../components/GlassMeasurementGuide.astro';
 import ProductEditor from '../../components/ProductEditor.astro';
 import filmSpecifications from '../../data/film-specifications.json';
 import RelatedGuides from '../../components/RelatedGuides.astro';
@@ -54,6 +55,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
         <div class="product-price-block">
           <p class="product-detail-price">{formatPrice(product.price)}</p>
           {product.brand && <p class="product-detail-brand">Thương hiệu: <strong>{product.brand}</strong></p>}
+          <GlassMeasurementGuide productSlug={product.slug} />
         </div>
         <p class="product-short-description">{shortDescription}</p>
         {isPVC ? <form class="pvc-product-options" action="/lien-he-idecal" method="get"><input type="hidden" name="san-pham" value={product.slug} /><input type="hidden" name="dich-vu" value="cat-decal" /><p class="pvc-options-size">Quy cách cuộn <strong>{pvcRollSize}</strong><span>Cắt lẻ theo yêu cầu</span></p><fieldset><legend>Chọn bề mặt</legend><div class="pvc-finish-options">{pvcFinishes.map((finish,index) => <label><input type="radio" name="be-mat" value={finish.value} checked={index===0} required /><span>{finish.label}</span></label>)}</div></fieldset><div class="product-actions"><button type="submit" class="btn-primary-solid product-buy-button">Mua sản phẩm <span aria-hidden="true">→</span></button><a href={`/lien-he-idecal?san-pham=${encodeURIComponent(product.slug)}&dich-vu=${encodeURIComponent(category.service)}#yeu-cau`} class="product-install-button">Đặt lịch thi công <span aria-hidden="true">→</span></a></div></form> : <div class="product-actions"><a href="https://zalo.me/0866077040" class="btn-primary-solid product-buy-button">Mua sản phẩm <span aria-hidden="true">→</span></a><a href={`/lien-he-idecal?san-pham=${encodeURIComponent(product.slug)}&dich-vu=${encodeURIComponent(category.service)}#yeu-cau`} class="product-install-button">Đặt lịch thi công <span aria-hidden="true">→</span></a></div>}
@@ -76,7 +78,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
             <div class="product-information-content"><dl class="product-specs">{filmFields.map(field => <div><dt>{field.label}</dt><dd>{filmSpecs[field.key] != null && filmSpecs[field.key] !== '' ? `${filmSpecs[field.key]} ${field.unit}` : 'Chưa cập nhật'}</dd></div>)}</dl></div>
           </details>}
         </div>
-        <nav class="product-help-links" aria-label="Hỗ trợ chọn và đặt sản phẩm"><a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a><a class="product-measuring-guide" href="/blog/cach-do-kich-thuoc-kinh-truoc-khi-dat-decal"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 14-14 4 4L7 21zM14 6l2 2M11 9l2 2M8 12l2 2M5 15l2 2" /></svg><span>Hướng dẫn đo kính</span><span aria-hidden="true">→</span></a></nav>
+        <nav class="product-help-links" aria-label="Hỗ trợ chọn và đặt sản phẩm"><a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a></nav>
         <ProductEditor product={product} />
       </div>
     </div>

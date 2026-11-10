@@ -339,9 +339,16 @@
     "bodySha256": "09d879affa63b621e122d96d855c339d580e4ed2aa625bdf001fc96fb85131b5",
     "originalTitle": "6 Vật liệu ốp bếp được ưa chuộng năm 2023",
     "cmsRevision": {
-      "bodySha256": "3aaca0c33fd4381232972051ea02eb0008274a18f2ff334d69211d3bc972c6d1",
-      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
-    }
+      "commit": "11ec8ec52e1c48e47f1acc409308a306836b5b30",
+      "bodySha256": "014911d8f6b63e1d7eecad2172aae129a2af464d04615ca2ff731aaff2c0079d",
+      "reason": "Material links moved to approved flat URLs; original article text retained."
+    },
+    "previousCmsRevisions": [
+      {
+        "bodySha256": "3aaca0c33fd4381232972051ea02eb0008274a18f2ff334d69211d3bc972c6d1",
+        "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+      }
+    ]
   },
   "decal-dan-kinh-nha-khoa-ngay-mat-tien-kinh": {
     "wordpressId": 17605,
@@ -365,7 +372,12 @@
     "wordpressId": 948,
     "title": "Hướng dẫn 4 Bước dán Decal vân gỗ vừa nhanh và đẹp",
     "sha256": "fbf0f4401a493bd06235bedd1c9e093d8ceff7c0d573e9a5998ce6372243e67c",
-    "bodySha256": "05fe0ea6d799155771609d7f9302460e2275fb5e8b02e2b25ae2d9bd4f9cf220"
+    "bodySha256": "05fe0ea6d799155771609d7f9302460e2275fb5e8b02e2b25ae2d9bd4f9cf220",
+    "cmsRevision": {
+      "commit": "11ec8ec52e1c48e47f1acc409308a306836b5b30",
+      "bodySha256": "789ba1b29ccfdd33847798cc6b1dd6fc8ea5f4e2c1ec04a77c332f0cd4047110",
+      "reason": "Material links moved to approved flat URLs; original article text retained."
+    }
   },
   "loi-ich-cua-decal-dan-kinh-chong-nang": {
     "wordpressId": 32210,
