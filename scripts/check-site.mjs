@@ -98,9 +98,9 @@ const landingSamples = [
 for (const [slug, sample] of landingSamples) {
   const html = await readFile(path.join(root, slug, 'index.html'), 'utf8');
   assert.ok(catalogueIndex.includes(`href="/${slug}"`), `Product index must link to landing ${slug}`);
-  assert.ok(html.includes(`data-product-id="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);
+  assert.ok(html.includes(`data-product-id="${sample}"`) || html.includes(`data-protection-film="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);
   assert.ok(html.includes('id="mau-san-pham"'), `Landing ${slug} must contain a product catalogue`);
-  if (slug === 'film-bao-ve-noi-that') assert.ok(html.includes('data-product-id="phim-bao-ve-kinh-safety-4ml"'), 'Protection landing must include glass safety film alongside PPF');
+  if (slug === 'film-bao-ve-noi-that') assert.ok(html.includes('data-protection-film="phim-bao-ve-kinh-safety-4ml"'), 'Protection landing must include glass safety film alongside PPF');
 }
 // Flat material URLs must retain permanent redirects from both legacy URL variants.
 for (const slug of new Set([...catalogueCategories.map(category => category.slug), ...landingSamples.map(([slug]) => slug)])) {

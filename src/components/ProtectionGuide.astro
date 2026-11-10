@@ -1,28 +1,85 @@
-<section class="container protection-guide" aria-labelledby="protection-guide-title">
-  <div class="protection-intro"><p class="offering-kicker">Chọn theo bề mặt cần bảo vệ</p><h2 id="protection-guide-title">PPF và phim an toàn khác nhau ở đâu?</h2><p>Film bảo vệ là tên nhóm. PPF nội thất và phim an toàn kính có mục đích sử dụng khác nhau; chọn đúng loại từ đầu giúp phương án dán phù hợp với công trình.</p></div>
-  <div class="protection-comparison">
-    <article><h3>Film PPF bảo vệ nội thất</h3><p>Dùng trên bề mặt tương thích như mặt bàn, quầy hoặc chi tiết nội thất để hạn chế trầy xước nhẹ do tiếp xúc. Cần kiểm tra vật liệu nền, lớp hoàn thiện, cạnh bo và cách vệ sinh.</p><p>Độ bóng, độ trong và khả năng tháo gỡ phụ thuộc sản phẩm cùng tình trạng nền. Tính năng tự phục hồi vết xước, nếu có, phải được xác nhận theo đúng mẫu film; không phải mọi PPF đều có đặc tính này.</p><a href="/san-pham/phim-ppf-tph">Xem film PPF nội thất →</a></article>
-    <article><h3>Phim an toàn bảo vệ kính</h3><p>Dán trên kính để hỗ trợ giữ các mảnh vỡ nhờ lớp film và keo bám dính. Hiệu quả phụ thuộc loại kính, độ dày film, hệ khung, phương án neo giữ và chất lượng thi công.</p><p>Phim an toàn không làm kính trở thành kính không thể vỡ, không mặc định có khả năng chống trộm hoặc thay thế kính an toàn theo yêu cầu thiết kế. Khả năng giảm nhiệt cũng cần được kiểm tra riêng theo thông số sản phẩm.</p><a href="/san-pham/phim-bao-ve-kinh-safety-4ml">Xem phim an toàn kính →</a></article>
-  </div>
-  <div class="protection-questions"><h2>Câu hỏi khi chọn film bảo vệ</h2>
-    <details><summary>Chọn PPF hay phim an toàn cho công trình?</summary><p>Nếu muốn hạn chế trầy xước trên mặt bàn hoặc nội thất, hãy trao đổi về PPF và độ tương thích của nền. Nếu mục tiêu là hỗ trợ giữ mảnh kính khi vỡ, cần xem phim an toàn và điều kiện lắp đặt trên hệ kính thực tế.</p></details>
-    <details><summary>Có thể dán film lên mọi loại nội thất và kính không?</summary><p>Cần kiểm tra trước. Bề mặt bong tróc, lớp sơn yếu, cạnh kính sứt hoặc kính có cấu tạo đặc biệt cần được đánh giá. Việc thử mẫu ở vùng nhỏ giúp đối chiếu độ bám, diện mạo và rủi ro khi tháo film.</p></details>
-    <details><summary>Báo giá film bảo vệ gồm những hạng mục nào?</summary><p>Giá được xác nhận theo vật liệu, diện tích, hình dạng bề mặt và điều kiện thi công. Phần tháo lớp cũ, xử lý nền, bo cạnh hoặc neo giữ film kính, nếu cần, phải được nêu rõ trong phương án. <a href="/lien-he-idecal">Gửi ảnh và kích thước để nhận tư vấn, báo giá</a>.</p></details>
-    <details><summary>Dán film bảo vệ có cần thợ thi công không?</summary><p>Các mặt có góc bo, mép nối hoặc hệ kính cần yêu cầu an toàn nên được khảo sát và thi công theo hướng dẫn vật liệu. Xem <a href="/dich-vu/thi-cong-decal">dịch vụ thi công Decal & film</a> để trao đổi cách xử lý, lịch làm và kiểm tra bàn giao.</p></details>
+---
+import { products, formatPrice } from '../data/catalogue';
+const films = [
+  { slug:'phim-ppf-tph', title:'Film PPF bảo vệ nội thất', label:'Bảo vệ bề mặt',
+    image:'/images/film-bao-ve/ppf-bao-ve-mat-ban.webp', alt:'Thi công film PPF trên mặt bàn đá nội thất',
+    intro:'Lớp film trong giúp giữ diện mạo bề mặt, hạn chế trầy xước nhẹ do tiếp xúc trong quá trình sử dụng.',
+    advantages:['Giữ được màu sắc và vân của bề mặt bên dưới.','Hỗ trợ hạn chế trầy xước nhẹ trên nền tương thích.','Cắt theo kích thước, hoàn thiện theo mép và góc bo.'],
+    specs:[['Độ dày tham khảo','7,5 mil · khoảng 190 µm'],['Quy cách cuộn','1,52 × 30 m'],['Bề mặt sử dụng','Nền phẳng, lớp hoàn thiện ổn định']],
+    uses:'Mặt bàn, quầy tiếp khách, bàn đá và các chi tiết nội thất phù hợp sau khi thử độ bám.',
+    note:'Thử mẫu trước khi dán trên sơn hoặc lớp phủ nhạy cảm. Khả năng tự phục hồi, độ bóng và tháo gỡ cần đối chiếu theo sản phẩm.' },
+  { slug:'phim-bao-ve-kinh-safety-4ml', title:'Phim an toàn bảo vệ kính', label:'Bảo vệ hệ kính',
+    image:'/images/film-bao-ve/phim-an-toan-kinh.webp', alt:'Mẫu phim an toàn trong suốt dùng bảo vệ kính',
+    intro:'Film bám trên kính giúp giữ các mảnh vỡ khi kính vỡ, hỗ trợ giảm nguy cơ mảnh kính rơi hoặc văng.',
+    advantages:['Lớp film trong, giữ tầm nhìn qua kính.','Hỗ trợ giữ mảnh kính nhờ lớp film và keo bám.','Tư vấn theo loại kính, kích thước và hệ khung.'],
+    specs:[['Độ dày tham khảo','4 mil · khoảng 100 µm'],['Quy cách cuộn','1,52 × 30 m'],['Bề mặt sử dụng','Kính phù hợp sau khảo sát']],
+    uses:'Cửa, vách kính, văn phòng, nhà ở và showroom có nhu cầu hỗ trợ giữ mảnh kính khi vỡ.',
+    note:'Không làm kính trở thành kính không thể vỡ. Hiệu quả phụ thuộc loại kính, khung, phương án neo giữ và thi công; không thay thế yêu cầu kính an toàn của thiết kế.' },
+].map(film => ({...film, product: products.find(product => product.slug === film.slug)!}));
+const faqs = [
+  {question:'Nên chọn film PPF hay phim an toàn kính?',answer:'Chọn PPF khi cần hạn chế trầy xước trên bề mặt nội thất tương thích. Chọn phim an toàn khi cần hỗ trợ giữ mảnh kính khi kính vỡ. Hai loại có thể dùng ở các vị trí khác nhau trong cùng công trình.'},
+  {question:'Phim an toàn có chống vỡ kính và chống trộm không?',answer:'Kính vẫn có thể vỡ khi chịu tác động. Phim giúp liên kết và giữ mảnh vỡ; khả năng chịu tác động phụ thuộc toàn bộ hệ kính, film, keo và phương án neo giữ. Không mặc định film có khả năng chống trộm hoặc thay thế kính an toàn theo yêu cầu thiết kế.'},
+  {question:'PPF có dán được lên mọi loại mặt bàn không?',answer:'Cần đánh giá vật liệu nền, lớp sơn hoặc phủ, độ phẳng và các góc bo. Với bề mặt nhạy cảm, nên thử trên vùng nhỏ để kiểm tra độ bám, diện mạo và ảnh hưởng khi tháo film.'},
+  {question:'Báo giá film bảo vệ gồm những gì?',answer:'Báo giá theo loại film, diện tích và điều kiện thi công. Phần xử lý nền, tháo lớp cũ, bo cạnh hoặc neo giữ film kính, nếu cần, được xác nhận riêng. Gửi ảnh, kích thước và địa chỉ để iDecal tư vấn phương án cụ thể.'},
+  {question:'Sau khi thi công cần vệ sinh như thế nào?',answer:'Tuân thủ thời gian chờ và hướng dẫn của mẫu film đã chọn. Dùng khăn mềm, tránh vật sắc và chất tẩy không tương thích; không cạy mép film. iDecal trao đổi cách bảo quản khi kiểm tra bàn giao.'},
+];
+---
+<section id="mau-san-pham" class="container protection-guide" aria-labelledby="protection-guide-title">
+  <div class="protection-intro"><p class="offering-kicker">Chọn theo bề mặt cần bảo vệ</p><h2 id="protection-guide-title">Hai loại film, hai nhu cầu bảo vệ</h2><p>Đối chiếu ứng dụng và thông số cơ bản để chọn film phù hợp với nội thất hoặc hệ kính của bạn.</p></div>
+  <div class="protection-films">
+    {films.map(film => <article class="protection-film" data-protection-film={film.slug}>
+      <a class="protection-photo" href={`/san-pham/${film.slug}`} aria-label={`Xem chi tiết ${film.title.toLowerCase()}`}><img src={film.image} alt={film.alt} width="960" height="800" loading="lazy" decoding="async" /></a>
+      <div class="protection-copy"><p class="film-label">{film.label}</p><h3>{film.title}</h3><p class="film-intro">{film.intro}</p>
+        <h4>Ưu điểm</h4><ul>{film.advantages.map(advantage => <li>{advantage}</li>)}</ul>
+        <h4>Thông số cơ bản</h4><dl>{film.specs.map(([label,value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+        <h4>Ứng dụng</h4><p>{film.uses}</p><p class="film-note">{film.note}</p>
+        <div class="film-actions"><div><span>Giá tham khảo</span><strong>{formatPrice(film.product.price)}</strong></div><a href={`/san-pham/${film.slug}`}>Xem chi tiết <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>)}
   </div>
 </section>
+<section class="protection-faq-section" aria-labelledby="protection-faq-title"><div class="container protection-faq-layout">
+  <div class="faq-intro"><p class="offering-kicker">Giải đáp trước khi chọn</p><h2 id="protection-faq-title">Bạn cần biết thêm điều gì?</h2><p>Chọn đúng film bắt đầu từ bề mặt và nhu cầu sử dụng thực tế.</p><a href="/lien-he-idecal">Gửi ảnh để được tư vấn <span aria-hidden="true">→</span></a><a class="faq-service" href="/dich-vu/thi-cong-decal">Tìm hiểu dịch vụ thi công →</a></div>
+  <div class="protection-questions">{faqs.map(faq => <details><summary>{faq.question}<span class="faq-plus" aria-hidden="true"></span></summary><p>{faq.answer}</p></details>)}</div>
+</div></section>
 <style>
-  .protection-guide { padding-top:48px; padding-bottom:48px; }
-  .protection-intro { max-width:760px; margin-bottom:28px; }
-  h2 { font-size:26px; line-height:1.4; margin:0 0 16px; color:#244766; }
-  h3 { font-size:20px; margin:0 0 14px; color:#244766; }
-  p { font-size:15px; line-height:1.8; color:#536579; }
-  .protection-comparison { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
-  article { padding:24px 0; border-top:1px solid #dfe7ef; }
-  a { color:#0d6b96; text-decoration:underline; text-underline-offset:3px; }
-  .protection-questions { margin-top:32px; max-width:900px; }
-  details { border-bottom:1px solid #e1eaf4; padding:16px 0; }
-  summary { cursor:pointer; color:#244766; font-size:15px; font-weight:500; }
-  details p { margin:12px 0 0; }
-  @media(max-width:639px) { .protection-guide { padding-top:32px; padding-bottom:32px; } .protection-comparison { grid-template-columns:1fr; gap:0; } h2 { font-size:23px; } h3 { font-size:19px; } }
+  .protection-guide { padding-top:56px; padding-bottom:64px; scroll-margin-top:110px; }
+  .protection-intro { max-width:740px; margin-bottom:36px; }
+  h2 { font-size:30px; line-height:1.4; margin:0 0 16px; color:#244766; }
+  h3 { font-size:26px; line-height:1.4; margin:0 0 14px; color:#244766; }
+  h4 { font-size:14px; font-weight:600; color:#244766; margin:20px 0 9px; }
+  p,li,dl { font-size:14px; line-height:1.75; color:#536579; }
+  p { margin:0 0 12px; }
+  .protection-film { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:48px; align-items:start; }
+  .protection-film + .protection-film { margin-top:52px; padding-top:52px; border-top:1px solid #e1eaf4; }
+  .protection-photo { display:block; overflow:hidden; border-radius:18px; background:#f3f6f8; }
+  .protection-photo img { display:block; width:100%; height:auto; aspect-ratio:6/5; object-fit:contain; }
+  .film-label { color:#0d6b96; font-size:12px; font-weight:500; margin:0 0 9px; }
+  .film-intro { font-size:15px; }
+  ul { list-style:none; padding:0; margin:0; }
+  li { position:relative; padding-left:17px; margin-bottom:5px; }
+  li::before { content:''; position:absolute; top:11px; left:1px; width:5px; height:5px; border-radius:50%; background:#3296bb; }
+  dl { margin:0; }
+  dl div { display:grid; grid-template-columns:1fr 1.2fr; gap:12px; padding:8px 0; border-bottom:1px dashed #e1e7ee; }
+  dt { color:#64748b; } dd { margin:0; color:#244766; }
+  .film-note { color:#64748b; font-size:12px; margin-top:12px; }
+  .film-actions { display:flex; align-items:center; justify-content:space-between; gap:18px; border-top:1px solid #e1eaf4; margin-top:22px; padding-top:18px; }
+  .film-actions>div>span { display:block; font-size:11px; color:#64748b; margin-bottom:4px; }
+  strong { display:block; font-size:15px; font-weight:500; color:#244766; }
+  .film-actions>a { display:inline-flex; align-items:center; justify-content:center; gap:18px; min-height:44px; padding:10px 18px; border:1px solid #dce7f0; border-radius:8px; color:#0d6b96; font-size:14px; font-weight:500; }
+  .film-actions>a:hover { background:#f0f6fd; }
+  a:focus-visible,summary:focus-visible { outline:2px solid #0d6b96; outline-offset:4px; }
+  .protection-faq-section { background:linear-gradient(110deg,#f5f9fe,#faf8ff); padding:52px 0; margin-bottom:40px; }
+  .protection-faq-layout { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:64px; }
+  .faq-intro a { display:inline-flex; align-items:center; gap:16px; min-height:44px; color:#0d6b96; font-size:14px; }
+  .faq-intro .faq-service { display:flex; font-size:12px; }
+  details { border-bottom:1px solid #dfe7ef; }
+  details:first-child { border-top:1px solid #dfe7ef; }
+  summary { display:flex; align-items:center; justify-content:space-between; gap:20px; min-height:68px; padding:16px 0; cursor:pointer; list-style:none; color:#244766; font-size:15px; font-weight:500; line-height:1.6; }
+  summary::-webkit-details-marker { display:none; }
+  .faq-plus { position:relative; width:28px; height:28px; flex:0 0 28px; border:1px solid #d9e4ef; border-radius:50%; }
+  .faq-plus::before,.faq-plus::after { content:''; position:absolute; background:#0d6b96; top:13px; left:8px; width:10px; height:1px; }
+  .faq-plus::after { transform:rotate(90deg); } details[open] .faq-plus::after { display:none; }
+  details>p { padding:0 44px 18px 0; margin:0; }
+  @media(max-width:767px) { .protection-guide { padding-top:32px; padding-bottom:40px; } .protection-film,.protection-faq-layout { grid-template-columns:1fr; gap:24px; } .protection-film + .protection-film { margin-top:36px; padding-top:36px; } h2 { font-size:24px; } h3 { font-size:23px; } .protection-faq-section { padding:32px 0; } .protection-photo img { max-height:400px; } .film-actions { gap:10px; } .film-actions>a { padding:10px 14px; } }
 </style>

@@ -12,6 +12,7 @@ import '../styles/offering-landings.css';
 interface Props { landing: ProductLanding; }
 const { landing } = Astro.props;
 const items = landingProducts(landing);
+const isProtection = landing.slug === 'film-bao-ve-noi-that';
 const services = serviceOfferings.filter(service => service.slug === landing.service);
 ---
 <div class="offering-landing product-group-landing">
@@ -21,12 +22,13 @@ const services = serviceOfferings.filter(service => service.slug === landing.ser
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn chọn mẫu</a></Fragment>
     <BannerBenefits slot="meta" benefits={landing.benefits.map(title => ({ title, description: '' }))} />
   </PageBanner>
+  {isProtection ? <ProtectionGuide /> : <>
   <section class="offering-section container"><div class="offering-heading"><p class="offering-kicker">Ứng dụng theo không gian</p><h2>{landing.name} phù hợp ở đâu?</h2></div><div class="offering-cards">{landing.uses.map((use,index) => <article><span class="offering-number" aria-hidden="true">0{index+1}</span><h3>{use.title}</h3><p>{use.text}</p></article>)}</div></section>
-  {landing.slug === 'film-bao-ve-noi-that' && <ProtectionGuide />}
   <ProductBrands group={landing.slug} />
   {landing.slug === 'decal-pvc' ? <PVCColorChart /> : <div class="offering-surface"><ProductCatalog items={items} heading={`Mẫu ${landing.name.toLocaleLowerCase('vi-VN')}`} /></div>}
   <section class="offering-section container offering-advice"><div><p class="offering-kicker">Chọn mẫu phù hợp</p><h2>{landing.slug === 'film-bao-ve-noi-that' ? 'Kiểm tra bề mặt trước khi chọn film' : 'Đẹp từ mẫu đến công trình'}</h2><p>{landing.guidance}</p><a class="offering-link" href="/du-an">Xem công trình thực tế <span aria-hidden="true">→</span></a></div>{landing.slug==='phim-cach-nhiet-nha-kinh'?<div class="offering-advice-gallery"><figure><img src="/images/uploads/film-phan-guong-xanh-la.png" alt="Minh họa sắc xanh lá của film phản gương trên cửa kính" width="1500" height="1120" loading="lazy" /><figcaption>Sắc xanh lá</figcaption></figure><figure><img src="/images/uploads/film-phan-guong-xanh-xam.png" alt="Minh họa sắc xanh xám của film phản gương trên cửa kính" width="1500" height="1120" loading="lazy" /><figcaption>Sắc xanh xám</figcaption></figure><p>Ảnh minh họa sắc phim. Đối chiếu mẫu thực tế khi chọn.</p></div>:<img src={landing.image} alt={`Tham khảo ứng dụng ${landing.name.toLocaleLowerCase('vi-VN')}`} width="800" height="600" loading="lazy" />}</section>
   <section class="offering-section offering-surface"><div class="container"><div class="offering-heading"><p class="offering-kicker">Dịch vụ đi cùng sản phẩm</p><h2>Chọn thêm phần việc bạn cần</h2><p>Có thể mua vật liệu hoặc trao đổi thêm về thiết kế, in, cắt và thi công. Phạm vi công việc được xác nhận trước khi thực hiện.</p></div><div class="offering-service-links">{services.map(service => <a href={`/dich-vu/${service.slug}`}><span>{service.name}</span><span aria-hidden="true">↗</span></a>)}<a href="/dich-vu"><span>Xem tất cả dịch vụ</span><span aria-hidden="true">→</span></a></div></div></section>
+  </>}
   <RelatedGuides context={landing.slug} />
 
 </div>
