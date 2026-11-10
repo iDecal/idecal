@@ -42,8 +42,8 @@ Cấu trúc lỗ lưới giúp kết hợp hình ảnh quảng cáo với khả 
 
 Gửi ảnh mặt kính, hướng nhìn chính, thời gian sử dụng và file thiết kế nếu có. Xác nhận vật liệu, mực in, lớp cán và cách chia khổ trước khi làm.
 
-Bạn có thể xem phần [vật liệu trong dịch vụ In Decal](/dich-vu/in-decal/#vat-lieu-in) hoặc [các mẫu quảng cáo](/danh-muc-san-pham/decal-quang-cao/) để hình dung ứng dụng.
+Bạn có thể xem phần [vật liệu trong dịch vụ In Decal](/dich-vu/in-decal/#vat-lieu-in) hoặc [các mẫu quảng cáo](/decal-quang-cao/) để hình dung ứng dụng.
 
 ## Tham khảo để chọn phần việc phù hợp
 
-Có thể đối chiếu thêm [các vật liệu in](/dich-vu/in-decal#vat-lieu-in) và [bảng màu Decal PVC](/danh-muc-san-pham/decal-pvc). Chọn đúng mã và quy cách trước khi so sánh đơn giá.
+Có thể đối chiếu thêm [các vật liệu in](/dich-vu/in-decal#vat-lieu-in) và [bảng màu Decal PVC](/decal-pvc). Chọn đúng mã và quy cách trước khi so sánh đơn giá.

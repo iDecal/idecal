@@ -1,9 +1,44 @@
+# Flat solution/material URLs; preserve inbound links with a single 301 hop.
+/danh-muc-san-pham/cat-va-in-logo /cat-va-in-logo/ 301
+/danh-muc-san-pham/cat-va-in-logo/ /cat-va-in-logo/ 301
+/danh-muc-san-pham/decal-cat-cnc /decal-cat-cnc/ 301
+/danh-muc-san-pham/decal-cat-cnc/ /decal-cat-cnc/ 301
+/danh-muc-san-pham/decal-cat-vi-tinh /decal-cat-vi-tinh/ 301
+/danh-muc-san-pham/decal-cat-vi-tinh/ /decal-cat-vi-tinh/ 301
+/danh-muc-san-pham/decal-dan-kinh-van-phong /decal-dan-kinh-van-phong/ 301
+/danh-muc-san-pham/decal-dan-kinh-van-phong/ /decal-dan-kinh-van-phong/ 301
+/danh-muc-san-pham/decal-mo-dan-kinh /decal-mo-dan-kinh/ 301
+/danh-muc-san-pham/decal-mo-dan-kinh/ /decal-mo-dan-kinh/ 301
+/danh-muc-san-pham/decal-pvc /decal-pvc/ 301
+/danh-muc-san-pham/decal-pvc/ /decal-pvc/ 301
+/danh-muc-san-pham/decal-quang-cao /decal-quang-cao/ 301
+/danh-muc-san-pham/decal-quang-cao/ /decal-quang-cao/ 301
+/danh-muc-san-pham/decal-quang-cao-standee /decal-quang-cao-standee/ 301
+/danh-muc-san-pham/decal-quang-cao-standee/ /decal-quang-cao-standee/ 301
+/danh-muc-san-pham/decal-trang-tri /decal-trang-tri/ 301
+/danh-muc-san-pham/decal-trang-tri/ /decal-trang-tri/ 301
+/danh-muc-san-pham/film-bao-ve-noi-that /film-bao-ve-noi-that/ 301
+/danh-muc-san-pham/film-bao-ve-noi-that/ /film-bao-ve-noi-that/ 301
+/danh-muc-san-pham/film-dan-noi-that /film-dan-noi-that/ 301
+/danh-muc-san-pham/film-dan-noi-that/ /film-dan-noi-that/ 301
+/danh-muc-san-pham/film-noi-that /film-noi-that/ 301
+/danh-muc-san-pham/film-noi-that/ /film-noi-that/ 301
+/danh-muc-san-pham/film-trang-tri-kinh /film-trang-tri-kinh/ 301
+/danh-muc-san-pham/film-trang-tri-kinh/ /film-trang-tri-kinh/ 301
+/danh-muc-san-pham/open-time-thong-bao /open-time-thong-bao/ 301
+/danh-muc-san-pham/open-time-thong-bao/ /open-time-thong-bao/ 301
+/danh-muc-san-pham/phim-bao-ve /phim-bao-ve/ 301
+/danh-muc-san-pham/phim-bao-ve/ /phim-bao-ve/ 301
+/danh-muc-san-pham/phim-cach-nhiet /phim-cach-nhiet/ 301
+/danh-muc-san-pham/phim-cach-nhiet/ /phim-cach-nhiet/ 301
+/danh-muc-san-pham/phim-cach-nhiet-nha-kinh /phim-cach-nhiet-nha-kinh/ 301
+/danh-muc-san-pham/phim-cach-nhiet-nha-kinh/ /phim-cach-nhiet-nha-kinh/ 301
 # Legacy product URLs from the supplied catalogue
-/decal-mo-chuyen-mau-gradient /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-mo-trang-tron-van-phong /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-mo-ke-soc-ngang /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-mo-hoa-tiet-cham /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-pov-hyundai-sheet-2025 /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/decal-mo-chuyen-mau-gradient /decal-mo-dan-kinh/ 301
+/decal-mo-trang-tron-van-phong /decal-mo-dan-kinh/ 301
+/decal-mo-ke-soc-ngang /decal-mo-dan-kinh/ 301
+/decal-mo-hoa-tiet-cham /decal-mo-dan-kinh/ 301
+/decal-pov-hyundai-sheet-2025 /decal-mo-dan-kinh/ 301
 /tranh-standee-pp-can-formex-kho-a3-a2 /san-pham/tranh-standee-pp-can-formex-kho-a3-a2/ 301
 /decal-mo-hoa-tiet-rem-trang /san-pham/decal-mo-hoa-tiet-rem-trang/ 301
 /decal-mo-o-vuong /san-pham/decal-mo-o-vuong/ 301
@@ -307,16 +342,16 @@
 /decal-dan-kinh-van-phong/dan-decal-kinh-van-phong-tphcm/ /dich-vu/decal-dan-kinh-van-phong/ 301
 /21-mau-decal-mo-dan-kinh-van-phong-dep-mat /blog/99-mau-decal-dan-kinh-van-phong-dep-2026/ 301
 /21-mau-decal-mo-dan-kinh-van-phong-dep-mat/ /blog/99-mau-decal-dan-kinh-van-phong-dep-2026/ 301
-/decal-mo-dan-kinh-van-phong/amp /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-mo-dan-kinh-van-phong/amp/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-dan-kinh-van-phong/decal-mo/amp /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-dan-kinh-van-phong/decal-mo/amp/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-mo-dan-kinh-van-phong /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-mo-dan-kinh-van-phong/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-dan-kinh-van-phong/decal-mo-dan-kinh-van-phong /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-dan-kinh-van-phong/decal-mo-dan-kinh-van-phong/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-dan-kinh-van-phong/decal-mo /danh-muc-san-pham/decal-mo-dan-kinh/ 301
-/decal-dan-kinh-van-phong/decal-mo/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/decal-mo-dan-kinh-van-phong/amp /decal-mo-dan-kinh/ 301
+/decal-mo-dan-kinh-van-phong/amp/ /decal-mo-dan-kinh/ 301
+/decal-dan-kinh-van-phong/decal-mo/amp /decal-mo-dan-kinh/ 301
+/decal-dan-kinh-van-phong/decal-mo/amp/ /decal-mo-dan-kinh/ 301
+/decal-mo-dan-kinh-van-phong /decal-mo-dan-kinh/ 301
+/decal-mo-dan-kinh-van-phong/ /decal-mo-dan-kinh/ 301
+/decal-dan-kinh-van-phong/decal-mo-dan-kinh-van-phong /decal-mo-dan-kinh/ 301
+/decal-dan-kinh-van-phong/decal-mo-dan-kinh-van-phong/ /decal-mo-dan-kinh/ 301
+/decal-dan-kinh-van-phong/decal-mo /decal-mo-dan-kinh/ 301
+/decal-dan-kinh-van-phong/decal-mo/ /decal-mo-dan-kinh/ 301
 /thi-cong-decal-dan-kinh/dich-vu-decal-dan-kinh-binh-duong /khu-vuc/binh-duong/ 301
 /thi-cong-decal-dan-kinh/dich-vu-decal-dan-kinh-binh-duong/ /khu-vuc/binh-duong/ 301
 /thi-cong-decal-dan-kinh/decal-dan-kinh-binh-thanh/amp /khu-vuc/tp-hcm/quan-binh-thanh/ 301
@@ -789,14 +824,14 @@
 /dich-vu/dich-vu-tron-goi /dich-vu/ 301
 /dich-vu/dich-vu-tron-goi/ /dich-vu/ 301
 
-/san-pham/decal-mo-chuyen-mau-gradient/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/san-pham/decal-mo-chuyen-mau-gradient/ /decal-mo-dan-kinh/ 301
 
-/san-pham/decal-mo-trang-tron-van-phong/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/san-pham/decal-mo-trang-tron-van-phong/ /decal-mo-dan-kinh/ 301
 
-/san-pham/decal-mo-ke-soc-ngang/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/san-pham/decal-mo-ke-soc-ngang/ /decal-mo-dan-kinh/ 301
 
-/san-pham/decal-mo-hoa-tiet-cham/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/san-pham/decal-mo-hoa-tiet-cham/ /decal-mo-dan-kinh/ 301
 
-/san-pham/decal-pov-hyundai-sheet-2025/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/san-pham/decal-pov-hyundai-sheet-2025/ /decal-mo-dan-kinh/ 301
 
 /admin /admin/ 301

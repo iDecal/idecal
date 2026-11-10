@@ -78,7 +78,7 @@ assert.equal(new Set(catalogueProducts.map(product => product.slug)).size, catal
 const catalogueIndex = await readFile(path.join(root, 'san-pham/index.html'), 'utf8');
 const legacyRedirects = await readFile('public/_redirects', 'utf8');
 for (const category of catalogueCategories) {
-  const categoryPage = path.join(root, 'danh-muc-san-pham', category.slug, 'index.html');
+  const categoryPage = path.join(root, category.slug, 'index.html');
   assert.ok(await exists(categoryPage), `Missing product category: ${category.slug}`);
   const html = await readFile(categoryPage, 'utf8');
   const expected = catalogueProducts.filter(product => product.category === category.slug).length;
@@ -96,14 +96,23 @@ const landingSamples = [
   ['decal-quang-cao', 'decal-trong-dan-kinh-quang-cao'],
 ];
 for (const [slug, sample] of landingSamples) {
-  const html = await readFile(path.join(root, 'danh-muc-san-pham', slug, 'index.html'), 'utf8');
-  assert.ok(catalogueIndex.includes(`href="/danh-muc-san-pham/${slug}"`), `Product index must link to landing ${slug}`);
+  const html = await readFile(path.join(root, slug, 'index.html'), 'utf8');
+  assert.ok(catalogueIndex.includes(`href="/${slug}"`), `Product index must link to landing ${slug}`);
   assert.ok(html.includes(`data-product-id="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);
   assert.ok(html.includes('id="mau-san-pham"'), `Landing ${slug} must contain a product catalogue`);
   if (slug === 'film-bao-ve-noi-that') assert.ok(!html.includes('data-product-id="phim-bao-ve-kinh-safety-4ml"'), 'Glass safety film must not be classified as interior protection');
 }
+// Flat material URLs must retain permanent redirects from both legacy URL variants.
+for (const slug of new Set([...catalogueCategories.map(category => category.slug), ...landingSamples.map(([slug]) => slug)])) {
+  for (const suffix of ['', '/']) {
+    assert.ok(legacyRedirects.split('\n').includes(`/danh-muc-san-pham/${slug}${suffix} /${slug}/ 301`), `Missing material URL redirect: ${slug}${suffix}`);
+  }
+  const html = await readFile(path.join(root, slug, 'index.html'), 'utf8');
+  assert.ok(html.includes(`rel="canonical" href="https://idecal.vn/${slug}/"`), `Wrong material canonical: ${slug}`);
+}
+assert.ok(!(await readFile(path.join(root, 'sitemap.xml'), 'utf8')).includes('/danh-muc-san-pham/'), 'Sitemap must use flat material URLs');
 const pvcPalette = JSON.parse(await readFile('src/data/pvc-colors.json', 'utf8'));
-const pvcLanding = await readFile(path.join(root, 'danh-muc-san-pham/decal-pvc/index.html'), 'utf8');
+const pvcLanding = await readFile(path.join(root, 'decal-pvc/index.html'), 'utf8');
 assert.equal(new Set(pvcPalette.colors.map(color => color.productSlug)).size, pvcPalette.colors.length, 'Every color must link to a distinct product');
 for (const color of pvcPalette.colors) {
   assert.ok(catalogueProducts.some(product => product.slug === color.productSlug), `Missing color product: ${color.productSlug}`);

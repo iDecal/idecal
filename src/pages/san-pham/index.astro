@@ -20,12 +20,12 @@ const totalGroups = productLandings.length + addedCategories.length;
     <p class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {productLandings.map(category => <article class="category-card group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
-        <a href={`/danh-muc-san-pham/${category.slug}`} class="flex h-full flex-col">
+        <a href={`/${category.slug}`} class="flex h-full flex-col">
           <div class="product-group-cover relative aspect-square shrink-0 overflow-hidden"><ProductImage src={category.image} alt={category.name} /><div class="product-group-title"><ProductGroupIcon slug={category.slug} /><h3>{category.name}</h3></div></div>
           <div class="flex flex-1 flex-col p-6"><p class="mb-6 text-sm">{category.description}</p><div class="mt-auto flex items-center justify-between gap-3 text-sm"><span class="text-text-muted">{landingProducts(category).length} mẫu</span><span class="font-medium text-primary">Xem nhóm sản phẩm →</span></div></div>
         </a>
       </article>)}
-      {addedCategories.map(category => <article class="category-card overflow-hidden rounded-2xl border border-border bg-white"><a href={'/danh-muc-san-pham/' + category.slug} class="flex h-full flex-col"><div class="aspect-square overflow-hidden"><ProductImage src={category.image} alt={category.name} /></div><div class="flex flex-1 flex-col p-6"><h3 class="text-lg">{category.name}</h3><p class="text-sm">{category.description}</p><span class="mt-auto text-sm text-primary">{productsInCategory(category.slug).length} mẫu · Xem nhóm sản phẩm →</span></div></a></article>)}
+      {addedCategories.map(category => <article class="category-card overflow-hidden rounded-2xl border border-border bg-white"><a href={'/' + category.slug} class="flex h-full flex-col"><div class="aspect-square overflow-hidden"><ProductImage src={category.image} alt={category.name} /></div><div class="flex flex-1 flex-col p-6"><h3 class="text-lg">{category.name}</h3><p class="text-sm">{category.description}</p><span class="mt-auto text-sm text-primary">{productsInCategory(category.slug).length} mẫu · Xem nhóm sản phẩm →</span></div></a></article>)}
     </div>
   </section>
 

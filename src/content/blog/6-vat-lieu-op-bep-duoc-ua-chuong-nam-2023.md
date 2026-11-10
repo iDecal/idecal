@@ -85,7 +85,7 @@ Khác với các vật liệu trên, các loại tấm nhựa PVC hiện nay có
 
 Tấm PVC mỏng, có keo sẵn, hay còn gọi là Decal, nay đã trở thành một trong những loại vật liệu nội thất đa dụng, có thể sử dụng ở nhiều loại công trình và không gian khác nhau. Nhưng được ưa chuộng nhất, vẫn là dùng để dán tường bếp.
 
-[Decal gạch bông](https://idecal.vn/danh-muc-san-pham/decal-gach-bong/) nhựa in hoa văn chống nước, dễ lau chùi, có thể ứng dụng nhiều loại họa tiết, hoa văn, giả các loại gạch đá với vân mỹ thuật 3D khác nhau.
+[Decal gạch bông](https://idecal.vn/decal-gach-bong/) nhựa in hoa văn chống nước, dễ lau chùi, có thể ứng dụng nhiều loại họa tiết, hoa văn, giả các loại gạch đá với vân mỹ thuật 3D khác nhau.
 
 [Vật liệu Decal in họa tiết gạch bông](https://idecal.vn/wp-content/uploads/2023/12/decal-gach-bong-da-nang-3-min.png)
 

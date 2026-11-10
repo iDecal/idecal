@@ -3,9 +3,9 @@
   "intro": "Cắt chữ, logo, tem nhãn và Decal trang trí với đa dạng chất liệu: phản quang, giấy, PVC và Decal mờ.",
   "description": "Xưởng cắt Decal iDecal tại TP.HCM cung cấp giải pháp từ thiết kế, cắt đến giao hàng; hỗ trợ thi công dán tận nơi tại TP.HCM và Bình Dương khi có nhu cầu.",
   "services": [
-    {"title":"Decal cắt chữ","description":"Cắt chữ theo yêu cầu với nhiều font và kích thước, phù hợp biển hiệu, slogan, tên cửa hàng và trang trí.","icon":"letter","link":"/danh-muc-san-pham/cat-va-in-logo","action":"Xem mẫu chữ & logo"},
+    {"title":"Decal cắt chữ","description":"Cắt chữ theo yêu cầu với nhiều font và kích thước, phù hợp biển hiệu, slogan, tên cửa hàng và trang trí.","icon":"letter","link":"/cat-va-in-logo","action":"Xem mẫu chữ & logo"},
     {"title":"Cắt tem nhãn","description":"In và cắt tem nhãn đa dạng mẫu mã, kích thước cho sản phẩm, bao bì và quảng cáo.","icon":"label","link":"/lien-he-idecal","action":"Trao đổi mẫu tem nhãn"},
-    {"title":"Cắt Decal trang trí","description":"Cắt họa tiết trang trí cửa kính, tường, xe và các bề mặt khác theo thiết kế của bạn.","icon":"pattern","link":"/danh-muc-san-pham/decal-mo-dan-kinh","action":"Xem mẫu trang trí"},
+    {"title":"Cắt Decal trang trí","description":"Cắt họa tiết trang trí cửa kính, tường, xe và các bề mặt khác theo thiết kế của bạn.","icon":"pattern","link":"/decal-mo-dan-kinh","action":"Xem mẫu trang trí"},
     {"title":"Cắt logo thương hiệu","description":"Cắt logo doanh nghiệp trên Decal mờ, Decal màu hoặc Decal phản quang, theo file và kích thước yêu cầu.","icon":"pen","link":"/lien-he-idecal","action":"Đặt cắt logo"}
   ],
   "materials": [

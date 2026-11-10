@@ -1,13 +1,13 @@
 ---
-import '../../styles/catalogue.css';
-import ProductBrands from '../../components/ProductBrands.astro';
-import ProductLanding from '../../components/ProductLanding.astro';
-import { productLandings } from '../../data/site-offerings';
-import BannerBenefits from '../../components/BannerBenefits.astro';
-import PageBanner from '../../components/PageBanner.astro';
-import Layout from '../../layouts/Layout.astro';
-import ProductCatalog from '../../components/ProductCatalog.astro';
-import { productCategories, productsInCategory } from '../../data/catalogue';
+import '../styles/catalogue.css';
+import ProductBrands from '../components/ProductBrands.astro';
+import ProductLanding from '../components/ProductLanding.astro';
+import { productLandings } from '../data/site-offerings';
+import BannerBenefits from '../components/BannerBenefits.astro';
+import PageBanner from '../components/PageBanner.astro';
+import Layout from '../layouts/Layout.astro';
+import ProductCatalog from '../components/ProductCatalog.astro';
+import { productCategories, productsInCategory } from '../data/catalogue';
 export function getStaticPaths() {
   const slugs = [...new Set([...productCategories.map(category => category.slug), ...productLandings.map(landing => landing.slug)])];
   return slugs.map(slug => ({ params: { slug } }));

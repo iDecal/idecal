@@ -38,4 +38,4 @@ Phần việc có thể gồm thiết kế, in, gia công và dán tại công t
 
 ## Tham khảo để chọn phần việc phù hợp
 
-Để chọn nền hình và khoảng nhìn qua kính, xem [nhóm Decal quảng cáo](/danh-muc-san-pham/decal-quang-cao). Phần [thiết kế](/dich-vu/thiet-ke), [in](/dich-vu/in-decal) và [thi công](/dich-vu/thi-cong-decal) được trao đổi theo phạm vi bạn cần.
+Để chọn nền hình và khoảng nhìn qua kính, xem [nhóm Decal quảng cáo](/decal-quang-cao). Phần [thiết kế](/dich-vu/thiet-ke), [in](/dich-vu/in-decal) và [thi công](/dich-vu/thi-cong-decal) được trao đổi theo phạm vi bạn cần.

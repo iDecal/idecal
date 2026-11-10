@@ -46,7 +46,7 @@ Nếu chỉ muốn dán một dải mờ ngang tầm mắt, ghi chiều rộng �
 
 Một vùng dán rộng 1,2 m và cao 2 m có diện tích 2,4 m². Với nhiều ô, tính từng vùng rồi cộng lại. Diện tích này chưa tự động bao gồm phần hao hụt vật liệu, cách chia khổ, cắt logo hoặc xử lý lớp cũ.
 
-**Mét dài và mét vuông là hai đơn vị khác nhau.** Khi mua theo mét dài, cần biết khổ cuộn. Ví dụ, cuộn [Decal PVC](/danh-muc-san-pham/decal-pvc/) tại iDecal có quy cách 1,2 × 50 m, nhưng không nên áp dụng khổ này cho mọi loại film hoặc Decal khác.
+**Mét dài và mét vuông là hai đơn vị khác nhau.** Khi mua theo mét dài, cần biết khổ cuộn. Ví dụ, cuộn [Decal PVC](/decal-pvc/) tại iDecal có quy cách 1,2 × 50 m, nhưng không nên áp dụng khổ này cho mọi loại film hoặc Decal khác.
 
 ## Chụp những gì để được tư vấn?
 

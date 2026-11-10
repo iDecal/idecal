@@ -44,8 +44,8 @@ Hiệu ứng vân sóng có thể dùng ở cửa hoặc một phần vách tran
 
 Gửi ảnh toàn cảnh, kích thước từng ô kính, logo và một vài mẫu phong cách bạn thích. Thống nhất bản duyệt, vật liệu và vị trí dán trước khi in hoặc cắt.
 
-Xem [nhóm Decal kính văn phòng](/danh-muc-san-pham/decal-dan-kinh-van-phong/) để tham khảo mẫu, hoặc [dịch vụ Thiết kế](/dich-vu/thiet-ke/) nếu cần hỗ trợ dàn bố cục theo không gian thực tế.
+Xem [nhóm Decal kính văn phòng](/decal-dan-kinh-van-phong/) để tham khảo mẫu, hoặc [dịch vụ Thiết kế](/dich-vu/thiet-ke/) nếu cần hỗ trợ dàn bố cục theo không gian thực tế.
 
 ## Tham khảo để chọn phần việc phù hợp
 
-Bạn có thể xem [dịch vụ thiết kế](/dich-vu/thiet-ke) để làm rõ phần chỉnh file, dàn bố cục và bàn giao. [Mẫu Decal kính văn phòng](/danh-muc-san-pham/decal-dan-kinh-van-phong) giúp đối chiếu cách ứng dụng trên vật liệu.
+Bạn có thể xem [dịch vụ thiết kế](/dich-vu/thiet-ke) để làm rõ phần chỉnh file, dàn bố cục và bàn giao. [Mẫu Decal kính văn phòng](/decal-dan-kinh-van-phong) giúp đối chiếu cách ứng dụng trên vật liệu.

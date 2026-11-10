@@ -19,7 +19,7 @@ const items = products.filter(product => product.brand.trim().toLowerCase() === 
     <h1>{brand.name}</h1>
     <p>Thương hiệu cho {groups.map(group => group.name.toLocaleLowerCase('vi-VN')).join(', ')}. Chọn nhóm để xem ứng dụng, mẫu và thông tin vật liệu.</p>
     <nav class="mb-6 flex flex-wrap gap-4" aria-label="Nhóm sản phẩm của thương hiệu">
-      {groups.map(group => <a href={`/danh-muc-san-pham/${group.slug}`} class="text-primary underline underline-offset-4">{group.name}</a>)}
+      {groups.map(group => <a href={`/${group.slug}`} class="text-primary underline underline-offset-4">{group.name}</a>)}
     </nav>
     {items.length === 0 && <p>Liên hệ iDecal để trao đổi mã vật liệu, quy cách và mẫu {brand.name} phù hợp với nhu cầu của bạn.</p>}
     <a href="/lien-he-idecal#yeu-cau" class="btn-primary-solid">Tư vấn sản phẩm {brand.name}</a>

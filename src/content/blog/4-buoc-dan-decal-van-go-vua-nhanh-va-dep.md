@@ -68,7 +68,7 @@ Như vậy chỉ với 4 bước đơn giản và nhanh chóng là bạn đã bi
 
 Decal dán lên gỗ hiện được bày bán rất nhiều trên thị trường với những mẫu mã và màu sắc rất đa dạng. Tuy nhiên, bạn rất khó để nhận biết được đâu là decal vân gỗ chất lượng. Chính vì thế, tìm mua decal ở những cửa hàng, đơn vị chuyên phân phối uy tín là giải pháp an toàn và chắc chắn nhất hiện nay.
 
-Một trong những đơn vị chuyên cung cấp decal dán lên gỗ uy tín nhất hiện nay là công ty [iDecal](https://www.instagram.com/idecal.vn/). Chúng tôi chuyên bán và phân phối các sản phẩm decal vân gỗ với nhiều màu sắc và mẫu mã khác nhau. Ngoài ra, chúng tôi còn cung cấp các loại [phim cách nhiệt](https://idecal.vn/danh-muc-san-pham/phim-cach-nhiet/) – decal vân gỗ cao cấp, đảm bảo về chất lượng cũng như giá thành tốt nhất.
+Một trong những đơn vị chuyên cung cấp decal dán lên gỗ uy tín nhất hiện nay là công ty [iDecal](https://www.instagram.com/idecal.vn/). Chúng tôi chuyên bán và phân phối các sản phẩm decal vân gỗ với nhiều màu sắc và mẫu mã khác nhau. Ngoài ra, chúng tôi còn cung cấp các loại [phim cách nhiệt](https://idecal.vn/phim-cach-nhiet/) – decal vân gỗ cao cấp, đảm bảo về chất lượng cũng như giá thành tốt nhất.
 
 <span id="cac-mau-decal-van-go-do-idecal-cung-cap"></span>
 

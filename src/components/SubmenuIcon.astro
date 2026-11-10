@@ -2,7 +2,7 @@
 import { productGroupIcons } from '../data/product-group-icons';
 interface Props { href: string; }
 const { href } = Astro.props;
-const productIcon = href.startsWith('/danh-muc-san-pham/') ? productGroupIcons[href.split('/').filter(Boolean).at(-1) ?? ''] : undefined;
+const productIcon = productGroupIcons[href.split('/').filter(Boolean).at(-1) ?? ''];
 const path = href.startsWith('/khu-vuc')
   ? 'M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'
   : href.includes('cach-nhiet')
