@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
+import brands from '../../data/product-brands.json';
+import { products } from '../../data/catalogue';
+import { productLandings } from '../../data/site-offerings';
+import '../../styles/catalogue.css';
+export function getStaticPaths() {
+  return brands.map(brand => ({ params: { slug: brand.slug }, props: { brand } }));
+}
+interface Props { brand: (typeof brands)[number]; }
+const { brand } = Astro.props;
+const groups = productLandings.filter(group => brand.groups.includes(group.slug));
+const items = products.filter(product => product.brand.trim().toLowerCase() === brand.name.toLowerCase() && groups.some(group => group.select(product)));
+---
+<Layout title={`${brand.name} – Sản phẩm & tư vấn vật liệu | iDecal`} description={`Tìm hiểu thương hiệu ${brand.name} cho ${groups.map(group => group.name.toLocaleLowerCase('vi-VN')).join(', ')}. Xem mẫu có trong catalogue hoặc liên hệ iDecal để trao đổi mã vật liệu.`}>
+  <section class="container py-12 md:py-16">
+    <a href="/san-pham" class="mb-6 inline-block text-sm text-primary hover:underline">Sản phẩm iDecal →</a>
+    <h1>{brand.name}</h1>
+    <p>Thương hiệu cho {groups.map(group => group.name.toLocaleLowerCase('vi-VN')).join(', ')}. Chọn nhóm để xem ứng dụng, mẫu và thông tin vật liệu.</p>
+    <nav class="mb-6 flex flex-wrap gap-4" aria-label="Nhóm sản phẩm của thương hiệu">
+      {groups.map(group => <a href={`/danh-muc-san-pham/${group.slug}`} class="text-primary underline underline-offset-4">{group.name}</a>)}
+    </nav>
+    {items.length === 0 && <p>Liên hệ iDecal để trao đổi mã vật liệu, quy cách và mẫu {brand.name} phù hợp với nhu cầu của bạn.</p>}
+    <a href="/lien-he-idecal#yeu-cau" class="btn-primary-solid">Tư vấn sản phẩm {brand.name}</a>
+  </section>
+  {items.length > 0 && <ProductCatalog items={items} heading={`Mẫu ${brand.name} trong catalogue`} />}
+</Layout>

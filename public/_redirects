@@ -1,9 +1,9 @@
 # Legacy product URLs from the supplied catalogue
-/decal-mo-chuyen-mau-gradient /san-pham/decal-mo-chuyen-mau-gradient/ 301
-/decal-mo-trang-tron-van-phong /san-pham/decal-mo-trang-tron-van-phong/ 301
-/decal-mo-ke-soc-ngang /san-pham/decal-mo-ke-soc-ngang/ 301
-/decal-mo-hoa-tiet-cham /san-pham/decal-mo-hoa-tiet-cham/ 301
-/decal-pov-hyundai-sheet-2025 /san-pham/decal-pov-hyundai-sheet-2025/ 301
+/decal-mo-chuyen-mau-gradient /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/decal-mo-trang-tron-van-phong /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/decal-mo-ke-soc-ngang /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/decal-mo-hoa-tiet-cham /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+/decal-pov-hyundai-sheet-2025 /danh-muc-san-pham/decal-mo-dan-kinh/ 301
 /tranh-standee-pp-can-formex-kho-a3-a2 /san-pham/tranh-standee-pp-can-formex-kho-a3-a2/ 301
 /decal-mo-hoa-tiet-rem-trang /san-pham/decal-mo-hoa-tiet-rem-trang/ 301
 /decal-mo-o-vuong /san-pham/decal-mo-o-vuong/ 301
@@ -788,3 +788,13 @@
 
 /dich-vu/dich-vu-tron-goi /dich-vu/ 301
 /dich-vu/dich-vu-tron-goi/ /dich-vu/ 301
+
+/san-pham/decal-mo-chuyen-mau-gradient/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+
+/san-pham/decal-mo-trang-tron-van-phong/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+
+/san-pham/decal-mo-ke-soc-ngang/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+
+/san-pham/decal-mo-hoa-tiet-cham/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301
+
+/san-pham/decal-pov-hyundai-sheet-2025/ /danh-muc-san-pham/decal-mo-dan-kinh/ 301

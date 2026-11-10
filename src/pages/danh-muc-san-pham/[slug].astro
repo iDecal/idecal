@@ -1,5 +1,6 @@
 ---
 import '../../styles/catalogue.css';
+import ProductBrands from '../../components/ProductBrands.astro';
 import ProductLanding from '../../components/ProductLanding.astro';
 import { productLandings } from '../../data/site-offerings';
 import BannerBenefits from '../../components/BannerBenefits.astro';
@@ -23,6 +24,7 @@ const bannerImage = category.image.startsWith('/') ? category.image : '/images/B
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
     <BannerBenefits slot="meta" benefits={category.benefits} />
   </PageBanner>
+  <ProductBrands group={category.slug === 'film-noi-that' ? 'film-dan-noi-that' : category.slug === 'phim-cach-nhiet' ? 'phim-cach-nhiet-nha-kinh' : category.slug} />
   <ProductCatalog items={items} category={category} />
 </>}
 </Layout>

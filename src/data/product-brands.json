@@ -1,0 +1,10 @@
+[
+  { "slug": "icetouch", "name": "icetouch", "groups": ["phim-cach-nhiet-nha-kinh"] },
+  { "slug": "3m", "name": "3M", "groups": ["phim-cach-nhiet-nha-kinh"] },
+  { "slug": "idecal", "name": "iDecal", "groups": ["phim-cach-nhiet-nha-kinh"] },
+  { "slug": "rainier", "name": "Rainier", "groups": ["phim-cach-nhiet-nha-kinh"] },
+  { "slug": "shinglung", "name": "Shinglung", "groups": ["decal-mo-dan-kinh", "decal-pvc"] },
+  { "slug": "octki", "name": "Octki", "groups": ["decal-mo-dan-kinh"] },
+  { "slug": "corance", "name": "Corance", "groups": ["film-dan-noi-that"] },
+  { "slug": "infeel", "name": "infeel", "groups": ["film-dan-noi-that"] }
+]
