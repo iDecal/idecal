@@ -2,21 +2,32 @@
 import SubmenuIcon from './SubmenuIcon.astro';
 import { regions } from '../data/regions';
 import { blogCategories } from '../data/blog-categories';
-import { productLandings, serviceOfferings } from '../data/site-offerings';
+const megaGroups = [
+  { title: 'Giải pháp & Vật liệu', all: '/san-pham', allLabel: 'Xem tất cả vật liệu', items: [
+    { name: 'Decal mờ văn phòng', href: '/danh-muc-san-pham/decal-mo-dan-kinh', description: 'Riêng tư cho phòng họp, kết hợp logo và họa tiết.' },
+    { name: 'Phim cách nhiệt nhà kính', href: '/danh-muc-san-pham/phim-cach-nhiet-nha-kinh', description: 'Chọn phim theo hướng nắng và độ sáng mong muốn.' },
+    { name: 'Film dán nội thất', href: '/danh-muc-san-pham/film-dan-noi-that', description: 'Làm mới tủ, cửa, bàn với nhiều vân bề mặt.' },
+    { name: 'Film bảo vệ nội thất', href: '/danh-muc-san-pham/film-bao-ve-noi-that', description: 'Bảo vệ bề mặt; tư vấn theo vật liệu nền.' },
+    { name: 'Decal 3D & film trang trí kính', href: '/danh-muc-san-pham/film-trang-tri-kinh', description: 'Vân sóng, họa tiết và hiệu ứng trang trí ô kính.' },
+    { name: 'Decal quảng cáo', href: '/danh-muc-san-pham/decal-quang-cao', description: 'Logo, thông điệp và hình ảnh cho cửa hàng.' },
+  ] },
+  { title: 'Kỹ thuật & Gia công', all: '/dich-vu', allLabel: 'Xem tất cả dịch vụ', items: [
+    { name: 'Thiết kế file & phối mẫu', href: '/dich-vu/thiet-ke', description: 'Dàn logo, họa tiết theo kích thước thực tế.' },
+    { name: 'In decal khổ lớn', href: '/dich-vu/in-decal', description: 'In theo thiết kế, chọn cách hoàn thiện phù hợp.' },
+    { name: 'Cắt bế decal vector', href: '/dich-vu/cat-decal', description: 'Gia công chữ, logo và họa tiết theo đường cắt.' },
+    { name: 'Thi công dán tận nơi', href: '/dich-vu/thi-cong-decal', description: 'Khảo sát, xử lý bề mặt và kiểm tra bàn giao.' },
+  ] },
+];
 
 interface NavLink {
   name: string;
   href: string;
+  mega?: boolean;
   dropdown?: { name: string; href: string; highlight?: boolean; showIcon?: boolean }[];
 }
 const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
-  { name: 'Sản phẩm', href: '/san-pham', dropdown: [
-    ...productLandings.map(landing => ({ name: landing.name, href: `/danh-muc-san-pham/${landing.slug}` })),
-  ] },
-  { name: 'Dịch vụ', href: '/dich-vu', dropdown: [
-    ...serviceOfferings.map(service => ({ name: service.name, href: `/dich-vu/${service.slug}` })),
-  ] },
+  { name: 'Dịch vụ & Giải pháp', href: '/dich-vu', mega: true, dropdown: [] },
   { name: 'Công trình thực tế', href: '/du-an' },
   { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
   { name: 'Khu vực', href: '/khu-vuc', dropdown: [
@@ -27,7 +38,7 @@ const navLinks: NavLink[] = [
 ---
 
 <nav class="sticky top-0 w-full z-[100] bg-white border-b border-border">
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 relative">
     <div class="flex justify-between items-center gap-4 h-[80px] xl:h-[96px]">
       
       <div class="flex-shrink-0">
@@ -39,7 +50,28 @@ const navLinks: NavLink[] = [
       <!-- Desktop Menu -->
       <div class="hidden lg:flex flex-1 justify-center items-center gap-3 xl:gap-6">
         {navLinks.map((link) => (
-          <div class="relative group py-6">
+          <div class={`${link.mega ? 'mega-root' : 'relative group'} py-6`}>
+            {link.mega ? (
+              <>
+                <button id="mega-trigger" type="button" aria-expanded="false" aria-controls="desktop-mega" class="mega-trigger text-[13px] xl:text-base font-medium text-brand-navy hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                  {link.name}<svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>
+                </button>
+                <div id="desktop-mega" hidden inert class="desktop-mega">
+                  <div class="mega-columns">
+                    {megaGroups.map(group => (
+                      <section class="mega-column" aria-label={group.title}>
+                        <p class="mega-heading">{group.title}</p>
+                        <div class="mega-items">{group.items.map(item => (
+                          <a href={item.href} class="mega-item"><span>{item.name}</span><small>{item.description}</small></a>
+                        ))}</div>
+                        <a class="mega-all" href={group.all}>{group.allLabel} →</a>
+                      </section>
+                    ))}
+                  </div>
+                  <div class="mega-cta"><div><p>Chưa biết chọn vật liệu nào?</p><small>Gửi ảnh hiện trạng và kích thước để được tư vấn.</small></div><a href="/lien-he-idecal">Nhận tư vấn & báo giá →</a></div>
+                </div>
+              </>
+            ) : (<>
             <a 
               href={link.href} 
               class="text-[13px] xl:text-base font-medium text-brand-navy hover:text-primary transition-colors flex items-center gap-1.5 whitespace-nowrap"
@@ -56,6 +88,7 @@ const navLinks: NavLink[] = [
                 ))}
               </div>
             )}
+            </>)}
           </div>
         ))}
       </div>
@@ -91,7 +124,12 @@ const navLinks: NavLink[] = [
                   <span class="text-brand-navy font-light">＋</span>
                 </button>
                 <div id={`mobile-submenu-${index}`} hidden class="mobile-dropdown-content flex flex-col bg-surface rounded-xl px-3 py-2 mb-2">
-                  {link.dropdown.map((sub) => (
+                  {link.mega ? megaGroups.map(group => (
+                    <details class="mobile-mega-group">
+                      <summary>{group.title}<span aria-hidden="true">＋</span></summary>
+                      <div class="mobile-mega-items">{group.items.map(item => <a href={item.href}>{item.name}</a>)}<a class="mega-all" href={group.all}>{group.allLabel} →</a></div>
+                    </details>
+                  )) : link.dropdown.map((sub) => (
                     <a href={sub.href} class={`flex items-center gap-3 text-sm leading-relaxed font-medium py-2.5 ${sub.highlight ? 'text-brand-navy font-bold' : 'text-secondary'}`}>
                       {sub.showIcon !== false && <SubmenuIcon href={sub.href} />}<span>{sub.name}</span>
                     </a>
@@ -115,6 +153,38 @@ const navLinks: NavLink[] = [
 </nav>
 
 <script>
+  const megaRoot = document.querySelector<HTMLElement>('.mega-root');
+  const megaTrigger = document.getElementById('mega-trigger');
+  const megaPanel = document.getElementById('desktop-mega');
+  let megaTimer: ReturnType<typeof setTimeout>;
+  const desktopQuery = window.matchMedia('(min-width: 1024px)');
+  function setMega(open: boolean) {
+    clearTimeout(megaTimer);
+    if (!megaPanel || !megaTrigger) return;
+    megaPanel.hidden = !open; megaPanel.inert = !open;
+    megaTrigger.setAttribute('aria-expanded', String(open));
+  }
+  megaRoot?.addEventListener('mouseenter', () => {
+    if (desktopQuery.matches && window.matchMedia('(hover: hover) and (pointer: fine)').matches) setMega(true);
+  });
+  megaRoot?.addEventListener('mouseleave', () => {
+    if (!megaRoot.contains(document.activeElement)) megaTimer = setTimeout(() => setMega(false), 180);
+  });
+  megaTrigger?.addEventListener('click', () => setMega(megaTrigger.getAttribute('aria-expanded') !== 'true'));
+  megaRoot?.addEventListener('focusout', event => {
+    if (!megaRoot.contains(event.relatedTarget as Node | null)) setMega(false);
+  });
+  document.addEventListener('pointerdown', event => { if (!megaRoot?.contains(event.target as Node)) setMega(false); });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && megaTrigger?.getAttribute('aria-expanded') === 'true') { setMega(false); megaTrigger.focus(); }
+  });
+  desktopQuery.addEventListener('change', () => setMega(false));
+  document.querySelectorAll<HTMLDetailsElement>('.mobile-mega-group').forEach(group => {
+    group.addEventListener('toggle', () => {
+      if (group.open) document.querySelectorAll<HTMLDetailsElement>('.mobile-mega-group').forEach(other => { if (other !== group) other.open = false; });
+    });
+  });
+
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -140,6 +210,7 @@ const navLinks: NavLink[] = [
         const indicator = button.querySelector('span');
         if (indicator) indicator.textContent = '＋';
       });
+      mobileMenu.querySelectorAll<HTMLDetailsElement>('.mobile-mega-group').forEach(group => group.open = false);
       document.body.style.overflow = previousOverflow;
       menuToggle.focus();
     }
@@ -153,7 +224,7 @@ const navLinks: NavLink[] = [
     if (menuToggle?.getAttribute('aria-expanded') !== 'true') return;
     if (event.key === 'Escape') setMenu(false);
     if (event.key === 'Tab') {
-      const controls = Array.from(mobileMenu?.querySelectorAll<HTMLElement>('a, button') ?? [])
+      const controls = Array.from(mobileMenu?.querySelectorAll<HTMLElement>('a, button, summary') ?? [])
         .filter(element => element.getClientRects().length > 0 && element.offsetHeight > 0 && !element.closest('[inert]'));
       const first = controls[0];
       const last = controls.at(-1);
@@ -192,6 +263,35 @@ const navLinks: NavLink[] = [
 </script>
 
 <style>
+  .desktop-mega { position:absolute; top:100%; left:50%; transform:translateX(-50%); width:860px; max-width:calc(100vw - 32px); max-height:calc(100dvh - 112px); overflow-y:auto; overscroll-behavior:contain; background:white; border:1px solid #e2e8f0; border-radius:18px; box-shadow:0 18px 50px #0b174018; }
+  .desktop-mega[hidden] { display:none!important; }
+  .mega-columns { display:grid; grid-template-columns:1.1fr 1fr; }
+  .mega-column { padding:22px; }
+  .mega-column + .mega-column { border-left:1px solid #eef2f7; background:#f8fafb; }
+  .mega-heading { margin:0 10px 12px; font-size:12px; font-weight:600; color:#64748b; letter-spacing:.05em; text-transform:uppercase; }
+  .mega-item { display:block; padding:10px; border-radius:10px; transition:background .15s; }
+  .mega-item:hover { background:#edf4fe; }
+  .mega-item span { display:block; font-size:14px; font-weight:600; color:#163d60; }
+  .mega-item small { display:block; margin-top:3px; font-size:12px; line-height:1.6; color:#536579; }
+  .mega-all { display:inline-flex; align-items:center; min-height:44px; margin:8px 10px 0; font-size:13px; font-weight:500; color:#16649b; }
+  .mega-all:hover { text-decoration:underline; }
+  .mega-cta { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:18px 32px; border-top:1px solid #edf0f6; background:linear-gradient(110deg,#f0f7ff,#f6f3ff); }
+  .mega-cta p { font-size:14px; font-weight:600; color:#163d60; }
+  .mega-cta small { font-size:12px; line-height:1.6; color:#536579; }
+  .mega-cta a { flex-shrink:0; padding:13px 18px; background:#2563eb; border-radius:8px; font-size:13px; font-weight:600; color:white; }
+  .mega-cta a:hover { background:#1d4ed8; }
+  .mega-root a:focus-visible,.mega-trigger:focus-visible,.mobile-mega-group summary:focus-visible { outline:2px solid #2563eb; outline-offset:3px; }
+  .mega-trigger[aria-expanded="true"] { color:#16649b; }
+  .mega-trigger[aria-expanded="true"] svg { transform:rotate(180deg); }
+  .mobile-mega-group + .mobile-mega-group { border-top:1px solid #e2e8f0; }
+  .mobile-mega-group summary { display:flex; justify-content:space-between; align-items:center; min-height:48px; cursor:pointer; list-style:none; font-size:14px; font-weight:600; color:#163d60; }
+  .mobile-mega-group summary::-webkit-details-marker { display:none; }
+  .mobile-mega-group[open] summary span { transform:rotate(45deg); }
+  .mobile-mega-items { padding:0 0 10px 10px; }
+  .mobile-mega-items a { display:flex; align-items:center; min-height:44px; padding:8px 0; font-size:14px; line-height:1.5; color:#315574; }
+  .mobile-mega-items .mega-all { margin:4px 0 0; color:#16649b; }
+  @media (prefers-reduced-motion:reduce) { .mega-item { transition:none; } }
+
   #mobile-menu[hidden], .mobile-dropdown-content[hidden] { display: none !important; }
   .mobile-menu-footer { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
 </style>
