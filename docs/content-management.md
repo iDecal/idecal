@@ -36,3 +36,15 @@ Dùng workflow trực tiếp: lưu/xuất bản trong CMS sẽ tạo commit trê
 - Cấu hình được đối chiếu JSON schema chính thức cùng phiên bản. Kiểm tra trình duyệt xác minh tải CMS, hộp thoại token, đọc đủ bài viết/công trình và mở–sửa–lưu JSON bằng File System Access API trên bản dữ liệu tách riêng trong bộ nhớ trình duyệt. Nội dung thật không bị ghi bởi bài kiểm tra. Các request tài nguyên ngoài trong bài kiểm tra được chuyển qua curl với CA/proxy được cấp sẵn, không tắt TLS verification. Chưa đăng nhập hoặc ghi thử bằng tài khoản của chủ website.
 
 Tài liệu chính thức: https://sveltiacms.app/en/docs/frameworks/astro và https://sveltiacms.app/en/docs/backends/github .
+
+## Sửa sản phẩm ngay trên website
+
+Trên trang chi tiết sản phẩm, chọn **Đăng nhập GitHub để sửa** dưới phần thông tin. Đăng nhập bằng fine-grained token có quyền ghi như hướng dẫn ở trên. Popup xác minh tài khoản và quyền `push` của repository trước khi hiện nút **Sửa sản phẩm**. Đây là đăng nhập bằng token; không phải OAuth một chạm. Phiên popup tách với phiên Sveltia CMS; không tự đọc hoặc sao chép token của CMS.
+
+Phiên popup được lưu trong `sessionStorage` của tab, gửi token trực tiếp đến `https://api.github.com` bằng Authorization header. Không ghi token vào repository, URL hoặc cấu hình build. Chọn **Đăng xuất** để xóa phiên; đóng tab cũng kết thúc vùng lưu trữ phiên của tab đó. Popup không cần máy chủ ghi công khai.
+
+Các trường có thể sửa: tên, mã mẫu, thương hiệu, giá, danh mục, mô tả ngắn, các đoạn mô tả và đường dẫn ảnh. Giá trống tương ứng liên hệ báo giá. Ảnh dùng đường dẫn từ gốc website hoặc URL HTTPS; tải ảnh mới qua trang quản trị. Slug/URL không được sửa. Các trường khác của sản phẩm được giữ nguyên, kể cả thông số và thư viện ảnh thi công.
+
+Khi mở popup, dữ liệu được đọc mới từ `main`. Trước khi lưu, popup đọc lại tệp: nếu sản phẩm đang sửa đã thay đổi, việc lưu bị chặn để tránh ghi đè; thay đổi của sản phẩm khác vẫn được giữ. GitHub kiểm tra SHA của toàn bộ tệp khi ghi để phát hiện xung đột tiếp theo. Lỗi lưu không xóa các giá trị vừa nhập. Lưu thành công tạo commit lên `main`; trang đang xem chỉ cập nhật sau khi triển khai hoàn tất.
+
+Kiểm tra trình duyệt: với máy chủ phát triển đang chạy tại cổng 4321, chạy `python3 scripts/test-product-editor.py` (cần Python Playwright và `/usr/bin/chromium`). Bài kiểm tra chặn toàn bộ request GitHub bằng dữ liệu giả, không đăng nhập hay ghi repository thật. Bao gồm quyền ghi, lưu tiếng Việt, bảo toàn sản phẩm khác/metadata, sửa đồng thời, URL ảnh không hợp lệ, xung đột GitHub, popup mobile và đăng xuất. Chạy thêm `npm run check` và `npm test` cho toàn website.

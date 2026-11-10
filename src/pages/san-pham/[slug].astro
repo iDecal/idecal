@@ -1,5 +1,6 @@
 ---
 import '../../styles/catalogue.css';
+import ProductEditor from '../../components/ProductEditor.astro';
 import filmSpecifications from '../../data/film-specifications.json';
 import RelatedGuides from '../../components/RelatedGuides.astro';
 import Layout from '../../layouts/Layout.astro';
@@ -76,6 +77,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
           </details>}
         </div>
         <a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a>
+        <ProductEditor product={product} />
       </div>
     </div>
     </div>
