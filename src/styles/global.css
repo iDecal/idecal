@@ -66,9 +66,9 @@
   .btn-idecal-bold {
     @apply inline-flex items-center gap-2 border-b border-current pb-1 text-sm font-medium text-primary transition-colors;
   }
-  .btn-idecal-bold:hover { @apply text-secondary; }
+  .btn-idecal-bold:hover { @apply border-sand-dark text-secondary; }
   .brand-dark .btn-idecal-bold { @apply border-white/60 text-white; }
-  .brand-dark .btn-idecal-bold:hover { @apply border-brand-highlight text-brand-highlight; }
+  .brand-dark .btn-idecal-bold:hover { @apply border-sand text-sand; }
 
   .service-card-brand {
     @apply flex h-full flex-col rounded-brand border border-border bg-white p-6 transition-all duration-300;

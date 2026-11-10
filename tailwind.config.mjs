@@ -34,6 +34,10 @@ export default {
         },
         "border": "#DBE3EC",
         "surface": "#F1F7FC",
+        "sand": {
+          "DEFAULT": "#E4CFAA",
+          "dark": "#D1B581"
+        },
         "brand": {
           "navy": "#031245",
           "sky": "#1AA7E0",
