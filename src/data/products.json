@@ -1187,7 +1187,8 @@
     ],
     "images": [
       "https://idecal.vn/wp-content/uploads/2025/05/PPF-TPH.avif",
-      "https://idecal.vn/wp-content/uploads/2025/05/Phim-TPF-bao-ve-son-o-to.jpg"
+      "https://idecal.vn/wp-content/uploads/2025/05/Phim-TPF-bao-ve-son-o-to.jpg",
+      "/images/uploads/thi-cong-dan-phim-ppf-bao-ve-mat-ban-da-marble-1024x568-26b5a719-6601-445d-9881-930a5c3a7166.jpg"
     ],
     "attributes": {
       "quy-cach": [
@@ -1217,6 +1218,11 @@
         "src": "https://idecal.vn/wp-content/uploads/2025/05/Phim-TPF-bao-ve-son-o-to.jpg",
         "alt": "Phim PPF TPH",
         "title": "Phim PPF TPH | iDecal"
+      },
+      {
+        "src": "/images/uploads/thi-cong-dan-phim-ppf-bao-ve-mat-ban-da-marble-1024x568-26b5a719-6601-445d-9881-930a5c3a7166.jpg",
+        "alt": "Phim PPF bảo vệ bề mặt nội thất",
+        "title": "Phim PPF bảo vệ bề mặt nội thất"
       }
     ]
   },
