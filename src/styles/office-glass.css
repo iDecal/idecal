@@ -3,14 +3,13 @@
 .office-glass-page :is(section[id]) { scroll-margin-top:112px; }
 .office-glass-page figure { margin:0; }
 .office-glass-page img { display:block; width:100%; height:auto; object-fit:cover; border-radius:12px; }
-.office-glass-page :is(h1,h3) { color:#244766; }
+.office-glass-page h3 { color:#244766; }
 .office-glass-page h3 { font-size:20px; font-weight:500; line-height:1.45; margin:0 0 12px; }
 .office-glass-page p,.office-glass-page li { font-size:15px; line-height:1.8; color:#536579; }
 .office-glass-page a:focus-visible,.office-glass-page summary:focus-visible,.office-price-table:focus-visible { outline:2px solid #168ac0; outline-offset:4px; }
 .office-eyebrow { font-size:12px!important; font-weight:500; color:#0d6b96!important; margin:0 0 12px; }
 .office-hero { background:linear-gradient(110deg,#f3f9fe,#faf8ff); }
 .office-hero-grid { display:grid; grid-template-columns:1.08fr 1fr; gap:48px; align-items:center; }
-.office-hero h1 { font-size:clamp(30px,2.8vw,40px); font-weight:600; line-height:1.3; margin:0 0 20px; }
 .office-hero-lead p { font-size:15px; margin-bottom:12px; }
 .office-hero figure img { aspect-ratio:1.4; }
 .office-hero-actions { display:flex; flex-wrap:wrap; gap:12px 24px; align-items:center; margin-top:22px; }
@@ -22,14 +21,20 @@
 .office-jump-links { display:flex; gap:24px; padding-top:10px; padding-bottom:10px; border-bottom:1px solid #e1eaf4; overflow-x:auto; scrollbar-width:thin; }
 .office-jump-links a { flex-shrink:0; font-size:13px; min-height:44px; display:inline-flex; align-items:center; color:#315574; }
 .office-jump-links a:hover { color:#008aca; }
-.office-services { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; padding-top:28px; padding-bottom:4px; }
-.office-services article { display:grid; grid-template-columns:30px 1fr; gap:5px 12px; align-content:start; }
-.office-services article>span { grid-row:1/3; }
-.office-services h3 { font-size:16px; margin:2px 0 0; }
-.office-services article>div { grid-column:2; }
-.office-services p { font-size:13px; margin:0; }
+.office-services { padding-top:36px; padding-bottom:4px; }
+.office-services-heading { margin-bottom:22px; }
+.office-services-heading h2 { margin-bottom:0; }
+.office-services-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.office-service-card { display:flex; align-items:flex-start; gap:18px; min-width:0; padding:24px; border:1px solid #e1eaf4; border-radius:14px; background:#fff; transition:background .15s,border-color .15s; }
+.office-service-card:hover { background:#f5f9fe; border-color:#b6d0e5; }
+.office-service-icon { display:flex; align-items:center; justify-content:center; flex:0 0 44px; width:44px; height:44px; border-radius:12px; background:#edf5fc; color:#087cb2; }
+.office-service-icon svg { width:23px; height:23px; }
+.office-service-copy { flex:1; min-width:0; }
+.office-service-copy h3 { font-size:18px; margin:0 0 8px; }
+.office-service-copy p { font-size:14px; margin:0; }
+.office-service-arrow { color:#168ac0; padding-top:2px; }
 .office-section { padding-top:48px; padding-bottom:48px; }
-.office-section-heading { max-width:850px; margin-bottom:26px; }
+.office-section-heading { max-width:none; margin-bottom:26px; }
 .office-section-heading h2,.office-faq h2 { margin:0 0 16px; }
 /* One primary solution, followed by a compact two-column editorial grid. */
 .office-solutions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
@@ -79,13 +84,12 @@
 .office-gallery-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-bottom:22px; }
 .office-gallery-grid img { aspect-ratio:1.6; }
 .office-gallery figcaption { margin-top:8px; font-size:12px; color:#64748b; }
-.office-gallery-copy { max-width:900px; }
+.office-gallery-copy { width:100%; max-width:none; }
 .office-gallery-links { display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:18px; }
 .office-gallery-links a { display:inline-flex; min-height:44px; align-items:center; font-size:14px; color:#0d6b96; }
 .office-price-layout>*,.office-hero-grid>*,.office-solution>*,.office-why-grid>*,.office-benefits-grid>*,.office-faq>* { min-width:0; }
 @media(max-width:1023px) {
  .office-hero-grid { gap:28px; }
- .office-services { grid-template-columns:1fr 1fr; }
  .office-price-layout { grid-template-columns:1fr; gap:24px; }
  .office-price-layout aside { border-left:0; padding-left:0; border-top:1px solid #e8ddc7; padding-top:22px; }
  .office-benefits { grid-template-columns:1fr 1fr; }
@@ -97,10 +101,10 @@
  .office-hero-grid,.office-why-grid,.office-benefits-grid,.office-faq { grid-template-columns:1fr; gap:24px; }
  .office-hero-grid figure { max-width:520px; }
  .office-hero figure img { aspect-ratio:1.6; }
- .office-hero h1 { font-size:30px; }
- .office-services { gap:22px 16px; padding-top:24px; }
- .office-services article { display:block; }
- .office-services h3 { margin:10px 0 6px; font-size:15px; }
+ .office-services { padding-top:28px; }
+ .office-services-grid { grid-template-columns:1fr; gap:12px; }
+ .office-service-card { padding:18px; gap:14px; }
+ .office-service-copy h3 { font-size:17px; }
  .office-section { padding-top:34px; padding-bottom:34px; }
  .office-section-heading { margin-bottom:22px; }
  .office-solutions { grid-template-columns:1fr; gap:24px; }
@@ -108,7 +112,6 @@
  .office-solution:first-child { padding-top:0; }
  .office-solution img,.office-solution:first-child img { aspect-ratio:1.8; }
  .office-glass-page h3 { font-size:19px; }
- .office-services h3 { font-size:15px; }
  .office-why,.office-pricing { padding:32px 0; }
  .office-benefits { gap:20px; }
  .office-benefits h3 { font-size:16px; }
@@ -134,3 +137,11 @@
 .office-solution-button>span { flex-shrink:0; }
 @media(max-width:767px) { .office-solution-checks li { font-size:14px; } .office-solution-button { width:100%; } }
 @media(prefers-reduced-motion:reduce) { .office-solution-button { transition:none; } }
+
+.office-why-contact { display:flex; align-items:center; justify-content:space-between; gap:32px; border-top:1px solid #dfe7ef; padding-top:24px; margin-top:30px; }
+.office-why-contact>div { flex:1; min-width:0; }
+.office-why-contact .office-original-copy p { margin-bottom:10px; }
+.office-why-contact .office-context-note { margin:12px 0 0; }
+.office-why-contact>.office-solution-button { flex-shrink:0; margin-top:0; }
+@media(max-width:767px) { .office-why-contact { flex-direction:column; align-items:stretch; gap:18px; margin-top:24px; } }
+@media(prefers-reduced-motion:reduce) { .office-service-card { transition:none; } }
