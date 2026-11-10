@@ -70,5 +70,5 @@ Sau khi hoàn thiện, bảng hiệu decal mới đã mang lại diện mạo ch
 
 iDecal chuyên nhận thi công **[bảng hiệu dán decal](https://idecal.vn/dich-vu-dan-decal-bang-hieu-chuyen-nghiep/)**, **decal logo công ty**, **dán tên phòng ban**,… tại TP.HCM và Bình Dương. Cam kết **thi công nhanh – đẹp – đúng chuẩn thương hiệu**.
 
-📞 Liên hệ tư vấn & báo giá: **0981-851-815**  
+📞 Liên hệ tư vấn & báo giá: **0866077040**  
 🌐 Xem thêm dự án và [dịch vụ Decal tại Thủ Đức](https://idecal.vn/thi-cong-decal/thanh-pho-thu-duc/) của iDecal

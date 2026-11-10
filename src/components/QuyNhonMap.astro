@@ -1,9 +1,13 @@
+---
+import { contactLocations } from '../data/contact-locations';
+const location = contactLocations.find(item => item.slug === 'quy-nhon')!;
+---
 <section id="ban-do" class="container pb-14 md:pb-20" aria-labelledby="quy-nhon-map-title">
       <h2 id="quy-nhon-map-title" class="brand-heading">Địa điểm iDecal Quy Nhơn</h2>
-      <p>675 Nguyễn Thái Học, Quy Nhơn Nam, Gia Lai</p>
+      <p>{location.address}</p>
       <iframe
         title="Bản đồ iDecal Quy Nhơn – 675 Nguyễn Thái Học"
-        src={`https://www.google.com/maps?q=${encodeURIComponent('IDecal Quy Nhơn, 675 Nguyễn Thái Học, Quy Nhơn Nam, Gia Lai')}&output=embed`}
+        src={`https://www.google.com/maps?q=${encodeURIComponent(`iDecal Quy Nhơn, ${location.address}`)}&output=embed`}
         width="100%"
         height="400"
         class="mb-5 w-full rounded-2xl border-0"
@@ -11,5 +15,5 @@
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-      <a href="https://share.google/VDDmoXrTtASDIZ1eN" target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-4">Mở vị trí trên Google Maps <span class="sr-only">(mở trong tab mới)</span></a>
+      <a href={location.mapUrl} target="_blank" rel="noopener noreferrer" class="text-primary underline underline-offset-4">Mở vị trí trên Google Maps <span class="sr-only">(mở trong tab mới)</span></a>
     </section>

@@ -1,0 +1,17 @@
+---
+import { contactLocations } from '../data/contact-locations';
+interface Props { area?: string; }
+const locations = contactLocations.filter(location => !Astro.props.area || location.slug === Astro.props.area);
+---
+<section class="container py-10 md:py-14" aria-labelledby="contact-locations-title">
+  <h2 id="contact-locations-title" class="text-2xl">Địa chỉ liên hệ iDecal</h2>
+  <div class:list={['grid gap-6', { 'md:grid-cols-3': locations.length > 1 }]}>
+    {locations.map(location => (
+      <div>
+        <h3 class="mb-3 text-lg">{location.name}</h3>
+        <address class="text-sm not-italic leading-relaxed text-text-muted">{location.address}</address>
+        {location.mapUrl && <a href={location.mapUrl} target="_blank" rel="noopener noreferrer" class="mt-3 inline-block text-sm text-primary underline underline-offset-4">Mở Google Maps<span class="sr-only"> (mở trong tab mới)</span></a>}
+      </div>
+    ))}
+  </div>
+</section>

@@ -85,5 +85,5 @@ Hoặc nếu bạn cần xem mẫu trực tiếp tại Công ty chúng tôi, vui
 **Công ty TNHH 3S Wrap**
 
 - **Địa chỉ Bình Dương:** Số 1/DC78/Ô59 Tổ 2, KP. Hòa Lân 2, Phường Thuận Giao, Thành phố Thuận An, Tỉnh Bình Dương, Việt Nam.
-- **Điện thoại tư vấn :** 0981851815 / Zalo
+- **Điện thoại tư vấn :** 0866077040 / Zalo
 - **Map chỉ đường:** [Công ty iDecal](https://g.co/kgs/cqr15cB)

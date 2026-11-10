@@ -51,7 +51,11 @@
     "wordpressId": 27384,
     "title": "Thi công dán Decal bảng hiệu công ty Hoa Đạt -CN Thủ Đức",
     "sha256": "0f590ecc94adbad5a6bbd47b948d9cb02d18da5be073d7b3f4811a9cc19ba8c6",
-    "bodySha256": "0785adb23f0205ff4bdc44adcf857ea2eb1f6284f54a3c46da24992324e6a08b"
+    "bodySha256": "0785adb23f0205ff4bdc44adcf857ea2eb1f6284f54a3c46da24992324e6a08b",
+    "cmsRevision": {
+      "bodySha256": "25b111cb4480cd6257013201f0d06d6f521364932b0ab64910a0ecbe1a8c6bde",
+      "reason": "Owner requested replacing 0981851815 with 0866077040 across the website."
+    }
   },
   "thi-cong-trang-tri-vm-gian-hang-chuyen-nghiep": {
     "wordpressId": 21142,
@@ -165,7 +169,11 @@
     "wordpressId": 28185,
     "title": "Dịch vụ dán Decal chống nắng, Phim cách nhiệt tại Bình Dương",
     "sha256": "fda4db435ce7e55df8036040dde7ccbb36a1a1c97d3c1edebb0e6e1da7f75112",
-    "bodySha256": "4180319371242edeecc402f0c367b11a2e049f4c15fd47cc77abf152db85445f"
+    "bodySha256": "4180319371242edeecc402f0c367b11a2e049f4c15fd47cc77abf152db85445f",
+    "cmsRevision": {
+      "bodySha256": "e5a8e0fd16a6971e2f98c84ab9b3118ddfa0aaa5f17a64ebb62da87bc46a5bbc",
+      "reason": "Owner requested replacing 0981851815 with 0866077040 across the website."
+    }
   },
   "thi-cong-mo-hinh-quang-cao-posm-pp-can-formex": {
     "wordpressId": 21078,
@@ -213,7 +221,11 @@
     "wordpressId": 1926,
     "title": "Thi công dán PP khổ lớn chuyên nghiệp #1 TPHCM",
     "sha256": "e329622d2958edd6210c46e9a59d07c869f38a1ac817543fd12cafc6777e2ded",
-    "bodySha256": "70838d9ce35c8b9e30146b0de909217c1bd760e89452488f8f3e7000b8bd7d1d"
+    "bodySha256": "70838d9ce35c8b9e30146b0de909217c1bd760e89452488f8f3e7000b8bd7d1d",
+    "cmsRevision": {
+      "bodySha256": "9e025198de9298f739feec9aa44b07122ac3fe7b032dcb1951d51bd16b21a4f7",
+      "reason": "Owner requested replacing 0981851815 with 0866077040 across the website."
+    }
   },
   "decal-oracal-la-gi-decal-noi-that-cao-cap-tu-germany": {
     "wordpressId": 2157,
@@ -427,6 +439,10 @@
     "wordpressId": 1783,
     "title": "#1 Dịch vụ Decal dán kính quận Tân Bình",
     "sha256": "20aa7e6861ce6f0ca2e256b3a86d206a7ed985e5d590dd7da6f3224dea61e635",
-    "bodySha256": "2a5711816768f4d21d7bb4f995aaca3c19dd20854794bc44f4a33da8fd1c0f50"
+    "bodySha256": "2a5711816768f4d21d7bb4f995aaca3c19dd20854794bc44f4a33da8fd1c0f50",
+    "cmsRevision": {
+      "bodySha256": "64e1ccd98ae63c5df795691bdeb693e6352dc23cdcf21ddd493979edaa7772fa",
+      "reason": "Owner requested replacing 0981851815 with 0866077040 across the website."
+    }
   }
 }

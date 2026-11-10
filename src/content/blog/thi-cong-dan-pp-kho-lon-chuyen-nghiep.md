@@ -25,7 +25,7 @@ Khi thi công dán PP chúng ta không biết chọn loại nào phù hợp vớ
 >
 > Lời khuyên hữu ích
 
-Có một nhược điểm đáng chú ý mà khách hàng rất dễ mắc phải, đó là sau khi dán lên tường hay cửa một thời gian chúng ta sẽ không thể lột bỏ lớp PP đó đi hết vì lớp keo dán quá chắc đã giữ lại lớp giấy kia. Để loại trừ nhược điểm này khách hàng thường đổi qua thi công dán decal, hoặc dán PP lên format. Quý khách có điều gì thắc mắc, vui lòng liên hệ với chúng tôi để được tư vấn và hỗ trợ tốt hơn về các dịch vụ **Hotline:** 0981851815
+Có một nhược điểm đáng chú ý mà khách hàng rất dễ mắc phải, đó là sau khi dán lên tường hay cửa một thời gian chúng ta sẽ không thể lột bỏ lớp PP đó đi hết vì lớp keo dán quá chắc đã giữ lại lớp giấy kia. Để loại trừ nhược điểm này khách hàng thường đổi qua thi công dán decal, hoặc dán PP lên format. Quý khách có điều gì thắc mắc, vui lòng liên hệ với chúng tôi để được tư vấn và hỗ trợ tốt hơn về các dịch vụ **Hotline:** 0866077040
 
 <img src="/images/blog-wordpress/05840768a42f4b57f39a.jpg" alt="Chất liệu PP trong nhà dùng làm tranh quảng cáo" loading="lazy" decoding="async" />
 
@@ -123,7 +123,7 @@ Gmail: [xuanlinh150292@gmail.com](https://idecal.vn/mailto:xuanlinh150292@gmail.
 
 **P. Thiết kế - Tuấn Anh**
 
-Điện thoại: 0981 851 815
+Điện thoại: 0866077040
 
 Email: [anhle@idecal.vn](https://idecal.vn/mailto:anhle@idecal.vn)
 
