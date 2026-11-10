@@ -1,0 +1,12 @@
+---
+// Simple Icons v11 (CC0); SVG paths are local, without external embed scripts.
+import profiles from '../data/social-profiles.json';
+interface Props { compact?:boolean; dark?:boolean; label?:string; }
+const {compact=false,dark=false,label='Các kênh social của iDecal'}=Astro.props;
+---
+<nav class:list={['social-links',{'social-links--compact':compact,'social-links--dark':dark}]} aria-label={label}>
+ {profiles.map(profile=><a href={profile.url} target="_blank" rel="me noopener noreferrer" aria-label={`${profile.name} iDecal (mở tab mới)`} title={`${profile.name} · iDecal`}><svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d={profile.path}/></svg><span class:list={{'social-name-hidden':compact}}>{profile.name}</span></a>)}
+</nav>
+<style>
+.social-links{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.social-links a{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:42px;padding:10px 15px;border:1px solid #e0e8ef;border-radius:999px;background:#fff;color:#42647e;font-size:13px;line-height:1.5;transition:color .16s,border-color .16s,background .16s}.social-links a svg{flex-shrink:0;width:18px;height:18px}.social-links a:hover{color:#146d99;border-color:#b8d0e3;background:#f3f8fc}.social-links a:focus-visible{outline:2px solid #2795c6;outline-offset:4px}.social-links--compact{gap:9px}.social-links--compact a{width:40px;height:40px;min-height:40px;padding:10px;border-radius:50%}.social-links--dark a{background:#ffffff05;border-color:#ffffff24;color:#c7d7e9}.social-links--dark a:hover{background:#ffffff12;color:#fff;border-color:#ffffff55}.social-links--dark a:focus-visible{outline-color:#cce9fb}.social-name-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:380px){.social-links--compact{display:grid;grid-template-columns:repeat(4,40px)}}@media(prefers-reduced-motion:reduce){.social-links a{transition:none}}
+</style>

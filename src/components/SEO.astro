@@ -1,5 +1,6 @@
 ---
 import { brandedTitle, seoDefaults } from '../data/seo';
+import socialProfiles from '../data/social-profiles.json';
 interface Props {
   title: string;
   description: string;
@@ -17,7 +18,7 @@ const imageURL=new URL(image,canonicalURL).href;
 const origin=Astro.site ?? new URL('https://idecal.vn');
 const organizationID=new URL('/#organization',origin).href;
 const graph=[
- {'@type':'Organization','@id':organizationID,name:'iDecal',url:origin.href,logo:new URL('/images/idecal-logo.png',origin).href,contactPoint:{'@type':'ContactPoint',telephone:'+84866077040',contactType:'customer support',email:'hi@idecal.vn',availableLanguage:'vi'}},
+ {'@type':'Organization','@id':organizationID,name:'iDecal',url:origin.href,sameAs:socialProfiles.map(profile=>profile.url),logo:new URL('/images/idecal-logo.png',origin).href,contactPoint:{'@type':'ContactPoint',telephone:'+84866077040',contactType:'customer support',email:'hi@idecal.vn',availableLanguage:'vi'}},
  {'@type':'WebSite','@id':new URL('/#website',origin).href,url:origin.href,name:'iDecal',inLanguage:'vi-VN',publisher:{'@id':organizationID}},
  ...structuredData,
 ];

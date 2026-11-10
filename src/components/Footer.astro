@@ -1,11 +1,12 @@
 ---
 import { contactLocations } from '../data/contact-locations';
+import SocialLinks from './SocialLinks.astro';
 import { regions } from '../data/regions';
 import { serviceOfferings } from '../data/site-offerings';
 ---
 <footer class="brand-dark bg-brand-navy bg-brand-pattern border-t border-sand-dark/40 pt-16 pb-8">
   <div class="container">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
       
       <div class="flex flex-col gap-6">
         <a href="/" class="flex items-center gap-3 self-start" aria-label="iDecal – về trang chủ"><img src="/images/idecal-logo.png" alt="Logo iDecal" class="h-10 w-10" /><span class="text-2xl font-semibold text-white">iDecal</span></a>
@@ -55,9 +56,15 @@ import { serviceOfferings } from '../data/site-offerings';
 
     </div>
 
+    <div class="footer-social-row"><p>Kết nối cùng iDecal</p><SocialLinks compact dark label="Theo dõi iDecal trên các mạng xã hội" /></div>
+
     <div class="pt-8 border-t border-white/15 flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] text-brand-inverse">
       <p>© 2026 iDecal. All rights reserved.</p>
       <a href="/lien-he-idecal" class="hover:text-white">Liên hệ iDecal</a>
     </div>
   </div>
 </footer>
+
+<style>
+.footer-social-row{display:flex;align-items:center;justify-content:space-between;gap:20px 32px;margin-bottom:24px}.footer-social-row>p{margin:0;color:#bdcfe2;font-size:12px;line-height:1.7}@media(max-width:639px){.footer-social-row{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:25px}}
+</style>

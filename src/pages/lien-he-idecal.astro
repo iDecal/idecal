@@ -1,5 +1,6 @@
 ---
 import ContactLocations from '../components/ContactLocations.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 import Layout from '../layouts/Layout.astro';
 import ContactRequestForm from '../components/ContactRequestForm.astro';
 import { regions } from '../data/regions';
@@ -28,5 +29,10 @@ const channels=[
         <details class="contact-area-list"><summary>Khu vực tư vấn & thi công</summary><nav aria-label="Khu vực phục vụ">{regions.map(region=><a href={`/khu-vuc/${region.slug}`}>{region.name}<span aria-hidden="true">→</span></a>)}</nav></details>
       </aside>
     </section>
+    <section class="container contact-social-section" aria-labelledby="contact-social-title"><h2 id="contact-social-title">Kết nối cùng iDecal</h2><p>Xem thêm hình ảnh công trình và cập nhật trên các kênh của iDecal.</p><SocialLinks label="Các kênh social chính thức của iDecal" /></section>
   </div>
 </Layout>
+
+<style>
+.contact-social-section{padding-top:20px;padding-bottom:42px}.contact-social-section h2{font-size:24px;font-weight:550;color:#244766;margin:0 0 12px}.contact-social-section>p{font-size:14px;color:#647c8f;line-height:1.9;margin:0 0 22px}@media(max-width:767px){.contact-social-section{padding-top:10px;padding-bottom:32px}.contact-social-section h2{font-size:22px}}
+</style>
