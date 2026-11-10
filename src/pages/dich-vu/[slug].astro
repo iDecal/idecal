@@ -2,9 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import ServiceLanding from '../../components/ServiceLanding.astro';
 import { serviceOfferings } from '../../data/site-offerings';
+import evidence from '../../data/installation-evidence.json';
+import { contactLocations } from '../../data/contact-locations';
 export function getStaticPaths() { return serviceOfferings.filter(service => service.slug !== 'cat-decal').map(service => ({ params: { slug: service.slug }, props: { service } })); }
 const { service } = Astro.props;
+const isInstallation=service.slug==='thi-cong-decal';
+const structuredData:Record<string,unknown>[]=isInstallation?[{'@type':'Service','@id':'https://idecal.vn/dich-vu/thi-cong-decal/#service',name:service.headline,serviceType:'Thi công Decal dán kính, phim cách nhiệt và film nội thất',url:'https://idecal.vn/dich-vu/thi-cong-decal/',provider:{'@id':'https://idecal.vn/#organization'},areaServed:contactLocations.map(location=>({'@type':'Place',name:location.name})),image:evidence.photos.map(photo=>new URL(photo.image,Astro.site).href),description:'Dịch vụ thi công Decal theo hiện trạng công trình, có ảnh thực tế, hướng dẫn kiểm tra bề mặt và thông tin khu vực tiếp nhận yêu cầu.'}]:[];
+const description=isInstallation?'Thi công Decal dán kính, phim cách nhiệt và film nội thất. Xem ảnh công trình iDecal, kinh nghiệm xử lý bề mặt và khu vực tiếp nhận thi công.':service.description;
 ---
-<Layout title={`${service.name} | Dịch vụ iDecal`} description={service.description} image={service.image}>
+<Layout title={`${service.name} | Dịch vụ iDecal`} description={description} image={service.image} structuredData={structuredData}>
   <ServiceLanding service={service} />
 </Layout>

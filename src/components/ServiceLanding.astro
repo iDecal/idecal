@@ -4,6 +4,7 @@ import ServiceHero from './ServiceHero.astro';
 import PrintingServiceContent from './PrintingServiceContent.astro';
 import DesignServiceContent from './DesignServiceContent.astro';
 import InstallationServiceContent from './InstallationServiceContent.astro';
+import InstallationEvidence from './InstallationEvidence.astro';
 import installationContent from '../data/installation-service.json';
 import designContent from '../data/design-service.json';
 import { serviceLandingContent } from '../data/service-landing-content';
@@ -25,9 +26,10 @@ const faqs = [...content.faqs, ...extraFaqs];
     <p slot="description">{service.description}</p><Fragment slot="actions"><a href={booking} class="btn-primary-solid">{cta.action} <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a><a href="#pham-vi" class="btn-idecal-bold">Khám phá dịch vụ ↓</a></Fragment>
   </ServiceHero>
   <section id="pham-vi" class="container lp-summary"><h2>Phạm vi dịch vụ</h2><ul>{service.deliverables.map(title=><li><span aria-hidden="true">✓</span>{title}</li>)}</ul></section>
+  {service.slug === 'thi-cong-decal' && <nav class="container installation-jump-links" aria-label="Thông tin thi công Decal"><a href="#anh-thi-cong-thuc-te">Ảnh thi công thực tế</a><a href="#kinh-nghiem-thi-cong">Kinh nghiệm thi công</a><a href="#khu-vuc-thi-cong">Khu vực phục vụ</a></nav>}
   {service.slug === 'in-decal' && <PrintingServiceContent />}
   {service.slug === 'thiet-ke' && <DesignServiceContent />}
-  {service.slug === 'thi-cong-decal' && <InstallationServiceContent />}
+  {service.slug === 'thi-cong-decal' && <><InstallationServiceContent /><InstallationEvidence /></>}
   {hasDetails && <div class="lp-details"><slot name="details" /></div>}
   {hasDetails ? <slot name="faq" /> : <section id="lp-cau-hoi" class="lp-faq lp-section"><div class="container lp-faq-grid"><div><p class="lp-kicker">Giải đáp trước khi bắt đầu</p><h2>Một vài điều cần biết</h2><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Trao đổi qua Zalo →</a></div><div>{faqs.slice(0,3).map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>}
 
@@ -35,3 +37,5 @@ const faqs = [...content.faqs, ...extraFaqs];
   <ServiceSupport service={service.slug} />
 
 </div>
+
+<style>.installation-jump-links{display:flex;flex-wrap:wrap;gap:14px 28px;padding-top:20px;padding-bottom:20px;font-size:13px;color:#176f96}.installation-jump-links a{padding:5px 0}.installation-jump-links a:hover{text-decoration:underline;text-underline-offset:4px}.installation-jump-links a:focus-visible{outline:2px solid #176f96;outline-offset:4px}</style>

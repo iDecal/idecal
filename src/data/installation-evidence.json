@@ -1,0 +1,58 @@
+{
+  "introduction": "Từ kính phòng khám, mặt tiền showroom đến vách ngăn văn phòng, mỗi công trình có yêu cầu về hình ảnh và mức độ riêng tư khác nhau. Dưới đây là ảnh thi công đã được iDecal giới thiệu trong hồ sơ công trình và nội dung khu vực.",
+  "photos": [
+    {
+      "title": "Decal kính phòng khám FDCARE",
+      "description": "Hệ kính trang trí nhận diện tại phòng khám FDCARE, khu vực Quận 9 cũ, TP.HCM.",
+      "image": "/images/thi-cong-thuc-te/fdcare-quan-9.webp",
+      "alt": "Hình ảnh Decal trang trí và nhận diện trên kính phòng khám FDCARE tại Quận 9 cũ",
+      "href": "/du-an/in-an-thi-cong-decal-dfcare-quan-9/",
+      "linkLabel": "Xem hồ sơ công trình",
+      "sourceImage": "/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png"
+    },
+    {
+      "title": "Mặt kính showroom Toyota",
+      "description": "Decal quảng cáo trên hệ kính mặt tiền Toyota Lý Thường Kiệt.",
+      "image": "/images/thi-cong-thuc-te/toyota-ly-thuong-kiet.webp",
+      "alt": "Hình ảnh Decal quảng cáo trên mặt kính showroom Toyota Lý Thường Kiệt",
+      "href": "/du-an/toyota-showroom/",
+      "linkLabel": "Xem hồ sơ công trình",
+      "sourceImage": "/images/cong-trinh/thi-cong-dan-decal-luoi-mat-tien-toyota-tan-binh.jpg"
+    },
+    {
+      "title": "Decal mờ vách ngăn văn phòng",
+      "description": "Vách ngăn văn phòng dán Decal mờ, tham khảo trong nội dung thi công tại khu vực Quận 12 cũ.",
+      "image": "/images/thi-cong-thuc-te/van-phong-quan-12.webp",
+      "alt": "Hình ảnh thực tế vách ngăn kính văn phòng dán Decal mờ tại khu vực Quận 12 cũ",
+      "href": "/vi-tri/decal-dan-kinh-quan-12/",
+      "linkLabel": "Xem ảnh và nội dung khu vực",
+      "sourceImage": "/images/local/decal-dan-kinh-quan-12.jpg"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Đo từng ô, kiểm tra cao độ và vị trí logo",
+      "text": "Với thi công Decal dán kính văn phòng, ghi riêng chiều rộng và chiều cao phần kính cần dán. Đối chiếu mép khung, tay nắm, tầm nhìn và vị trí ngồi trước khi xác định dải mờ hoặc bố cục nhận diện.",
+      "href": "/blog/cach-do-kich-thuoc-kinh-truoc-khi-dat-decal",
+      "linkLabel": "Hướng dẫn đo kính"
+    },
+    {
+      "title": "Xử lý bề mặt trước khi chọn cách dán",
+      "text": "Kiểm tra bụi, keo cũ, mép bong và tình trạng nền. Thi công film dán nội thất cần đánh giá thêm góc bo, mép nối và khả năng bám trên bề mặt thực tế; phần tháo gỡ hoặc xử lý nền được làm rõ trong báo giá.",
+      "href": "/dich-vu/film-noi-that",
+      "linkLabel": "Xem dịch vụ film nội thất"
+    },
+    {
+      "title": "Chọn phim cách nhiệt theo đúng kính và mã phim",
+      "text": "Khi dán phim cách nhiệt nhà kính, cần trao đổi loại kính, hướng nắng và mức giữ sáng mong muốn. Đối chiếu thông số của đúng mã phim; không dùng một tỷ lệ cản nhiệt chung để cam kết mức giảm nhiệt độ hay điện năng cho mọi công trình.",
+      "href": "/dich-vu/phim-cach-nhiet",
+      "linkLabel": "Tư vấn phim cách nhiệt"
+    },
+    {
+      "title": "Đối chiếu bản duyệt khi nghiệm thu",
+      "text": "Kiểm tra vị trí, chiều vân, điểm nối, mép và bố cục chữ hoặc logo theo phương án đã thống nhất. Cách vệ sinh, thời gian ổn định của keo và phạm vi hỗ trợ sau thi công cần được hướng dẫn theo vật liệu đã sử dụng.",
+      "href": "/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau",
+      "linkLabel": "Trao đổi hiện trạng công trình"
+    }
+  ]
+}
