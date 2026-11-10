@@ -845,7 +845,7 @@
     "images": [
       "/images/uploads/decal-kinh-3d-van-song-mau-tra.avif",
       "https://idecal.vn/wp-content/uploads/2025/04/H35f5c5b5b80f4a3b8023a1d4a54aa4807.webp",
-      "https://idecal.vn/wp-content/uploads/2025/04/Decal-dan-kinh-song-3D-mau-tra-song-to-trong-suot.webp"
+      "/images/uploads/hinh-anh-thi-cong-decal-kinh-3d-mau-tra-thuc-te-1-1dd47bfb-f9d0-487b-a11b-f1e9e8016429.jpg"
     ],
     "attributes": {},
     "uses": [
@@ -853,6 +853,23 @@
       "Showroom",
       "Spa",
       "Vách ngăn nhà ở"
+    ],
+    "imageMetadata": [
+      {
+        "src": "/images/uploads/decal-kinh-3d-van-song-mau-tra.avif",
+        "alt": "Decal dán kính màu trà họa tiết sóng",
+        "title": "Decal dán kính màu trà họa tiết sóng | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/04/H35f5c5b5b80f4a3b8023a1d4a54aa4807.webp",
+        "alt": "Decal dán kính màu trà họa tiết sóng",
+        "title": "Decal dán kính màu trà họa tiết sóng | iDecal"
+      },
+      {
+        "src": "/images/uploads/hinh-anh-thi-cong-decal-kinh-3d-mau-tra-thuc-te-1-1dd47bfb-f9d0-487b-a11b-f1e9e8016429.jpg",
+        "alt": "Decal dán kính màu trà họa tiết sóng",
+        "title": "Decal dán kính màu trà họa tiết sóng | iDecal"
+      }
     ]
   },
   {
