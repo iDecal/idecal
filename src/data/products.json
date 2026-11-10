@@ -1173,10 +1173,10 @@
   },
   {
     "slug": "phim-ppf-tph",
-    "name": "Phim PPF TPH",
-    "category": "phim-cach-nhiet",
+    "name": "Phim PPF bảo vệ bề mặt nội thất",
+    "category": "phim-bao-ve",
     "subcategory": "Phim bảo vệ",
-    "brand": "Icetouch",
+    "brand": "icetouch",
     "price": null,
     "code": "IDC-041",
     "description": "Phim PPF TPH 7.5mil là dòng phim bảo vệ bề mặt cao cấp, có độ dày 7.5 mil, giúp chống trầy xước, kháng hóa chất và tia UV vượt trội. Thích hợp cho xe hơi, nội thất, thiết bị điện tử và bề mặt nhạy cảm khác.",
@@ -1206,6 +1206,18 @@
       "Nhà ở",
       "Cửa hàng",
       "Showroom"
+    ],
+    "imageMetadata": [
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/05/PPF-TPH.avif",
+        "alt": "Phim PPF TPH",
+        "title": "Phim PPF TPH | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/05/Phim-TPF-bao-ve-son-o-to.jpg",
+        "alt": "Phim PPF TPH",
+        "title": "Phim PPF TPH | iDecal"
+      }
     ]
   },
   {
