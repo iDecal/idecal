@@ -42,3 +42,13 @@ Popup giữ nguyên URL, sản phẩm khác và metadata ngoài biểu mẫu; ki
 - Chạy Pages local: cùng các biến logging ở trên, wrangler pages dev dist --port 8788 --ip 127.0.0.1 --compatibility-date=2026-11-10. Không có OAuth config thì /api/admin/session trả configured:false và nút đăng nhập bị vô hiệu hóa, không giả lập thành công.
 
 Kiểm thử GitHub giả lập không chứng minh OAuth App, secret runtime, tổ chức và quyền tài khoản thật đã được thiết lập. Cần hoàn tất cấu hình trên và kiểm thử đăng nhập thật sau khi triển khai.
+
+### Kiểm thử tương thích Cloudflare runtime
+
+Cloudflare chỉ hỗ trợ redirect manual/follow; không dùng redirect error (Node có hỗ trợ nhưng workerd sẽ ném TypeError trước khi gửi request). Các request GitHub dùng manual và kiểm tra HTTP status, không tự chuyển tiếp token/secret sang đích khác.
+
+Bài kiểm tra runtime dùng GitHub giả lập, nhưng tạo Request và cookie AES-GCM bằng workerd thật. Chạy hai lệnh ở hai terminal:
+- XDG_CONFIG_HOME=/workspace/.config WRANGLER_LOG_PATH=/tmp/idecal-auth-runtime.log WRANGLER_SEND_METRICS=false npm exec --yes --cache /workspace/.npm --package wrangler@4.160.0 -- wrangler dev scripts/fixtures/admin-auth-worker.mjs --port 8791 --ip 127.0.0.1 --compatibility-date=2026-04-17
+- python3 scripts/test-admin-runtime.py
+
+Fixture chỉ dùng để kiểm thử tại máy phát triển, không triển khai fixture lên Cloudflare.

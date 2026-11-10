@@ -38,8 +38,9 @@ const redirect = (url, cookies = []) => {
 };
 const clearState = () => cookie(STATE, '', 0);
 const clearSession = () => cookie(SESSION, '', 0);
+// Workers supports manual/follow only. Never forward credentials across redirects.
 async function github(token, route, init = {}) {
-  return fetch('https://api.github.com' + route, { ...init, redirect: 'error', headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token, 'User-Agent': 'iDecal-Admin', 'X-GitHub-Api-Version': '2022-11-28', ...(init.body ? { 'Content-Type': 'application/json' } : {}) } });
+  return fetch('https://api.github.com' + route, { ...init, redirect: 'manual', headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token, 'User-Agent': 'iDecal-Admin', 'X-GitHub-Api-Version': '2022-11-28', ...(init.body ? { 'Content-Type': 'application/json' } : {}) } });
 }
 async function profile(token) {
   const [a, b] = await Promise.all([github(token, '/user'), github(token, REPO)]);
@@ -76,7 +77,7 @@ export async function onRequest({ request, env }) {
       const state = await unseal(env, readCookie(request, STATE) ?? '', 'oauth');
       if (!state || state.state !== url.searchParams.get('state') || !url.searchParams.get('code') || url.searchParams.has('error')) return redirect('/admin/?error=authentication', [clearState()]);
       stage = 'oauth_exchange';
-      const exchange = await fetch('https://github.com/login/oauth/access_token', { method: 'POST', redirect: 'error', headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'iDecal-Admin' }, body: new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, client_secret: env.GITHUB_CLIENT_SECRET, code: url.searchParams.get('code'), redirect_uri: url.origin + '/api/admin/callback', code_verifier: state.verifier }) });
+      const exchange = await fetch('https://github.com/login/oauth/access_token', { method: 'POST', redirect: 'manual', headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'iDecal-Admin' }, body: new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, client_secret: env.GITHUB_CLIENT_SECRET, code: url.searchParams.get('code'), redirect_uri: url.origin + '/api/admin/callback', code_verifier: state.verifier }) });
       const result = exchange.ok ? await exchange.json() : {};
       if (typeof result.access_token !== 'string') {
         const failures = { incorrect_client_credentials: 'oauth_credentials', bad_verification_code: 'oauth_code', redirect_uri_mismatch: 'oauth_callback' };

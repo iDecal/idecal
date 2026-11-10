@@ -12,6 +12,7 @@ test('OAuth session, permissions, CSRF, proxy restrictions and logout', async ()
   let exchangeCount = 0;
   let writeCount = 0;
   globalThis.fetch = async (url, init = {}) => {
+    assert.equal(init.redirect, 'manual', 'Cloudflare does not support redirect:error');
     if (url === 'https://github.com/login/oauth/access_token') {
       exchangeCount++;
       assert.ok(init.body.get('code_verifier'));
