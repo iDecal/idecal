@@ -18,4 +18,4 @@
 
 - Không hiển thị thông tin tồn kho, hết hàng, ngừng mẫu hoặc yêu cầu xác nhận tình trạng cung ứng trên trang sản phẩm; giữ các ghi chú quản lý hàng ở tài liệu nội bộ.
 
-- Trang `/decal-dan-kinh-van-phong/` dùng nội dung chủ website gửi từ HTML, lưu tại `src/data/office-glass-original.json`, bố cục `OfficeGlassLanding`. Giữ tiêu đề, 69 khối nội dung, 8 ảnh nguồn, bảng giá và 7 FAQ; chỉ đổi liên kết tới trang hiện có. Kiểm tra bằng `node scripts/check-office-glass.mjs`.
+- Trang `/decal-dan-kinh-van-phong/` dùng nội dung chủ website gửi từ HTML, lưu tại `src/data/office-glass-original.json`, bố cục `OfficeGlassLanding`. Giữ tiêu đề, 8 ảnh nguồn, bảng giá và 7 FAQ. Bản nguồn 69 khối được lưu nguyên vẹn; người dùng đã cho phép rút gọn 5 nhóm giải pháp trong `office-glass-presentation.json`, bỏ emoji bàn tay và chuyển link dài thành nút. Các phần còn lại giữ nội dung gốc. Kiểm tra bằng `node scripts/check-office-glass.mjs`.

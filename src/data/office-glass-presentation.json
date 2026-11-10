@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Decal mờ dán kính văn phòng",
+    "intro": "Tạo riêng tư cho phòng họp và vách ngăn, đồng thời giữ ánh sáng tự nhiên.",
+    "points": [
+      {"label": "Bề mặt", "text": "Sần nhẹ, hiệu ứng phun cát tinh tế."},
+      {"label": "Thiết kế", "text": "Dán phủ toàn phần hoặc phối đường kẻ hiện đại."}
+    ],
+    "href": "/decal-mo-dan-kinh/",
+    "action": "Xem Decal mờ"
+  },
+  {
+    "title": "Decal cắt chữ & logo",
+    "intro": "Đưa logo và bộ nhận diện doanh nghiệp lên cửa, vách kính văn phòng.",
+    "points": [
+      {"label": "Gia công", "text": "Cắt bằng máy Mimaki/Roland, đường nét sắc sảo."},
+      {"label": "Thiết kế", "text": "Cắt âm bản trên nền mờ hoặc phối màu Pantone/CMYK."},
+      {"label": "Linh hoạt", "text": "Dễ thay đổi nội dung khi cần."}
+    ],
+    "href": "/dich-vu/cat-decal/",
+    "action": "Dịch vụ cắt logo"
+  },
+  {
+    "title": "Decal chống chói, cách nhiệt",
+    "intro": "Giải pháp cho văn phòng có mặt kính hướng nắng, cần giảm chói và kiểm soát nhiệt.",
+    "points": [
+      {"label": "Vật liệu", "text": "Phim Nano Ceramic, chọn theo loại kính và hướng nắng."},
+      {"label": "Ứng dụng", "text": "Giảm lóa khi dùng máy tính, hỗ trợ bảo vệ nội thất."},
+      {"label": "Thông số", "text": "Hiệu quả chống UV và giảm nhiệt đối chiếu theo mẫu phim."}
+    ],
+    "href": "/phim-cach-nhiet-nha-kinh/",
+    "action": "Xem phim cách nhiệt"
+  },
+  {
+    "title": "Decal in quảng cáo",
+    "intro": "Biến mặt kính thành không gian giới thiệu sản phẩm, dịch vụ và thông điệp thương hiệu.",
+    "points": [
+      {"label": "Vật liệu", "text": "Decal lưới, decal trong in UV hoặc decal sữa."},
+      {"label": "Ứng dụng", "text": "Poster, danh mục dịch vụ và slogan cho văn phòng."},
+      {"label": "Hoàn thiện", "text": "Chọn mực in và vật liệu theo ánh sáng tại vị trí dán."}
+    ],
+    "href": "/dich-vu/in-decal/",
+    "action": "Dịch vụ in decal"
+  },
+  {
+    "title": "Decal trang trí & hiệu ứng 3D",
+    "intro": "Tạo điểm nhấn cho khu vực sáng tạo, pantry và không gian thư giãn.",
+    "points": [
+      {"label": "Mẫu mã", "text": "Hoa văn hiện đại, vân sóng 3D; kết hợp film vân gỗ, vân đá."},
+      {"label": "Ứng dụng", "text": "Làm mới diện mạo văn phòng theo phong cách nội thất."}
+    ],
+    "href": "/blog/99-mau-decal-dan-kinh-van-phong-dep-2026/",
+    "action": "Xem mẫu trang trí"
+  }
+]

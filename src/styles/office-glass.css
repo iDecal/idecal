@@ -120,3 +120,17 @@
  .office-faq summary { font-size:14px; }
  .office-jump-links { gap:22px; }
 }
+
+/* Clear hanging alignment for checklists; short action links remain easy to tap. */
+.office-solution-copy { display:flex; flex:1; flex-direction:column; align-items:flex-start; }
+.office-solution-copy h3 { margin-bottom:10px; }
+.office-solution-copy>p { margin:0 0 14px; }
+.office-solution-checks,.office-original-copy :is(ul,ol) { list-style:none; padding:0; margin:0 0 18px; }
+.office-solution-checks li,.office-original-copy :is(ul,ol)>li { position:relative; padding-left:24px; margin-bottom:10px; }
+.office-solution-checks li::before,.office-original-copy :is(ul,ol)>li::before { content:''; position:absolute; left:1px; top:.5em; width:13px; height:8px; border-left:1.7px solid #168ac0; border-bottom:1.7px solid #168ac0; transform:rotate(-45deg); }
+.office-solution-checks strong { color:#315574; font-weight:600; }
+.office-solution-button { display:inline-flex; align-items:center; justify-content:space-between; gap:24px; min-height:44px; margin-top:auto; padding:10px 16px; border:1px solid #d9e5f0; border-radius:8px; background:#f6f9fd; font-size:14px; font-weight:500; color:#0d6b96; transition:background .15s,border-color .15s; }
+.office-solution-button:hover { background:#eaf3fc; border-color:#a9c9e2; }
+.office-solution-button>span { flex-shrink:0; }
+@media(max-width:767px) { .office-solution-checks li { font-size:14px; } .office-solution-button { width:100%; } }
+@media(prefers-reduced-motion:reduce) { .office-solution-button { transition:none; } }
