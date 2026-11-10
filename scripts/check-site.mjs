@@ -148,6 +148,13 @@ for (const file of files) {
       check(value !== '#', 'placeholder anchor');
       const url = new URL(value, `https://idecal.vn${route}`);
       const pathname = decodeURIComponent(url.pathname).replace(/^\/+/, '');
+      if (pathname === 'api/admin/auth') {
+        check(await exists(path.resolve('functions/api/admin/[[path]].js')), 'missing admin auth handler');
+        const routes = JSON.parse(await readFile(path.join(root, '_routes.json'), 'utf8'));
+        check(routes.include.includes('/api/admin/*'), 'admin auth route not registered');
+        references++;
+        continue;
+      }
       const target = path.join(root, pathname);
       const resolved = await exists(target) ? target : path.join(target, 'index.html');
       check(await exists(resolved), `missing local reference: ${value}`);

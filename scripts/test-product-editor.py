@@ -1,12 +1,18 @@
 from playwright.sync_api import sync_playwright
 from pathlib import Path
 import json,base64,copy
+from urllib.parse import urlparse,parse_qs
 original=json.loads((Path(__file__).resolve().parents[1] / 'src/data/products.json').read_text());slug='decal-mo-o-vuong';idx=next(i for i,x in enumerate(original) if x['slug']==slug)
-state={'products':copy.deepcopy(original),'sha':'first','writes':[],'allow':True,'race':False,'reject':False}
+state={'products':copy.deepcopy(original),'sha':'first','writes':[],'allow':True,'race':False,'reject':False,'auth':False}
 with sync_playwright() as p:
  b=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox']);page=b.new_page(viewport={'width':1440,'height':1000})
  def api(route):
   req=route.request;url=req.url
+  if '/api/admin/session' in url:
+   route.fulfill(json={'authenticated':state['auth'] and state['allow'],'configured':True,'user':{'login':'editor','name':'Editor'}});return
+  if '/api/admin/logout' in url:
+   state['auth']=False;route.fulfill(status=204);return
+  url=parse_qs(urlparse(url).query)['path'][0]
   if '/contents/' in url:
    if req.method=='PUT':
     payload=req.post_data_json
@@ -22,11 +28,13 @@ with sync_playwright() as p:
     route.fulfill(json={'sha':state['sha'],'encoding':'base64','content':base64.b64encode(json.dumps(data,ensure_ascii=False).encode()).decode()})
   elif url.endswith('/user'):route.fulfill(json={'login':'test-editor'})
   else:route.fulfill(json={'permissions':{'push':state['allow']}})
- page.route('https://api.github.com/**',api)
+ page.route('**/api/admin/**',api)
  page.goto('http://127.0.0.1:4321/san-pham/'+slug,wait_until='networkidle')
  assert page.locator('[data-editor-open]').is_hidden()
- page.locator('[data-editor-login]').click();page.locator('[name=token]').fill('mock-test-token')
- page.locator('[data-editor-auth] button[type=submit]').click();page.locator('[data-editor-form]').wait_for(state='visible')
+ assert page.locator('[data-editor-login]').get_attribute('href')=='/admin/'
+ state['auth']=True
+ page.reload(wait_until='networkidle')
+ page.locator('[data-editor-open]').wait_for(state='visible');page.locator('[data-editor-open]').click();page.locator('[data-editor-form]').wait_for(state='visible')
  page.locator('[name=name]').fill('Decal ô vuông – chỉnh sửa thử tiếng Việt')
  page.locator('[name=price]').fill('89000')
  page.locator('[data-editor-form] button[type=submit]').click()
@@ -55,11 +63,20 @@ with sync_playwright() as p:
  # Mobile: dialog scroll and width; Escape dismisses; logout clears session.
  page.set_viewport_size({'width':390,'height':844});assert page.evaluate('document.documentElement.scrollWidth <= innerWidth')
  page.keyboard.press('Escape');page.locator('[data-editor-logout]').click()
- assert page.evaluate("sessionStorage.getItem('idecal-product-editor-session')") is None
- assert page.locator('[data-editor-open]').is_hidden()
+ assert state['auth']==False
+ page.locator('[data-editor-open]').wait_for(state='hidden')
  state['allow']=False
- page.locator('[data-editor-login]').click();page.locator('[name=token]').fill('mock-read-only-token');page.locator('[data-editor-auth] button[type=submit]').click()
- page.wait_for_function("document.querySelector('[data-editor-status]').textContent.includes('không có quyền sửa')")
- assert page.locator('[data-editor-form]').is_hidden();assert len(state['writes'])==1
+ state['auth']=True
+ page.reload(wait_until='networkidle')
+ assert page.locator('[data-editor-open]').is_hidden();assert len(state['writes'])==1
+ # A CMS sign-in in another tab becomes visible on focus; sign-out hides the editor.
+ state['allow']=True
+ state['auth']=True
+ page.evaluate("window.dispatchEvent(new Event('focus'))")
+ page.locator('[data-editor-open]').wait_for(state='visible')
+ state['auth']=False
+ page.evaluate("window.dispatchEvent(new Event('focus'))")
+ page.locator('[data-editor-open]').wait_for(state='hidden')
+ assert page.locator('[data-editor-login]').is_visible()
  b.close()
 print('Passed: verified login, write-permission denial, UTF-8 save, sibling/metadata preservation, concurrent-edit protection, unsafe-image rejection, GitHub conflict, mobile dialog and logout. GitHub calls mocked; no real repository writes.')

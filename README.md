@@ -40,12 +40,12 @@ Hệ màu dựa trên hai bản thiết kế HTML cũ: xem [bảng màu và các
 
 ## Quản lý nội dung
 
-Mở `/admin/` trên bản web hoặc `/admin/index.html` khi chạy máy chủ phát triển. Hướng dẫn đăng nhập tại `/quan-ly-noi-dung/`; cấu hình, quyền GitHub và phạm vi biểu mẫu xem [quản lý nội dung CMS](docs/content-management.md). Không đặt token trong repository hoặc cấu hình build.
+Mở `/admin/` trên bản web hoặc `/admin/index.html` khi chạy máy chủ phát triển. Hướng dẫn đăng nhập tại `/quan-ly-noi-dung/`; cấu hình, quyền GitHub và phạm vi biểu mẫu xem [quản lý nội dung CMS](docs/content-management.md). Không đặt token trong repository hoặc cấu hình build. Trang /admin/ dùng giao diện đăng nhập iDecal riêng; cấu hình OAuth runtime và callback xem [hướng dẫn GitHub admin](docs/github-admin.md). Sveltia CMS giữ ở /admin/cms.html.
 
 ## Triển khai Cloudflare Pages
 
 Build command: `npm run build`. Output directory: `dist`.
 
-Toàn bộ trang được tạo tĩnh; không cần Cloudflare adapter, Worker, KV hoặc Wrangler. Đặt phiên bản Node đáp ứng yêu cầu ở trên trong môi trường build. Kiểm tra bản build cục bộ bằng `npm run preview`. Việc triển khai production chưa được thực hiện trong đợt rà soát này.
+Các trang nội dung được tạo tĩnh; đăng nhập quản trị GitHub OAuth dùng Cloudflare Pages Functions trong thư mục functions/. Không cần Astro adapter hoặc KV. Đặt phiên bản Node đáp ứng yêu cầu ở trên trong môi trường build. Kiểm tra bản build cục bộ bằng `npm run preview`. Việc triển khai production chưa được thực hiện trong đợt rà soát này.
 
 Tailwind chạy qua PostCSS. Override `postcss-selector-parser` trong `package.json` giữ dependency gián tiếp của typography ở bản đã vá bảo mật.

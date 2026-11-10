@@ -1,13 +1,13 @@
 # Quản lý nội dung bằng Sveltia CMS
 
-Trang quản trị: `https://idecal.pages.dev/admin/`.
+Trang đăng nhập riêng: https://idecal.pages.dev/admin/. Trang Sveltia CMS phụ: /admin/cms.html. Xem [GitHub OAuth](github-admin.md) để cấu hình.
 Hướng dẫn cho chủ website: `/quan-ly-noi-dung/`.
 
 ## Đăng nhập
 
 Backend GitHub trỏ đến `iDecal/idecal`, nhánh `main`. Người quản lý cần có quyền ghi repository. Đăng nhập bằng fine-grained personal access token: chọn chủ sở hữu iDecal, chỉ repository idecal, quyền Contents: Read and write; Metadata: Read được GitHub thêm tự động. Nhập token trực tiếp trong CMS, không ghi vào mã nguồn, cấu hình, tài liệu, chat hoặc biến môi trường build. Nếu tổ chức yêu cầu duyệt token, chủ tổ chức cần duyệt trước. Token được Sveltia lưu trong localStorage của trình duyệt; đăng xuất khi dùng máy chung.
 
-Chưa cấu hình OAuth App hoặc máy chủ OAuth. `backend.auth_methods: [token]` chỉ hiển thị phương thức đăng nhập đang hỗ trợ, không đưa ra nút GitHub OAuth chưa hoạt động. Không có mật khẩu quản trị dùng chung hay endpoint ghi công khai.
+Phần đăng nhập token của Sveltia độc lập với trang OAuth iDecal mới. `backend.auth_methods: [token]` chỉ hiển thị phương thức đăng nhập đang hỗ trợ, không đưa ra nút GitHub OAuth chưa hoạt động. Không có mật khẩu quản trị dùng chung hay endpoint ghi công khai.
 
 ## Nội dung quản lý
 
@@ -28,10 +28,10 @@ Dùng workflow trực tiếp: lưu/xuất bản trong CMS sẽ tạo commit trê
 
 ## Cấu hình và kiểm tra
 
-- `public/admin/index.html`: trang tĩnh tách khỏi Astro HMR theo hướng dẫn chính thức; dùng Sveltia `0.261.0`, URL cố định kèm SRI SHA-384 và CORS. JavaScript được tải từ unpkg; trình duyệt cần truy cập được unpkg và GitHub API.
+- `public/admin/cms.html`: trang tĩnh tách khỏi Astro HMR theo hướng dẫn chính thức; dùng Sveltia `0.261.0`, URL cố định kèm SRI SHA-384 và CORS. JavaScript được tải từ unpkg; trình duyệt cần truy cập được unpkg và GitHub API.
 - `public/admin/config.json`: biểu mẫu CMS khớp với dữ liệu và schema Astro. Cấu hình công khai chỉ chứa tên repository, nhánh, đường dẫn và định nghĩa trường, không chứa thông tin đăng nhập.
 - `public/_headers`: admin noindex/nofollow, nosniff và no-cache. Không đưa admin/hướng dẫn vào sitemap.
-- Trên máy phát triển mở `/admin/index.html`; bản build hỗ trợ `/admin/`.
+- Trang /admin/ là giao diện OAuth riêng; Sveltia ở /admin/cms.html.
 - Chạy `npm run check`, `npm test` và `node scripts/check-cms.mjs`.
 - Cấu hình được đối chiếu JSON schema chính thức cùng phiên bản. Kiểm tra trình duyệt xác minh tải CMS, hộp thoại token, đọc đủ bài viết/công trình và mở–sửa–lưu JSON bằng File System Access API trên bản dữ liệu tách riêng trong bộ nhớ trình duyệt. Nội dung thật không bị ghi bởi bài kiểm tra. Các request tài nguyên ngoài trong bài kiểm tra được chuyển qua curl với CA/proxy được cấp sẵn, không tắt TLS verification. Chưa đăng nhập hoặc ghi thử bằng tài khoản của chủ website.
 
@@ -39,12 +39,6 @@ Tài liệu chính thức: https://sveltiacms.app/en/docs/frameworks/astro và h
 
 ## Sửa sản phẩm ngay trên website
 
-Trên trang chi tiết sản phẩm, chọn **Đăng nhập GitHub để sửa** dưới phần thông tin. Đăng nhập bằng fine-grained token có quyền ghi như hướng dẫn ở trên. Popup xác minh tài khoản và quyền `push` của repository trước khi hiện nút **Sửa sản phẩm**. Đây là đăng nhập bằng token; không phải OAuth một chạm. Phiên popup tách với phiên Sveltia CMS; không tự đọc hoặc sao chép token của CMS.
+Mở /admin/ để đăng nhập GitHub bằng OAuth, sau đó chọn sản phẩm và bấm **Chỉnh sửa sản phẩm**. Trang riêng không tải Sveltia. Phiên dùng cookie HttpOnly; token không được đưa vào JavaScript/localStorage. Luồng này cần OAuth App và ba biến runtime trong Cloudflare Pages, xem [hướng dẫn GitHub OAuth](github-admin.md). Phiên Sveltia ở /admin/cms.html vẫn độc lập.
 
-Phiên popup được lưu trong `sessionStorage` của tab, gửi token trực tiếp đến `https://api.github.com` bằng Authorization header. Không ghi token vào repository, URL hoặc cấu hình build. Chọn **Đăng xuất** để xóa phiên; đóng tab cũng kết thúc vùng lưu trữ phiên của tab đó. Popup không cần máy chủ ghi công khai.
-
-Các trường có thể sửa: tên, mã mẫu, thương hiệu, giá, danh mục, mô tả ngắn, các đoạn mô tả và đường dẫn ảnh. Giá trống tương ứng liên hệ báo giá. Ảnh dùng đường dẫn từ gốc website hoặc URL HTTPS; tải ảnh mới qua trang quản trị. Slug/URL không được sửa. Các trường khác của sản phẩm được giữ nguyên, kể cả thông số và thư viện ảnh thi công.
-
-Khi mở popup, dữ liệu được đọc mới từ `main`. Trước khi lưu, popup đọc lại tệp: nếu sản phẩm đang sửa đã thay đổi, việc lưu bị chặn để tránh ghi đè; thay đổi của sản phẩm khác vẫn được giữ. GitHub kiểm tra SHA của toàn bộ tệp khi ghi để phát hiện xung đột tiếp theo. Lỗi lưu không xóa các giá trị vừa nhập. Lưu thành công tạo commit lên `main`; trang đang xem chỉ cập nhật sau khi triển khai hoàn tất.
-
-Kiểm tra trình duyệt: với máy chủ phát triển đang chạy tại cổng 4321, chạy `python3 scripts/test-product-editor.py` (cần Python Playwright và `/usr/bin/chromium`). Bài kiểm tra chặn toàn bộ request GitHub bằng dữ liệu giả, không đăng nhập hay ghi repository thật. Bao gồm quyền ghi, lưu tiếng Việt, bảo toàn sản phẩm khác/metadata, sửa đồng thời, URL ảnh không hợp lệ, xung đột GitHub, popup mobile và đăng xuất. Chạy thêm `npm run check` và `npm test` cho toàn website.
+Có thể sửa tên, mã mẫu, thương hiệu, giá, danh mục, mô tả và đường dẫn ảnh; URL và các trường khác được giữ nguyên. Popup đọc bản mới nhất, kiểm tra chỉnh sửa đồng thời và SHA trước khi lưu vào main. Kiểm thử bằng python3 scripts/test-product-editor.py với API giả lập; npm test cũng kiểm tra các endpoint OAuth server.

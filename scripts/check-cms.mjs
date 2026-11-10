@@ -73,7 +73,11 @@ for (const collection of config.collections) {
     }
   }
 }
-const admin = await readFile('dist/admin/index.html', 'utf8');
+const login = await readFile('dist/admin/index.html', 'utf8');
+assert.match(login, /Đăng nhập bằng GitHub/);
+assert.doesNotMatch(login, /sveltia-cms\.js/);
+assert.match(login, /noindex, nofollow/);
+const admin = await readFile('dist/admin/cms.html', 'utf8');
 assert.match(admin, /name="robots" content="noindex, nofollow"/);
 assert.match(admin, /@sveltia\/cms@0\.261\.0\/dist\/sveltia-cms\.js/);
 assert.match(admin, /integrity="sha384-[A-Za-z0-9+/=]+"/);

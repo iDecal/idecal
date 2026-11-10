@@ -1,0 +1,108 @@
+const REPO = '/repos/iDecal/idecal';
+const FILE = REPO + '/contents/src/data/products.json';
+const SESSION = '__Host-idecal-admin';
+const STATE = '__Host-idecal-oauth';
+const ttl = 28800;
+const encoder = new TextEncoder();
+const b64 = bytes => btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
+const unb64 = value => Uint8Array.from(atob(value.replaceAll('-', '+').replaceAll('_', '/')), c => c.charCodeAt(0));
+const ready = env => Boolean(env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET && env.ADMIN_SESSION_SECRET?.length >= 32);
+const json = (value, status = 200) => new Response(JSON.stringify(value), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' } });
+const cookie = (name, value, age) => name + '=' + value + '; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=' + age;
+const readCookie = (request, name) => (request.headers.get('Cookie') ?? '').split(';').map(s => s.trim()).find(s => s.startsWith(name + '='))?.slice(name.length + 1);
+async function key(env) {
+  const digest = await crypto.subtle.digest('SHA-256', encoder.encode(env.ADMIN_SESSION_SECRET));
+  return crypto.subtle.importKey('raw', digest, 'AES-GCM', false, ['encrypt', 'decrypt']);
+}
+async function seal(env, value, purpose) {
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const payload = await crypto.subtle.encrypt({ name: 'AES-GCM', iv, additionalData: encoder.encode(purpose) }, await key(env), encoder.encode(JSON.stringify(value)));
+  return b64(iv) + '.' + b64(new Uint8Array(payload));
+}
+async function unseal(env, value, purpose) {
+  try {
+    const [iv, data] = value.split('.');
+    const result = JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: unb64(iv), additionalData: encoder.encode(purpose) }, await key(env), unb64(data))));
+    return Number.isFinite(result.expires) && result.expires > Date.now() ? result : null;
+  } catch { return null; }
+}
+const redirect = (url, cookies = []) => {
+  const headers = new Headers({ Location: url, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer' });
+  for (const value of cookies) headers.append('Set-Cookie', value);
+  return new Response(null, { status: 302, headers });
+};
+const clearState = () => cookie(STATE, '', 0);
+const clearSession = () => cookie(SESSION, '', 0);
+async function github(token, route, init = {}) {
+  return fetch('https://api.github.com' + route, { ...init, redirect: 'error', headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token, 'User-Agent': 'iDecal-Admin', 'X-GitHub-Api-Version': '2022-11-28', ...(init.body ? { 'Content-Type': 'application/json' } : {}) } });
+}
+async function profile(token) {
+  const [a, b] = await Promise.all([github(token, '/user'), github(token, REPO)]);
+  if (!a.ok || !b.ok) return null;
+  const user = await a.json();
+  const repo = await b.json();
+  return repo.permissions?.push === true ? { login: user.login, name: user.name || user.login } : null;
+}
+export async function onRequest({ request, env }) {
+  const url = new URL(request.url);
+  const route = url.pathname.replace(/^\/api\/admin\/?/, '').replace(/\/$/, '');
+  const method = request.method;
+  if (method !== 'GET' && request.headers.get('Origin') !== url.origin) return json({ error: 'origin' }, 403);
+  try {
+    if (route === 'logout' && method === 'POST') return new Response(null, { status: 204, headers: { 'Set-Cookie': clearSession(), 'Cache-Control': 'no-store' } });
+    if (!ready(env)) {
+      if (route === 'session') return json({ authenticated: false, configured: false });
+      if (route === 'auth' || route === 'callback') return redirect('/admin/?error=configuration');
+      return json({ error: 'configuration' }, 503);
+    }
+    if (route === 'auth' && method === 'GET') {
+      const state = b64(crypto.getRandomValues(new Uint8Array(32)));
+      const verifier = b64(crypto.getRandomValues(new Uint8Array(32)));
+      const challenge = b64(new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(verifier))));
+      const target = new URL('https://github.com/login/oauth/authorize');
+      target.search = new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, redirect_uri: url.origin + '/api/admin/callback', scope: 'repo', state, code_challenge: challenge, code_challenge_method: 'S256' }).toString();
+      return redirect(target.href, [cookie(STATE, await seal(env, { state, verifier, expires: Date.now() + 600000 }, 'oauth'), 600)]);
+    }
+    if (route === 'callback' && method === 'GET') {
+      const state = await unseal(env, readCookie(request, STATE) ?? '', 'oauth');
+      if (!state || state.state !== url.searchParams.get('state') || !url.searchParams.get('code') || url.searchParams.has('error')) return redirect('/admin/?error=authentication', [clearState()]);
+      const exchange = await fetch('https://github.com/login/oauth/access_token', { method: 'POST', redirect: 'error', headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ client_id: env.GITHUB_CLIENT_ID, client_secret: env.GITHUB_CLIENT_SECRET, code: url.searchParams.get('code'), redirect_uri: url.origin + '/api/admin/callback', code_verifier: state.verifier }) });
+      const result = exchange.ok ? await exchange.json() : {};
+      if (typeof result.access_token !== 'string') return redirect('/admin/?error=authentication', [clearState()]);
+      const user = await profile(result.access_token);
+      if (!user) return redirect('/admin/?error=permission', [clearState()]);
+      const session = await seal(env, { token: result.access_token, user, expires: Date.now() + ttl * 1000 }, 'session');
+      if (session.length > 3800) return redirect('/admin/?error=authentication', [clearState()]);
+      return redirect('/admin/', [clearState(), cookie(SESSION, session, ttl)]);
+    }
+    const session = await unseal(env, readCookie(request, SESSION) ?? '', 'session');
+    if (route === 'session' && method === 'GET') {
+      if (!session) return json({ authenticated: false, configured: true });
+      const user = await profile(session.token);
+      return user ? json({ authenticated: true, configured: true, user }) : new Response(JSON.stringify({ authenticated: false, configured: true }), { headers: { 'Content-Type': 'application/json', 'Set-Cookie': clearSession(), 'Cache-Control': 'no-store' } });
+    }
+    if (!session) return json({ error: 'authentication' }, 401);
+    if (route !== 'github') return json({ error: 'not_found' }, 404);
+    const destination = url.searchParams.get('path');
+    const getAllowed = method === 'GET' && ['/user', REPO, FILE + '?ref=main'].includes(destination);
+    const putAllowed = method === 'PUT' && destination === FILE;
+    if (!getAllowed && !putAllowed) return json({ error: 'forbidden' }, 403);
+    if (!(await profile(session.token))) return json({ error: 'permission' }, 403);
+    let body;
+    if (putAllowed) {
+      if (Number(request.headers.get('Content-Length') || 0) > 2000000) return json({ error: 'size' }, 413);
+      const raw = await request.text();
+      if (raw.length > 2000000) return json({ error: 'size' }, 413);
+      const payload = JSON.parse(raw);
+      if (payload.branch !== 'main' || typeof payload.sha !== 'string' || typeof payload.content !== 'string' || typeof payload.message !== 'string') return json({ error: 'payload' }, 400);
+      body = JSON.stringify({ branch: 'main', sha: payload.sha, content: payload.content, message: payload.message.slice(0, 250) });
+    }
+    const response = await github(session.token, destination, { method, ...(body ? { body } : {}) });
+    if (!response.ok) return json({ error: 'github' }, response.status);
+    const data = await response.json();
+    if (putAllowed) return json({ commit: { sha: data.commit?.sha } });
+    if (destination === FILE + '?ref=main') return json({ sha: data.sha, encoding: data.encoding, content: data.content });
+    if (destination === '/user') return json({ login: data.login });
+    return json({ permissions: { push: data.permissions?.push === true } });
+  } catch { return json({ error: 'service_unavailable' }, 502); }
+}
