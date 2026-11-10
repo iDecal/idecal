@@ -5,6 +5,8 @@ import PrintingServiceContent from './PrintingServiceContent.astro';
 import DesignServiceContent from './DesignServiceContent.astro';
 import InstallationServiceContent from './InstallationServiceContent.astro';
 import InstallationEvidence from './InstallationEvidence.astro';
+import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
+import { uploadedServicePhotos } from '../data/installation-photo-links';
 import installationContent from '../data/installation-service.json';
 import designContent from '../data/design-service.json';
 import { serviceLandingContent } from '../data/service-landing-content';
@@ -31,6 +33,7 @@ const faqs = [...content.faqs, ...extraFaqs];
   {service.slug === 'thiet-ke' && <DesignServiceContent />}
   {service.slug === 'thi-cong-decal' && <><InstallationServiceContent /><InstallationEvidence /></>}
   {hasDetails && <div class="lp-details"><slot name="details" /></div>}
+  {uploadedServicePhotos[service.slug] && <div class="container"><InstallationPhotoGallery numbers={uploadedServicePhotos[service.slug]} heading={service.slug==='cat-decal'?'Decal chữ và logo tại công trình':service.slug==='thiet-ke'?'Ứng dụng thiết kế tại công trình':'Hình ảnh hoàn thiện Decal tại công trình'} /></div>}
   {hasDetails ? <slot name="faq" /> : <section id="lp-cau-hoi" class="lp-faq lp-section"><div class="container lp-faq-grid"><div><p class="lp-kicker">Giải đáp trước khi bắt đầu</p><h2>Một vài điều cần biết</h2><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Trao đổi qua Zalo →</a></div><div>{faqs.slice(0,3).map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>}
 
   <RelatedGuides context={service.slug} />

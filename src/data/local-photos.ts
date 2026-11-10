@@ -6,6 +6,7 @@ import originalQuan1 from './quan-1-original.json';
 import originalQuan2 from './quan-2-original.json';
 import originalTanBinh from './quan-tan-binh-original.json';
 import originalQuan12 from './quan-12-original.json';
+import importedLibrary from './installation-photo-library.json';
 export const photoAreas=[...regions.map(region=>({key:region.slug,name:region.shortName,url:`/khu-vuc/${region.slug}`,type:'region' as const})),...districts.flatMap(district=>[district,...(district.mergedAreas??[])]).map(district=>({key:district.slug,name:district.name,url:districtUrl(district.slug),type:'district' as const}))];
 export interface LocalPhoto {src:string;alt:string;caption:string;area:string;}
 const root=path.resolve('public/images/khu-vuc');
@@ -23,6 +24,12 @@ export async function getLocalPhotos(key:string):Promise<LocalPhoto[]>{
    const detail=captions[file];const caption=detail?.caption?.trim()||`Thi công Decal tại ${item.name}`;
    photos.push({src:`/images/khu-vuc/${areaKey}/${encodeURIComponent(file)}`,caption,alt:detail?.alt?.trim()||caption,area:item.name});
   }
+ }
+ // Imported photos appear in local galleries only after their locality is confirmed.
+ for(const photo of importedLibrary as {src:string;alt:string;caption:string;areaKey:string|null;kind:string}[]){
+  if(photo.kind!=='installation'||!photo.areaKey||!keys.includes(photo.areaKey))continue;
+  const locality=photoAreas.find(item=>item.key===photo.areaKey);if(!locality)continue;
+  photos.push({src:photo.src,alt:photo.alt,caption:photo.caption,area:locality.name});
  }
  // Photo provided by the owner with the original Quận 12 page; never substitute stock images.
  if(key==='quan-12'||key==='tp-hcm')photos.push({src:originalQuan12.hero.image,alt:originalQuan12.hero.imageAlt,caption:'Decal mờ vách ngăn văn phòng · Quận 12',area:'Quận 12'});

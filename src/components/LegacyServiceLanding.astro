@@ -1,6 +1,7 @@
 ---
 import RelatedGuides from './RelatedGuides.astro';
 import ServiceHero from './ServiceHero.astro';
+import { getInstallationPhotos, uploadedServicePhotos } from '../data/installation-photo-links';
 import ServiceSupport from './ServiceSupport.astro';
 import { getServiceCta } from '../data/service-cta';
 import { servicePresentation } from '../data/service-presentation';
@@ -17,11 +18,13 @@ const settings:Record<string,{name:string;group:string;description:string;points
 };
 const item=settings[slug];
 const cta=getServiceCta(slug);
+const realPhotos=getInstallationPhotos(uploadedServicePhotos[slug]??[]);
+const photos=realPhotos.length?realPhotos.map(photo=>({src:photo.src,caption:photo.caption})):content.photos;
 ---
 <div class="service-lp service-lp-legacy">
-  <ServiceHero title={item.name} eyebrow="Dịch vụ iDecal" image={content.photos[0].src} imageAlt={content.photos[0].caption}><p slot="description">{item.description}</p><Fragment slot="actions"><a href={cta.href} class="btn-primary-solid">{cta.action} →</a><a href={`/danh-muc-san-pham/${item.group}`} class="btn-idecal-bold">Xem vật liệu & mẫu →</a></Fragment></ServiceHero>
+  <ServiceHero title={item.name} eyebrow="Dịch vụ iDecal" image={photos[0].src} imageAlt={photos[0].caption}><p slot="description">{item.description}</p><Fragment slot="actions"><a href={cta.href} class="btn-primary-solid">{cta.action} →</a><a href={`/danh-muc-san-pham/${item.group}`} class="btn-idecal-bold">Xem vật liệu & mẫu →</a></Fragment></ServiceHero>
   <section class="container lp-summary"><h2>Phương án theo không gian</h2><ul>{item.points.map(point=><li><span aria-hidden="true">✓</span>{point}</li>)}</ul></section>
-  <section id="ung-dung" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">Hình ảnh tham khảo</p><h2>{content.title}</h2></div><p>{content.introduction}</p></div><div class="lp-application-grid">{content.photos.map(photo=><figure><img src={photo.src} alt={photo.caption} width="800" height="600" loading="lazy" /><figcaption>{photo.caption}</figcaption></figure>)}</div><a class="lp-material-link" href={`/danh-muc-san-pham/${item.group}`}>Xem mẫu, quy cách và thông tin vật liệu <span aria-hidden="true">→</span></a></section>
+  <section id="ung-dung" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">{realPhotos.length?'Hình ảnh thi công thực tế':'Hình ảnh tham khảo'}</p><h2>{content.title}</h2></div><p>{content.introduction}</p></div><div class="lp-application-grid">{photos.map(photo=><figure><img src={photo.src} alt={photo.caption} width="800" height="600" loading="lazy" /><figcaption>{photo.caption}</figcaption></figure>)}</div><a class="lp-material-link" href={`/danh-muc-san-pham/${item.group}`}>Xem mẫu, quy cách và thông tin vật liệu <span aria-hidden="true">→</span></a></section>
   <RelatedGuides context={slug} />
   <ServiceSupport service={slug} />
 </div>
