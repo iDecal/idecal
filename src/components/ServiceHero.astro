@@ -2,4 +2,4 @@
 interface Props { title:string; eyebrow:string; image:string; imageAlt:string; detailImage?:string; detailAlt?:string; }
 const {title,eyebrow,image,imageAlt}=Astro.props;
 ---
-<section class="lp-hero compact-page-banner"><div class="container lp-hero-grid"><div class="lp-hero-copy"><p class="lp-eyebrow"><span aria-hidden="true"></span>{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="lp-lead"><slot name="description" /></div><div class="lp-actions"><slot name="actions" /></div><slot name="meta" /></div><div class="lp-hero-visual"><figure class="lp-hero-photo"><img src={image} alt={imageAlt} width="1100" height="900" fetchpriority="high" /></figure></div></div></section>
+<section class="lp-hero compact-page-banner"><div class="container lp-hero-grid"><div class="lp-hero-copy"><p class="lp-eyebrow">{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="lp-lead"><slot name="description" /></div><div class="lp-actions"><slot name="actions" /></div><slot name="meta" /></div><div class="lp-hero-visual"><figure class="lp-hero-photo"><img src={image} alt={imageAlt} width="1100" height="900" fetchpriority="high" /></figure></div></div></section>

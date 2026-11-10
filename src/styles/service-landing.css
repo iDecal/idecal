@@ -109,11 +109,11 @@
 @media(max-width:767px) { .lp-overview-contact { grid-template-columns: 1fr; gap: 24px; } .lp-overview-contact .lp-actions { justify-content: start; } }
 
 /* Compact service layouts: unique content first; shared guidance lives on Contact. */
-.page-content .service-lp .lp-hero{padding:30px 0 36px}
+.page-content .service-lp .lp-hero{padding:56px 0}
 .page-content .service-lp .lp-hero-grid{gap:44px;grid-template-columns:1.1fr .9fr}
 .page-content .service-lp .lp-hero-visual{padding:0}
 .page-content .service-lp .lp-hero-photo{height:300px;border-radius:18px}
-.page-content .service-lp .lp-eyebrow{background:none;border:0;padding:0;margin-bottom:16px}
+.page-content .service-lp .lp-eyebrow{width:fit-content;max-width:100%;background:linear-gradient(110deg,#f0f8ff,#f3eeff);border:1px solid #dce6f8;border-radius:999px;padding:8px 14px;margin-bottom:28px;color:#1b4f7a;font-size:14px;font-weight:500}
 .page-content .service-lp .lp-hero-copy h1{font-size:clamp(28px,3vw,40px);line-height:1.3;margin-bottom:16px}
 .page-content .service-lp .lp-lead{font-size:16px;line-height:1.8}
 .page-content .service-lp .lp-actions{margin-top:22px;gap:18px}

@@ -1,0 +1,20 @@
+/* Shared breathing room for page introductions; preserve each page's own layout. */
+body .page-content :is(section,header):is(.compact-page-banner,.district-hero,.hcm-hero,.regional-hero,.q1-hero,.q2-intro,.q3-cover,.q4-hero,.q12-hero,.tb-hero,.contact-hero,.projects-hero,.project-detail-hero){padding-block:56px}
+body .page-content .compact-page-banner :is(.compact-banner-copy,.lp-hero-copy) h1{margin-bottom:28px}
+body .page-content .compact-page-banner :is(.compact-banner-eyebrow,.lp-eyebrow){margin-bottom:28px}
+body .page-content .compact-page-banner :is(.compact-banner-actions,.lp-actions){margin-top:32px;gap:18px 24px}
+body .page-content .compact-page-banner :is(.compact-banner-meta,.lp-hero-points){margin-top:24px}
+body .page-content .blog-hero-panel{padding-block:56px}
+@media(min-width:1024px){
+ body .page-content .compact-page-banner .compact-banner-grid,
+ body .page-content .service-lp .lp-hero .lp-hero-grid{column-gap:72px}
+}
+@media(max-width:767px){
+ body .page-content :is(section,header):is(.compact-page-banner,.district-hero,.hcm-hero,.regional-hero,.q1-hero,.q2-intro,.q3-cover,.q4-hero,.q12-hero,.tb-hero,.contact-hero,.projects-hero,.project-detail-hero){padding-block:36px}
+ body .page-content .service-lp .lp-hero{padding-block:36px}
+ body .page-content .compact-page-banner :is(.compact-banner-copy,.lp-hero-copy) h1{margin-bottom:24px}
+ body .page-content .compact-page-banner :is(.compact-banner-eyebrow,.lp-eyebrow){margin-bottom:24px}
+ body .page-content .compact-page-banner :is(.compact-banner-actions,.lp-actions){margin-top:28px;gap:16px 20px}
+ body .page-content .compact-page-banner :is(.compact-banner-grid,.lp-hero-grid){row-gap:32px}
+ body .page-content .blog-hero-panel{padding-block:36px}
+}
