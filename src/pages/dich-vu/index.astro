@@ -2,6 +2,7 @@
 import '../../styles/services.css';
 import ServicePricing from '../../components/ServicePricing.astro';
 import ServiceSupport from '../../components/ServiceSupport.astro';
+import { getServiceCta } from '../../data/service-cta';
 import ServiceHero from '../../components/ServiceHero.astro';
 import '../../styles/service-landing.css';
 import Layout from '../../layouts/Layout.astro';
@@ -19,7 +20,7 @@ import { serviceOfferings as services } from '../../data/site-offerings';
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service,index) => <article class="service-overview-card flex flex-col overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
         <a href={`/dich-vu/${service.slug}`} class="relative block aspect-[16/10] overflow-hidden" aria-label={`Xem dịch vụ ${service.name}`}><img src={service.image} alt={service.name} width="800" height="500" loading="lazy" class="h-full w-full object-cover" /><span class="absolute left-4 top-4 rounded bg-white/95 px-3 py-1 text-xs font-medium text-primary">0{index+1}</span></a>
-        <div class="flex flex-1 flex-col p-5 md:p-6"><h3 class="mb-3 text-xl font-semibold"><a href={`/dich-vu/${service.slug}`} class="hover:text-primary">{service.name}</a></h3><p class="mb-6 text-sm leading-relaxed">{service.deliverables[0]}</p><a href={`/dich-vu/${service.slug}`} class="mt-auto flex items-center justify-between border-t border-border pt-4 text-sm font-medium text-primary hover:text-brand-navy">Xem dịch vụ<span aria-hidden="true">→</span></a></div>
+        <div class="flex flex-1 flex-col p-5 md:p-6"><h3 class="mb-3 text-xl font-semibold"><a href={`/dich-vu/${service.slug}`} class="hover:text-primary">{service.name}</a></h3><p class="mb-6 text-sm leading-relaxed">{service.deliverables[0]}</p><div class="service-card-actions"><a href={getServiceCta(service.slug).href} class="btn-primary-solid" aria-label={`${getServiceCta(service.slug).action} – ${service.name}`}>{getServiceCta(service.slug).action}<span aria-hidden="true">→</span></a><a href={`/dich-vu/${service.slug}`} class="service-card-details">Xem chi tiết dịch vụ →</a></div></div>
       </article>)}
     </div>
   </section>
@@ -28,3 +29,7 @@ import { serviceOfferings as services } from '../../data/site-offerings';
   <ServiceSupport />
 </div>
 </Layout>
+
+<style>
+.service-card-actions{display:grid;gap:14px;margin-top:auto;padding-top:18px;border-top:1px solid #e0e8f0}.service-card-actions .btn-primary-solid{padding:12px 16px;min-height:44px;justify-content:space-between;font-size:14px}.service-card-details{font-size:13px;color:#0d6b96;text-align:center;padding:6px 0}
+</style>

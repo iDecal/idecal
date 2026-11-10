@@ -1,6 +1,11 @@
 ---
+import { getServiceCta } from '../data/service-cta';
 interface Props { service?:string; }
 const {service}=Astro.props;
-const contact=service?`/lien-he-idecal?dich-vu=${service}`:'/lien-he-idecal#yeu-cau';
+const cta=getServiceCta(service);
 ---
-<section class="container lp-support" aria-label="Tư vấn và thông tin chung"><div><h2>Cần phương án cho nhu cầu của bạn?</h2><p>Gửi ảnh, kích thước hoặc file đang có để trao đổi phạm vi và chi phí.</p></div><a href={contact} class="btn-primary-solid">Gửi yêu cầu <span aria-hidden="true">→</span></a><nav aria-label="Thông tin hữu ích"><a href="/lien-he-idecal#yeu-cau">Đặt dịch vụ & chuẩn bị thông tin →</a><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/du-an">Công trình thực tế →</a><a href="/dich-vu">Các dịch vụ iDecal →</a></nav></section>
+<section class="container lp-support" aria-label="Tư vấn và thông tin chung"><div><p class="service-cta-eyebrow">Trao đổi cùng iDecal</p><h2>{cta.title}</h2><p>{cta.description}</p></div><div class="service-cta-actions"><a href={cta.href} class="btn-primary-solid">{cta.action} <span aria-hidden="true">→</span></a><a href="https://zalo.me/0866077040" class="service-cta-zalo"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5H4l-3 2V11.5A8.5 8.5 0 0 1 9.5 3h3a8.5 8.5 0 0 1 8.5 8.5Z"/><path d="M7 11h10M7 15h6"/></svg>Trao đổi qua Zalo</a></div><nav aria-label="Thông tin hữu ích"><a href="/lien-he-idecal#yeu-cau">Đặt dịch vụ & chuẩn bị thông tin →</a><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo →</a><a href="/du-an">Công trình thực tế →</a><a href="/dich-vu">Các dịch vụ iDecal →</a></nav></section>
+
+<style>
+.lp-support .service-cta-eyebrow{font-size:12px;color:#58758c;margin:0 0 12px}.service-cta-actions{display:flex;flex-direction:column;align-items:center;gap:16px}.service-cta-zalo{display:inline-flex;align-items:center;gap:9px;color:#0d6b96;font-size:14px;padding:8px 0}.service-cta-zalo:hover{text-decoration:underline;text-underline-offset:4px}.service-cta-zalo:focus-visible{outline:2px solid #0d6b96;outline-offset:5px}@media(max-width:767px){.service-cta-actions{align-items:stretch;max-width:100%}.service-cta-actions .btn-primary-solid{justify-content:center}.service-cta-zalo{justify-content:center}}
+</style>
