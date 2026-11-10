@@ -6,7 +6,12 @@ const ttl = 28800;
 const encoder = new TextEncoder();
 const b64 = bytes => btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replaceAll('=', '');
 const unb64 = value => Uint8Array.from(atob(value.replaceAll('-', '+').replaceAll('_', '/')), c => c.charCodeAt(0));
-const ready = env => Boolean(env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET && env.ADMIN_SESSION_SECRET?.length >= 32);
+const configurationIssues = env => [
+  ...['GITHUB_CLIENT_ID', 'GITHUB_CLIENT_SECRET'].filter(name => typeof env[name] !== 'string' || !env[name].trim()).map(name => ({ name, reason: 'missing' })),
+  ...(typeof env.ADMIN_SESSION_SECRET !== 'string' || !env.ADMIN_SESSION_SECRET.trim()
+    ? [{ name: 'ADMIN_SESSION_SECRET', reason: 'missing' }]
+    : env.ADMIN_SESSION_SECRET.length < 32 ? [{ name: 'ADMIN_SESSION_SECRET', reason: 'too_short' }] : []),
+];
 const json = (value, status = 200) => new Response(JSON.stringify(value), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' } });
 const cookie = (name, value, age) => name + '=' + value + '; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=' + age;
 const readCookie = (request, name) => (request.headers.get('Cookie') ?? '').split(';').map(s => s.trim()).find(s => s.startsWith(name + '='))?.slice(name.length + 1);
@@ -50,8 +55,9 @@ export async function onRequest({ request, env }) {
   if (method !== 'GET' && request.headers.get('Origin') !== url.origin) return json({ error: 'origin' }, 403);
   try {
     if (route === 'logout' && method === 'POST') return new Response(null, { status: 204, headers: { 'Set-Cookie': clearSession(), 'Cache-Control': 'no-store' } });
-    if (!ready(env)) {
-      if (route === 'session') return json({ authenticated: false, configured: false });
+    const issues = configurationIssues(env);
+    if (issues.length) {
+      if (route === 'session') return json({ authenticated: false, configured: false, issues });
       if (route === 'auth' || route === 'callback') return redirect('/admin/?error=configuration');
       return json({ error: 'configuration' }, 503);
     }

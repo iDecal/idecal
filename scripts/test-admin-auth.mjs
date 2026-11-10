@@ -26,7 +26,13 @@ test('OAuth session, permissions, CSRF, proxy restrictions and logout', async ()
     throw new Error('Unexpected outbound destination');
   };
   try {
-    assert.deepEqual(await (await run('session', {}, {})).json(), { authenticated: false, configured: false });
+    const missing = await (await run('session', {}, {})).json();
+    assert.equal(missing.configured, false);
+    assert.deepEqual(missing.issues, ['GITHUB_CLIENT_ID', 'GITHUB_CLIENT_SECRET', 'ADMIN_SESSION_SECRET'].map(name => ({ name, reason: 'missing' })));
+    const short = await (await run('session', {}, { ...env, ADMIN_SESSION_SECRET: 'short-test-key' })).json();
+    assert.deepEqual(short.issues, [{ name: 'ADMIN_SESSION_SECRET', reason: 'too_short' }]);
+    assert.ok(!JSON.stringify(short).includes('short-test-key'));
+    assert.ok(!JSON.stringify(short).includes(env.GITHUB_CLIENT_SECRET));
     assert.equal((await run('github?path=' + encodeURIComponent(file + '?ref=main'))).status, 401);
     const auth = await run('auth');
     const target = new URL(auth.headers.get('Location'));

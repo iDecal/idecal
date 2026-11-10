@@ -14,7 +14,12 @@ async function check() {
     accountView.hidden = session.authenticated !== true;
     document.getElementById('account-name').textContent = session.user?.name || session.user?.login || '';
     button.setAttribute('aria-disabled', String(!session.configured));
-    statusEl.textContent = error ? errors[error] || errors.authentication : session.configured ? '' : errors.configuration;
+    const allowedNames = ['GITHUB_CLIENT_ID', 'GITHUB_CLIENT_SECRET', 'ADMIN_SESSION_SECRET'];
+    const issues = Array.isArray(session.issues) ? session.issues.filter(issue => allowedNames.includes(issue.name)) : [];
+    const configurationMessage = issues.length
+      ? 'Chưa kích hoạt đăng nhập GitHub. ' + issues.map(issue => issue.reason === 'too_short' ? issue.name + ' cần ít nhất 32 ký tự.' : 'Chưa nhận được biến ' + issue.name + '.').join(' ') + ' Kiểm tra Variables and secrets của môi trường Production trong Cloudflare Pages, lưu rồi triển khai lại.'
+      : errors.configuration;
+    statusEl.textContent = !session.configured ? configurationMessage : error ? errors[error] || errors.authentication : '';
     statusEl.toggleAttribute('data-error', Boolean(error) || !session.configured);
   } catch {
     statusEl.textContent = 'Chưa kết nối được dịch vụ đăng nhập. Vui lòng thử lại sau.';
