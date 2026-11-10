@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
+import materialData from '../../data/project-materials.json';
 import { getCollection, render } from 'astro:content';
 import '../../styles/project-detail.css';
 export async function getStaticPaths() {
@@ -9,19 +9,40 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const gallery = [...new Set([entry.data.image, ...entry.data.gallery])];
-const related = (await getCollection('projects'))
-  .filter(project => project.id !== entry.id)
-  .sort((a,b) => Number(b.data.category === entry.data.category) - Number(a.data.category === entry.data.category) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0,4);
-const bookingUrl = '/lien-he-idecal?dich-vu=thi-cong-decal';
+type Material={name:string;description:string;guide:string;guideLabel:string;service:string;serviceLabel:string};
+const materials=(materialData as Record<string,Material[]>)[entry.id]??[];
+const related = (await getCollection('projects')).filter(project => project.id !== entry.id)
+ .sort((a,b) => Number(b.data.category === entry.data.category) - Number(a.data.category === entry.data.category) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0,3);
+const optimizedImages:Record<string,string>={'/images/cong-trinh/Trang-tri-kinh-phong-kham-FDcare.png':'/images/thi-cong-thuc-te/fdcare-quan-9.webp','/images/cong-trinh/thi-cong-dan-decal-luoi-mat-tien-toyota-tan-binh.jpg':'/images/thi-cong-thuc-te/toyota-ly-thuong-kiet.webp'};
+const displayImage=(source:string)=>optimizedImages[source]??source;
+const bookingUrl = '/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
+const namedClient=entry.data.client!=='Khách hàng iDecal';
 ---
 <Layout title={`${entry.data.title} | iDecal`} description={entry.data.description} image={entry.data.image}>
-  <div class="project-detail">
-    <section class="project-detail-hero"><div class="container"><div class="project-detail-heading"><p class="project-detail-badge">{entry.data.category}</p><p class="project-detail-label">Hồ sơ công trình iDecal</p></div><h1 class="brand-heading">{entry.data.title}</h1><p class="project-detail-intro">{entry.data.description}</p><dl class="project-detail-facts"><div><dt>Khách hàng</dt><dd>{entry.data.client}</dd></div><div><dt>Loại công trình</dt><dd>{entry.data.category}</dd></div>{entry.data.location && <div><dt>Khu vực</dt><dd>{entry.data.location}</dd></div>}{entry.data.service && <div><dt>Hạng mục</dt><dd>{entry.data.service}</dd></div>}</dl></div></section>
-    <section class="container project-detail-overview"><div><p class="project-detail-kicker">Từ yêu cầu đến hoàn thiện</p><h2 class="project-detail-section-title">Câu chuyện công trình</h2><a href="#hinh-anh" class="project-detail-link">Xem ảnh thực tế <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4v16m-6-6 6 6 6-6" /></svg></a></div><article class="project-detail-content" aria-label="Nội dung công trình"><Content /></article></section>
-    <section id="hinh-anh" class="project-detail-gallery-section"><div class="container"><div class="project-detail-gallery-heading"><div><p class="project-detail-kicker">Ghi lại tại công trình</p><h2 class="project-detail-section-title">Hình ảnh thực tế</h2></div><p>Bấm vào ảnh để xem kích thước đầy đủ.</p></div><div class="project-detail-photo-grid">{gallery.map((image,index) => <figure><a class="project-detail-photo" href={image} target="_blank" rel="noopener noreferrer" aria-label={`Mở ảnh lớn ${index+1}: ${entry.data.title}`}><img src={image} alt={`${entry.data.title} – ảnh thực tế ${index+1}`} width="1000" height="800" loading={index===0?'eager':'lazy'} fetchpriority={index===0?'high':'auto'} /><span class="project-detail-enlarge"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5" /></svg>Xem ảnh lớn</span></a><figcaption><span>Ảnh {String(index+1).padStart(2,'0')}</span><span>{entry.data.client}</span></figcaption></figure>)}</div></div></section>
-    <section class="container project-detail-consult"><div><p class="project-detail-kicker">Ý tưởng cho không gian của bạn</p><h2 class="project-detail-section-title">Cùng hoàn thiện công trình tiếp theo</h2><p>Gửi hình ảnh không gian, kích thước và nhu cầu để iDecal tư vấn mẫu, vật liệu cùng phương án phù hợp.</p></div><div class="project-detail-consult-actions"><a class="btn-primary-solid" href={bookingUrl}>Trao đổi về công trình <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a><a class="project-detail-link" href="https://zalo.me/0866077040">Tư vấn qua Zalo <span aria-hidden="true">→</span></a></div></section>
-    {related.length > 0 && <section class="project-detail-related"><div class="container"><div class="project-detail-related-heading"><div><p class="project-detail-kicker">Thêm ý tưởng tham khảo</p><h2 class="project-detail-section-title">Khám phá công trình khác</h2></div><a class="project-detail-link" href="/du-an">Tất cả công trình <span aria-hidden="true">→</span></a></div><div class="project-detail-related-grid">{related.map(project => <ProjectCard project={project} />)}</div></div></section>}
-    <div class="container project-detail-back"><a href="/du-an" class="project-detail-link"><span aria-hidden="true">←</span>Trở lại danh sách công trình</a></div>
+ <div class="project-detail">
+  <header class="project-detail-hero"><div class="container"><div class="project-detail-topline"><a href="/du-an">← Công trình thực tế</a><span>{entry.data.category}</span></div><h1 class="brand-heading">{entry.data.title}</h1><dl class="project-detail-facts">{namedClient&&<div><dt>Khách hàng</dt><dd>{entry.data.client}</dd></div>}{entry.data.location&&<div><dt>Khu vực</dt><dd>{entry.data.location}</dd></div>}{entry.data.service&&<div><dt>Hạng mục</dt><dd>{entry.data.service}</dd></div>}</dl></div></header>
+  <div class="container project-detail-layout">
+   <section id="hinh-anh" class="project-detail-gallery" aria-labelledby="project-gallery-title" data-project-gallery>
+    <div class="project-section-heading"><h2 id="project-gallery-title">Hình ảnh thực tế</h2><span>{gallery.length} ảnh</span></div>
+    <figure class="project-main-figure"><a class="project-main-photo" href={gallery[0]} target="_blank" rel="noopener" data-project-main-link aria-label="Mở ảnh công trình kích thước đầy đủ"><img src={displayImage(gallery[0])} alt={`${entry.data.title} – ảnh thực tế 1`} width="1200" height="900" fetchpriority="high" data-project-main-image /></a><figcaption><span data-project-counter aria-live="polite">Ảnh 01 / {String(gallery.length).padStart(2,'0')}</span><a href={gallery[0]} target="_blank" rel="noopener" data-project-enlarge>Mở ảnh lớn →</a></figcaption></figure>
+    {gallery.length>1&&<div class="project-photo-thumbs" role="group" aria-label="Chọn ảnh công trình">{gallery.map((image,index)=><button type="button" data-project-photo={displayImage(image)} data-project-original={image} data-photo-number={index+1} aria-pressed={index===0} aria-label={`Xem ảnh ${index+1}: ${entry.data.title}`}><img src={displayImage(image)} alt={`${entry.data.title} – ảnh thực tế ${index+1}`} width="180" height="130" loading="lazy" /></button>)}</div>}
+   </section>
+   <aside class="project-detail-sidebar" aria-label="Vật liệu và tư vấn công trình">
+    <section class="project-materials" aria-labelledby="project-materials-title"><h2 id="project-materials-title">Vật liệu sử dụng</h2>{materials.length>0?materials.map(material=><article><h3><a href={material.guide}>{material.name}</a></h3><p>{material.description}</p><a class="project-material-guide" href={material.guide}>{material.guideLabel} →</a><a class="project-material-service" href={material.service}>{material.serviceLabel} →</a></article>):<p>Trao đổi với iDecal để xác nhận vật liệu theo hồ sơ công trình.</p>}</section>
+    <section class="project-quick-contact"><h2>Bạn cần phương án tương tự?</h2><p>Gửi ảnh và kích thước để được tư vấn vật liệu, bố cục và thi công.</p><a class="btn-primary-solid" href={bookingUrl}>Nhận tư vấn công trình →</a><a class="project-zalo" href="https://zalo.me/0866077040">Nhắn Zalo iDecal</a></section>
+   </aside>
+   <details class="project-detail-story"><summary>Thông tin chi tiết công trình<span aria-hidden="true">+</span></summary><article class="project-detail-content" aria-label="Nội dung công trình"><Content /></article></details>
   </div>
+  {related.length>0&&<section class="container project-detail-related"><div class="project-section-heading"><h2>Công trình khác</h2><a href="/du-an">Xem tất cả →</a></div><div class="project-related-list">{related.map(project=><a class="project-related-item" href={`/du-an/${project.id}`}><img src={displayImage(project.data.image)} alt={project.data.title} width="180" height="135" loading="lazy"/><div><p>{project.data.category}</p><h3>{project.data.title}</h3></div></a>)}</div></section>}
+ </div>
 </Layout>
+<script>
+for(const root of document.querySelectorAll<HTMLElement>('[data-project-gallery]')){
+ const image=root.querySelector<HTMLImageElement>('[data-project-main-image]')!;
+ const mainLink=root.querySelector<HTMLAnchorElement>('[data-project-main-link]')!;
+ const enlarge=root.querySelector<HTMLAnchorElement>('[data-project-enlarge]')!;
+ const counter=root.querySelector<HTMLElement>('[data-project-counter]')!;
+ const buttons=root.querySelectorAll<HTMLButtonElement>('[data-project-photo]');
+ for(const button of buttons)button.addEventListener('click',()=>{const source=button.dataset.projectPhoto!;const thumb=button.querySelector('img')!;image.src=source;image.alt=thumb.alt;image.title=thumb.title||thumb.alt;mainLink.href=button.dataset.projectOriginal??source;enlarge.href=button.dataset.projectOriginal??source;counter.textContent=`Ảnh ${String(button.dataset.photoNumber).padStart(2,'0')} / ${String(buttons.length).padStart(2,'0')}`;for(const other of buttons)other.setAttribute('aria-pressed',String(other===button));});
+}
+</script>
