@@ -1,8 +1,9 @@
 ---
+import ProtectionIcon from './ProtectionIcon.astro';
 import { products, formatPrice } from '../data/catalogue';
 const films = [
   { slug:'phim-ppf-tph', title:'Film PPF bảo vệ nội thất', label:'Bảo vệ bề mặt',
-    image:'/images/film-bao-ve/ppf-bao-ve-mat-ban.webp', alt:'Thi công film PPF trên mặt bàn đá nội thất',
+    image:'/images/film-bao-ve/ppf-bao-ve-san-pham.webp', alt:'Mẫu film PPF bảo vệ bề mặt nội thất',
     intro:'Lớp film trong giúp giữ diện mạo bề mặt, hạn chế trầy xước nhẹ do tiếp xúc trong quá trình sử dụng.',
     advantages:['Giữ được màu sắc và vân của bề mặt bên dưới.','Hỗ trợ hạn chế trầy xước nhẹ trên nền tương thích.','Cắt theo kích thước, hoàn thiện theo mép và góc bo.'],
     specs:[['Độ dày tham khảo','7,5 mil · khoảng 190 µm'],['Quy cách cuộn','1,52 × 30 m'],['Bề mặt sử dụng','Nền phẳng, lớp hoàn thiện ổn định']],
@@ -29,10 +30,10 @@ const faqs = [
   <div class="protection-films">
     {films.map(film => <article class="protection-film" data-protection-film={film.slug}>
       <a class="protection-photo" href={`/san-pham/${film.slug}`} aria-label={`Xem chi tiết ${film.title.toLowerCase()}`}><img src={film.image} alt={film.alt} width="960" height="800" loading="lazy" decoding="async" /></a>
-      <div class="protection-copy"><p class="film-label">{film.label}</p><h3>{film.title}</h3><p class="film-intro">{film.intro}</p>
-        <h4>Ưu điểm</h4><ul>{film.advantages.map(advantage => <li>{advantage}</li>)}</ul>
-        <h4>Thông số cơ bản</h4><dl>{film.specs.map(([label,value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-        <h4>Ứng dụng</h4><p>{film.uses}</p><p class="film-note">{film.note}</p>
+      <div class="protection-copy"><p class="film-label"><ProtectionIcon kind={film.slug === 'phim-ppf-tph' ? 'shield' : 'glass'} />{film.label}</p><h3>{film.title}</h3><p class="film-intro">{film.intro}</p>
+        <h4><ProtectionIcon kind="benefits" />Ưu điểm</h4><ul>{film.advantages.map(advantage => <li>{advantage}</li>)}</ul>
+        <h4><ProtectionIcon kind="specs" />Thông số cơ bản</h4><dl>{film.specs.map(([label,value]) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+        <h4><ProtectionIcon kind="uses" />Ứng dụng</h4><p>{film.uses}</p><p class="film-note">{film.note}</p>
         <div class="film-actions"><div><span>Giá tham khảo</span><strong>{formatPrice(film.product.price)}</strong></div><a href={`/san-pham/${film.slug}`}>Xem chi tiết <span aria-hidden="true">→</span></a></div>
       </div>
     </article>)}
@@ -47,14 +48,15 @@ const faqs = [
   .protection-intro { max-width:740px; margin-bottom:36px; }
   h2 { font-size:30px; line-height:1.4; margin:0 0 16px; color:#244766; }
   h3 { font-size:26px; line-height:1.4; margin:0 0 14px; color:#244766; }
-  h4 { font-size:14px; font-weight:600; color:#244766; margin:20px 0 9px; }
+  h4 { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:#244766; margin:20px 0 9px; }
   p,li,dl { font-size:14px; line-height:1.75; color:#536579; }
   p { margin:0 0 12px; }
   .protection-film { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:48px; align-items:start; }
+  @media(min-width:768px) { .protection-film:nth-child(even) .protection-photo { grid-column:2; grid-row:1; } .protection-film:nth-child(even) .protection-copy { grid-column:1; grid-row:1; } }
   .protection-film + .protection-film { margin-top:52px; padding-top:52px; border-top:1px solid #e1eaf4; }
   .protection-photo { display:block; overflow:hidden; border-radius:18px; background:#f3f6f8; }
-  .protection-photo img { display:block; width:100%; height:auto; aspect-ratio:6/5; object-fit:contain; }
-  .film-label { color:#0d6b96; font-size:12px; font-weight:500; margin:0 0 9px; }
+  .protection-photo img { display:block; width:100%; height:auto; aspect-ratio:6/5; object-fit:cover; }
+  .film-label { display:flex; align-items:center; gap:8px; color:#0d6b96; font-size:12px; font-weight:500; margin:0 0 9px; }
   .film-intro { font-size:15px; }
   ul { list-style:none; padding:0; margin:0; }
   li { position:relative; padding-left:17px; margin-bottom:5px; }

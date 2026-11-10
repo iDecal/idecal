@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro';
 import '@fontsource-variable/lexend';
 import '@fontsource-variable/inter';
 import '../styles/global.css';
+import '../styles/section-headings.css';
 import '../styles/hero-spacing.css';
 interface Props {
 	title: string;
@@ -33,7 +34,7 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
 	<body class="bg-background font-body text-secondary">
 		<Header />
 		
-		<main class="page-content">
+		<main class:list={['page-content', { 'site-section-headings': !Astro.url.pathname.startsWith('/blog') && !noindex }]}>
 			<slot /> 
 		</main>
 
