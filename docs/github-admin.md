@@ -52,3 +52,19 @@ Bài kiểm tra runtime dùng GitHub giả lập, nhưng tạo Request và cooki
 - python3 scripts/test-admin-runtime.py
 
 Fixture chỉ dùng để kiểm thử tại máy phát triển, không triển khai fixture lên Cloudflare.
+
+## Thương hiệu và ảnh trong popup
+
+Chọn thương hiệu từ danh sách hiện có (cấu hình hãng và dữ liệu sản phẩm mới nhất). Chọn Thêm thương hiệu để nhập hãng mới; khi lưu, tên được gắn vào sản phẩm và có thể chọn ở các lần chỉnh sửa tiếp theo. Tên trùng được đối chiếu không phân biệt chữ hoa/thường.
+
+Mỗi ảnh có URL, ALT và tiêu đề riêng; có thể sửa URL, thêm hoặc bỏ ảnh. ALT/title được lưu trong imageMetadata của sản phẩm và được dùng trên ảnh chi tiết, thumbnail và thẻ sản phẩm, không ghi đè metadata của ảnh dùng chung ở sản phẩm khác.
+
+Upload chấp nhận JPG, PNG, WebP, GIF, AVIF tối đa 5 MB. Server kiểm tra phiên, quyền ghi và chữ ký định dạng; tạo tên tệp duy nhất trong public/images/uploads. Không nhận đường dẫn ghi tùy ý và không cho SVG/HTML. Upload tạo commit media ngay; Lưu sản phẩm tạo commit dữ liệu riêng sau đó. Nếu đóng popup chưa lưu, tệp đã upload vẫn được giữ trong thư viện nhưng chưa gắn vào sản phẩm. Đường dẫn ảnh trên website có hiệu lực sau khi triển khai; ảnh xem trước trong popup dùng tệp đã chọn.
+
+Không cần thêm secret/quyền OAuth ngoài quyền repository hiện có.
+
+## Thêm danh mục ngay trong popup
+
+Danh mục có nút Thêm danh mục. Nhập tên, đường dẫn được gợi ý từ tên và có thể sửa trước khi tạo. Tạo danh mục lưu ngay vào product-categories.json bằng quyền GitHub hiện có, chọn danh mục mới trong dropdown; bấm Lưu sản phẩm để đổi nhóm cho sản phẩm. Danh mục được tạo có trang riêng và hiển thị trên trang tổng hợp sản phẩm sau khi triển khai. Ảnh đại diện và liên kết dịch vụ ban đầu kế thừa nhóm đang chọn, phần mô tả/giá dùng nội dung chung, không sao chép thông tin giá của nhóm cũ.
+
+Danh sách được đọc mới từ GitHub mỗi lần mở popup. Không tạo trùng tên (không phân biệt hoa/thường), không ghi đè đường dẫn đã có, giữ nguyên danh mục khác và kiểm tra SHA khi ghi. Danh mục đã tạo vẫn tồn tại nếu đóng popup trước khi lưu sản phẩm.

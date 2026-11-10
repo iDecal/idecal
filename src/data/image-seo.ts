@@ -1,3 +1,4 @@
+import products from './products.json' with { type: 'json' };
 import { parse, type DefaultTreeAdapterMap } from 'parse5';
 import imageData from './image-seo.json' with { type: 'json' };
 
@@ -12,6 +13,11 @@ export function imageKey(source: string): string {
 const metadata = new Map(imageData.map(image => [imageKey(image.src), image]));
 export function getImageSeo(source: string, fallbackAlt: string): ImageSeo {
   return metadata.get(imageKey(source)) ?? { src: source, alt: fallbackAlt, title: fallbackAlt };
+}
+export function getProductImageSeo(slug: string | undefined, source: string, fallbackAlt: string): ImageSeo {
+  const product = products.find(item => item.slug === slug) as { imageMetadata?: ImageSeo[] } | undefined;
+  const custom = product?.imageMetadata?.find(image => imageKey(image.src) === imageKey(source));
+  return custom && custom.alt.trim() && custom.title.trim() ? custom : getImageSeo(source, fallbackAlt);
 }
 const escapeAttribute = (value: string) => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 
@@ -42,11 +48,11 @@ export function applyImageSeo(html: string): string {
         // Decorative images must remain silent for screen readers.
         const decorative = attrs.role === 'presentation' || attrs['aria-hidden'] === 'true' || attrs.alt === '';
         if (!decorative) {
-          const seo = getImageSeo(attrs.src ?? '', attrs.alt || 'Ảnh minh họa decal và film dán kính');
+          const seo = getProductImageSeo(attrs['data-image-product'], attrs.src ?? '', attrs.alt || 'Ảnh minh họa decal và film dán kính');
           patch(node, { alt: seo.alt, title: seo.title });
         }
       } else if (node.tagName === 'button' && attrs['data-gallery-source']) {
-        const seo = getImageSeo(attrs['data-gallery-source'], attrs['data-gallery-label'] || 'Ảnh sản phẩm');
+        const seo = getProductImageSeo(attrs['data-image-product'], attrs['data-gallery-source'], attrs['data-gallery-label'] || 'Ảnh sản phẩm');
         patch(node, { 'data-gallery-label': seo.alt, 'data-gallery-title': seo.title });
       }
     }

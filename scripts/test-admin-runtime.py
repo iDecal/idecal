@@ -1,5 +1,6 @@
 """Run against the local-only admin-auth-worker.mjs fixture on port 8791."""
 import json
+import base64
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -47,6 +48,10 @@ saved = request(write_path, method='PUT', cookie=session_cookie, body=payload)
 assert saved.status == 200, saved.read().decode()
 assert json.load(saved)['commit']['sha'] == 'runtime-saved'
 assert request(write_path, method='PUT', cookie=session_cookie, body=payload, origin='https://attacker.example').status == 403
+png = base64.b64encode(bytes([137, 80, 78, 71, 13, 10, 26, 10])).decode()
+uploaded = request('upload', method='POST', cookie=session_cookie, body={'name':'ảnh thử.png','content':png})
+assert uploaded.status == 201, uploaded.read().decode()
+assert json.load(uploaded)['url'].startswith('/images/uploads/')
 logout = request('logout', method='POST', cookie=session_cookie)
 assert logout.status == 204 and 'Max-Age=0' in logout.headers['Set-Cookie']
 print('Cloudflare workerd passed: OAuth exchange, encrypted cookie, authenticated session, GitHub read/save and CSRF. GitHub mocked; no real writes.')

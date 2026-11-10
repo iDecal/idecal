@@ -5,14 +5,16 @@ import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import ProductGroupIcon from '../../components/ProductGroupIcon.astro';
 import '../../styles/product-groups.css';
-import { products } from '../../data/catalogue';
+import { products, productCategories, productsInCategory } from '../../data/catalogue';
 import { productLandings, landingProducts } from '../../data/site-offerings';
+const addedCategories = productCategories.filter(category => category.editorCreated);
+const totalGroups = productLandings.length + addedCategories.length;
 ---
-<Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description="Khám phá 8 nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt nhà kính, film nội thất, Decal văn phòng, film bảo vệ, Decal/ film trang trí kính và Decal quảng cáo.">
+<Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description={"Khám phá " + totalGroups + " nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt, film nội thất và các vật liệu trang trí, bảo vệ."}>
   <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productLandings[0].image} imageAlt={productLandings[0].name}>
-    <p slot="description">{productLandings.length} nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
+    <p slot="description">{totalGroups} nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
     <Fragment slot="actions"><a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
-    <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{productLandings.length}</strong> nhóm sản phẩm</span></Fragment>
+    <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{totalGroups}</strong> nhóm sản phẩm</span></Fragment>
   </PageBanner>
   <section id="danh-muc" class="container scroll-mt-24 py-14 md:py-20">
     <p class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
@@ -23,6 +25,7 @@ import { productLandings, landingProducts } from '../../data/site-offerings';
           <div class="flex flex-1 flex-col p-6"><p class="mb-6 text-sm">{category.description}</p><div class="mt-auto flex items-center justify-between gap-3 text-sm"><span class="text-text-muted">{landingProducts(category).length} mẫu</span><span class="font-medium text-primary">Xem nhóm sản phẩm →</span></div></div>
         </a>
       </article>)}
+      {addedCategories.map(category => <article class="category-card overflow-hidden rounded-2xl border border-border bg-white"><a href={'/danh-muc-san-pham/' + category.slug} class="flex h-full flex-col"><div class="aspect-square overflow-hidden"><ProductImage src={category.image} alt={category.name} /></div><div class="flex flex-1 flex-col p-6"><h3 class="text-lg">{category.name}</h3><p class="text-sm">{category.description}</p><span class="mt-auto text-sm text-primary">{productsInCategory(category.slug).length} mẫu · Xem nhóm sản phẩm →</span></div></a></article>)}
     </div>
   </section>
 

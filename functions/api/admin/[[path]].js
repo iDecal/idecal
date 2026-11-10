@@ -100,6 +100,65 @@ export async function onRequest({ request, env }) {
       return user ? json({ authenticated: true, configured: true, user }) : new Response(JSON.stringify({ authenticated: false, configured: true }), { headers: { 'Content-Type': 'application/json', 'Set-Cookie': clearSession(), 'Cache-Control': 'no-store' } });
     }
     if (!session) return json({ error: 'authentication' }, 401);
+    if (route === 'categories' && (method === 'GET' || method === 'POST')) {
+      stage = 'github_permissions';
+      if (!(await profile(session.token))) return json({ error: 'permission' }, 403);
+      const target = REPO + '/contents/src/data/product-categories.json';
+      const read = await github(session.token, target + '?ref=main');
+      if (!read.ok) return json({ error: 'github' }, read.status);
+      const file = await read.json();
+      const categories = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(file.content.replace(/\s/g, '')), char => char.charCodeAt(0))));
+      if (!Array.isArray(categories)) return json({ error: 'data' }, 502);
+      if (method === 'GET') return json({ categories });
+      const raw = await request.text();
+      if (raw.length > 4000) return json({ error: 'size' }, 413);
+      let payload;
+      try { payload = JSON.parse(raw); } catch { return json({ error: 'payload' }, 400); }
+      const name = typeof payload.name === 'string' ? payload.name.trim() : '';
+      const slug = typeof payload.slug === 'string' ? payload.slug.trim() : '';
+      if (!name || name.length > 100 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length > 80) return json({ error: 'category' }, 400);
+      const duplicate = categories.find(category => category.name.trim().toLocaleLowerCase('vi-VN') === name.toLocaleLowerCase('vi-VN'));
+      if (duplicate) return json({ category: duplicate }, 200);
+      const reserved = ['decal-mo-dan-kinh','decal-pvc','phim-cach-nhiet-nha-kinh','film-dan-noi-that','decal-dan-kinh-van-phong','film-bao-ve-noi-that','film-trang-tri-kinh','decal-quang-cao'];
+      if (categories.some(category => category.slug === slug) || reserved.includes(slug)) return json({ error: 'duplicate_slug' }, 409);
+      const source = categories.find(category => category.slug === payload.sourceCategory);
+      if (!source) return json({ error: 'source_category' }, 400);
+      const category = { slug, name, headline: name, description: 'Khám phá mẫu ' + name + ' tại iDecal. Xem hình ảnh, thông tin vật liệu và liên hệ tư vấn theo nhu cầu.', benefits: [], priceTitle: 'Báo giá ' + name, priceNote: 'Liên hệ để trao đổi mã vật liệu, quy cách và khối lượng.', prices: [], faqs: [], service: source.service, image: source.image, needs: [], editorCreated: true };
+      const bytes = new TextEncoder().encode(JSON.stringify([...categories, category], null, 2) + '\n');
+      let binary = '';
+      for (const byte of bytes) binary += String.fromCharCode(byte);
+      const save = await github(session.token, target, { method: 'PUT', body: JSON.stringify({ branch: 'main', sha: file.sha, message: 'Add product category ' + slug, content: btoa(binary) }) });
+      if (!save.ok) return json({ error: 'github' }, save.status);
+      return json({ category }, 201);
+    }
+    if (route === 'upload' && method === 'POST') {
+      stage = 'github_permissions';
+      if (!(await profile(session.token))) return json({ error: 'permission' }, 403);
+      if (Number(request.headers.get('Content-Length') || 0) > 7100000) return json({ error: 'size' }, 413);
+      const raw = await request.text();
+      if (raw.length > 7100000) return json({ error: 'size' }, 413);
+      let payload;
+      try { payload = JSON.parse(raw); } catch { return json({ error: 'payload' }, 400); }
+      if (typeof payload.content !== 'string' || !/^[A-Za-z0-9+/]*={0,2}$/.test(payload.content)) return json({ error: 'image' }, 400);
+      let bytes;
+      try { bytes = Uint8Array.from(atob(payload.content), char => char.charCodeAt(0)); } catch { return json({ error: 'image' }, 400); }
+      if (!bytes.length || bytes.length > 5 * 1024 * 1024) return json({ error: 'size' }, 413);
+      const starts = (...magic) => magic.every((value, index) => bytes[index] === value);
+      const text = (start, length) => new TextDecoder().decode(bytes.slice(start, start + length));
+      const extension = starts(255, 216, 255) ? 'jpg'
+        : starts(137, 80, 78, 71, 13, 10, 26, 10) ? 'png'
+        : text(0, 4) === 'RIFF' && text(8, 4) === 'WEBP' ? 'webp'
+        : ['GIF87a', 'GIF89a'].includes(text(0, 6)) ? 'gif'
+        : text(4, 4) === 'ftyp' && ['avif', 'avis'].some(brand => text(8, 24).includes(brand)) ? 'avif' : null;
+      if (!extension) return json({ error: 'image' }, 400);
+      const name = typeof payload.name === 'string' ? payload.name : 'product';
+      const stem = name.replace(/\.[^.]*$/, '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'product';
+      const filename = stem + '-' + crypto.randomUUID() + '.' + extension;
+      stage = 'github_request';
+      const response = await github(session.token, REPO + '/contents/public/images/uploads/' + filename, { method: 'PUT', body: JSON.stringify({ branch: 'main', message: 'Upload product image', content: payload.content }) });
+      if (!response.ok) return json({ error: 'github' }, response.status);
+      return json({ url: '/images/uploads/' + filename }, 201);
+    }
     if (route !== 'github') return json({ error: 'not_found' }, 404);
     const destination = url.searchParams.get('path');
     const getAllowed = method === 'GET' && ['/user', REPO, FILE + '?ref=main'].includes(destination);

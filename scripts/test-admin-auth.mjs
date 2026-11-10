@@ -11,6 +11,7 @@ test('OAuth session, permissions, CSRF, proxy restrictions and logout', async ()
   let allowed = true;
   let exchangeCount = 0;
   let writeCount = 0;
+  let categoryRecords = [{slug:'original',name:'Original',service:'decal-dan-kinh-van-phong',image:'/images/test.jpg'}];
   globalThis.fetch = async (url, init = {}) => {
     assert.equal(init.redirect, 'manual', 'Cloudflare does not support redirect:error');
     if (url === 'https://github.com/login/oauth/access_token') {
@@ -19,7 +20,22 @@ test('OAuth session, permissions, CSRF, proxy restrictions and logout', async ()
       assert.equal(init.body.get('client_secret'), env.GITHUB_CLIENT_SECRET);
       return reply({ access_token: 'fake-oauth-token' });
     }
+    if (url.startsWith('https://api.github.com/repos/iDecal/idecal/contents/public/images/uploads/')) {
+      assert.equal(init.method, 'PUT');
+      assert.match(url, /\/[a-z0-9-]+\.png$/);
+      assert.equal(JSON.parse(init.body).branch, 'main');
+      return reply({ content: { sha: 'uploaded' } }, 201);
+    }
     assert.equal(init.headers.Authorization, 'Bearer fake-oauth-token');
+    if (url.startsWith('https://api.github.com/repos/iDecal/idecal/contents/src/data/product-categories.json')) {
+      if (init.method === 'PUT') {
+        const payload=JSON.parse(init.body);
+        assert.equal(payload.sha,'category-sha');
+        categoryRecords=JSON.parse(Buffer.from(payload.content,'base64').toString('utf8'));
+        return reply({commit:{sha:'category-saved'}});
+      }
+      return reply({sha:'category-sha',content:Buffer.from(JSON.stringify(categoryRecords)).toString('base64')});
+    }
     if (url === 'https://api.github.com/user') return reply({ login: 'editor', name: 'Test Editor' });
     if (url === 'https://api.github.com/repos/iDecal/idecal') return reply({ permissions: { push: allowed } });
     if (url === 'https://api.github.com' + file && init.method === 'PUT') { writeCount++; return reply({ commit: { sha: 'saved' }, token: 'must-not-leak' }); }
@@ -75,6 +91,27 @@ test('OAuth session, permissions, CSRF, proxy restrictions and logout', async ()
     assert.equal(csrf.status, 403);
     assert.equal((await run('github?path=' + encodeURIComponent('/repos/another/repo'), { headers })).status, 403);
     assert.equal((await run('github?path=' + encodeURIComponent(file) , { method: 'DELETE', headers })).status, 403);
+    const categories = await (await run('categories', { headers })).json();
+    assert.equal(categories.categories.length,1);
+    const newCategory = {name:'Danh mục mới',slug:'danh-muc-moi',sourceCategory:'original'};
+    const created = await run('categories', {method:'POST',headers,body:JSON.stringify(newCategory)});
+    assert.equal(created.status,201);
+    assert.equal((await created.json()).category.slug,'danh-muc-moi');
+    assert.equal(categoryRecords.length,2);
+    assert.equal(categoryRecords[0].slug,'original');
+    assert.equal(categoryRecords[1].editorCreated,true);
+    assert.equal((await run('categories',{method:'POST',headers,body:JSON.stringify(newCategory)})).status,200);
+    assert.equal(categoryRecords.length,2);
+    assert.equal((await run('categories',{method:'POST',headers,body:JSON.stringify({...newCategory,name:'Other',slug:'../unsafe'})})).status,400);
+    assert.equal((await run('categories',{method:'POST',headers,body:JSON.stringify({...newCategory,name:'Other',slug:'danh-muc-moi'})})).status,409);
+    const upload = await run('upload', { method: 'POST', headers, body: JSON.stringify({ name: '../../ảnh test.svg', content: btoa(String.fromCharCode(137,80,78,71,13,10,26,10)) }) });
+    assert.equal(upload.status, 201);
+    const uploaded = await upload.json();
+    assert.match(uploaded.url, /^\/images\/uploads\/[a-z0-9-]+\.png$/);
+    const unsafeImage = await run('upload', { method: 'POST', headers, body: JSON.stringify({ name: 'script.svg', content: btoa('<svg onload="alert(1)"></svg>') }) });
+    assert.equal(unsafeImage.status, 400);
+    const anonymousUpload = await run('upload', { method: 'POST', headers: { Origin: origin }, body: '{}' });
+    assert.equal(anonymousUpload.status, 401);
     const read = await (await run('github?path=' + encodeURIComponent(file + '?ref=main'), { headers })).json();
     assert.deepEqual(Object.keys(read).sort(), ['content', 'encoding', 'sha']);
     const payload = { branch: 'main', sha: 'file-sha', content: 'W10=', message: 'Test save' };

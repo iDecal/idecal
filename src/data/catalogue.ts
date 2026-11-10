@@ -12,6 +12,7 @@ export interface Product {
   description: string;
   paragraphs: string[];
   images: string[];
+  imageMetadata?: { src: string; alt: string; title: string }[];
   variantSlugs?: string[];
   catalogue?: { pdf: string; page: number; note?: string; collection?: string };
   installationImages?: { src: string; alt: string; caption?: string; projectSlug?: string }[];
@@ -19,6 +20,7 @@ export interface Product {
   uses: string[];
 }
 export interface ProductCategory {
+  editorCreated?: boolean;
   slug: string;
   name: string;
   headline: string;

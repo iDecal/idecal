@@ -14,6 +14,7 @@ globalThis.fetch = async (input, init) => {
     return Response.json({ access_token: 'runtime-fake-token' });
   }
   if (url.origin !== 'https://api.github.com' || request.headers.get('Authorization') !== 'Bearer runtime-fake-token') throw new Error('Unexpected test destination or credential');
+  if (url.pathname.startsWith('/repos/iDecal/idecal/contents/public/images/uploads/') && request.method === 'PUT') return Response.json({ content: { sha: 'runtime-uploaded' } });
   if (url.pathname === '/user') return Response.json({ login: 'runtime-editor', name: 'Runtime Editor' });
   if (url.pathname === '/repos/iDecal/idecal') return Response.json({ permissions: { push: true } });
   if (url.pathname === '/repos/iDecal/idecal/contents/src/data/products.json') {
