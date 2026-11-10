@@ -1,5 +1,5 @@
 ---
-title: "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2025"
+title: "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2026"
 description: "Bạn đang tìm kiếm giải pháp hiệu quả để giảm nhiệt, chống nắng gắt và bảo vệ không gian sống, làm việc khỏi tác hại của tia UV? Phim cách nhiệt và decal chống nắng là…"
 category: "Báo giá"
 categorySlug: "bao-gia"
@@ -20,7 +20,7 @@ Decal chống nắng (hay Phim cách nhiệt) là giải pháp hiệu quả đ�
 
 <span id="bang-gia-phim-cach-nhiet-decal-chong-nang-dan-kinh-cap-nhat-2025"></span>
 
-## Bảng giá Phim cách nhiệt/Decal chống nắng dán kính (Cập nhật 2025)
+## Bảng giá Phim cách nhiệt/Decal chống nắng dán kính (Cập nhật 2026)
 
 Chúng tôi phân loại theo chất lượng, hiệu quả cách nhiệt và thương hiệu để bạn dễ dàng lựa chọn. Giá trọn gói đã bao gồm vật tư và chi phí thi công lắp đặt hoàn thiện.
 

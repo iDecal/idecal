@@ -274,7 +274,7 @@ Từ **tư vấn – thiết kế – in ấn – thi công**, mọi công đo�
 
 <span id="14-mot-so-mau-decal-dan-kinh-quan-cafe-dep-duoc-ua-chuong-nhat-2025"></span>
 
-## 14. Một số mẫu decal dán kính quán cafe đẹp được ưa chuộng nhất 2025
+## 14. Một số mẫu decal dán kính quán cafe đẹp được ưa chuộng nhất 2026
 
 - **Decal logo mờ khắc laser** – tối giản mà tinh tế.
 - **Decal cây lá xanh** – phù hợp không gian chill.

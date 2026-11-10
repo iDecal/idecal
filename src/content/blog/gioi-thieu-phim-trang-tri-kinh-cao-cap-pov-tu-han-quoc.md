@@ -1,6 +1,6 @@
 ---
 title: "Giới thiệu Phim trang trí kính cao cấp POV từ Hàn Quốc"
-description: "Phim trang trí kính cao cấp POV nhập khẩu từ Hàn Quốc – đa dạng mẫu mã, lọc UV, tăng riêng tư & thẩm mỹ. Xem ngay bảng giá & mẫu phim dán kính 2025!"
+description: "Phim trang trí kính cao cấp POV nhập khẩu từ Hàn Quốc – đa dạng mẫu mã, lọc UV, tăng riêng tư & thẩm mỹ. Xem ngay bảng giá & mẫu phim dán kính 2026!"
 category: "Hướng dẫn"
 categorySlug: "huong-dan"
 categories: ["Phim dán nội thất"]
@@ -74,7 +74,7 @@ Phim trang trí kính **POV** – thương hiệu đến từ **Hàn Quốc**, l
 
 <span id="bang-gia-phim-trang-tri-kinh-pov-tham-khao-2025"></span>
 
-## Bảng giá phim trang trí kính POV (Tham khảo 2025)
+## Bảng giá phim trang trí kính POV (Tham khảo 2026)
 
 | **Loại phim** | **Giá (VNĐ/m²)** |
 | --- | --- |

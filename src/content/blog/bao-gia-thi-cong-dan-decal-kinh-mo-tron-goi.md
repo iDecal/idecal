@@ -15,7 +15,7 @@ xmlPreserved: true
 
 Bạn đang tìm kiếm giải pháp dán kính mờ cho văn phòng, nhà ở nhưng băn khoăn về chi phí? iDecal cung cấp bảng báo giá decal mờ chi tiết theo từng hạng mục và phân tích các yếu tố ảnh hưởng, giúp bạn dự toán ngân sách một cách chính xác và minh bạch nhất cho dự án của mình.
 
-## Bảng Báo Giá Thi Công Decal Dán Kính Mờ Cập Nhật 2025
+## Bảng Báo Giá Thi Công Decal Dán Kính Mờ Cập Nhật 2026
 
 Giá decal dán kính mờ phụ thuộc chủ yếu vào loại vật tư, diện tích và độ phức tạp của thiết kế. Bảng giá dưới đây được iDecal xây dựng để giúp quý khách hàng có cái nhìn tổng quan và dự toán chi phí ban đầu. Để nhận được báo giá chính xác nhất theo yêu cầu cụ thể, quý khách vui lòng liên hệ trực tiếp với chúng tôi.
 

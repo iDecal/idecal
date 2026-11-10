@@ -28,8 +28,8 @@ const service = serviceOfferings.find(item => item.slug === 'cat-decal')!;
       <div class="cutting-material-grid">{content.materials.map((material,index)=><article class="cutting-material"><span aria-hidden="true">0{index+1}</span><h3>{material.title}</h3><p>{material.text}</p></article>)}</div>
     </div></section>
     <section id="bang-gia" class="container cutting-section">
-      <div class="cutting-section-heading"><p class="cutting-kicker">Bảng giá tham khảo · Tài liệu 2025</p><h2 class="brand-heading">Bảng giá cắt chữ & Decal</h2><p>{content.priceIntro}</p></div>
-      <div class="cutting-price-table"><table><caption class="sr-only">Bảng giá tham khảo dịch vụ cắt Decal từ tài liệu năm 2025</caption><thead><tr><th scope="col">Hạng mục</th><th scope="col">Giá tham khảo</th><th scope="col">Ghi chú</th></tr></thead><tbody>{content.prices.map(price=><tr><th scope="row">{price.name}</th><td>{price.price}</td><td>{price.note}</td></tr>)}</tbody></table></div>
+      <div class="cutting-section-heading"><p class="cutting-kicker">Bảng giá tham khảo · 2026</p><h2 class="brand-heading">Bảng giá cắt chữ & Decal</h2><p>{content.priceIntro}</p></div>
+      <div class="cutting-price-table"><table><caption class="sr-only">Bảng giá tham khảo dịch vụ cắt Decal năm 2026</caption><thead><tr><th scope="col">Hạng mục</th><th scope="col">Giá tham khảo</th><th scope="col">Ghi chú</th></tr></thead><tbody>{content.prices.map(price=><tr><th scope="row">{price.name}</th><td>{price.price}</td><td>{price.note}</td></tr>)}</tbody></table></div>
       <div class="cutting-price-note"><p>Gửi file để xác nhận giá hiện hành và thời gian hoàn thành. Tư vấn miễn phí trước khi thực hiện.</p><a href="https://zalo.me/0866077040">Gửi file nhận tư vấn <svg aria-hidden="true" class="cutting-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 19 19 5M5 5h14v14" /></svg></a></div>
     </section>
 

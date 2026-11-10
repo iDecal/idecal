@@ -72,7 +72,7 @@ iDecal hoạt động trong lĩnh vực thi công dán Decal PP tại khu vực 
 | in PP cán formex 10mm | 1 mặt | 800.000đ/m2 |
 |  | 2 mặt |  |
 
-Bảng giá in PP cán formex tham khảo, được cập nhật tháng 3/2024
+Bảng giá in PP cán formex tham khảo, được cập nhật tháng 3/2026
 
 <span id="3-2-bao-gia-in-pp-can-formex-theo-kho-co-san"></span>
 

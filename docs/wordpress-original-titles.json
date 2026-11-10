@@ -3,7 +3,11 @@
     "wordpressId": 34197,
     "title": "Báo giá Thi công dán Decal kính mờ trọn gói - Cập nhật tháng 04/2026",
     "sha256": "9662cb0417cd6e72ae65dc3cbb02043167fb9465c618ed9e57ee4c43a9d056d7",
-    "bodySha256": "f425d217e4280a286062704fcd59b2bee1b67f00a3adc3fe9e9e235fc3c6ab9c"
+    "bodySha256": "f425d217e4280a286062704fcd59b2bee1b67f00a3adc3fe9e9e235fc3c6ab9c",
+    "cmsRevision": {
+      "bodySha256": "8d33ef392e058e793d9150711c51486b37cd0ba7ae06a914d8d13c0c7d9225b0",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "thi-cong-decal-mo-dan-kinh-bep-can-ho-chi-ruby-quan-2": {
     "wordpressId": 27108,
@@ -89,15 +93,24 @@
   },
   "bao-gia-decal-mo-dan-kinh-van-phong-thang-11-2025": {
     "wordpressId": 33477,
-    "title": "Báo giá Decal mờ dán kính văn phòng tháng 11/2025",
+    "title": "Báo giá Decal mờ dán kính văn phòng tháng 11/2026",
     "sha256": "a46600aa3b79568c04f45a74dedcb687fa5eb1598ea3217edb0e96a433ca760a",
-    "bodySha256": "ca25550d49582591048dc40d7584ab34d577942b4c7b9f1bd3047080b44ab2ae"
+    "bodySha256": "ca25550d49582591048dc40d7584ab34d577942b4c7b9f1bd3047080b44ab2ae",
+    "originalTitle": "Báo giá Decal mờ dán kính văn phòng tháng 11/2025",
+    "cmsRevision": {
+      "bodySha256": "84f7a08bf9b0d7609e4ac1da3e2cd21960d9dccc64ee215c3087eaa0d43a5806",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "thi-cong-decal-luoi-dan-kinh-hcm-binh-duong": {
     "wordpressId": 28332,
     "title": "Thi Công Decal Lưới Dán Kính Quảng Cáo Mặt Tiền Showroom",
     "sha256": "f188f2c52f3ef949d554d09e36fdb89ef8bd5c24ed8155b9b6a9ddfd4db6f327",
-    "bodySha256": "6372895b37b473640e70b1e59504b830e171d70067791702279f78363d7c01b5"
+    "bodySha256": "6372895b37b473640e70b1e59504b830e171d70067791702279f78363d7c01b5",
+    "cmsRevision": {
+      "bodySha256": "988a5369459e3585a988eae5b5a6c3e37a3503d68ca6292d9a6660bac42e3364",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "tim-hieu-ve-cac-thong-so-ky-thuat-cua-phim-chong-nang": {
     "wordpressId": 17471,
@@ -133,7 +146,11 @@
     "wordpressId": 1999,
     "title": "Dịch vụ in PP cán formex HCM giá rẻ - lấy liền",
     "sha256": "d4d6cde19ff5e4a05c1a6f0f25c86d86b6ffa4240627c5f1d41cd6e37295e0f9",
-    "bodySha256": "87355b71cda9c7de7d6ccbf0afc8f7c4645b618cf9739c61062532d8a8ed0e05"
+    "bodySha256": "87355b71cda9c7de7d6ccbf0afc8f7c4645b618cf9739c61062532d8a8ed0e05",
+    "cmsRevision": {
+      "bodySha256": "d213c8363496d56468c4125ab2a5b9aeee7d5d581e448820d0db24de55bf0047",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "lam-moi-be-mat-tu-bep-voi-phim-dan-noi-that": {
     "wordpressId": 28573,
@@ -143,9 +160,14 @@
   },
   "decal-chong-nang-loai-nao-tot-nhat-2025": {
     "wordpressId": 33813,
-    "title": "Decal Chống Nắng Loại Nào Tốt Nhất 2025? Phân Tích & Báo Giá Chi Tiết",
+    "title": "Decal Chống Nắng Loại Nào Tốt Nhất 2026? Phân Tích & Báo Giá Chi Tiết",
     "sha256": "be541a80f255908b612fa61794e6c9ff88b15232b5ab0da4fb2a690a4ee44e62",
-    "bodySha256": "a606e974910a5bedc45cf40a7c205bf4f0601860a4d0ff62fde518bbc6ea5c3d"
+    "bodySha256": "a606e974910a5bedc45cf40a7c205bf4f0601860a4d0ff62fde518bbc6ea5c3d",
+    "originalTitle": "Decal Chống Nắng Loại Nào Tốt Nhất 2025? Phân Tích & Báo Giá Chi Tiết",
+    "cmsRevision": {
+      "bodySha256": "e6c695a436941373e2a58486f67bfb3f60090979f48c21e7ffb6d859274d64ef",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "decal-gia-gach-mosaic-tuong-cu-nhung-lai-moi": {
     "wordpressId": 1205,
@@ -235,9 +257,14 @@
   },
   "xu-huong-decal-dan-kinh-van-phong-hot-nhat-nam-2025": {
     "wordpressId": 27478,
-    "title": "Xu hướng decal dán kính văn phòng hot nhất năm 2025",
+    "title": "Xu hướng decal dán kính văn phòng hot nhất năm 2026",
     "sha256": "f4620e9b316c20c4e58ac85f9ed120aeb842065e159e985be7a51ea3b05e8bd3",
-    "bodySha256": "44dd2138fdfd8cd0eb85a2258cb50c88fdc168f9971b98c9785f52d408d37ccb"
+    "bodySha256": "44dd2138fdfd8cd0eb85a2258cb50c88fdc168f9971b98c9785f52d408d37ccb",
+    "originalTitle": "Xu hướng decal dán kính văn phòng hot nhất năm 2025",
+    "cmsRevision": {
+      "bodySha256": "667d57d2e594ef5b77094f030a1c5e4c8dcbacc2345cc5a6975f2b63c11ac1fb",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "mien-phi-thiet-ke-decal-mo-dan-kinh-van-phong": {
     "wordpressId": 28306,
@@ -307,9 +334,14 @@
   },
   "6-vat-lieu-op-bep-duoc-ua-chuong-nam-2023": {
     "wordpressId": 17558,
-    "title": "6 Vật liệu ốp bếp được ưa chuộng năm 2023",
+    "title": "6 Vật liệu ốp bếp được ưa chuộng năm 2026",
     "sha256": "693a2ddcabb37946e8abcf037f3dc8b8daabb267a3ce3c80870f89bd7b44be22",
-    "bodySha256": "09d879affa63b621e122d96d855c339d580e4ed2aa625bdf001fc96fb85131b5"
+    "bodySha256": "09d879affa63b621e122d96d855c339d580e4ed2aa625bdf001fc96fb85131b5",
+    "originalTitle": "6 Vật liệu ốp bếp được ưa chuộng năm 2023",
+    "cmsRevision": {
+      "bodySha256": "3aaca0c33fd4381232972051ea02eb0008274a18f2ff334d69211d3bc972c6d1",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "decal-dan-kinh-nha-khoa-ngay-mat-tien-kinh": {
     "wordpressId": 17605,
@@ -367,13 +399,22 @@
     "wordpressId": 29041,
     "title": "Giới thiệu Phim trang trí kính cao cấp POV từ Hàn Quốc",
     "sha256": "d9067fd93b7a55969f8e59ff43328d68a3047cf1348ffb0b9290e2bfa3b608db",
-    "bodySha256": "268a1fddb9368b6a20d1f20cbefde9fd42c9c8435d2d138a7c64b1d4d6168f6a"
+    "bodySha256": "268a1fddb9368b6a20d1f20cbefde9fd42c9c8435d2d138a7c64b1d4d6168f6a",
+    "cmsRevision": {
+      "bodySha256": "8df663538ff729b028ca0095511daed1a07723e4b0cdf936cdf9b1823e2a23ed",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "bi-quyet-tang-doanh-thu-cuoi-nam-2024-voi-decal-dan-kinh-sieu-an-tuong": {
     "wordpressId": 1595,
-    "title": "Bí quyết tăng doanh thu cuối năm  2024 với decal dán kính siêu ấn tượng",
+    "title": "Bí quyết tăng doanh thu cuối năm  2026 với decal dán kính siêu ấn tượng",
     "sha256": "1a9dc60f238915a26011fa121972410eb01e72b1b82ba5e49db45aecfea7211e",
-    "bodySha256": "969c0e33afdce4f86448d0d4f91d5d71762a7a4761b865d68780487ebc10cb6b"
+    "bodySha256": "969c0e33afdce4f86448d0d4f91d5d71762a7a4761b865d68780487ebc10cb6b",
+    "originalTitle": "Bí quyết tăng doanh thu cuối năm  2024 với decal dán kính siêu ấn tượng",
+    "cmsRevision": {
+      "bodySha256": "6e043f2dc368c61f0b208ef205fc6ee343a807ebfa4410a80e78e2dc0672ead3",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "dich-vu-in-pp-gia-re-lay-gap": {
     "wordpressId": 18866,
@@ -397,7 +438,11 @@
     "wordpressId": 33822,
     "title": "199+ mẫu Decal dán kính trang trí quán cafe đẹp – sáng tạo – thu hút",
     "sha256": "6893dd58308c9bf8aced78e01a095ec0e67b14a3e452d62df2ffcf06adacb233",
-    "bodySha256": "7886b5ec1c6e365a68df5c751c833e9fbd2e752b639f33ecb1712521e38688da"
+    "bodySha256": "7886b5ec1c6e365a68df5c751c833e9fbd2e752b639f33ecb1712521e38688da",
+    "cmsRevision": {
+      "bodySha256": "29c969a9cbd26aeaf3ba6f581a6135e9395d1b7f7fd4ab818ad2c1b7c9fd4fab",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "kich-thuoc-poster-chuan-va-pho-bien-nhat-hien-nay": {
     "wordpressId": 17929,
@@ -425,9 +470,14 @@
   },
   "bao-gia-decal-chong-nang-phim-cach-nhiet-dan-kinh-2025": {
     "wordpressId": 33603,
-    "title": "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2025",
+    "title": "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2026",
     "sha256": "d1665b28c819b85dbc59fd9f6f68b44a118f286c048357c324670d07f2294a52",
-    "bodySha256": "779ba4347a6b62ae019cbdfff0bdb003b2a6e8892bc78af52f02e5cca0682538"
+    "bodySha256": "779ba4347a6b62ae019cbdfff0bdb003b2a6e8892bc78af52f02e5cca0682538",
+    "originalTitle": "Báo giá Decal chống nắng, Phim cách nhiệt dán kính 2025",
+    "cmsRevision": {
+      "bodySha256": "cc329c8fa9080552175ac238b7b3f5cc5817c711d8821791ff124bd342c01083",
+      "reason": "Owner requested updating current pricing and editorial year labels to 2026; original URLs and publication dates retained."
+    }
   },
   "tu-van-chon-decal-dan-kinh-phong-khach-sang-trong": {
     "wordpressId": 18038,
