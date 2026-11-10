@@ -350,7 +350,7 @@
   {
     "slug": "decal-mo-cham-bi-trang-tri-kinh",
     "name": "Decal mờ chấm bi trang trí kính tùy chỉnh",
-    "category": "decal-mo-dan-kinh",
+    "category": "decal-cat-vi-tinh",
     "subcategory": "Decal dán kính văn phòng",
     "brand": "iDecal",
     "price": 220000,
@@ -368,6 +368,13 @@
       "Phòng họp",
       "Cửa kính ra vào",
       "Quầy lễ tân"
+    ],
+    "imageMetadata": [
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2024/03/Mau-Decal-cham-bi-ket-hop-thiet-ke-song.jpg",
+        "alt": "Decal mờ chấm bi trang trí kính tùy chỉnh",
+        "title": "Decal mờ chấm bi trang trí kính tùy chỉnh | iDecal"
+      }
     ]
   },
   {
