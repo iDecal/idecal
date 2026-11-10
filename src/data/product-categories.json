@@ -461,5 +461,20 @@
     "service": "cat-decal",
     "image": "/images/catalogue/decal-pvc-xam.jpg",
     "needs": []
+  },
+  {
+    "slug": "decal-trang-tri",
+    "name": "Decal trang trí",
+    "headline": "Decal trang trí",
+    "description": "Khám phá mẫu Decal trang trí tại iDecal. Xem hình ảnh, thông tin vật liệu và liên hệ tư vấn theo nhu cầu.",
+    "benefits": [],
+    "priceTitle": "Báo giá Decal trang trí",
+    "priceNote": "Liên hệ để trao đổi mã vật liệu, quy cách và khối lượng.",
+    "prices": [],
+    "faqs": [],
+    "service": "phim-cach-nhiet",
+    "image": "/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp",
+    "needs": [],
+    "editorCreated": true
   }
 ]
