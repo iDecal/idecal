@@ -325,8 +325,7 @@
     ],
     "images": [
       "https://idecal.vn/wp-content/uploads/2025/05/img_20250430_0006177712437118267162286.jpg",
-      "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-cat-soc-deu.webp",
-      "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-dan-kinh-van-phong-cat-soc.webp"
+      "/images/uploads/preview-1-f532a772-f25d-4b8f-8d42-198db5693fd8.png"
     ],
     "attributes": {},
     "uses": [
@@ -342,12 +341,7 @@
         "title": "Decal mờ cắt sọc ngang trang trí kính | iDecal"
       },
       {
-        "src": "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-cat-soc-deu.webp",
-        "alt": "Decal mờ cắt sọc ngang trang trí kính",
-        "title": "Decal mờ cắt sọc ngang trang trí kính | iDecal"
-      },
-      {
-        "src": "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-dan-kinh-van-phong-cat-soc.webp",
+        "src": "/images/uploads/preview-1-f532a772-f25d-4b8f-8d42-198db5693fd8.png",
         "alt": "Decal mờ cắt sọc ngang trang trí kính",
         "title": "Decal mờ cắt sọc ngang trang trí kính | iDecal"
       }
