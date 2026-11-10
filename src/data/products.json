@@ -309,7 +309,7 @@
   {
     "slug": "decal-mo-cat-soc-ngang-trang-tri-kinh",
     "name": "Decal mờ cắt sọc ngang trang trí kính",
-    "category": "decal-mo-dan-kinh",
+    "category": "decal-cat-vi-tinh",
     "subcategory": "Decal dán kính văn phòng",
     "brand": "iDecal",
     "price": 135000,
@@ -334,6 +334,23 @@
       "Phòng họp",
       "Cửa kính ra vào",
       "Quầy lễ tân"
+    ],
+    "imageMetadata": [
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2025/05/img_20250430_0006177712437118267162286.jpg",
+        "alt": "Decal mờ cắt sọc ngang trang trí kính",
+        "title": "Decal mờ cắt sọc ngang trang trí kính | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-cat-soc-deu.webp",
+        "alt": "Decal mờ cắt sọc ngang trang trí kính",
+        "title": "Decal mờ cắt sọc ngang trang trí kính | iDecal"
+      },
+      {
+        "src": "https://idecal.vn/wp-content/uploads/2024/03/Decal-mo-dan-kinh-van-phong-cat-soc.webp",
+        "alt": "Decal mờ cắt sọc ngang trang trí kính",
+        "title": "Decal mờ cắt sọc ngang trang trí kính | iDecal"
+      }
     ]
   },
   {
