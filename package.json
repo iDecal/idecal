@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "test": "npm run build && node scripts/check-site.mjs && node scripts/check-seo.mjs && node scripts/check-district-pages.mjs && node scripts/check-editorial.mjs && node scripts/check-quan-12.mjs && node scripts/check-local-photos.mjs && node scripts/check-local-faq.mjs && node scripts/check-imported-districts.mjs && node scripts/check-office-glass.mjs && node scripts/check-interior-film.mjs && node scripts/check-wave-glass.mjs && node scripts/check-signage.mjs && node scripts/check-cms.mjs && node scripts/check-image-seo.mjs && node --test scripts/test-admin-auth.mjs"
+    "test": "npm run build && node scripts/check-site.mjs && node scripts/check-seo.mjs && node scripts/check-district-pages.mjs && node scripts/check-editorial.mjs && node scripts/check-quan-12.mjs && node scripts/check-local-photos.mjs && node scripts/check-local-faq.mjs && node scripts/check-imported-districts.mjs && node scripts/check-office-glass.mjs && node scripts/check-interior-film.mjs && node scripts/check-wave-glass.mjs && node scripts/check-signage.mjs && node scripts/check-elevator.mjs && node scripts/check-cms.mjs && node scripts/check-image-seo.mjs && node --test scripts/test-admin-auth.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",

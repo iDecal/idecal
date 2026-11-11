@@ -1,6 +1,7 @@
 ---
 import RelatedGuides from './RelatedGuides.astro';
 import SignageServiceCard from './SignageServiceCard.astro';
+import ElevatorServiceCard from './ElevatorServiceCard.astro';
 import ServiceHero from './ServiceHero.astro';
 import { getInstallationPhotos, uploadedServicePhotos } from '../data/installation-photo-links';
 import ServiceSupport from './ServiceSupport.astro';
@@ -27,6 +28,7 @@ const photos=realPhotos.length?realPhotos.map(photo=>({src:photo.src,caption:pho
   <section class="container lp-summary"><h2>Phương án theo không gian</h2><ul>{item.points.map(point=><li><span aria-hidden="true">✓</span>{point}</li>)}</ul></section>
   <section id="ung-dung" class="container lp-section"><div class="lp-section-heading"><div><p class="lp-kicker">{realPhotos.length?'Hình ảnh thi công thực tế':'Hình ảnh tham khảo'}</p><h2>{content.title}</h2></div><p>{content.introduction}</p></div><div class="lp-application-grid">{photos.map(photo=><figure><img src={photo.src} alt={photo.caption} width="800" height="600" loading="lazy" /><figcaption>{photo.caption}</figcaption></figure>)}</div><a class="lp-material-link" href={`/${item.group}`}>Xem mẫu, quy cách và thông tin vật liệu <span aria-hidden="true">→</span></a></section>
   {slug==='decal-quang-cao'&&<SignageServiceCard />}
+  {slug==='decal-quang-cao'&&<ElevatorServiceCard />}
   <RelatedGuides context={slug} />
   <ServiceSupport service={slug} />
 </div>

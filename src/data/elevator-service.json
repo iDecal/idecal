@@ -1,0 +1,117 @@
+{
+  "slug": "dan-decal-thang-may",
+  "title": "Dịch vụ dán decal thang máy",
+  "seoTitle": "Dán decal thang máy: film nội thất & in quảng cáo | iDecal",
+  "description": "Dán film nội thất và decal in quảng cáo cho cửa, vách thang máy. iDecal tư vấn vật liệu, thiết kế, khảo sát và thi công theo hiện trạng.",
+  "parent": { "name": "Decal quảng cáo", "href": "/decal-quang-cao/" },
+  "quoteHref": "/lien-he-idecal/?dich-vu=thi-cong-decal#yeu-cau",
+  "intro": "Làm mới bề mặt bằng film nội thất hoặc đưa hình ảnh thương hiệu lên cửa thang máy bằng decal in. iDecal tư vấn vật liệu, phối mẫu, in ấn và thi công theo kích thước thực tế.",
+  "heroImage": {
+    "src": "/images/blog-wordpress/dd5df887a7c23883100d.jpg",
+    "alt": "Decal in quảng cáo trên cụm cửa thang máy",
+    "title": "Minh họa decal quảng cáo cửa thang máy",
+    "width": 1066,
+    "height": 800
+  },
+  "heroCaption": "Gợi ý bố trí hình ảnh quảng cáo trên cửa thang máy",
+  "solutions": [
+    {
+      "id": "film-noi-that-thang-may",
+      "title": "Dán film nội thất thang máy",
+      "intro": "Đổi vân, đổi màu và phối lại bề mặt cửa, khung bao hoặc vách cabin. Phù hợp khi muốn làm mới diện mạo và tạo sự đồng bộ với khu vực sảnh.",
+      "points": [
+        "Chọn vân gỗ, vân đá, kim loại hoặc màu trơn theo thiết kế.",
+        "Khảo sát độ phẳng, lớp phủ cũ và khả năng bám dính trước khi dán.",
+        "Thống nhất chiều vân, vị trí nối, góc bo và phần xử lý nền."
+      ],
+      "fit": "Phù hợp với nhu cầu làm mới nội thất tại văn phòng, khách sạn, chung cư và không gian dịch vụ.",
+      "links": [
+        { "label": "Xem mẫu film nội thất", "href": "/film-dan-noi-that/" },
+        { "label": "Dịch vụ dán film nội thất", "href": "/dich-vu-film-dan-noi-that/" }
+      ]
+    },
+    {
+      "id": "decal-in-quang-cao-thang-may",
+      "title": "Dán decal in quảng cáo thang máy",
+      "intro": "In hình ảnh, logo, thông điệp hoặc chương trình quảng bá lên decal theo kích thước cửa thang. Bố cục được kiểm tra khi cửa đóng và chia theo từng cánh trước khi in.",
+      "points": [
+        "Thiết kế theo bộ nhận diện thương hiệu hoặc dùng file khách cung cấp.",
+        "Chọn decal, công nghệ in và lớp cán theo vị trí, thời gian sử dụng.",
+        "Làm rõ phần tháo decal cũ, xử lý keo và thay mới khi đổi chiến dịch."
+      ],
+      "fit": "Phù hợp với quảng cáo thương hiệu, giới thiệu dịch vụ và các chương trình truyền thông trong tòa nhà.",
+      "links": [
+        { "label": "Dịch vụ in decal", "href": "/dich-vu/in-decal/" },
+        { "label": "Thiết kế theo yêu cầu", "href": "/dich-vu/thiet-ke/" }
+      ]
+    }
+  ],
+  "surfaces": [
+    { "title": "Cửa thang máy", "description": "Đo từng cánh, chốt cách chia hình và căn nội dung theo khe cửa." },
+    { "title": "Vách cabin", "description": "Phối vân, màu sắc và vị trí nối theo từng mảng bề mặt được chọn." },
+    { "title": "Khung bao & khu vực sảnh", "description": "Lựa chọn phạm vi dán và màu hoàn thiện để đồng bộ với không gian xung quanh." }
+  ],
+  "scopeNote": "Vị trí dán và lịch thi công được thống nhất với ban quản lý. Giữ nguyên nút bấm, khe cửa, cảm biến và các thông tin hướng dẫn vận hành.",
+  "quote": {
+    "title": "Báo giá theo vật liệu và hiện trạng",
+    "intro": "Gửi ảnh vị trí cần dán, kích thước dự kiến và số lượng thang máy. iDecal sẽ làm rõ phần vật liệu, in ấn, xử lý nền và công thi công trước khi chốt phương án.",
+    "items": [
+      {
+        "title": "Film nội thất",
+        "factors": ["Mã film, khổ cuộn và chiều vân", "Diện tích dán, góc bo và vị trí nối", "Tháo lớp cũ, xử lý nền và hoàn thiện mép"]
+      },
+      {
+        "title": "Decal in quảng cáo",
+        "factors": ["Kích thước, số cánh cửa và số lượng thang", "File thiết kế, công nghệ in và lớp cán", "Thi công, tháo gỡ và thay mới theo chiến dịch"]
+      }
+    ],
+    "note": "Mỗi phương án được báo giá theo khối lượng thực tế và phạm vi công việc đã thống nhất."
+  },
+  "process": [
+    { "title": "Khảo sát & đo đạc", "description": "Kiểm tra bề mặt, vị trí dán và lịch thi công với ban quản lý." },
+    { "title": "Chọn mẫu & duyệt thiết kế", "description": "Chốt mã film hoặc bản in, kích thước và cách chia từng cánh cửa." },
+    { "title": "Chuẩn bị vật liệu & bề mặt", "description": "Gia công theo bản duyệt, tháo lớp cũ và xử lý nền theo phạm vi đã chốt." },
+    { "title": "Thi công & hoàn thiện", "description": "Định vị, dán từng mảng và hoàn thiện các mép, góc, điểm nối." },
+    { "title": "Kiểm tra & bàn giao", "description": "Đối chiếu bản duyệt, hướng dẫn vệ sinh và trao đổi điều kiện bảo hành theo vật liệu." }
+  ],
+  "gallery": [
+    {
+      "src": "/images/film-noi-that/dan-film-noi-that-thang-may.jpg",
+      "alt": "Hoàn thiện bề mặt thang máy",
+      "title": "Film nội thất hoàn thiện khu vực cửa thang máy",
+      "caption": "Tham khảo phối vân gỗ cho khu vực cửa thang máy",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "src": "/images/blog-wordpress/a2f9f181cefe59b99fd7.jpg",
+      "alt": "Decal quảng cáo LALAMOVE trên cửa thang máy",
+      "title": "Decal quảng cáo dịch vụ LALAMOVE trên cửa thang máy",
+      "caption": "Decal in quảng cáo dịch vụ LALAMOVE trên cửa thang máy",
+      "width": 1000,
+      "height": 680
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Nên chọn film nội thất hay decal in quảng cáo?",
+      "answer": "Chọn film nội thất khi cần đổi vân, đổi màu và làm mới bề mặt. Chọn decal in khi cần hiển thị hình ảnh, logo hoặc thông điệp quảng cáo. Hai hướng có thể kết hợp ở các vị trí khác nhau sau khi thống nhất bố cục."
+    },
+    {
+      "question": "Có cần xử lý lớp cũ trước khi dán không?",
+      "answer": "Cần kiểm tra lớp decal, keo, sơn hoặc lớp phủ đang có. Tùy độ bám và độ phẳng, phương án có thể gồm tháo lớp cũ, làm sạch và xử lý nền. Các phần việc này được ghi rõ trong báo giá."
+    },
+    {
+      "question": "Thi công vào thời gian nào?",
+      "answer": "Lịch thực hiện được trao đổi theo số lượng thang, hiện trạng và quy định của ban quản lý. Khi khảo sát, iDecal sẽ thống nhất thời gian tiếp cận và cách phối hợp để phù hợp với hoạt động của tòa nhà."
+    },
+    {
+      "question": "Cần gửi gì để nhận tư vấn và báo giá?",
+      "answer": "Gửi ảnh toàn cảnh và ảnh cận bề mặt, chiều rộng và cao từng phần cần dán, số lượng thang máy cùng mẫu vân hoặc nội dung quảng cáo. Nếu đã có file thiết kế, gửi thêm để kiểm tra kích thước và cách chia bản in."
+    }
+  ],
+  "sourceReferences": [
+    "src/content/blog/dan-decal-thang-may-giai-phap-refresh-khong-gian.md",
+    "src/data/service-presentation.ts"
+  ]
+}

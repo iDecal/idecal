@@ -1,6 +1,7 @@
 ---
 import ProtectionGuide from './ProtectionGuide.astro';
 import SignageServiceCard from './SignageServiceCard.astro';
+import ElevatorServiceCard from './ElevatorServiceCard.astro';
 import ProductBrands from './ProductBrands.astro';
 import RelatedGuides from './RelatedGuides.astro';
 import PageBanner from './PageBanner.astro';
@@ -26,6 +27,7 @@ const services = serviceOfferings.filter(service => service.slug === landing.ser
   {isProtection ? <ProtectionGuide /> : <>
   <section class="offering-section container"><div class="offering-heading"><p class="offering-kicker">Ứng dụng theo không gian</p><h2>{landing.name} phù hợp ở đâu?</h2></div><div class="offering-cards">{landing.uses.map((use,index) => <article><span class="offering-number" aria-hidden="true">0{index+1}</span><h3>{use.title}</h3><p>{use.text}</p></article>)}</div></section>
   {landing.slug==='decal-quang-cao'&&<SignageServiceCard />}
+  {landing.slug==='decal-quang-cao'&&<ElevatorServiceCard />}
   <ProductBrands group={landing.slug} />
   {landing.slug === 'decal-pvc' ? <PVCColorChart /> : <div class="offering-surface"><ProductCatalog items={items} heading={`Mẫu ${landing.name.toLocaleLowerCase('vi-VN')}`} /></div>}
   <section class="offering-section container offering-advice"><div><p class="offering-kicker">Chọn mẫu phù hợp</p><h2>{landing.slug === 'film-bao-ve-noi-that' ? 'Kiểm tra bề mặt trước khi chọn film' : 'Đẹp từ mẫu đến công trình'}</h2><p>{landing.guidance}</p><a class="offering-link" href="/du-an">Xem công trình thực tế <span aria-hidden="true">→</span></a></div>{landing.slug==='phim-cach-nhiet-nha-kinh'?<div class="offering-advice-gallery"><figure><img src="/images/uploads/film-phan-guong-xanh-la.png" alt="Minh họa sắc xanh lá của film phản gương trên cửa kính" width="1500" height="1120" loading="lazy" /><figcaption>Sắc xanh lá</figcaption></figure><figure><img src="/images/uploads/film-phan-guong-xanh-xam.png" alt="Minh họa sắc xanh xám của film phản gương trên cửa kính" width="1500" height="1120" loading="lazy" /><figcaption>Sắc xanh xám</figcaption></figure><p>Ảnh minh họa sắc phim. Đối chiếu mẫu thực tế khi chọn.</p></div>:<img src={landing.image} alt={`Tham khảo ứng dụng ${landing.name.toLocaleLowerCase('vi-VN')}`} width="800" height="600" loading="lazy" />}</section>

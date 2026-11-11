@@ -1,0 +1,16 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ElevatorLanding from '../components/ElevatorLanding.astro';
+import service from '../data/elevator-service.json';
+const canonical='https://idecal.vn/'+service.slug+'/';
+const structuredData=[
+  {'@type':'BreadcrumbList',itemListElement:[
+    {'@type':'ListItem',position:1,name:'Trang chủ',item:'https://idecal.vn/'},
+    {'@type':'ListItem',position:2,name:service.parent.name,item:'https://idecal.vn'+service.parent.href},
+    {'@type':'ListItem',position:3,name:service.title,item:canonical},
+  ]},
+  {'@type':'Service',name:service.title,url:canonical,description:service.description,serviceType:['Dán film nội thất thang máy','Dán decal in quảng cáo thang máy'],image:[service.heroImage.src,...service.gallery.map(image=>image.src)].map(image=>'https://idecal.vn'+image),provider:{'@id':'https://idecal.vn/#organization'}},
+  {'@type':'FAQPage',mainEntity:service.faqs.map(item=>({'@type':'Question',name:item.question,acceptedAnswer:{'@type':'Answer',text:item.answer}}))},
+];
+---
+<Layout title={service.seoTitle} description={service.description} canonicalURL={canonical} image={service.heroImage.src} structuredData={structuredData}><ElevatorLanding /></Layout>
