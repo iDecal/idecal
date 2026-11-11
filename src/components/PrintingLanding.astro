@@ -1,0 +1,37 @@
+---
+import source from '../data/printing-original.json';
+import materialContent from '../data/printing-service.json';
+import {serviceOfferings} from '../data/site-offerings';
+import {uploadedServicePhotos} from '../data/installation-photo-links';
+import BannerBenefits from './BannerBenefits.astro';
+import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
+import '../styles/printing-landing.css';
+const quote='/lien-he-idecal?dich-vu=in-decal#yeu-cau';
+const service=serviceOfferings.find(item=>item.slug==='in-decal')!;
+const sections=[{id:'cong-nghe-in',label:'Công nghệ in'},{id:'vat-lieu-in',label:'Chọn vật liệu'},{id:'vi-sao-chon-idecal',label:'Lợi ích'},{id:'quy-trinh-in',label:'Đặt in'},{id:'lp-cau-hoi',label:'Câu hỏi thường gặp'}];
+---
+<div class="printing-page">
+  <section class="printing-hero compact-page-banner">
+    <div class="container printing-hero-grid">
+      <div class="compact-banner-copy"><nav class="printing-breadcrumb" aria-label="Đường dẫn trang"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><a href="/dich-vu/">Dịch vụ</a><span aria-hidden="true">/</span><span aria-current="page">In Decal</span></nav><p data-heading-label>In ấn theo thiết kế của bạn</p><h1>{source.hero.title}</h1><div class="printing-hero-lead" set:html={source.hero.blocks[0].html} /><div class="printing-actions"><a href={quote} class="btn-primary-solid">{source.hero.action}<span aria-hidden="true">→</span></a><a href="#vat-lieu-in" class="printing-text-link">Tìm hiểu vật liệu <span aria-hidden="true">↓</span></a></div><BannerBenefits benefits={['Đa dạng chất liệu','Hỗ trợ thiết kế','In theo yêu cầu'].map(title=>({title}))} /></div>
+      <figure class="printing-hero-photo"><img src={source.hero.image.src} alt={source.hero.image.alt} width={source.hero.image.width} height={source.hero.image.height} fetchpriority="high" /><figcaption>Hình ảnh, tem nhãn và Decal theo thiết kế</figcaption></figure>
+    </div>
+  </section>
+  <nav class="printing-jump" aria-label="Nội dung dịch vụ in Decal"><div class="container">{sections.map(section=><a href={'#'+section.id}>{section.label}</a>)}</div></nav>
+
+  <section id="cong-nghe-in" class="container printing-section"><header class="printing-section-heading"><div><p data-heading-label>Từ thiết kế đến bản in</p><h2>Chọn công nghệ in theo nhu cầu</h2></div><div id="pham-vi" class="printing-introduction" set:html={source.hero.blocks[1].html} /></header><div class="printing-technologies">{source.technologies.map((technology,index)=><article><span class="printing-order" aria-hidden="true">0{index+1}</span><div><h3>{technology.title}</h3><div set:html={technology.blocks.map(block=>block.html).join('')} /></div></article>)}</div></section>
+
+  <section id="vat-lieu-in" class="printing-materials printing-section"><div class="container"><header class="printing-section-heading"><div><p data-heading-label>Vật liệu Decal</p><h2>Chọn chất liệu cho vị trí sử dụng</h2></div><p>Mỗi vật liệu có độ che phủ, bề mặt và ứng dụng khác nhau. Tìm hiểu trước khi chọn mẫu in.</p></header><div class="printing-material-grid">{materialContent.materials.map(material=><article><a href={`/blog/${material.articleSlug}`} class="printing-material-image" aria-label={`Tìm hiểu ${material.name}`}><img src={material.image} alt={material.imageAlt} width="600" height="450" loading="lazy" /></a><div class="printing-material-copy"><span>{material.tag}</span><h3><a href={`/blog/${material.articleSlug}`}>{material.name}</a></h3><p>{material.summary}</p><a class="printing-text-link" href={`/blog/${material.articleSlug}`}>Tìm hiểu vật liệu <span aria-hidden="true">→</span></a></div></article>)}</div></div></section>
+
+  <section id="vi-sao-chon-idecal" class="container printing-section printing-benefits"><div class="printing-benefits-visual"><figure><img src={source.benefits.image.src} alt={source.benefits.image.alt} width={source.benefits.image.width} height={source.benefits.image.height} loading="lazy" /></figure><details class="printing-source-stats"><summary>Vật liệu & mực in <span aria-hidden="true">+</span></summary><dl>{source.benefits.indicators.map(item=><div><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></details></div><div><p data-heading-label>Chất lượng & dịch vụ</p><h2>{source.benefits.heading.title} {source.benefits.heading.subtitle}</h2><ul class="printing-checklist">{source.benefits.points.map(point=><li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg><span>{point}</span></li>)}</ul><a class="printing-text-link" href={source.benefits.action.href}>{source.benefits.action.label}<span aria-hidden="true">→</span></a></div></section>
+
+  <section id="quy-trinh-in" class="printing-order-section printing-section"><div class="container"><header class="printing-section-heading"><div><p data-heading-label>Dễ dàng đặt in</p><h2>Từ file thiết kế đến bản in</h2></div><p>Chuẩn bị file, kích thước và số lượng để trao đổi đúng nhu cầu ngay từ đầu.</p></header><ol class="printing-steps">{service.steps.map((step,index)=><li><span aria-hidden="true">0{index+1}</span><h3>{step.title}</h3><p>{step.text}</p></li>)}</ol></div></section>
+
+  <div class="container printing-gallery"><InstallationPhotoGallery numbers={uploadedServicePhotos['in-decal']} heading="Ứng dụng bản in tại công trình" /></div>
+
+  <section id="lp-cau-hoi" class="container printing-section printing-faq"><header><p data-heading-label>Hỗ trợ đặt in</p><h2>{source.faq.heading.title} {source.faq.heading.subtitle}</h2><div set:html={source.faq.intro.map(block=>block.html).join('')} /><a href={quote} class="printing-text-link">{source.faq.contact.label}<span aria-hidden="true">→</span></a></header><div class="printing-faq-list">{source.faq.items.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div set:html={item.blocks.map(block=>block.html).join('')} /></details>)}</div></section>
+
+  <section id="blog-in-decal" class="printing-guides printing-section"><div class="container"><header class="printing-section-heading"><div><p data-heading-label>{source.relatedHeading.subtitle}</p><h2>{source.relatedHeading.title}</h2></div><a href="/blog/chuyen-muc/so-sanh-vat-lieu/" class="printing-text-link">Khám phá vật liệu Decal <span aria-hidden="true">→</span></a></header><div class="printing-guide-grid">{source.related.map(article=><article><a href={article.href} class="printing-guide-image" aria-label={article.title}><img src={article.image.src} alt={article.image.alt} width={article.image.width} height={article.image.height} loading="lazy" /></a><div><time>{article.date}</time><h3><a href={article.href}>{article.title}</a></h3><a href={article.href} class="printing-text-link">Đọc bài viết <span aria-hidden="true">→</span></a></div></article>)}</div></div></section>
+
+  <section class="printing-cta"><div class="container printing-cta-grid"><div><h2>Cần báo giá in Decal?</h2><p>Gửi file, kích thước và số lượng để iDecal tư vấn vật liệu, cách hoàn thiện và chi phí.</p></div><div class="printing-cta-actions"><a class="btn-primary-solid" href={quote}>Nhận báo giá in <span aria-hidden="true">→</span></a><a class="printing-text-link" href="https://zalo.me/0866077040">Hotline/Zalo: 0866.077.040</a></div></div></section>
+</div>

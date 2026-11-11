@@ -850,3 +850,7 @@
 /phim-cach-nhiet/ /phim-cach-nhiet-nha-kinh/ 301
 /dich-vu/phim-cach-nhiet /phim-cach-nhiet-nha-kinh/ 301
 /dich-vu/phim-cach-nhiet/ /phim-cach-nhiet-nha-kinh/ 301
+
+# Imported printing service: retain the established service route
+/in-decal-theo-yeu-cau /dich-vu/in-decal/ 301
+/in-decal-theo-yeu-cau/ /dich-vu/in-decal/ 301
