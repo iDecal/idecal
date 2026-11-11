@@ -52,3 +52,5 @@
 - Header dùng nhãn ngắn “Dịch vụ” cho mega menu. Chuyên mục Blog “Vật liệu Decal” thay tên “So sánh vật liệu”, giới thiệu đặc điểm/ứng dụng/cách chọn; giữ slug so-sanh-vat-lieu để bảo toàn liên kết. CMS và trình nhập Blog dùng cùng tên chuyên mục.
 
 - Chủ website đã cho phép đổi tiêu đề cả 16 bài thuộc Vật liệu Decal theo hướng giới thiệu đặc điểm/ứng dụng/cách chọn. Danh sách tiêu đề cũ/mới và hash nội dung giữ nguyên ở docs/material-blog-title-changes.json; title và seoTitle dùng tiêu đề được duyệt này. Đây là ngoại lệ cụ thể cho quy tắc giữ tiêu đề XML; không đổi URL, nội dung, ảnh hoặc các bài ngoài danh sách.
+
+- Nút khu vực header desktop dùng gradient xanh–tím, chữ/icon trắng. Footer bỏ uppercase, giữ kiểu chữ tự nhiên. H2 mobile dưới 768px tăng đúng 2px so với thang hiện tại, gồm cả H2 thẻ/sidebar/Blog; dùng token --heading-h2-bump và --heading-h2-local, không làm tăng desktop.

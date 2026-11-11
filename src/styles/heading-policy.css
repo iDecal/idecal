@@ -33,7 +33,7 @@
     -webkit-text-fill-color:var(--heading-surface-ink,transparent)!important;
   }
   body h2 {
-    font-size:var(--heading-h2)!important;
+    font-size:calc(var(--heading-h2-local,var(--heading-h2)) + var(--heading-h2-bump,0px))!important;
     text-transform:none!important;
     background-image:none!important;
     background-clip:text!important;
@@ -46,17 +46,18 @@
   body h5 {font-size:var(--heading-h5)!important;}
   body h6 {font-size:var(--heading-h6)!important;}
   /* Compact titles keep card, sidebar and article hierarchy below section titles. */
-  body .blog-featured h2 {font-size:clamp(21px,2.3vw,28px)!important;}
-  body .blog-section-title h2 {font-size:22px!important;}
-  body .blog-card-content h2 {font-size:17px!important;}
-  body .blog-article-body h2 {font-size:23px!important;}
-  body .blog-sidebar-categories h2 {font-size:13px!important;}
-  body .blog-contact h2 {font-size:16px!important;}
-  body .product-card-title {font-size:18px!important;}
-  body .product-information-item summary h2 {font-size:13px!important;}
+  body .blog-featured h2 {--heading-h2-local:clamp(21px,2.3vw,28px);}
+  body .blog-section-title h2 {--heading-h2-local:22px;}
+  body .blog-card-content h2 {--heading-h2-local:17px;}
+  body .blog-article-body h2 {--heading-h2-local:23px;}
+  body .blog-sidebar-categories h2 {--heading-h2-local:13px;}
+  body .blog-contact h2 {--heading-h2-local:16px;}
+  body h2.product-card-title {--heading-h2-local:18px;}
+  body .product-information-item summary h2 {--heading-h2-local:13px;}
+  @media(max-width:767px) { :root {--heading-h2-bump:2px;} }
   @media(max-width:639px) {
-    body .blog-section-title h2 {font-size:19px!important;}
-    body .blog-article-body h2 {font-size:21px!important;}
+    body .blog-section-title h2 {--heading-h2-local:19px;}
+    body .blog-article-body h2 {--heading-h2-local:21px;}
   }
   body :is(h1,h2,h3,h4,h5,h6) :is(a,span,strong,b,em,i,mark,small) {
     color:inherit!important;
