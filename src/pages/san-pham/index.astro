@@ -7,7 +7,8 @@ import ProductGroupIcon from '../../components/ProductGroupIcon.astro';
 import '../../styles/product-groups.css';
 import { products, productCategories, productsInCategory } from '../../data/catalogue';
 import { productLandings, landingProducts } from '../../data/site-offerings';
-const addedCategories = productCategories.filter(category => category.editorCreated && category.slug !== 'phim-bao-ve');
+const hiddenCategorySlugs = new Set(['phim-bao-ve','decal-trang-tri','decal-cat-cnc','decal-cat-vi-tinh']);
+const addedCategories = productCategories.filter(category => category.editorCreated && !hiddenCategorySlugs.has(category.slug));
 const totalGroups = productLandings.length + addedCategories.length;
 ---
 <Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description={"Khám phá " + totalGroups + " nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt, film nội thất và các vật liệu trang trí, bảo vệ."}>
@@ -21,7 +22,7 @@ const totalGroups = productLandings.length + addedCategories.length;
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {productLandings.map(category => <article class="category-card group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
         <a href={`/${category.slug}`} class="flex h-full flex-col">
-          <div class="product-group-cover relative aspect-square shrink-0 overflow-hidden"><ProductImage src={category.image} alt={category.name} /><div class="product-group-title"><ProductGroupIcon slug={category.slug} /><h3>{category.name}</h3></div></div>
+          <div class="product-group-cover relative aspect-square shrink-0 overflow-hidden"><ProductImage src={category.image} alt={category.name} /><div class="product-group-title" data-heading-theme="dark"><ProductGroupIcon slug={category.slug} /><h3>{category.name}</h3></div></div>
           <div class="flex flex-1 flex-col p-6"><p class="mb-6 text-sm">{category.description}</p><div class="mt-auto flex items-center justify-between gap-3 text-sm"><span class="text-text-muted">{landingProducts(category).length} mẫu</span><span class="font-medium text-primary">Xem nhóm sản phẩm →</span></div></div>
         </a>
       </article>)}
