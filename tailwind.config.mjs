@@ -71,7 +71,7 @@ export default {
       },
       "fontSize": {
         "h1": [
-          "clamp(1.75rem, 3.5vw, 2.5rem)",
+          "var(--heading-h1)",
           {
             "lineHeight": "1.2",
             "fontWeight": "600",
@@ -79,7 +79,7 @@ export default {
           }
         ],
         "h2": [
-          "clamp(1.5rem, 3vw, 2.125rem)",
+          "var(--heading-h2)",
           {
             "lineHeight": "1.2",
             "fontWeight": "600",
@@ -87,28 +87,28 @@ export default {
           }
         ],
         "h3": [
-          "clamp(1.25rem, 2.5vw, 1.625rem)",
+          "var(--heading-h3)",
           {
             "lineHeight": "1.3",
             "fontWeight": "600"
           }
         ],
         "h4": [
-          "1.125rem",
+          "var(--heading-h4)",
           {
             "lineHeight": "1.4",
             "fontWeight": "600"
           }
         ],
         "h5": [
-          "1rem",
+          "var(--heading-h5)",
           {
             "lineHeight": "1.5",
             "fontWeight": "600"
           }
         ],
         "h6": [
-          "0.875rem",
+          "var(--heading-h6)",
           {
             "lineHeight": "1.5",
             "fontWeight": "600",

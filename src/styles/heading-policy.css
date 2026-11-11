@@ -1,0 +1,72 @@
+/* One presentation policy for native, CMS and imported document headings.
+   Values are 2px below the previous shared scale. Never rewrite source text. */
+:root {
+  --heading-ink:#1b4f7a;
+  --heading-gradient:linear-gradient(100deg,#0f8fe0 0%,#4f46e5 55%,#7d12f7 100%);
+  --heading-h1:clamp(34px,3.5vw,38px);
+  --heading-h2:clamp(24px,2.5vw,34px);
+  --heading-h3:clamp(18px,2.5vw,24px);
+  --heading-h4:16px;
+  --heading-h5:14px;
+  --heading-h6:12px;
+}
+/* Important layer also wins over legacy page rules and pasted inline styles. */
+@layer heading-policy {
+  body :is(h1,h2,h3,h4,h5,h6) {
+    font-family:'Lexend Variable',sans-serif!important;
+    font-weight:600!important;
+    letter-spacing:-.02em!important;
+    line-height:1.35!important;
+    overflow-wrap:anywhere;
+    color:var(--heading-ink)!important;
+    background-image:none!important;
+    -webkit-text-fill-color:currentColor!important;
+  }
+  body h1 {
+    font-size:var(--heading-h1)!important;
+    line-height:1.25!important;
+    background-image:var(--heading-gradient)!important;
+    background-clip:text!important;
+    -webkit-background-clip:text!important;
+    color:transparent!important;
+    -webkit-text-fill-color:transparent!important;
+  }
+  body h2 {font-size:var(--heading-h2)!important;text-transform:uppercase!important;}
+  body h3 {font-size:var(--heading-h3)!important;}
+  body h4 {font-size:var(--heading-h4)!important;}
+  body h5 {font-size:var(--heading-h5)!important;}
+  body h6 {font-size:var(--heading-h6)!important;}
+  /* Compact titles keep card, sidebar and article hierarchy below section titles. */
+  body .blog-featured h2 {font-size:clamp(21px,2.3vw,28px)!important;}
+  body .blog-section-title h2 {font-size:22px!important;}
+  body .blog-card-content :is(h2,h3) {font-size:17px!important;}
+  body .blog-article-body h2 {font-size:23px!important;}
+  body .blog-article-body h3 {font-size:19px!important;}
+  body .blog-sidebar-categories h2 {font-size:13px!important;}
+  body .blog-contact h2 {font-size:16px!important;}
+  body .product-card-title {font-size:18px!important;}
+  body .product-information-item summary h2 {font-size:13px!important;}
+  @media(max-width:639px) {
+    body .blog-section-title h2 {font-size:19px!important;}
+    body .blog-article-body h2 {font-size:21px!important;}
+    body .blog-article-body h3 {font-size:18px!important;}
+  }
+  body :is(h1,h2,h3,h4,h5,h6) :is(a,span,strong,b,em,i,mark,small) {
+    color:inherit!important;
+    -webkit-text-fill-color:inherit!important;
+    font-size:inherit!important;
+    font-family:inherit!important;
+    text-transform:inherit!important;
+    background:none!important;
+  }
+  /* Dark/photo panels need a light heading color for readable contrast. */
+  body :is(.brand-dark,[data-theme='dark'],.hero-gradient,.office-hero,.office-final-cta,.home-service-cover,#site-footer) :is(h2,h3,h4,h5,h6) {
+    color:#d9edff!important;
+  }
+  body :is(.office-hero,.brand-dark,[data-theme='dark']) h1 {
+    background-image:linear-gradient(100deg,#70d4ff,#b7b5ff 55%,#e0b9ff)!important;
+  }
+  @media(forced-colors:active) {
+    body :is(h1,h2,h3,h4,h5,h6) {background:none!important;color:CanvasText!important;-webkit-text-fill-color:CanvasText!important;}
+  }
+}
