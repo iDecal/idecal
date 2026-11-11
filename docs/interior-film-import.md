@@ -14,3 +14,22 @@ Nguồn: file người dùng gửi “Film dán nội thất - Làm mới nội 
 Tái nhập: node scripts/import-interior-film.mjs <đường dẫn HTML>. Importer kiểm tra canonical và số phần trước khi trích xuất, chỉ cho phép các thẻ nội dung cơ bản và liên kết phù hợp. Khi nguồn thay đổi cấu trúc cần kiểm tra lại; không tự thay nguồn.
 
 Kiểm tra: npm run check và npm test. Bộ kiểm thử có scripts/check-interior-film.mjs để đối chiếu các khối chữ, ảnh, H1, canonical, FAQ/schema và liên kết mẫu. Kiểm tra trình duyệt tại cả trang chính và đường dẫn dịch vụ cũ, desktop/mobile.
+
+## Thiết kế lại từ tệp gửi lần sau
+
+Chủ website xác nhận cập nhật trang dịch vụ /dich-vu-film-dan-noi-that/.
+Tệp HTML mới được đối chiếu và tái nhập: SHA-256, 82 khối chữ và 17 ảnh khớp
+nguồn đã lưu. Không thay trang vật liệu /film-dan-noi-that/.
+
+- Chỉ sử dụng dữ liệu chữ, ảnh và liên kết nội dung đã làm sạch; không dùng giao diện, CSS hay JavaScript của HTML nguồn.
+- Đầu trang có ảnh lớn, giới thiệu và hai thao tác chọn mẫu/nhận tư vấn. Menu nội dung bám dưới header, chỉ rõ phần đang đọc.
+- Sáu nhóm mẫu trình bày hai cột trên desktop, một cột trên mobile; có lối chọn nhóm nhanh. Mô tả luôn hiện, danh sách ứng dụng đầy đủ nằm trong details mở theo nhu cầu.
+- Bốn nhóm ứng dụng dùng tab có nhãn, điều khiển bằng chuột, cảm ứng và các phím mũi tên/Home/End. Không có JavaScript thì cả bốn nhóm đều hiện.
+- Năm FAQ dùng details đóng mặc định; nút báo giá mở biểu mẫu có sẵn và chọn dịch vụ thi công, không gửi yêu cầu tự động.
+- Theo hệ thống giao diện hiện tại: nền trắng/sáng, nhấn xanh–tím, thang chữ chung; giữ ảnh, ALT/title, H1, canonical và toàn bộ nội dung nguồn.
+
+Sau build, chạy python3 scripts/test-interior-film.py qua Astro preview cổng
+4322: kiểm tra 1440/1024/768/390/320px, tab/bàn phím, mục mở rộng, vị trí neo,
+FAQ, chọn dịch vụ báo giá và khả năng đọc khi không có JavaScript. Bộ test
+chủ động chặn ảnh ngoài để kiểm tra khung dự phòng; không dùng kết quả đó
+để khẳng định ảnh ngoài đang tải thành công.

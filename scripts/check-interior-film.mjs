@@ -24,7 +24,9 @@ for(const image of proof.images){
  assert.ok(rendered,'Missing source image: '+image.src);
  assert.equal(attr(rendered,'alt'),getImageSeo(image.src,image.alt).alt);
 }
-const summaries=mainNodes.filter(node=>node.tagName==='summary');
+const questions=mainNodes.find(node=>(attr(node,'class')??'').split(/\s+/).includes('interior-film-questions'));
+const within=(node,ancestor)=>{for(let parent=node;parent;parent=parent.parentNode)if(parent===ancestor)return true;return false;};
+const summaries=mainNodes.filter(node=>node.tagName==='summary'&&within(node,questions));
 assert.equal(summaries.length,5);
 assert.ok(!mainNodes.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQs must start closed');
 for(const item of source.faq.items)assert.ok(summaries.some(node=>text(node).includes(item.question)));
