@@ -1,0 +1,56 @@
+---
+import AdvertisingIcon from './AdvertisingIcon.astro';
+import BannerBenefits from './BannerBenefits.astro';
+import SignageServiceCard from './SignageServiceCard.astro';
+import ElevatorServiceCard from './ElevatorServiceCard.astro';
+import ProductCatalog from './ProductCatalog.astro';
+import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
+import RelatedGuides from './RelatedGuides.astro';
+import {getEntry} from 'astro:content';
+import signageGallery from '../data/signage-gallery.json';
+import {advertisingLanding as landing,advertisingProducts,advertisingServices,advertisingPhotos,advertisingSteps,advertisingFaqs,advertisingQuote as quote} from '../data/advertising-landing';
+import '../styles/advertising-landing.css';
+const navigation=[
+  {id:'giai-phap-quang-cao',label:'Giải pháp',icon:'layers'},
+  {id:'ung-dung-quang-cao',label:'Ứng dụng',icon:'window'},
+  {id:'mau-san-pham',label:'Mẫu sản phẩm',icon:'shop'},
+  {id:'cong-trinh-quang-cao',label:'Ảnh thực tế',icon:'camera'},
+  {id:'quy-trinh-quang-cao',label:'Quy trình',icon:'steps'},
+  {id:'bao-gia-quang-cao',label:'Báo giá',icon:'quote'},
+  {id:'cau-hoi-quang-cao',label:'Câu hỏi',icon:'chat'},
+] as const;
+const useIcons=['window','shop','event'] as const;
+const checklist=['Ảnh và kích thước từng vị trí','Nội dung, logo hoặc file thiết kế','Số lượng và thời gian cần sử dụng','Địa điểm, điều kiện và khung giờ thi công'];
+const signagePost=await getEntry('blog',signageGallery.featuredPost.slug);
+const signageImage=signagePost?{src:signagePost.data.image,alt:signagePost.data.title,title:signagePost.data.title,width:signageGallery.featuredPost.width,height:signageGallery.featuredPost.height}:undefined;
+---
+<div class="advertising-page" data-advertising-page>
+  <section class="advertising-hero">
+    <div class="container advertising-hero-grid">
+      <div class="advertising-hero-copy"><p data-heading-label>{landing.name}</p><h1>{landing.headline}</h1><p class="advertising-lead">{landing.description}</p><div class="advertising-hero-actions"><a href="#giai-phap-quang-cao" class="btn-primary-solid">Chọn giải pháp quảng cáo <AdvertisingIcon name="arrow" /></a><a href={quote} class="advertising-secondary">Nhận tư vấn & báo giá</a></div><BannerBenefits benefits={landing.benefits.map(title=>({title}))}/></div>
+      <figure class="advertising-hero-photo"><img src={landing.image} alt="Decal quảng cáo trên mặt tiền showroom Toyota" width="1080" height="543" loading="eager" fetchpriority="high" decoding="async"/><figcaption><AdvertisingIcon name="camera"/>Quảng cáo trên hệ kính mặt tiền</figcaption></figure>
+    </div>
+  </section>
+  <nav class="advertising-nav" aria-label="Nội dung Decal quảng cáo"><div class="container">{navigation.map(item=><a href={'#'+item.id}><AdvertisingIcon name={item.icon}/><span>{item.label}</span></a>)}</div></nav>
+
+  <section id="giai-phap-quang-cao" class="container advertising-section">
+    <header class="advertising-heading advertising-heading-row"><div><p data-heading-label>Từ ý tưởng đến vị trí trưng bày</p><h2>Chọn đúng phần việc bạn cần</h2></div><p>In theo thiết kế, cắt chữ hay làm mới bảng hiệu? Khám phá từng dịch vụ để chọn vật liệu và cách thực hiện phù hợp.</p></header>
+    <div class="advertising-service-grid">
+      {advertisingServices.map(item=><article class="advertising-service-card"><figure><a href={item.href} aria-label={item.title}><img src={item.image} alt={item.alt} width={item.width} height={item.height} loading="lazy" decoding="async"/></a></figure><div><p class="advertising-service-label" data-heading-label>Dịch vụ Decal quảng cáo</p><h2><a href={item.href}>{item.title}</a></h2><p>{item.description}</p><a href={item.href} class="advertising-card-link">{item.action}<AdvertisingIcon name="arrow"/></a></div></article>)}
+      <SignageServiceCard image={signageImage}/>
+      <ElevatorServiceCard/>
+    </div>
+  </section>
+
+  <section id="ung-dung-quang-cao" class="advertising-soft"><div class="container advertising-section"><header class="advertising-heading"><p data-heading-label>Ứng dụng theo không gian</p><h2>Decal quảng cáo phù hợp ở đâu?</h2></header><div class="advertising-uses">{landing.uses.map((item,index)=><article><span class="advertising-icon-tile"><AdvertisingIcon name={useIcons[index]}/></span><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
+
+  <div class="advertising-catalogue"><ProductCatalog items={advertisingProducts} heading="Mẫu Decal quảng cáo & sản phẩm trưng bày"/></div>
+  <div class="container advertising-gallery"><InstallationPhotoGallery photos={advertisingPhotos} id="cong-trinh-quang-cao" heading="Hình ảnh Decal quảng cáo tại công trình" introduction="Tham khảo cách thể hiện nội dung trên kính cửa hàng và tại không gian quảng cáo. Bấm vào ảnh để xem lớn."/></div>
+
+  <section id="quy-trinh-quang-cao" class="advertising-soft"><div class="container advertising-section advertising-process"><header class="advertising-heading"><p data-heading-label>Thống nhất trước khi sản xuất</p><h2>Từ nhu cầu đến sản phẩm hoàn thiện</h2><p>Có thể mua vật liệu hoặc trao đổi thêm về thiết kế, in, cắt và thi công. Phạm vi công việc được xác nhận trước khi thực hiện.</p><a href="/dich-vu/thiet-ke/" class="advertising-text-link">Cần hỗ trợ thiết kế?<AdvertisingIcon name="arrow"/></a></header><ol>{advertisingSteps.map((item,index)=><li><span class="advertising-step-number" aria-hidden="true">{'0'+(index+1)}</span><div><h3>{item.title}</h3><p>{item.description}</p></div></li>)}</ol></div></section>
+
+  <section id="bao-gia-quang-cao" class="container advertising-section advertising-quote"><div><header class="advertising-heading"><p data-heading-label>Chuẩn bị nhanh, tư vấn đúng nhu cầu</p><h2>Báo giá theo vị trí và khối lượng thực tế</h2><p>{landing.guidance}</p></header><ul class="advertising-checklist">{checklist.map(item=><li><AdvertisingIcon name="check"/><span>{item}</span></li>)}</ul><a href="/huong-dan-do-kinh/" class="advertising-text-link">Xem hướng dẫn đo kính<AdvertisingIcon name="arrow"/></a></div><aside class="advertising-quote-card"><span class="advertising-icon-tile"><AdvertisingIcon name="chat"/></span><h3>Gửi ý tưởng của bạn cho iDecal</h3><p>Chọn phần việc cần hỗ trợ và gửi thông tin công trình để trao đổi vật liệu, cách in và phương án thi công.</p><a href={quote} class="btn-primary-solid">Nhận tư vấn & báo giá<AdvertisingIcon name="arrow"/></a><div class="advertising-contact-links"><a href="https://zalo.me/0866077040">Nhắn Zalo</a><a href="tel:0866077040">0866.077.040</a></div></aside></section>
+
+  <section id="cau-hoi-quang-cao" class="advertising-faq-surface"><div class="container advertising-section advertising-faq"><header class="advertising-heading"><p data-heading-label>Giải đáp trước khi đặt dịch vụ</p><h2>Câu hỏi thường gặp về Decal quảng cáo</h2><p>Tìm hiểu cách chọn vật liệu, chuẩn bị thiết kế và lên phương án thi công.</p><a href={quote} class="advertising-text-link">Trao đổi nhu cầu riêng<AdvertisingIcon name="arrow"/></a></header><div class="advertising-faq-items">{advertisingFaqs.map(item=><details><summary><span>{item.question}</span><span class="advertising-faq-toggle" aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></div></section>
+  <RelatedGuides context="decal-quang-cao"/>
+</div>

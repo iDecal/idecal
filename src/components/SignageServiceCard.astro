@@ -1,9 +1,11 @@
 ---
 import source from '../data/signage-original.json';
 import InteriorFilmImage from './InteriorFilmImage.astro';
+interface Props {image?:typeof source.hero.image;}
+const image=Astro.props.image??source.hero.image;
 ---
 <section class="container signage-service-card" aria-labelledby="signage-child-service-title">
-  <figure><a href="/dan-decal-bang-hieu/" aria-label={source.hero.title}><InteriorFilmImage image={source.hero.image} /></a></figure>
+  <figure><a href="/dan-decal-bang-hieu/" aria-label={source.hero.title}><InteriorFilmImage image={image} /></a></figure>
   <div><p class="signage-service-kicker">Dịch vụ thuộc Decal quảng cáo</p><h2 id="signage-child-service-title"><a href="/dan-decal-bang-hieu/">Dịch vụ dán decal bảng hiệu</a></h2><p>{source.hero.intro.text}</p><a href="/dan-decal-bang-hieu/" class="btn-idecal-bold">Xem vật liệu, quy trình & bảng giá →</a></div>
 </section>
 <style>

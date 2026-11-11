@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Trang /decal-quang-cao/ dùng AdvertisingLanding/advertising-landing.ts theo yêu cầu làm lại UX: giữ H1, mô tả, ba ứng dụng, hướng dẫn chọn và sáu sản phẩm hiện có; bố trí bốn dịch vụ in/cắt/bảng hiệu/thang máy, ảnh thi công có nguồn, quy trình và tám FAQ đóng mặc định khớp FAQPage. Giữ liên kết hai dịch vụ con cùng các ID signage-child-service-title/elevator-child-service-title. CTA báo giá chọn thi-cong-decal; không tự đặt giá trọn gói hoặc đổi URL các trang liên quan.
+
 - Các bài nhập từ XML WordPress phải giữ nguyên tiêu đề và toàn bộ nội dung gốc. Chỉ chỉnh nội dung khi chủ website yêu cầu cụ thể; không tự viết lại để đạt điểm SEO.
 - Với nội dung chủ website cung cấp và cho biết đã lên TOP Google, giữ đầy đủ nội dung, tiêu đề và URL hiện có. Có thể bổ sung theo yêu cầu và cải thiện bố cục/trình bày; không tự cắt bớt, tóm tắt thay thế hoặc đổi URL.
 - Trước khi nhập, kiểm tra tệp thực tế có đúng nội dung được nhắc đến. Nếu tệp không khớp, báo rõ và yêu cầu đúng nguồn; không tự suy diễn nội dung thay thế.
