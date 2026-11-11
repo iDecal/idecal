@@ -115,9 +115,13 @@
 .office-gallery-copy { width:100%; max-width:none; }
 .office-gallery-links { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:22px; }
 .office-gallery-links a { display:inline-flex; min-height:44px; align-items:center; font-size:14px; color:#0d6b96; }
-.office-final-cta { padding:64px 0; background:#0a1e40; }
-.office-final-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
-.office-final-grid h2 { margin:0 0 24px; }
+.office-final-cta { padding:40px 0; background:var(--idecal-soft-gradient); border-top:1px solid #e0eaf4; }
+.office-final-grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:32px; align-items:center; }
+.office-final-grid h2 { margin:0 0 12px; }
+.office-final-grid p { margin:0; max-width:700px; }
+.office-final-actions { display:flex; flex-direction:column; align-items:center; gap:14px; }
+.office-final-phone { font-size:14px; color:#1b4f7a; text-underline-offset:4px; }
+.office-final-phone:hover { text-decoration:underline; }
 .office-why-contact { padding:28px; border:1px solid #ffffff30; border-radius:18px; background:#ffffff08; }
 .office-why-contact .office-original-copy p { margin-bottom:14px; }
 .office-why-contact .office-original-copy p:last-child a { font-size:21px; font-weight:600; }

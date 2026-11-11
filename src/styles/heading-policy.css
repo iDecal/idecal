@@ -6,7 +6,7 @@
   --heading-gradient:linear-gradient(100deg,#0f8fe0 0%,#4f46e5 55%,#7d12f7 100%);
   --heading-h1:clamp(34px,3.5vw,38px);
   --heading-h2:clamp(24px,2.5vw,34px);
-  --heading-h3:17px;
+  --heading-h3:19px;
   --heading-h4:17px;
   --heading-h5:17px;
   --heading-h6:17px;
@@ -70,8 +70,9 @@
     font-family:'Inter Variable',sans-serif!important;
     font-size:17px!important;
   }
+  body h3, body h3 * {font-size:19px!important;}
   /* Surface tokens inherit into headings; a nested light card resets them. */
-  body :is(.brand-dark,[data-theme='dark'],[data-heading-theme='dark'],.hero-gradient,.home-consult,.office-why,.office-final-cta,.home-service-cover,.product-landing-image-badge,#site-footer) {
+  body :is(.brand-dark,[data-theme='dark'],[data-heading-theme='dark'],.hero-gradient,.home-consult,.office-why,.home-service-cover,.product-landing-image-badge,#site-footer) {
     --heading-surface-ink:#fff;
     --heading-surface-gradient:none;
   }

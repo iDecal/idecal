@@ -16,6 +16,12 @@ assert.equal(text(nodes.find(n=>n.tagName==='h1')),copy.h1);
 const sectionStart=source.tokens.findIndex(token=>token.type==='h2');
 const sectionEnd=source.tokens.findIndex((token,index)=>index>sectionStart&&token.type==='h2');
 const editedBlocks=new Set([...source.tokens.slice(sectionStart+1,sectionEnd).map(token=>token.text), ...source.tokens.filter(token=>['h1','h2'].includes(token.type)).map(token=>token.text)]);
+// Owner authorized replacing only the long closing sales copy with a concise light CTA.
+const sectionStarts=source.tokens.flatMap((token,index)=>token.type==='h2'?[index]:[]);
+const whyBlocks=source.tokens.slice(sectionStarts[1]+1,sectionStarts[2]);
+const contactStart=whyBlocks.findIndex(token=>token.text?.startsWith('Bạn cần báo giá'));
+const closingBlocks=source.tokens.slice(sectionStarts[5]+1);
+for(const token of [...whyBlocks.slice(contactStart),...closingBlocks])editedBlocks.add(token.text);
 for(const block of snapshot.blocks)if(!editedBlocks.has(block))assert.ok(rendered.includes(normalize(block)),`Missing retained editorial block: ${block}`);
 for(const heading of Object.values(copy.headings))assert.ok(nodes.some(node=>node.tagName==='h2'&&text(node)===heading),`Missing edited heading: ${heading}`);
 for(const item of copy.audiences)assert.ok(rendered.includes(normalize(item.title))&&rendered.includes(normalize(item.text)),`Missing audience: ${item.title}`);
@@ -35,3 +41,10 @@ assert.ok(nodes.some(n=>n.tagName==='table'),'Source price table is required');
 assert.ok(nodes.some(n=>n.tagName==='link'&&attr(n,'rel')==='canonical'&&attr(n,'href')===source.sourceCanonical));
 assert.ok(!html.includes('google.com/search?q=link-subpage-logo'),'Replace source placeholder with the real cutting service');
 console.log(`Office glass passed: ${snapshot.blocks.length} archived source blocks, 5 concise solutions, ${source.images.length} archived source images, 9 replacement photos, keyword H1, edited headings, application contexts, original canonical, source table and ${faqs.length} closed FAQs.`);
+
+const closing=nodes.find(node=>node.tagName==='section'&&attr(node,'class')==='office-final-cta');
+assert.ok(closing,'Concise closing CTA is required');
+const closingNodes=[];const collectClosing=node=>{closingNodes.push(node);for(const child of node.childNodes??[])collectClosing(child)};collectClosing(closing);
+assert.equal(closingNodes.filter(node=>node.tagName==='p').length,1,'CTA keeps one concise paragraph');
+assert.ok(closingNodes.some(node=>node.tagName==='a'&&attr(node,'href')==='/lien-he-idecal?dich-vu=thi-cong-decal'));
+assert.ok(closingNodes.some(node=>node.tagName==='a'&&attr(node,'href')==='https://zalo.me/0866077040'));
