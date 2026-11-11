@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Trang Liên hệ /lien-he-idecal/ ưu tiên biểu mẫu đặt hàng ở đầu trang, trước địa chỉ và thông tin phụ. Có lựa chọn mua sản phẩm/vật liệu, trường nhu cầu và số lượng hiển thị trực tiếp; giữ tham số sản phẩm, dịch vụ, khu vực/phường và lựa chọn PVC. Luồng đặt hàng hiện là soạn nội dung → sao chép → gửi Zalo để iDecal xác nhận, không hiển thị thông báo đã gửi/đã tạo đơn tự động.
+
 - Trang /decal-quang-cao/ dùng AdvertisingLanding/advertising-landing.ts theo yêu cầu làm lại UX: giữ H1, mô tả, ba ứng dụng, hướng dẫn chọn và sáu sản phẩm hiện có; bố trí bốn dịch vụ in/cắt/bảng hiệu/thang máy, ảnh thi công có nguồn, quy trình và tám FAQ đóng mặc định khớp FAQPage. Giữ liên kết hai dịch vụ con cùng các ID signage-child-service-title/elevator-child-service-title. CTA báo giá chọn thi-cong-decal; không tự đặt giá trọn gói hoặc đổi URL các trang liên quan.
 
 - Các bài nhập từ XML WordPress phải giữ nguyên tiêu đề và toàn bộ nội dung gốc. Chỉ chỉnh nội dung khi chủ website yêu cầu cụ thể; không tự viết lại để đạt điểm SEO.

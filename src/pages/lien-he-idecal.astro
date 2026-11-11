@@ -13,26 +13,20 @@ const channels=[
  {title:'Email dự án',value:'hi@idecal.vn',href:'mailto:hi@idecal.vn',path:'M3 5h18v14H3V5Zm0 1 9 7 9-7'},
 ];
 ---
-<Layout title="Liên hệ & đặt dịch vụ iDecal" description="Tư vấn vật liệu, thiết kế, in, cắt và thi công Decal, film. Gửi yêu cầu đặt dịch vụ ngay tại trang Liên hệ. Hotline/Zalo 0866.077.040, email hi@idecal.vn.">
+<Layout title="Liên hệ & đặt hàng | iDecal" description="Đặt mua Decal, film hoặc yêu cầu thiết kế, in, cắt và thi công. Soạn yêu cầu để gửi iDecal qua Zalo. Hotline 0866.077.040, email hi@idecal.vn.">
   <div class="contact-page">
-    <section class="contact-hero"><div class="container contact-hero-grid">
-      <div class="contact-intro"><p class="contact-eyebrow">Liên hệ & đặt dịch vụ</p><h1>Cùng hoàn thiện<br />không gian của bạn</h1><p class="contact-lead">Từ chọn vật liệu đến thiết kế, in và thi công. Chia sẻ nhu cầu, iDecal sẽ cùng bạn tìm phương án phù hợp.</p><a href="#yeu-cau" class="btn-primary-solid">Gửi yêu cầu tư vấn <span aria-hidden="true">→</span></a></div>
-      <figure class="contact-visual"><img src="/images/Banner/dich-vu-thiet-ke-decal.webp" alt="Minh họa trao đổi mẫu màu và bố cục thiết kế" width="960" height="640" fetchpriority="high" /><figcaption>Từ ý tưởng đến phương án phù hợp</figcaption></figure>
+    <section class="contact-hero"><div class="container contact-order-layout">
+      <header class="contact-intro"><p data-heading-label>Liên hệ & đặt hàng</p><h1>Đặt hàng & nhận<br />báo giá từ iDecal</h1><p class="contact-lead">Bạn muốn mua Decal, film hay đặt thi công? Chia sẻ mẫu, kích thước và nhu cầu để iDecal tư vấn phương án phù hợp.</p><div class="contact-intro-actions"><a href="#yeu-cau" class="contact-order-jump">Điền thông tin đặt hàng <span aria-hidden="true">↓</span></a><a href="/san-pham">Xem mẫu sản phẩm <span aria-hidden="true">→</span></a></div></header>
+      <div id="yeu-cau" class="contact-order-main"><ContactRequestForm /></div>
+      <aside class="contact-order-support" aria-labelledby="contact-order-steps-title"><h2 id="contact-order-steps-title">Đặt hàng qua 3 bước</h2><ol class="contact-order-steps"><li><span aria-hidden="true">01</span><div><strong>Điền nhu cầu</strong><p>Chọn mua sản phẩm hoặc dịch vụ bạn cần.</p></div></li><li><span aria-hidden="true">02</span><div><strong>Kiểm tra & sao chép</strong><p>Xem lại nội dung yêu cầu được soạn sẵn.</p></div></li><li><span aria-hidden="true">03</span><div><strong>Gửi qua Zalo</strong><p>iDecal trao đổi báo giá và xác nhận đơn hàng hoặc lịch thi công.</p></div></li></ol><figure class="contact-visual"><img src="/images/Banner/dich-vu-thiet-ke-decal.webp" alt="Minh họa trao đổi mẫu màu và bố cục thiết kế" width="960" height="640" loading="lazy" decoding="async"/><figcaption>Từ chọn mẫu đến phương án hoàn thiện</figcaption></figure><p class="contact-direct-note">Muốn trao đổi ngay? <a href="tel:0866077040">Gọi 0866.077.040</a> hoặc <a href="https://zalo.me/0866077040">nhắn Zalo iDecal</a>.</p></aside>
     </div></section>
     <section class="container contact-channels" aria-label="Liên hệ nhanh">{channels.map(channel=><a href={channel.href}><span class="contact-channel-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d={channel.path}/></svg></span><span><strong>{channel.title}</strong><span>{channel.value}</span></span><span class="contact-channel-arrow" aria-hidden="true">→</span></a>)}</section>
-    <ContactLocations />
-    <section id="yeu-cau" class="container contact-request-layout">
-      <ContactRequestForm />
-      <aside class="contact-help">
+    <div class="contact-locations-surface"><ContactLocations /></div>
+    <section class="container contact-help" aria-label="Thông tin trước khi đặt hàng">
         <div class="contact-help-intro"><span class="contact-help-icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></span><h2>Chuẩn bị gì để tư vấn nhanh?</h2><p>Ảnh vị trí dán, kích thước dự kiến và mẫu bạn thích. Có logo hoặc file thiết kế? Gửi thêm qua Zalo khi trao đổi.</p><a href="/dich-vu#bang-gia-dich-vu">Tham khảo bảng giá →</a></div>
         <div class="contact-help-hours"><h2>Thời gian làm việc</h2><p><strong>Thứ Hai – Thứ Bảy</strong><br />08:00 – 18:00</p><p>Chủ Nhật & ngày lễ: khảo sát, thi công theo lịch hẹn trước.</p></div>
         <details class="contact-area-list"><summary>Khu vực tư vấn & thi công</summary><nav aria-label="Khu vực phục vụ">{regions.map(region=><a href={`/khu-vuc/${region.slug}`}>{region.name}<span aria-hidden="true">→</span></a>)}</nav></details>
-      </aside>
     </section>
     <section class="container contact-social-section" aria-labelledby="contact-social-title"><h2 id="contact-social-title">Kết nối cùng iDecal</h2><p>Xem thêm hình ảnh công trình và cập nhật trên các kênh của iDecal.</p><SocialLinks label="Các kênh social chính thức của iDecal" /></section>
   </div>
 </Layout>
-
-<style>
-.contact-social-section{padding-top:20px;padding-bottom:42px}.contact-social-section h2{font-size:24px;font-weight:550;color:#244766;margin:0 0 12px}.contact-social-section>p{font-size:14px;color:#647c8f;line-height:1.9;margin:0 0 22px}@media(max-width:767px){.contact-social-section{padding-top:10px;padding-bottom:32px}.contact-social-section h2{font-size:22px}}
-</style>

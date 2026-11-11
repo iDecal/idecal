@@ -94,16 +94,16 @@ if (form) {
     if (!form.reportValidity()) return;
     const selectedDate = date.value ? date.value.split('-').reverse().join('/') : 'Cần trao đổi';
     const lines = [
-      'YÊU CẦU ĐẶT DỊCH VỤ IDECAL',
+      'YÊU CẦU ĐẶT HÀNG & DỊCH VỤ IDECAL',
       `Họ tên: ${name.value.trim()}`,
       `Điện thoại: ${phone.value.trim()}`,
-      `Dịch vụ: ${service.selectedOptions[0].textContent}`,
+      `Nhu cầu: ${service.selectedOptions[0].textContent}`,
       ...(product ? [`Mẫu quan tâm: ${product.name}`] : []),
       ...(product?.pvc ? [`Bề mặt: ${finish.selectedOptions[0].textContent}`, `Hình thức mua: ${pvcType.selectedOptions[0].textContent}`, 'Quy cách cuộn: 1,2 × 50 m'] : []),
       `Khu vực: ${region.selectedOptions[0].textContent}`,
       ...(region.value==='tp-hcm' && ward.value ? [`Phường/xã: ${ward.selectedOptions[0].textContent}`] : []),
       ...(region.value==='tp-hcm' && !ward.value && district.value ? [`Địa bàn: ${district.selectedOptions[0].textContent}`] : []),
-      `Địa chỉ: ${address.value.trim()}`,
+      `Địa chỉ nhận hàng / công trình: ${address.value.trim()}`,
       `Ngày mong muốn: ${selectedDate}`,
       `Khung giờ: ${time.value || 'Linh hoạt, cần trao đổi'}`,
       ...(size.value.trim() ? [`Kích thước / khối lượng: ${size.value.trim()}`] : []),
