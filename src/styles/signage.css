@@ -4,7 +4,7 @@
 .sign-breadcrumb li:not(:last-child)::after { content:'/'; padding-left:8px; color:#a9b8c4; }
 .sign-breadcrumb a { color:#0d6b96; }
 .sign-hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); align-items:center; gap:56px; padding-block:32px 38px; }
-.sign-eyebrow { font-size:12px; color:#64748b; padding-left:12px; border-left:3px solid #d1b581; margin:0 0 18px; line-height:1.7; }
+.sign-eyebrow { font-size:12px; color:#64748b; padding-left:12px; border-left:3px solid #93bad8; margin:0 0 18px; line-height:1.7; }
 .sign-hero h1 { margin:0 0 22px; color:#173b62; font-size:clamp(30px,3.1vw,42px); font-weight:600; line-height:1.3; letter-spacing:-.025em; }
 .sign-original { font-size:15px; color:#455b70; line-height:1.85; }
 .sign-original p { margin:0 0 16px; line-height:1.85; }
@@ -23,12 +23,12 @@
 .sign-hero-visual>.interior-film-image { aspect-ratio:4/3; height:auto; border-radius:16px; }
 .sign-hero-visual figcaption { display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; padding-top:14px; font-size:12px; color:#64748b; }
 .sign-hero-visual figcaption strong { font-weight:500; color:#1b4f7a; }
-.sign-hero-visual figcaption strong::before { content:'✓'; margin-right:7px; color:#a0824e; }
+.sign-hero-visual figcaption strong::before { content:'✓'; margin-right:7px; color:#5389b1; }
 .sign-jump { position:sticky; top:var(--sign-header-height); z-index:30; background:#fff; border-block:1px solid #e5ebf0; }
 .sign-jump>.container { display:flex; gap:8px; padding-block:10px; }
 .sign-jump a { display:block; padding:10px 18px; font-size:13px; color:#52677c; border-radius:5px; line-height:1.4; white-space:nowrap; }
 .sign-jump a:hover { background:#f3f7fa; color:#0d6b96; }
-.sign-jump a[aria-current="location"] { background:#f4eee3; color:#674f29; }
+.sign-jump a[aria-current="location"] { background:#edf5fb; color:#315b7b; }
 .sign-section { padding-block:44px; }
 .signage-page :is([id],section) { scroll-margin-top:220px; }
 .sign-heading { max-width:850px; margin-bottom:26px; }
@@ -37,13 +37,13 @@
 .sign-introduction { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:56px; padding-bottom:12px; }
 .sign-introduction h2 { max-width:330px; }
 .sign-benefit-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 44px; }
-.sign-benefit-grid article { padding:0 0 0 18px; border-left:2px solid #e4cfaa; }
+.sign-benefit-grid article { padding:0 0 0 18px; border-left:2px solid #d6e9f5; }
 .sign-benefit-grid h3 { font-size:19px; line-height:1.5; font-weight:500; margin:0 0 12px; }
 .sign-benefit-grid .sign-original { font-size:14px; }
 .sign-soft { background:#f7f9fb; }
 .sign-material-options { display:flex; flex-wrap:wrap; gap:9px; margin:0 0 28px; }
 .sign-material-options a { padding:8px 12px; border:1px solid #d9e4ed; border-radius:5px; color:#1b4f7a; background:#fff; font-size:12px; }
-.sign-material-options a:hover { border-color:#d1b581; }
+.sign-material-options a:hover { border-color:#93bad8; }
 .sign-materials { display:grid; gap:26px; }
 .sign-material { display:grid; grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr); column-gap:36px; align-items:center; padding-bottom:26px; border-bottom:1px solid #e1e9ef; }
 .sign-material:last-child { padding-bottom:0; border:0; }
@@ -61,7 +61,7 @@
 .sign-process-copy .sign-heading { margin-bottom:24px; }
 .sign-process { display:grid; gap:18px; padding:0; margin:0; list-style:none; }
 .sign-process li { display:grid; grid-template-columns:30px minmax(0,1fr); gap:14px; align-items:start; }
-.sign-process-number { display:grid; place-items:center; width:30px; height:30px; margin-top:1px; border:1px solid #d1b581; border-radius:50%; background:#e4cfaa26; color:#896c38; font-size:11px; font-weight:500; font-variant-numeric:tabular-nums; }
+.sign-process-number { display:grid; place-items:center; width:30px; height:30px; margin-top:1px; border:1px solid #93bad8; border-radius:50%; background:#d6e9f526; color:#416d93; font-size:11px; font-weight:500; font-variant-numeric:tabular-nums; }
 .sign-process h3 { font-size:16px; line-height:1.5; font-weight:500; margin:0 0 4px; }
 .sign-process h3 a { text-decoration:underline; text-underline-offset:3px; text-decoration-color:#b9ccdb; }
 .sign-process p { font-size:14px; line-height:1.7; margin:0; color:#52677c; }
@@ -75,24 +75,24 @@
 .sign-applications { border-top:1px solid #e1e9ef; }
 .sign-application-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 42px; padding:0; margin:0; list-style:none; }
 .sign-application-list>li { padding:0 0 20px 18px; border-bottom:1px solid #e1e9ef; position:relative; }
-.sign-application-list>li::before { content:''; position:absolute; left:0; top:11px; width:5px; height:5px; border-radius:50%; background:#d1b581; }
+.sign-application-list>li::before { content:''; position:absolute; left:0; top:11px; width:5px; height:5px; border-radius:50%; background:#93bad8; }
 .sign-commitments { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; align-items:center; }
 .sign-commitments .sign-heading { margin-bottom:22px; }
 .sign-commitment-list { display:grid; gap:14px; margin:24px 0 0; padding-left:19px; list-style:disc; }
-.sign-commitment-list li::marker { color:#b4955f; }
+.sign-commitment-list li::marker { color:#7fb1d6; }
 .sign-commitments>figure { margin:0; aspect-ratio:16/9; border-radius:12px; overflow:hidden; }
 .sign-commitments>figure :is(img,.interior-film-image) { object-fit:contain; }
 .sign-pricing { min-width:0; }
 .sign-price-options { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:28px; }
 .sign-price-options a { display:inline-flex; gap:20px; padding:10px 14px; border:1px solid #d9e4ed; border-radius:5px; font-size:13px; color:#0d6b96; }
-.sign-price-options a:hover { border-color:#d1b581; }
+.sign-price-options a:hover { border-color:#93bad8; }
 .sign-price-group { margin-top:28px; min-width:0; }
 .sign-price-group>h3 { font-size:21px; line-height:1.5; font-weight:500; margin:0 0 16px; }
 .sign-price-group>.sign-original { margin-bottom:20px; }
 .sign-table-scroll { max-width:100%; border:1px solid #e0e8ef; border-radius:10px; overflow:hidden; }
 .sign-table-scroll table { width:100%; border-collapse:collapse; font-size:14px; color:#455b70; line-height:1.75; }
 .sign-table-scroll :is(th,td) { text-align:left; padding:16px 20px; vertical-align:top; overflow-wrap:anywhere; }
-.sign-table-scroll th { background:#f2f6fa; font-size:13px; color:#173b62; font-weight:600; border-bottom:2px solid #e4cfaa; }
+.sign-table-scroll th { background:#f2f6fa; font-size:13px; color:#173b62; font-weight:600; border-bottom:2px solid #d6e9f5; }
 .sign-table-scroll tbody tr:not(:last-child) td { border-bottom:1px solid #e2e9ef; }
 .sign-table-scroll tbody tr:nth-child(even) { background:#fafbfd; }
 .sign-table-scroll td:nth-child(2) { white-space:nowrap; font-weight:600; color:#173b62; width:190px; }
@@ -100,7 +100,7 @@
 .sign-table-scroll strong { font-weight:500; }
 .sign-table-scroll a { color:#0d6b96; text-decoration:underline; text-underline-offset:3px; }
 .sign-price-followup { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:24px; margin-top:26px; }
-.sign-price-note { padding-left:16px; border-left:3px solid #d1b581; font-size:14px; }
+.sign-price-note { padding-left:16px; border-left:3px solid #93bad8; font-size:14px; }
 .sign-price-followup>a { justify-self:end; }
 .sign-contact { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(0,1fr); align-items:center; gap:48px; border-top:1px solid #e1e9ef; }
 .sign-contact-actions { display:flex; flex-direction:column; align-items:start; gap:20px; }

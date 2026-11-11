@@ -6,6 +6,6 @@ const items = brands.filter(brand => brand.groups.includes(Astro.props.group));
 {items.length > 0 && <section class="container pb-8" aria-label="Thương hiệu theo nhóm sản phẩm">
   <h2 class="mb-4 text-lg">Thương hiệu</h2>
   <ul class="flex flex-wrap gap-3">
-    {items.map(brand => <li><a href={`/thuong-hieu/${brand.slug}`} class="inline-flex rounded border border-border bg-white px-4 py-2 text-sm text-secondary transition-colors hover:border-sand-dark hover:bg-surface">{brand.name}</a></li>)}
+    {items.map(brand => <li><a href={`/thuong-hieu/${brand.slug}`} class="inline-flex rounded border border-border bg-white px-4 py-2 text-sm text-secondary transition-colors hover:border-ui-accent-dark hover:bg-surface">{brand.name}</a></li>)}
   </ul>
 </section>}

@@ -34,9 +34,9 @@ export default {
         },
         "border": "#DBE3EC",
         "surface": "#F1F7FC",
-        "sand": {
-          "DEFAULT": "#E4CFAA",
-          "dark": "#D1B581"
+        "ui-accent": {
+          "DEFAULT": "#D6E9F5",
+          "dark": "#93BAD8"
         },
         "brand": {
           "navy": "#031245",

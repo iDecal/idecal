@@ -1,5 +1,5 @@
 /* Adapted from the owner's supplied landing; native Astro markup, no template runtime. */
-.office-glass-page { --office-ink:#153653; --office-muted:#536579; --office-sand:#eed09a; background:#fff; }
+.office-glass-page { --office-ink:#153653; --office-muted:#536579; --office-accent:#b8ddfa; background:#fff; }
 .office-glass-page :is(section[id]) { scroll-margin-top:112px; }
 .office-glass-page figure { margin:0; }
 .office-glass-page img { display:block; width:100%; height:auto; object-fit:cover; border-radius:14px; }
@@ -14,7 +14,7 @@
 .office-hero-lead p { font-size:16px; margin-bottom:14px; }
 .office-hero figure img { aspect-ratio:1.15; }
 .office-hero-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:24px; }
-.office-hero-actions .btn-primary-solid { background:var(--office-sand); color:#3b301d; border-radius:999px; box-shadow:none; }
+.office-hero-actions .btn-primary-solid { background:var(--office-accent); color:#123d69; border-radius:999px; box-shadow:none; }
 .office-text-link { display:inline-flex; align-items:center; min-height:44px; color:#0d6b96; font-size:14px; font-weight:500; }
 .office-text-link:hover { text-decoration:underline; text-underline-offset:4px; }
 .office-hero-actions .office-text-link { color:#fff; border:1px solid #ffffff55; padding:9px 20px; border-radius:999px; }
@@ -92,7 +92,7 @@
 .office-price-table tr:last-child td { border-bottom:0; }
 .office-price-cta { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-top:22px; padding:24px; border-radius:12px; background:#0b2346; }
 .office-price-cta p { font-size:16px; color:#fff; margin:0; }
-.office-price-cta a { flex-shrink:0; display:inline-flex; padding:13px 22px; background:var(--office-sand); border-radius:999px; color:#49391f; font-size:14px; font-weight:500; }
+.office-price-cta a { flex-shrink:0; display:inline-flex; padding:13px 22px; background:var(--office-accent); border-radius:999px; color:#123d69; font-size:14px; font-weight:500; }
 .office-price-factors { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
 .office-price-factors article { padding:24px; border:1px solid #dfe7ef; border-radius:12px; background:#fff; }
 .office-price-factors h3 { font-size:18px; margin-bottom:10px; }
@@ -124,12 +124,12 @@
 .office-why-contact .office-original-copy p { margin-bottom:14px; }
 .office-why-contact .office-original-copy p:last-child a { font-size:21px; font-weight:600; }
 .office-why-contact .office-context-note { margin:16px 0 20px; }
-.office-why-contact .office-solution-button { background:var(--office-sand); border-color:transparent; color:#49391f!important; border-radius:999px; }
+.office-why-contact .office-solution-button { background:var(--office-accent); border-color:transparent; color:#123d69!important; border-radius:999px; }
 .office-glass-page .brand-dark :is(p,li) { color:#d0ddec; }
 .office-glass-page .brand-dark :is(h3,strong) { color:#fff; }
-.office-glass-page .brand-dark .office-eyebrow { color:var(--office-sand)!important; }
+.office-glass-page .brand-dark .office-eyebrow { color:var(--office-accent)!important; }
 .office-glass-page .brand-dark .office-original-copy a,.office-glass-page .brand-dark .office-gallery-links a { color:#fff; }
-.office-glass-page .brand-dark li::before { border-color:var(--office-sand); }
+.office-glass-page .brand-dark li::before { border-color:var(--office-accent); }
 .office-price-layout>*,.office-hero-grid>*,.office-solution>*,.office-why-grid>*,.office-benefits-grid>*,.office-faq>*,.office-final-grid>* { min-width:0; }
 @media(max-width:1100px) {
  .office-services-grid { grid-template-columns:1fr 1fr; }

@@ -35,6 +35,8 @@
 - /dan-decal-thang-may/ là dịch vụ con của Decal quảng cáo, dữ liệu tại elevator-service.json. Giữ hai nhóm: film nội thất và decal in quảng cáo; liên kết ở cả hai trang cha Decal quảng cáo, breadcrumb về /decal-quang-cao/. Dùng ảnh thang máy có sẵn, chú thích theo nội dung ảnh; không gán ảnh tham khảo thành công trình mới của iDecal. Không thay bài Blog thang máy hiện có. Kiểm tra bằng node scripts/check-elevator.mjs và scripts/test-elevator.py.
 - Cập nhật bố cục văn phòng theo landing HTML mới: hero và CTA nền đậm, thẻ dịch vụ có ảnh, lưới giải pháp 3+2, bảng giá rộng. Người dùng cho phép đổi ảnh dịch vụ/giải pháp; ảnh chọn tại `office-glass-visuals.json`, giữ tệp nguồn cũ để đối chiếu.
 
-- Footer dùng nền navy đậm như web cũ kèm gradient nhẹ, khối liên hệ có viền mờ, chữ sáng và nhóm link có gạch nhấn vàng; giữ 7 social cùng các địa chỉ. Trên mobile các nhóm điều hướng footer đóng mặc định, mở dạng accordion.
+- Footer dùng nền navy đậm như web cũ kèm gradient nhẹ, khối liên hệ có viền mờ, chữ sáng và nhóm link có gạch nhấn xanh nhạt; giữ 7 social cùng các địa chỉ. Trên mobile các nhóm điều hướng footer đóng mặc định, mở dạng accordion.
 
-- Header giữ nền trắng/chữ xanh đậm, bỏ nút gọi điện và mục Khu vực riêng trong menu chính. Bộ chọn khu vực ở bên phải, mặc định TP. Hồ Chí Minh; khi đang ở trang khu vực thì hiển thị đúng khu vực đó. Mobile vẫn dùng nút ba gạch cho danh sách dịch vụ, có bộ chọn khu vực và lối mở ở cuối menu.
+- Header giữ nền trắng/chữ xanh đậm, bỏ nút gọi điện và mục Khu vực riêng trong menu chính. Bộ chọn khu vực ở bên phải, mặc định TP. Hồ Chí Minh; khi đang ở trang khu vực thì hiển thị đúng khu vực đó. Mobile chỉ có logo và nút ba gạch; bộ chọn khu vực nằm bên trong menu, không hiển thị cạnh nút ba gạch.
+
+- Toàn bộ màu nhấn vàng cát của giao diện đã được thay bằng xanh dương/xanh nhạt; dùng token `ui-accent` trong Tailwind, không dùng lại `sand` hoặc các màu beige/gold cho nền, nút, viền. Giữ nguyên màu vật liệu thật trong ảnh/bảng màu và logo thương hiệu. Footer dùng gradient navy rất đậm cùng tông thanh bản quyền.
