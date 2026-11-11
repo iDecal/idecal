@@ -1,7 +1,7 @@
 ---
 title: "Decal sữa PVC trắng: chọn nền in và lớp hoàn thiện"
 description: "Decal sữa PVC trắng có nền trắng để thể hiện hình ảnh và nội dung in."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"

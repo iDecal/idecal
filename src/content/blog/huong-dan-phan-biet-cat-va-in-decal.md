@@ -1,7 +1,7 @@
 ---
 title: "Phân biệt Cắt Decal và Bế Decal khác nhau như thế nào"
 description: "Cắt Decal và Bế Decal là hai phương pháp chuyển hình ảnh, logo hoặc thông điệp lên các bề mặt khác nhau. Tuy nhiên, Để phân biệt Cắt Decal và in Decal khác nhau như…"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Góc chia sẽ"]
 pubDate: "2023-12-16T23:36:06+07:00"

@@ -1,7 +1,7 @@
 ---
 title: "Show window là gì? Hướng dẫn dán tranh kính Show window"
 description: "Tạm dịch là “cửa sổ hiển thị”. Là một sự sắp xếp hàng hóa tại “mặt tiền” của cửa hàng nhằm lôi kéo khách qua đường. Khi đến các shop quần áo lớn, bạn sẽ thấy mặt…"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Chưa phân loại"]
 pubDate: "2024-04-22T16:48:18+07:00"

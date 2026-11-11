@@ -1,7 +1,7 @@
 ---
 title: "Decal Oracal là gì? Decal nội thất cao cấp từ Germany"
 description: "Decal Oracal là gì? Decal Oracal là loại Decal nhập khẩu Đức. Đây là loại Decal chuyên dùng để dán ô tô, có độ bền cực cao, dai dày khó rách, màu sắc sáng bóng cực kì…"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Góc chia sẽ", "Vật liệu Decal in ấn"]
 pubDate: "2024-04-23T17:31:54+07:00"

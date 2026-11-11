@@ -1,7 +1,7 @@
 ---
 title: "PP quảng cáo: phân biệt bản in và kết cấu trưng bày"
 description: "PP quảng cáo có thể dùng cho poster, standee hoặc bản in kết hợp nền."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"

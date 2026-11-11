@@ -48,3 +48,5 @@
 - Nhãn nhỏ trên H1/H2 dùng pill gradient nhạt như trang chủ theo `heading-labels.css` (không giả tương tác); nhãn mới dùng data-heading-label. Lợi ích hero dùng BannerBenefits với icon theo nghĩa, chữ không có nền/viền/bo tròn. Giữ nhãn lợi ích nguồn và chọn icon tương ứng, không cắt chữ để ép bố cục.
 
 - CTA cuối trang văn phòng được chủ website cho phép rút gọn: nền sáng, một tiêu đề và một đoạn ngắn, nút tư vấn cùng Hotline/Zalo; bỏ khối nội dung chào bán dài, hộp liên hệ phụ và ba link phụ trong CTA. Giữ bản nguồn office-glass-original.json/docs nguyên vẹn.
+
+- Header dùng nhãn ngắn “Dịch vụ” cho mega menu. Chuyên mục Blog “Vật liệu Decal” thay tên “So sánh vật liệu”, giới thiệu đặc điểm/ứng dụng/cách chọn; giữ slug so-sanh-vat-lieu để bảo toàn liên kết. CMS và trình nhập Blog dùng cùng tên chuyên mục.

@@ -1,7 +1,7 @@
 ---
 title: "So sánh Decal sữa, trong và lưới: chọn theo nền kính"
 description: "So sánh Decal sữa, trong và lưới nên bắt đầu từ độ che phủ và cách nhìn qua kính."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-03"
 author: "iDecal"

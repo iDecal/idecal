@@ -1,7 +1,7 @@
 ---
 title: "Decal Giả Gạch Mosaic – Tưởng cũ nhưng lại mới"
 description: "Gạch bông – còn có tên khác là gạch hoa văn mỹ thuật. Khác với một số loại gạch trơn như: porcelain, ceramic, granit… Trên thế giới còn có rất nhiều loại gạch mỹ…"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Review sản phẩm"]
 pubDate: "2024-04-19T13:40:08+07:00"

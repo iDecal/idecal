@@ -1,7 +1,7 @@
 ---
 title: "Dán decal quảng cáo xe tải - thương hiệu UBC tivi"
 description: "Nâng tầm thương hiệu với quảng cáo di động: Decal dán xe tải là giải pháp quảng bá thông minh, giúp UBC Tivi tiếp cận khách hàng tiềm năng mọi lúc mọi nơi, đồng thời…"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Công trình hoàn thành", "Review sản phẩm"]
 pubDate: "2025-04-30T00:54:28+07:00"

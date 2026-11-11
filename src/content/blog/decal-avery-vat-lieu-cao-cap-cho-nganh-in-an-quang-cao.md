@@ -1,7 +1,7 @@
 ---
 title: "Decal Avery – Giải pháp vật liệu cao cấp cho ngành in ấn quảng cáo"
 description: "Tìm hiểu về decal Avery – thương hiệu vật liệu in ấn hàng đầu thế giới với đầy đủ CO, CQ. Ứng dụng đa dạng trong quảng cáo, dán kính, wrap xe. Mua hàng chính hãng tại…"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Góc chia sẽ", "Vật liệu Decal in ấn"]
 pubDate: "2025-06-12T14:11:02+07:00"

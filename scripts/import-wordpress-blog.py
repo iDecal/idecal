@@ -85,7 +85,7 @@ def category(item,title):
  if any(w in text for w in ['khuyến mãi','sale ','ưu đãi']):return 'tin-khuyen-mai','Tin khuyến mãi',cats
  if any(w in title.lower() for w in ['báo giá','bảng giá']):return 'bao-gia','Báo giá',cats
  if any(w in text for w in ['mẫu thiết kế','ý tưởng','mẫu decal','mẫu phim']):return 'mau-thiet-ke','Mẫu thiết kế',cats
- if any(w in text for w in ['vật liệu','review sản phẩm','so sánh','phân biệt','thông số','loại nào','là gì']):return 'so-sanh-vat-lieu','So sánh vật liệu',cats
+ if any(w in text for w in ['vật liệu','review sản phẩm','so sánh','phân biệt','thông số','loại nào','là gì']):return 'so-sanh-vat-lieu','Vật liệu Decal',cats
  return 'huong-dan','Hướng dẫn',cats
 
 def link_target(value):

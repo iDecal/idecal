@@ -1,7 +1,7 @@
 ---
 title: "In Decal lưới mặt tiền: chọn file và chia khổ"
 description: "In Decal lưới mặt tiền cần xét khoảng nhìn, kích thước ô kính và cách nối hình."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"

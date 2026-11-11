@@ -1,7 +1,7 @@
 ---
 title: "Decal giấy: chọn tem nhãn theo bao bì và môi trường dùng"
 description: "Decal giấy phù hợp với nhiều nhu cầu tem nhãn trên bao bì dùng trong nhà."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"

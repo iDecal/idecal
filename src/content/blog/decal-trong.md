@@ -1,7 +1,7 @@
 ---
 title: "In Decal trong: kiểm tra độ nổi của hình trên kính"
 description: "In Decal trong phù hợp với bố cục muốn giữ khoảng thoáng, nhưng màu sắc còn chịu ảnh hưởng của nền phía sau."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"

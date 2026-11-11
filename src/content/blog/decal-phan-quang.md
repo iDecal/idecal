@@ -1,7 +1,7 @@
 ---
 title: "Decal phản quang: chọn cho chữ và biển chỉ dẫn"
 description: "Decal phản quang tạo hiệu ứng khi được nguồn sáng chiếu tới trong điều kiện phù hợp."
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"

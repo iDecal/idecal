@@ -1,7 +1,7 @@
 ---
 title: "Cắt Decal vi tính là gì? Ứng dụng cắt Decal"
 description: "Cắt decal vi tính hay còn gọi là cắt decal bằng máy tính, cắt chữ decal"
-category: "So sánh vật liệu"
+category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 categories: ["Góc chia sẽ"]
 pubDate: "2025-10-13T11:06:22+07:00"

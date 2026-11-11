@@ -30,7 +30,7 @@ interface NavLink {
 const activeRegion = regions.find(region => Astro.url.pathname.split('/')[1] === 'khu-vuc' && Astro.url.pathname.split('/')[2] === region.slug) ?? regions[0];
 const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
-  { name: 'Dịch vụ & Giải pháp', href: '/dich-vu', mega: true, dropdown: [] },
+  { name: 'Dịch vụ', href: '/dich-vu', mega: true, dropdown: [] },
   { name: 'Công trình thực tế', href: '/du-an' },
   { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
   { name: 'Liên hệ', href: '/lien-he-idecal' },
@@ -121,7 +121,7 @@ const navLinks: NavLink[] = [
     </div>
     
     <div class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-4">
-      <div class="mobile-offerings" aria-label="Dịch vụ & Giải pháp">
+      <div class="mobile-offerings" aria-label="Dịch vụ">
         {megaGroups.map(group => (
           <section class="mobile-offering-group" aria-label={group.title}>
             <p class="mobile-offering-heading">{group.title}</p>
