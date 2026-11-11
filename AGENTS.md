@@ -36,3 +36,5 @@
 - Cập nhật bố cục văn phòng theo landing HTML mới: hero và CTA nền đậm, thẻ dịch vụ có ảnh, lưới giải pháp 3+2, bảng giá rộng. Người dùng cho phép đổi ảnh dịch vụ/giải pháp; ảnh chọn tại `office-glass-visuals.json`, giữ tệp nguồn cũ để đối chiếu.
 
 - Footer dùng nền navy đậm như web cũ kèm gradient nhẹ, khối liên hệ có viền mờ, chữ sáng và nhóm link có gạch nhấn vàng; giữ 7 social cùng các địa chỉ. Trên mobile các nhóm điều hướng footer đóng mặc định, mở dạng accordion.
+
+- Header giữ nền trắng/chữ xanh đậm, bỏ nút gọi điện và mục Khu vực riêng trong menu chính. Bộ chọn khu vực ở bên phải, mặc định TP. Hồ Chí Minh; khi đang ở trang khu vực thì hiển thị đúng khu vực đó. Mobile vẫn dùng nút ba gạch cho danh sách dịch vụ, có bộ chọn khu vực và lối mở ở cuối menu.
