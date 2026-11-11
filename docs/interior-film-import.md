@@ -33,3 +33,8 @@ Sau build, chạy python3 scripts/test-interior-film.py qua Astro preview cổng
 FAQ, chọn dịch vụ báo giá và khả năng đọc khi không có JavaScript. Bộ test
 chủ động chặn ảnh ngoài để kiểm tra khung dự phòng; không dùng kết quả đó
 để khẳng định ảnh ngoài đang tải thành công.
+
+Theo yêu cầu xuất bản tiếp theo, liên kết Film nội thất ở menu desktop/mobile,
+thẻ dịch vụ trang chủ, gợi ý 404 và liên kết tư vấn thi công trỏ thẳng tới
+/dich-vu-film-dan-noi-that/. Các liên kết được ghi rõ là catalogue/nhóm sản phẩm
+vẫn dùng trang vật liệu /film-dan-noi-that/ để tiếp tục chọn sản phẩm.

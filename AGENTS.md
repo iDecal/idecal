@@ -66,3 +66,5 @@
 - Giao diện 404 đã được chủ website yêu cầu thêm ảnh và nhiều màu: dùng recovery-404.css riêng với nền trắng, điểm nhấn xanh/tím và xanh nhạt, hai ảnh có sẵn dẫn đến film trang trí kính và film nội thất. Ô tìm kiếm vẫn là thao tác chính; giữ mã 404, noindex và luồng /tim-kiem/.
 
 - Chủ website xác nhận thiết kế lại trang dịch vụ /dich-vu-film-dan-noi-that/ từ HTML gửi lại: chỉ lấy chữ và ảnh, giữ 82 khối chữ/17 ảnh nguồn; không thay trang vật liệu /film-dan-noi-that/. Bố cục InteriorFilmLanding dùng menu neo bám dưới header, sáu nhóm mẫu có danh sách ứng dụng mở rộng, bốn tab ứng dụng có bàn phím và hiển thị đầy đủ khi tắt JavaScript, năm FAQ đóng mặc định. Giữ H1/canonical/ảnh và các quy tắc màu/tiêu đề toàn site. Kiểm tra check-interior-film.mjs và test-interior-film.py qua Astro preview 4322.
+
+- Khi xuất bản trang film nội thất, chủ website yêu cầu thay liên kết nội thất hiện tại bằng /dich-vu-film-dan-noi-that/: menu desktop/mobile, hai liên kết thẻ dịch vụ trang chủ, thẻ dịch vụ, liên kết tư vấn thi công và gợi ý trang 404 dẫn thẳng tới trang dịch vụ mới. Catalogue vật liệu /film-dan-noi-that/ vẫn truy cập riêng từ các liên kết chọn mẫu sản phẩm.
