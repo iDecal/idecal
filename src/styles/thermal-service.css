@@ -2,11 +2,16 @@
 .thermal-service-page [id]{scroll-margin-top:166px}
 .thermal-service-page :is(article,div,section,header,figure){min-width:0}
 .thermal-service-page :is(a,button,summary):focus-visible{outline:2px solid #0874bb;outline-offset:4px}
+.thermal-service-page .thermal-icon{display:block;width:24px;height:24px;flex-shrink:0}
+.thermal-icon-tile{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;flex-shrink:0;margin-bottom:20px;border:1px solid #d4e8ff;border-radius:15px;background:linear-gradient(145deg,#f2f9ff,#e3f0ff);color:#0077d9;box-shadow:inset 0 1px 0 #fff,0 5px 14px #1365aa09}
+.thermal-service-page :is(.thermal-benefits,.thermal-needs,.thermal-applications) article:nth-child(even) .thermal-icon-tile{border-color:#e2d9fb;background:linear-gradient(145deg,#f8f4ff,#eee6ff);color:#7241d7}
+.thermal-icon-tile .thermal-icon{width:27px;height:27px}
 .thermal-secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:13px 20px;min-height:48px;border:1px solid #b6cee9;border-radius:8px;background:#fff;color:#1b4f7a;font-size:14px;font-weight:500}
 .thermal-secondary-button:hover{background:#edf6ff}
 .thermal-jump{position:sticky;top:96px;z-index:40;background:#fffffff5;border-block:1px solid var(--thermal-line)}
 .thermal-jump>.container{display:flex;gap:10px;overflow-x:auto;padding-block:10px;scrollbar-width:thin}
-.thermal-jump a{display:inline-flex;align-items:center;min-height:42px;flex-shrink:0;padding:9px 13px;border-radius:6px;color:#52677c;font-size:13px}
+.thermal-jump a{display:inline-flex;align-items:center;gap:8px;min-height:42px;flex-shrink:0;padding:9px 13px;border-radius:6px;color:#52677c;font-size:13px}
+.thermal-jump .thermal-icon{width:17px;height:17px;color:#1681d6}
 .thermal-jump a:hover{background:#eef6ff;color:#006edc}
 .thermal-section{padding-block:56px}
 .thermal-heading{max-width:850px;margin-bottom:28px}
@@ -14,7 +19,7 @@
 .thermal-heading>p:not([data-heading-label]){margin:0;font-size:15px;line-height:1.9;color:#52677c}
 .thermal-benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .thermal-service-page h3{margin:0 0 12px;line-height:1.5}
-.thermal-benefits article{border-top:2px solid #a8cdf0;padding-top:20px}
+.thermal-benefits article{border-top:2px solid #a8cdf0;padding-top:24px}
 .thermal-service-page :is(.thermal-benefits,.thermal-needs,.thermal-applications) p{font-size:14px;line-height:1.85;color:#52677c;margin:0}
 .thermal-brands{padding-bottom:14px}
 .thermal-brands h2{--heading-h2-local:22px}
@@ -33,7 +38,8 @@
 .thermal-quote-box{padding:28px;border:1px solid #d4e3f4;border-radius:12px;background:#fff}
 .thermal-quote-box p{font-size:14px;line-height:1.85;color:#52677c;margin:0 0 22px}
 .thermal-quote-box .btn-primary-solid{gap:16px;justify-content:space-between}
-.thermal-text-link{display:inline-flex;align-items:center;gap:20px;min-height:44px;padding:10px 0;color:#006edc;font-size:13px;font-weight:500}
+.thermal-text-link{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:10px 0;color:#006edc;font-size:13px;font-weight:500}
+.thermal-text-link .thermal-icon{width:18px;height:18px}
 .thermal-quote-box>.thermal-text-link{margin-top:12px}
 .thermal-needs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:32px}
 .thermal-needs article{border-left:2px solid #bfd9f3;padding-left:22px}
@@ -44,12 +50,17 @@
 .thermal-image-note{font-size:12px;line-height:1.8;color:#64748b;margin:18px 0 0}
 .thermal-applications{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .thermal-applications article{padding:26px;border:1px solid #dce7f3;background:#fff;border-radius:12px}
+.thermal-application-mark{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}
+.thermal-application-mark .thermal-icon-tile{width:60px;height:60px;margin:0;border-radius:18px}
+.thermal-application-mark .thermal-icon{width:31px;height:31px}
+.thermal-application-mark .thermal-number{width:auto;height:auto;border:0;background:none;margin:0;font-size:13px;color:#879eb5}
 .thermal-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex:0 0 32px;border:1px solid #b9d5ee;border-radius:50%;font-size:11px;color:#2674a5;background:#fff;margin-bottom:18px}
 .thermal-installation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
 .thermal-installation ol{list-style:none;padding:0;margin:0;display:grid;gap:14px}
 .thermal-installation li{display:flex;align-items:center;gap:18px;border-bottom:1px solid var(--thermal-line);padding:18px 0}
-.thermal-installation li>.thermal-number{margin:0}
-.thermal-installation li>p{font-size:15px;line-height:1.8;color:#44566b;margin:0}
+.thermal-installation li>.thermal-icon-tile{width:48px;height:48px;margin:0;border-radius:14px}
+.thermal-step-label{display:block;margin-bottom:5px;font-size:12px;font-weight:600;color:#0075cc}
+.thermal-installation li p{font-size:15px;line-height:1.8;color:#44566b;margin:0}
 .thermal-installation-scope{font-size:14px;line-height:1.9;color:#52677c;border-top:1px solid var(--thermal-line);padding-top:24px;margin:10px 0 0}
 .thermal-gallery{border-top:1px solid var(--thermal-line)}
 .thermal-gallery>.installation-upload-gallery{padding-block:42px 56px}
