@@ -73,3 +73,10 @@ quy tắc giữ 17 ảnh nguồn có ngoại lệ rõ ràng là bảy ảnh thay
 OG image của hai đường dẫn dịch vụ dùng ảnh hero mới. Bộ kiểm tra đối chiếu
 ảnh theo ánh xạ, kiểm tra SHA-256 của cả 12 JPEG và ảnh cũ đã thay không còn
 được hiển thị; browser test kiểm tra tải ảnh, mở/đóng dialog và trả focus.
+
+Cập nhật theo duyệt cuối: bỏ hai đoạn giới thiệu dài ở phần FAQ (bắt đầu bằng
+“Trong hành trình kiến tạo…” và “Chúng tôi không chỉ thi công…”), giữ năm
+câu hỏi/trả lời. Bản nguồn vẫn lưu 82 khối, giao diện giữ 80 khối còn lại.
+Thumbnail thư viện chuyển sang object-fit:cover theo yêu cầu để ảnh đầy khung;
+ảnh mở lớn vẫn dùng ảnh gốc và hiển thị trọn khung. Chỉ đổi CSS hiển thị,
+không cắt hoặc nén lại các JPEG đã nhập.

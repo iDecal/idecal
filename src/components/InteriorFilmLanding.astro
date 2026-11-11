@@ -54,7 +54,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
 
   <section id="cau-hoi-film-noi-that" class="interior-film-faq-wrap" aria-labelledby={source.faq.heading.id}>
     <div class="container interior-film-section interior-film-faq">
-      <header class="interior-film-section-heading"><p class="interior-film-eyebrow" data-heading-label>Trước khi thi công</p><h2 id={source.faq.heading.id}>{source.faq.heading.title}</h2>{source.faq.heading.subtitle&&<p>{source.faq.heading.subtitle}</p>}<div class="interior-film-original-copy" set:html={source.faq.intro.map(block=>block.html).join('')} /></header>
+      <header class="interior-film-section-heading"><p class="interior-film-eyebrow" data-heading-label>Trước khi thi công</p><h2 id={source.faq.heading.id}>{source.faq.heading.title}</h2>{source.faq.heading.subtitle&&<p>{source.faq.heading.subtitle}</p>}</header>
       <div class="interior-film-questions">{source.faq.items.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div class="interior-film-original-copy" set:html={item.answer.map(block=>block.html).join('')} /></details>)}</div>
     </div>
   </section>

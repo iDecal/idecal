@@ -70,7 +70,7 @@ with sync_playwright() as p:
         image.scroll_into_view_if_needed()
         expect(image).to_have_js_property('complete',True)
         assert image.evaluate('image=>image.naturalWidth>=900')
-        assert image.evaluate('image=>getComputedStyle(image).objectFit')=='contain'
+        assert image.evaluate('image=>getComputedStyle(image).objectFit')=='cover'
     first_photo=gallery.locator('[data-upload-photo]').first
     first_photo.click()
     dialog=gallery.get_by_role('dialog')
@@ -82,7 +82,7 @@ with sync_playwright() as p:
     first_photo.click()
     dialog.get_by_role('button',name='Đóng ×').click()
     expect(dialog).not_to_be_visible()
-    print('All 12 uploaded photos load locally at original resolution; full-frame gallery and modal closing/focus verified.')
+    print('All 12 uploaded photos load locally at original resolution; cover thumbnails and full-size modal closing/focus verified.')
     page.locator('.interior-film-contact-actions .btn-primary-solid').click()
     page.wait_for_url('**/lien-he-idecal**')
     expect(page.locator('#booking-service')).to_have_value('thi-cong-decal')

@@ -74,3 +74,5 @@
 - H2 riêng trang dịch vụ film nội thất được yêu cầu nhấn rõ hơn: dùng --heading-h2-local cỡ 28–36px (giữ mức cộng 2px mobile của toàn site), chữ xanh đậm và vạch gradient xanh–tím 64 × 4px. Giữ H1 và các tiêu đề nguồn; không áp dụng thay đổi này ra toàn site.
 
 - Ngoại lệ ảnh film nội thất theo yêu cầu mới: thêm 12 JPEG từ New folder (2).rar, lưu nguyên byte tại public/images/film-noi-that/cong-trinh/. interior-film-photos.json ghi nguồn/hash và bảy ảnh thay cho hero, lợi ích, vân gỗ, vân đá, trần, cửa, quầy; resolver trong interior-film-visuals.ts giữ JSON/HTML nguồn và toàn bộ chữ gốc. Cho phép gỡ bảy ảnh cũ khỏi giao diện theo ánh xạ này, không bắt buộc hiển thị chúng lại để đủ 17 ảnh. Thư viện 12 ảnh có xem lớn và giữ trọn khung cho ảnh trước–sau; không gán thêm khách hàng/địa chỉ/ngày thi công. Mục Thang máy tiếp tục dùng ảnh phù hợp đã duyệt.
+
+- Duyệt cuối trang film nội thất: bỏ hai đoạn source.faq.intro khỏi giao diện theo ảnh chỉ định, giữ 80 khối còn lại và đủ năm FAQ. Nguồn/đối chiếu vẫn lưu nguyên 82 khối. Thumbnail thư viện 12 ảnh dùng cover để đầy khung (thay quy tắc contain trước đó); ảnh mở lớn vẫn giữ nguyên ảnh gốc.

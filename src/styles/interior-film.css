@@ -100,7 +100,7 @@
 .interior-film-projects{border-top:1px solid var(--film-line)}
 .interior-film-projects .installation-upload-gallery{padding-block:56px 64px}
 .interior-film-projects .upload-gallery-grid{gap:28px 24px}
-.interior-film-page .interior-film-projects .installation-upload-gallery .upload-gallery-grid img{object-fit:contain;background:#f1f5fa}
+.interior-film-page .interior-film-projects .installation-upload-gallery .upload-gallery-grid img{object-fit:cover;background:#f1f5fa}
 .interior-film-projects .upload-gallery-grid figcaption{font-size:12px;line-height:1.8;margin-top:12px;color:#52677c}
 .interior-film-faq-wrap{background:#f8fafc;border-block:1px solid #e7edf3}
 .interior-film-faq{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:64px}
