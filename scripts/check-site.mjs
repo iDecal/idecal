@@ -44,13 +44,12 @@ const projectFiles = (await walk(path.resolve('src/content/projects'))).filter(f
 const indexProjects = projectIndex.match(/class="project-card\b/g) ?? [];
 assert.equal(indexProjects.length, projectFiles.length, 'Project index must display every project');
 assert.ok(home.includes('href="/du-an"'), 'Home must link to the full project index');
-// The latest requested homepage reproduces the supplied public WordPress content,
-// which replaces the previous three-project homepage section.
+// Preserve the approved homepage text outside the owner-requested real-project gallery.
 const sourceAudit = JSON.parse(await readFile('src/content/homepage/source-audit.json', 'utf8'));
 const sourceMain = home.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? '';
 const decodeText = value => value.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&apos;|&#039;/g, "'").replace(/&nbsp;/g, ' ').replace(/&#(\d+);/g, (_,code) => String.fromCodePoint(Number(code))).replace(/&#x([0-9a-f]+);/gi, (_,code) => String.fromCodePoint(parseInt(code,16)));
 const normalizeText = value => value.replace(/\s+/g, ' ').trim();
-const actualHomeText = normalizeText(decodeText(sourceMain.replace(/<[^>]*>/g, ' ')));
+const actualHomeText = normalizeText(decodeText(sourceMain.replace(/<section\b[^>]*id="home-projects"[^>]*>[\s\S]*?<\/section>/,'').replace(/<[^>]*>/g, ' ')));
 assert.equal(actualHomeText, normalizeText(sourceAudit.mainText), 'Homepage must preserve approved content, including requested service and CTA revisions');
 for (const id of sourceAudit.sections) assert.ok(home.includes(`id="${id}"`), `Missing source homepage section: ${id}`);
 assert.ok(!home.includes('id="wpadminbar"'), 'WordPress administration must not be published');
@@ -184,3 +183,10 @@ for (const file of files) {
 }
 assert.deepEqual(failures, [], failures.join('\n'));
 console.log(`Passed: ${files.length} pages, ${references} local references; titles, headings, metadata, images and anchors verified.`);
+
+const homeBrands=JSON.parse(await readFile('src/data/home-brands.json','utf8'));
+for(const brand of homeBrands)assert.ok(home.includes(`src="${brand.src}"`)&&home.includes(`alt="Logo ${brand.name}"`),`Uploaded brand logo: ${brand.name}`);
+assert.equal(homeBrands.length,4);
+const homeGallery=home.match(/<section\b[^>]*id="home-projects"[^>]*>[\s\S]*?<\/section>/)?.[0]??'';
+for(const slug of ['decal-mo-logo-bio-cio','decal-mo-logo-protraco-logistics','in-an-thi-cong-decal-dfcare-quan-9'])assert.ok(homeGallery.includes(`href="/du-an/${slug}/"`),`Verified homepage project: ${slug}`);
+assert.equal((homeGallery.match(/<img\b/g)??[]).length,3,'Three actual project photos on homepage');

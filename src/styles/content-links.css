@@ -1,6 +1,8 @@
 /* Shared link presentation, including imported prose. Keep button styles intact. */
 @layer content-link-policy {
   body a {text-decoration:none!important;}
+  body .home-projects-all {color:var(--content-link-color,#8bd7ff)!important;}
+  body .home-projects-all:hover {color:#fff!important;}
   body .btn-idecal-bold {border-bottom-width:0!important;}
   body :is(.page-content,.homepage-original) :is(p,li,td,dd) a:not([class*='btn-'],[class*='button']):not(:has(img,h1,h2,h3,h4,h5,h6,svg)) {
     color:var(--content-link-color,#006edc)!important;
