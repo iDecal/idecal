@@ -1,6 +1,6 @@
 /* All public page introductions use a light surface; photos keep their own pixels. */
 @layer hero-policy {
-  body :is(.page-content,.homepage-original) :is(.compact-page-banner,.catalogue-hero,.lp-hero,.projects-hero,.project-detail-hero,.regional-hero,.contact-hero,.booking-hero,.district-hero,.hcm-hero,.q1-hero,.q2-intro,.q3-cover,.q4-hero,.q12-hero,.tb-hero,.blog-hero-panel,.blog-article-header,.case-header,.glass-guide-hero,.wave-hero,.interior-film-hero,.sign-hero,.elevator-hero) {
+  body :is(.page-content,.homepage-original) :is(.compact-page-banner,.catalogue-hero,.lp-hero,.projects-hero,.project-detail-hero,.regional-hero,.contact-hero,.booking-hero,.district-hero,.hcm-hero,.q1-hero,.q2-intro,.q3-cover,.q4-hero,.q12-hero,.tb-hero,.blog-hero-panel,.case-header,.glass-guide-hero,.wave-hero,.interior-film-hero,.sign-hero,.elevator-hero) {
     background-color:#f4f8fd!important;
     background-image:var(--idecal-soft-gradient)!important;
     --text-main:#1b4f7a;

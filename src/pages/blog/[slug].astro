@@ -1,4 +1,5 @@
 ---
+import { parseFragment } from 'parse5';
 import { relatedGuides } from '../../data/content-topics';
 import { expandSeoTemplate } from '../../data/seo';
 import Layout from '../../layouts/Layout.astro';
@@ -23,6 +24,23 @@ const additionalPhotos=getInstallationPhotos(additionalPhotoNumbers);
 
 // Render nội dung từ Content Layer
 const { Content, headings } = await render(entry);
+// Keep the original first paragraph in place, and insert the TOC after it.
+// Posts that begin directly with a heading use their existing summary as the intro.
+const articleHtml=entry.rendered?.html;
+let introEnd=0;
+if(articleHtml){
+  const fragment=parseFragment(articleHtml,{sourceCodeLocationInfo:true});
+  for(const node of fragment.childNodes){
+    if(!('tagName' in node))continue;
+    if(/^h[1-6]$/.test(node.tagName))break;
+    const location=node.sourceCodeLocation;
+    if(node.tagName==='p'&&location&&articleHtml.slice(location.startOffset,location.endOffset).replace(/<[^>]+>/g,'').replace(/&nbsp;/g,' ').trim()){
+      introEnd=location.endOffset;break;
+    }
+  }
+}
+const introHtml=introEnd?articleHtml?.slice(0,introEnd):undefined;
+const remainingHtml=introEnd?articleHtml?.slice(introEnd):articleHtml;
 
 // Lấy bài viết liên quan
 const allPosts = await getCollection('blog');
@@ -45,12 +63,15 @@ const articleSchema={'@type':'BlogPosting','@id':canonical+'#article',headline:e
           <h1>{entry.data.title}</h1>
         </header>
         <img class="blog-article-cover" src={entry.data.image} alt={entry.data.title} width="1000" height="625" fetchpriority="high" />
-        <div class="blog-article-body"><Content /></div>
+        <div class="blog-article-body">
+          {introHtml?<Fragment set:html={introHtml} />:<p class="blog-article-intro">{entry.data.description}</p>}
+          {headings.length>0&&<details class="blog-toc"><summary>Mục lục bài viết</summary><nav aria-label="Mục lục bài viết">{headings.filter(h=>h.depth<=3).map(h=><a href={`#${h.slug}`} class={h.depth===3?'blog-toc-child':undefined}>{h.text}</a>)}{additionalPhotos.length>0&&<a href="#anh-thi-cong-bo-sung">Ảnh công trình cùng chủ đề</a>}</nav></details>}
+          {remainingHtml!==undefined?<Fragment set:html={remainingHtml} />:<Content />}
+        </div>
         <InstallationPhotoGallery numbers={additionalPhotoNumbers} heading="Ảnh công trình iDecal cùng chủ đề" />
         <div class="blog-contact"><div><h2>Cần tư vấn cho không gian của bạn?</h2><p>Gửi hình ảnh và kích thước để iDecal tư vấn vật liệu, thiết kế và thi công.</p></div><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ iDecal →</a></div>
       </article>
       <aside class="blog-sidebar">
-        {headings.length>0&&<details class="blog-toc"><summary>Mục lục bài viết</summary><nav aria-label="Mục lục bài viết">{headings.filter(h=>h.depth<=3).map(h=><a href={`#${h.slug}`} class={h.depth===3?'blog-toc-child':undefined}>{h.text}</a>)}{additionalPhotos.length>0&&<a href="#anh-thi-cong-bo-sung">Ảnh công trình cùng chủ đề</a>}</nav></details>}
         <nav class="blog-sidebar-categories" aria-label="Chuyên mục bài viết"><h2>Khám phá chuyên mục</h2>{blogCategories.map(item=><a href={`/blog/chuyen-muc/${item.slug}`} aria-current={category.slug===item.slug?'page':undefined}>{item.name}<span aria-hidden="true">→</span></a>)}</nav>
       </aside>
     </div>
