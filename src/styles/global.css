@@ -1,3 +1,4 @@
+@import './hero-surfaces.css';
 @import './heading-policy.css';
 @import './accent-surfaces.css';
 :root { --site-h2-size:var(--heading-h2); --site-h2-gradient:linear-gradient(100deg,#0f8fe0,#4f46e5 55%,#7d12f7); }

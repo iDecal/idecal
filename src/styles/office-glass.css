@@ -7,19 +7,17 @@
 .office-glass-page p,.office-glass-page li { color:var(--office-muted); font-size:15px; line-height:1.8; }
 .office-glass-page a:focus-visible,.office-glass-page summary:focus-visible,.office-price-table:focus-visible { outline:2px solid #138bbc; outline-offset:4px; }
 .office-eyebrow { font-size:12px!important; font-weight:500; color:#0d6b96!important; margin:0 0 12px; }
-.office-hero { background:#0a1e40; }
-.page-content .office-hero.compact-page-banner.brand-dark { background-image:none!important; }
+.office-hero { background:var(--idecal-soft-gradient); }
 .office-hero-grid { display:grid; grid-template-columns:1.05fr 1fr; gap:52px; align-items:center; }
-.office-hero h1 { background-image:none; color:#fff; }
 .office-hero-lead p { font-size:16px; margin-bottom:14px; }
 .office-hero figure img { aspect-ratio:1.15; }
 .office-hero-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:24px; }
 .office-hero-actions .btn-primary-solid { background:var(--office-accent); color:#123d69; border-radius:999px; box-shadow:none; }
 .office-text-link { display:inline-flex; align-items:center; min-height:44px; color:#0d6b96; font-size:14px; font-weight:500; }
 .office-text-link:hover { text-decoration:underline; text-underline-offset:4px; }
-.office-hero-actions .office-text-link { color:#fff; border:1px solid #ffffff55; padding:9px 20px; border-radius:999px; }
+.office-hero-actions .office-text-link { color:#1b4f7a; border:1px solid #bfd0e6; padding:9px 20px; border-radius:999px; }
 .office-hero-points { display:flex; flex-wrap:wrap; list-style:none; gap:8px; padding:0; margin:22px 0 0; }
-.office-hero-points li { font-size:12px; padding:7px 12px; border:1px solid #ffffff35; border-radius:999px; }
+.office-hero-points li { font-size:12px; padding:7px 12px; border:1px solid #bfd0e6; border-radius:999px; }
 .office-trust { border-bottom:1px solid #e0e8ef; }
 .office-trust>.container { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; padding-top:24px; padding-bottom:24px; }
 .office-trust strong { display:block; font-size:21px; font-weight:500; color:#1b527b; margin-bottom:4px; }

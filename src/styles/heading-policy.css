@@ -31,7 +31,7 @@
     color:transparent!important;
     -webkit-text-fill-color:transparent!important;
   }
-  body h2 {font-size:var(--heading-h2)!important;text-transform:uppercase!important;}
+  body h2 {font-size:var(--heading-h2)!important;text-transform:none!important;}
   body h3 {font-size:var(--heading-h3)!important;}
   body h4 {font-size:var(--heading-h4)!important;}
   body h5 {font-size:var(--heading-h5)!important;}
@@ -51,6 +51,12 @@
     body .blog-article-body h2 {font-size:21px!important;}
     body .blog-article-body h3 {font-size:18px!important;}
   }
+  @media(min-width:1024px) {
+    body h3 {font-size:20px!important;}
+    body .blog-article-body h3 {font-size:17px!important;}
+    body .blog-card-content h3 {font-size:15px!important;}
+    body h3.product-card-title {font-size:16px!important;}
+  }
   body :is(h1,h2,h3,h4,h5,h6) :is(a,span,strong,b,em,i,mark,small) {
     color:inherit!important;
     -webkit-text-fill-color:inherit!important;
@@ -60,10 +66,10 @@
     background:none!important;
   }
   /* Dark/photo panels need a light heading color for readable contrast. */
-  body :is(.brand-dark,[data-theme='dark'],.hero-gradient,.office-hero,.office-final-cta,.home-service-cover,#site-footer) :is(h2,h3,h4,h5,h6) {
+  body :is(.brand-dark,[data-theme='dark'],.hero-gradient,.office-final-cta,.home-service-cover,#site-footer) :is(h2,h3,h4,h5,h6) {
     color:#d9edff!important;
   }
-  body :is(.office-hero,.brand-dark,[data-theme='dark']) h1 {
+  body :is(.brand-dark,[data-theme='dark']) h1 {
     background-image:linear-gradient(100deg,#70d4ff,#b7b5ff 55%,#e0b9ff)!important;
   }
   @media(forced-colors:active) {
