@@ -1,0 +1,21 @@
+/* Shared link presentation, including imported prose. Keep button styles intact. */
+@layer content-link-policy {
+  body a {text-decoration:none!important;}
+  body .btn-idecal-bold {border-bottom-width:0!important;}
+  body :is(.page-content,.homepage-original) :is(p,li,td,dd) a:not([class*='btn-'],[class*='button']):not(:has(img,h1,h2,h3,h4,h5,h6,svg)) {
+    color:var(--content-link-color,#006edc)!important;
+    font-weight:550!important;
+  }
+  body :is(.page-content,.homepage-original) :is(p,li,td,dd) a:not([class*='btn-'],[class*='button']):not(:has(img,h1,h2,h3,h4,h5,h6,svg)):hover {
+    color:var(--content-link-hover,#6d28d9)!important;
+  }
+  body :is(.page-content,.homepage-original) :is(p,li,td,dd) a:focus-visible {outline:2px solid #168ac0;outline-offset:3px;}
+  body :is(.brand-dark,[data-theme='dark'],[data-heading-theme='dark'],.home-consult,.office-why,#site-footer) {
+    --content-link-color:#8bd7ff;
+    --content-link-hover:#fff;
+  }
+  body :is(.brand-dark,[data-theme='dark'],[data-heading-theme='dark']) :is(.bg-white,.service-card-brand,[data-heading-theme='light']) {
+    --content-link-color:initial;
+    --content-link-hover:initial;
+  }
+}

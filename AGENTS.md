@@ -54,3 +54,5 @@
 - Chủ website đã cho phép đổi tiêu đề cả 16 bài thuộc Vật liệu Decal theo hướng giới thiệu đặc điểm/ứng dụng/cách chọn. Danh sách tiêu đề cũ/mới và hash nội dung giữ nguyên ở docs/material-blog-title-changes.json; title và seoTitle dùng tiêu đề được duyệt này. Đây là ngoại lệ cụ thể cho quy tắc giữ tiêu đề XML; không đổi URL, nội dung, ảnh hoặc các bài ngoài danh sách.
 
 - Nút khu vực header desktop dùng gradient xanh–tím, chữ/icon trắng. Footer bỏ uppercase, giữ kiểu chữ tự nhiên. H2 mobile dưới 768px tăng đúng 2px so với thang hiện tại, gồm cả H2 thẻ/sidebar/Blog; dùng token --heading-h2-bump và --heading-h2-local, không làm tăng desktop.
+
+- Link không gạch dưới trên toàn site; link trong nội dung dùng xanh nổi #006edc, hover tím #6d28d9 và chữ nhấn vừa theo content-links.css. Trên nền tối dùng xanh sáng; giữ giao diện nút/CTA và focus bàn phím. Không đổi nội dung hoặc href chỉ để chỉnh kiểu link.
