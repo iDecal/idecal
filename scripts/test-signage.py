@@ -18,7 +18,19 @@ with sync_playwright() as p:
         assert page.locator('.sign-material').count()==5
         assert page.locator('.sign-benefit-grid article').count()==4
         assert page.locator('.sign-process>li').count()==5
-        assert page.locator('.signage-page img').count()==6
+        assert page.locator('.sign-process-number').all_text_contents()==['01','02','03','04','05']
+        process_image=page.locator('.sign-process-photo').bounding_box()
+        process_copy=page.locator('.sign-process-copy').bounding_box()
+        if width>900:
+            assert process_image['x']+process_image['width']<process_copy['x']
+        else:
+            assert process_image['y']+process_image['height']<=process_copy['y']
+        assert 1.80<process_image['width']/process_image['height']<1.85
+        assert page.locator('.sign-process h3').first.evaluate('node=>parseFloat(getComputedStyle(node).fontSize)')<=16
+        assert page.locator('.sign-process p').first.evaluate('node=>parseFloat(getComputedStyle(node).fontSize)')<=14
+        assert page.locator('.sign-process-copy h2').evaluate('node=>parseFloat(getComputedStyle(node).fontSize)')<=26
+        assert page.locator('.signage-page img[src]').count()==12
+        assert page.locator('#cong-trinh-bang-hieu [data-upload-photo]').count()==6
         assert page.get_by_role('table').count()==2
         assert page.get_by_role('table').first.get_by_role('columnheader').count()==3
         assert page.locator('.sign-table-scroll tbody tr').count()==13
@@ -48,6 +60,26 @@ with sync_playwright() as p:
             assert row.locator('td').nth(2).get_attribute('data-label')=='Ghi Chú'
         page.locator('.sign-price-options a').nth(1).click()
         assert page.url.endswith('#bao-gia-lam-bang-hieu-dan-decal')
+        work_gallery=page.locator('#cong-trinh-bang-hieu')
+        page.locator('.sign-gallery-jump').click()
+        assert page.url.endswith('#cong-trinh-bang-hieu-title')
+        assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'),width
+        for image in work_gallery.locator('.upload-gallery-grid img').all():
+            image.scroll_into_view_if_needed()
+            assert image.evaluate('image=>image.decode().then(()=>image.naturalWidth>0)')
+        for index in [0,5]:
+            opener=work_gallery.locator('[data-upload-photo]').nth(index)
+            opener.click()
+            dialog=work_gallery.locator('dialog')
+            assert dialog.is_visible()
+            assert dialog.locator('img').evaluate('image=>image.decode().then(()=>image.naturalWidth>0)')
+            assert dialog.locator('p').inner_text()==opener.get_attribute('data-caption')
+            if index==0:
+                page.keyboard.press('Escape')
+            else:
+                dialog.get_by_role('button',name='Đóng ×').click()
+            assert not dialog.is_visible()
+            assert opener.evaluate('node=>node===document.activeElement')
         page.locator('.sign-breadcrumb a[href="/decal-quang-cao/"]').click()
         page.wait_for_url('**/decal-quang-cao/')
         assert page.locator('.signage-service-card').count()==1
@@ -66,6 +98,8 @@ with sync_playwright() as p:
     static=no_js.new_page()
     static.goto('http://127.0.0.1:4321/dan-decal-bang-hieu/',wait_until='networkidle')
     assert static.locator('.sign-table-scroll tbody tr').count()==13
+    assert static.locator('#cong-trinh-bang-hieu [data-upload-photo]').count()==6
+    assert static.locator('#cong-trinh-bang-hieu [data-upload-photo]').first.get_attribute('href').startswith('/images/')
     assert 'Emergency' not in static.locator('.signage-page').inner_text()
     static.locator('.sign-price-jump').click()
     assert static.url.endswith('#bao-gia-dan-decal-bang-hieu-moi-nhat')

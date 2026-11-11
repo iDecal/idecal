@@ -18,7 +18,7 @@
 .sign-phone { display:grid; gap:3px; color:#173b62; }
 .sign-phone small { font-size:11px; color:#64748b; }
 .sign-phone span { font-size:18px; font-weight:550; }
-.sign-price-jump { margin-top:22px; }
+.sign-hero-links { display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; margin-top:22px; }
 .sign-hero-visual { margin:0; min-width:0; }
 .sign-hero-visual>.interior-film-image { aspect-ratio:4/3; height:auto; border-radius:16px; }
 .sign-hero-visual figcaption { display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; padding-top:14px; font-size:12px; color:#64748b; }
@@ -56,11 +56,22 @@
 .sign-material-text { padding-block:4px 26px; align-items:start; }
 .sign-material-text h3 { margin:0; }
 .sign-material-text .sign-material-heading { align-self:start; }
-.sign-process { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 44px; padding:0; margin:0 0 32px; list-style:none; }
-.sign-process li { border-left:2px solid #e4cfaa; padding-left:20px; }
-.sign-process h3 { font-size:19px; line-height:1.5; font-weight:500; margin:0 0 12px; }
+.sign-process-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:48px; align-items:center; }
+.sign-process-copy { --site-h2-size:26px; min-width:0; }
+.sign-process-copy .sign-heading { margin-bottom:24px; }
+.sign-process { display:grid; gap:18px; padding:0; margin:0; list-style:none; }
+.sign-process li { display:grid; grid-template-columns:30px minmax(0,1fr); gap:14px; align-items:start; }
+.sign-process-number { display:grid; place-items:center; width:30px; height:30px; margin-top:1px; border:1px solid #d1b581; border-radius:50%; background:#e4cfaa26; color:#896c38; font-size:11px; font-weight:500; font-variant-numeric:tabular-nums; }
+.sign-process h3 { font-size:16px; line-height:1.5; font-weight:500; margin:0 0 4px; }
+.sign-process h3 a { text-decoration:underline; text-underline-offset:3px; text-decoration-color:#b9ccdb; }
+.sign-process p { font-size:14px; line-height:1.7; margin:0; color:#52677c; }
 .sign-process-photo { margin:0; aspect-ratio:1024/560; border-radius:12px; overflow:hidden; }
 .sign-process-photo :is(img,.interior-film-image) { object-fit:contain; }
+@media(max-width:900px) {
+  .sign-process-layout { grid-template-columns:1fr; gap:26px; }
+  .sign-process-photo { width:100%; max-width:640px; justify-self:center; }
+  .sign-process-copy { --site-h2-size:24px; }
+}
 .sign-applications { border-top:1px solid #e1e9ef; }
 .sign-application-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 42px; padding:0; margin:0; list-style:none; }
 .sign-application-list>li { padding:0 0 20px 18px; border-bottom:1px solid #e1e9ef; position:relative; }
@@ -125,7 +136,11 @@
   .sign-material>figure { grid-row:auto; margin-bottom:20px; }
   .sign-material h3 { font-size:21px; }
   .sign-material-text h3 { margin-bottom:14px; }
-  .sign-process,.sign-application-list { grid-template-columns:1fr; gap:24px; }
+  .sign-application-list { grid-template-columns:1fr; gap:24px; }
+  .sign-process { gap:16px; }
+  .sign-process li { gap:12px; }
+  .sign-process h3 { font-size:15px; }
+  .sign-process p { font-size:13px; }
   .signage-page h2 { font-size:26px; }
   .sign-price-options { gap:8px; }
   .sign-price-options a { font-size:12px; padding:9px 11px; gap:12px; }
@@ -145,3 +160,5 @@
   .sign-price-followup>a { justify-self:start; }
   .sign-contact { gap:24px; }
 }
+
+.sign-work-gallery { --installation-photo-fit:contain; border-top:1px solid #e1e9ef; padding-block:12px; }

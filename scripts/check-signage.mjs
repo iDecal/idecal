@@ -6,6 +6,8 @@ import {localizeSignageText,signageCopy} from '../src/data/signage-presentation.
 
 const source=JSON.parse(await readFile('src/data/signage-original.json','utf8'));
 const proof=JSON.parse(await readFile('docs/signage-source.json','utf8'));
+const gallery=JSON.parse(await readFile('src/data/signage-gallery.json','utf8'));
+const library=JSON.parse(await readFile('src/data/installation-photo-library.json','utf8'));
 const html=await readFile('dist/dan-decal-bang-hieu/index.html','utf8');
 const all=node=>[node,...(node.childNodes??[]).flatMap(all)];
 const nodes=all(parse(html));
@@ -17,12 +19,31 @@ const rendered=normalize(text(main));
 assert.equal(source.sourceSha256,proof.sourceSha256);
 assert.equal(nodes.filter(node=>node.tagName==='h1').length,1);
 assert.equal(text(nodes.find(node=>node.tagName==='h1')),proof.title);
-for(const leaf of proof.sourceTextNodes)assert.ok(rendered.includes(normalize(localizeSignageText(leaf))),'Missing original/localized text: '+leaf);
-for(const block of proof.blocks)assert.ok(rendered.includes(normalize(localizeSignageText(block))),'Missing original/localized text block: '+block);
+// The owner requested a shorter process section; all other source copy remains protected.
+const retainOutsideProcess=values=>{
+ const start=values.indexOf(source.process.heading.title);
+ const end=values.indexOf(source.applications.heading.title,start+1);
+ assert.ok(start>=0&&end>start,'Find exact archived process boundaries');
+ return [...values.slice(0,start),...values.slice(end)];
+};
+const retainedBlocks=retainOutsideProcess(proof.blocks);
+assert.equal(proof.blocks.length-retainedBlocks.length,11,'Only the process heading and five title/paragraph pairs may be shortened');
+for(const leaf of retainOutsideProcess(proof.sourceTextNodes))assert.ok(rendered.includes(normalize(localizeSignageText(leaf))),'Missing original/localized text: '+leaf);
+for(const block of retainedBlocks)assert.ok(rendered.includes(normalize(localizeSignageText(block))),'Missing original/localized text block: '+block);
+const processList=all(main).find(node=>(attr(node,'class')??'').split(' ').includes('sign-process'));
+const steps=processList.childNodes.filter(node=>node.tagName==='li');
+assert.equal(steps.length,5);
+for(const [index,step] of steps.entries()){
+ assert.equal(text(all(step).find(node=>node.tagName==='h3')),signageCopy.process.items[index].title);
+ assert.equal(text(all(step).find(node=>node.tagName==='p')),signageCopy.process.items[index].description);
+ assert.ok(text(step).startsWith(String(index+1).padStart(2,'0')));
+}
+assert.ok(signageCopy.process.items.map(item=>item.description).join('').length<source.process.items.map(item=>item.body.text).join('').length*.6,'Process copy should be substantially shorter');
+assert.ok(text(processList).includes('6–12 tháng tùy vật liệu, điều kiện sử dụng'),'Retain warranty period and conditions');
 for(const heading of proof.headings.filter(item=>item.id)){
  const node=nodes.find(node=>attr(node,'id')===heading.id);
  assert.ok(node,'Missing heading anchor: '+heading.id);
- assert.equal(text(node),localizeSignageText(heading.title));
+ assert.equal(text(node),heading.id===source.process.heading.id?signageCopy.process.title:localizeSignageText(heading.title));
 }
 const actualTables=all(main).filter(node=>node.tagName==='table').map(table=>all(table).filter(node=>node.tagName==='tr').map(row=>row.childNodes.filter(cell=>['th','td'].includes(cell.tagName)).map(cell=>text(cell).replace(/\s+/g,' ').trim())));
 assert.deepEqual(actualTables,proof.tables.map(table=>table.map(row=>row.map(localizeSignageText))),'Only requested Vietnamese translations may change table text');
@@ -41,7 +62,23 @@ for(const image of proof.images){
  assert.equal(attr(actual,'alt'),seo.alt);
  assert.equal(attr(actual,'title'),seo.title);
 }
-assert.equal(all(main).filter(node=>node.tagName==='img').length,6);
+assert.equal(all(main).filter(node=>node.tagName==='img'&&proof.images.some(image=>image.src===attr(node,'src'))).length,6,'Keep all source images alongside the new gallery');
+const workGallery=all(main).find(node=>attr(node,'id')===gallery.id);
+assert.ok(workGallery,'Display the installation gallery');
+const photos=all(workGallery).filter(node=>node.tagName==='img'&&attr(node,'src'));
+assert.equal(photos.length,6);
+const featuredBlog=await readFile('src/content/blog/'+gallery.featuredPost.slug+'.md','utf8');
+const featuredImage=featuredBlog.match(/^image: "([^"]+)"/m)?.[1];
+assert.ok(featuredImage,'Use the existing project article image');
+assert.equal(attr(photos[0],'src'),featuredImage);
+for(const [index,number] of gallery.installationNumbers.entries()){
+ const record=library.find(photo=>photo.number===number);
+ assert.equal(record.kind,'installation','Only use existing installation evidence');
+ assert.equal(attr(photos[index+1],'src'),record.src);
+}
+for(const photo of photos)assert.ok((await stat('public'+attr(photo,'src'))).isFile());
+assert.equal(all(workGallery).filter(node=>node.tagName==='a'&&attr(node,'data-upload-photo')!==undefined).length,6);
+assert.ok(all(workGallery).some(node=>node.tagName==='dialog'),'Allow full-size photo viewing');
 assert.ok(nodes.some(node=>node.tagName==='link'&&attr(node,'rel')==='canonical'&&attr(node,'href')===proof.sourceCanonical));
 const schemas=nodes.filter(node=>node.tagName==='script'&&attr(node,'type')==='application/ld+json').flatMap(node=>{const data=JSON.parse((node.childNodes??[]).map(child=>child.value??'').join(''));return data['@graph']??[data];});
 const breadcrumb=schemas.find(item=>item['@type']==='BreadcrumbList');
@@ -63,4 +100,4 @@ for(const link of source.linkMap){
 }
 assert.ok((await readFile('dist/sitemap.xml','utf8')).includes('<loc>'+proof.sourceCanonical+'</loc>'));
 assert.ok(!/wp-admin|cozyBlock|<form\b|onerror=|onclick=/i.test(html),'Do not import saved admin/plugin scripts or handlers');
-console.log('Signage passed: '+proof.blocks.length+' source blocks with approved Vietnamese translations, '+proof.sourceTextNodes.length+' archived text nodes, 6 images, 13 unchanged prices, responsive table labels, quote/call actions, parent links and canonical.');
+console.log('Signage passed: '+retainedBlocks.length+' preserved source blocks plus 5 concise numbered process steps, '+proof.sourceTextNodes.length+' archived text nodes, 6 original images, 6 verified local installation photos, 13 unchanged prices, responsive table labels, quote/call actions, parent links and canonical.');

@@ -1,6 +1,16 @@
 ---
 import {signage as source,signageCopy,signageTableHtml} from '../data/signage-presentation';
 import InteriorFilmImage from './InteriorFilmImage.astro';
+import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
+import {getEntry} from 'astro:content';
+import {getInstallationPhotos} from '../data/installation-photo-links';
+import gallery from '../data/signage-gallery.json';
+const featuredPost=await getEntry('blog',gallery.featuredPost.slug);
+const galleryCaptions:Record<string,string>=gallery.captions;
+const workPhotos=[
+  ...(featuredPost?[{src:featuredPost.data.image,alt:featuredPost.data.title,title:featuredPost.data.title,caption:gallery.featuredPost.caption,width:gallery.featuredPost.width,height:gallery.featuredPost.height}]:[]),
+  ...getInstallationPhotos(gallery.installationNumbers).filter(photo=>photo.kind==='installation').map(photo=>({...photo,caption:galleryCaptions[String(photo.number)]??photo.caption})),
+];
 import '../styles/signage.css';
 const sectionLinks=[
   {heading:source.introduction.heading,label:'Tổng quan'},
@@ -20,7 +30,7 @@ const sectionLinks=[
       <h1>{source.hero.title}</h1>
       <div class="sign-original sign-lead" set:html={source.hero.intro.html} />
       <div class="sign-actions"><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá <span aria-hidden="true">→</span></a><a href={source.hero.actions[1].href} class="sign-phone"><small>{source.hero.actions[0].label}</small><span>{source.hero.actions[1].label}</span></a></div>
-      <a href={'#'+source.pricing.heading.id} class="btn-idecal-bold sign-price-jump">Xem bảng giá dịch vụ ↓</a>
+      <div class="sign-hero-links"><a href={'#'+source.pricing.heading.id} class="btn-idecal-bold sign-price-jump">Xem bảng giá dịch vụ ↓</a><a href={'#'+gallery.id+'-title'} class="btn-idecal-bold sign-gallery-jump">Xem ảnh thi công ↓</a></div>
     </div>
     <figure class="sign-hero-visual"><InteriorFilmImage image={source.hero.image} eager /><figcaption><strong>{source.hero.badge.title}</strong><span>{source.hero.badge.text}</span></figcaption></figure>
   </section>
@@ -51,11 +61,18 @@ const sectionLinks=[
     {source.pricing.tables.map(table=><div class="sign-price-group"><h3 id={table.heading.id}>{table.heading.title}</h3><div class="sign-original" set:html={table.intro.map(block=>block.html).join('')} /><div class="sign-table-scroll" role="region" aria-labelledby={table.heading.id} set:html={signageTableHtml(table.html)} /></div>)}
     <div class="sign-price-followup"><div class="sign-original sign-price-note" set:html={source.pricing.note.html} /><a href={signageCopy.quoteHref} class="btn-idecal-bold">Nhận báo giá theo kích thước của bạn →</a></div>
   </section>
-  <section class="container sign-section" aria-labelledby={source.process.heading.id}>
-    <header class="sign-heading"><h2 id={source.process.heading.id}>{source.process.heading.title}</h2></header>
-    <ol class="sign-process">{source.process.items.map(item=><li><h3>{item.title}</h3><div class="sign-original" set:html={item.body.html} /></li>)}</ol>
-    <figure class="sign-process-photo"><InteriorFilmImage image={source.process.image} /></figure>
+  <section class="container sign-section sign-process-section" aria-labelledby={source.process.heading.id}>
+    <div class="sign-process-layout">
+      <figure class="sign-process-photo"><InteriorFilmImage image={source.process.image} /></figure>
+      <div class="sign-process-copy">
+        <header class="sign-heading"><h2 id={source.process.heading.id}>{signageCopy.process.title}</h2></header>
+        <ol class="sign-process" role="list">{signageCopy.process.items.map((item,index)=><li><span class="sign-process-number" aria-hidden="true">{String(index+1).padStart(2,'0')}</span><div><h3>{item.href?<a href={item.href}>{item.title}</a>:item.title}</h3><p>{item.description}</p></div></li>)}</ol>
+      </div>
+    </div>
   </section>
+  <div class="container sign-work-gallery">
+    <InstallationPhotoGallery id={gallery.id} heading={gallery.heading} introduction={gallery.introduction} photos={workPhotos} />
+  </div>
   <section class="container sign-section sign-applications" aria-labelledby={source.applications.heading.id}>
     <header class="sign-heading"><h2 id={source.applications.heading.id}>{source.applications.heading.title}</h2></header>
     <ul class="sign-original sign-application-list" set:html={source.applications.items.map(item=>item.html).join('')} />

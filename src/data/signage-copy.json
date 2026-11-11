@@ -41,5 +41,31 @@
       "from": "slogan",
       "to": "khẩu hiệu"
     }
-  ]
+  ],
+  "process": {
+    "title": "Quy trình dán decal bảng hiệu",
+    "items": [
+      {
+        "title": "Khảo sát & tư vấn",
+        "description": "Đo kích thước, kiểm tra bề mặt và chọn phương án phù hợp."
+      },
+      {
+        "title": "Thiết kế & duyệt mẫu",
+        "description": "Thiết kế theo nhận diện thương hiệu, duyệt mẫu trước khi in."
+      },
+      {
+        "title": "In decal",
+        "description": "In sắc nét, chọn vật liệu phù hợp vị trí sử dụng.",
+        "href": "/dich-vu/in-decal/"
+      },
+      {
+        "title": "Thi công & hoàn thiện",
+        "description": "Dán đúng vị trí, kiểm tra độ bám và bọt khí khi bàn giao."
+      },
+      {
+        "title": "Bảo hành & hỗ trợ",
+        "description": "Bảo hành 6–12 tháng tùy vật liệu, điều kiện sử dụng; hỗ trợ thay mới."
+      }
+    ]
+  }
 }
