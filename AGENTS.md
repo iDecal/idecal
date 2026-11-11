@@ -33,3 +33,6 @@
 - Trang bảng hiệu có thư viện ảnh thực tế theo signage-gallery.json: lấy ảnh bài Hoa Đạt từ dữ liệu Blog và các ảnh installation số 36, 39, 41, 24, 37 của installation-photo-library.json. Giữ nguồn ảnh, chỉ dùng chú thích đã có căn cứ, không gán thêm địa chỉ hoặc ngày thi công. Có xem ảnh lớn; không thay sáu ảnh của nội dung gốc bằng ảnh thư viện.
 
 - /dan-decal-thang-may/ là dịch vụ con của Decal quảng cáo, dữ liệu tại elevator-service.json. Giữ hai nhóm: film nội thất và decal in quảng cáo; liên kết ở cả hai trang cha Decal quảng cáo, breadcrumb về /decal-quang-cao/. Dùng ảnh thang máy có sẵn, chú thích theo nội dung ảnh; không gán ảnh tham khảo thành công trình mới của iDecal. Không thay bài Blog thang máy hiện có. Kiểm tra bằng node scripts/check-elevator.mjs và scripts/test-elevator.py.
+- Cập nhật bố cục văn phòng theo landing HTML mới: hero và CTA nền đậm, thẻ dịch vụ có ảnh, lưới giải pháp 3+2, bảng giá rộng. Người dùng cho phép đổi ảnh dịch vụ/giải pháp; ảnh chọn tại `office-glass-visuals.json`, giữ tệp nguồn cũ để đối chiếu.
+
+- Footer dùng nền sáng, khối liên hệ xanh đậm, nhóm link có gạch nhấn vàng và thanh bản quyền xanh; giữ 7 social cùng các địa chỉ. Trên mobile các nhóm điều hướng footer đóng mặc định, mở dạng accordion.

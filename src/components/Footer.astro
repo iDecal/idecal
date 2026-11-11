@@ -3,68 +3,95 @@ import { contactLocations } from '../data/contact-locations';
 import SocialLinks from './SocialLinks.astro';
 import { regions } from '../data/regions';
 import { serviceOfferings } from '../data/site-offerings';
+const about = [{name:'Giới thiệu iDecal',href:'/gioi-thieu-idecal'},{name:'Công trình thực tế',href:'/du-an'},{name:'Blog iDecal',href:'/blog'},{name:'Liên hệ',href:'/lien-he-idecal'}];
+const support = [{name:'Hướng dẫn đo kính',href:'/huong-dan-do-kinh'},{name:'Hướng dẫn chọn vật liệu',href:'/blog/so-sanh-decal-sua-trong-va-luoi'},{name:'Câu hỏi thường gặp',href:'/decal-dan-kinh-van-phong/#faq-van-phong'},{name:'Gửi yêu cầu tư vấn',href:'/lien-he-idecal#yeu-cau'}];
 ---
-<footer class="brand-dark bg-brand-navy bg-brand-pattern border-t border-sand-dark/40 pt-16 pb-8">
-  <div class="container">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
-      
-      <div class="flex flex-col gap-6">
-        <a href="/" class="flex items-center gap-3 self-start" aria-label="iDecal – về trang chủ"><img src="/images/idecal-logo.png" alt="Logo iDecal" class="h-10 w-10" /><span class="text-2xl font-semibold text-white">iDecal</span></a>
-        <p class="text-sm text-brand-inverse leading-relaxed">
-          <strong>iDecal</strong> – Đơn vị hơn 10 năm kinh nghiệm thiết kế, in ấn và thi công Decal quảng cáo, dán kính chống nóng chuyên nghiệp.
-        </p>
-      </div>
-
-      <div>
-        <h4 class="text-sand font-bold mb-6 text-[17px]">Dịch vụ tiêu biểu</h4>
-        <ul class="space-y-3 text-sm text-brand-inverse">
-          <li><a href="/dich-vu" class="hover:text-white transition-colors">Xem tất cả dịch vụ →</a></li>
-          {serviceOfferings.map(service => <li><a href={`/dich-vu/${service.slug}`} class="hover:text-white transition-colors">{service.name}</a></li>)}
-        </ul>
-        <a href="/san-pham" class="mt-5 inline-block text-sm font-medium text-brand-sky hover:text-white">Xem danh mục sản phẩm →</a>
-      </div>
-
-      <div>
-        <h4 class="text-sand font-bold mb-6 text-[17px]">Khu vực phục vụ</h4>
-        <ul class="grid grid-cols-2 gap-x-4 gap-y-3 text-sm text-brand-inverse">
-          {regions.map(region => <li><a href={`/khu-vuc/${region.slug}`} class="hover:text-white transition-colors">{region.shortName}</a></li>)}
-        </ul>
-        <a href="/khu-vuc" class="mt-5 inline-block text-sm font-medium text-brand-sky hover:underline">Xem tất cả khu vực →</a>
-      </div>
-
-      <div>
-        <h4 class="text-sand font-bold mb-6 text-[17px]">Thông tin liên hệ</h4>
-        <ul class="space-y-4 text-sm text-brand-inverse">
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-sand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            <div class="space-y-3">
-              {contactLocations.map(location => (
-                <div><span class="font-medium text-white">{location.name}:</span> <address class="inline not-italic">{location.address}</address></div>
-              ))}
-            </div>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-sand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-            <a href="tel:0866077040" class="font-bold text-brand-sky">0866.077.040</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <svg class="w-5 h-5 text-sand-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
-            <a href="mailto:hi@idecal.vn" class="text-brand-sky hover:text-white transition-colors">hi@idecal.vn</a>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="footer-social-row"><p>Kết nối cùng iDecal</p><SocialLinks compact dark label="Theo dõi iDecal trên các mạng xã hội" /></div>
-
-    <div class="pt-8 border-t border-white/15 flex flex-col md:flex-row justify-between items-center gap-4 text-[12px] text-brand-inverse">
-      <p>© 2026 iDecal. All rights reserved.</p>
-      <a href="/lien-he-idecal" class="hover:text-white">Liên hệ iDecal</a>
+<footer id="site-footer" class="site-footer" aria-label="Thông tin và hỗ trợ iDecal">
+  <div class="container footer-main">
+    <section class="footer-contact" aria-label="Liên hệ iDecal">
+      <a class="footer-logo" href="/" aria-label="iDecal – về trang chủ"><img src="/images/idecal-logo.png" alt="Logo iDecal" width="42" height="42" /><span>iDecal</span></a>
+      <p class="footer-intro">Hơn 10 năm thiết kế, in ấn và thi công Decal, film dán kính.</p>
+      <a class="footer-contact-line footer-phone" href="tel:0866077040"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m7 3 3 5-3 2a15 15 0 0 0 7 7l2-3 5 3v3c-9 3-20-8-17-17h3Z" /></svg><span>0866.077.040</span></a>
+      <a class="footer-contact-line" href="mailto:hi@idecal.vn"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>hi@idecal.vn</span></a>
+      <div class="footer-contact-line footer-address"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><address><strong>{contactLocations[0].name}:</strong> {contactLocations[0].address}</address></div>
+      <details class="footer-locations"><summary>Các địa chỉ khác <span aria-hidden="true">+</span></summary><div>{contactLocations.slice(1).map(location=><address><strong>{location.name}:</strong> {location.address}</address>)}</div></details>
+      <SocialLinks compact dark label="Theo dõi iDecal trên các mạng xã hội" />
+    </section>
+    <div class="footer-right">
+      <nav class="footer-nav-grid" aria-label="Điều hướng cuối trang">
+        <details class="footer-link-group" open><summary><h3>Dịch vụ</h3><span class="footer-toggle" aria-hidden="true">+</span></summary><ul>{serviceOfferings.map(service=><li><a href={`/dich-vu/${service.slug}`}>{service.name}</a></li>)}<li><a href="/dich-vu">Tất cả dịch vụ</a></li><li><a href="/san-pham">Vật liệu & mẫu</a></li></ul></details>
+        <details class="footer-link-group" open><summary><h3>Về iDecal</h3><span class="footer-toggle" aria-hidden="true">+</span></summary><ul>{about.map(link=><li><a href={link.href}>{link.name}</a></li>)}</ul></details>
+        <details class="footer-link-group footer-support" open><summary><h3>Hỗ trợ khách hàng</h3><span class="footer-toggle" aria-hidden="true">+</span></summary><ul>{support.map(link=><li><a href={link.href}>{link.name}</a></li>)}</ul></details>
+      </nav>
+      <nav class="footer-regions" aria-label="Khu vực phục vụ"><div><span>Khu vực phục vụ</span><a class="footer-region-all" href="/khu-vuc">Xem tất cả →</a></div><ul>{regions.map(region=><li><a href={`/khu-vuc/${region.slug}`}>{region.shortName}</a></li>)}</ul></nav>
     </div>
   </div>
+  <div class="footer-bottom"><div class="container"><p>© {new Date().getFullYear()} iDecal. All rights reserved.</p><a href="/lien-he-idecal">Thiết kế · In ấn · Thi công Decal & film</a></div></div>
 </footer>
-
+<script>
+  const footerGroups = Array.from(document.querySelectorAll<HTMLDetailsElement>('.footer-link-group'));
+  const footerDesktop = matchMedia('(min-width: 768px)');
+  const syncFooter = () => footerGroups.forEach(group => { group.open = footerDesktop.matches; const summary=group.querySelector('summary'); if(summary) summary.tabIndex=footerDesktop.matches ? -1 : 0; });
+  syncFooter();
+  footerDesktop.addEventListener('change', syncFooter);
+  footerGroups.forEach(group => {
+    group.querySelector('summary')?.addEventListener('click', event => { if (footerDesktop.matches) event.preventDefault(); });
+    group.addEventListener('toggle', () => {
+      if (!footerDesktop.matches && group.open) footerGroups.forEach(other => { if (other !== group) other.open = false; });
+    });
+  });
+</script>
 <style>
-.footer-social-row{display:flex;align-items:center;justify-content:space-between;gap:20px 32px;margin-bottom:24px}.footer-social-row>p{margin:0;color:#bdcfe2;font-size:12px;line-height:1.7}@media(max-width:639px){.footer-social-row{align-items:flex-start;flex-direction:column;gap:15px;margin-bottom:25px}}
+.site-footer { background:#f2f4f7; border-top:1px solid #e5eaf0; color:#263d55; }
+.footer-main { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1.95fr); gap:48px; padding-top:38px; padding-bottom:34px; }
+.footer-contact { padding:25px; border-radius:18px; background:#12338a; color:#fff; }
+.footer-logo { display:inline-flex; align-items:center; gap:12px; color:#fff; }
+.footer-logo img { width:42px; height:42px; }
+.footer-logo span { font-size:26px; font-weight:600; }
+.footer-intro { margin:14px 0 18px; font-size:12px; color:#d6e2f5; line-height:1.7; }
+.footer-contact-line { display:flex; align-items:center; gap:11px; font-size:13px; color:#fff; margin-top:13px; overflow-wrap:anywhere; }
+.footer-contact-line svg { width:18px; height:18px; flex:0 0 18px; color:#f0d38a; }
+.footer-contact a:hover { text-decoration:underline; text-underline-offset:3px; }
+.footer-phone { font-size:21px; font-weight:600; }
+.footer-address { align-items:flex-start; line-height:1.7; }
+.footer-address svg { margin-top:3px; }
+address { font-style:normal; font-size:12px; line-height:1.7; color:#e3ecfc; }
+.footer-locations { margin:12px 0 18px; padding-left:29px; }
+.footer-locations summary { display:flex; justify-content:space-between; align-items:center; cursor:pointer; list-style:none; font-size:12px; color:#fff; min-height:30px; }
+.footer-locations summary::-webkit-details-marker { display:none; }
+.footer-locations summary>span { font-size:18px; font-weight:400; }
+.footer-locations[open] summary>span { transform:rotate(45deg); }
+.footer-locations address { margin-top:10px; }
+.footer-right { min-width:0; padding-top:4px; }
+.footer-nav-grid { display:grid; grid-template-columns:.8fr 1fr 1.25fr; gap:28px; }
+.footer-link-group summary { list-style:none; pointer-events:none; }
+.footer-link-group summary::-webkit-details-marker { display:none; }
+.footer-toggle { display:none; }
+.footer-link-group h3 { display:table; margin:0 0 15px; padding-bottom:8px; border-bottom:3px solid #eac45e; font-size:15px; font-weight:600; color:#123071; line-height:1.4; text-transform:uppercase; }
+.footer-link-group ul,.footer-regions ul { padding:0; margin:0; list-style:none; }
+.footer-link-group li>a { position:relative; display:flex; align-items:center; min-height:36px; padding:6px 0 6px 15px; font-size:13px; line-height:1.55; color:#33465a; }
+.footer-link-group li>a::before { content:''; position:absolute; left:1px; top:15px; width:5px; height:5px; border-top:1px solid #7a8797; border-right:1px solid #7a8797; transform:rotate(45deg); }
+.footer-link-group li>a:hover,.footer-regions a:hover { color:#075eb4; text-decoration:underline; text-underline-offset:3px; }
+.footer-regions { border-top:1px solid #dce3ec; margin-top:26px; padding-top:18px; }
+.footer-regions>div { display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:12px; color:#617083; margin-bottom:10px; }
+.footer-regions ul { display:flex; flex-wrap:wrap; gap:4px 20px; }
+.footer-regions li a { display:inline-flex; align-items:center; min-height:30px; color:#33465a; font-size:12px; }
+.footer-region-all { color:#126ba2; }
+.footer-bottom { background:#0a2057; }
+.footer-bottom>.container { display:flex; align-items:center; justify-content:space-between; gap:14px; padding-top:15px; padding-bottom:15px; }
+.footer-bottom p,.footer-bottom a { font-size:11px; line-height:1.7; color:#dae5f6; margin:0; }
+.site-footer a:focus-visible,.site-footer summary:focus-visible { outline:2px solid #1d8bcc; outline-offset:4px; border-radius:3px; }
+.footer-contact a:focus-visible,.footer-contact summary:focus-visible { outline-color:#f0d38a; }
+@media(max-width:1100px) { .footer-main { grid-template-columns:minmax(0,.95fr) minmax(0,1.5fr); gap:28px; } .footer-nav-grid { grid-template-columns:1fr 1fr; gap:22px; } .footer-support { grid-column:1/-1; } .footer-support ul { display:grid; grid-template-columns:1fr 1fr; column-gap:20px; } }
+@media(max-width:767px) {
+ .footer-nav-grid { display:block; }
+ .footer-link-group + .footer-link-group { border-top:1px solid #dce3ec; }
+ .footer-link-group summary { display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:56px; pointer-events:auto; cursor:pointer; }
+ .footer-link-group summary h3 { margin:0; padding:0; border:0; }
+ .footer-toggle { display:block; color:#3e5f7f; font-size:21px; font-weight:400; }
+ .footer-link-group[open] .footer-toggle { transform:rotate(45deg); }
+ .footer-link-group ul { display:grid; grid-template-columns:1fr 1fr; gap:0 16px; padding-bottom:14px; }
+ .footer-contact :global(.social-links--compact) { display:grid; grid-template-columns:repeat(7,34px); gap:5px; }
+ .footer-contact :global(.social-links--compact a) { width:34px; height:34px; min-height:34px; padding:7px; }
+ .footer-main { grid-template-columns:1fr; gap:28px; padding-top:28px; padding-bottom:26px; } .footer-contact { padding:22px; } .footer-right { padding-top:0; } .footer-link-group h3 { font-size:14px; } .footer-link-group li>a { min-height:44px; } .footer-link-group li>a::before { top:19px; } .footer-regions li a { min-height:40px; } .footer-bottom>.container { flex-direction:column; align-items:flex-start; gap:4px; } }
 </style>

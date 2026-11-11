@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import {parse} from 'parse5';
 const source=JSON.parse(fs.readFileSync('src/data/office-glass-original.json','utf8'));
 const copy=JSON.parse(fs.readFileSync('src/data/office-glass-copy.json','utf8'));
+const visuals=JSON.parse(fs.readFileSync('src/data/office-glass-visuals.json','utf8'));
 const presentation=JSON.parse(fs.readFileSync('src/data/office-glass-presentation.json','utf8'));
 const snapshot=JSON.parse(fs.readFileSync('docs/office-glass-source.json','utf8'));
 const html=fs.readFileSync('dist/decal-dan-kinh-van-phong/index.html','utf8');
@@ -24,11 +25,13 @@ for(const item of presentation){
   assert.ok(nodes.some(node=>node.tagName==='a'&&attr(node,'href')===item.href&&text(node).includes(item.action)),`Missing action: ${item.action}`);
 }
 assert.ok(!text(main).includes('👉'),'Remove hand emoji from public content');
-for(const image of source.images){assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing source image: ${image.src}`);assert.ok(fs.existsSync('public'+image.src));}
+for(const image of source.images)assert.ok(fs.existsSync('public'+image.src),'Keep original image archive');
+for(const image of [...visuals.services,...visuals.solutions,...[source.images[0],source.images[6],source.images[7]]]){assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing selected image: ${image.src}`);assert.ok(fs.existsSync('public'+image.src));}
 const faqs=source.tokens.filter(t=>t.type==='faq');assert.equal(faqs.length,7);
 for(const faq of faqs)assert.ok(nodes.some(n=>n.tagName==='summary'&&text(n).includes(faq.question)),`Missing question: ${faq.question}`);
-assert.ok(!nodes.some(n=>n.tagName==='details'&&attr(n,'open')!==undefined),'FAQs must start closed');
+const mainNodes=[];const collectMain=node=>{mainNodes.push(node);for(const child of node.childNodes??[])collectMain(child);};collectMain(main);
+assert.ok(!mainNodes.some(n=>n.tagName==='details'&&attr(n,'open')!==undefined),'Main content FAQs and price notes must start closed');
 assert.ok(nodes.some(n=>n.tagName==='table'),'Source price table is required');
 assert.ok(nodes.some(n=>n.tagName==='link'&&attr(n,'rel')==='canonical'&&attr(n,'href')===source.sourceCanonical));
 assert.ok(!html.includes('google.com/search?q=link-subpage-logo'),'Replace source placeholder with the real cutting service');
-console.log(`Office glass passed: ${snapshot.blocks.length} archived source blocks, 5 concise solutions, ${source.images.length} source images, keyword H1, edited headings, application contexts, original canonical, source table and ${faqs.length} closed FAQs.`);
+console.log(`Office glass passed: ${snapshot.blocks.length} archived source blocks, 5 concise solutions, ${source.images.length} archived source images, 9 replacement photos, keyword H1, edited headings, application contexts, original canonical, source table and ${faqs.length} closed FAQs.`);

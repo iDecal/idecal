@@ -1,0 +1,15 @@
+{
+  "services": [
+    {"src":"/images/van-phong/tu-van-mau-decal.webp","source":"/images/Banner/dich-vu-thiet-ke-decal.webp","alt":"Minh họa tư vấn chọn màu và mẫu Decal văn phòng"},
+    {"src":"/images/van-phong/thiet-ke-logo-van-phong.webp","source":"/images/cong-trinh-thuc-te/22-decal-mo-logo-protraco-logistics.webp","alt":"Decal mờ và logo trên kính văn phòng PROTRACO Logistics"},
+    {"src":"/images/van-phong/in-decal-kho-lon.webp","source":"/images/uploads/may-in-quang-cao-kho-lon.png","alt":"Máy in Decal khổ lớn cho hình ảnh quảng cáo"},
+    {"src":"/images/van-phong/thi-cong-vach-kinh.webp","source":"/images/cong-trinh-thuc-te/34-thi-cong-phim-vach-kinh.webp","alt":"Thi công phim trên vách kính cao của văn phòng"}
+  ],
+  "solutions": [
+    {"src":"/images/van-phong/giai-phap-decal-mo.webp","source":"/images/cong-trinh-thuc-te/05-decal-mo-vach-ngan-van-phong.webp","alt":"Decal mờ tạo riêng tư cho vách ngăn kính văn phòng"},
+    {"src":"/images/van-phong/giai-phap-cat-logo.webp","source":"/images/cong-trinh-thuc-te/17-decal-mo-logo-cua-phong-hop.webp","alt":"Decal mờ cắt logo trên cửa kính phòng họp"},
+    {"src":"/images/van-phong/giai-phap-cach-nhiet.webp","source":"/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp","alt":"Thi công phim cách nhiệt cho hệ kính văn phòng"},
+    {"src":"/images/van-phong/giai-phap-in-quang-cao.webp","source":"/images/cong-trinh-thuc-te/38-decal-trang-tri-hanh-lang.webp","alt":"Decal hình ảnh điểm đến trên dãy kính hành lang"},
+    {"src":"/images/van-phong/giai-phap-film-van-song.webp","source":"/images/cong-trinh-thuc-te/26-film-van-song-vach-kinh-02.webp","alt":"Film vân sóng trang trí trên ô kính lớn của vách ngăn"}
+  ]
+}
