@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import LegacyServiceLanding from '../../components/LegacyServiceLanding.astro';
+import WaveGlassLanding from '../../components/WaveGlassLanding.astro';
+import source from '../../data/wave-glass-original.json';
 ---
-<Layout title="Thi công Decal vân sóng 3D | iDecal" description="Tìm hiểu phương án thi công decal vân sóng 3d, xem hình ảnh ứng dụng và trao đổi nhu cầu với iDecal."><LegacyServiceLanding slug="decal-mo-3d-van-song" /></Layout>
+<Layout title={source.sourceTitle} description={source.description} canonicalURL={source.sourceCanonical} image={source.hero.image.src}><WaveGlassLanding /></Layout>

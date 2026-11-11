@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WaveGlassLanding from '../components/WaveGlassLanding.astro';
+import source from '../data/wave-glass-original.json';
+const faq={'@type':'FAQPage',mainEntity:source.faq.items.map(item=>({'@type':'Question',name:item.question,acceptedAnswer:{'@type':'Answer',text:item.answer.text}}))};
+---
+<Layout title={source.sourceTitle} description={source.description} canonicalURL={source.sourceCanonical} image={source.hero.image.src} structuredData={[faq]}><WaveGlassLanding /></Layout>

@@ -1,0 +1,68 @@
+---
+import source from '../data/wave-glass-original.json';
+import InteriorFilmImage from './InteriorFilmImage.astro';
+import '../styles/wave-glass.css';
+---
+<div class="wave-glass-page">
+  <section class="container wave-hero">
+    <div class="wave-hero-copy">
+      <p class="wave-eyebrow">Dịch vụ iDecal</p>
+      <h1 id={source.hero.heading.id}>{source.title}</h1>
+      <div class="wave-original wave-lead" set:html={source.hero.paragraphs[0].html} />
+      <div class="wave-actions">
+        {source.hero.cta.map(link=><a href={link.href} class="btn-primary-solid">{link.label}<span aria-hidden="true">→</span></a>)}
+        <a href="#mau-decal-van-song" class="btn-idecal-bold">Khám phá mẫu decal ↓</a>
+      </div>
+      <div class="wave-hero-points">
+        <div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} />
+        <ul>{source.hero.points.map(point=><li>{point}</li>)}</ul>
+      </div>
+    </div>
+    <figure class="wave-hero-photo"><InteriorFilmImage image={source.hero.image} eager /></figure>
+  </section>
+  <nav class="container wave-jump" aria-label="Nội dung dịch vụ decal vân sóng">
+    <a href="#mau-decal-van-song">Mẫu & báo giá</a><a href="#uu-diem-van-song">Ưu điểm</a><a href="#hoi-dap-van-song">Câu hỏi thường gặp</a><a href="#thi-cong-van-song">Ảnh thi công</a>
+  </nav>
+  <section id="mau-decal-van-song" class="container wave-section">
+    <header class="wave-section-heading">
+      <p class="wave-eyebrow">Chọn mẫu cho không gian của bạn</p>
+      <h2 id={source.modelsHeading.id}>{source.modelsHeading.title}</h2>
+      <div class="wave-original" set:html={source.modelsIntro} />
+    </header>
+    <div class="wave-models">
+      {source.cards.map(card=><article class="wave-model">
+        <figure><a href={card.links[0].href} aria-label={card.heading.title}><InteriorFilmImage image={card.image} /></a></figure>
+        <div class="wave-model-copy">
+          <h3 id={card.heading.id}><a href={card.links[0].href}>{card.heading.title}</a></h3>
+          <div class="wave-original wave-model-description" set:html={card.paragraphs[0].html} />
+          <div class="wave-model-features">
+            <div set:html={card.paragraphs.slice(1).map(block=>block.html).join('')} />
+            <ul>{card.points.map(point=><li>{point}</li>)}</ul>
+          </div>
+          <div class="wave-model-bottom"><p class="wave-price">{card.price}</p>{card.links.map(link=><a class="wave-model-link" href={link.href}>{link.label}<span aria-hidden="true">→</span></a>)}</div>
+        </div>
+      </article>)}
+    </div>
+    <a class="wave-measure-link" href="/huong-dan-do-kinh/">Hướng dẫn đo kính để nhận báo giá<span aria-hidden="true">→</span></a>
+  </section>
+  <section id="uu-diem-van-song" class="wave-soft">
+    <div class="container wave-section wave-benefits">
+      <figure class="wave-catalogue-photo"><InteriorFilmImage image={source.benefits.image} /></figure>
+      <div>
+        <header class="wave-section-heading"><h2 id={source.benefits.heading.id}>{source.benefits.heading.title}<span class="wave-heading-subtitle">{source.benefits.heading.subtitle}</span></h2><div class="wave-original" set:html={source.benefits.paragraphs.map(block=>block.html).join('')} /></header>
+        <ul class="wave-benefit-list">{source.benefits.points.map(point=><li><span aria-hidden="true" class="wave-check">✓</span><div class="wave-original" set:html={point.html} /></li>)}</ul>
+      </div>
+    </div>
+  </section>
+  <section id="hoi-dap-van-song" class="container wave-section wave-faq">
+    <header class="wave-section-heading"><p class="wave-eyebrow">Trước khi chọn & thi công</p><h2 id={source.faq.heading.id}>{source.faq.heading.title}</h2><a href="/lien-he-idecal/" class="btn-idecal-bold">Trao đổi với iDecal →</a></header>
+    <div class="wave-questions">{source.faq.items.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div class="wave-original wave-answer" set:html={item.answer.html} /></details>)}</div>
+  </section>
+  <section id="thi-cong-van-song" class="container wave-section wave-gallery">
+    <header class="wave-section-heading"><h2 id={source.gallery.heading.id}>{source.gallery.heading.title}</h2></header>
+    <div class="wave-gallery-layout">
+      {source.gallery.images.map(image=><figure><InteriorFilmImage image={image} /></figure>)}
+      <div class="wave-contact"><p class="wave-eyebrow">Tư vấn chọn mẫu</p><h3>Thêm chiều sâu cho không gian kính</h3><p>Gửi kích thước, ảnh ô kính và mẫu bạn thích để iDecal tư vấn phương án phù hợp.</p><div class="wave-actions">{source.hero.cta.map(link=><a href={link.href} class="btn-primary-solid">{link.label}<span aria-hidden="true">→</span></a>)}<a href="/film-trang-tri-kinh/" class="btn-idecal-bold">Xem thêm film trang trí kính →</a></div></div>
+    </div>
+  </section>
+</div>
