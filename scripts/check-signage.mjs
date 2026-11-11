@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
 import {parse} from 'parse5';
 import {getImageSeo} from '../src/data/image-seo.ts';
+import {localizeSignageText,signageCopy} from '../src/data/signage-presentation.ts';
 
 const source=JSON.parse(await readFile('src/data/signage-original.json','utf8'));
 const proof=JSON.parse(await readFile('docs/signage-source.json','utf8'));
@@ -16,15 +17,23 @@ const rendered=normalize(text(main));
 assert.equal(source.sourceSha256,proof.sourceSha256);
 assert.equal(nodes.filter(node=>node.tagName==='h1').length,1);
 assert.equal(text(nodes.find(node=>node.tagName==='h1')),proof.title);
-for(const leaf of proof.sourceTextNodes)assert.ok(rendered.includes(normalize(leaf)),'Missing original text: '+leaf);
-for(const block of proof.blocks)assert.ok(rendered.includes(normalize(block)),'Missing original text block: '+block);
+for(const leaf of proof.sourceTextNodes)assert.ok(rendered.includes(normalize(localizeSignageText(leaf))),'Missing original/localized text: '+leaf);
+for(const block of proof.blocks)assert.ok(rendered.includes(normalize(localizeSignageText(block))),'Missing original/localized text block: '+block);
 for(const heading of proof.headings.filter(item=>item.id)){
  const node=nodes.find(node=>attr(node,'id')===heading.id);
  assert.ok(node,'Missing heading anchor: '+heading.id);
- assert.equal(text(node),heading.title);
+ assert.equal(text(node),localizeSignageText(heading.title));
 }
 const actualTables=all(main).filter(node=>node.tagName==='table').map(table=>all(table).filter(node=>node.tagName==='tr').map(row=>row.childNodes.filter(cell=>['th','td'].includes(cell.tagName)).map(cell=>text(cell).replace(/\s+/g,' ').trim())));
-assert.deepEqual(actualTables,proof.tables,'Both price tables must retain every source cell, unit and price');
+assert.deepEqual(actualTables,proof.tables.map(table=>table.map(row=>row.map(localizeSignageText))),'Only requested Vietnamese translations may change table text');
+assert.deepEqual(actualTables.map(table=>table.slice(1).map(row=>row[1])),proof.tables.map(table=>table.slice(1).map(row=>row[1])),'Keep every original price and unit');
+for(const replacement of signageCopy.replacements){
+ assert.ok(!rendered.includes(normalize(replacement.from)),'Remove English wording: '+replacement.from);
+}
+const links=all(main).filter(node=>node.tagName==='a');
+assert.ok(links.some(node=>attr(node,'href')===signageCopy.quoteHref));
+assert.ok(links.some(node=>attr(node,'href')==='tel:0866077040'));
+for(const cell of all(main).filter(node=>node.tagName==='td'))assert.ok(attr(cell,'data-label'),'Responsive table cells need column labels');
 for(const image of proof.images){
  const actual=all(main).find(node=>node.tagName==='img'&&attr(node,'src')===image.src);
  assert.ok(actual,'Missing source image: '+image.src);
@@ -54,4 +63,4 @@ for(const link of source.linkMap){
 }
 assert.ok((await readFile('dist/sitemap.xml','utf8')).includes('<loc>'+proof.sourceCanonical+'</loc>'));
 assert.ok(!/wp-admin|cozyBlock|<form\b|onerror=|onclick=/i.test(html),'Do not import saved admin/plugin scripts or handlers');
-console.log('Signage passed: '+proof.blocks.length+' original blocks, '+proof.sourceTextNodes.length+' source text nodes, 6 images, 5 materials, 5 installation steps, two intact price tables, advertising parent links, canonical and restored redirects.');
+console.log('Signage passed: '+proof.blocks.length+' source blocks with approved Vietnamese translations, '+proof.sourceTextNodes.length+' archived text nodes, 6 images, 13 unchanged prices, responsive table labels, quote/call actions, parent links and canonical.');

@@ -1,9 +1,13 @@
 ---
-import source from '../data/signage-original.json';
+import {signage as source,signageCopy,signageTableHtml} from '../data/signage-presentation';
 import InteriorFilmImage from './InteriorFilmImage.astro';
 import '../styles/signage.css';
 const sectionLinks=[
-  source.introduction.heading,source.materials.heading,source.process.heading,source.pricing.heading,
+  {heading:source.introduction.heading,label:'Tổng quan'},
+  {heading:source.materials.heading,label:'Vật liệu'},
+  {heading:source.pricing.heading,label:'Báo giá'},
+  {heading:source.process.heading,label:'Quy trình'},
+  {heading:source.contact.heading,label:'Liên hệ'},
 ];
 ---
 <div class="signage-page">
@@ -15,12 +19,12 @@ const sectionLinks=[
       <p class="sign-eyebrow">{source.hero.eyebrow}</p>
       <h1>{source.hero.title}</h1>
       <div class="sign-original sign-lead" set:html={source.hero.intro.html} />
-      <div class="sign-actions">{source.hero.actions.map((link,index)=><a href={link.href} class={index===0?'btn-primary-solid':'sign-phone'}>{link.label}</a>)}</div>
+      <div class="sign-actions"><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá <span aria-hidden="true">→</span></a><a href={source.hero.actions[1].href} class="sign-phone"><small>{source.hero.actions[0].label}</small><span>{source.hero.actions[1].label}</span></a></div>
       <a href={'#'+source.pricing.heading.id} class="btn-idecal-bold sign-price-jump">Xem bảng giá dịch vụ ↓</a>
     </div>
-    <div class="sign-hero-visual"><figure><InteriorFilmImage image={source.hero.image} eager /></figure><div class="sign-source-badge"><span aria-hidden="true">✓</span><div><h3>{source.hero.badge.title}</h3><p>{source.hero.badge.text}</p></div></div></div>
+    <figure class="sign-hero-visual"><InteriorFilmImage image={source.hero.image} eager /><figcaption><strong>{source.hero.badge.title}</strong><span>{source.hero.badge.text}</span></figcaption></figure>
   </section>
-  <nav class="container sign-jump" aria-label="Nội dung dịch vụ bảng hiệu">{sectionLinks.map(heading=><a href={'#'+heading.id}>{heading.title}</a>)}</nav>
+  <nav class="sign-jump" aria-label="Nội dung dịch vụ bảng hiệu"><div class="container">{sectionLinks.map(({heading,label})=><a href={'#'+heading.id}>{label}</a>)}</div></nav>
 
   <section class="container sign-section sign-introduction" aria-labelledby={source.introduction.heading.id}>
     <h2 id={source.introduction.heading.id}>{source.introduction.heading.title}</h2>
@@ -33,12 +37,19 @@ const sectionLinks=[
   <section class="sign-soft" aria-labelledby={source.materials.heading.id}>
     <div class="container sign-section">
       <header class="sign-heading"><p class="sign-eyebrow">Lựa chọn vật liệu</p><h2 id={source.materials.heading.id}>{source.materials.heading.title}</h2></header>
+      <nav class="sign-material-options" aria-label="Chọn loại decal">{source.materials.items.map(item=><a href={'#'+item.heading.id}>{item.heading.title.replace(/^\d+\.\s*/,'').replace(/\s*\([^)]*\)/g,'')}</a>)}</nav>
       <div class="sign-materials">{source.materials.items.map(item=><article class:list={['sign-material',{'sign-material-text':!item.image}]}>
         {item.image&&<figure>{item.image.href?<a href={item.image.href}><InteriorFilmImage image={item.image} /></a>:<InteriorFilmImage image={item.image} />}</figure>}
         <div class="sign-material-heading"><h3 id={item.heading.id}>{item.heading.title}</h3></div>
         <div class="sign-original sign-material-copy" set:html={item.blocks.map(block=>block.html).join('')} />
       </article>)}</div>
     </div>
+  </section>
+  <section class="container sign-section sign-pricing" aria-labelledby={source.pricing.heading.id}>
+    <header class="sign-heading"><p class="sign-eyebrow">Chi phí theo vật liệu & hạng mục</p><h2 id={source.pricing.heading.id}>{source.pricing.heading.title}</h2></header>
+    <nav class="sign-price-options" aria-label="Chọn bảng giá">{source.pricing.tables.map((table,index)=><a href={'#'+table.heading.id}>{index===0?'Giá theo loại decal':'Giá theo hạng mục'}<span aria-hidden="true">↓</span></a>)}</nav>
+    {source.pricing.tables.map(table=><div class="sign-price-group"><h3 id={table.heading.id}>{table.heading.title}</h3><div class="sign-original" set:html={table.intro.map(block=>block.html).join('')} /><div class="sign-table-scroll" role="region" aria-labelledby={table.heading.id} set:html={signageTableHtml(table.html)} /></div>)}
+    <div class="sign-price-followup"><div class="sign-original sign-price-note" set:html={source.pricing.note.html} /><a href={signageCopy.quoteHref} class="btn-idecal-bold">Nhận báo giá theo kích thước của bạn →</a></div>
   </section>
   <section class="container sign-section" aria-labelledby={source.process.heading.id}>
     <header class="sign-heading"><h2 id={source.process.heading.id}>{source.process.heading.title}</h2></header>
@@ -55,13 +66,28 @@ const sectionLinks=[
       <figure><InteriorFilmImage image={source.commitments.image} /></figure>
     </div>
   </section>
-  <section class="container sign-section sign-pricing" aria-labelledby={source.pricing.heading.id}>
-    <header class="sign-heading"><p class="sign-eyebrow">Chi phí theo vật liệu & hạng mục</p><h2 id={source.pricing.heading.id}>{source.pricing.heading.title}</h2></header>
-    {source.pricing.tables.map(table=><div class="sign-price-group"><h3 id={table.heading.id}>{table.heading.title}</h3><div class="sign-original" set:html={table.intro.map(block=>block.html).join('')} /><p class="sign-table-hint">Vuốt ngang để xem đầy đủ bảng giá →</p><div class="sign-table-scroll" role="region" tabindex="0" aria-labelledby={table.heading.id} set:html={table.html} /></div>)}
-    <div class="sign-original sign-price-note" set:html={source.pricing.note.html} />
-  </section>
   <section class="container sign-section sign-contact" aria-labelledby={source.contact.heading.id}>
     <div><h2 id={source.contact.heading.id}>{source.contact.heading.title}</h2><div class="sign-original" set:html={source.contact.blocks.map(block=>block.html).join('')} /></div>
-    <div class="sign-contact-actions"><a href="/lien-he-idecal/?dich-vu=dan-decal-bang-hieu#yeu-cau" class="btn-primary-solid">Nhận tư vấn & báo giá →</a><a href={source.parent.href} class="btn-idecal-bold">Về {source.parent.name} →</a></div>
+    <div class="sign-contact-actions"><p>Gửi ảnh bảng hiệu, kích thước dự kiến và nội dung cần in để được tư vấn.</p><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá →</a><a href={source.parent.href} class="btn-idecal-bold">Về {source.parent.name} →</a></div>
   </section>
 </div>
+
+<script>
+  const navigation=document.querySelector<HTMLElement>('.sign-jump');
+  if(navigation){
+    const links=Array.from(navigation.querySelectorAll<HTMLAnchorElement>('a[href^="#"]'));
+    const targets=links.map(link=>{const target=document.getElementById(link.hash.slice(1));return {link,target,section:target?.closest('section')??target};}).filter(item=>item.target);
+    let pending=false;
+    const update=()=>{
+      const limit=navigation.getBoundingClientRect().bottom+24;
+      let current=targets[0];
+      for(const item of targets)if(item.section!.getBoundingClientRect().top<=limit)current=item;
+      if(window.scrollY+window.innerHeight>=document.documentElement.scrollHeight-16)current=targets[targets.length-1];
+      for(const item of targets){if(item===current)item.link.setAttribute('aria-current','location');else item.link.removeAttribute('aria-current');}
+      pending=false;
+    };
+    window.addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(update);}},{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+</script>
