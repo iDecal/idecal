@@ -109,3 +109,19 @@
  .cut-jump>div {gap:28px;}
 }
 @media(max-width:479px){.cut-process-list{grid-template-columns:minmax(0,1fr);gap:24px}.cut-final-actions{align-items:stretch}.cut-final-actions>.cut-text-link{justify-content:center}}
+
+/* Library imagery for product types and materials. */
+.cut-service-grid article {display:block;padding-top:0;border:1px solid #dce7f1;border-radius:16px;overflow:hidden;}
+.cut-service-grid .cut-product-photo img {width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;}
+.cut-product-copy {display:flex;gap:20px;padding:24px;}
+.cut-product-copy>div {min-width:0;}
+.cut-material-layout {grid-template-columns:minmax(0,1fr);gap:24px;}
+.cut-material-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;}
+.cut-material-list article {display:grid;grid-template-columns:132px minmax(0,1fr) 32px;gap:18px;align-items:start;}
+.cut-material-photo img {width:100%;aspect-ratio:1;object-fit:cover;border-radius:10px;}
+.cut-material-photo figcaption {font-size:11px;line-height:1.5;color:#61778c;padding-top:8px;}
+.cut-material-list article>a {min-width:32px;}
+.cut-material-help {max-width:none;}
+@media(max-width:1000px){.cut-material-list article{grid-template-columns:100px minmax(0,1fr) 28px;gap:12px}}
+@media(max-width:767px){.cut-material-list{grid-template-columns:minmax(0,1fr);gap:8px}.cut-material-list article{grid-template-columns:112px minmax(0,1fr) 28px;gap:14px}.cut-product-copy{padding:20px;gap:14px}}
+@media(max-width:359px){.cut-material-list article{grid-template-columns:86px minmax(0,1fr);gap:12px}.cut-material-list article>a{grid-column:2;justify-self:start;min-height:32px}.cut-material-list p{font-size:14px}}
