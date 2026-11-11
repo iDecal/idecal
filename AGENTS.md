@@ -19,3 +19,5 @@
 - Không hiển thị thông tin tồn kho, hết hàng, ngừng mẫu hoặc yêu cầu xác nhận tình trạng cung ứng trên trang sản phẩm; giữ các ghi chú quản lý hàng ở tài liệu nội bộ.
 
 - Trang `/decal-dan-kinh-van-phong/` dùng nội dung chủ website gửi từ HTML, lưu tại `src/data/office-glass-original.json`, bố cục `OfficeGlassLanding`. Giữ 8 ảnh nguồn, bảng giá và 7 FAQ. Người dùng đã yêu cầu viết lại tiêu đề giữ từ khóa và thêm ứng dụng phòng ban/công ty vận tải/du lịch trong `office-glass-copy.json`; giữ H1 và meta theo tệp này. Bản nguồn 69 khối được lưu nguyên vẹn; người dùng đã cho phép rút gọn 5 nhóm giải pháp trong `office-glass-presentation.json`, bỏ emoji bàn tay và chuyển link dài thành nút. Các phần còn lại giữ nội dung gốc. Kiểm tra bằng `node scripts/check-office-glass.mjs`.
+
+- Trang /dich-vu-film-dan-noi-that/ dùng HTML film nội thất do chủ website gửi, lưu tại src/data/interior-film-original.json; đối chiếu docs/interior-film-source.json. Giữ 82 khối chữ gốc, 17 ảnh nguồn, 6 nhóm mẫu, 4 lợi ích, 4 ứng dụng và 5 FAQ; chỉ đổi liên kết tới trang đang có khi cần. /dich-vu/film-noi-that/ chuyển về URL gốc này. Kiểm tra bằng node scripts/check-interior-film.mjs.

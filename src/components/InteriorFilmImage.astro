@@ -1,0 +1,21 @@
+---
+interface Props { image: {src:string;alt:string;title:string;width:number;height:number}; eager?:boolean; }
+const {image,eager=false}=Astro.props;
+---
+<div class="interior-film-image" data-interior-film-image>
+  <img src={image.src} alt={image.alt} title={image.title} width={image.width} height={image.height} loading={eager?'eager':'lazy'} fetchpriority={eager?'high':undefined} decoding="async" />
+  <span data-film-image-fallback hidden aria-hidden="true">Hình ảnh đang cập nhật</span>
+</div>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-interior-film-image]').forEach(root=>{
+    const image=root.querySelector<HTMLImageElement>('img')!;
+    const fallback=root.querySelector<HTMLElement>('[data-film-image-fallback]')!;
+    const failed=()=>{image.hidden=true;fallback.hidden=false;root.setAttribute('role','img');root.setAttribute('aria-label',image.alt+' – hình ảnh đang cập nhật');};
+    image.addEventListener('error',failed);
+    image.addEventListener('load',()=>{image.hidden=false;fallback.hidden=true;root.removeAttribute('role');root.removeAttribute('aria-label');});
+    if(image.complete&&!image.naturalWidth)failed();
+  });
+</script>
+<style>
+.interior-film-image{position:relative;overflow:hidden;background:#f4f7fa;width:100%;height:100%}.interior-film-image img{display:block;width:100%;height:100%;object-fit:cover}.interior-film-image [hidden]{display:none!important}.interior-film-image span{display:grid;place-items:center;min-height:180px;height:100%;padding:24px;color:#64748b;font-size:13px;text-align:center}
+</style>

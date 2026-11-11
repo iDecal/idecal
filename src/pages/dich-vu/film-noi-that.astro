@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import LegacyServiceLanding from '../../components/LegacyServiceLanding.astro';
+import InteriorFilmLanding from '../../components/InteriorFilmLanding.astro';
+import source from '../../data/interior-film-original.json';
 ---
-<Layout title="Thi công film dán nội thất | iDecal" description="Tìm hiểu phương án thi công film dán nội thất, xem hình ảnh ứng dụng và trao đổi nhu cầu với iDecal."><LegacyServiceLanding slug="film-noi-that" /></Layout>
+<Layout title={source.sourceTitle} description={source.description} canonicalURL={source.sourceCanonical} image={source.hero.images[0].src}><InteriorFilmLanding /></Layout>
