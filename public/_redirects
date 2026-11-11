@@ -845,3 +845,7 @@
 # Imported original wave glass service page
 /dich-vu/decal-mo-3d-van-song /decal-dan-kinh-3d-van-song/ 301
 /dich-vu/decal-mo-3d-van-song/ /decal-dan-kinh-3d-van-song/ 301
+
+# Imported printing service: retain the established service route
+/in-decal-theo-yeu-cau /dich-vu/in-decal/ 301
+/in-decal-theo-yeu-cau/ /dich-vu/in-decal/ 301

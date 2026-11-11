@@ -79,3 +79,5 @@
 
 
 - Chủ website yêu cầu quay lại trang chủ cũ: phục hồi trang chủ trước lần thay bộ logo Downloads.rar, nền sáng–tối và khối công trình HomeProjects. Không thêm lại các thay đổi này nếu chưa có yêu cầu mới. Giữ nguyên các cập nhật trang khác và bản sửa footer mobile: social flex-wrap, min-width:0, grid minmax(0,1fr), không tràn ở 320px.
+
+- Dịch vụ in Decal /dich-vu/in-decal/ dùng nội dung HTML chủ website gửi, lưu tại printing-original.json và docs/printing-source.json; bố cục PrintingLanding, CSS printing-landing.css. Giữ H1, hai đoạn giới thiệu, hai công nghệ, năm lợi ích, bốn FAQ và bốn bài cẩm nang/ảnh nguồn; không nhập phần quản trị/scripts hay các section trống. Sáu ảnh nguồn gồm hai ảnh tải gốc về public/images/in-decal và bốn ảnh Blog đã có. Giữ anchor vat-lieu-in/cong-nghe-in/vi-sao-chon-idecal/lp-cau-hoi; URL cũ in-decal-theo-yeu-cau chuyển 301 về route dịch vụ hiện có. Bổ sung phần chọn vật liệu, quy trình và thư viện ảnh từ dữ liệu website; CTA chọn sẵn dịch vụ in-decal.
