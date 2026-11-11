@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import {readFile,access} from 'node:fs/promises';
+import {parse} from 'parse5';
+const source=JSON.parse(await readFile('src/data/cutting-original.json','utf8'));
+const snapshot=JSON.parse(await readFile('docs/cutting-source.json','utf8'));
+const previous=JSON.parse(await readFile('src/data/decal-cutting.json','utf8'));
+const html=await readFile('dist/dich-vu/cat-decal/index.html','utf8');const nodes=[];
+const walk=n=>{nodes.push(n);for(const c of n.childNodes??[])walk(c)};walk(parse(html));
+const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
+const cls=(n,c)=>(attr(n,'class')??'').split(/\s+/).includes(c);
+const text=n=>['script','style','noscript','svg'].includes(n.tagName)?'':n.nodeName==='#text'?n.value:(n.childNodes??[]).map(text).join('');
+const norm=s=>s.replace(/\s+/g,'');
+const main=nodes.find(n=>n.tagName==='main');const visible=norm(text(main));
+assert.equal(source.sourceSha256,snapshot.sourceSha256);assert.equal(text(nodes.find(n=>n.tagName==='h1')),source.hero.title);
+for(const t of snapshot.sourceTextNodes)assert.ok(visible.includes(norm(t)),`Missing imported source text: ${t}`);
+for(const image of snapshot.images){await access('public'+image.src);assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing source image ${image.src}`);}
+assert.equal(source.services.items.length,4);assert.equal(source.process.steps.length,4);assert.equal(source.benefits.points.length,4);
+const tables=nodes.filter(n=>n.tagName==='table');assert.equal(tables.length,1);
+const rows=[];const collectRows=n=>{if(n.tagName==='tr')rows.push(n);for(const c of n.childNodes??[])collectRows(c)};collectRows(tables[0]);
+assert.equal(rows.length,6);for(const[i,row]of rows.slice(1).entries())assert.deepEqual(row.childNodes.filter(n=>['th','td'].includes(n.tagName)).map(text),source.pricing.rows[i],`Preserve price row ${i}`);
+assert.ok(visible.includes('Mớinhất2025'),'Retain the original source year instead of presenting prices as newly updated');
+const faqRoot=nodes.find(n=>cls(n,'cut-faq-list'));const faqNodes=[];const collect=n=>{faqNodes.push(n);for(const c of n.childNodes??[])collect(c)};collect(faqRoot);
+const questions=faqNodes.filter(n=>n.tagName==='details');assert.equal(questions.length,4);
+for(const item of questions)assert.equal(attr(item,'open'),undefined,'FAQ closed by default');
+const schemas=nodes.filter(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').flatMap(n=>{const value=JSON.parse(n.childNodes.map(c=>c.value??'').join(''));return value['@graph']??[value]});
+const faq=schemas.find(s=>s['@type']==='FAQPage');assert.equal(faq.mainEntity.length,4);
+for(const[i,q]of faq.mainEntity.entries()){assert.equal(q.name,source.faq.items[i].question);const expected=[...source.faq.items[i].blocks.map(b=>b.text),i===1?previous.faqs[1].answer:''].filter(Boolean).join(' ');assert.equal(q.acceptedAnswer.text,expected);}
+assert.ok(schemas.some(s=>s['@type']==='Service'&&s.url===source.canonical));
+for(const id of ['san-pham-dich-vu','bang-gia','bang-gia-cat-decal-vi-tinh-tai-idecal-moi-nhat','chat-lieu','quy-trinh','cau-hoi','pham-vi'])assert.ok(nodes.some(n=>attr(n,'id')===id),`Preserve anchor ${id}`);
+assert.ok(nodes.some(n=>n.tagName==='a'&&attr(n,'href')==='/lien-he-idecal?dich-vu=cat-decal#yeu-cau'));
+assert.ok(nodes.some(n=>n.tagName==='a'&&attr(n,'href')==='https://zalo.me/0866077040'));
+assert.ok(nodes.some(n=>n.tagName==='link'&&attr(n,'rel')==='canonical'&&attr(n,'href')===source.canonical));
+const renderedLinks=new Set(nodes.filter(n=>n.tagName==='a'&&attr(n,'href')).map(n=>new URL(attr(n,'href'),source.canonical).href));
+for(const item of source.linkMap)assert.ok(renderedLinks.has(new URL(item.resolved,source.canonical).href),`Retain resolved source link: ${item.original}`);
+const redirects=await readFile('public/_redirects','utf8');assert.ok(redirects.includes('/dich-vu-cat-decal-theo-yeu-cau/ /dich-vu/cat-decal/ 301'));
+assert.ok(!html.includes('tel:0981851815')&&!html.includes('_files/')&&!html.includes('googlesitekit'));
+console.log(`Cutting service passed: ${snapshot.sourceTextNodes.length} imported text nodes, 2 source images, 4 cutting types, 5 unchanged price rows (2025), 4 steps, 4 closed FAQs with matching schema and preserved URL/anchors.`);

@@ -1,0 +1,397 @@
+{
+  "sourceTitle": "Dịch vụ Cắt Decal theo yêu cầu, Giá rẻ, Lấy liền Tại TP.HCM | iDecal©",
+  "sourceFilename": "Dịch vụ Cắt Decal theo yêu cầu, Giá rẻ, Lấy liền Tại TP.HCM _ iDecal©.html",
+  "sourceSha256": "ee0b3b39f1774b2ba62dc9a12e3ea154c2dd908dde4c27a8f0d7de1e21d17c71",
+  "sourceCanonical": "https://idecal.vn/dich-vu-cat-decal-theo-yeu-cau/",
+  "canonical": "https://idecal.vn/dich-vu/cat-decal/",
+  "description": "Chuyên nhận cắt decal vi tính, cắt chữ, logo, tem nhãn lấy ngay. Công nghệ cắt laser/máy Mimaki chính xác, sắc nét. Giá rẻ tại xưởng, không qua trung gian. Liên hệ ngay!",
+  "hero": {
+    "title": "Dịch vụ cắt Decal theo yêu cầu.",
+    "heading": "Dịch vụ cắt Decal",
+    "subtitle": "theo yêu cầu.",
+    "blocks": [
+      {
+        "text": "Chuyên cung cấp các loại decal cắt chữ, tem nhãn, decal trang trí với đa dạng chất liệu: decal phản quang, decal giấy, decal PVC và nhiều loại khác",
+        "html": "<p>Chuyên cung cấp các loại decal cắt chữ, tem nhãn, decal trang trí với đa dạng chất liệu: decal phản quang, decal giấy, decal PVC và nhiều loại khác</p>"
+      },
+      {
+        "text": "Tại IDECAL, chúng tôi tự hào là xưởng cắt decal chuyên nghiệp tại TP.HCM, mang đến giải pháp trọn gói từ thiết kế – cắt – giao hàng, đảm bảo nhanh, đẹp, giá tốt cho mọi khách hàng.",
+        "html": "<p>Tại <strong>IDECAL</strong>, chúng tôi tự hào là <strong>xưởng cắt decal chuyên nghiệp tại TP.HCM</strong>, mang đến giải pháp trọn gói từ <strong>thiết kế – cắt – giao hàng</strong>, đảm bảo <strong>nhanh, đẹp, giá tốt</strong> cho mọi khách hàng.</p>"
+      }
+    ],
+    "image": {
+      "src": "/images/cat-decal/cat-decal-theo-yeu-cau.webp",
+      "url": "https://idecal.vn/wp-content/uploads/2025/08/1761427-847__1-edited.webp",
+      "alt": "Minh họa máy cắt cùng các vật liệu Decal màu",
+      "originalSrc": "./Dịch vụ Cắt Decal theo yêu cầu, Giá rẻ, Lấy liền Tại TP.HCM _ iDecal©_files/1761427-847__1-edited.webp",
+      "originalAlt": "Dịch vụ Cắt Decal theo yêu cầu",
+      "width": 600,
+      "height": 450
+    },
+    "actions": [
+      {
+        "label": "Tư vấn qua zalo",
+        "href": "https://zalo.me/0866077040"
+      },
+      {
+        "label": "Xem báo giá",
+        "href": "/dich-vu/cat-decal/#bang-gia"
+      }
+    ]
+  },
+  "services": {
+    "heading": {
+      "title": "Sản Phẩm & Dịch Vụ",
+      "subtitle": ""
+    },
+    "intro": [
+      {
+        "text": "Đa dạng các loại decal đáp ứng mọi nhu cầu của bạn",
+        "html": "<p>Đa dạng các loại decal đáp ứng mọi nhu cầu của bạn</p>"
+      }
+    ],
+    "items": [
+      {
+        "title": "Decal cắt chữ",
+        "blocks": [
+          {
+            "text": "Cắt chữ decal theo yêu cầu với nhiều font chữ và kích thước đa dạng, phù hợp cho biển hiệu, logo, và trang trí.",
+            "html": "<p>Cắt chữ decal theo yêu cầu với nhiều font chữ và kích thước đa dạng, phù hợp cho biển hiệu, <a href=\"/san-pham/decal-logo-cong-ty\">logo</a>, và trang trí.</p>"
+          }
+        ],
+        "labels": [
+          "Phòng họp kín đáo",
+          "Phân chia không gian",
+          "Giảm nhiệt – tiết kiệm điện"
+        ],
+        "actions": [
+          {
+            "label": "Xem mẫu",
+            "href": "/san-pham/decal-thong-bao-gio-mo-cua"
+          }
+        ]
+      },
+      {
+        "title": "Cắt Tem nhãn",
+        "blocks": [
+          {
+            "text": "In tem nhãn đa dạng mẫu mã, kích thước cho sản phẩm, bao bì, quảng cáo với chất lượng cao.",
+            "html": "<p>In tem nhãn đa dạng mẫu mã, kích thước cho sản phẩm, bao bì, quảng cáo với chất lượng cao.</p>"
+          }
+        ],
+        "labels": [
+          "Phòng họp kín đáo",
+          "Phân chia không gian",
+          "Giảm nhiệt – tiết kiệm điện"
+        ],
+        "actions": []
+      },
+      {
+        "title": "Cắt Decal trang trí",
+        "blocks": [
+          {
+            "text": "Decal trang trí đa dạng kiểu dáng cho cửa kính, tường, xe hơi và nhiều bề mặt khác.",
+            "html": "<p>Decal trang trí đa dạng kiểu dáng cho cửa kính, tường, xe hơi và nhiều bề mặt khác.</p>"
+          }
+        ],
+        "labels": [
+          "Trang trí tường nhà",
+          "Phân chia không gian",
+          "Giảm nhiệt – tiết kiệm điện"
+        ],
+        "actions": []
+      },
+      {
+        "title": "Cắt Logo thương hiệu",
+        "blocks": [
+          {
+            "text": "Tái tạo chuẩn xác 100% logo doanh nghiệp trên chất liệu decal mờ, decal màu hoặc decal phản quang.",
+            "html": "<p>Tái tạo chuẩn xác 100% logo doanh nghiệp trên chất liệu decal mờ, decal màu hoặc decal phản quang.</p>"
+          }
+        ],
+        "labels": [
+          "dán kính văn phòng",
+          "Phân chia không gian",
+          "Giảm nhiệt – tiết kiệm điện"
+        ],
+        "actions": []
+      }
+    ]
+  },
+  "materials": {
+    "intro": [
+      {
+        "text": "iDecal cung cấp đa dạng chất liệu decal cao cấp, phù hợp với từng mục đích sử dụng. Mỗi loại vật liệu có ưu điểm riêng, đáp ứng mọi nhu cầu từ giá rẻ đến cao cấp.",
+        "html": "<p><span>iDecal cung cấp đa dạng chất liệu decal cao cấp, phù hợp với từng mục đích sử dụng. Mỗi loại vật liệu có ưu điểm riêng, đáp ứng mọi nhu cầu từ giá rẻ đến cao cấp.<br></span></p>"
+      }
+    ],
+    "heading": {
+      "title": "Chất Liệu Decal phổ biến",
+      "subtitle": ""
+    },
+    "consultHeading": {
+      "title": "Tư vấn chất liệu miễn phí",
+      "subtitle": ""
+    },
+    "consult": [
+      {
+        "text": "Chưa biết chọn chất liệu nào phù hợp? Đừng lo! Đội ngũ iDecal sẽ tư vấn miễn phí 100% giúp bạn lựa chọn loại decal phù hợp nhất với mục đích sử dụng, ngân sách và bề mặt dán. bạn có thể",
+        "html": "<p>Chưa biết chọn chất liệu nào phù hợp? Đừng lo! Đội ngũ iDecal sẽ tư vấn miễn phí 100% giúp bạn lựa chọn loại decal phù hợp nhất với mục đích sử dụng, ngân sách và bề mặt dán. bạn có thể</p>"
+      }
+    ],
+    "items": [
+      {
+        "title": "Decal Phản Quang",
+        "blocks": [
+          {
+            "text": "Chất liệu cao cấp, phản sáng ban đêm với độ nét cao",
+            "html": "<p>Chất liệu cao cấp, phản sáng ban đêm với độ nét cao</p>"
+          }
+        ]
+      },
+      {
+        "title": "Decal PVC (Vinyl)",
+        "blocks": [
+          {
+            "text": "Bền bỉ, đa năng, chất liệu phổ biến nhất",
+            "html": "<p>Bền bỉ, đa năng, chất liệu phổ biến nhất</p>"
+          }
+        ]
+      },
+      {
+        "title": "Decal mờ (Vinyl)",
+        "blocks": [
+          {
+            "text": "Bền bỉ, đa năng, chất liệu phổ biến nhất",
+            "html": "<p>Bền bỉ, đa năng, chất liệu phổ biến nhất</p>"
+          }
+        ]
+      },
+      {
+        "title": "Decal mờ (Vinyl)",
+        "blocks": [
+          {
+            "text": "Bền bỉ, đa năng, chất liệu phổ biến nhất",
+            "html": "<p>Bền bỉ, đa năng, chất liệu phổ biến nhất</p>"
+          }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "heading": {
+      "title": "Bảng giá cắt chữ Decal",
+      "subtitle": "Mới nhất 2025"
+    },
+    "intro": [
+      {
+        "text": "Báo giá Cắt Decal vi tính sau đây chỉ là cơ sở tương đối để khách hàng tham khảo, giá thực tế sẽ thay đổi phụ thuộc yêu cầu cụ thể của từng công trình. Bạn yên tâm! iDecal là công ty cắt Decal giá rẻ được nhiều khách hàng tin chọn.",
+        "html": "<p>Báo giá <a href=\"/blog/cat-decal-vi-tinh-va-ung-dung\">Cắt Decal vi tính</a> sau đây chỉ là cơ sở tương đối để khách hàng tham khảo, giá thực tế sẽ thay đổi phụ thuộc yêu cầu cụ thể của từng công trình. Bạn yên tâm! iDecal là công ty cắt Decal giá rẻ được nhiều khách hàng tin chọn.</p>"
+      },
+      {
+        "text": "Với tiêu chí cung cấp dịch vụ cắt Decal giá rẻ, nhưng thành phẩm làm ra phải đảm bảo chất lượng và tốt nhất. iDecal đảm bảo đem lại sự hài lòng cho quý khách hàng về dịch vụ của chúng tôi .",
+        "html": "<p>Với tiêu chí cung cấp dịch vụ cắt Decal giá rẻ, nhưng thành phẩm làm ra phải đảm bảo chất lượng và tốt nhất. iDecal đảm bảo đem lại sự hài lòng cho quý khách hàng về dịch vụ của chúng tôi .</p>"
+      },
+      {
+        "text": "📞 Liên hệ ngay hôm nay để được báo giá chính xác nhất!",
+        "html": "<p>📞 <strong>Liên hệ ngay hôm nay để được báo giá chính xác nhất!</strong></p>"
+      }
+    ],
+    "headers": [
+      "Loại decal",
+      "Đơn giá tham khảo",
+      "Ghi chú"
+    ],
+    "rows": [
+      [
+        "Cắt gia công Decal",
+        "Từ 50.000đ/m²",
+        "Decal khách tự mang đến."
+      ],
+      [
+        "Cắt chữ Decal",
+        "Từ 120.000đ/m²",
+        "Tuỳ kích thước, font chữ"
+      ],
+      [
+        "Cắt Logo, Quote, Slogan bằng chất liệu Decal",
+        "Từ 250.000đ/m²",
+        "Có thể in + cắt đồng thời"
+      ],
+      [
+        "Cắt decal mờ trang trí",
+        "Từ 80.000đ/m²",
+        "Dán kính văn phòng"
+      ],
+      [
+        "Cắt Hagtag quảng cáo",
+        "Báo giá theo file",
+        "Hỗ trợ thiết kế miễn phí"
+      ]
+    ],
+    "caption": "Chúng tôi tư vấn miễn phí 100% trước khi thi công",
+    "note": []
+  },
+  "process": {
+    "heading": {
+      "title": "Quy trình đặt Dịch vụcắt Decal",
+      "subtitle": ""
+    },
+    "steps": [
+      {
+        "title": "1. Tiếp nhận file",
+        "blocks": [
+          {
+            "text": "Khách hàng gửi file thiết kế (AI, Corel, PDF) qua Zalo 0866.077.040.",
+            "html": "<p> Khách hàng gửi file thiết kế (AI, Corel, PDF) qua Zalo <strong>0866.077.040</strong>.</p>"
+          }
+        ]
+      },
+      {
+        "title": "2. Báo giá nhanh",
+        "blocks": [
+          {
+            "text": "Dựa trên kích thước và độ phức tạp của mẫu cắt.",
+            "html": "<p>Dựa trên kích thước và độ phức tạp của mẫu cắt.</p>"
+          }
+        ]
+      },
+      {
+        "title": "3. Tiến hành Cắt",
+        "blocks": [
+          {
+            "text": "Máy CNC tự động thực hiện với độ chính xác tuyệt đối.",
+            "html": "<p>Máy CNC tự động thực hiện với độ chính xác tuyệt đối.</p>"
+          }
+        ]
+      },
+      {
+        "title": "4. Dịch vụ thi công",
+        "blocks": [
+          {
+            "text": "Đội ngũ thợ iDecal hỗ trợ dán tận nơi tại TPHCM và Bình Dương nếu khách có nhu cầu.",
+            "html": "<p>Đội ngũ thợ iDecal hỗ trợ dán tận nơi tại TPHCM và Bình Dương nếu khách có nhu cầu.</p>"
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Thời gian hoàn thành chỉ từ 1–24 giờ, tùy vào khối lượng và yêu cầu kỹ thuật.",
+        "html": "<p>Thời gian hoàn thành chỉ từ <strong>1–24 giờ</strong>, tùy vào khối lượng và yêu cầu kỹ thuật.</p>"
+      }
+    ],
+    "action": {
+      "label": "Đặt dịch vụ của bạn",
+      "href": "/lien-he-idecal?dich-vu=cat-decal#yeu-cau"
+    }
+  },
+  "benefits": {
+    "caption": "iDecal không chỉ là xưởng cắt decal, mà là đối tác quảng cáo tin cậy của hàng trăm doanh nghiệp lớn nhỏ tại TP.HCM.",
+    "heading": {
+      "title": "Tại sao chọn dịch vụ Cắt Decal tại iDecal",
+      "subtitle": ""
+    },
+    "intro": [
+      {
+        "text": "Chúng tôi cung cấp dịch vụ và giải pháp trọn gói từ Thiết kế mẫu – In Decal – Cắt Decal – Thi công dán Decal tận nơi khắp các Quận TP. HCM và các tỉnh miền Đông Nam Bộ.",
+        "html": "<p>Chúng tôi cung cấp dịch vụ và giải pháp trọn gói từ Thiết kế mẫu – In Decal – Cắt Decal – Thi công dán Decal tận nơi khắp các Quận TP. HCM và các tỉnh miền Đông Nam Bộ.</p>"
+      }
+    ],
+    "points": [
+      "Máy cắt Mimaki & Roland Nhật Bản: Đảm bảo đường cắt sắc sảo, không răng cưa, cắt được cả những chi tiết siêu nhỏ và nét mảnh.",
+      "Chất liệu đa dạng: Decal mờ Sandblast, decal sữa, decal trong, decal màu (Avery, 3M, Shinlung) độ bền trên 5 năm.",
+      "Thiết kế & Tư vấn miễn phí: Hỗ trợ vẽ lại file vector logo hoặc dàn trang file cắt tối ưu nhất cho khách hàng.",
+      "Lấy liền trong ngày: Với các đơn hàng nhỏ, chúng tôi hỗ trợ cắt và giao hàng ngay trong 1-2 giờ."
+    ],
+    "pointsHtml": [
+      "<span><strong>Máy cắt Mimaki &amp; Roland Nhật Bản:</strong> Đảm bảo đường cắt sắc sảo, không răng cưa, cắt được cả những chi tiết siêu nhỏ và nét mảnh.</span>",
+      "<span><strong>Chất liệu đa dạng:</strong> Decal mờ Sandblast, decal sữa, decal trong, decal màu (<a href=\"/blog/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao\">Avery</a>, 3M, Shinlung) độ bền trên 5 năm.</span>",
+      "<span><strong>Thiết kế &amp; Tư vấn miễn phí:</strong> Hỗ trợ vẽ lại file vector logo hoặc dàn trang file cắt tối ưu nhất cho khách hàng.</span>",
+      "<span><strong>Lấy liền trong ngày:</strong> Với các đơn hàng nhỏ, chúng tôi hỗ trợ cắt và giao hàng ngay trong 1-2 giờ.</span>"
+    ],
+    "image": {
+      "src": "/images/blog-wordpress/e17ed2e555ed62e01f60.jpg",
+      "url": "https://idecal.vn/wp-content/uploads/2025/04/fb_img_17446448130132443192815503925562.jpg",
+      "alt": "Máy cắt Decal vi tính thực hiện cắt theo file thiết kế",
+      "originalSrc": "./Dịch vụ Cắt Decal theo yêu cầu, Giá rẻ, Lấy liền Tại TP.HCM _ iDecal©_files/fb_img_17446448130132443192815503925562.jpg",
+      "originalAlt": "iDecal không chỉ là xưởng cắt decal, mà là đối tác quảng cáo tin cậy của hàng trăm doanh nghiệp lớn nhỏ tại TP.HCM.",
+      "width": 1020,
+      "height": 600
+    }
+  },
+  "faq": {
+    "heading": {
+      "title": "Câu hỏi thường gặp về cắt Decal vi tính",
+      "subtitle": "FAQs"
+    },
+    "items": [
+      {
+        "question": "Cắt Decal giá rẻ có chất lượng không?",
+        "blocks": [
+          {
+            "text": "Có, Dịch vụ Cắt decal vi tính đảm bảo cho bạn điều này. Sở dĩ giá rẻ vì chúng tôi đầu tư máy cắt decal MIMAKI hiện đại, cho tốc độ cắt tối đa mà ít có sự sai sót kỹ thuật.",
+            "html": "<p>Có, Dịch vụ Cắt decal vi tính đảm bảo cho bạn điều này. Sở dĩ giá rẻ vì chúng tôi đầu tư máy cắt decal MIMAKI hiện đại, cho tốc độ cắt tối đa mà ít có sự sai sót kỹ thuật.</p>"
+          }
+        ]
+      },
+      {
+        "question": "Sự khác nhau giữa Cắt Decal và Bế Demi là gì?",
+        "blocks": [
+          {
+            "text": "Cắt Decal và In Decal là hai phương pháp chuyển hình ảnh, logo hoặc thông điệp lên các bề mặt khác nhau. Tuy nhiên, Để phân biệt Cắt Decal và in Decal khác nhau như thế nào, chúng có một số điểm khác nhau quan trọng tại bài viết này.",
+            "html": "<p><strong>Cắt Decal</strong> và <strong><a href=\"/dich-vu/in-decal/\">In Decal</a></strong> là hai phương pháp chuyển hình ảnh, logo hoặc thông điệp lên các bề mặt khác nhau. Tuy nhiên, Để phân biệt Cắt Decal và in Decal khác nhau như thế nào, chúng có một số điểm khác nhau quan trọng tại bài viết này.</p>"
+          }
+        ]
+      },
+      {
+        "question": "iDecal có cắt chữ Decal dán tường không?",
+        "blocks": [
+          {
+            "text": "Tất nhiên là được rồi. Decal cắt chữ có thể dán lên được mọi bề mặt phẳng hoặc cong nhẹ, tường, kính, gỗ, đá hoa cương,…",
+            "html": "<p>Tất nhiên là được rồi. Decal cắt chữ có thể dán lên được mọi bề mặt phẳng hoặc cong nhẹ, tường, kính, gỗ, đá hoa cương,…</p>"
+          }
+        ]
+      },
+      {
+        "question": "iDecal có giao hàng ở tỉnh khác ngoài TPHCM không?",
+        "blocks": [
+          {
+            "text": "Vâng. Bạn hoàn toàn có thế với yêu cầu này tại công ty chúng tôi, Chúng tôi giao nhận các sản phẩm sau khi cắt Decal trên toàn Quốc.",
+            "html": "<p>Vâng. Bạn hoàn toàn có thế với yêu cầu này tại công ty chúng tôi, Chúng tôi giao nhận các sản phẩm sau khi cắt Decal trên toàn Quốc.</p>"
+          }
+        ]
+      }
+    ]
+  },
+  "linkMap": [
+    {
+      "original": "https://idecal.vn/decal-logo-cong-ty/",
+      "resolved": "/san-pham/decal-logo-cong-ty"
+    },
+    {
+      "original": "https://idecal.vn/decal-thong-bao-gio-mo-cua/",
+      "resolved": "/san-pham/decal-thong-bao-gio-mo-cua"
+    },
+    {
+      "original": "https://idecal.vn/cat-decal-vi-tinh-va-ung-dung/",
+      "resolved": "/blog/cat-decal-vi-tinh-va-ung-dung"
+    },
+    {
+      "original": "tel:0981851815",
+      "resolved": "https://zalo.me/0866077040"
+    },
+    {
+      "original": "https://idecal.vn/dich-vu-cat-decal-theo-yeu-cau/#bang-gia-cat-decal-vi-tinh-tai-idecal-moi-nhat",
+      "resolved": "/dich-vu/cat-decal/#bang-gia"
+    },
+    {
+      "original": "https://idecal.vn/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao/",
+      "resolved": "/blog/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-quang-cao"
+    },
+    {
+      "original": "https://idecal.vn/in-decal-theo-yeu-cau/",
+      "resolved": "/dich-vu/in-decal/"
+    }
+  ]
+}

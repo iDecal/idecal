@@ -854,3 +854,7 @@
 # Imported printing service: retain the established service route
 /in-decal-theo-yeu-cau /dich-vu/in-decal/ 301
 /in-decal-theo-yeu-cau/ /dich-vu/in-decal/ 301
+
+# Original cutting service URL
+/dich-vu-cat-decal-theo-yeu-cau /dich-vu/cat-decal/ 301
+/dich-vu-cat-decal-theo-yeu-cau/ /dich-vu/cat-decal/ 301
