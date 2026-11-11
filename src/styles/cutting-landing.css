@@ -111,9 +111,11 @@
 @media(max-width:479px){.cut-process-list{grid-template-columns:minmax(0,1fr);gap:24px}.cut-final-actions{align-items:stretch}.cut-final-actions>.cut-text-link{justify-content:center}}
 
 /* Library imagery for product types and materials. */
-.cut-service-grid article {display:block;padding-top:0;border:1px solid #dce7f1;border-radius:16px;overflow:hidden;}
-.cut-service-grid .cut-product-photo img {width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;}
-.cut-product-copy {display:flex;gap:20px;padding:24px;}
+.cut-service-grid article {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:0;padding:0;border:1px solid #dce7f1;border-radius:16px;overflow:hidden;}
+.cut-product-photo {min-width:0;min-height:280px;position:relative;background:#f5f8fc;}
+.cut-service-grid .cut-product-photo img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.cut-service-grid article:nth-child(even) .cut-product-photo img {object-fit:contain;background:#fff;}
+.cut-product-copy {display:flex;flex-direction:column;align-items:start;justify-content:center;gap:12px;min-width:0;padding:24px;}
 .cut-product-copy>div {min-width:0;}
 .cut-material-layout {grid-template-columns:minmax(0,1fr);gap:24px;}
 .cut-material-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;}
@@ -123,5 +125,7 @@
 .cut-material-list article>a {min-width:32px;}
 .cut-material-help {max-width:none;}
 @media(max-width:1000px){.cut-material-list article{grid-template-columns:100px minmax(0,1fr) 28px;gap:12px}}
+@media(max-width:1100px){.cut-service-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:767px){.cut-material-list{grid-template-columns:minmax(0,1fr);gap:8px}.cut-material-list article{grid-template-columns:112px minmax(0,1fr) 28px;gap:14px}.cut-product-copy{padding:20px;gap:14px}}
+@media(max-width:599px){.cut-service-grid article{grid-template-columns:minmax(0,1fr)}.cut-product-photo{min-height:0;aspect-ratio:16/10}.cut-product-copy{gap:12px}}
 @media(max-width:359px){.cut-material-list article{grid-template-columns:86px minmax(0,1fr);gap:12px}.cut-material-list article>a{grid-column:2;justify-self:start;min-height:32px}.cut-material-list p{font-size:14px}}
