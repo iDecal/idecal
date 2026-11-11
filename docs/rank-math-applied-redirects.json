@@ -21,13 +21,13 @@
     {
       "source": "/decal-bang-hieu/",
       "oldDestination": "https://idecal.vn/dan-decal-bang-hieu/",
-      "destination": "/dich-vu/cat-decal/",
+      "destination": "/dan-decal-bang-hieu/",
       "code": 301
     },
     {
       "source": "/dich-vu-dan-decal-bang-hieu-chuyen-nghiep/",
       "oldDestination": "https://idecal.vn/dan-decal-bang-hieu/",
-      "destination": "/dich-vu/cat-decal/",
+      "destination": "/dan-decal-bang-hieu/",
       "code": 301
     },
     {
@@ -216,12 +216,10 @@
     "/decal-dan-kinh-12": "/san-pham/film-dan-kinh-caro-den-pov01/",
     "/decal-dan-kinh-12/": "/san-pham/film-dan-kinh-caro-den-pov01/",
     "/film-dan-kinh-caro-den-pov01/": "/san-pham/film-dan-kinh-caro-den-pov01/",
-    "/decal-bang-hieu": "/dich-vu/cat-decal/",
-    "/decal-bang-hieu/": "/dich-vu/cat-decal/",
-    "/dan-decal-bang-hieu": "/dich-vu/cat-decal/",
-    "/dan-decal-bang-hieu/": "/dich-vu/cat-decal/",
-    "/dich-vu-dan-decal-bang-hieu-chuyen-nghiep": "/dich-vu/cat-decal/",
-    "/dich-vu-dan-decal-bang-hieu-chuyen-nghiep/": "/dich-vu/cat-decal/",
+    "/decal-bang-hieu": "/dan-decal-bang-hieu/",
+    "/decal-bang-hieu/": "/dan-decal-bang-hieu/",
+    "/dich-vu-dan-decal-bang-hieu-chuyen-nghiep": "/dan-decal-bang-hieu/",
+    "/dich-vu-dan-decal-bang-hieu-chuyen-nghiep/": "/dan-decal-bang-hieu/",
     "/dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re": "/vi-tri/decal-dan-kinh-quan-2/",
     "/dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re/": "/vi-tri/decal-dan-kinh-quan-2/",
     "/bao-gia-decal-dan-kinh-mo-tron-goi-2025-chi-tiet-minh-bach/amp": "/blog/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/",

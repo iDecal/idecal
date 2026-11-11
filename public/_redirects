@@ -303,12 +303,10 @@
 /decal-dan-kinh-12 /san-pham/film-dan-kinh-caro-den-pov01/ 301
 /decal-dan-kinh-12/ /san-pham/film-dan-kinh-caro-den-pov01/ 301
 /film-dan-kinh-caro-den-pov01/ /san-pham/film-dan-kinh-caro-den-pov01/ 301
-/decal-bang-hieu /dich-vu/cat-decal/ 301
-/decal-bang-hieu/ /dich-vu/cat-decal/ 301
-/dan-decal-bang-hieu /dich-vu/cat-decal/ 301
-/dan-decal-bang-hieu/ /dich-vu/cat-decal/ 301
-/dich-vu-dan-decal-bang-hieu-chuyen-nghiep /dich-vu/cat-decal/ 301
-/dich-vu-dan-decal-bang-hieu-chuyen-nghiep/ /dich-vu/cat-decal/ 301
+/decal-bang-hieu /dan-decal-bang-hieu/ 301
+/decal-bang-hieu/ /dan-decal-bang-hieu/ 301
+/dich-vu-dan-decal-bang-hieu-chuyen-nghiep /dan-decal-bang-hieu/ 301
+/dich-vu-dan-decal-bang-hieu-chuyen-nghiep/ /dan-decal-bang-hieu/ 301
 /dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re /vi-tri/decal-dan-kinh-quan-2/ 301
 /dich-vu-thi-cong-decal-dan-kinh-quan-2-gia-re/ /vi-tri/decal-dan-kinh-quan-2/ 301
 /bao-gia-decal-dan-kinh-mo-tron-goi-2025-chi-tiet-minh-bach/amp /blog/bao-gia-thi-cong-dan-decal-kinh-mo-tron-goi/ 301

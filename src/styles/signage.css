@@ -1,0 +1,114 @@
+.signage-page { background:#fff; color:#1b4f7a; }
+.sign-breadcrumb { padding-top:24px; }
+.sign-breadcrumb ol { display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:0; list-style:none; color:#64748b; font-size:12px; line-height:1.8; }
+.sign-breadcrumb li:not(:last-child)::after { content:'/'; padding-left:8px; color:#a9b8c4; }
+.sign-breadcrumb a { color:#0d6b96; }
+.sign-hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); align-items:center; gap:64px; padding-block:36px 42px; }
+.sign-eyebrow { font-size:12px; color:#64748b; padding-left:12px; border-left:3px solid #d1b581; margin:0 0 18px; line-height:1.7; }
+.sign-hero h1 { margin:0 0 22px; color:#173b62; font-size:clamp(30px,3.3vw,44px); font-weight:600; line-height:1.3; letter-spacing:-.025em; }
+.sign-original { font-size:15px; color:#455b70; line-height:1.85; }
+.sign-original p { margin:0 0 16px; line-height:1.85; }
+.sign-original p:last-child { margin-bottom:0; }
+.sign-original strong { font-weight:600; }
+.sign-original a { color:#0d6b96; text-decoration:underline; text-underline-offset:3px; overflow-wrap:anywhere; }
+.sign-original :is(ul,ol) { list-style:disc; padding-left:20px; display:grid; gap:12px; margin:16px 0 0; }
+.sign-lead { font-size:17px; }
+.sign-actions { display:flex; flex-wrap:wrap; gap:20px 28px; align-items:center; margin-top:28px; }
+.sign-phone { font-size:20px; font-weight:550; color:#173b62; }
+.sign-price-jump { margin-top:24px; }
+.sign-hero-visual>figure { aspect-ratio:4/3; border-radius:16px; overflow:hidden; margin:0; }
+.sign-source-badge { display:flex; align-items:center; gap:13px; padding-top:18px; }
+.sign-source-badge>span { display:grid; place-items:center; width:30px; height:30px; color:#92743f; border:1px solid #d1b581; border-radius:50%; font-size:13px; }
+.sign-source-badge h3 { font-size:14px; margin:0 0 2px; font-weight:500; }
+.sign-source-badge p { font-size:12px; margin:0; color:#64748b; }
+.sign-jump { display:flex; gap:28px; padding-block:18px; border-block:1px solid #e5ebf0; overflow-x:auto; }
+.sign-jump a { font-size:12px; flex-shrink:0; color:#0d6b96; }
+.sign-section { padding-block:48px; }
+.signage-page :is([id],section) { scroll-margin-top:115px; }
+.sign-heading { max-width:850px; margin-bottom:28px; }
+.signage-page h2 { color:#173b62; font-size:clamp(25px,2.5vw,33px); line-height:1.4; font-weight:550; margin:0 0 20px; }
+.signage-page h3 { color:#1b4f7a; }
+.sign-introduction { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:64px; padding-bottom:16px; }
+.sign-introduction h2 { max-width:320px; }
+.sign-benefit-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:26px; }
+.sign-benefit-grid article { padding-top:22px; border-top:2px solid #e4cfaa; }
+.sign-benefit-grid h3 { font-size:19px; line-height:1.5; font-weight:500; margin:0 0 14px; }
+.sign-benefit-grid .sign-original { font-size:14px; }
+.sign-soft { background:#f7f9fb; }
+.sign-materials { display:grid; gap:34px; }
+.sign-material { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr); column-gap:44px; align-items:center; padding-bottom:34px; border-bottom:1px solid #e1e9ef; }
+.sign-material:last-child { padding-bottom:0; border:0; }
+.sign-material>figure { margin:0; grid-row:span 2; align-self:start; aspect-ratio:4/3; border-radius:12px; overflow:hidden; }
+.sign-material>figure>a { display:block; height:100%; }
+.sign-material-heading { align-self:end; }
+.sign-material h3 { font-size:23px; font-weight:500; line-height:1.5; margin:0 0 16px; }
+.sign-material-copy { align-self:start; }
+.sign-material-copy ul { margin:0; }
+.sign-material-text { padding-block:8px 30px; align-items:start; }
+.sign-material-text h3 { margin:0; }
+.sign-material-text .sign-material-heading { align-self:start; }
+.sign-process { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:30px 46px; padding:0; margin:0 0 32px; list-style:none; }
+.sign-process li { border-left:2px solid #e4cfaa; padding-left:20px; }
+.sign-process h3 { font-size:19px; line-height:1.5; font-weight:500; margin:0 0 12px; }
+.sign-process-photo { margin:0; aspect-ratio:1024/560; border-radius:14px; overflow:hidden; }
+.sign-process-photo :is(img,.interior-film-image) { object-fit:contain; }
+.sign-applications { border-top:1px solid #e1e9ef; }
+.sign-application-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 42px; padding:0; margin:0; list-style:none; }
+.sign-application-list>li { padding:0 0 20px 18px; border-bottom:1px solid #e1e9ef; position:relative; }
+.sign-application-list>li::before { content:''; position:absolute; left:0; top:11px; width:5px; height:5px; border-radius:50%; background:#d1b581; }
+.sign-commitments { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:center; }
+.sign-commitments .sign-heading { margin-bottom:22px; }
+.sign-commitment-list { display:grid; gap:14px; margin:24px 0 0; padding-left:19px; list-style:disc; }
+.sign-commitment-list li::marker { color:#b4955f; }
+.sign-commitments>figure { margin:0; aspect-ratio:16/9; border-radius:12px; overflow:hidden; }
+.sign-commitments>figure :is(img,.interior-film-image) { object-fit:contain; }
+.sign-price-group { margin-top:30px; min-width:0; }
+.sign-price-group>h3 { font-size:21px; line-height:1.5; font-weight:500; margin:0 0 16px; }
+.sign-price-group>.sign-original { margin-bottom:20px; }
+.sign-table-hint { display:none; }
+.sign-table-scroll { max-width:100%; overflow-x:auto; border:1px solid #e0e8ef; border-radius:10px; }
+.sign-table-scroll table { width:100%; min-width:620px; border-collapse:collapse; font-size:14px; color:#455b70; line-height:1.75; }
+.sign-table-scroll :is(th,td) { text-align:left; padding:17px 20px; vertical-align:top; }
+.sign-table-scroll th { background:#f2f6fa; font-size:13px; color:#173b62; font-weight:600; border-bottom:2px solid #e4cfaa; }
+.sign-table-scroll tbody tr:not(:last-child) td { border-bottom:1px solid #e2e9ef; }
+.sign-table-scroll tbody tr:nth-child(even) { background:#fafbfd; }
+.sign-table-scroll td:nth-child(2) { white-space:nowrap; font-weight:600; color:#173b62; width:190px; }
+.sign-table-scroll th:first-child { width:27%; }
+.sign-table-scroll strong { font-weight:500; }
+.sign-table-scroll a { color:#0d6b96; text-decoration:underline; text-underline-offset:3px; }
+.sign-price-note { margin-top:22px; padding-left:16px; border-left:3px solid #d1b581; font-size:14px; }
+.sign-contact { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr); align-items:center; gap:56px; border-top:1px solid #e1e9ef; }
+.sign-contact-actions { display:flex; flex-direction:column; align-items:start; gap:22px; }
+.signage-page :is(a,[tabindex]):focus-visible { outline:2px solid #0d6b96; outline-offset:5px; }
+@media(max-width:1023px) {
+  .sign-hero,.sign-introduction,.sign-commitments,.sign-contact { gap:32px; }
+  .sign-benefit-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+  .sign-material { gap:24px 30px; }
+  .sign-material h3 { font-size:21px; }
+}
+@media(max-width:767px) {
+  .sign-breadcrumb { padding-top:18px; }
+  .sign-hero,.sign-introduction,.sign-commitments,.sign-contact { grid-template-columns:1fr; }
+  .sign-hero { padding-block:26px 30px; gap:28px; }
+  .sign-hero h1 { font-size:31px; }
+  .sign-lead { font-size:16px; }
+  .sign-actions { gap:18px 24px; }
+  .sign-jump { gap:24px; }
+  .sign-section { padding-block:34px; }
+  .sign-introduction { gap:0; padding-bottom:8px; }
+  .sign-introduction h2 { max-width:none; }
+  .sign-benefit-grid { grid-template-columns:1fr; gap:24px; }
+  .sign-benefit-grid article { padding-top:18px; }
+  .sign-benefit-grid h3 { font-size:20px; }
+  .sign-material { grid-template-columns:1fr; gap:0; padding-bottom:26px; }
+  .sign-material>figure { grid-row:auto; margin-bottom:22px; }
+  .sign-material h3 { font-size:22px; }
+  .sign-material-text h3 { margin-bottom:16px; }
+  .sign-process { grid-template-columns:1fr; gap:26px; }
+  .sign-application-list { grid-template-columns:1fr; gap:20px; }
+  .signage-page h2 { font-size:26px; }
+  .sign-table-hint { display:block; margin:0 0 12px; font-size:12px; color:#64748b; }
+  .sign-table-scroll :is(th,td) { padding:14px 16px; }
+  .sign-table-scroll table { font-size:13px; }
+  .sign-contact { gap:26px; }
+}

@@ -1,0 +1,57 @@
+import assert from 'node:assert/strict';
+import {readFile,stat} from 'node:fs/promises';
+import {parse} from 'parse5';
+import {getImageSeo} from '../src/data/image-seo.ts';
+
+const source=JSON.parse(await readFile('src/data/signage-original.json','utf8'));
+const proof=JSON.parse(await readFile('docs/signage-source.json','utf8'));
+const html=await readFile('dist/dan-decal-bang-hieu/index.html','utf8');
+const all=node=>[node,...(node.childNodes??[]).flatMap(all)];
+const nodes=all(parse(html));
+const attr=(node,key)=>node.attrs?.find(item=>item.name===key)?.value;
+const text=node=>['script','style'].includes(node.tagName)?'':node.nodeName==='#text'?node.value:(node.childNodes??[]).map(text).join('');
+const normalize=value=>value.replace(/\s+/g,'');
+const main=nodes.find(node=>node.tagName==='main');
+const rendered=normalize(text(main));
+assert.equal(source.sourceSha256,proof.sourceSha256);
+assert.equal(nodes.filter(node=>node.tagName==='h1').length,1);
+assert.equal(text(nodes.find(node=>node.tagName==='h1')),proof.title);
+for(const leaf of proof.sourceTextNodes)assert.ok(rendered.includes(normalize(leaf)),'Missing original text: '+leaf);
+for(const block of proof.blocks)assert.ok(rendered.includes(normalize(block)),'Missing original text block: '+block);
+for(const heading of proof.headings.filter(item=>item.id)){
+ const node=nodes.find(node=>attr(node,'id')===heading.id);
+ assert.ok(node,'Missing heading anchor: '+heading.id);
+ assert.equal(text(node),heading.title);
+}
+const actualTables=all(main).filter(node=>node.tagName==='table').map(table=>all(table).filter(node=>node.tagName==='tr').map(row=>row.childNodes.filter(cell=>['th','td'].includes(cell.tagName)).map(cell=>text(cell).replace(/\s+/g,' ').trim())));
+assert.deepEqual(actualTables,proof.tables,'Both price tables must retain every source cell, unit and price');
+for(const image of proof.images){
+ const actual=all(main).find(node=>node.tagName==='img'&&attr(node,'src')===image.src);
+ assert.ok(actual,'Missing source image: '+image.src);
+ const seo=getImageSeo(image.src,image.alt);
+ assert.equal(attr(actual,'alt'),seo.alt);
+ assert.equal(attr(actual,'title'),seo.title);
+}
+assert.equal(all(main).filter(node=>node.tagName==='img').length,6);
+assert.ok(nodes.some(node=>node.tagName==='link'&&attr(node,'rel')==='canonical'&&attr(node,'href')===proof.sourceCanonical));
+const schemas=nodes.filter(node=>node.tagName==='script'&&attr(node,'type')==='application/ld+json').flatMap(node=>{const data=JSON.parse((node.childNodes??[]).map(child=>child.value??'').join(''));return data['@graph']??[data];});
+const breadcrumb=schemas.find(item=>item['@type']==='BreadcrumbList');
+assert.equal(breadcrumb.itemListElement[1].item,'https://idecal.vn/decal-quang-cao/');
+assert.equal(breadcrumb.itemListElement[2].item,proof.sourceCanonical);
+assert.ok(schemas.some(item=>item['@type']==='Service'&&item.url===proof.sourceCanonical));
+assert.ok(all(main).some(node=>node.tagName==='a'&&attr(node,'href')===source.parent.href));
+for(const route of ['decal-quang-cao','dich-vu/decal-quang-cao']){
+ const parent=await readFile('dist/'+route+'/index.html','utf8');
+ assert.ok(parent.includes('class="container signage-service-card"'),'Parent service card missing: '+route);
+ assert.ok(parent.includes('href="/dan-decal-bang-hieu/"'));
+}
+const rules=new Map((await readFile('public/_redirects','utf8')).split('\n').filter(line=>line&&!line.startsWith('#')).map(line=>line.trim().split(/\s+/)).map(([from,to])=>[from,to]));
+assert.ok(!rules.has('/dan-decal-bang-hieu')&&!rules.has('/dan-decal-bang-hieu/'),'New canonical page must not redirect to cutting service');
+for(const alias of ['/decal-bang-hieu','/dich-vu-dan-decal-bang-hieu-chuyen-nghiep'])for(const suffix of ['','/'])assert.equal(rules.get(alias+suffix),'/dan-decal-bang-hieu/');
+for(const link of source.linkMap){
+ const pathname=new URL(link.resolved,'https://idecal.vn').pathname.replace(/\/$/,'');
+ assert.ok((await stat('dist'+pathname+'/index.html')).isFile(),'Invalid imported internal link: '+link.resolved);
+}
+assert.ok((await readFile('dist/sitemap.xml','utf8')).includes('<loc>'+proof.sourceCanonical+'</loc>'));
+assert.ok(!/wp-admin|cozyBlock|<form\b|onerror=|onclick=/i.test(html),'Do not import saved admin/plugin scripts or handlers');
+console.log('Signage passed: '+proof.blocks.length+' original blocks, '+proof.sourceTextNodes.length+' source text nodes, 6 images, 5 materials, 5 installation steps, two intact price tables, advertising parent links, canonical and restored redirects.');
