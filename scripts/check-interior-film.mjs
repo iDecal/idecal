@@ -12,6 +12,7 @@ const attr=(node,key)=>node.attrs?.find(item=>item.name===key)?.value;
 const text=node=>['script','style'].includes(node.tagName)?'':node.nodeName==='#text'?node.value:(node.childNodes??[]).map(text).join('');
 const normalize=value=>value.replace(/\s+/g,'');
 const main=nodes.find(node=>node.tagName==='main');
+const mainNodes=nodes.filter(node=>{for(let parent=node;parent;parent=parent.parentNode)if(parent===main)return true;return false;});
 const rendered=normalize(text(main));
 assert.equal(source.sourceSha256,proof.sourceSha256);
 assert.equal(text(nodes.find(node=>node.tagName==='h1')),proof.heading);
@@ -23,9 +24,9 @@ for(const image of proof.images){
  assert.ok(rendered,'Missing source image: '+image.src);
  assert.equal(attr(rendered,'alt'),getImageSeo(image.src,image.alt).alt);
 }
-const summaries=nodes.filter(node=>node.tagName==='summary');
+const summaries=mainNodes.filter(node=>node.tagName==='summary');
 assert.equal(summaries.length,5);
-assert.ok(!nodes.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQs must start closed');
+assert.ok(!mainNodes.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQs must start closed');
 for(const item of source.faq.items)assert.ok(summaries.some(node=>text(node).includes(item.question)));
 assert.ok(nodes.some(node=>node.tagName==='link'&&attr(node,'rel')==='canonical'&&attr(node,'href')===proof.sourceCanonical));
 const schemas=nodes.filter(node=>node.tagName==='script'&&attr(node,'type')==='application/ld+json').flatMap(node=>{const data=JSON.parse((node.childNodes??[]).map(child=>child.value??'').join(''));return data['@graph']??[data]});
