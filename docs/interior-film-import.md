@@ -51,3 +51,25 @@ Theo yêu cầu làm H2 nổi bật hơn, các tiêu đề mục của riêng tr
 dùng token --heading-h2-local với cỡ 28–36px (mobile cộng 2px theo quy tắc chung),
 giữ chữ xanh đậm và thêm vạch nhấn gradient xanh–tím 64 × 4px bên dưới.
 H1 và nội dung chữ giữ nguyên, không đổi thang tiêu đề của các trang khác.
+
+## Bộ ảnh công trình và ứng dụng bổ sung
+
+Chủ website gửi New folder (2).rar và yêu cầu thêm ảnh, gỡ ảnh không rõ nét.
+Đã kiểm tra 12 ảnh JPEG, kích thước từ 941–1280px theo chiều rộng và tối đa
+1280px theo chiều cao. Ảnh lưu nguyên byte trong public/images/film-noi-that/
+cong-trinh/, không phóng to, nén lại hoặc sửa nội dung ảnh.
+
+interior-film-photos.json ghi SHA-256 tệp nén, tên/SHA-256 từng JPEG, mô tả
+đúng nội dung nhìn thấy và bảy ánh xạ thay ảnh. interior-film-visuals.ts áp
+dụng thay thế khi hiển thị: hero, lợi ích, vân gỗ, vân đá, trần, cửa và quầy.
+Ảnh trần thay cho ảnh tủ bếp đang gán nhầm trong mục Trần nhà; ảnh cửa so sánh
+giữ đủ hai nửa trước–sau. Không thay ảnh thang máy bằng ảnh không đúng ứng dụng.
+Không thêm địa chỉ, khách hàng hoặc thời gian công trình chưa được cung cấp.
+
+Thư viện 12 ảnh có liên kết trong menu nội dung, xem ảnh lớn bằng dialog và
+liên kết ảnh gốc khi không có JavaScript. Ảnh thư viện dùng contain, không cắt
+chữ trên ảnh ghép. Bản HTML/JSON nguồn và 82 khối chữ tiếp tục giữ nguyên;
+quy tắc giữ 17 ảnh nguồn có ngoại lệ rõ ràng là bảy ảnh thay thế theo yêu cầu này.
+OG image của hai đường dẫn dịch vụ dùng ảnh hero mới. Bộ kiểm tra đối chiếu
+ảnh theo ánh xạ, kiểm tra SHA-256 của cả 12 JPEG và ảnh cũ đã thay không còn
+được hiển thị; browser test kiểm tra tải ảnh, mở/đóng dialog và trả focus.

@@ -1,8 +1,10 @@
 ---
-interface Props { image: {src:string;alt:string;title:string;width:number;height:number}; eager?:boolean; }
-const {image,eager=false}=Astro.props;
+import {resolveInteriorFilmImage} from '../data/interior-film-visuals';
+interface Props { image: {src:string;alt:string;title:string;width:number;height:number;fit?:string}; eager?:boolean; }
+const {image:original,eager=false}=Astro.props;
+const image=resolveInteriorFilmImage(original);
 ---
-<div class="interior-film-image" data-interior-film-image>
+<div class="interior-film-image" data-interior-film-image style={image.fit?'--film-image-fit:'+image.fit:undefined}>
   <img src={image.src} alt={image.alt} title={image.title} width={image.width} height={image.height} loading={eager?'eager':'lazy'} fetchpriority={eager?'high':undefined} decoding="async" />
   <span data-film-image-fallback hidden aria-hidden="true">Hình ảnh đang cập nhật</span>
 </div>
@@ -17,5 +19,5 @@ const {image,eager=false}=Astro.props;
   });
 </script>
 <style>
-.interior-film-image{position:relative;overflow:hidden;background:#f4f7fa;width:100%;height:100%}.interior-film-image img{display:block;width:100%;height:100%;object-fit:cover}.interior-film-image [hidden]{display:none!important}.interior-film-image span{display:grid;place-items:center;min-height:180px;height:100%;padding:24px;color:#64748b;font-size:13px;text-align:center}
+.interior-film-image{position:relative;overflow:hidden;background:#f4f7fa;width:100%;height:100%}.interior-film-image img{display:block;width:100%;height:100%;object-fit:var(--film-image-fit,cover)}.interior-film-image [hidden]{display:none!important}.interior-film-image span{display:grid;place-items:center;min-height:180px;height:100%;padding:24px;color:#64748b;font-size:13px;text-align:center}
 </style>

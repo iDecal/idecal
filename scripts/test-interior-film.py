@@ -17,7 +17,10 @@ with sync_playwright() as p:
         assert page.locator('.interior-film-page h1').count()==1
         assert page.locator('.interior-film-pattern').count()==6
         assert page.locator('.interior-film-applications article').count()==5
-        assert page.locator('.interior-film-page img').count()==18
+        assert page.locator('.interior-film-projects [data-upload-photo]').count()==12
+        hero=page.locator('.interior-film-hero-photo img')
+        expect(hero).to_have_js_property('complete',True)
+        assert hero.evaluate('image=>image.naturalWidth>0')
         assert page.locator('.interior-film-material-details[open]').count()==0
         first=page.locator('.interior-film-material-details').first
         first.locator('summary').click()
@@ -62,6 +65,24 @@ with sync_playwright() as p:
         for link in page.locator('.interior-film-pattern-copy > a').all():
             assert link.get_attribute('href').startswith('/san-pham/')
         print(width,'px: source content/images, expandable applications, keyboard tabs, FAQ, sticky anchors and width verified')
+    gallery=page.locator('.interior-film-projects')
+    for image in gallery.locator('[data-upload-photo] img').all():
+        image.scroll_into_view_if_needed()
+        expect(image).to_have_js_property('complete',True)
+        assert image.evaluate('image=>image.naturalWidth>=900')
+        assert image.evaluate('image=>getComputedStyle(image).objectFit')=='contain'
+    first_photo=gallery.locator('[data-upload-photo]').first
+    first_photo.click()
+    dialog=gallery.get_by_role('dialog')
+    expect(dialog).to_be_visible()
+    expect(dialog.locator('img')).to_have_attribute('src',BASE+first_photo.get_attribute('href'))
+    page.keyboard.press('Escape')
+    expect(dialog).not_to_be_visible()
+    expect(first_photo).to_be_focused()
+    first_photo.click()
+    dialog.get_by_role('button',name='Đóng ×').click()
+    expect(dialog).not_to_be_visible()
+    print('All 12 uploaded photos load locally at original resolution; full-frame gallery and modal closing/focus verified.')
     page.locator('.interior-film-contact-actions .btn-primary-solid').click()
     page.wait_for_url('**/lien-he-idecal**')
     expect(page.locator('#booking-service')).to_have_value('thi-cong-decal')
@@ -74,6 +95,7 @@ with sync_playwright() as p:
     plain=nojs.new_page()
     plain.goto(BASE+'/dich-vu-film-dan-noi-that/',wait_until='networkidle')
     assert plain.locator('[data-film-application]:visible').count()==5
+    assert plain.locator('.interior-film-projects a[data-upload-photo]').count()==12
     expect(plain.locator('[data-film-tabs]')).not_to_be_visible()
     plain.locator('.interior-film-material-details summary').first.click()
     expect(plain.locator('.interior-film-material-details li').first).to_be_visible()

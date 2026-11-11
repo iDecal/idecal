@@ -2,11 +2,13 @@
 import BannerBenefits from './BannerBenefits.astro';
 import source from '../data/interior-film-original.json';
 import {interiorFilmApplications as applications} from '../data/interior-film-applications';
+import {interiorFilmGallery} from '../data/interior-film-visuals';
 import InteriorFilmImage from './InteriorFilmImage.astro';
+import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
 import '../styles/interior-film.css';
 const materialLabels=['Vân gỗ','Vân đá Marble','Đơn sắc','Kim loại','Vân bê tông','Vân vải'];
 const materialIds=['van-go','van-da','don-sac','kim-loai','be-tong','van-vai'];
-const sections=[{id:'mau-film-noi-that',label:'Chọn mẫu film'},{id:'loi-ich-film-noi-that',label:'Lợi ích'},{id:'ung-dung-film-noi-that',label:'Ứng dụng'},{id:'cau-hoi-film-noi-that',label:'Câu hỏi thường gặp'}];
+const sections=[{id:'mau-film-noi-that',label:'Chọn mẫu film'},{id:'loi-ich-film-noi-that',label:'Lợi ích'},{id:'ung-dung-film-noi-that',label:'Ứng dụng'},{id:'anh-cong-trinh-film-noi-that',label:'Ảnh công trình'},{id:'cau-hoi-film-noi-that',label:'Câu hỏi thường gặp'}];
 const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
 ---
 <div class="interior-film-page" data-interior-film>
@@ -47,6 +49,8 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
     <div class="interior-film-application-tabs" data-film-tabs aria-label="Chọn vị trí ứng dụng" hidden>{applications.map(item=><button type="button" id={'film-tab-'+item.id} data-film-tab data-film-featured={item.featured||undefined} aria-controls={'film-application-'+item.id}>{item.featured&&<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 9v12M7 6l2-2 2 2m2-2 2 2 2-2"/></svg>}{item.title}</button>)}</div>
     <div class="interior-film-applications">{applications.map((item,index)=><article id={'film-application-'+item.id} data-film-application data-film-featured={item.featured||undefined}><figure><InteriorFilmImage image={item.image} />{item.caption&&<figcaption class="interior-film-application-caption">{item.caption}</figcaption>}</figure><div class="interior-film-application-copy">{item.featured?<p class="interior-film-eyebrow" data-heading-label>Ứng dụng nổi bật</p>:<span class="interior-film-index" aria-hidden="true">{'0'+(index+1)}</span>}<h3 id={'film-application-title-'+item.id}>{item.heading}</h3>{item.description&&<p class="interior-film-original-copy">{item.description}</p>}{item.points.length>0&&<ul class="interior-film-application-points">{item.points.map(point=><li><svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m4 10 4 4 8-8"/></svg><span>{point}</span></li>)}</ul>}<div class="interior-film-original-copy" set:html={item.blocks.map(block=>block.html).join('')} />{item.links.map(link=><a href={link.href} class:list={['interior-film-link',{'interior-film-featured-link':item.featured}]} aria-label={link.label+' về '+item.title.toLocaleLowerCase('vi-VN')}>{link.label}<span aria-hidden="true">→</span></a>)}</div></article>)}</div>
   </section>
+
+  <div class="container interior-film-projects"><InstallationPhotoGallery photos={interiorFilmGallery} heading="Ảnh công trình film nội thất" id="anh-cong-trinh-film-noi-that" introduction="Tham khảo cách phối vân trên trần, vách, cửa và quầy nội thất. Bấm vào ảnh để xem đầy đủ chi tiết và các góc hoàn thiện." /></div>
 
   <section id="cau-hoi-film-noi-that" class="interior-film-faq-wrap" aria-labelledby={source.faq.heading.id}>
     <div class="container interior-film-section interior-film-faq">

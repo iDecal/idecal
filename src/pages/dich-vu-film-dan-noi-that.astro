@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import InteriorFilmLanding from '../components/InteriorFilmLanding.astro';
 import source from '../data/interior-film-original.json';
+import {resolveInteriorFilmImage} from '../data/interior-film-visuals';
 const faq={'@type':'FAQPage',mainEntity:source.faq.items.map(item=>({'@type':'Question',name:item.question,acceptedAnswer:{'@type':'Answer',text:item.answer.map(block=>block.text).join(' ')}}))};
 ---
-<Layout title={source.sourceTitle} description={source.description} canonicalURL={source.sourceCanonical} image={source.hero.images[0].src} structuredData={[faq]}><InteriorFilmLanding /></Layout>
+<Layout title={source.sourceTitle} description={source.description} canonicalURL={source.sourceCanonical} image={resolveInteriorFilmImage(source.hero.images[0]).src} structuredData={[faq]}><InteriorFilmLanding /></Layout>

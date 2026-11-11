@@ -1,0 +1,159 @@
+{
+  "sourceArchive": "New folder (2).rar",
+  "sourceArchiveSha256": "adecabac2d155db3cb7d359d0aea35b9901c030df5e6a07b58e22dda7d4ac2e3",
+  "images": [
+    {
+      "id": "tran-vach-thi-cong",
+      "src": "/images/film-noi-that/cong-trinh/thi-cong-tran-va-vach-van-go.jpg",
+      "alt": "Trần và vách vân gỗ trong quá trình hoàn thiện",
+      "title": "Hoàn thiện trần và vách vân gỗ",
+      "caption": "Hoàn thiện trần và vách vân gỗ",
+      "width": 1131,
+      "height": 1085,
+      "fit": "cover",
+      "sourceFilename": "1794387927697_545209507844748192_155907385314004761_a6cc880945c9a565ff0b71e7b93add69.jpg",
+      "sha256": "72dbaca16d335ba777dde9056a1ff7512072a693d78f346c58382307ef730a0b"
+    },
+    {
+      "id": "tran-van-go",
+      "src": "/images/film-noi-that/cong-trinh/tran-va-vach-phoi-van-go.jpg",
+      "alt": "Ứng dụng vân gỗ trên trần và vách nội thất",
+      "title": "Trần và vách phối film vân gỗ",
+      "caption": "Trần và vách phối film vân gỗ",
+      "width": 962,
+      "height": 1280,
+      "fit": "cover",
+      "sourceFilename": "1794387927764_545209507844748192_155907385314004761_a2bf324cd7f695a02d6bba6890b922ab.jpg",
+      "sha256": "c78b6b436c34bbea1340ae1f4d6cbdd66e576b0dc5e5bed7726524acdfaf4838"
+    },
+    {
+      "id": "vach-thi-cong",
+      "src": "/images/film-noi-that/cong-trinh/vach-noi-that-dang-hoan-thien.jpg",
+      "alt": "Vách nội thất đang hoàn thiện cùng hệ tủ vân gỗ",
+      "title": "Vách nội thất trong quá trình hoàn thiện",
+      "caption": "Vách nội thất trong quá trình hoàn thiện",
+      "width": 1280,
+      "height": 987,
+      "fit": "cover",
+      "sourceFilename": "1794387927824_545209507844748192_155907385314004761_bfd42d19f309d56b3808cd261652ddb9.jpg",
+      "sha256": "a28ee08d39ffe1eacc0affd5ef65c0f64d31083236044554aa127c583a2dab41"
+    },
+    {
+      "id": "hanh-lang",
+      "src": "/images/film-noi-that/cong-trinh/hanh-lang-phoi-van-go.jpg",
+      "alt": "Hành lang với bề mặt cửa và vách vân gỗ",
+      "title": "Hành lang phối vân gỗ",
+      "caption": "Hành lang phối vân gỗ",
+      "width": 960,
+      "height": 1280,
+      "fit": "cover",
+      "sourceFilename": "1794387927889_545209507844748192_155907385314004761_c3ab118ecd08d2d69c8c47014fcd711d.jpg",
+      "sha256": "0e83a222a403805cc85eca247a9105eee28554104f9c723de3335b932cf1c0e2"
+    },
+    {
+      "id": "sanh-van-go",
+      "src": "/images/film-noi-that/cong-trinh/sanh-noi-that-van-go.jpg",
+      "alt": "Sảnh nội thất phối vân gỗ và đèn vòng",
+      "title": "Sảnh nội thất với vách vân gỗ",
+      "caption": "Sảnh nội thất với vách vân gỗ",
+      "width": 960,
+      "height": 1280,
+      "fit": "cover",
+      "sourceFilename": "1794387927960_545209507844748192_155907385314004761_3bfae0b9bb4520b53e8a72b04a519a70.jpg",
+      "sha256": "7631b6b243d2ce6ee3612c41769052d738de3f2509c4408697017cece0b989d1"
+    },
+    {
+      "id": "quay-sau-thi-cong",
+      "src": "/images/film-noi-that/cong-trinh/quay-van-go-sau-thi-cong.jpg",
+      "alt": "Quầy nội thất phủ film vân gỗ sau thi công",
+      "title": "Quầy vân gỗ sau thi công",
+      "caption": "Quầy vân gỗ sau thi công",
+      "width": 960,
+      "height": 1280,
+      "fit": "contain",
+      "sourceFilename": "1794387928037_545209507844748192_155907385314004761_193247e87a4f5a47cd63be357633c8ca.jpg",
+      "sha256": "4c3ac2694f157a070a8fc965a4e0ca3d64a154b5dd70c9455a9bcedc21d785c8"
+    },
+    {
+      "id": "vach-cau-thang",
+      "src": "/images/film-noi-that/cong-trinh/vach-van-go-khu-vuc-cau-thang.jpg",
+      "alt": "Ứng dụng vân gỗ trên vách khu vực cầu thang",
+      "title": "Vách vân gỗ khu vực cầu thang",
+      "caption": "Vách vân gỗ khu vực cầu thang",
+      "width": 1280,
+      "height": 720,
+      "fit": "cover",
+      "sourceFilename": "1794387928100_545209507844748192_155907385314004761_87521d54605bf90b8ee7092470160079.jpg",
+      "sha256": "77c3ead0a6089761b5da2b6802c2fca7b2cefe344c73e0826ef6048163e0d0e3"
+    },
+    {
+      "id": "quay-vach-cong",
+      "src": "/images/film-noi-that/cong-trinh/quay-va-vach-cong-van-go.jpg",
+      "alt": "Quầy và vách cong hoàn thiện với bề mặt vân gỗ",
+      "title": "Quầy và vách cong phối vân gỗ",
+      "caption": "Quầy và vách cong phối vân gỗ",
+      "width": 1280,
+      "height": 720,
+      "fit": "cover",
+      "sourceFilename": "1794387928166_545209507844748192_155907385314004761_27ac6455e9f89fc7a7b4b2d94f6b54eb.jpg",
+      "sha256": "17051919cfb7a9ab446ec147abea0e21a15722f346c72414a3cd404f9705caa5"
+    },
+    {
+      "id": "cua-van-go",
+      "src": "/images/film-noi-that/cong-trinh/cua-van-go-truoc-va-sau.jpg",
+      "alt": "So sánh bề mặt cửa vân gỗ trước và sau thi công",
+      "title": "Cải tạo cửa vân gỗ trước và sau",
+      "caption": "Cải tạo cửa vân gỗ trước và sau",
+      "width": 1280,
+      "height": 1169,
+      "fit": "contain",
+      "sourceFilename": "1794387928231_545209507844748192_155907385314004761_5cebd484965ac33ca90d03061504782c.jpg",
+      "sha256": "024bcfcc92ccebb85392e3d16fefcf2f318ac82ba15d446154f9f0106143629f"
+    },
+    {
+      "id": "cua-don-sac",
+      "src": "/images/film-noi-that/cong-trinh/cua-don-sac-truoc-va-sau.jpg",
+      "alt": "So sánh cửa trước và sau khi đổi sang màu đơn sắc",
+      "title": "Cải tạo cửa đơn sắc trước và sau",
+      "caption": "Cải tạo cửa đơn sắc trước và sau",
+      "width": 1199,
+      "height": 1280,
+      "fit": "contain",
+      "sourceFilename": "1794387928297_545209507844748192_155907385314004761_4bb47d22e1d5c9ca518e4cb894c880ba.jpg",
+      "sha256": "89b832c0fa305848e77234c47615cdacb1837c0dfcf0b0d85aa30dcc3f1519b7"
+    },
+    {
+      "id": "mau-van-da",
+      "src": "/images/film-noi-that/cong-trinh/mau-film-van-da.jpg",
+      "alt": "Mẫu film vân đá được đối chiếu tại khu vực trưng bày vật liệu",
+      "title": "Mẫu film vân đá",
+      "caption": "Mẫu film vân đá",
+      "width": 941,
+      "height": 1280,
+      "fit": "cover",
+      "sourceFilename": "1794387928357_545209507844748192_155907385314004761_b22454c73d7b8bbba046f58eb774d983.jpg",
+      "sha256": "64c528ef8eae80e9ad0f90883649162e1c4b4fc3dc11013f8f6b5c7fd51cae62"
+    },
+    {
+      "id": "vach-tivi",
+      "src": "/images/film-noi-that/cong-trinh/vach-tivi-va-tu-noi-that.jpg",
+      "alt": "Ứng dụng phối bề mặt cho vách tivi và tủ trang trí",
+      "title": "Vách tivi và tủ trang trí nội thất",
+      "caption": "Vách tivi và tủ trang trí nội thất",
+      "width": 960,
+      "height": 1280,
+      "fit": "cover",
+      "sourceFilename": "1794387928413_545209507844748192_155907385314004761_ee0f95d5d8b0089ba0a70f74982d22cf.jpg",
+      "sha256": "885ce965e6cd2fa2eb3b010a1a602c35d2748edb892afc77923060ceffc50df0"
+    }
+  ],
+  "replacements": {
+    "https://idecal.vn/wp-content/uploads/2025/08/Phim-dan-noi-that-cao-cap-edited.jpg": "quay-vach-cong",
+    "https://idecal.vn/wp-content/uploads/2025/11/z7255090957767_e915787a4b4e0e361800444ef5159163.jpg": "sanh-van-go",
+    "https://idecal.vn/wp-content/uploads/2026/03/Phim-dan-noi-that-van-go-01-edited.jpg": "vach-cau-thang",
+    "https://idecal.vn/wp-content/uploads/2025/08/Phim-Dan-Noi-That-Van-Da-Cam-Thach-924-05-1024x1024.png": "mau-van-da",
+    "https://idecal.vn/wp-content/uploads/2026/01/Hoan-thien-dan-phim-noi-that-tu-bep-nha-chi-Trang-Quan-2.jpg": "tran-van-go",
+    "https://idecal.vn/wp-content/uploads/2025/08/Cai-tao-cua-voi-phim-dan-noi-that-e1756265115501-1024x721.jpg": "cua-van-go",
+    "https://idecal.vn/wp-content/uploads/2025/06/table574403989441283095-1024x722.jpg": "quay-vach-cong"
+  }
+}
