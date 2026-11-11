@@ -1,6 +1,4 @@
 ---
-import { splitHomepageAtSection } from '../data/homepage-layout';
-import HomeProjects from '../components/HomeProjects.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
@@ -9,9 +7,7 @@ import '@fontsource-variable/lexend';
 import '@fontsource-variable/inter';
 import '../styles/homepage/source.css';
 import '../styles/homepage/compat.css';
-import '../styles/homepage/refresh.css';
 import publicHomepage from '../content/homepage/public.html?raw';
-const { before:homepageBeforeProjects, after:homepageAfterProjects }=splitHomepageAtSection(publicHomepage,'gspb_container-id-gsbp-36095c7');
 ---
 <!doctype html>
 <html lang="vi">
@@ -24,9 +20,7 @@ const { before:homepageBeforeProjects, after:homepageAfterProjects }=splitHomepa
   <body class="bg-background font-body text-secondary">
     <Header />
     <div class="homepage-original home gspbody gspb-bodyfront greenshift-theme"><div class="wp-site-blocks">
-    <Fragment set:html={homepageBeforeProjects} />
-    <HomeProjects />
-    <Fragment set:html={homepageAfterProjects} />
+    <Fragment set:html={publicHomepage} />
     </div></div>
     <Footer />
     <script>import '../scripts/homepage';</script>
