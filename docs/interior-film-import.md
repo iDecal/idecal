@@ -46,3 +46,8 @@ có trong elevator-service.json; ảnh có chú thích tham khảo, không gán 
 trình mới. Có liên kết đến /dan-decal-thang-may/. Giữ nguyên bốn ứng dụng và
 17 ảnh trong bản nhập; trang hiển thị tổng cộng 18 ảnh. Các tab vẫn hỗ trợ bàn
 phím và cả năm ứng dụng đều hiện khi tắt JavaScript.
+
+Theo yêu cầu làm H2 nổi bật hơn, các tiêu đề mục của riêng trang film nội thất
+dùng token --heading-h2-local với cỡ 28–36px (mobile cộng 2px theo quy tắc chung),
+giữ chữ xanh đậm và thêm vạch nhấn gradient xanh–tím 64 × 4px bên dưới.
+H1 và nội dung chữ giữ nguyên, không đổi thang tiêu đề của các trang khác.

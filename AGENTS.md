@@ -70,3 +70,5 @@
 - Khi xuất bản trang film nội thất, chủ website yêu cầu thay liên kết nội thất hiện tại bằng /dich-vu-film-dan-noi-that/: menu desktop/mobile, hai liên kết thẻ dịch vụ trang chủ, thẻ dịch vụ, liên kết tư vấn thi công và gợi ý trang 404 dẫn thẳng tới trang dịch vụ mới. Catalogue vật liệu /film-dan-noi-that/ vẫn truy cập riêng từ các liên kết chọn mẫu sản phẩm.
 
 - Bổ sung được duyệt trên trang dịch vụ film nội thất: ứng dụng Thang máy đặt đầu tiên, mở mặc định và nhấn xanh–tím. Dùng interior-film-applications.ts để thêm nội dung/ảnh từ elevator-service.json, liên kết /dan-decal-thang-may/; giữ bốn ứng dụng nguồn trong JSON gốc. Tổng hiển thị năm ứng dụng, 18 ảnh (17 ảnh nguồn + một ảnh thang máy có sẵn); không gán ảnh tham khảo thành công trình mới.
+
+- H2 riêng trang dịch vụ film nội thất được yêu cầu nhấn rõ hơn: dùng --heading-h2-local cỡ 28–36px (giữ mức cộng 2px mobile của toàn site), chữ xanh đậm và vạch gradient xanh–tím 64 × 4px. Giữ H1 và các tiêu đề nguồn; không áp dụng thay đổi này ra toàn site.
