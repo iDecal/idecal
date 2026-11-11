@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
+import ProductBrandLogo from '../../components/ProductBrandLogo.astro';
 import brands from '../../data/product-brands.json';
 import { products } from '../../data/catalogue';
 import { productLandings } from '../../data/site-offerings';
@@ -16,6 +17,7 @@ const items = products.filter(product => product.brand.trim().toLowerCase() === 
 <Layout title={`${brand.name} – Sản phẩm & tư vấn vật liệu | iDecal`} description={`Tìm hiểu thương hiệu ${brand.name} cho ${groups.map(group => group.name.toLocaleLowerCase('vi-VN')).join(', ')}. Xem mẫu có trong catalogue hoặc liên hệ iDecal để trao đổi mã vật liệu.`}>
   <section class="container py-12 md:py-16">
     <a href="/san-pham" class="mb-6 inline-block text-sm text-primary hover:underline">Sản phẩm iDecal →</a>
+    {brand.logo&&<div class="brand-detail-logo"><ProductBrandLogo name={brand.name} logo={brand.logo} /></div>}
     <h1>{brand.name}</h1>
     <p>Thương hiệu cho {groups.map(group => group.name.toLocaleLowerCase('vi-VN')).join(', ')}. Chọn nhóm để xem ứng dụng, mẫu và thông tin vật liệu.</p>
     <nav class="mb-6 flex flex-wrap gap-4" aria-label="Nhóm sản phẩm của thương hiệu">
@@ -26,3 +28,6 @@ const items = products.filter(product => product.brand.trim().toLowerCase() === 
   </section>
   {items.length > 0 && <ProductCatalog items={items} heading={`Mẫu ${brand.name} trong catalogue`} />}
 </Layout>
+<style>
+  .brand-detail-logo{width:220px;max-width:100%;margin-bottom:20px;padding:16px;border:1px solid #dce7f1;border-radius:12px;background:#fff}
+</style>

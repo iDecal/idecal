@@ -1,8 +1,9 @@
 [
-  { "slug": "icetouch", "name": "icetouch", "groups": ["phim-cach-nhiet-nha-kinh"] },
-  { "slug": "3m", "name": "3M", "groups": ["phim-cach-nhiet-nha-kinh"] },
-  { "slug": "idecal", "name": "iDecal", "groups": ["phim-cach-nhiet-nha-kinh"] },
-  { "slug": "rainier", "name": "Rainier", "groups": ["phim-cach-nhiet-nha-kinh"] },
+  { "slug": "icetouch", "name": "icetouch", "groups": ["phim-cach-nhiet-nha-kinh"], "logo": { "src": "/images/logo-hang/logo-icetouch.png", "width": 447, "height": 447, "layout": "square-wordmark" } },
+  { "slug": "3m", "name": "3M", "groups": ["phim-cach-nhiet-nha-kinh"], "logo": { "src": "/images/logo-hang/LOGO-3M.png", "width": 789, "height": 316 } },
+  { "slug": "idecal", "name": "iDecal", "groups": ["phim-cach-nhiet-nha-kinh"], "logo": { "src": "/images/idecal-logo.png", "width": 100, "height": 100, "layout": "symbol" } },
+  { "slug": "rainier", "name": "Rainier", "groups": ["phim-cach-nhiet-nha-kinh"], "logo": { "src": "/images/logo-hang/logo-rainier.webp", "width": 359, "height": 86 } },
+  { "slug": "llumar", "name": "Llumar", "groups": ["phim-cach-nhiet-nha-kinh"], "logo": { "src": "/images/logo-hang/LOGO-Llumar.png", "width": 600, "height": 368 } },
   { "slug": "shinglung", "name": "Shinglung", "groups": ["decal-mo-dan-kinh", "decal-pvc"] },
   { "slug": "octki", "name": "Octki", "groups": ["decal-mo-dan-kinh"] },
   { "slug": "corance", "name": "Corance", "groups": ["film-dan-noi-that"] },

@@ -1,11 +1,22 @@
 ---
 import brands from '../data/product-brands.json';
+import ProductBrandLogo from './ProductBrandLogo.astro';
 interface Props { group: string; }
 const items = brands.filter(brand => brand.groups.includes(Astro.props.group));
 ---
-{items.length > 0 && <section class="container pb-8" aria-label="Thương hiệu theo nhóm sản phẩm">
+{items.length > 0 && <section class="container product-brands" aria-label="Thương hiệu theo nhóm sản phẩm">
   <h2 class="mb-4 text-lg">Thương hiệu</h2>
-  <ul class="flex flex-wrap gap-3">
-    {items.map(brand => <li><a href={`/thuong-hieu/${brand.slug}`} class="inline-flex rounded border border-border bg-white px-4 py-2 text-sm text-secondary transition-colors hover:border-ui-accent-dark hover:bg-surface">{brand.name}</a></li>)}
+  <ul class="product-brand-list">
+    {items.map(brand => <li><a href={`/thuong-hieu/${brand.slug}`} aria-label={`Xem sản phẩm thương hiệu ${brand.name}`}><ProductBrandLogo name={brand.name} logo={brand.logo} /></a></li>)}
   </ul>
 </section>}
+<style>
+  .product-brands{padding-bottom:32px}
+  .product-brand-list{display:flex;flex-wrap:wrap;gap:14px;margin:0;padding:0;list-style:none}
+  li{flex:0 1 214px;min-width:0}
+  a{display:flex;align-items:center;justify-content:center;width:100%;min-height:112px;padding:18px 20px;border:1px solid #dce7f1;border-radius:12px;background:#fff;transition:border-color .18s,box-shadow .18s}
+  a:hover{border-color:#98c8f6;box-shadow:0 5px 18px #176bad0c}
+  a:focus-visible{outline:2px solid #0874bb;outline-offset:4px}
+  @media(max-width:767px){.product-brand-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}a{min-height:100px;padding:16px}}
+  @media(prefers-reduced-motion:reduce){a{transition:none}}
+</style>
