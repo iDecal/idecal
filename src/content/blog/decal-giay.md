@@ -1,12 +1,12 @@
 ---
-title: "Decal giấy: chọn tem nhãn theo bao bì và môi trường dùng"
+title: "Decal giấy là gì? Đặc điểm và ứng dụng làm tem nhãn"
 description: "Decal giấy phù hợp với nhiều nhu cầu tem nhãn trên bao bì dùng trong nhà."
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"
 image: "/images/uploads/tem-nhan-logo-in-be.webp"
-seoTitle: "Decal giấy: chọn tem nhãn theo bao bì và môi trường dùng"
+seoTitle: "Decal giấy là gì? Đặc điểm và ứng dụng làm tem nhãn"
 focusKeyword: "Decal giấy"
 contentTopics: ["printing"]
 seoDescription: "Decal giấy phù hợp với nhiều nhu cầu tem nhãn trên bao bì dùng trong nhà."

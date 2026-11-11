@@ -1,5 +1,5 @@
 ---
-title: "Decal Giả Gạch Mosaic – Tưởng cũ nhưng lại mới"
+title: "Decal giả gạch Mosaic là gì? Đặc điểm và ứng dụng trang trí"
 description: "Gạch bông – còn có tên khác là gạch hoa văn mỹ thuật. Khác với một số loại gạch trơn như: porcelain, ceramic, granit… Trên thế giới còn có rất nhiều loại gạch mỹ…"
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,6 +10,7 @@ image: "/images/blog-wordpress/f671bba1b65d1c394f01.png"
 wordpressId: 1205
 originalUrl: "https://idecal.vn/decal-gia-gach-mosaic-tuong-cu-nhung-lai-moi/"
 xmlPreserved: true
+seoTitle: "Decal giả gạch Mosaic là gì? Đặc điểm và ứng dụng trang trí"
 ---
 
 Gạch bông – còn có tên khác là gạch hoa văn mỹ thuật. Khác với một số loại gạch trơn như: porcelain, ceramic, granit… Trên thế giới còn có rất nhiều loại gạch mỹ thuật khác, với nhiều sắc thái màu và họa tiết, đủ làm hài lòng những cá thể khó tính nhất. Trong số những loại gạch mỹ thuật ứng dụng, Decal giả Gạch Mosaic lại nổi lên bần bật bởi sự độc đáo, ấn tượng, bởi những viên màu sắc phối hợp tạo thành mảng tranh đầy tinh tế.

@@ -1,5 +1,5 @@
 ---
-title: "Tìm hiều về các thông số kỹ thuật của Phim chống nắng"
+title: "Phim chống nắng là gì? Các thông số cần biết khi chọn"
 description: "Phim chống nắng là gì? Decal chống nắng là một loại Decal được thiết kế đặc biệt để ngăn chặn tác động của tia UV và ánh sáng mặt trời trực tiếp. Thường được sử dụng…"
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,6 +10,7 @@ image: "/images/idecal-logo.png"
 wordpressId: 17471
 originalUrl: "https://idecal.vn/tim-hieu-ve-cac-thong-so-ky-thuat-cua-phim-chong-nang/"
 xmlPreserved: true
+seoTitle: "Phim chống nắng là gì? Các thông số cần biết khi chọn"
 ---
 
 ## Phim chống nắng là gì?

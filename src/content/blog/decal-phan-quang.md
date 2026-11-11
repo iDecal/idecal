@@ -1,12 +1,12 @@
 ---
-title: "Decal phản quang: chọn cho chữ và biển chỉ dẫn"
+title: "Decal phản quang là gì? Đặc điểm và ứng dụng làm biển chỉ dẫn"
 description: "Decal phản quang tạo hiệu ứng khi được nguồn sáng chiếu tới trong điều kiện phù hợp."
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"
 image: "/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg"
-seoTitle: "Decal phản quang: chọn cho chữ và biển chỉ dẫn"
+seoTitle: "Decal phản quang là gì? Đặc điểm và ứng dụng làm biển chỉ dẫn"
 focusKeyword: "Decal phản quang"
 contentTopics: ["printing"]
 seoDescription: "Decal phản quang tạo hiệu ứng khi được nguồn sáng chiếu tới trong điều kiện phù hợp."

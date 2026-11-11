@@ -1,12 +1,12 @@
 ---
-title: "In Decal trong: kiểm tra độ nổi của hình trên kính"
+title: "Decal trong là gì? Đặc điểm và ứng dụng dán kính"
 description: "In Decal trong phù hợp với bố cục muốn giữ khoảng thoáng, nhưng màu sắc còn chịu ảnh hưởng của nền phía sau."
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"
 image: "/images/print-materials/decal-trong.jpg"
-seoTitle: "In Decal trong: kiểm tra độ nổi của hình trên kính"
+seoTitle: "Decal trong là gì? Đặc điểm và ứng dụng dán kính"
 focusKeyword: "In Decal trong"
 contentTopics: ["printing"]
 seoDescription: "In Decal trong phù hợp với bố cục muốn giữ khoảng thoáng, nhưng màu sắc còn chịu ảnh hưởng của nền phía sau."

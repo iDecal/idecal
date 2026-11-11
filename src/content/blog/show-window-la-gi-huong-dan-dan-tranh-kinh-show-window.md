@@ -1,5 +1,5 @@
 ---
-title: "Show window là gì? Hướng dẫn dán tranh kính Show window"
+title: "Decal trang trí kính Show window: ứng dụng cho cửa hàng"
 description: "Tạm dịch là “cửa sổ hiển thị”. Là một sự sắp xếp hàng hóa tại “mặt tiền” của cửa hàng nhằm lôi kéo khách qua đường. Khi đến các shop quần áo lớn, bạn sẽ thấy mặt…"
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
@@ -11,6 +11,7 @@ wordpressId: 2115
 originalUrl: "https://idecal.vn/show-window-la-gi-huong-dan-dan-tranh-kinh-show-window/"
 focusKeyword: "show window,show window là gì"
 xmlPreserved: true
+seoTitle: "Decal trang trí kính Show window: ứng dụng cho cửa hàng"
 ---
 
 Tạm dịch là “cửa sổ hiển thị”. Là một sự sắp xếp hàng hóa tại “mặt tiền” của cửa hàng nhằm lôi kéo khách qua đường. Khi đến các shop quần áo lớn, bạn sẽ thấy mặt trước của shop thường được lắp bằng kính thay vì xây tường, phía sau những lớp kính đó người ta bày những con ma-nơ-canh được diện quần áo sao cho thật đẹp. Đó chính là Window Display.

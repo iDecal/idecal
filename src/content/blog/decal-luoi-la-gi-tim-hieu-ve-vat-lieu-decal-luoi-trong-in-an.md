@@ -1,5 +1,5 @@
 ---
-title: "Decal lưới là gì? Tìm hiểu về vât liệu Decal lưới trong in ấn"
+title: "Decal lưới là gì? Đặc điểm và ứng dụng trong in ấn"
 description: "Decal lưới dán kính là loại decal chuyên dụng với bề mặt dạng lưới, cho phép ánh sáng xuyên qua nhưng vẫn đảm bảo che chắn tầm nhìn từ bên ngoài. Lựa chọn lý tưởng…"
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,6 +10,7 @@ image: "/images/blog-wordpress/a71351a0cc363f0c6c7d.jpg"
 wordpressId: 30356
 originalUrl: "https://idecal.vn/decal-luoi-la-gi-tim-hieu-ve-vat-lieu-decal-luoi-trong-in-an/"
 xmlPreserved: true
+seoTitle: "Decal lưới là gì? Đặc điểm và ứng dụng trong in ấn"
 ---
 
 Decal lưới dán kính là loại decal chuyên dụng với bề mặt dạng lưới, cho phép ánh sáng xuyên qua nhưng vẫn đảm bảo che chắn tầm nhìn từ bên ngoài. Lựa chọn lý tưởng cho cửa kính văn phòng, showroom, cửa hàng cần quảng cáo mà vẫn đảm bảo sự riêng tư.

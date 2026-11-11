@@ -1,12 +1,12 @@
 ---
-title: "In Decal lưới mặt tiền: chọn file và chia khổ"
+title: "Decal lưới dán kính mặt tiền: đặc điểm và cách chọn mẫu in"
 description: "In Decal lưới mặt tiền cần xét khoảng nhìn, kích thước ô kính và cách nối hình."
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"
 image: "/images/cong-trinh/thi-cong-dan-decal-luoi-mat-tien-toyota-tan-binh.jpg"
-seoTitle: "In Decal lưới mặt tiền: chọn file và chia khổ"
+seoTitle: "Decal lưới dán kính mặt tiền: đặc điểm và cách chọn mẫu in"
 focusKeyword: "In Decal lưới mặt tiền"
 contentTopics: ["printing"]
 seoDescription: "In Decal lưới mặt tiền cần xét khoảng nhìn, kích thước ô kính và cách nối hình."

@@ -1,12 +1,12 @@
 ---
-title: "Decal sữa PVC trắng: chọn nền in và lớp hoàn thiện"
+title: "Decal sữa PVC trắng là gì? Đặc điểm và ứng dụng in ấn"
 description: "Decal sữa PVC trắng có nền trắng để thể hiện hình ảnh và nội dung in."
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"
 image: "/images/print-materials/decal-trang.jpg"
-seoTitle: "Decal sữa PVC trắng: chọn nền in và lớp hoàn thiện"
+seoTitle: "Decal sữa PVC trắng là gì? Đặc điểm và ứng dụng in ấn"
 focusKeyword: "Decal sữa PVC trắng"
 contentTopics: ["printing"]
 seoDescription: "Decal sữa PVC trắng có nền trắng để thể hiện hình ảnh và nội dung in."

@@ -99,6 +99,8 @@ def link_target(value):
   return value if parts.netloc else 'https://idecal.vn'+value
  return value if parts.netloc else 'https://idecal.vn/'+value.lstrip('/')
 
+title_changes_path=Path('docs/material-blog-title-changes.json')
+title_changes=json.loads(title_changes_path.read_text()) if title_changes_path.exists() else {}
 records=[];missing_by_post=[]
 prior_import={}
 if Path('docs/wordpress-blog-import.json').exists():
@@ -156,6 +158,8 @@ for item in posts:
  front={'title':title,'description':description or title,'category':cat_name,'categorySlug':cat_slug,'categories':original_categories,'pubDate':date,'author':'iDecal','image':image,'wordpressId':int(field(item,'w:post_id')),'originalUrl':field(item,'link')}
  for old_key,new_key in [('rank_math_title','seoTitle'),('rank_math_description','seoDescription'),('rank_math_focus_keyword','focusKeyword')]:
   if meta(item,old_key):front[new_key]=html.unescape(meta(item,old_key))
+ # Keep the owner's explicitly approved material titles when importing the XML again.
+ if slug in title_changes:front['title']=front['seoTitle']=title_changes[slug]['title']
  dest=Path('src/content/blog')/(slug+'.md');existed=dest.exists() and 'wordpressId:' not in dest.read_text()
  dest.write_text('---\n'+'\n'.join(f'{key}: {json.dumps(value,ensure_ascii=False)}' for key,value in front.items())+'\n---\n\n'+body+'\n')
  records.append({'slug':slug,'id':front['wordpressId'],'title':title,'category':cat_slug,'originalCategories':original_categories,'date':date,'replaced':existed,'images':len(soup.find_all('img')),'originalUrl':field(item,'link')})

@@ -1,12 +1,12 @@
 ---
-title: "PP quảng cáo: phân biệt bản in và kết cấu trưng bày"
+title: "PP quảng cáo là gì? Đặc điểm và ứng dụng poster, standee"
 description: "PP quảng cáo có thể dùng cho poster, standee hoặc bản in kết hợp nền."
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
 pubDate: "2026-11-04"
 author: "iDecal"
 image: "/images/print-materials/pp-standee.webp"
-seoTitle: "PP quảng cáo: phân biệt bản in và kết cấu trưng bày"
+seoTitle: "PP quảng cáo là gì? Đặc điểm và ứng dụng poster, standee"
 focusKeyword: "PP quảng cáo"
 contentTopics: ["printing"]
 seoDescription: "PP quảng cáo có thể dùng cho poster, standee hoặc bản in kết hợp nền."

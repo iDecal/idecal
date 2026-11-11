@@ -1,5 +1,5 @@
 ---
-title: "Decal Avery – Giải pháp vật liệu cao cấp cho ngành in ấn quảng cáo"
+title: "Decal Avery là gì? Đặc điểm và ứng dụng trong quảng cáo"
 description: "Tìm hiểu về decal Avery – thương hiệu vật liệu in ấn hàng đầu thế giới với đầy đủ CO, CQ. Ứng dụng đa dạng trong quảng cáo, dán kính, wrap xe. Mua hàng chính hãng tại…"
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
@@ -12,6 +12,7 @@ originalUrl: "https://idecal.vn/decal-avery-vat-lieu-cao-cap-cho-nganh-in-an-qua
 seoDescription: "Tìm hiểu về decal Avery – thương hiệu vật liệu in ấn hàng đầu thế giới với đầy đủ CO, CQ. Ứng dụng đa dạng trong quảng cáo, dán kính, wrap xe. Mua hàng chính hãng tại iDecal."
 focusKeyword: "decal avery"
 xmlPreserved: true
+seoTitle: "Decal Avery là gì? Đặc điểm và ứng dụng trong quảng cáo"
 ---
 
 Tìm hiểu về decal Avery – thương hiệu vật liệu in ấn hàng đầu thế giới với đầy đủ CO, CQ. Ứng dụng đa dạng trong quảng cáo, dán kính, wrap xe. Mua hàng chính hãng tại iDecal.

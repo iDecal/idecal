@@ -1,5 +1,5 @@
 ---
-title: "Dán decal quảng cáo xe tải - thương hiệu UBC tivi"
+title: "Decal Avery dán xe tải: ứng dụng thực tế tại UBC Tivi"
 description: "Nâng tầm thương hiệu với quảng cáo di động: Decal dán xe tải là giải pháp quảng bá thông minh, giúp UBC Tivi tiếp cận khách hàng tiềm năng mọi lúc mọi nơi, đồng thời…"
 category: "Vật liệu Decal"
 categorySlug: "so-sanh-vat-lieu"
@@ -10,6 +10,7 @@ image: "/images/blog-wordpress/d0f42badc0edb8fcfd3e.jpg"
 wordpressId: 27362
 originalUrl: "https://idecal.vn/dan-decal-quang-cao-xe-tai-cho-ubc-tivi/"
 xmlPreserved: true
+seoTitle: "Decal Avery dán xe tải: ứng dụng thực tế tại UBC Tivi"
 ---
 
 Tuần vừa qua, iDecal hân hạnh hoàn thành dự án dán decal quảng cáo toàn diện cho đội xe tải của UBC Tivi, đưa hình ảnh thương hiệu lan tỏa mạnh mẽ trên khắp các tuyến phố.
