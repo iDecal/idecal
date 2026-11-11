@@ -58,3 +58,5 @@
 - Link không gạch dưới trên toàn site; link trong nội dung dùng xanh nổi #006edc, hover tím #6d28d9 và chữ nhấn vừa theo content-links.css. Trên nền tối dùng xanh sáng; giữ giao diện nút/CTA và focus bàn phím. Không đổi nội dung hoặc href chỉ để chỉnh kiểu link.
 
 - Blog chi tiết: header tiêu đề không có nền màu; giữ H1 gradient. Mục lục nằm trong bài sau ảnh cover và đoạn mở đầu, trước đề mục đầu tiên, đóng mặc định trên mọi màn hình; không đặt lại trên đầu mobile/sidebar. Giữ nguyên đoạn mở đầu và phần nội dung còn lại; nếu bài mở thẳng bằng đề mục thì dùng description sẵn có làm giới thiệu trước mục lục.
+
+- Trong menu mobile: nút khu vực dùng gradient xanh–tím/chữ trắng như desktop. Bên dưới có số 0866.077.040 kèm icon Zalo dẫn https://zalo.me/0866077040 và nút Gọi ngay tel:0866077040; giữ bộ chọn khu vực bên trong menu và các vùng cuộn trên màn hình thấp.
