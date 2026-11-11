@@ -8,7 +8,7 @@ import about from '../data/about-page.json';
     <div class="container">
 
       <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <div><p class="!mb-4 text-xs font-medium uppercase tracking-[0.15em] text-primary">{about.subtitle}</p><h1 class="brand-heading text-3xl font-semibold md:text-5xl">{about.title}</h1>{about.intro.map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}<div class="mt-8 flex flex-wrap items-center gap-5"><a href="/lien-he-idecal" class="btn-primary-solid">Liên hệ</a><a href="#doi-ngu" class="btn-idecal-bold">Gặp đội ngũ iDecal →</a></div></div>
+        <div><p data-heading-label class="!mb-4 text-xs font-medium uppercase tracking-[0.15em] text-primary">{about.subtitle}</p><h1 class="brand-heading text-3xl font-semibold md:text-5xl">{about.title}</h1>{about.intro.map(paragraph => <p class="leading-relaxed">{paragraph}</p>)}<div class="mt-8 flex flex-wrap items-center gap-5"><a href="/lien-he-idecal" class="btn-primary-solid">Liên hệ</a><a href="#doi-ngu" class="btn-idecal-bold">Gặp đội ngũ iDecal →</a></div></div>
         <div class="relative"><img src="/images/Banner/dich-vu-thiet-ke-decal.webp" alt="Thiết kế decal theo yêu cầu tại iDecal" width="800" height="600" class="aspect-[4/3] w-full rounded-3xl object-cover" /><div class="absolute -bottom-5 right-5 rounded-2xl bg-brand-gradient px-7 py-5 text-white shadow-brand"><span class="block text-3xl font-semibold">10+</span><span class="text-xs">năm kinh nghiệm</span></div></div>
       </div>
     </div>
@@ -19,11 +19,11 @@ import about from '../data/about-page.json';
   <section class="bg-surface py-14 md:py-20">
     <div class="container grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
       <div><img src="/images/Banner/banner-gioi-thieu-idecal.jpg" alt="Giải pháp và dịch vụ decal iDecal" loading="lazy" width="800" height="640" class="aspect-[5/4] w-full rounded-3xl object-cover" /></div>
-      <div><p class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">{about.qualityKicker}</p><h2 class="brand-heading">{about.qualityTitle}</h2><p>{about.qualityIntro}</p><ul class="my-7 space-y-4">{about.qualityPoints.map(point => <li class="flex gap-1.5 text-sm leading-relaxed text-secondary"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs text-primary" aria-hidden="true">✓</span><span>{point}</span></li>)}</ul><a href="/#dich-vu" class="btn-primary-solid">Tất cả dịch vụ</a></div>
+      <div><p data-heading-label class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">{about.qualityKicker}</p><h2 class="brand-heading">{about.qualityTitle}</h2><p>{about.qualityIntro}</p><ul class="my-7 space-y-4">{about.qualityPoints.map(point => <li class="flex gap-1.5 text-sm leading-relaxed text-secondary"><span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs text-primary" aria-hidden="true">✓</span><span>{point}</span></li>)}</ul><a href="/#dich-vu" class="btn-primary-solid">Tất cả dịch vụ</a></div>
     </div>
   </section>
   <section id="doi-ngu" class="container scroll-mt-24 py-14 md:py-20">
-    <div class="mx-auto mb-10 max-w-2xl text-center"><p class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">Con người iDecal</p><h2 class="brand-heading">Đội ngũ nhân sự tiêu biểu</h2></div>
+    <div class="mx-auto mb-10 max-w-2xl text-center"><p data-heading-label class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">Con người iDecal</p><h2 class="brand-heading">Đội ngũ nhân sự tiêu biểu</h2></div>
     <div class="grid gap-8 md:grid-cols-3">{about.people.map(person => <article class="overflow-hidden rounded-2xl border border-border bg-white"><img src={person.image} alt={person.name} width="600" height="600" loading="lazy" class="aspect-square w-full object-cover" /><div class="p-6"><h3 class="!mb-2 text-xl font-semibold">{person.name}</h3><p class="!mb-0 text-sm">{person.role}</p></div></article>)}</div>
   </section>
   <section class="bg-surface py-14 md:py-20">

@@ -17,7 +17,7 @@ const totalGroups = productLandings.length + addedCategories.length;
     <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{totalGroups}</strong> nhóm sản phẩm</span></Fragment>
   </PageBanner>
   <section id="danh-muc" class="container scroll-mt-24 py-14 md:py-20">
-    <p class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
+    <p data-heading-label class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {productLandings.map(category => <article class="category-card group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
         <a href={`/${category.slug}`} class="flex h-full flex-col">

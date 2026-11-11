@@ -84,8 +84,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
     </div>
     </div>
   </section>
-  {collectionModels.length > 0 && <section class="product-related" aria-labelledby="pov-models-title"><div class="container"><div class="product-extras-heading"><div><p>Catalogue POV 2025</p><h2 id="pov-models-title" class="brand-heading">23 mẫu film trang trí kính</h2></div></div><div class="product-related-grid">{collectionModels.map(model => <ProductCard product={model} />)}</div></div></section>}
-  {collectionModels.length === 0 && related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
+  {collectionModels.length > 0 && <section class="product-related" aria-labelledby="pov-models-title"><div class="container"><div class="product-extras-heading"><div><p data-heading-label>Catalogue POV 2025</p><h2 id="pov-models-title" class="brand-heading">23 mẫu film trang trí kính</h2></div></div><div class="product-related-grid">{collectionModels.map(model => <ProductCard product={model} />)}</div></div></section>}
+  {collectionModels.length === 0 && related.length > 0 && <section class="product-related" aria-labelledby="product-related-title"><div class="container"><div class="product-extras-heading"><div><p data-heading-label>Tham khảo thêm mẫu</p><h2 id="product-related-title" class="brand-heading">Sản phẩm cùng danh mục</h2></div><a href={relatedCategoryUrl}>Xem danh mục <span aria-hidden="true">→</span></a></div><div class="product-related-grid">{related.map(other => <ProductCard product={other} />)}</div></div></section>}
 <RelatedGuides context={product.category+' '+product.slug} />
 </Layout>
 <script>

@@ -1,0 +1,32 @@
+/* Quiet homepage-style labels are presentational, never fake clickable buttons. */
+@layer heading-label-policy {
+  body :is(.page-content,.homepage-original) :is([class*='eyebrow'],[class*='kicker'],.consult-label,.case-category,[data-heading-label]) {
+    display:inline-flex!important;
+    align-items:center!important;
+    width:fit-content!important;
+    max-width:100%!important;
+    padding:8px 14px!important;
+    margin:0 0 20px!important;
+    border:1px solid #e0eafa!important;
+    border-radius:999px!important;
+    background:linear-gradient(110deg,#eef8ff,#f5efff)!important;
+    color:#1b4f7a!important;
+    font-family:'Inter Variable',sans-serif!important;
+    font-size:14px!important;
+    font-weight:500!important;
+    line-height:1.6!important;
+    text-transform:none!important;
+    letter-spacing:normal!important;
+    box-shadow:none!important;
+  }
+  body :is(.page-content,.homepage-original) :is([class*='eyebrow'],[class*='kicker'],[data-heading-label])::before {display:none!important;}
+  body :is(.office-hero-points,.wave-hero-points,.interior-film-points) .banner-benefit-list {
+    display:flex!important;flex-wrap:wrap!important;gap:14px 24px!important;
+  }
+  body :is(.banner-benefit-list,.office-hero-points,.lp-hero-points,.wave-hero-points,.interior-film-points) li {
+    display:inline-flex!important;align-items:center!important;gap:8px!important;
+    padding:0!important;border:0!important;border-radius:0!important;
+    background:none!important;box-shadow:none!important;
+  }
+  body :is(.banner-benefit-list,.office-hero-points,.lp-hero-points,.wave-hero-points,.interior-film-points) li:has(svg)::before {display:none!important;}
+}

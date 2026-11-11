@@ -1,4 +1,5 @@
 ---
+import BannerBenefits from './BannerBenefits.astro';
 import source from '../data/wave-glass-original.json';
 import InteriorFilmImage from './InteriorFilmImage.astro';
 import '../styles/wave-glass.css';
@@ -15,7 +16,7 @@ import '../styles/wave-glass.css';
       </div>
       <div class="wave-hero-points">
         <div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} />
-        <ul>{source.hero.points.map(point=><li>{point}</li>)}</ul>
+        <BannerBenefits benefits={source.hero.points.map(title=>({title}))} />
       </div>
     </div>
     <figure class="wave-hero-photo"><InteriorFilmImage image={source.hero.image} eager /></figure>

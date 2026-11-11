@@ -1,4 +1,5 @@
 ---
+import BannerBenefits from './BannerBenefits.astro';
 import source from '../data/interior-film-original.json';
 import InteriorFilmImage from './InteriorFilmImage.astro';
 import '../styles/interior-film.css';
@@ -10,7 +11,7 @@ import '../styles/interior-film.css';
       <h1>{source.title}</h1>
       <div class="interior-film-lead" set:html={source.hero.paragraphs[0].html} />
       <div class="interior-film-actions">{source.hero.contact.map(link=><a href={link.href} class="btn-primary-solid">{link.label}</a>)}<a href="#mau-film-noi-that" class="btn-idecal-bold">Khám phá mẫu film ↓</a></div>
-      <div class="interior-film-points"><div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} /><ul>{source.hero.points.map(point=><li>{point}</li>)}</ul></div>
+      <div class="interior-film-points"><div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} /><BannerBenefits benefits={source.hero.points.map(title=>({title}))} /></div>
     </div>
     <figure class="interior-film-hero-photo"><InteriorFilmImage image={source.hero.images[0]} eager /></figure>
   </section>

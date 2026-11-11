@@ -3,14 +3,13 @@
 :root {
   --heading-ink:#1b4f7a;
   --footer-gradient:linear-gradient(115deg,#020c2d 0%,#05112f 58%,#0b1231 100%);
-  --heading-h2-gradient:var(--footer-gradient);
   --heading-gradient:linear-gradient(100deg,#0f8fe0 0%,#4f46e5 55%,#7d12f7 100%);
   --heading-h1:clamp(34px,3.5vw,38px);
   --heading-h2:clamp(24px,2.5vw,34px);
-  --heading-h3:clamp(18px,2.5vw,24px);
-  --heading-h4:16px;
-  --heading-h5:14px;
-  --heading-h6:12px;
+  --heading-h3:17px;
+  --heading-h4:17px;
+  --heading-h5:17px;
+  --heading-h6:17px;
 }
 /* Important layer also wins over legacy page rules and pasted inline styles. */
 @layer heading-policy {
@@ -36,10 +35,10 @@
   body h2 {
     font-size:var(--heading-h2)!important;
     text-transform:none!important;
-    background-image:var(--heading-surface-gradient,var(--heading-h2-gradient))!important;
+    background-image:none!important;
     background-clip:text!important;
     -webkit-background-clip:text!important;
-    color:var(--heading-surface-ink,transparent)!important;
+    color:var(--heading-surface-ink,var(--heading-ink))!important;
     -webkit-text-fill-color:currentColor!important;
   }
   body h3 {font-size:var(--heading-h3)!important;}
@@ -49,9 +48,8 @@
   /* Compact titles keep card, sidebar and article hierarchy below section titles. */
   body .blog-featured h2 {font-size:clamp(21px,2.3vw,28px)!important;}
   body .blog-section-title h2 {font-size:22px!important;}
-  body .blog-card-content :is(h2,h3) {font-size:17px!important;}
+  body .blog-card-content h2 {font-size:17px!important;}
   body .blog-article-body h2 {font-size:23px!important;}
-  body .blog-article-body h3 {font-size:19px!important;}
   body .blog-sidebar-categories h2 {font-size:13px!important;}
   body .blog-contact h2 {font-size:16px!important;}
   body .product-card-title {font-size:18px!important;}
@@ -59,13 +57,6 @@
   @media(max-width:639px) {
     body .blog-section-title h2 {font-size:19px!important;}
     body .blog-article-body h2 {font-size:21px!important;}
-    body .blog-article-body h3 {font-size:18px!important;}
-  }
-  @media(min-width:1024px) {
-    body h3 {font-size:20px!important;}
-    body .blog-article-body h3 {font-size:17px!important;}
-    body .blog-card-content h3 {font-size:15px!important;}
-    body h3.product-card-title {font-size:16px!important;}
   }
   body :is(h1,h2,h3,h4,h5,h6) :is(a,span,strong,b,em,i,mark,small) {
     color:inherit!important;
@@ -74,6 +65,10 @@
     font-family:inherit!important;
     text-transform:inherit!important;
     background:none!important;
+  }
+  body :is(h3,h4,h5,h6), body :is(h3,h4,h5,h6) * {
+    font-family:'Inter Variable',sans-serif!important;
+    font-size:17px!important;
   }
   /* Surface tokens inherit into headings; a nested light card resets them. */
   body :is(.brand-dark,[data-theme='dark'],[data-heading-theme='dark'],.hero-gradient,.home-consult,.office-why,.office-final-cta,.home-service-cover,.product-landing-image-badge,#site-footer) {

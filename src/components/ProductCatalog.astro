@@ -7,7 +7,7 @@ const { items, category, heading } = Astro.props;
 <section id="mau-san-pham" class="scroll-mt-24 py-14 md:py-20" data-catalog>
   <div class="container min-w-0">
     <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
-      <div><p class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">Trưng bày mẫu</p><h2 class="brand-heading !mb-0">{heading ?? (category ? `Mẫu ${category.name.toLocaleLowerCase('vi-VN')}` : 'Khám phá catalogue sản phẩm')}</h2></div>
+      <div><p data-heading-label class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">Trưng bày mẫu</p><h2 class="brand-heading !mb-0">{heading ?? (category ? `Mẫu ${category.name.toLocaleLowerCase('vi-VN')}` : 'Khám phá catalogue sản phẩm')}</h2></div>
       <a href="/san-pham" class="text-sm font-medium text-primary hover:underline">Xem toàn bộ sản phẩm →</a>
     </div>
     <p class="mb-6 text-xs text-text-muted">Giá trong catalogue là giá tham khảo. Liên hệ để xác nhận đơn vị tính, quy cách, vật liệu và phần thi công.</p>
