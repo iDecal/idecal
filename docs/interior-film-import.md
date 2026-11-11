@@ -38,3 +38,11 @@ Theo yêu cầu xuất bản tiếp theo, liên kết Film nội thất ở menu
 thẻ dịch vụ trang chủ, gợi ý 404 và liên kết tư vấn thi công trỏ thẳng tới
 /dich-vu-film-dan-noi-that/. Các liên kết được ghi rõ là catalogue/nhóm sản phẩm
 vẫn dùng trang vật liệu /film-dan-noi-that/ để tiếp tục chọn sản phẩm.
+
+Bổ sung theo yêu cầu tiếp theo: Thang máy là ứng dụng thứ năm, đặt đầu tiên và
+mở mặc định, có icon và màu nhấn xanh–tím. Dữ liệu bổ sung nằm trong
+interior-film-applications.ts, dùng nội dung film nội thất và ảnh thang máy đã
+có trong elevator-service.json; ảnh có chú thích tham khảo, không gán là công
+trình mới. Có liên kết đến /dan-decal-thang-may/. Giữ nguyên bốn ứng dụng và
+17 ảnh trong bản nhập; trang hiển thị tổng cộng 18 ảnh. Các tab vẫn hỗ trợ bàn
+phím và cả năm ứng dụng đều hiện khi tắt JavaScript.

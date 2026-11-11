@@ -16,8 +16,8 @@ with sync_playwright() as p:
         assert response.status==200
         assert page.locator('.interior-film-page h1').count()==1
         assert page.locator('.interior-film-pattern').count()==6
-        assert page.locator('.interior-film-applications article').count()==4
-        assert page.locator('.interior-film-page img').count()==17
+        assert page.locator('.interior-film-applications article').count()==5
+        assert page.locator('.interior-film-page img').count()==18
         assert page.locator('.interior-film-material-details[open]').count()==0
         first=page.locator('.interior-film-material-details').first
         first.locator('summary').click()
@@ -25,12 +25,21 @@ with sync_playwright() as p:
         first.locator('summary').click()
         expect(first.locator('li').first).not_to_be_visible()
         tabs=page.get_by_role('tab')
-        expect(tabs).to_have_count(4)
+        expect(tabs).to_have_count(5)
+        expect(tabs.first).to_have_text('Thang máy')
+        expect(tabs.first).to_have_attribute('aria-selected','true')
         expect(page.get_by_role('tabpanel')).to_have_count(1)
-        for i in range(4):
+        elevator=page.locator('#film-application-thang-may')
+        expect(elevator).to_be_visible()
+        elevator.scroll_into_view_if_needed()
+        expect(elevator.locator('img')).to_be_visible()
+        expect(elevator.locator('img')).to_have_js_property('complete',True)
+        assert elevator.locator('img').evaluate('image=>image.naturalWidth>0')
+        expect(elevator.get_by_role('link')).to_have_attribute('href','/dan-decal-thang-may/')
+        for i in range(5):
             tabs.nth(i).click()
             expect(tabs.nth(i)).to_have_attribute('aria-selected','true')
-            expect(page.locator('#film-application-'+str(i))).to_be_visible()
+            expect(page.locator('#'+tabs.nth(i).get_attribute('aria-controls'))).to_be_visible()
             expect(page.get_by_role('tabpanel')).to_have_count(1)
         tabs.last.press('ArrowRight')
         expect(tabs.first).to_be_focused()
@@ -64,7 +73,7 @@ with sync_playwright() as p:
     nojs.route('https://idecal.vn/**',lambda route:route.abort())
     plain=nojs.new_page()
     plain.goto(BASE+'/dich-vu-film-dan-noi-that/',wait_until='networkidle')
-    assert plain.locator('[data-film-application]:visible').count()==4
+    assert plain.locator('[data-film-application]:visible').count()==5
     expect(plain.locator('[data-film-tabs]')).not_to_be_visible()
     plain.locator('.interior-film-material-details summary').first.click()
     expect(plain.locator('.interior-film-material-details li').first).to_be_visible()
