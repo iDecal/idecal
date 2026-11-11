@@ -1,4 +1,5 @@
 ---
+import {getServicePath} from '../data/service-routes';
 import pricing from '../data/service-pricing.json';
 ---
 <section id="bang-gia-dich-vu" class="service-pricing-section scroll-mt-28">
@@ -6,7 +7,7 @@ import pricing from '../data/service-pricing.json';
     <div class="service-pricing-heading"><span class="service-pricing-eyebrow">Bảng giá tham khảo · 2026</span><h2 class="brand-heading">{pricing.title}</h2><p>{pricing.intro}</p></div>
     <div class="service-pricing-groups">{pricing.groups.map((group,index)=><details class="service-pricing-group" open={index===0} id={`gia-${group.id}`}>
       <summary><span class="service-price-number" aria-hidden="true">0{index+1}</span><span class="service-price-title"><h3>{group.title}</h3><span>{group.scope}</span></span><svg class="service-price-chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 9 6 6 6-6" /></svg></summary>
-      <div class="service-price-content"><p class="service-price-description">{group.description}</p><div class:list={['service-price-scroll',{'service-price-wide':group.columns.length===3}]} tabindex="0" role="region" aria-label={`Bảng giá ${group.title}`}><table><caption class="sr-only">Bảng giá tham khảo {group.title}</caption><thead><tr>{group.columns.map(column=><th scope="col">{column}</th>)}</tr></thead><tbody>{group.rows.map(row=><tr>{row.map((value,cell)=>cell===0?<th scope="row">{value}</th>:<td class:list={{'price-not-updated':value==='Chưa cập nhật'}}>{value}</td>)}</tr>)}</tbody></table></div><ul class="service-price-notes">{group.notes.map(note=><li>{note}</li>)}</ul><a href={`/dich-vu/${group.service}`} class="service-price-related">{group.linkText}<span aria-hidden="true">→</span></a></div>
+      <div class="service-price-content"><p class="service-price-description">{group.description}</p><div class:list={['service-price-scroll',{'service-price-wide':group.columns.length===3}]} tabindex="0" role="region" aria-label={`Bảng giá ${group.title}`}><table><caption class="sr-only">Bảng giá tham khảo {group.title}</caption><thead><tr>{group.columns.map(column=><th scope="col">{column}</th>)}</tr></thead><tbody>{group.rows.map(row=><tr>{row.map((value,cell)=>cell===0?<th scope="row">{value}</th>:<td class:list={{'price-not-updated':value==='Chưa cập nhật'}}>{value}</td>)}</tr>)}</tbody></table></div><ul class="service-price-notes">{group.notes.map(note=><li>{note}</li>)}</ul><a href={getServicePath(group.service)} class="service-price-related">{group.linkText}<span aria-hidden="true">→</span></a></div>
     </details>)}</div>
     <details class="service-price-factors"><summary>Những yếu tố làm thay đổi giá thi công<span aria-hidden="true">+</span></summary><ul>{pricing.factors.map(factor=><li><strong>{factor.title}</strong><p>{factor.text}</p></li>)}</ul></details>
   </div>

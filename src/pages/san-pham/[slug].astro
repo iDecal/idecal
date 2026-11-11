@@ -1,4 +1,5 @@
 ---
+import {getServicePath,getMaterialPath} from '../../data/service-routes';
 import '../../styles/catalogue.css';
 import GlassMeasurementGuide from '../../components/GlassMeasurementGuide.astro';
 import ProductEditor from '../../components/ProductEditor.astro';
@@ -21,7 +22,7 @@ const collectionModels = (product.variantSlugs ?? []).map(slug => products.find(
 const related = products.filter(other => other.slug !== product.slug && (
   product.catalogue ? other.catalogue?.collection === product.catalogue.collection && Boolean(product.catalogue.collection) : isPVC ? isPVCProduct(other.slug) : !isPVCProduct(other.slug) && other.category === product.category
 )).slice(0,4);
-const relatedCategoryUrl = `/${isPVC ? 'decal-pvc' : /ppf|safety/.test(product.slug) || product.category === 'phim-bao-ve' ? 'film-bao-ve-noi-that' : category.slug}`;
+const relatedCategoryUrl = getMaterialPath(isPVC ? 'decal-pvc' : /ppf|safety/.test(product.slug) || product.category === 'phim-bao-ve' ? 'film-bao-ve-noi-that' : category.slug);
 const galleryImages = isPVC ? [
   ...pvcFinishes.map(finish => ({ src: finishImages[finish.value as keyof typeof finishImages], label: `${product.name} – minh họa bề mặt ${finish.label.toLocaleLowerCase('vi-VN')}`, finish: finish.value })),
   ...product.images.filter(src => !src.startsWith('/images/pvc-colors/')).map((src,index) => ({ src, label: `${product.name} – ảnh ${index+1}`, finish: '' })),
@@ -78,7 +79,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'Product', name: pro
             <div class="product-information-content"><dl class="product-specs">{filmFields.map(field => <div><dt>{field.label}</dt><dd>{filmSpecs[field.key] != null && filmSpecs[field.key] !== '' ? `${filmSpecs[field.key]} ${field.unit}` : 'Chưa cập nhật'}</dd></div>)}</dl></div>
           </details>}
         </div>
-        <nav class="product-help-links" aria-label="Hỗ trợ chọn và đặt sản phẩm"><a href={`/dich-vu/${category.service}`} class="product-service-link">Xem dịch vụ thi công liên quan →</a></nav>
+        <nav class="product-help-links" aria-label="Hỗ trợ chọn và đặt sản phẩm"><a href={getServicePath(category.service)} class="product-service-link">Xem dịch vụ thi công liên quan →</a></nav>
         <ProductEditor product={product} />
       </div>
     </div>

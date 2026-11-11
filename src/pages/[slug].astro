@@ -2,6 +2,8 @@
 import '../styles/catalogue.css';
 import ProductBrands from '../components/ProductBrands.astro';
 import OfficeGlassLanding from '../components/OfficeGlassLanding.astro';
+import ThermalServiceLanding from '../components/ThermalServiceLanding.astro';
+import {thermalCanonical,thermalSeoTitle,thermalDescription,thermalCategory,thermalStructuredData} from '../data/thermal-service';
 import officeGlassCopy from '../data/office-glass-copy.json';
 import ProductLanding from '../components/ProductLanding.astro';
 import { productLandings } from '../data/site-offerings';
@@ -18,10 +20,11 @@ const landing = productLandings.find(item => item.slug === (Astro.params.slug ==
 const category = productCategories.find(item => item.slug === Astro.params.slug) ?? productCategories[0];
 const items = productsInCategory(category.slug);
 const isOffice = Astro.params.slug === 'decal-dan-kinh-van-phong';
+const isThermal = ['phim-cach-nhiet-nha-kinh','phim-cach-nhiet'].includes(Astro.params.slug??'');
 const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';
 ---
-<Layout title={isOffice ? officeGlassCopy.seoTitle : `${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={isOffice ? officeGlassCopy.description : landing?.description ?? category.description}>
-{isOffice ? <OfficeGlassLanding /> : landing ? <ProductLanding landing={landing} /> : <>
+<Layout title={isThermal ? thermalSeoTitle : isOffice ? officeGlassCopy.seoTitle : `${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={isThermal ? thermalDescription : isOffice ? officeGlassCopy.description : landing?.description ?? category.description} canonicalURL={isThermal?thermalCanonical:undefined} image={isThermal?thermalCategory.image:undefined} structuredData={isThermal?thermalStructuredData:undefined}>
+{isThermal ? <ThermalServiceLanding /> : isOffice ? <OfficeGlassLanding /> : landing ? <ProductLanding landing={landing} /> : <>
   <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'}>
     <p slot="description">{category.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu trong catalogue</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>

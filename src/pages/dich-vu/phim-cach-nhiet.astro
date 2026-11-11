@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import LegacyServiceLanding from '../../components/LegacyServiceLanding.astro';
+import ThermalServiceLanding from '../../components/ThermalServiceLanding.astro';
+import {thermalCanonical,thermalSeoTitle,thermalDescription,thermalCategory,thermalStructuredData} from '../../data/thermal-service';
 ---
-<Layout title="Thi công phim cách nhiệt nhà kính | iDecal" description="Tìm hiểu phương án thi công phim cách nhiệt nhà kính, xem hình ảnh ứng dụng và trao đổi nhu cầu với iDecal."><LegacyServiceLanding slug="phim-cach-nhiet" /></Layout>
+<Layout title={thermalSeoTitle} description={thermalDescription} canonicalURL={thermalCanonical} image={thermalCategory.image} structuredData={thermalStructuredData}><ThermalServiceLanding /></Layout>

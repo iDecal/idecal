@@ -34,8 +34,8 @@
 /danh-muc-san-pham/open-time-thong-bao/ /open-time-thong-bao/ 301
 /danh-muc-san-pham/phim-bao-ve /film-bao-ve-noi-that/ 301
 /danh-muc-san-pham/phim-bao-ve/ /film-bao-ve-noi-that/ 301
-/danh-muc-san-pham/phim-cach-nhiet /phim-cach-nhiet/ 301
-/danh-muc-san-pham/phim-cach-nhiet/ /phim-cach-nhiet/ 301
+/danh-muc-san-pham/phim-cach-nhiet /phim-cach-nhiet-nha-kinh/ 301
+/danh-muc-san-pham/phim-cach-nhiet/ /phim-cach-nhiet-nha-kinh/ 301
 /danh-muc-san-pham/phim-cach-nhiet-nha-kinh /phim-cach-nhiet-nha-kinh/ 301
 /danh-muc-san-pham/phim-cach-nhiet-nha-kinh/ /phim-cach-nhiet-nha-kinh/ 301
 # Legacy product URLs from the supplied catalogue
@@ -845,3 +845,8 @@
 # Imported original wave glass service page
 /dich-vu/decal-mo-3d-van-song /decal-dan-kinh-3d-van-song/ 301
 /dich-vu/decal-mo-3d-van-song/ /decal-dan-kinh-3d-van-song/ 301
+
+/phim-cach-nhiet /phim-cach-nhiet-nha-kinh/ 301
+/phim-cach-nhiet/ /phim-cach-nhiet-nha-kinh/ 301
+/dich-vu/phim-cach-nhiet /phim-cach-nhiet-nha-kinh/ 301
+/dich-vu/phim-cach-nhiet/ /phim-cach-nhiet-nha-kinh/ 301

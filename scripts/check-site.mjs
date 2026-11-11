@@ -82,7 +82,10 @@ for (const category of catalogueCategories) {
   assert.ok(await exists(categoryPage), `Missing product category: ${category.slug}`);
   const html = await readFile(categoryPage, 'utf8');
   const expected = catalogueProducts.filter(product => product.category === category.slug).length;
-  if (!['decal-mo-dan-kinh', 'decal-pvc', 'phim-bao-ve'].includes(category.slug)) assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Legacy category count mismatch: ${category.slug}`);
+  if (category.slug === 'phim-cach-nhiet') {
+    assert.ok(html.includes('thermal-service-page'), 'Thermal category must render the consolidated service');
+    for (const product of catalogueProducts.filter(product => product.category === category.slug)) assert.ok(html.includes(`data-product-id="${product.slug}"`), `Merged service must retain category product: ${product.slug}`);
+  } else if (!['decal-mo-dan-kinh', 'decal-pvc', 'phim-bao-ve'].includes(category.slug)) assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Legacy category count mismatch: ${category.slug}`);
 }
 // New navigation groups may overlap by application while preserving original product URLs.
 const landingSamples = [
@@ -109,10 +112,12 @@ for (const [slug, sample] of landingSamples) {
 // Flat material URLs must retain permanent redirects from both legacy URL variants.
 for (const slug of new Set([...catalogueCategories.map(category => category.slug), ...landingSamples.map(([slug]) => slug)])) {
   for (const suffix of ['', '/']) {
-    assert.ok(legacyRedirects.split('\n').includes(`/danh-muc-san-pham/${slug}${suffix} /${slug === 'phim-bao-ve' ? 'film-bao-ve-noi-that' : slug}/ 301`), `Missing material URL redirect: ${slug}${suffix}`);
+    const destination=slug==='phim-cach-nhiet'?'phim-cach-nhiet-nha-kinh':slug==='phim-bao-ve'?'film-bao-ve-noi-that':slug;
+    assert.ok(legacyRedirects.split('\n').includes(`/danh-muc-san-pham/${slug}${suffix} /${destination}/ 301`), `Missing material URL redirect: ${slug}${suffix}`);
   }
   const html = await readFile(path.join(root, slug, 'index.html'), 'utf8');
-  assert.ok(html.includes(`rel="canonical" href="https://idecal.vn/${slug}/"`), `Wrong material canonical: ${slug}`);
+  const canonicalSlug=slug==='phim-cach-nhiet'?'phim-cach-nhiet-nha-kinh':slug;
+  assert.ok(html.includes(`rel="canonical" href="https://idecal.vn/${canonicalSlug}/"`), `Wrong material canonical: ${slug}`);
 }
 assert.ok(!(await readFile(path.join(root, 'sitemap.xml'), 'utf8')).includes('/danh-muc-san-pham/'), 'Sitemap must use flat material URLs');
 const pvcPalette = JSON.parse(await readFile('src/data/pvc-colors.json', 'utf8'));
