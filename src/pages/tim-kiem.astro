@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteSearchForm from '../components/SiteSearchForm.astro';
+import RecoveryLinks from '../components/RecoveryLinks.astro';
+import '../styles/site-search.css';
+---
+<Layout title="Tìm kiếm sản phẩm, dịch vụ & bài viết | iDecal" description="Tìm sản phẩm, mã mẫu, dịch vụ và bài viết trên website iDecal." canonicalURL="https://idecal.vn/tim-kiem/" noindex>
+  <section class="container search-page" data-site-search>
+    <header class="search-page-heading"><p class="search-eyebrow">Nội dung iDecal</p><h1>Bạn đang tìm gì?</h1><p>Tra cứu sản phẩm, dịch vụ và bài viết trong cùng một nơi.</p></header>
+    <SiteSearchForm />
+    <div class="search-suggestions"><span>Gợi ý:</span><a href="/tim-kiem/?q=decal+mo">Decal mờ</a><a href="/tim-kiem/?q=film+noi+that">Film nội thất</a><a href="/tim-kiem/?q=thang+may">Dán decal thang máy</a></div>
+    <div class="search-results-area" data-search-output>
+      <p class="search-status" role="status" aria-live="polite" aria-atomic="true" data-search-status>Nhập từ khóa để bắt đầu tìm kiếm.</p>
+      <ol class="search-results" aria-label="Kết quả tìm kiếm" data-search-results></ol>
+      <button type="button" class="search-more" data-search-more hidden>Xem thêm kết quả ↓</button>
+      <div class="search-empty" data-search-empty hidden><h2>Chưa tìm thấy nội dung phù hợp</h2><p>Thử từ khóa ngắn hơn, tên vật liệu hoặc mã mẫu. Bạn cũng có thể mở các danh mục bên dưới.</p></div>
+    </div>
+    <noscript><p class="search-noscript">Bật JavaScript để dùng ô tìm kiếm, hoặc mở Sản phẩm, Dịch vụ và Bài viết bên dưới.</p></noscript>
+    <RecoveryLinks />
+  </section>
+</Layout>
+<script>
+  import '../scripts/site-search';
+</script>

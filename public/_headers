@@ -5,3 +5,5 @@
   Cache-Control: no-cache
 /quan-ly-noi-dung/*
   X-Robots-Tag: noindex, nofollow
+/search-index.json
+  Cache-Control: public, max-age=0, must-revalidate

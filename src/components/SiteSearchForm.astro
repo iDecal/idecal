@@ -1,0 +1,9 @@
+---
+interface Props {inputId?:string;}
+const {inputId='site-search-query'}=Astro.props;
+---
+<form class="site-search-form" role="search" aria-label="Tìm kiếm nội dung iDecal" action="/tim-kiem/" method="get" data-site-search-form>
+  <label for={inputId}>Tìm kiếm trên iDecal</label>
+  <div class="site-search-controls"><input id={inputId} name="q" type="search" required maxlength="120" placeholder="Tên sản phẩm, dịch vụ hoặc mã mẫu…" aria-describedby={inputId+'-help'} /><button type="submit" class="btn-primary-solid"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.5" cy="10.5" r="6.5"/><path stroke-linecap="round" d="m16 16 4 4"/></svg>Tìm kiếm</button></div>
+  <p id={inputId+'-help'} class="site-search-help">Có thể nhập không dấu, ví dụ: decal mo, thang may hoặc <span class="search-model-example">IDC-008</span>.</p>
+</form>

@@ -60,3 +60,7 @@
 - Blog chi tiết: header tiêu đề không có nền màu; giữ H1 gradient. Mục lục nằm trong bài sau ảnh cover và đoạn mở đầu, trước đề mục đầu tiên, đóng mặc định trên mọi màn hình; không đặt lại trên đầu mobile/sidebar. Giữ nguyên đoạn mở đầu và phần nội dung còn lại; nếu bài mở thẳng bằng đề mục thì dùng description sẵn có làm giới thiệu trước mục lục.
 
 - Trong menu mobile: nút khu vực dùng gradient xanh–tím/chữ trắng như desktop. Bên dưới có số 0866.077.040 kèm icon Zalo dẫn https://zalo.me/0866077040 và nút Gọi ngay tel:0866077040; giữ bộ chọn khu vực bên trong menu và các vùng cuộn trên màn hình thấp.
+
+- Trang 404 nằm ở src/pages/404.astro, build ra dist/404.html để Cloudflare Pages trả đúng HTTP 404 khi không có URL. Form dẫn tới /tim-kiem/?q=...; cả hai trang noindex và không vào sitemap. Chỉ mục search-index.json được tạo sau sitemap từ các trang canonical công khai, cập nhật theo mỗi build; loại trang quản trị/noindex. Tìm không dấu và mã mẫu được hỗ trợ. Kiểm tra bằng check-search.mjs và test-search.py (Astro preview cổng 4322).
+
+- Giao diện 404 đã được chủ website yêu cầu thêm ảnh và nhiều màu: dùng recovery-404.css riêng với nền trắng, điểm nhấn xanh/tím và xanh nhạt, hai ảnh có sẵn dẫn đến film trang trí kính và film nội thất. Ô tìm kiếm vẫn là thao tác chính; giữ mã 404, noindex và luồng /tim-kiem/.
