@@ -29,6 +29,8 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/images/idecal-logo.png" />
 		<meta name="generator" content={Astro.generator} />
+    <link rel="preload" href="/fonts/google-sans-flex/google-sans-flex-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/google-sans-flex/google-sans-flex-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
 		<SEO canonicalURL={canonicalURL} title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
 	</head>
 	<body class="bg-background font-body text-secondary">

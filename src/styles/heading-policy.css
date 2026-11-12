@@ -1,6 +1,7 @@
 /* One presentation policy for native, CMS and imported document headings.
    Values are 2px below the previous shared scale. Never rewrite source text. */
 :root {
+  --heading-font:'Google Sans Flex',sans-serif;
   --heading-ink:#1b4f7a;
   --footer-gradient:linear-gradient(115deg,#020c2d 0%,#05112f 58%,#0b1231 100%);
   --heading-gradient:linear-gradient(100deg,#0f8fe0 0%,#4f46e5 55%,#7d12f7 100%);
@@ -14,7 +15,8 @@
 /* Important layer also wins over legacy page rules and pasted inline styles. */
 @layer heading-policy {
   body :is(h1,h2,h3,h4,h5,h6) {
-    font-family:'Lexend Variable',sans-serif!important;
+    font-family:var(--heading-font)!important;
+    font-optical-sizing:auto!important;
     font-weight:600!important;
     letter-spacing:-.02em!important;
     line-height:1.35!important;
@@ -68,7 +70,7 @@
     background:none!important;
   }
   body :is(h3,h4,h5,h6), body :is(h3,h4,h5,h6) * {
-    font-family:'Inter Variable',sans-serif!important;
+    font-family:var(--heading-font)!important;
     font-size:17px!important;
   }
   body h3, body h3 * {font-size:19px!important;}

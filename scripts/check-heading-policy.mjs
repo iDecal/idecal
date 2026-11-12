@@ -22,7 +22,7 @@ for(const file of await files(root)){
  pages++;headings+=count;
  const sources=await Promise.all(css.map(async s=>{if(!s.startsWith('/'))return s;if(!cache.has(s))cache.set(s,readFile(join(root,s),'utf8'));return cache.get(s);}));
  const combined=sources.join('\n');
- for(const token of ['--heading-h1','--heading-h6','heading-policy'])if(!combined.includes(token))failures.push(`${file}: missing shared ${token}`);
+ for(const token of ['--heading-font','Google Sans Flex','--heading-h1','--heading-h6','heading-policy'])if(!combined.includes(token))failures.push(`${file}: missing shared ${token}`);
 }
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}
 else console.log(`Heading policy passed: ${pages} pages, ${headings} headings; shared responsive scale and no inline important typography overrides.`);
