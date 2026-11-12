@@ -103,7 +103,7 @@
  .cut-pricing-table tbody tr {display:grid;grid-template-columns:minmax(0,1fr);gap:12px;background:#fff;border:1px solid #dce7f2;border-radius:12px;padding:20px;margin-bottom:14px;}
  .cut-pricing-table th,.cut-pricing-table td {display:block;width:auto;padding:0;border:0;}
  .cut-pricing-table tbody th {font-size:17px;}
- .cut-pricing-table td[data-label]::before {content:attr(data-label);display:block;font-size:12px;color:#728397;font-weight:400;margin-bottom:3px;}
+ .cut-pricing-table td[data-label]::before {content:attr(data-label);display:block;font-size:12px;color:#52677c;font-weight:400;margin-bottom:3px;}
  .cut-material-help {padding:24px;}
  .cut-related-solutions nav {grid-template-columns:minmax(0,1fr);gap:4px;}
  .cut-jump>div {gap:28px;}

@@ -14,7 +14,7 @@
 .booking-form input, .booking-form select, .booking-form textarea, #booking-message { width: 100%; min-height: 44px; min-width: 0; border: 1px solid #cfdced; border-radius: 8px; background: #fff; padding: 11px 12px; color: #173a61; font-size: 15px; line-height: 1.5; }
 .booking-form input:focus, .booking-form select:focus, .booking-form textarea:focus, #booking-message:focus { outline: 2px solid #b7d7ff; outline-offset: 1px; border-color: #006edc; }
 .booking-form textarea, #booking-message { resize: vertical; }
-.booking-form .booking-field-note { margin: 6px 0 0; font-size: 12px; color: #64748b; }
+.booking-form .booking-field-note { margin: 6px 0 0; font-size: 12px; color: #52677c; }
 .booking-product { display: grid; gap: 7px; padding: 16px; margin-bottom: 24px; border: 1px solid #d9e6f6; border-radius: 10px; background: #f1f7ff; }
 .booking-product > span { font-size: 12px; color: #52657c; }
 .booking-product strong { font-size: 15px; font-weight: 500; color: #173a61; }

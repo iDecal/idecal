@@ -43,7 +43,7 @@
 .contact-page .contact-extra{border-top:1px solid #e1ebf4;padding-top:17px}
 .contact-extra summary{cursor:pointer;min-height:40px;font-size:13px;line-height:1.8;color:#216b9b}
 .contact-extra>.booking-form-grid{margin-top:16px}
-.contact-page .booking-send-note{font-size:12px;line-height:1.85;margin:22px 0 18px;color:#65798d}
+.contact-page .booking-send-note{font-size:12px;line-height:1.85;margin:22px 0 18px;color:#52677c}
 .contact-page .booking-form-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center}
 .contact-page .booking-form-actions .btn-primary-solid{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:14px 20px;border-radius:10px;font-size:14px;box-shadow:0 7px 18px -9px #4f46e57a}
 .contact-page .booking-reset{font-size:12px;min-height:44px;padding:10px 0;color:#6c7f92}
@@ -61,7 +61,7 @@
 .contact-channel-icon,.contact-help-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:var(--idecal-chip-gradient);color:#176b9d}
 .contact-channel-icon svg,.contact-help-icon svg{width:22px;height:22px}
 .contact-channels strong{display:block;font-size:14px;font-weight:600;margin-bottom:5px}
-.contact-channels>a>span:nth-child(2)>span{display:block;font-size:12px;line-height:1.8;color:#64748b;overflow-wrap:anywhere}
+.contact-channels>a>span:nth-child(2)>span{display:block;font-size:12px;line-height:1.8;color:#52677c;overflow-wrap:anywhere}
 .contact-channel-arrow{margin-left:auto;color:#52738e}
 .contact-locations-surface{background:#f7faff;border-block:1px solid #e5edf5}
 .contact-locations-surface>.container{padding-block:26px}

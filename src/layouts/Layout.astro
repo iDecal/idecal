@@ -4,6 +4,9 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '@fontsource-variable/lexend';
 import '@fontsource-variable/inter';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import interVietnamese from '@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2?url';
+import interExtended from '@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2?url';
 import '../styles/global.css';
 import '../styles/section-headings.css';
 import '../styles/hero-spacing.css';
@@ -26,6 +29,9 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
 <html lang="vi">
 	<head>
 		<meta charset="UTF-8" />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interVietnamese} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interExtended} as="font" type="font/woff2" crossorigin />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/images/idecal-logo.png" />
 		<meta name="generator" content={Astro.generator} />

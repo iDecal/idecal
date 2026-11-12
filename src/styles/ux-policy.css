@@ -1,0 +1,34 @@
+/* Shared accessibility rules; first important layer wins over legacy imports. */
+@layer ux-policy {
+  :root {--ui-text-muted:#52677c;--ui-action-gradient:linear-gradient(100deg,#0878bd 0%,#4f46e5 55%,#7d12f7 100%);}
+  body .homepage-original .home-stat-value {font-family:var(--heading-font)!important;font-size:19px!important;font-weight:600!important;line-height:1.35!important;color:#1b4f7a!important;}
+  body .homepage-original .home-stat-value * {font:inherit!important;color:inherit!important;background:none!important;}
+  body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut) {
+    min-height:48px!important;
+    background-image:var(--ui-action-gradient)!important;
+    color:#fff!important;
+  }
+  body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut):hover {
+    filter:none!important;
+    background-image:linear-gradient(100deg,#065e9b,#4338ca 55%,#6d28d9)!important;
+  }
+  body :is(button,summary,select,textarea,input:not([type='checkbox'],[type='radio'],[type='hidden'])) {min-height:48px!important;}
+  body button {min-width:48px!important;}
+  body :is(.header-brand,.footer-logo,.blog-back,.blog-toc a,.interior-film-jump>a,.cut-jump a,.footer-link-group li>a,.footer-social a) {min-height:48px!important;}
+  body .header-brand {min-width:48px!important;}
+  body :is(.page-content,.homepage-original,.site-header,#site-footer) a:not(:where(p a,li a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,td a,dd a)) {min-height:48px!important;min-width:48px!important;}
+  body :is(.page-content,.homepage-original) a:not(:where(p a,li a,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,td a,dd a)):not(:has(img,svg,div,figure,h1,h2,h3,h4,h5,h6)) {display:inline-flex;align-items:center;}
+  body nav[class*='breadcrumb'] a {display:inline-flex;align-items:center;}
+  body :is(.blog-back,.blog-toc a,.footer-link-group li>a) {display:inline-flex;align-items:center;}
+  body :is(input:not([type='checkbox'],[type='radio'],[type='hidden']),select,textarea) {border-color:#74879b!important;}
+  body :is(a,button,input,select,textarea,summary):focus-visible {outline:3px solid #006edc!important;outline-offset:3px!important;}
+  body :is(.brand-dark,[data-heading-theme='dark'],#site-footer) :is(a,button,summary):focus-visible {outline-color:#8bd7ff!important;}
+  @media(max-width:767px) {
+    body :is(.page-content,.homepage-original) :is(p,li,td,th,dd,dt,label,input,select,textarea,summary) {font-size:max(16px,1em)!important;}
+    body :is(.page-content,.homepage-original) :is(a[class*='btn'],a[class*='button'],button,summary) {font-size:16px!important;}
+    body :is(.page-content,.homepage-original) :is(p,li) {line-height:1.7!important;}
+    body :is(.cut-service-grid,.printing-material-grid,.thermal-product-grid)>* {min-width:0;}
+    body :is(.interior-film-material-picker,.interior-film-application-tabs) {gap:10px!important;}
+    body :is(.interior-film-material-picker a,.interior-film-application-tabs button) {min-height:48px!important;}
+  }
+}

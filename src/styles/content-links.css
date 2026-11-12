@@ -4,7 +4,7 @@
   body .btn-idecal-bold {border-bottom-width:0!important;}
   body :is(.page-content,.homepage-original) :is(p,li,td,dd) a:not([class*='btn-'],[class*='button']):not(:has(img,h1,h2,h3,h4,h5,h6,svg)) {
     color:var(--content-link-color,#006edc)!important;
-    font-weight:550!important;
+    font-weight:650!important;
   }
   body :is(.page-content,.homepage-original) :is(p,li,td,dd) a:not([class*='btn-'],[class*='button']):not(:has(img,h1,h2,h3,h4,h5,h6,svg)):hover {
     color:var(--content-link-hover,#6d28d9)!important;

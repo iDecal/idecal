@@ -80,8 +80,8 @@
 :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-heading{align-items:baseline;margin-bottom:22px}
 :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid{gap:20px}
 :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid:has(>figure:only-child){grid-template-columns:minmax(0,560px)}
-:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-empty{border:0;border-radius:0;padding:4px 0 10px;background:#fff;color:#8290a0;font-size:13px}
-:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid figcaption{font-size:12px;line-height:1.8;margin-top:9px;color:#718195}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-empty{border:0;border-radius:0;padding:4px 0 10px;background:#fff;color:#52677c;font-size:13px}
+:is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .local-photo-grid figcaption{font-size:12px;line-height:1.8;margin-top:9px;color:#52677c}
 /* Secondary information is quieter and consolidated. */
 :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) section.local-area-faq{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:36px;padding-top:34px;padding-bottom:34px;border-top:1px solid var(--district-line)}
 :is(.district-page,.q1-page,.q2-page,.q3-page,.q4-page,.q12-page,.tb-page) .area-faq-kicker{display:none}

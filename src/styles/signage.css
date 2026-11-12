@@ -1,10 +1,10 @@
 .signage-page { background:#fff; color:#1b4f7a; --sign-header-height:80px; }
 .sign-breadcrumb { padding-top:22px; }
-.sign-breadcrumb ol { display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:0; list-style:none; color:#64748b; font-size:12px; line-height:1.8; }
+.sign-breadcrumb ol { display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:0; list-style:none; color:#52677c; font-size:12px; line-height:1.8; }
 .sign-breadcrumb li:not(:last-child)::after { content:'/'; padding-left:8px; color:#a9b8c4; }
 .sign-breadcrumb a { color:#0d6b96; }
 .sign-hero { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); align-items:center; gap:56px; padding-block:32px 38px; }
-.sign-eyebrow { font-size:12px; color:#64748b; padding-left:12px; border-left:3px solid #93bad8; margin:0 0 18px; line-height:1.7; }
+.sign-eyebrow { font-size:12px; color:#52677c; padding-left:12px; border-left:3px solid #93bad8; margin:0 0 18px; line-height:1.7; }
 .sign-hero h1 { margin:0 0 22px; color:#173b62; font-size:clamp(30px,3.1vw,42px); font-weight:600; line-height:1.3; letter-spacing:-.025em; }
 .sign-original { font-size:15px; color:#455b70; line-height:1.85; }
 .sign-original p { margin:0 0 16px; line-height:1.85; }
@@ -16,12 +16,12 @@
 .sign-actions { display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center; margin-top:26px; }
 .sign-actions .btn-primary-solid { padding-inline:22px; }
 .sign-phone { display:grid; gap:3px; color:#173b62; }
-.sign-phone small { font-size:11px; color:#64748b; }
+.sign-phone small { font-size:11px; color:#52677c; }
 .sign-phone span { font-size:18px; font-weight:550; }
 .sign-hero-links { display:flex; flex-wrap:wrap; align-items:center; gap:14px 22px; margin-top:22px; }
 .sign-hero-visual { margin:0; min-width:0; }
 .sign-hero-visual>.interior-film-image { aspect-ratio:4/3; height:auto; border-radius:16px; }
-.sign-hero-visual figcaption { display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; padding-top:14px; font-size:12px; color:#64748b; }
+.sign-hero-visual figcaption { display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center; padding-top:14px; font-size:12px; color:#52677c; }
 .sign-hero-visual figcaption strong { font-weight:500; color:#1b4f7a; }
 .sign-hero-visual figcaption strong::before { content:'✓'; margin-right:7px; color:#5389b1; }
 .sign-jump { position:sticky; top:var(--sign-header-height); z-index:30; background:#fff; border-block:1px solid #e5ebf0; }
@@ -153,9 +153,9 @@
   .sign-table-scroll td { display:block; padding:0; width:auto; border:0!important; }
   .sign-table-scroll td:first-child { color:#173b62; font-size:15px; font-weight:500; line-height:1.6; }
   .sign-table-scroll td:nth-child(2) { width:auto; font-size:20px; margin-block:10px 14px; white-space:normal; }
-  .sign-table-scroll td:nth-child(2)::before { content:attr(data-label); display:block; color:#64748b; font-size:11px; font-weight:400; margin-bottom:2px; }
+  .sign-table-scroll td:nth-child(2)::before { content:attr(data-label); display:block; color:#52677c; font-size:11px; font-weight:400; margin-bottom:2px; }
   .sign-table-scroll td:nth-child(3) { padding-top:12px; border-top:1px solid #e4eaf0!important; font-size:13px; }
-  .sign-table-scroll td:nth-child(3)::before { content:attr(data-label); display:block; font-size:11px; color:#64748b; margin-bottom:4px; }
+  .sign-table-scroll td:nth-child(3)::before { content:attr(data-label); display:block; font-size:11px; color:#52677c; margin-bottom:4px; }
   .sign-price-followup { grid-template-columns:1fr; gap:18px; }
   .sign-price-followup>a { justify-self:start; }
   .sign-contact { gap:24px; }

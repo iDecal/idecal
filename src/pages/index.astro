@@ -5,6 +5,9 @@ import '../styles/global.css';
 import SEO from '../components/SEO.astro';
 import '@fontsource-variable/lexend';
 import '@fontsource-variable/inter';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import interVietnamese from '@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2?url';
+import interExtended from '@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2?url';
 import '../styles/homepage/source.css';
 import '../styles/homepage/compat.css';
 import publicHomepage from '../content/homepage/public.html?raw';
@@ -13,6 +16,9 @@ import publicHomepage from '../content/homepage/public.html?raw';
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interVietnamese} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interExtended} as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/images/idecal-logo.png" />
     <link rel="preload" href="/fonts/google-sans-flex/google-sans-flex-latin.woff2" as="font" type="font/woff2" crossorigin />

@@ -1,7 +1,7 @@
 .pvc-product-options { padding: 20px; margin-bottom: 24px; border: 1px solid #dce6f2; border-radius: 14px; background: #ffffffd9; }
 .pvc-options-size { font-size: 15px; color: #244766; margin: 0 0 18px; }
 .pvc-options-size strong { margin-left: 10px; font-weight: 500; }
-.pvc-options-size > span { display: block; font-size: 13px; color: #64748b; margin-top: 4px; }
+.pvc-options-size > span { display: block; font-size: 13px; color: #52677c; margin-top: 4px; }
 .pvc-product-options fieldset { margin: 0 0 18px; padding: 0; border: 0; }
 .pvc-product-options legend { display: block; font-size: 14px; color: #244766; margin-bottom: 9px; }
 .pvc-finish-options { display: flex; gap: 12px; }
@@ -12,7 +12,7 @@
 .pvc-product-options :is(input,select,button):focus-visible { outline: 2px solid #0d6b96; outline-offset: 3px; }
 .booking-pvc-options { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
 .booking-pvc-options[hidden] { display: none !important; }
-.booking-pvc-options > p { grid-column: 1 / -1; margin: -6px 0 0; font-size: 13px; color: #64748b; }
+.booking-pvc-options > p { grid-column: 1 / -1; margin: -6px 0 0; font-size: 13px; color: #52677c; }
 @media(max-width:639px) { .pvc-product-options { padding: 16px; } .booking-pvc-options { grid-template-columns: 1fr; } }
 
-.pvc-gallery-note { font-size: 13px; color: #64748b; margin: 12px 0 0; }
+.pvc-gallery-note { font-size: 13px; color: #52677c; margin: 12px 0 0; }

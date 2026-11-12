@@ -69,20 +69,24 @@ with sync_playwright() as p:
     for image in gallery.locator('[data-upload-photo] img').all():
         image.scroll_into_view_if_needed()
         expect(image).to_have_js_property('complete',True)
-        assert image.evaluate('image=>image.naturalWidth>=900')
+        # Responsive thumbnails have density-corrected naturalWidth; full-size
+        # resolution is verified in the original-image modal below.
+        assert image.evaluate('image=>image.naturalWidth>0 && new URL(image.currentSrc).origin===location.origin')
         assert image.evaluate('image=>getComputedStyle(image).objectFit')=='cover'
     first_photo=gallery.locator('[data-upload-photo]').first
     first_photo.click()
     dialog=gallery.get_by_role('dialog')
     expect(dialog).to_be_visible()
     expect(dialog.locator('img')).to_have_attribute('src',BASE+first_photo.get_attribute('href'))
+    expect(dialog.locator('img')).to_have_js_property('complete',True)
+    assert dialog.locator('img').evaluate('image=>image.naturalWidth>=900')
     page.keyboard.press('Escape')
     expect(dialog).not_to_be_visible()
     expect(first_photo).to_be_focused()
     first_photo.click()
     dialog.get_by_role('button',name='Đóng ×').click()
     expect(dialog).not_to_be_visible()
-    print('All 12 uploaded photos load locally at original resolution; cover thumbnails and full-size modal closing/focus verified.')
+    print('All 12 responsive thumbnails load locally; original-resolution modal, cover fit and closing/focus verified.')
     page.locator('.interior-film-contact-actions .btn-primary-solid').click()
     page.wait_for_url('**/lien-he-idecal**')
     expect(page.locator('#booking-service')).to_have_value('thi-cong-decal')

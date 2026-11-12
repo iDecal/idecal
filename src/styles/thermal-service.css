@@ -47,13 +47,13 @@
 .thermal-swatches figure{margin:0}
 .thermal-swatches img{width:100%;height:auto;aspect-ratio:1.7;object-fit:cover;border-radius:12px}
 .thermal-swatches figcaption{font-size:12px;margin-top:12px;color:#52677c}
-.thermal-image-note{font-size:12px;line-height:1.8;color:#64748b;margin:18px 0 0}
+.thermal-image-note{font-size:12px;line-height:1.8;color:#52677c;margin:18px 0 0}
 .thermal-applications{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
 .thermal-applications article{padding:26px;border:1px solid #dce7f3;background:#fff;border-radius:12px}
 .thermal-application-mark{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:24px}
 .thermal-application-mark .thermal-icon-tile{width:60px;height:60px;margin:0;border-radius:18px}
 .thermal-application-mark .thermal-icon{width:31px;height:31px}
-.thermal-application-mark .thermal-number{width:auto;height:auto;border:0;background:none;margin:0;font-size:13px;color:#879eb5}
+.thermal-application-mark .thermal-number{width:auto;height:auto;border:0;background:none;margin:0;font-size:13px;color:#52677c}
 .thermal-number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;flex:0 0 32px;border:1px solid #b9d5ee;border-radius:50%;font-size:11px;color:#2674a5;background:#fff;margin-bottom:18px}
 .thermal-installation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px}
 .thermal-installation ol{list-style:none;padding:0;margin:0;display:grid;gap:14px}

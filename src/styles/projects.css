@@ -19,14 +19,14 @@
 .projects-list-heading { display: flex; gap: 24px; align-items: end; justify-content: space-between; margin-bottom: 24px; }
 .projects-kicker { font-size: 13px; color: #0d6b96; margin: 0 0 10px; }
 .projects-list-heading h2, .projects-contact h2 { color: #173b62; font-size: clamp(24px,2.5vw,32px); line-height: 1.3; margin: 0; }
-.projects-list-heading > p { margin: 0; font-size: 15px; color: #64748b; }
+.projects-list-heading > p { margin: 0; font-size: 15px; color: #52677c; }
 .projects-toolbar { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: center; margin-bottom: 28px; padding-bottom: 22px; border-bottom: 1px solid #e3ebf4; }
 .projects-filters { display: flex; flex-wrap: wrap; gap: 10px; }
 .projects-filters[hidden], .projects-page .project-card[hidden], .projects-empty[hidden] { display: none !important; }
 .projects-filters button { min-height: 40px; padding: 8px 16px; border: 1px solid #dce5f0; border-radius: 8px; color: #52657c; background: #fff; font-size: 14px; transition: background .2s,color .2s; }
 .projects-filters button[aria-pressed='true'] { background: #eaf3ff; border-color: #b8d2f0; color: #174b80; }
 .projects-filters button:hover { border-color: #91b3d7; background: #f2f7fd; }
-#project-count { flex-shrink: 0; margin: 0; color: #64748b; font-size: 13px; }
+#project-count { flex-shrink: 0; margin: 0; color: #52677c; font-size: 13px; }
 .projects-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; align-items: stretch; }
 .projects-page .project-card { border-radius: 16px; border-color: #dce5f0; box-shadow: none; transition: box-shadow .2s,border-color .2s; }
 .projects-page .project-card:hover { border-color: #b5cbe3; box-shadow: 0 8px 26px #173b620d; }

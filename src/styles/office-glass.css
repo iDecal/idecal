@@ -21,7 +21,7 @@
 .office-trust { border-bottom:1px solid #e0e8ef; }
 .office-trust>.container { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:24px; padding-top:24px; padding-bottom:24px; }
 .office-trust strong { display:block; font-size:21px; font-weight:500; color:#1b527b; margin-bottom:4px; }
-.office-trust span { font-size:12px; color:#64748b; }
+.office-trust span { font-size:12px; color:#52677c; }
 .office-jump-links { display:flex; gap:24px; padding-top:8px; padding-bottom:8px; border-bottom:1px solid #e1eaf4; overflow-x:auto; scrollbar-width:thin; }
 .office-jump-links a { flex-shrink:0; font-size:13px; min-height:44px; display:inline-flex; align-items:center; color:#315574; }
 .office-jump-links a:hover { color:#008aca; }

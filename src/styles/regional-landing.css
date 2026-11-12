@@ -45,7 +45,7 @@
 .regional-price-scroll th { font-weight: 500; }
 .regional-price-scroll tbody tr:nth-child(even) { background: #f8faff; }
 .regional-price-scroll tbody tr:last-child > * { border-bottom: 0; }
-.regional-price-scroll td:last-child { font-size: 13px; color: #64748b; }
+.regional-price-scroll td:last-child { font-size: 13px; color: #52677c; }
 .regional-quote-info { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; border: 1px solid #dce6f4; border-radius: 14px; background: #f6f9fd; padding: 22px; }
 .regional-quote-info > div { max-width: 680px; }
 .regional-quote-info h3 { font-size: 16px; font-weight: 500; margin: 0 0 8px; }
