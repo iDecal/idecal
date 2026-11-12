@@ -101,7 +101,13 @@
   .btn-primary-solid:hover, .service-card-brand:hover { transform: none; }
 }
 
-/* Content uses Inter; shared header and footer retain the existing Lexend font. */
+/* Public navigation and footer share the heading font; content stays Inter. */
+body :is(.site-header, #mobile-menu, #site-footer),
+body :is(.site-header, #mobile-menu, #site-footer) :not(svg, svg *) {
+  font-family: var(--heading-font) !important;
+}
+
+/* Content uses Inter. */
 .page-content, .page-content *, .homepage-original, .homepage-original * {
   font-family: 'Inter Variable', sans-serif !important;
 }

@@ -1,6 +1,6 @@
 # Heading font
 
-H1–H6 use **Google Sans Flex** on all public pages, including Blog and imported content. Body copy keeps Inter; menu and footer text keep their existing font. The shared sizes, weight (600), colors and responsive rules remain in `heading-policy.css`.
+H1–H6 use **Google Sans Flex** on all public pages, including Blog and imported content. Body copy keeps Inter; desktop/mobile navigation and footer text also use Google Sans Flex. SVG logo/icon lettering keeps its own font. The shared sizes, weight (600), colors and responsive rules remain in `heading-policy.css`.
 
 - Files: `public/fonts/google-sans-flex/`; definitions: `src/styles/heading-font.css`.
 - Official source: [Google Fonts metadata](https://github.com/google/fonts/tree/main/ofl/googlesansflex).
