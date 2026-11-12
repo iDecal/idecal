@@ -52,7 +52,7 @@ with sync_playwright() as p:
         expect(tabs.first).to_be_focused()
         tabs.first.press('ArrowLeft')
         expect(tabs.last).to_be_focused()
-        assert page.locator('.interior-film-questions details').count()==5
+        assert page.locator('.interior-film-questions details').count()==7
         assert page.locator('.interior-film-questions details[open]').count()==0
         page.locator('.interior-film-questions summary').first.click()
         assert page.locator('.interior-film-questions details[open]').count()==1

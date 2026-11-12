@@ -44,15 +44,15 @@ for(const photo of photos.images){
 const questions=mainNodes.find(node=>(attr(node,'class')??'').split(/\s+/).includes('interior-film-questions'));
 const within=(node,ancestor)=>{for(let parent=node;parent;parent=parent.parentNode)if(parent===ancestor)return true;return false;};
 const summaries=mainNodes.filter(node=>node.tagName==='summary'&&within(node,questions));
-assert.equal(summaries.length,5);
+assert.equal(summaries.length,7);
 assert.ok(!mainNodes.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQs must start closed');
 for(const item of source.faq.items)assert.ok(summaries.some(node=>text(node).includes(item.question)));
 assert.ok(nodes.some(node=>node.tagName==='link'&&attr(node,'rel')==='canonical'&&attr(node,'href')===proof.sourceCanonical));
 const schemas=nodes.filter(node=>node.tagName==='script'&&attr(node,'type')==='application/ld+json').flatMap(node=>{const data=JSON.parse((node.childNodes??[]).map(child=>child.value??'').join(''));return data['@graph']??[data]});
-const faq=schemas.find(item=>item['@type']==='FAQPage');assert.equal(faq.mainEntity.length,5);
+const faq=schemas.find(item=>item['@type']==='FAQPage');assert.equal(faq.mainEntity.length,summaries.length);
 for(const question of faq.mainEntity){assert.ok(rendered.includes(normalize(question.name)));assert.ok(rendered.includes(normalize(question.acceptedAnswer.text)));}
 assert.ok(!/greenshift|gs-accordion-item__title|wp-admin|filmnoithat\/infeel|<form\b/i.test(html),'Do not import source scripts, admin forms or invalid links');
 const redirects=await readFile('public/_redirects','utf8');
 assert.ok(redirects.includes('/dich-vu/film-noi-that/ /dich-vu-film-dan-noi-that/ 301'));
 assert.ok((await readFile('dist/film-dan-noi-that/index.html','utf8')).includes('href="/dich-vu-film-dan-noi-that/"'));
-console.log('Interior film passed: '+retainedBlocks.length+' retained source blocks, 2 requested introduction blocks removed, 6 materials, 4 original applications plus elevator, 7 approved image replacements, 12 unchanged uploaded JPEGs with gallery links, 5 closed FAQs and original H1/canonical.');
+console.log('Interior film passed: '+retainedBlocks.length+' retained source blocks, 2 requested introduction blocks removed, 6 materials, 4 original applications plus elevator, 7 approved image replacements, 12 unchanged uploaded JPEGs with gallery links, 7 closed FAQs with matching schema and original H1/canonical.');

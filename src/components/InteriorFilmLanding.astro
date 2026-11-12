@@ -2,6 +2,7 @@
 import BannerBenefits from './BannerBenefits.astro';
 import source from '../data/interior-film-original.json';
 import {interiorFilmApplications as applications} from '../data/interior-film-applications';
+import {interiorFilmFaqs} from '../data/interior-film-presentation';
 import {interiorFilmGallery} from '../data/interior-film-visuals';
 import InteriorFilmImage from './InteriorFilmImage.astro';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
@@ -34,7 +35,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
       <figure><InteriorFilmImage image={pattern.image} /><span class="interior-film-photo-index" aria-hidden="true">{'0'+(index+1)}</span></figure>
       <div class="interior-film-pattern-copy"><h3 id={pattern.heading.id}>{pattern.heading.title}</h3><div class="interior-film-original-copy" set:html={pattern.blocks[0].html} /><details class="interior-film-material-details"><summary>{pattern.blocks[1].text}<span aria-hidden="true">+</span></summary><div class="interior-film-original-copy" set:html={pattern.blocks.slice(2).map(block=>block.html).join('')} /></details>{pattern.links.map(link=><a href={link.href} class="interior-film-link">{link.label}<span aria-hidden="true">→</span></a>)}</div>
     </article>)}</div>
-    <div class="interior-film-brand-row"><div><p class="interior-film-eyebrow" data-heading-label>Thương hiệu & vật liệu</p><p>Tham khảo mẫu bề mặt trước khi chọn film.</p></div><div class="interior-film-source-images" aria-label="Thương hiệu và vật liệu từ nội dung nguồn">{source.brandImages.map(image=><figure>{image.href?<a href={image.href} aria-label={image.alt}><InteriorFilmImage image={image} /></a>:<InteriorFilmImage image={image} />}</figure>)}</div></div>
+    <div class="interior-film-brand-row"><div><p class="interior-film-eyebrow" data-heading-label>Thương hiệu & vật liệu</p><p>Mỗi thương hiệu có màu sắc, bề mặt và thông số khác nhau. Với film nhập khẩu, nên đối chiếu xuất xứ, mẫu thực tế và tài liệu kỹ thuật để chọn ứng dụng phù hợp với thiết kế, phong cách hiện đại của không gian.</p></div><div class="interior-film-source-images" aria-label="Thương hiệu và vật liệu từ nội dung nguồn">{source.brandImages.map(image=><figure>{image.href?<a href={image.href} aria-label={image.alt}><InteriorFilmImage image={image} /></a>:<InteriorFilmImage image={image} />}</figure>)}</div></div>
   </section>
 
   <section id="loi-ich-film-noi-that" class="interior-film-soft" aria-labelledby={source.benefits.heading.id}>
@@ -55,7 +56,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
   <section id="cau-hoi-film-noi-that" class="interior-film-faq-wrap" aria-labelledby={source.faq.heading.id}>
     <div class="container interior-film-section interior-film-faq">
       <header class="interior-film-section-heading"><p class="interior-film-eyebrow" data-heading-label>Trước khi thi công</p><h2 id={source.faq.heading.id}>{source.faq.heading.title}</h2>{source.faq.heading.subtitle&&<p>{source.faq.heading.subtitle}</p>}</header>
-      <div class="interior-film-questions">{source.faq.items.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div class="interior-film-original-copy" set:html={item.answer.map(block=>block.html).join('')} /></details>)}</div>
+      <div class="interior-film-questions">{interiorFilmFaqs.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div class="interior-film-original-copy" set:html={item.answer.map(block=>block.html).join('')} /></details>)}</div>
     </div>
   </section>
 
@@ -63,7 +64,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
     <header class="interior-film-section-heading"><div><p class="interior-film-eyebrow" data-heading-label>Thêm ý tưởng cho bạn</p><h2 id="interior-related-title">Bài viết tham khảo</h2></div></header>
     <div>{source.related.map(item=><article><a href={item.href}><figure><InteriorFilmImage image={item.image} /></figure><h3>{item.title}</h3><span class="interior-film-read-more" aria-hidden="true">Đọc bài viết →</span></a><p>{item.byline}</p></article>)}</div>
   </section>
-  <section id="tu-van-film-noi-that" class="interior-film-contact-wrap" aria-labelledby="interior-film-contact-title"><div class="container interior-film-contact"><div><p class="interior-film-eyebrow" data-heading-label>Bắt đầu từ hiện trạng của bạn</p><h2 id="interior-film-contact-title">Trao đổi phương án cho nội thất của bạn</h2><p>Gửi ảnh hiện trạng, kích thước và mẫu film mong muốn để iDecal tư vấn vật liệu, xử lý bề mặt và phạm vi thi công.</p></div><div class="interior-film-contact-actions"><a href={quote} class="btn-primary-solid">Nhận tư vấn film nội thất <span aria-hidden="true">→</span></a>{source.hero.contact.map(link=><a href={link.href} class="interior-film-contact-phone">{link.label}</a>)}<a href="/film-dan-noi-that/" class="interior-film-link">Xem catalogue vật liệu <span aria-hidden="true">→</span></a></div></div></section>
+  <section id="tu-van-film-noi-that" class="interior-film-contact-wrap" aria-labelledby="interior-film-contact-title"><div class="container interior-film-contact"><div><p class="interior-film-eyebrow" data-heading-label>Bắt đầu từ hiện trạng của bạn</p><h2 id="interior-film-contact-title">Thi công dán film nội thất tại TP.HCM</h2><p>Gửi ảnh hiện trạng, kích thước và mẫu film mong muốn để iDecal tư vấn vật liệu, xử lý bề mặt và phạm vi thi công.</p></div><div class="interior-film-contact-actions"><a href={quote} class="btn-primary-solid">Nhận tư vấn film nội thất <span aria-hidden="true">→</span></a>{source.hero.contact.map(link=><a href={link.href} class="interior-film-contact-phone">{link.label}</a>)}<a href="/film-dan-noi-that/" class="interior-film-link">Xem catalogue vật liệu <span aria-hidden="true">→</span></a></div></div></section>
 </div>
 <script>
   import '../scripts/interior-film';
