@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Bộ lọc trang /du-an dùng thanh pill gọn, đếm công trình theo nhóm, chỉ hiện nhóm có dữ liệu; nhóm mới tự xuất hiện khi có công trình. Giữ projectTypes đầy đủ cho CMS/validation, không xóa loại dự án khỏi dữ liệu. Mobile cuộn ngang một dòng, vùng chạm 48px; giữ aria-pressed, số kết quả aria-live, lọc bằng bàn phím và hiển thị mọi công trình khi tắt JavaScript.
+
 - Nhãn nhỏ phía trên tiêu đề: theo yêu cầu mới nhất, lấy gradient xanh nhạt–tím nhạt đang xuất bản làm gốc, tăng sắc độ vừa phải (#d9edff–#e9dcff), giữ chữ xanh #1b4f7a và bo góc/cỡ chữ gốc. Không dùng hai bản phối đậm/chữ trắng đã bị hủy.
 
 - Chủ website yêu cầu riêng khối home-process gọn hơn: tiêu đề “Dịch vụ theo nhu cầu”, ba liên kết Thiết kế/In Decal/Thi công với mỗi mục một câu ngắn, không nhãn phụ/icon trang trí ở tiêu đề/số thứ tự/thẻ viền; mỗi liên kết tư vấn/báo giá có mũi tên SVG nhỏ 18px theo yêu cầu mới. Dùng home-process-compact và service-summary; desktop ba cột, mobile danh sách có phân cách mảnh. Đã cập nhật source-audit.mainText theo đúng phần chữ được phép thay; giữ mọi section/ảnh/nội dung trang chủ khác như bản đã khôi phục.
