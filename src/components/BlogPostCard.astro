@@ -12,6 +12,6 @@ const dateFormat=new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Ho_Chi_Minh',da
   <div class="blog-card-content">
     <Heading><a href={`/blog/${post.id}`}>{post.data.title}</a></Heading>
     <div class="blog-card-meta"><a href={`/blog/chuyen-muc/${category.slug}`}>{category.name}</a><time datetime={post.data.pubDate.toISOString()}>{dateFormat.format(post.data.pubDate)}</time></div>
-    <a class="blog-read-link" href={`/blog/${post.id}`} aria-label={`Đọc bài viết: ${post.data.title}`}>Đọc bài viết <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+    <a class="blog-read-link" href={`/blog/${post.id}`} aria-label={`Đọc thêm: ${post.data.title}`}>Đọc thêm <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 6 12 12M6 18h12V6"/></svg></a>
   </div>
 </article>
