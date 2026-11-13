@@ -2,16 +2,14 @@
 
 Thiết kế lại phần đầu trang theo yêu cầu chủ website, giữ nội dung, ảnh, URL, anchor, schema và H1 hiện có.
 
-## Bố cục
+## Bố cục theo ảnh mẫu mới nhất
 
-- Theo phản hồi mới nhất: giữ kiểu chữ trái/ảnh phải; không dùng bố cục panorama phía dưới.
-- Desktop chia cột 0.9:1.15, khoảng cách 48px; ảnh chiếm khoảng 56% vùng cột và có tỉ lệ 6:5, viền trắng 4px/bóng nhẹ để nổi trên nền sáng. H1 quay về cỡ global hiện hành.
-- Tablet dưới 1024px xếp dọc; mobile dưới 768px đặt nhãn → H1 → ảnh → giới thiệu → CTA → lợi ích.
-- Ảnh cover 6:5 desktop, 16:10 tablet và 3:2 mobile; khung giữ kích thước ổn định.
-- Nhãn nhỏ, H1 gradient theo quy tắc hiện hành; CTA chính gradient và phụ nền trắng, vùng chạm tối thiểu 52px.
-- Lợi ích dùng icon/chữ, tách bằng đường kẻ mảnh.
-- CSS chỉ áp dụng qua marker data-service-hero; PageBanner opt-in serviceHero=true cho cách nhiệt.
-- ProductImage eager nhận fetchpriority=high; ảnh phía dưới tiếp tục lazy-load.
+- Ảnh nguồn phủ toàn khung hero bo góc; vẫn dùng img eager/high với ALT và ảnh responsive từ pipeline sẵn có.
+- Overlay navy đậm bên trái, nhạt dần bên phải; nội dung sáng và H1 trắng theo quy tắc nền tối. Không lấy màu vàng hoặc thông tin đánh giá từ website mẫu.
+- Giữ nguyên nhãn, H1, mô tả và lợi ích nguồn ở bên trái; CTA trong thanh trắng rộng phía dưới, logo chữ iDecal bên phải trên desktop.
+- Khung cao tối thiểu 640px desktop, tự giãn theo nội dung; không đặt chiều cao cứng làm cắt chữ. Mobile xếp dọc trong cùng ảnh nền, CTA toàn chiều rộng, không hiện logo chữ phụ.
+- Figcaption nguồn giữ trong HTML cho công nghệ hỗ trợ, tránh phủ thêm nhãn lên ảnh; không xóa ALT hoặc chú thích nguồn khỏi dữ liệu.
+- Chỉ các hero opt-in nhận giao diện mới; PageBanner catalogue không thay đổi. Yêu cầu mới thay thế bố cục chữ trái/ảnh phải và quy tắc nền sáng của các phiên bản trước.
 
 ## Phạm vi
 
@@ -23,7 +21,7 @@ Trang chủ, Blog và catalogue không nhận marker và giữ bố cục hiện
 
 - npm test: build, nguồn nhập, nội dung, SEO, schema, headings, ảnh và kiểm tra xác thực đều qua.
 - npm run check: 194 tệp, không lỗi/cảnh báo/hint.
-- Playwright: 12 route × 6 chiều rộng (1440, 1280, 1024, 768, 390, 320), không tràn ngang; đúng cột desktop (ảnh rộng hơn chữ)/thứ tự mobile, ảnh tải thành công, CTA >=48px, hero không lazy-load và giữ H1 gradient.
+- Playwright: 12 route × 6 chiều rộng (1440, 1280, 1024, 768, 390, 320), không tràn ngang; ảnh phủ khung, H1 trắng/CTA nền trắng và không tràn nội dung, ảnh tải thành công, CTA >=48px, hero không lazy-load và giữ H1 đúng nền tối.
 - Axe WCAG A/AA trên các hero tại 1440/390: không phát hiện vi phạm tự động. Đây không thay thế đánh giá accessibility thủ công toàn site.
 - Kiểm tra giao diện bằng ảnh chụp desktop/mobile.
 - test-wave-glass.py và test-elevator.py chạy qua bản preview cổng 4323: FAQ bàn phím, anchor, fallback ảnh, thư viện ảnh, CTA/form và nội dung khi tắt JavaScript hoạt động.
