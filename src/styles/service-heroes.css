@@ -1,38 +1,59 @@
 /* Service-only hero refresh. Earlier important layer scopes legacy overrides. */
 @layer service-hero-refresh {
-  body [data-service-hero] {display:block!important;padding-block:48px!important;border-bottom:1px solid #e1eaf3!important;background:radial-gradient(ellipse at 90% 20%,#edf4ff,transparent 58%),linear-gradient(110deg,#fff,#f8fbff)!important;}
-  body [data-service-hero] [data-hero-layout] {display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important;gap:36px 64px!important;align-items:center!important;padding-block:0!important;}
-  body [data-hero-copy] {min-width:0!important;max-width:none!important;}
-  body [data-hero-copy] h1 {max-width:100%!important;margin:0 0 20px!important;text-wrap:balance;}
-  body [data-hero-copy]>:is([data-heading-label],[class*='eyebrow'],[class*='kicker']) {font-size:14px!important;padding:7px 12px!important;margin:0 0 18px!important;}
-  body [data-hero-copy] nav[class*='breadcrumb'] {margin:0 0 14px!important;font-size:12px!important;gap:8px!important;}
+  body [data-service-hero] {display:block!important;padding-block:48px 40px!important;border-bottom:1px solid #e1eaf3!important;background:linear-gradient(180deg,#fff 40%,#edf4ff)!important;}
+  body [data-service-hero] [data-hero-layout] {display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:32px!important;align-items:start!important;padding-block:0!important;}
+  body [data-hero-copy] {display:grid!important;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)!important;grid-template-areas:"label intro" "title intro" "title actions" "benefits benefits"!important;column-gap:80px!important;row-gap:16px!important;align-items:start!important;min-width:0!important;max-width:none!important;}
+  body [data-hero-copy]:has(nav[class*='breadcrumb']) {grid-template-areas:"crumb crumb" "label intro" "title intro" "title actions" "benefits benefits"!important;}
+  body [data-hero-copy] h1 {grid-area:title;font-size:clamp(38px,3.7vw,54px)!important;line-height:1.12!important;letter-spacing:-.035em!important;}
+  body [data-hero-copy]>:is([data-heading-label],[class*='eyebrow'],[class*='kicker']) {grid-area:label;justify-self:start;}
+  body [data-hero-copy]>nav[class*='breadcrumb'] {grid-area:crumb;}
+  body [data-hero-copy]>:is(.compact-banner-description,.lp-lead,.office-hero-lead,.cut-hero-lead,.printing-hero-lead,.interior-film-lead,.advertising-lead,.wave-lead,.sign-lead,.elevator-lead) {grid-area:intro;padding-left:24px!important;border-left:2px solid #c5d9f4!important;}
+  body [data-hero-copy]>[data-hero-actions] {grid-area:actions;}
+  body [data-hero-copy]>:is([data-hero-benefits],.banner-benefit-list,.elevator-hero-link,.sign-hero-links) {grid-area:benefits;}
+  body [data-hero-copy] h1 {max-width:100%!important;margin:0!important;text-wrap:balance;}
+  body [data-hero-copy]>:is([data-heading-label],[class*='eyebrow'],[class*='kicker']) {font-size:14px!important;padding:7px 12px!important;margin:0!important;}
+  body [data-hero-copy] nav[class*='breadcrumb'] {margin:0 0 4px!important;font-size:12px!important;gap:8px!important;}
   body [data-hero-copy] :is(.compact-banner-description,.lp-lead,.office-hero-lead,.cut-hero-lead,.printing-hero-lead,.interior-film-lead,.advertising-lead,.wave-lead,.sign-lead,.elevator-lead) {max-width:60ch!important;margin:0!important;color:#44566b!important;font-size:16px!important;line-height:1.7!important;}
   body [data-hero-copy] :is(.compact-banner-description,.lp-lead,.office-hero-lead,.cut-hero-lead,.printing-hero-lead,.interior-film-lead,.wave-lead,.sign-lead) p {margin:0!important;font-size:16px!important;line-height:1.7!important;}
   body [data-hero-copy] :is(.compact-banner-description,.lp-lead,.office-hero-lead,.cut-hero-lead,.printing-hero-lead,.interior-film-lead,.wave-lead,.sign-lead) p+p {margin-top:12px!important;}
-  body [data-hero-actions] {display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:12px!important;margin:24px 0 0!important;}
+  body [data-hero-actions] {display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:12px!important;margin:4px 0 0!important;}
   body [data-hero-actions]>a {display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:52px!important;padding:13px 20px!important;border-radius:10px!important;font-size:15px!important;line-height:1.4!important;font-weight:500!important;text-align:center;}
   body [data-hero-actions]>a:not(:first-child) {border:1px solid #c4d6e9!important;background:#fff!important;background-image:none!important;color:#1b4f7a!important;box-shadow:none!important;}
   body [data-hero-actions]>a:not(:first-child):hover {background:#edf5ff!important;border-color:#8bb9df!important;filter:none!important;}
   body [data-hero-actions]>:is(.sign-phone,.elevator-phone) {flex-direction:column!important;align-items:flex-start!important;gap:0!important;padding-block:8px!important;}
-  body [data-hero-benefits],body [data-hero-copy]>.banner-benefit-list {display:block!important;margin:22px 0 0!important;padding:18px 0 0!important;border-top:1px solid #dce7f1!important;}
+  body [data-hero-benefits],body [data-hero-copy]>.banner-benefit-list {display:block!important;margin:8px 0 0!important;padding:20px 0 0!important;border-top:1px solid #dce7f1!important;}
   body [data-hero-copy] .banner-benefit-list {display:flex!important;flex-wrap:wrap!important;gap:12px 20px!important;}
   body [data-hero-benefits] .banner-benefit-list {margin:0!important;padding:0!important;border:0!important;}
   body [data-hero-copy] .banner-benefit-list li {align-items:flex-start!important;font-size:16px!important;line-height:1.5!important;}
   body [data-hero-benefits]>div>p {font-size:14px!important;margin:0 0 12px!important;}
-  body [data-hero-media] {position:relative!important;width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;aspect-ratio:4/3!important;max-height:none!important;margin:0!important;padding:0!important;overflow:hidden!important;border:1px solid #dce7f1!important;border-radius:24px!important;background:#eaf2f9!important;box-shadow:0 20px 48px -30px #173b6459!important;}
+  body [data-hero-media] {position:relative!important;width:100%!important;max-width:none!important;min-width:0!important;height:auto!important;aspect-ratio:2.8/1!important;max-height:none!important;margin:0!important;padding:0!important;overflow:hidden!important;border:1px solid #dce7f1!important;border-radius:24px!important;background:#eaf2f9!important;box-shadow:0 20px 48px -30px #173b6459!important;}
   body [data-hero-media]>figure {position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;border:0!important;border-radius:inherit!important;}
   body [data-hero-media] :is(.interior-film-image,[data-product-image]) {position:absolute!important;inset:0!important;width:100%!important;height:100%!important;}
   body [data-hero-media] img {display:block!important;width:100%!important;height:100%!important;aspect-ratio:auto!important;max-height:none!important;object-fit:cover!important;border-radius:0!important;}
-  body [data-hero-media] figcaption {position:absolute!important;inset:auto 16px 16px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;margin:0!important;padding:10px 14px!important;border:1px solid #e2eaf1!important;border-radius:10px!important;background:#ffffffF5!important;color:#244766!important;font-size:13px!important;line-height:1.5!important;}
+  body [data-hero-media] figcaption {position:absolute!important;inset:auto auto 20px 20px!important;max-width:calc(100% - 40px)!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;margin:0!important;padding:10px 14px!important;border:1px solid #e2eaf1!important;border-radius:10px!important;background:#ffffffF5!important;color:#244766!important;font-size:13px!important;line-height:1.5!important;}
   body [data-hero-media] figcaption :is(strong,span) {font-size:inherit!important;color:inherit!important;}
   @media(max-width:1023px) {
     body [data-service-hero] {padding-block:36px!important;}
-    body [data-service-hero] [data-hero-layout] {grid-template-columns:minmax(0,1fr)!important;gap:28px!important;}
-    body [data-hero-media] {aspect-ratio:16/10!important;max-width:760px!important;justify-self:center!important;}
+    body [data-service-hero] [data-hero-layout] {gap:28px!important;}
+    body [data-hero-copy] {column-gap:36px!important;}
+    body [data-hero-copy] h1 {font-size:38px!important;}
+    body [data-hero-media] {aspect-ratio:2.2/1!important;max-width:none!important;justify-self:center!important;}
   }
   @media(max-width:767px) {
     body [data-service-hero] {padding-block:28px!important;}
     body [data-service-hero] [data-hero-layout] {gap:24px!important;}
+    body [data-hero-copy],body [data-hero-copy]:has(nav[class*='breadcrumb']) {display:contents!important;}
+    body [data-hero-copy]>* {grid-area:auto!important;min-width:0!important;}
+    body [data-hero-copy]>nav {order:-1!important;}
+    body [data-hero-copy]>:is([data-heading-label],[class*='eyebrow'],[class*='kicker']) {order:0!important;}
+    body [data-hero-copy] h1 {order:1!important;font-size:34px!important;line-height:1.16!important;}
+    body [data-hero-media] {order:2!important;}
+    body [data-hero-copy]>:is(.compact-banner-description,.lp-lead,.office-hero-lead,.cut-hero-lead,.printing-hero-lead,.interior-film-lead,.advertising-lead,.wave-lead,.sign-lead,.elevator-lead) {order:3!important;}
+    body [data-hero-actions] {order:4!important;}
+    body [data-hero-copy]>:is([data-hero-benefits],.banner-benefit-list,.elevator-hero-link,.sign-hero-links) {order:5!important;}
+    body [data-hero-copy]>:is(.compact-banner-description,.lp-lead,.office-hero-lead,.cut-hero-lead,.printing-hero-lead,.interior-film-lead,.advertising-lead,.wave-lead,.sign-lead,.elevator-lead) {padding-left:0!important;border-left:0!important;}
+    body [data-hero-copy]>:is([data-hero-benefits],.banner-benefit-list) {width:100%!important;}
+    body [data-hero-actions] {width:100%!important;}
     body [data-hero-actions]>a {font-size:16px!important;}
     body [data-hero-copy] .banner-benefit-list {gap:10px 18px!important;}
     body [data-hero-media] {aspect-ratio:3/2!important;border-radius:18px!important;}
