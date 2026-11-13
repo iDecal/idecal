@@ -1,6 +1,7 @@
 ---
 import BlogPostCard from '../../components/BlogPostCard.astro';
 import { parseFragment } from 'parse5';
+import {presentBlogImages} from '../../data/blog-image-presentation';
 import { relatedGuides } from '../../data/content-topics';
 import { expandSeoTemplate } from '../../data/seo';
 import Layout from '../../layouts/Layout.astro';
@@ -27,7 +28,7 @@ const additionalPhotos=getInstallationPhotos(additionalPhotoNumbers);
 const { Content, headings } = await render(entry);
 // Keep the original first paragraph in place, and insert the TOC after it.
 // Posts that begin directly with a heading use their existing summary as the intro.
-const articleHtml=entry.rendered?.html;
+const articleHtml=presentBlogImages(entry.rendered?.html,entry.id);
 let introEnd=0;
 if(articleHtml){
   const fragment=parseFragment(articleHtml,{sourceCodeLocationInfo:true});

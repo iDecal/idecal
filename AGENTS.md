@@ -67,6 +67,8 @@
 
 - Link không gạch dưới trên toàn site; link trong nội dung dùng xanh nổi #006edc, hover tím #6d28d9 và chữ nhấn vừa theo content-links.css. Trên nền tối dùng xanh sáng; giữ giao diện nút/CTA và focus bàn phím. Không đổi nội dung hoặc href chỉ để chỉnh kiểu link.
 
+- Chú thích ảnh Blog: 14px, canh giữa theo ảnh, cách ảnh 6px; dùng figure/figcaption. blog-image-presentation.ts khôi phục cặp ảnh/chú thích khớp dữ liệu figcaption WordPress tại blog-image-captions.json, không nhận nhầm mọi đoạn sau ảnh và không sửa Markdown nguồn. Không khôi phục ảnh thiếu hoặc gán chú thích của bảng thành ảnh. Chữ đoạn thường giữ nguyên; link trong chú thích là inline, không áp vùng chạm 48px của nút độc lập.
+
 - Mục lục Blog: các liên kết H2 có icon tài liệu nét mảnh xanh nhạt (aria-hidden), H3 trong mục lục không icon, cỡ 14px (H2 giữ 16px), thụt vào 40px để phân biệt cấp nội dung; giữ vùng chạm 48px. Không đổi cỡ H3 trong nội dung bài. Giữ tiêu đề, anchor, mục lục đóng mặc định và vị trí sau ảnh/đoạn mở đầu.
 
 - Blog chi tiết: header tiêu đề không có nền màu; giữ H1 gradient. Mục lục nằm trong bài sau ảnh cover và đoạn mở đầu, trước đề mục đầu tiên, đóng mặc định trên mọi màn hình; không đặt lại trên đầu mobile/sidebar. Giữ nguyên đoạn mở đầu và phần nội dung còn lại; nếu bài mở thẳng bằng đề mục thì dùng description sẵn có làm giới thiệu trước mục lục.

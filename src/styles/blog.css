@@ -84,3 +84,10 @@
 .blog-article-body .blog-toc{margin:24px 0 28px;font-size:14px;line-height:1.65}
 .blog-article-body .blog-toc nav{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:639px){.blog-article-body .blog-toc nav{grid-template-columns:1fr}}
+
+/* Image captions: small, centered and close to their image. */
+.blog-article-body figure:has(figcaption){margin:24px 0;text-align:center}
+.blog-article-body figure:has(figcaption) img{display:block;margin:0 auto 6px}
+.blog-article-body figure:has(figcaption)>:is(p,a,picture){display:block;margin:0}
+.blog-article-body figcaption{margin:0;text-align:center;color:#52677c;font-size:14px;line-height:1.5}
+.blog-article-body figcaption p{margin:0;line-height:1.5}

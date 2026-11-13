@@ -31,4 +31,7 @@
     body :is(.interior-film-material-picker,.interior-film-application-tabs) {gap:10px!important;}
     body :is(.interior-film-material-picker a,.interior-film-application-tabs button) {min-height:48px!important;}
   }
+  /* Captions intentionally remain smaller than article paragraphs. */
+  body .blog-article-body figcaption a {display:inline!important;min-height:0!important;min-width:0!important;}
+  body .blog-article-body figcaption,body .blog-article-body figcaption :is(p,span,em,small,a) {font-size:14px!important;}
 }
