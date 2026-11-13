@@ -317,3 +317,6 @@
 .homepage-original .service-summary:first-child{padding-top:0;border-top:0}
 .homepage-original .service-summary:last-child{padding-bottom:0}
 }
+
+.homepage-original .service-summary>span{gap:8px}
+.homepage-original .service-summary>span svg{width:18px;height:18px;flex:0 0 18px}

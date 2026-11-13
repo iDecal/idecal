@@ -1,6 +1,6 @@
 # Quy tắc giữ nội dung của chủ website
 
-- Chủ website yêu cầu riêng khối home-process gọn hơn: tiêu đề “Dịch vụ theo nhu cầu”, ba liên kết Thiết kế/In Decal/Thi công với mỗi mục một câu ngắn, không nhãn phụ/icon/số thứ tự/thẻ viền. Dùng home-process-compact và service-summary; desktop ba cột, mobile danh sách có phân cách mảnh. Đã cập nhật source-audit.mainText theo đúng phần chữ được phép thay; giữ mọi section/ảnh/nội dung trang chủ khác như bản đã khôi phục.
+- Chủ website yêu cầu riêng khối home-process gọn hơn: tiêu đề “Dịch vụ theo nhu cầu”, ba liên kết Thiết kế/In Decal/Thi công với mỗi mục một câu ngắn, không nhãn phụ/icon trang trí ở tiêu đề/số thứ tự/thẻ viền; mỗi liên kết tư vấn/báo giá có mũi tên SVG nhỏ 18px theo yêu cầu mới. Dùng home-process-compact và service-summary; desktop ba cột, mobile danh sách có phân cách mảnh. Đã cập nhật source-audit.mainText theo đúng phần chữ được phép thay; giữ mọi section/ảnh/nội dung trang chủ khác như bản đã khôi phục.
 
 - Menu Dịch vụ theo yêu cầu mới: không có ảnh hoặc icon minh họa trong các mục desktop/mobile; MenuOffering chỉ hiện tên/mô tả ngắn, mobile giấu mô tả. Hai cột giải pháp/vật liệu và kỹ thuật/gia công, nền trắng/xanh rất nhạt, đường phân cách nét đứt nhẹ, CTA xanh–tím. Giữ đầy đủ mười URL, điều khiển menu/bàn phím, bộ chọn khu vực và các menu khác.
 
