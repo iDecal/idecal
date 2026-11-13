@@ -1,12 +1,18 @@
-// Only enter a numeric score/count after the owner supplies a verifiable source.
+// Verified on the linked Google Maps profile; do not infer unavailable review counts.
 export const serviceHeroReview: {
   platform: 'Facebook' | 'Google';
   url: string;
+  businessName: string;
+  location: string;
+  verifiedAt: string;
   score: number | null;
   count: number | null;
 } = {
-  platform: 'Facebook',
-  url: 'https://www.facebook.com/idecalsaigon/',
-  score: null,
+  platform: 'Google',
+  url: 'https://share.google/HfVgiaIVJhtL9wG42',
+  businessName: 'iDecal Bình Dương',
+  location: 'Bình Dương',
+  verifiedAt: '2026-11-13',
+  score: 3.7,
   count: null,
 };

@@ -69,3 +69,12 @@
     body [data-review-source] {font-size:12px;}
   }
 }
+@layer service-hero-refresh {
+  body [data-review-platform][data-platform='Google'] {background:#fff;}
+  body [data-review-stars] {display:inline-flex;gap:1px;line-height:1;color:#9b6100;}
+  body [data-review-star] {position:relative;display:inline-block;width:20px;height:20px;}
+  body [data-review-star] svg {position:absolute;inset:0;width:20px;height:20px;}
+  body [data-review-star] svg:first-child {fill:#d2dae4;}
+  body [data-review-star] svg:last-child {fill:#9b6100;}
+  body [data-review-location] {font-size:12px;line-height:1.4;color:#44566b;}
+}
