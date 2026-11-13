@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Thẻ Blog theo ảnh mẫu mới: dùng BlogPostCard cho /blog, chuyên mục và Bài cùng chủ đề. Lưới 3 cột desktop/2 tablet/1 mobile, ảnh cover 2:1, nền xanh xám nhạt #edf2f8 không viền, tiêu đề → chuyên mục/ngày → link đọc cuối thẻ. Bỏ khối featured riêng, không hiển thị mô tả trong thẻ; giữ nguyên tiêu đề/ảnh/nội dung bài chi tiết và URL. Giữ Google Sans Flex cho heading, Inter cho body, màu heading/link hiện hành và link không gạch dưới. Không đổi Blog trang chủ trong đợt này. Bài đầu danh sách eager/high; các ảnh sau lazy. Metadata của header bài chi tiết giữ cách bố trí cũ.
+
 - Chủ website đã hủy mẫu hero ảnh nền/CTA-review nổi: giữ lại kiểu nền sáng, chữ trái/ảnh phải. Không đưa lại overlay hoặc ô review trong hero nếu chưa có yêu cầu mới.
 
 - Hero dịch vụ dùng các marker data-service-hero/data-hero-layout/data-hero-copy/data-hero-actions/data-hero-media và lớp service-heroes.css riêng: nền sáng, giữ bố cục chữ trái/ảnh phải trên desktop; ảnh chiếm phần lớn hơn (khoảng 56% vùng cột), khung 6:5 và bóng nhẹ. Mobile đặt ảnh ngay sau H1 rồi đến giới thiệu/CTA/lợi ích, giữ nguyên H1/nội dung/ảnh/CTA nguồn. PageBanner chỉ nhận bố cục mới khi serviceHero=true; không áp dụng sang trang chủ, Blog hoặc catalogue. Giữ H1 gradient đang xuất bản; bản phối chữ navy ở worktree khác chưa được duyệt xuất bản.

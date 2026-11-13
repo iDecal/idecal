@@ -1,4 +1,5 @@
 ---
+import BlogPostCard from '../../components/BlogPostCard.astro';
 import { parseFragment } from 'parse5';
 import { relatedGuides } from '../../data/content-topics';
 import { expandSeoTemplate } from '../../data/seo';
@@ -75,6 +76,6 @@ const articleSchema={'@type':'BlogPosting','@id':canonical+'#article',headline:e
         <nav class="blog-sidebar-categories" aria-label="Chuyên mục bài viết"><h2>Khám phá chuyên mục</h2>{blogCategories.map(item=><a href={`/blog/chuyen-muc/${item.slug}`} aria-current={category.slug===item.slug?'page':undefined}>{item.name}<span aria-hidden="true">→</span></a>)}</nav>
       </aside>
     </div>
-    {relatedPosts.length>0&&<section class="blog-related"><div class="blog-section-title"><h2>Bài cùng chủ đề</h2><a href={`/blog/chuyen-muc/${category.slug}`}>Xem thêm →</a></div><div class="blog-post-grid">{relatedPosts.map(post=><article class="post-card"><a class="blog-card-image" href={`/blog/${post.id}`}><img src={post.data.image} alt={post.data.title} width="800" height="500" loading="lazy" /></a><div class="blog-card-content"><h3><a href={`/blog/${post.id}`}>{post.data.title}</a></h3><a class="blog-read-link" href={`/blog/${post.id}`}>Đọc bài viết <span aria-hidden="true">→</span></a></div></article>)}</div></section>}
+    {relatedPosts.length>0&&<section class="blog-related"><div class="blog-section-title"><h2>Bài cùng chủ đề</h2><a href={`/blog/chuyen-muc/${category.slug}`}>Xem thêm →</a></div><div class="blog-post-grid">{relatedPosts.map(post=><BlogPostCard post={post} heading="h3" />)}</div></section>}
   </div>
 </Layout>

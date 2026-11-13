@@ -1,13 +1,11 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { blogCategories, postCategory, sortBlogPosts } from '../data/blog-categories';
+import BlogPostCard from './BlogPostCard.astro';
+import { blogCategories, sortBlogPosts } from '../data/blog-categories';
 import '../styles/blog.css';
 interface Props { posts:CollectionEntry<'blog'>[]; title:string; description:string; categorySlug?:string; }
 const {posts,title,description,categorySlug}=Astro.props;
 const entries=sortBlogPosts(posts);
-const featured=!categorySlug?entries[0]:undefined;
-const listed=featured?entries.slice(1):entries;
-const dateFormat=new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Ho_Chi_Minh',day:'2-digit',month:'2-digit',year:'numeric'});
 ---
 <div class="blog-listing">
   <section class="blog-hero container"><div class="blog-hero-panel"><div class="blog-hero-art" aria-hidden="true"></div><div class="blog-hero-copy"><p class="blog-kicker">{categorySlug?<a href="/blog">Blog iDecal / Chuyên mục</a>:'Góc chia sẻ iDecal'}</p><h1>{title}</h1><p>{description}</p></div></div></section>
@@ -15,9 +13,8 @@ const dateFormat=new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Ho_Chi_Minh',da
     <nav class="blog-category-nav" aria-label="Chuyên mục Blog">
       <div class="blog-category-grid"><a href="/blog" aria-current={!categorySlug?'page':undefined}>Tất cả bài viết</a>{blogCategories.map(category=><a href={`/blog/chuyen-muc/${category.slug}`} aria-current={categorySlug===category.slug?'page':undefined}>{category.name}</a>)}</div>
     </nav>
-    {featured&&<article class="blog-featured"><a class="blog-featured-image" href={`/blog/${featured.id}`} aria-label={`Đọc ${featured.data.title}`}><img src={featured.data.image} alt={featured.data.title} width="960" height="600" fetchpriority="high" /></a><div class="blog-featured-content"><p class="blog-kicker">Bài viết mới</p><a class="blog-category-label" href={`/blog/chuyen-muc/${postCategory(featured).slug}`}>{postCategory(featured).name}</a><h2><a href={`/blog/${featured.id}`}>{featured.data.title}</a></h2><p>{featured.data.description}</p><a class="blog-read-link" href={`/blog/${featured.id}`}>Khám phá bài viết <span aria-hidden="true">→</span></a></div></article>}
-    <div class="blog-section-title"><h2>{categorySlug==='so-sanh-vat-lieu'?'Tìm hiểu từng loại vật liệu Decal':categorySlug?'Bài viết trong chuyên mục':'Đọc thêm từ iDecal'}</h2><span>{entries.length} bài viết</span></div>
-    <div id="blog-grid" class="blog-post-grid">{listed.map(post=><article class="post-card"><a class="blog-card-image" href={`/blog/${post.id}`} aria-label={`Đọc ${post.data.title}`}><img src={post.data.image} alt={post.data.title} width="800" height="500" loading="lazy" /></a><div class="blog-card-content"><div class="blog-card-meta"><a href={`/blog/chuyen-muc/${postCategory(post).slug}`}>{postCategory(post).name}</a><time datetime={post.data.pubDate.toISOString()}>{dateFormat.format(post.data.pubDate)}</time></div><h2><a href={`/blog/${post.id}`}>{post.data.title}</a></h2><p>{post.data.description}</p><a class="blog-read-link" href={`/blog/${post.id}`}>Đọc bài viết <span aria-hidden="true">→</span></a></div></article>)}</div>
+    <div class="blog-section-title"><h2>{categorySlug==='so-sanh-vat-lieu'?'Tìm hiểu từng loại vật liệu Decal':categorySlug?'Bài viết trong chuyên mục':'Bài viết mới từ iDecal'}</h2><span>{entries.length} bài viết</span></div>
+    <div id="blog-grid" class="blog-post-grid">{entries.map((post,index)=><BlogPostCard post={post} priority={index===0} />)}</div>
     {entries.length===0&&<p class="blog-empty">Chuyên mục đang được cập nhật. Bạn có thể xem các bài viết khác trong Blog iDecal.</p>}
   </section>
 </div>
