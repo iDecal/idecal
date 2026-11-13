@@ -11,10 +11,10 @@ const service=serviceOfferings.find(item=>item.slug==='in-decal')!;
 const sections=[{id:'cong-nghe-in',label:'Công nghệ in'},{id:'vat-lieu-in',label:'Chọn vật liệu'},{id:'vi-sao-chon-idecal',label:'Lợi ích'},{id:'quy-trinh-in',label:'Đặt in'},{id:'lp-cau-hoi',label:'Câu hỏi thường gặp'}];
 ---
 <div class="printing-page">
-  <section class="printing-hero compact-page-banner">
-    <div class="container printing-hero-grid">
-      <div class="compact-banner-copy"><nav class="printing-breadcrumb" aria-label="Đường dẫn trang"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><a href="/dich-vu/">Dịch vụ</a><span aria-hidden="true">/</span><span aria-current="page">In Decal</span></nav><p data-heading-label>In ấn theo thiết kế của bạn</p><h1>{source.hero.title}</h1><div class="printing-hero-lead" set:html={source.hero.blocks[0].html} /><div class="printing-actions"><a href={quote} class="btn-primary-solid">{source.hero.action}<span aria-hidden="true">→</span></a><a href="#vat-lieu-in" class="printing-text-link">Tìm hiểu vật liệu <span aria-hidden="true">↓</span></a></div><BannerBenefits benefits={['Đa dạng chất liệu','Hỗ trợ thiết kế','In theo yêu cầu'].map(title=>({title}))} /></div>
-      <figure class="printing-hero-photo"><img src={source.hero.image.src} alt={source.hero.image.alt} width={source.hero.image.width} height={source.hero.image.height} fetchpriority="high" /><figcaption>Hình ảnh, tem nhãn và Decal theo thiết kế</figcaption></figure>
+  <section class="printing-hero compact-page-banner" data-service-hero>
+    <div class="container printing-hero-grid" data-hero-layout>
+      <div class="compact-banner-copy" data-hero-copy><nav class="printing-breadcrumb" aria-label="Đường dẫn trang"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><a href="/dich-vu/">Dịch vụ</a><span aria-hidden="true">/</span><span aria-current="page">In Decal</span></nav><p data-heading-label>In ấn theo thiết kế của bạn</p><h1>{source.hero.title}</h1><div class="printing-hero-lead" set:html={source.hero.blocks[0].html} /><div class="printing-actions" data-hero-actions><a href={quote} class="btn-primary-solid">{source.hero.action}<span aria-hidden="true">→</span></a><a href="#vat-lieu-in" class="printing-text-link">Tìm hiểu vật liệu <span aria-hidden="true">↓</span></a></div><BannerBenefits benefits={['Đa dạng chất liệu','Hỗ trợ thiết kế','In theo yêu cầu'].map(title=>({title}))} /></div>
+      <figure class="printing-hero-photo" data-hero-media><img src={source.hero.image.src} alt={source.hero.image.alt} width={source.hero.image.width} height={source.hero.image.height} fetchpriority="high" /><figcaption>Hình ảnh, tem nhãn và Decal theo thiết kế</figcaption></figure>
     </div>
   </section>
   <nav class="printing-jump" aria-label="Nội dung dịch vụ in Decal"><div class="container">{sections.map(section=><a href={'#'+section.id}>{section.label}</a>)}</div></nav>

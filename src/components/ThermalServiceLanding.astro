@@ -27,7 +27,7 @@ const jumpItems=[
 ] as const;
 ---
 <div class="thermal-service-page" data-thermal-service>
-  <PageBanner title={thermalTitle} eyebrow="Dịch vụ & sản phẩm iDecal" image={category.image} imageAlt="Thi công phim cách nhiệt cho hệ kính văn phòng">
+  <PageBanner serviceHero title={thermalTitle} eyebrow="Dịch vụ & sản phẩm iDecal" image={category.image} imageAlt="Thi công phim cách nhiệt cho hệ kính văn phòng">
     <p slot="description">{category.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {thermalFilms.length} sản phẩm phim <span aria-hidden="true">↓</span></a><a href={quote} class="thermal-secondary-button">Tư vấn & báo giá <span aria-hidden="true">→</span></a></Fragment>
     <BannerBenefits slot="meta" benefits={landing.benefits.map(title=>({title}))} />

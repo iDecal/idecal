@@ -25,10 +25,10 @@ const signagePost=await getEntry('blog',signageGallery.featuredPost.slug);
 const signageImage=signagePost?{src:signagePost.data.image,alt:signagePost.data.title,title:signagePost.data.title,width:signageGallery.featuredPost.width,height:signageGallery.featuredPost.height}:undefined;
 ---
 <div class="advertising-page" data-advertising-page>
-  <section class="advertising-hero">
-    <div class="container advertising-hero-grid">
-      <div class="advertising-hero-copy"><p data-heading-label>{landing.name}</p><h1>{landing.headline}</h1><p class="advertising-lead">{landing.description}</p><div class="advertising-hero-actions"><a href="#giai-phap-quang-cao" class="btn-primary-solid">Chọn giải pháp quảng cáo <AdvertisingIcon name="arrow" /></a><a href={quote} class="advertising-secondary">Nhận tư vấn & báo giá</a></div><BannerBenefits benefits={landing.benefits.map(title=>({title}))}/></div>
-      <figure class="advertising-hero-photo"><img src={landing.image} alt="Decal quảng cáo trên mặt tiền showroom Toyota" width="1080" height="543" loading="eager" fetchpriority="high" decoding="async"/><figcaption><AdvertisingIcon name="camera"/>Quảng cáo trên hệ kính mặt tiền</figcaption></figure>
+  <section class="advertising-hero" data-service-hero>
+    <div class="container advertising-hero-grid" data-hero-layout>
+      <div class="advertising-hero-copy" data-hero-copy><p data-heading-label>{landing.name}</p><h1>{landing.headline}</h1><p class="advertising-lead">{landing.description}</p><div class="advertising-hero-actions" data-hero-actions><a href="#giai-phap-quang-cao" class="btn-primary-solid">Chọn giải pháp quảng cáo <AdvertisingIcon name="arrow" /></a><a href={quote} class="advertising-secondary">Nhận tư vấn & báo giá</a></div><BannerBenefits benefits={landing.benefits.map(title=>({title}))}/></div>
+      <figure class="advertising-hero-photo" data-hero-media><img src={landing.image} alt="Decal quảng cáo trên mặt tiền showroom Toyota" width="1080" height="543" loading="eager" fetchpriority="high" decoding="async"/><figcaption><AdvertisingIcon name="camera"/>Quảng cáo trên hệ kính mặt tiền</figcaption></figure>
     </div>
   </section>
   <nav class="advertising-nav" aria-label="Nội dung Decal quảng cáo"><div class="container">{navigation.map(item=><a href={'#'+item.id}><AdvertisingIcon name={item.icon}/><span>{item.label}</span></a>)}</div></nav>

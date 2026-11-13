@@ -7,7 +7,7 @@ const { src, alt, eager = false, productSlug } = Astro.props;
     <svg aria-hidden="true" class="h-9 w-9 text-primary/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.5"/><path d="m3 17 5-5 4 4 3-3 6 6"/></svg>
     <span class="text-xs">Hình ảnh đang cập nhật</span>
   </div>
-  <img src={src} alt={alt} width="800" height="800" loading={eager ? 'eager' : 'lazy'} class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" data-image-product={productSlug} data-product-photo />
+  <img src={src} alt={alt} width="800" height="800" loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" data-image-product={productSlug} data-product-photo />
 </div>
 <script>
   document.querySelectorAll<HTMLImageElement>('[data-product-photo]').forEach(image => {

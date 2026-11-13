@@ -5,10 +5,10 @@ import '../styles/elevator-service.css';
 ---
 <div class="elevator-page">
   <nav class="container elevator-breadcrumb" aria-label="Đường dẫn trang"><ol><li><a href="/">Trang chủ</a></li><li><a href={service.parent.href}>{service.parent.name}</a></li><li aria-current="page">Dán decal thang máy</li></ol></nav>
-  <section class="container elevator-hero">
-    <div><p class="elevator-eyebrow">Film nội thất & decal in quảng cáo</p><h1>{service.title}</h1><p class="elevator-lead">{service.intro}</p><div class="elevator-actions"><a href={service.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá →</a><a href="tel:0866077040" class="elevator-phone"><small>Gọi cho iDecal</small><span>0866-077-040</span></a></div><a href="#giai-phap-thang-may" class="btn-idecal-bold elevator-hero-link">Chọn giải pháp cho thang máy ↓</a></div>
-    <figure><img src={service.heroImage.src} alt={service.heroImage.alt} title={service.heroImage.title} width={service.heroImage.width} height={service.heroImage.height} fetchpriority="high" decoding="async" /><figcaption>{service.heroCaption}</figcaption></figure>
-  </section>
+  <section class="elevator-hero" data-service-hero><div class="container" data-hero-layout>
+    <div data-hero-copy><p class="elevator-eyebrow">Film nội thất & decal in quảng cáo</p><h1>{service.title}</h1><p class="elevator-lead">{service.intro}</p><div class="elevator-actions" data-hero-actions><a href={service.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá →</a><a href="tel:0866077040" class="elevator-phone"><small>Gọi cho iDecal</small><span>0866-077-040</span></a></div><a href="#giai-phap-thang-may" class="btn-idecal-bold elevator-hero-link">Chọn giải pháp cho thang máy ↓</a></div>
+    <figure data-hero-media><img src={service.heroImage.src} alt={service.heroImage.alt} title={service.heroImage.title} width={service.heroImage.width} height={service.heroImage.height} fetchpriority="high" decoding="async" /><figcaption>{service.heroCaption}</figcaption></figure>
+  </div></section>
   <nav class="container elevator-jump" aria-label="Nội dung dịch vụ thang máy"><a href="#giai-phap-thang-may">Giải pháp</a><a href="#bao-gia-thang-may">Báo giá</a><a href="#quy-trinh-thang-may">Quy trình</a><a href="#anh-dan-thang-may-title">Hình ảnh</a><a href="#hoi-dap-thang-may">Hỏi đáp</a></nav>
   <section id="giai-phap-thang-may" class="container elevator-section">
     <header class="elevator-heading"><p class="elevator-eyebrow">Chọn theo nhu cầu sử dụng</p><h2>Hai giải pháp dán decal thang máy</h2><p>Làm mới diện mạo hoặc truyền tải thông điệp. Vật liệu và cách hoàn thiện được chọn theo từng bề mặt.</p></header>

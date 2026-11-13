@@ -5,22 +5,22 @@ import InteriorFilmImage from './InteriorFilmImage.astro';
 import '../styles/wave-glass.css';
 ---
 <div class="wave-glass-page">
-  <section class="container wave-hero">
-    <div class="wave-hero-copy">
+  <section class="wave-hero" data-service-hero><div class="container" data-hero-layout>
+    <div class="wave-hero-copy" data-hero-copy>
       <p class="wave-eyebrow">Dịch vụ iDecal</p>
       <h1 id={source.hero.heading.id}>{source.title}</h1>
       <div class="wave-original wave-lead" set:html={source.hero.paragraphs[0].html} />
-      <div class="wave-actions">
+      <div class="wave-actions" data-hero-actions>
         {source.hero.cta.map(link=><a href={link.href} class="btn-primary-solid">{link.label}<span aria-hidden="true">→</span></a>)}
         <a href="#mau-decal-van-song" class="btn-idecal-bold">Khám phá mẫu decal ↓</a>
       </div>
-      <div class="wave-hero-points">
+      <div class="wave-hero-points" data-hero-benefits>
         <div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} />
         <BannerBenefits benefits={source.hero.points.map(title=>({title}))} />
       </div>
     </div>
-    <figure class="wave-hero-photo"><InteriorFilmImage image={source.hero.image} eager /></figure>
-  </section>
+    <figure class="wave-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.image} eager /></figure>
+  </div></section>
   <nav class="container wave-jump" aria-label="Nội dung dịch vụ decal vân sóng">
     <a href="#mau-decal-van-song">Mẫu & báo giá</a><a href="#uu-diem-van-song">Ưu điểm</a><a href="#hoi-dap-van-song">Câu hỏi thường gặp</a><a href="#thi-cong-van-song">Ảnh thi công</a>
   </nav>

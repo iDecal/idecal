@@ -24,16 +24,16 @@ const sectionLinks=[
   <nav class="container sign-breadcrumb" aria-label="Đường dẫn trang">
     <ol><li><a href="/">Trang chủ</a></li><li><a href={source.parent.href}>{source.parent.name}</a></li><li aria-current="page">Dán decal bảng hiệu</li></ol>
   </nav>
-  <section class="container sign-hero">
-    <div>
+  <section class="sign-hero" data-service-hero><div class="container" data-hero-layout>
+    <div data-hero-copy>
       <p class="sign-eyebrow">{source.hero.eyebrow}</p>
       <h1>{source.hero.title}</h1>
       <div class="sign-original sign-lead" set:html={source.hero.intro.html} />
-      <div class="sign-actions"><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá <span aria-hidden="true">→</span></a><a href={source.hero.actions[1].href} class="sign-phone"><small>{source.hero.actions[0].label}</small><span>{source.hero.actions[1].label}</span></a></div>
+      <div class="sign-actions" data-hero-actions><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá <span aria-hidden="true">→</span></a><a href={source.hero.actions[1].href} class="sign-phone"><small>{source.hero.actions[0].label}</small><span>{source.hero.actions[1].label}</span></a></div>
       <div class="sign-hero-links"><a href={'#'+source.pricing.heading.id} class="btn-idecal-bold sign-price-jump">Xem bảng giá dịch vụ ↓</a><a href={'#'+gallery.id+'-title'} class="btn-idecal-bold sign-gallery-jump">Xem ảnh thi công ↓</a></div>
     </div>
-    <figure class="sign-hero-visual"><InteriorFilmImage image={source.hero.image} eager /><figcaption><strong>{source.hero.badge.title}</strong><span>{source.hero.badge.text}</span></figcaption></figure>
-  </section>
+    <figure class="sign-hero-visual" data-hero-media><InteriorFilmImage image={source.hero.image} eager /><figcaption><strong>{source.hero.badge.title}</strong><span>{source.hero.badge.text}</span></figcaption></figure>
+  </div></section>
   <nav class="sign-jump" aria-label="Nội dung dịch vụ bảng hiệu"><div class="container">{sectionLinks.map(({heading,label})=><a href={'#'+heading.id}>{label}</a>)}</div></nav>
 
   <section class="container sign-section sign-introduction" aria-labelledby={source.introduction.heading.id}>
