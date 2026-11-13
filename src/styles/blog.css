@@ -67,7 +67,7 @@
 .blog-toc-label{display:flex;align-items:center;gap:12px;min-width:0}.blog-toc-icon{flex:0 0 22px;color:#9bd9ff}.blog-toc-toggle{flex:0 0 20px;color:#d8eaff;transition:transform .18s ease}.blog-toc[open] .blog-toc-toggle{transform:rotate(180deg)}
 .blog-toc nav{display:grid;gap:6px;margin-top:14px;padding-top:14px;padding-left:4px;border-top:1px solid #ffffff26}
 .blog-toc a{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;color:#e1efff;font-size:16px;line-height:1.65;overflow-wrap:anywhere;transition:background-color .15s,color .15s}
-.blog-toc a:hover{color:#fff;background:#ffffff12}.blog-toc .blog-toc-child{padding-left:40px}
+.blog-toc a:hover{color:#fff;background:#ffffff12}.blog-toc .blog-toc-child{padding-left:40px;font-size:14px}
 .blog-toc-section-icon{flex:0 0 18px;margin-top:4px;color:#9bd9ff}
 .blog-toc a>span{min-width:0}
 .blog-sidebar-categories{padding:0 6px}.blog-sidebar-categories h2{font-size:15px;font-weight:550;margin:0 0 12px}.blog-sidebar-categories a{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid #e6edf5;color:#52677c}.blog-sidebar-categories a[aria-current=page]{color:#0d6b96;font-weight:550}
