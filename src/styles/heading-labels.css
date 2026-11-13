@@ -1,4 +1,4 @@
-/* Quiet homepage-style labels are presentational, never fake clickable buttons. */
+/* Prominent brand-gradient heading labels; still presentational, not fake buttons. */
 @layer heading-label-policy {
   body :is(.page-content,.homepage-original) :is([class*='eyebrow'],[class*='kicker'],.consult-label,.case-category,[data-heading-label]) {
     display:inline-flex!important;
@@ -7,10 +7,10 @@
     max-width:100%!important;
     padding:8px 14px!important;
     margin:0 0 20px!important;
-    border:1px solid #e0eafa!important;
+    border:1px solid transparent!important;
     border-radius:999px!important;
-    background:linear-gradient(110deg,#eef8ff,#f5efff)!important;
-    color:#1b4f7a!important;
+    background:linear-gradient(110deg,#125a9a,#4338a0 55%,#6422c5)!important;
+    color:#fff!important;
     font-family:'Inter Variable',sans-serif!important;
     font-size:14px!important;
     font-weight:500!important;
@@ -29,4 +29,9 @@
     background:none!important;box-shadow:none!important;
   }
   body :is(.banner-benefit-list,.office-hero-points,.lp-hero-points,.wave-hero-points,.interior-film-points) li:has(svg)::before {display:none!important;}
+}
+
+/* Keep inline links inside heading labels legible against the dark gradient. */
+@layer ux-policy {
+  body :is(.page-content,.homepage-original) :is([class*='eyebrow'],[class*='kicker'],.consult-label,.case-category,[data-heading-label]) a {color:#fff!important;-webkit-text-fill-color:#fff!important;}
 }
