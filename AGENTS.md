@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Menu Dịch vụ theo yêu cầu mới: không có ảnh hoặc icon minh họa trong các mục desktop/mobile; MenuOffering chỉ hiện tên/mô tả ngắn, mobile giấu mô tả. Hai cột giải pháp/vật liệu và kỹ thuật/gia công, nền trắng/xanh rất nhạt, đường phân cách nét đứt nhẹ, CTA xanh–tím. Giữ đầy đủ mười URL, điều khiển menu/bàn phím, bộ chọn khu vực và các menu khác.
+
 - Thẻ Blog theo ảnh mẫu mới: dùng BlogPostCard cho /blog, chuyên mục và Bài cùng chủ đề. Lưới 3 cột desktop/2 tablet/1 mobile, ảnh cover 2:1, nền xanh xám nhạt #f3f8ff không viền, tiêu đề → giới thiệu ngắn 15 từ → link Đọc thêm kèm mũi tên chéo xuống phải 45° luôn hiển thị. Không có chuyên mục/ngày trong thẻ; giữ metadata header bài chi tiết. Giới thiệu dùng blog-card-excerpts.ts, chỉ thay trình bày, không đổi description SEO. Bỏ khối featured riêng; giữ nguyên tiêu đề/ảnh/nội dung bài chi tiết và URL. Giữ Google Sans Flex cho heading, Inter cho body, màu heading/link hiện hành và link không gạch dưới. Không đổi Blog trang chủ trong đợt này. Bài đầu danh sách eager/high; các ảnh sau lazy. Metadata của header bài chi tiết giữ cách bố trí cũ.
 
 - Chủ website đã hủy mẫu hero ảnh nền/CTA-review nổi: giữ lại kiểu nền sáng, chữ trái/ảnh phải. Không đưa lại overlay hoặc ô review trong hero nếu chưa có yêu cầu mới.
