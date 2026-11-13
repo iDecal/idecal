@@ -4,9 +4,10 @@ Thiết kế lại phần đầu trang theo yêu cầu chủ website, giữ nộ
 
 ## Bố cục
 
-- Bản chỉnh lần hai theo phản hồi: nền trắng chuyển xanh nhẹ; tiêu đề lớn bên trái, giới thiệu/CTA bên phải phía trên, ảnh panorama rộng ở dưới. Không dùng lại bố cục chữ trái/ảnh phải.
-- Mobile dưới 768px: nhãn → H1 → ảnh → giới thiệu → CTA → lợi ích; ảnh xuất hiện sớm thay vì bị đẩy dưới toàn bộ phần chữ.
-- Ảnh cover 2.8:1 desktop, 2.2:1 tablet và 3:2 mobile; khung có kích thước cố định.
+- Theo phản hồi mới nhất: giữ kiểu chữ trái/ảnh phải; không dùng bố cục panorama phía dưới.
+- Desktop chia cột 0.9:1.15, khoảng cách 48px; ảnh chiếm khoảng 56% vùng cột và có tỉ lệ 6:5, viền trắng 4px/bóng nhẹ để nổi trên nền sáng. H1 quay về cỡ global hiện hành.
+- Tablet dưới 1024px xếp dọc; mobile dưới 768px đặt nhãn → H1 → ảnh → giới thiệu → CTA → lợi ích.
+- Ảnh cover 6:5 desktop, 16:10 tablet và 3:2 mobile; khung giữ kích thước ổn định.
 - Nhãn nhỏ, H1 gradient theo quy tắc hiện hành; CTA chính gradient và phụ nền trắng, vùng chạm tối thiểu 52px.
 - Lợi ích dùng icon/chữ, tách bằng đường kẻ mảnh.
 - CSS chỉ áp dụng qua marker data-service-hero; PageBanner opt-in serviceHero=true cho cách nhiệt.
@@ -22,7 +23,7 @@ Trang chủ, Blog và catalogue không nhận marker và giữ bố cục hiện
 
 - npm test: build, nguồn nhập, nội dung, SEO, schema, headings, ảnh và kiểm tra xác thực đều qua.
 - npm run check: 194 tệp, không lỗi/cảnh báo/hint.
-- Playwright: 12 route × 6 chiều rộng (1440, 1280, 1024, 768, 390, 320), không tràn ngang; đúng thứ tự bố cục panorama/mobile, ảnh tải thành công, CTA >=48px, hero không lazy-load và giữ H1 gradient.
+- Playwright: 12 route × 6 chiều rộng (1440, 1280, 1024, 768, 390, 320), không tràn ngang; đúng cột desktop (ảnh rộng hơn chữ)/thứ tự mobile, ảnh tải thành công, CTA >=48px, hero không lazy-load và giữ H1 gradient.
 - Axe WCAG A/AA trên các hero tại 1440/390: không phát hiện vi phạm tự động. Đây không thay thế đánh giá accessibility thủ công toàn site.
 - Kiểm tra giao diện bằng ảnh chụp desktop/mobile.
 - test-wave-glass.py và test-elevator.py chạy qua bản preview cổng 4323: FAQ bàn phím, anchor, fallback ảnh, thư viện ảnh, CTA/form và nội dung khi tắt JavaScript hoạt động.

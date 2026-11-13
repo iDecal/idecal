@@ -1,6 +1,6 @@
 # Quy tắc giữ nội dung của chủ website
 
-- Hero dịch vụ dùng các marker data-service-hero/data-hero-layout/data-hero-copy/data-hero-actions/data-hero-media và lớp service-heroes.css riêng: nền sáng, tiêu đề/giới thiệu hai cột phía trên và ảnh panorama phía dưới trên desktop; mobile đặt ảnh ngay sau H1 rồi đến giới thiệu/CTA/lợi ích, giữ nguyên H1/nội dung/ảnh/CTA nguồn. PageBanner chỉ nhận bố cục mới khi serviceHero=true; không áp dụng sang trang chủ, Blog hoặc catalogue. Giữ H1 gradient đang xuất bản; bản phối chữ navy ở worktree khác chưa được duyệt xuất bản.
+- Hero dịch vụ dùng các marker data-service-hero/data-hero-layout/data-hero-copy/data-hero-actions/data-hero-media và lớp service-heroes.css riêng: nền sáng, giữ bố cục chữ trái/ảnh phải trên desktop; ảnh chiếm phần lớn hơn (khoảng 56% vùng cột), khung 6:5 và bóng nhẹ. Mobile đặt ảnh ngay sau H1 rồi đến giới thiệu/CTA/lợi ích, giữ nguyên H1/nội dung/ảnh/CTA nguồn. PageBanner chỉ nhận bố cục mới khi serviceHero=true; không áp dụng sang trang chủ, Blog hoặc catalogue. Giữ H1 gradient đang xuất bản; bản phối chữ navy ở worktree khác chưa được duyệt xuất bản.
 
 - Trang Liên hệ /lien-he-idecal/ ưu tiên biểu mẫu đặt hàng ở đầu trang, trước địa chỉ và thông tin phụ. Có lựa chọn mua sản phẩm/vật liệu, trường nhu cầu và số lượng hiển thị trực tiếp; giữ tham số sản phẩm, dịch vụ, khu vực/phường và lựa chọn PVC. Luồng đặt hàng hiện là soạn nội dung → sao chép → gửi Zalo để iDecal xác nhận, không hiển thị thông báo đã gửi/đã tạo đơn tự động.
 
