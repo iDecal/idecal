@@ -1,4 +1,5 @@
 ---
+import ServiceHeroReview from './ServiceHeroReview.astro';
 import BannerBenefits from './BannerBenefits.astro';
 import source from '../data/interior-film-original.json';
 import {interiorFilmApplications as applications} from '../data/interior-film-applications';
@@ -20,7 +21,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
         <p class="interior-film-eyebrow" data-heading-label>Làm mới không gian cùng iDecal</p>
         <h1>{source.title}</h1>
         <div class="interior-film-lead" set:html={source.hero.paragraphs[0].html} />
-        <div class="interior-film-actions" data-hero-actions><a href="#mau-film-noi-that" class="btn-primary-solid">Khám phá mẫu film <span aria-hidden="true">↓</span></a><a href={quote} class="interior-film-button-secondary">Tư vấn & báo giá <span aria-hidden="true">→</span></a></div>
+        <div class="interior-film-actions" data-hero-actions><div data-hero-action-main><div data-hero-action-links><a href="#mau-film-noi-that" class="btn-primary-solid">Khám phá mẫu film <span aria-hidden="true">↓</span></a><a href={quote} class="interior-film-button-secondary">Tư vấn & báo giá <span aria-hidden="true">→</span></a></div><span data-hero-signature aria-hidden="true">iDecal</span></div><ServiceHeroReview /></div>
         <div class="interior-film-points" data-hero-benefits><div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} /><BannerBenefits benefits={source.hero.points.map(title=>({title}))} /></div>
       </div>
       <figure class="interior-film-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.images[0]} eager /><figcaption>Film dán nội thất<span aria-hidden="true">iDecal</span></figcaption></figure>

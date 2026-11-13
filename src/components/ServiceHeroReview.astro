@@ -1,0 +1,8 @@
+---
+import {serviceHeroReview as review} from '../data/service-hero-review';
+const rated=typeof review.score==='number' && typeof review.count==='number' && review.count>0;
+---
+<a data-hero-review href={review.url} target="_blank" rel="noopener noreferrer" aria-label={`Xem đánh giá iDecal trên ${review.platform} (mở tab mới)`}>
+  {rated ? <div data-review-score><strong>{review.score!.toFixed(1)}</strong><span>({review.count!.toLocaleString('vi-VN')} đánh giá)</span></div> : <div data-review-heading><span>Khách hàng nói gì?</span><strong>Đánh giá iDecal</strong></div>}
+  <span data-review-source><span data-review-platform aria-hidden="true">{review.platform==='Google'?'G':'f'}</span>{rated ? <span data-review-stars aria-label={`${review.score} trên 5 sao`}>★★★★★</span> : <span>Xem phản hồi</span>}</span>
+</a>

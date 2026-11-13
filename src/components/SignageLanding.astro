@@ -1,4 +1,5 @@
 ---
+import ServiceHeroReview from './ServiceHeroReview.astro';
 import {signage as source,signageCopy,signageTableHtml} from '../data/signage-presentation';
 import InteriorFilmImage from './InteriorFilmImage.astro';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
@@ -29,7 +30,7 @@ const sectionLinks=[
       <p class="sign-eyebrow">{source.hero.eyebrow}</p>
       <h1>{source.hero.title}</h1>
       <div class="sign-original sign-lead" set:html={source.hero.intro.html} />
-      <div class="sign-actions" data-hero-actions><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá <span aria-hidden="true">→</span></a><a href={source.hero.actions[1].href} class="sign-phone"><small>{source.hero.actions[0].label}</small><span>{source.hero.actions[1].label}</span></a></div>
+      <div class="sign-actions" data-hero-actions><div data-hero-action-main><div data-hero-action-links><a href={signageCopy.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá <span aria-hidden="true">→</span></a><a href={source.hero.actions[1].href} class="sign-phone"><small>{source.hero.actions[0].label}</small><span>{source.hero.actions[1].label}</span></a></div><span data-hero-signature aria-hidden="true">iDecal</span></div><ServiceHeroReview /></div>
       <div class="sign-hero-links"><a href={'#'+source.pricing.heading.id} class="btn-idecal-bold sign-price-jump">Xem bảng giá dịch vụ ↓</a><a href={'#'+gallery.id+'-title'} class="btn-idecal-bold sign-gallery-jump">Xem ảnh thi công ↓</a></div>
     </div>
     <figure class="sign-hero-visual" data-hero-media><InteriorFilmImage image={source.hero.image} eager /><figcaption><strong>{source.hero.badge.title}</strong><span>{source.hero.badge.text}</span></figcaption></figure>
