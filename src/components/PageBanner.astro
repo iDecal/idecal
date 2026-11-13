@@ -1,5 +1,4 @@
 ---
-import ServiceHeroReview from './ServiceHeroReview.astro';
 import ProductImage from './ProductImage.astro';
 interface Props {
   title: string;
@@ -13,7 +12,7 @@ const { title, eyebrow, image, imageAlt, serviceHero=false } = Astro.props;
 <section class="compact-page-banner" data-service-hero={serviceHero||undefined}>
   <div class="container">
     <div class="compact-banner-grid" data-hero-layout={serviceHero||undefined}>
-      <div class="compact-banner-copy" data-hero-copy={serviceHero||undefined}><p class="compact-banner-eyebrow">{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="compact-banner-description"><slot name="description" /></div><div class="compact-banner-actions" data-hero-actions={serviceHero||undefined}>{serviceHero ? <><div data-hero-action-main><div data-hero-action-links><slot name="actions" /></div><span data-hero-signature aria-hidden="true">iDecal</span></div><ServiceHeroReview /></> : <slot name="actions" />}</div>{Astro.slots.has('meta') && <div class="compact-banner-meta" data-hero-benefits={serviceHero||undefined}><slot name="meta" /></div>}</div>
+      <div class="compact-banner-copy" data-hero-copy={serviceHero||undefined}><p class="compact-banner-eyebrow">{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="compact-banner-description"><slot name="description" /></div><div class="compact-banner-actions" data-hero-actions={serviceHero||undefined}><slot name="actions" /></div>{Astro.slots.has('meta') && <div class="compact-banner-meta" data-hero-benefits={serviceHero||undefined}><slot name="meta" /></div>}</div>
       <figure class="compact-banner-image" data-hero-media={serviceHero||undefined}><ProductImage src={image} alt={imageAlt} eager /><slot name="image-badge" /></figure>
     </div>
   </div>

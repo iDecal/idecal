@@ -1,5 +1,4 @@
 ---
-import ServiceHeroReview from './ServiceHeroReview.astro';
 import BannerBenefits from './BannerBenefits.astro';
 import source from '../data/wave-glass-original.json';
 import InteriorFilmImage from './InteriorFilmImage.astro';
@@ -11,10 +10,10 @@ import '../styles/wave-glass.css';
       <p class="wave-eyebrow">Dịch vụ iDecal</p>
       <h1 id={source.hero.heading.id}>{source.title}</h1>
       <div class="wave-original wave-lead" set:html={source.hero.paragraphs[0].html} />
-      <div class="wave-actions" data-hero-actions><div data-hero-action-main><div data-hero-action-links>
+      <div class="wave-actions" data-hero-actions>
         {source.hero.cta.map(link=><a href={link.href} class="btn-primary-solid">{link.label}<span aria-hidden="true">→</span></a>)}
         <a href="#mau-decal-van-song" class="btn-idecal-bold">Khám phá mẫu decal ↓</a>
-      </div><span data-hero-signature aria-hidden="true">iDecal</span></div><ServiceHeroReview /></div>
+      </div>
       <div class="wave-hero-points" data-hero-benefits>
         <div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} />
         <BannerBenefits benefits={source.hero.points.map(title=>({title}))} />

@@ -1,5 +1,4 @@
 ---
-import ServiceHeroReview from './ServiceHeroReview.astro';
 import service from '../data/elevator-service.json';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
 import '../styles/elevator-service.css';
@@ -7,7 +6,7 @@ import '../styles/elevator-service.css';
 <div class="elevator-page">
   <nav class="container elevator-breadcrumb" aria-label="Đường dẫn trang"><ol><li><a href="/">Trang chủ</a></li><li><a href={service.parent.href}>{service.parent.name}</a></li><li aria-current="page">Dán decal thang máy</li></ol></nav>
   <section class="elevator-hero" data-service-hero><div class="container" data-hero-layout>
-    <div data-hero-copy><p class="elevator-eyebrow">Film nội thất & decal in quảng cáo</p><h1>{service.title}</h1><p class="elevator-lead">{service.intro}</p><div class="elevator-actions" data-hero-actions><div data-hero-action-main><div data-hero-action-links><a href={service.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá →</a><a href="tel:0866077040" class="elevator-phone"><small>Gọi cho iDecal</small><span>0866-077-040</span></a></div><span data-hero-signature aria-hidden="true">iDecal</span></div><ServiceHeroReview /></div><a href="#giai-phap-thang-may" class="btn-idecal-bold elevator-hero-link">Chọn giải pháp cho thang máy ↓</a></div>
+    <div data-hero-copy><p class="elevator-eyebrow">Film nội thất & decal in quảng cáo</p><h1>{service.title}</h1><p class="elevator-lead">{service.intro}</p><div class="elevator-actions" data-hero-actions><a href={service.quoteHref} class="btn-primary-solid">Nhận tư vấn & báo giá →</a><a href="tel:0866077040" class="elevator-phone"><small>Gọi cho iDecal</small><span>0866-077-040</span></a></div><a href="#giai-phap-thang-may" class="btn-idecal-bold elevator-hero-link">Chọn giải pháp cho thang máy ↓</a></div>
     <figure data-hero-media><img src={service.heroImage.src} alt={service.heroImage.alt} title={service.heroImage.title} width={service.heroImage.width} height={service.heroImage.height} fetchpriority="high" decoding="async" /><figcaption>{service.heroCaption}</figcaption></figure>
   </div></section>
   <nav class="container elevator-jump" aria-label="Nội dung dịch vụ thang máy"><a href="#giai-phap-thang-may">Giải pháp</a><a href="#bao-gia-thang-may">Báo giá</a><a href="#quy-trinh-thang-may">Quy trình</a><a href="#anh-dan-thang-may-title">Hình ảnh</a><a href="#hoi-dap-thang-may">Hỏi đáp</a></nav>
