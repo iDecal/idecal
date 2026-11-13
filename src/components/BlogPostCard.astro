@@ -1,17 +1,16 @@
 ---
 import type {CollectionEntry} from 'astro:content';
-import {postCategory} from '../data/blog-categories';
+import {blogCardExcerpt} from '../data/blog-card-excerpts';
 interface Props {post:CollectionEntry<'blog'>;heading?:'h2'|'h3';priority?:boolean;}
 const {post,heading='h2',priority=false}=Astro.props;
 const Heading=heading;
-const category=postCategory(post);
-const dateFormat=new Intl.DateTimeFormat('vi-VN',{timeZone:'Asia/Ho_Chi_Minh',day:'2-digit',month:'2-digit',year:'numeric'});
+const introduction=blogCardExcerpt(post.id,post.data.description);
 ---
 <article class="post-card">
   <a class="blog-card-image" href={`/blog/${post.id}`} aria-label={`Đọc ${post.data.title}`}><img src={post.data.image} alt={post.data.title} width="800" height="400" loading={priority?'eager':'lazy'} fetchpriority={priority?'high':undefined} /></a>
   <div class="blog-card-content">
     <Heading><a href={`/blog/${post.id}`}>{post.data.title}</a></Heading>
-    <div class="blog-card-meta"><a href={`/blog/chuyen-muc/${category.slug}`}>{category.name}</a><time datetime={post.data.pubDate.toISOString()}>{dateFormat.format(post.data.pubDate)}</time></div>
-    <a class="blog-read-link" href={`/blog/${post.id}`} aria-label={`Đọc thêm: ${post.data.title}`}>Đọc thêm <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 6 12 12M6 18h12V6"/></svg></a>
+    <p class="blog-card-introduction">{introduction}</p>
+    <a class="blog-read-link" href={`/blog/${post.id}`} aria-label={`Đọc thêm: ${post.data.title}`}>Đọc thêm <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></a>
   </div>
 </article>
