@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Chủ website yêu cầu tăng tương phản theo section trên toàn site: section-contrast.css là lớp important đầu tiên; mở đầu/các khối lợi ích–quy trình dùng navy, CTA dùng teal đậm, giá/FAQ dùng xanh xám nhạt, phần đọc và thư viện ảnh nền trắng. Đây là ngoại lệ mới thay yêu cầu mọi hero luôn sáng. Tiêu đề nền tối trắng, đoạn/link sáng; thẻ trắng lồng trong nền tối đặt lại biến chữ navy/teal. Nút vàng ấm #e6c85b chữ navy. Giữ font, nội dung, ảnh, bố cục và trạng thái tương tác; thân bài Blog tiếp tục sáng. Chưa xuất bản.
+
 - Chủ website yêu cầu áp dụng bảng màu Airify từ HTML mẫu: navy #102e57/#0d1b36, teal #2e9f94 (link dùng #18766d để đủ tương phản), vàng ấm dịu #e6c85b cho CTA chữ navy, nền #e4eef2/trắng. airify-colors.css là lớp important đầu tiên, chỉ đổi UI, giữ font/bố cục/nội dung/ảnh/logo/mẫu vật liệu. H1 chuyển navy phẳng theo bảng màu mới, tiêu đề trên nền tối vẫn trắng. Quy tắc này thay bảng gradient xanh–tím và việc loại màu cam trước đây. Chỉ là bản xem trước, chưa tự xuất bản.
 
 - Bộ lọc trang /du-an dùng thanh pill gọn, đếm công trình theo nhóm, chỉ hiện nhóm có dữ liệu; nhóm mới tự xuất hiện khi có công trình. Giữ projectTypes đầy đủ cho CMS/validation, không xóa loại dự án khỏi dữ liệu. Mobile cuộn ngang một dòng, vùng chạm 48px; giữ aria-pressed, số kết quả aria-live, lọc bằng bàn phím và hiển thị mọi công trình khi tắt JavaScript.
