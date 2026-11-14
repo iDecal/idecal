@@ -1,0 +1,19 @@
+/* Match the about hero, including nested ServiceHero figures. */
+@layer technical-heroes {
+ body [data-technical-hero] {padding-block:64px!important;background:#f5f8fa!important;}
+ body [data-technical-hero] [data-hero-layout] {grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:64px!important;align-items:center!important;}
+ body [data-technical-hero] [data-hero-media] {height:400px!important;max-height:400px!important;min-height:0!important;aspect-ratio:auto!important;overflow:visible!important;border:0!important;background:transparent!important;border-radius:24px!important;box-shadow:0 14px 32px 6px #ffffffe6!important;}
+ body [data-technical-hero] [data-hero-media]>figure {position:relative!important;inset:auto!important;display:block!important;width:100%!important;height:100%!important;min-height:0!important;max-height:400px!important;aspect-ratio:auto!important;margin:0!important;padding:0!important;border:0!important;border-radius:inherit!important;overflow:hidden!important;}
+ body [data-technical-hero] [data-hero-media] img {width:100%!important;height:100%!important;max-height:400px!important;object-fit:cover!important;border-radius:inherit!important;}
+ body [data-technical-hero] [data-hero-media]::before {content:''!important;position:absolute!important;inset:0!important;background:#fcf6df!important;border-radius:inherit!important;transform:translate(-12px,12px) rotate(-2deg)!important;z-index:-1!important;}
+ @media(max-width:1023px) {
+  body [data-technical-hero] {padding-block:40px!important;}
+  body [data-technical-hero] [data-hero-layout] {grid-template-columns:minmax(0,1fr)!important;gap:32px!important;}
+ }
+ @media(max-width:767px) {
+  body [data-technical-hero] {padding-block:28px!important;}
+  body [data-technical-hero] [data-hero-layout] {gap:24px!important;}
+  body [data-technical-hero] [data-hero-media] {height:clamp(210px,64vw,320px)!important;border-radius:18px!important;}
+  body [data-technical-hero] [data-hero-media]::before {transform:translate(-7px,9px) rotate(-2deg)!important;}
+ }
+}
