@@ -1,0 +1,7 @@
+/* Keep benefit rows on their section surface; separate related-post cards. */
+@layer surface-corrections {
+ body .interior-film-benefits article {background:transparent!important;background-image:none!important;}
+ body .blog-related {background:#fff!important;background-image:none!important;}
+ body .blog-related .blog-post-grid {background:transparent!important;}
+ body .blog-related .post-card {background:#f3f8ff!important;}
+}
