@@ -1,0 +1,15 @@
+/* Secondary actions beside the gradient primary use a light surface. */
+@layer secondary-button-surfaces {
+ body main :is(a[data-cta-secondary]:not([data-cta-text]),.btn-primary-solid+a,[data-hero-actions]>a:not(:first-child)) {
+  background:#eaf4ff!important;background-image:none!important;color:#1d4c71!important;
+  border:0!important;box-shadow:none!important;border-radius:10px!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:12px!important;
+  padding:13px 20px!important;min-height:48px!important;
+ }
+ body main :is(a[data-cta-secondary]:not([data-cta-text]),.btn-primary-solid+a,[data-hero-actions]>a:not(:first-child)):hover {
+  background:#dcecff!important;background-image:none!important;color:#006edc!important;filter:none!important;
+ }
+ body main :is(a[data-cta-secondary]:not([data-cta-text]),.btn-primary-solid+a,[data-hero-actions]>a:not(:first-child)) :is(span,strong,svg) {
+  color:inherit!important;-webkit-text-fill-color:currentColor!important;
+ }
+}

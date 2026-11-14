@@ -7,7 +7,6 @@ import {interiorFilmGallery} from '../data/interior-film-visuals';
 import InteriorFilmImage from './InteriorFilmImage.astro';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
 import '../styles/interior-film.css';
-const materialLabels=['Vân gỗ','Vân đá Marble','Đơn sắc','Kim loại','Vân bê tông','Vân vải'];
 const materialIds=['van-go','van-da','don-sac','kim-loai','be-tong','van-vai'];
 const sections=[{id:'mau-film-noi-that',label:'Chọn mẫu film'},{id:'loi-ich-film-noi-that',label:'Lợi ích'},{id:'ung-dung-film-noi-that',label:'Ứng dụng'},{id:'anh-cong-trinh-film-noi-that',label:'Ảnh công trình'},{id:'cau-hoi-film-noi-that',label:'Câu hỏi thường gặp'}];
 const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
@@ -30,7 +29,6 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
 
   <section id="mau-film-noi-that" class="container interior-film-section" aria-labelledby={source.patternsHeading.id}>
     <header class="interior-film-section-heading"><div><p class="interior-film-eyebrow" data-heading-label>Vật liệu & bề mặt</p><h2 id={source.patternsHeading.id}>{source.patternsHeading.title}</h2></div>{source.patternsHeading.subtitle&&<p>{source.patternsHeading.subtitle}</p>}</header>
-    <nav class="interior-film-material-picker" aria-label="Chọn nhóm mẫu film">{materialLabels.map((label,index)=><a href={'#film-'+materialIds[index]}><span aria-hidden="true">{'0'+(index+1)}</span>{label}<span aria-hidden="true">↓</span></a>)}</nav>
     <div class="interior-film-patterns">{source.patterns.map((pattern,index)=><article class="interior-film-pattern" id={'film-'+materialIds[index]} aria-labelledby={pattern.heading.id}>
       <figure><InteriorFilmImage image={pattern.image} /><span class="interior-film-photo-index" aria-hidden="true">{'0'+(index+1)}</span></figure>
       <div class="interior-film-pattern-copy"><h3 id={pattern.heading.id}>{pattern.heading.title}</h3><div class="interior-film-original-copy" set:html={pattern.blocks[0].html} /><details class="interior-film-material-details"><summary>{pattern.blocks[1].text}<span aria-hidden="true">+</span></summary><div class="interior-film-original-copy" set:html={pattern.blocks.slice(2).map(block=>block.html).join('')} /></details>{pattern.links.map(link=><a href={link.href} class="interior-film-link">{link.label}<span aria-hidden="true">→</span></a>)}</div>

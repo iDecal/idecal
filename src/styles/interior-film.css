@@ -34,11 +34,11 @@
 .interior-film-page :is(.interior-film-section-heading,.interior-film-contact,.interior-film-projects) h2{--heading-h2-local:clamp(28px,2.75vw,36px);position:relative;padding-bottom:18px}
 .interior-film-page :is(.interior-film-section-heading,.interior-film-contact,.interior-film-projects) h2::after{content:'';position:absolute;left:0;bottom:0;width:64px;height:4px;border-radius:999px;background:linear-gradient(100deg,#0f8fe0,#4f46e5 55%,#7d12f7)}
 .interior-film-section-heading>p{font-size:14px;line-height:1.8;max-width:320px;color:var(--film-muted)}
-.interior-film-material-picker{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-bottom:30px}
-.interior-film-material-picker a{display:flex;align-items:center;gap:9px;padding:14px 12px;border:1px solid var(--film-line);border-radius:8px;font-size:13px;font-weight:500;color:var(--film-ink);min-height:52px}
-.interior-film-material-picker a>span:first-child{font-size:10px;color:#52677c}
-.interior-film-material-picker a>span:last-child{margin-left:auto;color:#006edc}
-.interior-film-material-picker a:hover{background:#eef7ff;border-color:#93c5fd}
+
+
+
+
+
 .interior-film-patterns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:36px 30px}
 .interior-film-pattern{border:1px solid var(--film-line);border-radius:14px;overflow:hidden;background:#fff}
 .interior-film-pattern>figure{position:relative;aspect-ratio:1.7;overflow:hidden;background:#f1f5fa}
@@ -126,7 +126,7 @@
 .interior-film-contact-actions{display:flex;flex-direction:column;align-items:start;gap:12px}
 .interior-film-contact-actions>.btn-primary-solid{gap:20px}
 .interior-film-contact-phone{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;color:#1b4f7a}
-@media(max-width:1279px){.interior-film-page{--film-header:80px}.interior-film-hero-grid{gap:36px}.interior-film-material-picker{grid-template-columns:repeat(3,minmax(0,1fr))}.interior-film-faq{gap:40px}.interior-film-applications>article{gap:30px}.interior-film-application-copy{padding-right:28px}}
+@media(max-width:1279px){.interior-film-page{--film-header:80px}.interior-film-hero-grid{gap:36px}.interior-film-faq{gap:40px}.interior-film-applications>article{gap:30px}.interior-film-application-copy{padding-right:28px}}
 @media(max-width:1023px){.interior-film-hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px}.interior-film-hero-photo{aspect-ratio:3/4}.interior-film-pattern-copy{padding:22px}.interior-film-benefits-layout{gap:30px;align-items:start}.interior-film-benefits-layout>figure{aspect-ratio:3/4}.interior-film-application-copy{padding-block:24px}.interior-film-related>div{gap:20px}.interior-film-contact{gap:30px;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}}
 @media(max-width:767px){
  .interior-film-hero-grid{grid-template-columns:1fr;padding-block:22px 30px;gap:28px}
@@ -145,8 +145,8 @@
  .interior-film-section{padding-block:40px}
  .interior-film-section-heading{display:block;margin-bottom:24px}
  .interior-film-section-heading>p:not(.interior-film-eyebrow){margin-top:14px;max-width:none;font-size:13px}
- .interior-film-material-picker{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:24px}
- .interior-film-material-picker a{padding:11px 10px;font-size:12px;gap:7px;min-height:48px}
+
+
  .interior-film-patterns{grid-template-columns:1fr;gap:24px}
  .interior-film-pattern>figure{aspect-ratio:1.5}
  .interior-film-pattern-copy{padding:20px}
