@@ -19,9 +19,9 @@ export default {
           "dark": "#0D1B36"
         },
         "accent": {
-          "DEFAULT": "#E69F46",
-          "dark": "#D98C31",
-          "light": "#FBF0E1"
+          "DEFAULT": "#F9F024",
+          "dark": "#E5DC16",
+          "light": "#FFFDE0"
         },
         "background": "#FFFFFF",
         "text": {
@@ -44,15 +44,15 @@ export default {
           "highlight": "#8ED0C8",
           "start": "#102E57",
           "middle": "#2E9F94",
-          "end": "#E69F46",
+          "end": "#F9F024",
           "pale": "#E4EEF2",
           "line": "#D7E3E9",
           "inverse": "#D9E6ED"
         }
       },
       "backgroundImage": {
-        "brand-gradient": "linear-gradient(100deg, #102E57 0%, #2E9F94 55%, #E69F46 100%)",
-        "brand-heading": "linear-gradient(90deg, #102E57 0%, #2E9F94 55%, #E69F46 100%)",
+        "brand-gradient": "linear-gradient(100deg, #102E57 0%, #2E9F94 55%, #F9F024 100%)",
+        "brand-heading": "linear-gradient(90deg, #102E57 0%, #2E9F94 55%, #F9F024 100%)",
         "brand-pattern": "url('/images/brand-pattern.svg')"
       },
       "fontFamily": {
