@@ -1,3 +1,5 @@
+- Yêu cầu mới nhất: cặp CTA có ↗ ở nút chính, → ở nút phụ. Nút có nền không viền. Link thẻ dịch vụ nhỏ/sản phẩm/bài viết không nền, không viền, mũi tên ngang →; dùng data-cta-text, giữ CTA chính có nền/vàng xen kẽ. Chưa xuất bản.
+
 - Yêu cầu mới nhất: CTA mũi tên chéo lên phải ↗ (cả thẻ Blog); xen kẽ vàng ấm #e6c85b, hover sáng hơn #f2db83, chữ navy. Nhóm đúng hai CTA chỉ nút chính có mũi tên; không đổi icon điều khiển/lọc/menu. Chưa xuất bản.
 
 - Yêu cầu mới: điều hướng section dịch vụ chữ đậm, không icon; mobile xuống dòng và không cuộn ngang/sticky chiếm màn hình. Bỏ gạch trang trí dưới heading ngoài Blog. CTA trong nền xanh nhạt dùng trắng chữ navy/viền xanh; CTA trên nền trắng tiếp tục navy chữ trắng. service-navigation.css là layer important đầu tiên. Chưa xuất bản.

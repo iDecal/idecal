@@ -2,6 +2,8 @@ import {parseFragment} from 'parse5';
 const get=(n,k)=>n.attrs?.find(a=>a.name===k)?.value??'';
 const walk=n=>[n,...(n.childNodes??[]).flatMap(walk)];
 const content=n=>n.nodeName==='#text'?n.value:(n.childNodes??[]).map(content).join('');
+const horizontal='M5 12h14m-6-6 6 6-6 6';
+const setArrow=(icon,d)=>{walk(icon).find(n=>n.tagName==='path').attrs.find(a=>a.name==='d').value=d;};
 const svg='<svg class="site-cta-arrow" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 19 19 5M5 5h14v14"/></svg>';
 // Presentation only: navigation, forms, filters, contact icons and image controls keep their own symbols.
 export function presentCtaArrows(doc,pathname){
@@ -26,13 +28,15 @@ export function presentCtaArrows(doc,pathname){
   }
   const icon=parseFragment(svg).childNodes[0];icon.parentNode=target;target.childNodes.push(icon);
   a.attrs.push({name:'data-site-cta',value:''});changed=true;
+  const textAction=Boolean(cardAction)||/product-card-read|solution-button|read-more|blog-read/.test(cls)||ancestors.some(n=>n.tagName==='article'&&(walk(n).some(c=>c.tagName==='img')||/card|solution/.test(get(n,'class'))));
+  if(textAction){a.attrs.push({name:'data-cta-text',value:''});setArrow(icon,horizontal);}
   const group=ancestors.find(n=>/actions|buttons/.test(get(n,'class')))||ancestors.find(n=>['article','section'].includes(n.tagName))||a.parentNode;
   if(!groups.has(group))groups.set(group,[]);groups.get(group).push({a,target,icon});
  }
  let index=0;
  for(const buttons of groups.values()){
-  if(buttons.length===2){const secondary=buttons[1];secondary.target.childNodes=secondary.target.childNodes.filter(n=>n!==secondary.icon);secondary.a.attrs.push({name:'data-cta-secondary',value:''});}
-  for(const [i,{a}] of buttons.entries())if(i===0&&(buttons.length===2||index%2===0))a.attrs.push({name:'data-cta-tone',value:'yellow'});
+  if(buttons.length===2){const secondary=buttons[1];setArrow(secondary.icon,horizontal);secondary.a.attrs.push({name:'data-cta-secondary',value:''});}
+  for(const [i,{a}] of buttons.entries())if(i===0&&!a.attrs.some(x=>x.name==='data-cta-text')&&(buttons.length===2||index%2===0))a.attrs.push({name:'data-cta-tone',value:'yellow'});
   index++;
  }
  return changed;
