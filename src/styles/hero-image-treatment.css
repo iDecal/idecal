@@ -1,0 +1,14 @@
+@layer hero-image-treatment {
+ body [data-hero-image-treatment],body [data-hero-image-treatment]:hover{
+  border:0!important;outline:0!important;background:#f6e9af!important;
+  box-shadow:-16px 16px 0 0 #f6e9af,0 16px 38px 8px #ffffffd9!important;
+  transform:none!important;filter:none!important;animation:none!important;transition:none!important;
+ }
+ body [data-hero-image-treatment]::before,body [data-hero-image-treatment]::after{content:none!important;display:none!important;}
+ body [data-hero-image-treatment] img,body [data-hero-image-treatment]:hover img{
+  border:0!important;box-shadow:none!important;transform:none!important;filter:none!important;animation:none!important;transition:none!important;
+ }
+ body [data-hero-image-treatment] :is(.interior-film-image,[data-product-image]){border:0!important;box-shadow:none!important;}
+ body #gspb_svgBox-id-gsbp-fc53714{display:none!important;}
+ @media(max-width:767px){body [data-hero-image-treatment],body [data-hero-image-treatment]:hover{box-shadow:-9px 9px 0 0 #f6e9af,0 10px 24px 4px #ffffffe6!important;}}
+}

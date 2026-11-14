@@ -1,3 +1,5 @@
+- Hero: theo yêu cầu mới, bỏ viền/bóng/hiệu ứng ảnh cũ; dùng nền vàng nhạt #f6e9af lệch trái và xuống dưới (16px desktop/9px mobile), bóng trắng mềm. Marker data-hero-image-treatment do build xác định từ ảnh trong hero và ảnh trang chủ; không thay ảnh/nội dung. Được phép xuất bản ngay đợt này.
+
 - Yêu cầu mới nhất: cặp CTA có ↗ ở nút chính, → ở nút phụ. Nút có nền không viền. Link thẻ dịch vụ nhỏ/sản phẩm/bài viết không nền, không viền, mũi tên ngang →; dùng data-cta-text, giữ CTA chính có nền/vàng xen kẽ. Chưa xuất bản.
 
 - Yêu cầu mới nhất: CTA mũi tên chéo lên phải ↗ (cả thẻ Blog); xen kẽ vàng ấm #e6c85b, hover sáng hơn #f2db83, chữ navy. Nhóm đúng hai CTA chỉ nút chính có mũi tên; không đổi icon điều khiển/lọc/menu. Chưa xuất bản.
