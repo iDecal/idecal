@@ -1,0 +1,20 @@
+/* Action contract: dark, bounded actions on light content surfaces. Blog stays independent. */
+@layer action-contrast {
+ body:not(.is-blog) main :is(a[data-site-cta]:not(:has(h2,h3,h4,img)),.btn-primary-solid,.gspb-buttonbox,.contact-order-jump,button[type='submit']) {
+  --content-link-color:#fff!important;--contrast-text:#fff!important;
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:12px!important;
+  min-height:48px!important;padding:12px 20px!important;max-width:100%!important;
+  border:1px solid #102e57!important;border-radius:10px!important;
+  background:#102e57!important;background-image:none!important;color:#fff!important;
+  text-decoration:none!important;line-height:1.5!important;box-shadow:none!important;
+ }
+ body:not(.is-blog) main :is(a[data-site-cta]:not(:has(h2,h3,h4,img)),.btn-primary-solid,.gspb-buttonbox,.contact-order-jump,button[type='submit']):hover{background:#1c466f!important;border-color:#1c466f!important;color:#fff!important;}
+ body:not(.is-blog) main :is(a[data-site-cta],.btn-primary-solid,.gspb-buttonbox,.contact-order-jump,button[type='submit']) :is(span,svg,strong){color:inherit!important;-webkit-text-fill-color:currentColor!important;}
+ body:not(.is-blog) main a[data-site-cta] .site-cta-arrow{display:inline-block!important;width:20px!important;height:20px!important;margin:0!important;flex:none!important;transform:none!important;}
+ body:not(.is-blog) main a[data-site-cta] :is(.gspb-buttonbox-icon,[class*='arrow']):not(.site-cta-arrow){display:none!important;}
+ body:not(.is-blog) main :is(.office-why,.office-final-cta,.home-consult,.interior-film-soft,.printing-order-section,.cut-process,.lp-process,.sign-process-section) :is(strong,b,h1,h2,h3,h4,h5,h6){color:#102e57!important;-webkit-text-fill-color:#102e57!important;}
+ body:not(.is-blog) main .office-why-proof ul>li{background:#fff!important;border-color:#c7dce8!important;color:#465a6c!important;}
+ body:not(.is-blog) main .office-why-proof ul>li::before{border-color:#18766d!important;color:#18766d!important;}
+ body:not(.is-blog) main .gspb-buttonbox-textwrap{display:inline-flex!important;align-items:center!important;gap:0!important;}
+ body:not(.is-blog) main .gspb-buttonbox-title{color:#fff!important;}
+}

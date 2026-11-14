@@ -1,3 +1,5 @@
+- Cập nhật mới: ngoài Blog, nút CTA trên nền sáng/xanh nhạt dùng navy #102e57, viền cùng màu, chữ trắng. Mỗi CTA đúng một mũi tên; loại cả SVG cũ lồng trong wrapper nhập WordPress. Chữ đậm trong section sáng phải navy. action-contrast.css là layer important đầu tiên. Chưa xuất bản.
+
 # Cập nhật giao diện mới nhất
 
 - Theo yêu cầu mới: nền section ngoài Blog chuyển xanh nhạt thay navy/teal đậm; giữ footer navy và Blog như bản xuất bản. Nhãn trên heading 12px, chữ lợi ích hero 14px. CTA ngoài Blog có mũi tên chéo xuống phải 45°, xử lý trình bày bằng present-cta-arrows.mjs; không đổi điều khiển menu/lọc/form/điện thoại. Chưa xuất bản đợt này.

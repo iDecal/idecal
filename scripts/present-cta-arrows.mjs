@@ -16,13 +16,13 @@ export function presentCtaArrows(doc,pathname){
   if(/breadcrumb|pagination|filter|social|category|toc|tab/.test(cls))continue;
   const ancestors=[];for(let n=a.parentNode;n&&n!==main;n=n.parentNode)ancestors.push(n);
   if(ancestors.some(n=>(['nav','form','table'].includes(n.tagName)&&!(/cta|btn|quote/.test(cls)))||/breadcrumb|toc|pagination|filter/.test(get(n,'class'))))continue;
-  const explicit=Boolean(cardAction)||/btn|button|cta|read-more|consult|quote|about-link/.test(cls)||(/^(xem|đọc|tìm hiểu|khám phá|nhận|liên hệ|tư vấn|trao đổi|chọn mẫu|đặt|gửi|báo giá)/i.test(label)&&/[→↗↘↓]/.test(label));
+  const explicit=Boolean(cardAction)||/btn|button|cta|read-more|consult|quote|about-link|order-jump/.test(cls)||(/^(xem|đọc|tìm hiểu|khám phá|nhận|liên hệ|tư vấn|trao đổi|chọn mẫu|đặt|gửi|báo giá|điền thông tin)/i.test(label)&&/[→↗↘↓]/.test(label));
   if(!explicit||(!cardAction&&label.length>150)||!label)continue;
   const target=cardAction??a;
-  // Remove only decorative arrow SVGs/text; keep meaningful service icons.
+  // Each selected CTA has exactly one trailing icon, including imported nested SVG wrappers.
   for(const n of walk(target)){
    if(n.nodeName==='#text')n.value=n.value.replace(/[→↗↘↓]/g,'');
-   if(n.tagName==='svg'&&(n.parentNode===target||/arrow/i.test(get(n,'class'))))n.parentNode.childNodes=n.parentNode.childNodes.filter(c=>c!==n);
+   if(n.tagName==='svg')n.parentNode.childNodes=n.parentNode.childNodes.filter(c=>c!==n);
   }
   const icon=parseFragment(svg).childNodes[0];icon.parentNode=target;target.childNodes.push(icon);
   a.attrs.push({name:'data-site-cta',value:''});changed=true;
