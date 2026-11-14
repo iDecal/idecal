@@ -8,7 +8,7 @@ const {posts,title,description,categorySlug}=Astro.props;
 const entries=sortBlogPosts(posts);
 ---
 <div class="blog-listing">
-  <section class="blog-hero container"><div class="blog-hero-panel"><div class="blog-hero-art" aria-hidden="true"></div><div class="blog-hero-copy"><p class="blog-kicker">{categorySlug?<a href="/blog">Blog iDecal / Chuyên mục</a>:'Góc chia sẻ iDecal'}</p><h1>{title}</h1><p>{description}</p></div></div></section>
+  <section class="blog-hero"><div class="blog-hero-panel"><div class="blog-hero-art" aria-hidden="true"></div><div class="container blog-hero-content"><div class="blog-hero-copy"><p class="blog-kicker">{categorySlug?<a href="/blog">Blog iDecal / Chuyên mục</a>:'Góc chia sẻ iDecal'}</p><h1>{title}</h1><p>{description}</p></div></div></div></section>
   <section class="container blog-list-section" aria-label="Danh sách bài viết">
     <nav class="blog-category-nav" aria-label="Chuyên mục Blog">
       <div class="blog-category-grid"><a href="/blog" aria-current={!categorySlug?'page':undefined}>Tất cả bài viết</a>{blogCategories.map(category=><a href={`/blog/chuyen-muc/${category.slug}`} aria-current={categorySlug===category.slug?'page':undefined}>{category.name}</a>)}</div>
