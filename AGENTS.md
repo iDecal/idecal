@@ -1,5 +1,7 @@
 # Quy tắc giữ nội dung của chủ website
 
+- Chủ website yêu cầu áp dụng bảng màu Airify từ HTML mẫu: navy #102e57/#0d1b36, teal #2e9f94 (link dùng #18766d để đủ tương phản), cam #e69f46 cho CTA chữ navy, nền #e4eef2/trắng. airify-colors.css là lớp important đầu tiên, chỉ đổi UI, giữ font/bố cục/nội dung/ảnh/logo/mẫu vật liệu. H1 chuyển navy phẳng theo bảng màu mới, tiêu đề trên nền tối vẫn trắng. Quy tắc này thay bảng gradient xanh–tím và việc loại màu cam trước đây. Chỉ là bản xem trước, chưa tự xuất bản.
+
 - Bộ lọc trang /du-an dùng thanh pill gọn, đếm công trình theo nhóm, chỉ hiện nhóm có dữ liệu; nhóm mới tự xuất hiện khi có công trình. Giữ projectTypes đầy đủ cho CMS/validation, không xóa loại dự án khỏi dữ liệu. Mobile cuộn ngang một dòng, vùng chạm 48px; giữ aria-pressed, số kết quả aria-live, lọc bằng bàn phím và hiển thị mọi công trình khi tắt JavaScript.
 
 - Nhãn nhỏ phía trên tiêu đề: theo yêu cầu mới nhất, lấy gradient xanh nhạt–tím nhạt đang xuất bản làm gốc, tăng sắc độ vừa phải (#d9edff–#e9dcff), giữ chữ xanh #1b4f7a và bo góc/cỡ chữ gốc. Không dùng hai bản phối đậm/chữ trắng đã bị hủy.

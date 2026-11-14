@@ -1,0 +1,29 @@
+/* Airify-inspired UI palette. Preserve image pixels, logos, material swatches and layout. */
+@layer airify-colors {
+ :root{--heading-ink:#102e57!important;--heading-gradient:none!important;--footer-gradient:linear-gradient(0deg,#0d1b36,#0d1b36)!important;--ui-action-gradient:linear-gradient(0deg,#e69f46,#e69f46)!important;--content-link-color:#18766d!important;--content-link-hover:#102e57!important;--idecal-soft-gradient:linear-gradient(0deg,#e4eef2,#e4eef2)!important;--idecal-faint-gradient:linear-gradient(0deg,#f5f8fa,#f5f8fa)!important;--idecal-chip-gradient:linear-gradient(0deg,#e4eef2,#e4eef2)!important;--airify-ink:#102e57!important;--airify-muted:#566375!important;}
+ body{color:#102e57!important;background-color:#fff!important;}
+ body :is(h1,h2,h3,h4,h5,h6){color:var(--heading-surface-ink,#102e57)!important;-webkit-text-fill-color:currentColor!important;background-image:none!important;}
+ body :is(.page-content,.homepage-original)>p,body :is(.page-content,.homepage-original) p{color:var(--airify-muted)!important;}
+ body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut,.mega-cta>a){background:#e69f46!important;background-image:none!important;color:#102e57!important;border-color:transparent!important;}
+ body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut,.mega-cta>a):hover{background:#d98c31!important;background-image:none!important;color:#0d1b36!important;filter:none!important;}
+ body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut) :is(span,svg){color:inherit!important;}
+ body :is(.page-content,.homepage-original) a:not(:where(h1 a,h2 a,h3 a,h4 a,h5 a,h6 a)):not([class*='btn-'],[class*='button'],.gspb-buttonbox):not(:has(img,h1,h2,h3,h4,h5,h6)){color:var(--content-link-color,#18766d)!important;}
+ body :is(.page-content,.homepage-original) :is([class*='eyebrow'],[class*='kicker'],.consult-label,.case-category,[data-heading-label]){background:#e4eef2!important;background-image:none!important;border-color:#d4e3e9!important;color:#102e57!important;}
+ body :is(.compact-page-banner,.catalogue-hero,.lp-hero,.projects-hero,.project-detail-hero,.regional-hero,.contact-hero,.booking-hero,.district-hero,.hcm-hero,.q1-hero,.q2-intro,.q3-cover,.q4-hero,.q12-hero,.tb-hero,.blog-hero-panel,.case-header,.glass-guide-hero,.wave-hero,.interior-film-hero,.sign-hero,.elevator-hero,[data-service-hero]){background:#e4eef2!important;background-image:none!important;}
+ body .blog-hero-panel::after{background:linear-gradient(105deg,#e4eef2 4%,#e4eef2ed 40%,#e4eef235)!important;}
+ body :is(.offering-surface,.lp-process,.lp-faq,.lp-overview-fit,.regional-soft,.projects-contact,.project-detail-related,.project-detail-gallery-section,.catalogue-detail,.contact-hours,.blog-contact,.blog-featured,.booking-product){background:#f5f8fa!important;background-image:none!important;}
+ body .homepage-original .home-process{background:#f5f8fa!important;background-image:none!important;}
+ body .blog-post-grid .post-card{background:#eaf1f4!important;}
+ body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true']){background:#102e57!important;background-image:none!important;color:#fff!important;}
+ body .page-content .blog-category-grid>a[aria-current='page']{color:#fff!important;}
+ body :is(.projects-filters button[aria-pressed='true']) .project-filter-count{background:#ffffff26!important;color:#fff!important;}
+ body :is(.brand-dark,[data-heading-theme='dark'],.blog-toc,.home-consult,.office-why,#site-footer){--airify-ink:#fff;--airify-muted:#dce7ee;--content-link-color:#a7e4dd;--content-link-hover:#fff;background:#0d1b36!important;background-image:none!important;}
+ body :is(.brand-dark,[data-heading-theme='dark'],.home-consult,.office-why) :is(.bg-white,[data-heading-theme='light']){--airify-ink:#102e57;--airify-muted:#566375;--content-link-color:#18766d;}
+ body #site-footer .footer-bottom{background:#102e57!important;}
+ body :is(.mega-column+.mega-column,.desktop-mega .mega-cta){background:#f0f5f7!important;background-image:none!important;}
+ body .projects-filters{background:#f0f5f7!important;}
+ body .homepage-original #gspb_row-id-gsbp-aa4530a.home-partner-strip{background:#e4eef2!important;}
+ body .homepage-original #gspb_iconsList-id-gsbp-0e0111d :is(span,svg),body .banner-benefit-list :is(span,svg){color:#18766d!important;}
+ body :is(.blog-toc-icon,.blog-toc-section-icon){color:#8ed0c8!important;}
+ body :is(a,button,input,select,textarea,summary):focus-visible{outline-color:#18766d!important;}
+}

@@ -9,50 +9,50 @@ export default {
     "extend": {
       "colors": {
         "primary": {
-          "DEFAULT": "#0D6B96",
-          "dark": "#0B6AA0",
-          "light": "#D6E9F5"
+          "DEFAULT": "#18766D",
+          "dark": "#12645C",
+          "light": "#E4EEF2"
         },
         "secondary": {
-          "DEFAULT": "#1B4F7A",
-          "light": "#44566B",
-          "dark": "#031245"
+          "DEFAULT": "#102E57",
+          "light": "#566375",
+          "dark": "#0D1B36"
         },
         "accent": {
-          "DEFAULT": "#7D12F7",
-          "dark": "#6D28D9",
-          "light": "#F5E3FB"
+          "DEFAULT": "#E69F46",
+          "dark": "#D98C31",
+          "light": "#FBF0E1"
         },
         "background": "#FFFFFF",
         "text": {
-          "DEFAULT": "#1B4F7A",
-          "muted": "#44566B"
+          "DEFAULT": "#102E57",
+          "muted": "#566375"
         },
         "mainText": {
-          "DEFAULT": "#1B4F7A",
-          "muted": "#44566B"
+          "DEFAULT": "#102E57",
+          "muted": "#566375"
         },
-        "border": "#DBE3EC",
-        "surface": "#F1F7FC",
+        "border": "#D7E3E9",
+        "surface": "#E4EEF2",
         "ui-accent": {
-          "DEFAULT": "#D6E9F5",
-          "dark": "#93BAD8"
+          "DEFAULT": "#E4EEF2",
+          "dark": "#9DBEC5"
         },
         "brand": {
-          "navy": "#031245",
-          "sky": "#1AA7E0",
-          "highlight": "#4CC3F5",
-          "start": "#0F8FE0",
-          "middle": "#4F46E5",
-          "end": "#7D12F7",
-          "pale": "#D6E9F5",
-          "line": "#BFD0E6",
-          "inverse": "#C9D6EA"
+          "navy": "#0D1B36",
+          "sky": "#2E9F94",
+          "highlight": "#8ED0C8",
+          "start": "#102E57",
+          "middle": "#2E9F94",
+          "end": "#E69F46",
+          "pale": "#E4EEF2",
+          "line": "#D7E3E9",
+          "inverse": "#D9E6ED"
         }
       },
       "backgroundImage": {
-        "brand-gradient": "linear-gradient(100deg, #0F8FE0 0%, #4F46E5 55%, #7D12F7 100%)",
-        "brand-heading": "linear-gradient(90deg, #0F8FE0 0%, #4F46E5 55%, #7D12F7 100%)",
+        "brand-gradient": "linear-gradient(100deg, #102E57 0%, #2E9F94 55%, #E69F46 100%)",
+        "brand-heading": "linear-gradient(90deg, #102E57 0%, #2E9F94 55%, #E69F46 100%)",
         "brand-pattern": "url('/images/brand-pattern.svg')"
       },
       "fontFamily": {
