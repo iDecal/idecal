@@ -31,7 +31,7 @@
 .office-services-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
 .office-service-card { display:flex; flex-direction:column; min-width:0; overflow:hidden; border:1px solid #e1eaf4; border-radius:14px; background:#fff; transition:border-color .15s,box-shadow .15s; }
 .office-service-card:hover { border-color:#a7c8df; box-shadow:0 8px 22px #12395c0b; }
-.office-service-card .office-service-photo { aspect-ratio:1.6; border-radius:0; }
+.office-service-symbol { display:flex; align-items:center; padding:24px 20px 0; }
 .office-service-copy { display:flex; flex:1; flex-direction:column; align-items:flex-start; min-width:0; padding:20px; }
 .office-service-number { font-size:12px; color:#0d6b96; margin-bottom:10px; }
 .office-service-copy h3 { font-size:17px; margin:0 0 10px; }
@@ -175,5 +175,5 @@
  .office-final-cta { padding:40px 0; }
  .office-why-contact { padding:24px; }
 }
-@media(max-width:430px) { .office-audience-grid { grid-template-columns:1fr; } .office-services-grid { grid-template-columns:1fr; } .office-service-card { display:grid; grid-template-columns:110px minmax(0,1fr); } .office-service-card .office-service-photo { height:100%; aspect-ratio:auto; } .office-service-copy { padding:16px; } }
+@media(max-width:430px) { .office-audience-grid { grid-template-columns:1fr; } .office-services-grid { grid-template-columns:1fr; } .office-service-card { display:grid; grid-template-columns:110px minmax(0,1fr); } .office-service-symbol { padding:20px 0 20px 16px; align-items:flex-start; } .office-service-copy { padding:16px; } }
 @media(prefers-reduced-motion:reduce) { .office-service-card { transition:none; } }

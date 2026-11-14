@@ -1,0 +1,14 @@
+---
+import consultation from '../../public/icons/services/consultation.svg?raw';
+import design from '../../public/icons/services/design.svg?raw';
+import printCut from '../../public/icons/services/print-cut.svg?raw';
+import installation from '../../public/icons/services/installation.svg?raw';
+interface Props { name: 'consultation' | 'design' | 'print-cut' | 'installation'; size?: number; }
+const { name, size = 88 } = Astro.props;
+const icons = { consultation, design, 'print-cut': printCut, installation };
+---
+<span class="service-icon" data-service-icon={name} aria-hidden="true" style={{width:`${size}px`,height:`${size}px`}} set:html={icons[name]} />
+<style>
+.service-icon { display:inline-flex; flex-shrink:0; max-width:100%; }
+.service-icon :global(svg) { display:block; width:100%; height:100%; }
+</style>

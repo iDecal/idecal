@@ -32,7 +32,9 @@ for(const item of presentation){
 }
 assert.ok(!text(main).includes('👉'),'Remove hand emoji from public content');
 for(const image of source.images)assert.ok(fs.existsSync('public'+image.src),'Keep original image archive');
-for(const image of [...visuals.services,...visuals.solutions,...[source.images[0],source.images[6],source.images[7]]]){assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing selected image: ${image.src}`);assert.ok(fs.existsSync('public'+image.src));}
+for(const image of [...visuals.solutions,...[source.images[0],source.images[6],source.images[7]]]){assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing selected image: ${image.src}`);assert.ok(fs.existsSync('public'+image.src));}
+for(const name of ['consultation','design','print-cut','installation'])assert.ok(nodes.some(n=>attr(n,'data-service-icon')===name&&n.childNodes.some(c=>c.tagName==='svg')),`Missing reusable service SVG: ${name}`);
+assert.ok(!nodes.some(n=>n.tagName==='img'&&(attr(n,'class')??'').includes('office-service-photo')),'Service cards use vectors instead of photos');
 const faqs=source.tokens.filter(t=>t.type==='faq');assert.equal(faqs.length,7);
 for(const faq of faqs)assert.ok(nodes.some(n=>n.tagName==='summary'&&text(n).includes(faq.question)),`Missing question: ${faq.question}`);
 const mainNodes=[];const collectMain=node=>{mainNodes.push(node);for(const child of node.childNodes??[])collectMain(child);};collectMain(main);
@@ -40,7 +42,7 @@ assert.ok(!mainNodes.some(n=>n.tagName==='details'&&attr(n,'open')!==undefined),
 assert.ok(nodes.some(n=>n.tagName==='table'),'Source price table is required');
 assert.ok(nodes.some(n=>n.tagName==='link'&&attr(n,'rel')==='canonical'&&attr(n,'href')===source.sourceCanonical));
 assert.ok(!html.includes('google.com/search?q=link-subpage-logo'),'Replace source placeholder with the real cutting service');
-console.log(`Office glass passed: ${snapshot.blocks.length} archived source blocks, 5 concise solutions, ${source.images.length} archived source images, 9 replacement photos, keyword H1, edited headings, application contexts, original canonical, source table and ${faqs.length} closed FAQs.`);
+console.log(`Office glass passed: ${snapshot.blocks.length} archived source blocks, 5 concise solutions, ${source.images.length} archived source images, 5 solution photos and 4 reusable service SVGs, keyword H1, edited headings, application contexts, original canonical, source table and ${faqs.length} closed FAQs.`);
 
 const closing=nodes.find(node=>node.tagName==='section'&&attr(node,'class')==='office-final-cta');
 assert.ok(closing,'Concise closing CTA is required');
