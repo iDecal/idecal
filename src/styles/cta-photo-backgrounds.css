@@ -1,0 +1,22 @@
+/* Photo treatment trial: local images only; preserve copy and action targets. */
+@layer cta-photo-backgrounds {
+ body :is(.interior-film-contact-wrap,.office-final-cta,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) {
+  --cta-photo:url('/images/van-phong/thi-cong-vach-kinh.webp');
+  --heading-surface-ink:#fff!important;--airify-muted:#edf4ff!important;
+  --content-link-color:#a9dfff!important;
+  background-color:#10243d!important;
+  background-image:linear-gradient(105deg,#081c36f5 0%,#102b4ae8 40%,#102b4a99 72%,#102b4a70 100%),var(--cta-photo)!important;
+  background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+  border-color:transparent!important;color:#fff!important;
+ }
+ body .interior-film-contact-wrap {--cta-photo:url('/images/film-noi-that/cong-trinh/tran-va-vach-phoi-van-go.jpg');}
+ body .printing-cta {--cta-photo:url('/images/van-phong/in-decal-kho-lon.webp');}
+ body .cut-final-cta {--cta-photo:url('/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg');}
+ body .home-consult {--cta-photo:url('/images/Banner/dich-vu-thiet-ke-decal.webp');}
+ body :is(.interior-film-contact-wrap,.office-final-cta,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) :is(h2,h3,p:not([data-heading-label]):not([class*='eyebrow']):not([class*='kicker'])) {color:#edf4ff!important;}
+ body :is(.interior-film-contact-wrap,.office-final-cta,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) :is(h2,h3) {-webkit-text-fill-color:#fff!important;color:#fff!important;}
+ body :is(.interior-film-contact-wrap,.office-final-cta,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) a:not([class*='btn-']):not([data-site-cta]):not([class*='button']):not(.btn-primary-solid+a,.consult-phone) {color:#a9dfff!important;}
+ @media(max-width:767px) {
+  body :is(.interior-film-contact-wrap,.office-final-cta,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) {background-image:linear-gradient(105deg,#081c36f2,#102b4abd),var(--cta-photo)!important;background-position:60% center!important;}
+ }
+}
