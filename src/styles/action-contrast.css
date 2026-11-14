@@ -14,7 +14,7 @@
  body:not(.is-blog) main a[data-site-cta] :is(.gspb-buttonbox-icon,[class*='arrow']):not(.site-cta-arrow){display:none!important;}
  body:not(.is-blog) main :is(.office-why,.office-final-cta,.home-consult,.interior-film-soft,.printing-order-section,.cut-process,.lp-process,.sign-process-section) :is(strong,b,h1,h2,h3,h4,h5,h6){color:#102e57!important;-webkit-text-fill-color:#102e57!important;}
  body:not(.is-blog) main .office-why-proof ul>li{background:#fff!important;border-color:#c7dce8!important;color:#465a6c!important;}
- body:not(.is-blog) main .office-why-proof ul>li::before{border-color:#18766d!important;color:#18766d!important;}
+ body:not(.is-blog) main .office-why-proof ul>li::before{border-color:#153e68!important;color:#153e68!important;}
  body:not(.is-blog) main .gspb-buttonbox-textwrap{display:inline-flex!important;align-items:center!important;gap:0!important;}
  body:not(.is-blog) main .gspb-buttonbox-title{color:#fff!important;}
 }

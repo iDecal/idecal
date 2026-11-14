@@ -1,10 +1,10 @@
 @layer cta-refinement {
  body main :is(a[data-site-cta],.btn-primary-solid,.gspb-buttonbox,button[type='submit']){border:0!important;}
  body main :is(a[data-site-cta][data-cta-text]:not(:has(h2,h3,h4,img)),.product-card-read,.blog-read-link){
-  --content-link-color:#18766d!important;--contrast-text:#18766d!important;
+  --content-link-color:#153e68!important;--contrast-text:#153e68!important;
   display:inline-flex!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;
   background:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;
-  box-shadow:none!important;color:#18766d!important;padding:8px 0!important;min-height:48px!important;text-decoration:none!important;
+  box-shadow:none!important;color:#153e68!important;padding:8px 0!important;min-height:48px!important;text-decoration:none!important;
  }
  body main :is(a[data-site-cta][data-cta-text]:not(:has(h2,h3,h4,img)),.product-card-read,.blog-read-link):hover{background:transparent!important;color:#102e57!important;box-shadow:none!important;}
  body main :is(a[data-site-cta][data-cta-text]:not(:has(h2,h3,h4,img)),.product-card-read,.blog-read-link) :is(span,svg){color:inherit!important;}

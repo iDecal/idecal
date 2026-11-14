@@ -9,8 +9,8 @@ export default {
     "extend": {
       "colors": {
         "primary": {
-          "DEFAULT": "#18766D",
-          "dark": "#12645C",
+          "DEFAULT": "#153e68",
+          "dark": "#153e68",
           "light": "#E4EEF2"
         },
         "secondary": {
@@ -40,10 +40,10 @@ export default {
         },
         "brand": {
           "navy": "#0D1B36",
-          "sky": "#2E9F94",
-          "highlight": "#8ED0C8",
+          "sky": "#0077bb",
+          "highlight": "#8bd0f5",
           "start": "#102E57",
-          "middle": "#2E9F94",
+          "middle": "#0077bb",
           "end": "#E6C85B",
           "pale": "#E4EEF2",
           "line": "#D7E3E9",
@@ -51,8 +51,8 @@ export default {
         }
       },
       "backgroundImage": {
-        "brand-gradient": "linear-gradient(100deg, #102E57 0%, #2E9F94 55%, #E6C85B 100%)",
-        "brand-heading": "linear-gradient(90deg, #102E57 0%, #2E9F94 55%, #E6C85B 100%)",
+        "brand-gradient": "linear-gradient(100deg, #102E57 0%, #0077bb 55%, #E6C85B 100%)",
+        "brand-heading": "linear-gradient(90deg, #102E57 0%, #0077bb 55%, #E6C85B 100%)",
         "brand-pattern": "url('/images/brand-pattern.svg')"
       },
       "fontFamily": {
