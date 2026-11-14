@@ -1,0 +1,19 @@
+/* Brand colors read from the owner's idecal.vn HTML export, 2026-11-14.
+   Retain current layouts, light blue footer and original image/material colors. */
+@layer idecal-source-palette {
+ :root {--idecal-sky:#17abeb;--idecal-link:#006edc;--idecal-ink:#082680;--idecal-copy:#565d66;--idecal-action:linear-gradient(135deg,#17abeb 0%,#006edc 100%);--ui-action-gradient:var(--idecal-action)!important;--heading-ink:#082680!important;--content-link-color:#006edc!important;--content-link-hover:#0056b3!important;}
+ body {color:#565d66!important;}
+ body :is(.page-content,.homepage-original) p {color:var(--airify-muted,#565d66)!important;}
+ body :is(h1,h2,h3,h4,h5,h6) {color:var(--heading-surface-ink,#082680)!important;}
+ body main :is(.btn-primary-solid,.gspb-buttonbox,a[data-site-cta]:not([data-cta-text]):not([data-cta-secondary]),button[type='submit']),
+ body :is(.region-trigger,.mobile-region-shortcut,.mega-cta>a) {
+  background:#006edc!important;background-image:var(--idecal-action)!important;color:#fff!important;border-color:transparent!important;
+ }
+ body main :is(.btn-primary-solid,.gspb-buttonbox,a[data-site-cta]:not([data-cta-text]):not([data-cta-secondary]),button[type='submit']):hover,
+ body :is(.region-trigger,.mobile-region-shortcut,.mega-cta>a):hover {background:#0056b3!important;background-image:linear-gradient(135deg,#0693e3,#0056b3)!important;color:#fff!important;}
+ body main :is(.btn-primary-solid,.gspb-buttonbox,a[data-site-cta]:not([data-cta-text]):not([data-cta-secondary])) :is(span,strong,svg),
+ body :is(.region-trigger,.mobile-region-shortcut,.mega-cta>a) :is(span,svg) {color:inherit!important;-webkit-text-fill-color:currentColor!important;}
+ body main :is(a[data-cta-text],.product-card-read,.blog-read-link) {color:#006edc!important;}
+ body .homepage-original #gspb_iconsList-id-gsbp-0e0111d :is(span,svg),body .banner-benefit-list :is(span,svg) {color:#006edc!important;}
+ body .homepage-original #gspb_iconsList-id-gsbp-0e0111d svg path {fill:#17abeb!important;}
+}
