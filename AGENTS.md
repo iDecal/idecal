@@ -1,3 +1,5 @@
+- Hero mới nhất: nền vàng rất nhạt #fcf6df, lệch trái/dưới và xoay -2deg riêng lớp nền; ảnh không xoay, cao tối đa 400px (mobile nhỏ hơn), bóng trắng. Chưa xuất bản thay đổi này.
+
 - Hero: theo yêu cầu mới, bỏ viền/bóng/hiệu ứng ảnh cũ; dùng nền vàng nhạt #f6e9af lệch trái và xuống dưới (16px desktop/9px mobile), bóng trắng mềm. Marker data-hero-image-treatment do build xác định từ ảnh trong hero và ảnh trang chủ; không thay ảnh/nội dung. Được phép xuất bản ngay đợt này.
 
 - Yêu cầu mới nhất: cặp CTA có ↗ ở nút chính, → ở nút phụ. Nút có nền không viền. Link thẻ dịch vụ nhỏ/sản phẩm/bài viết không nền, không viền, mũi tên ngang →; dùng data-cta-text, giữ CTA chính có nền/vàng xen kẽ. Chưa xuất bản.
