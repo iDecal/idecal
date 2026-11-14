@@ -9,10 +9,9 @@ const support = [{name:'Hướng dẫn đo kính',href:'/huong-dan-do-kinh'},{na
   <div class="container footer-main">
     <section class="footer-contact" aria-label="Liên hệ iDecal">
       <a class="footer-logo" href="/" aria-label="iDecal – về trang chủ"><img src="/images/idecal-logo.png" alt="Logo iDecal" width="42" height="42" /><span>iDecal</span></a>
-      <p class="footer-intro">Hơn 10 năm thiết kế, in ấn và thi công Decal, film dán kính.</p>
+      <p class="footer-intro">iDecal chuyên giải pháp Decal trang trí &amp; Chống nóng toàn diện</p>
       <a class="footer-contact-line footer-phone" href="tel:0866077040"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m7 3 3 5-3 2a15 15 0 0 0 7 7l2-3 5 3v3c-9 3-20-8-17-17h3Z" /></svg><span>0866.077.040</span></a>
       <a class="footer-contact-line" href="mailto:hi@idecal.vn"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>hi@idecal.vn</span></a>
-      <SocialLinks compact dark label="Theo dõi iDecal trên các mạng xã hội" />
     </section>
     <div class="footer-right">
       <nav class="footer-nav-grid" aria-label="Điều hướng cuối trang">
@@ -23,7 +22,7 @@ const support = [{name:'Hướng dẫn đo kính',href:'/huong-dan-do-kinh'},{na
       <nav class="footer-regions" aria-label="Khu vực phục vụ"><div><span>Khu vực phục vụ</span><a class="footer-region-all" href="/khu-vuc">Xem tất cả →</a></div><ul>{regions.map(region=><li><a href={`/khu-vuc/${region.slug}`}>{region.shortName}</a></li>)}</ul></nav>
     </div>
   </div>
-  <div class="footer-bottom"><div class="container"><p>© {new Date().getFullYear()} iDecal. All rights reserved.</p><a href="/lien-he-idecal">Thiết kế · In ấn · Thi công Decal & film</a></div></div>
+  <div class="footer-bottom"><div class="container"><p>© {new Date().getFullYear()} iDecal. All rights reserved.</p><SocialLinks compact branded label="Theo dõi iDecal trên các mạng xã hội" /></div></div>
 </footer>
 <script>
   const footerGroups = Array.from(document.querySelectorAll<HTMLDetailsElement>('.footer-link-group'));
