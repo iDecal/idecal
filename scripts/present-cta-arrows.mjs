@@ -2,12 +2,12 @@ import {parseFragment} from 'parse5';
 const get=(n,k)=>n.attrs?.find(a=>a.name===k)?.value??'';
 const walk=n=>[n,...(n.childNodes??[]).flatMap(walk)];
 const content=n=>n.nodeName==='#text'?n.value:(n.childNodes??[]).map(content).join('');
-const svg='<svg class="site-cta-arrow" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 5 19 19M5 19h14V5"/></svg>';
+const svg='<svg class="site-cta-arrow" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><path d="M5 19 19 5M5 5h14v14"/></svg>';
 // Presentation only: navigation, forms, filters, contact icons and image controls keep their own symbols.
 export function presentCtaArrows(doc,pathname){
  if(/^\/(blog|admin|quan-ly)/.test(pathname))return false;
  const main=walk(doc).find(n=>n.tagName==='main');if(!main)return false;
- let changed=false;
+ let changed=false;const groups=new Map();
  for(const a of walk(main).filter(n=>n.tagName==='a')){
   if(a.attrs?.some(x=>x.name==='data-site-cta'))continue;
   const label=content(a).trim(),cls=get(a,'class'),href=get(a,'href');
@@ -26,6 +26,14 @@ export function presentCtaArrows(doc,pathname){
   }
   const icon=parseFragment(svg).childNodes[0];icon.parentNode=target;target.childNodes.push(icon);
   a.attrs.push({name:'data-site-cta',value:''});changed=true;
+  const group=ancestors.find(n=>/actions|buttons/.test(get(n,'class')))||ancestors.find(n=>['article','section'].includes(n.tagName))||a.parentNode;
+  if(!groups.has(group))groups.set(group,[]);groups.get(group).push({a,target,icon});
+ }
+ let index=0;
+ for(const buttons of groups.values()){
+  if(buttons.length===2){const secondary=buttons[1];secondary.target.childNodes=secondary.target.childNodes.filter(n=>n!==secondary.icon);secondary.a.attrs.push({name:'data-cta-secondary',value:''});}
+  for(const [i,{a}] of buttons.entries())if(i===0&&(buttons.length===2||index%2===0))a.attrs.push({name:'data-cta-tone',value:'yellow'});
+  index++;
  }
  return changed;
 }

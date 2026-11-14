@@ -1,3 +1,5 @@
+- Yêu cầu mới nhất: CTA mũi tên chéo lên phải ↗ (cả thẻ Blog); xen kẽ vàng ấm #e6c85b, hover sáng hơn #f2db83, chữ navy. Nhóm đúng hai CTA chỉ nút chính có mũi tên; không đổi icon điều khiển/lọc/menu. Chưa xuất bản.
+
 - Yêu cầu mới: điều hướng section dịch vụ chữ đậm, không icon; mobile xuống dòng và không cuộn ngang/sticky chiếm màn hình. Bỏ gạch trang trí dưới heading ngoài Blog. CTA trong nền xanh nhạt dùng trắng chữ navy/viền xanh; CTA trên nền trắng tiếp tục navy chữ trắng. service-navigation.css là layer important đầu tiên. Chưa xuất bản.
 
 - Cập nhật mới: ngoài Blog, nút CTA trên nền sáng/xanh nhạt dùng navy #102e57, viền cùng màu, chữ trắng. Mỗi CTA đúng một mũi tên; loại cả SVG cũ lồng trong wrapper nhập WordPress. Chữ đậm trong section sáng phải navy. action-contrast.css là layer important đầu tiên. Chưa xuất bản.

@@ -11,6 +11,6 @@ const introduction=blogCardExcerpt(post.id,post.data.description);
   <div class="blog-card-content">
     <Heading><a href={`/blog/${post.id}`}>{post.data.title}</a></Heading>
     <p class="blog-card-introduction">{introduction}</p>
-    <a class="blog-read-link" href={`/blog/${post.id}`} aria-label={`Đọc thêm: ${post.data.title}`}>Đọc thêm <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 6 12 12M6 18h12V6"/></svg></a>
+    <a class="blog-read-link" href={`/blog/${post.id}`} aria-label={`Đọc thêm: ${post.data.title}`}>Đọc thêm <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
   </div>
 </article>

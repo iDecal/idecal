@@ -1,0 +1,11 @@
+/* Warm accents alternate between action groups, without tinting photographs or material swatches. */
+@layer cta-variants {
+ body:not(.is-blog) main a[data-site-cta][data-cta-tone='yellow']{
+  --content-link-color:#102e57!important;--contrast-text:#102e57!important;
+  background:#e6c85b!important;background-image:none!important;border:1px solid #c3a53d!important;color:#102e57!important;
+ }
+ body:not(.is-blog) main a[data-site-cta][data-cta-tone='yellow']:hover{background:#f2db83!important;border-color:#d3b851!important;color:#102e57!important;}
+ body:not(.is-blog) main a[data-site-cta][data-cta-tone='yellow'] :is(span,strong,svg){color:#102e57!important;-webkit-text-fill-color:#102e57!important;}
+ body:not(.is-blog) main nav a[data-site-cta]{background:#fff!important;border:1px solid #aac5d8!important;color:#102e57!important;--content-link-color:#102e57!important;}
+ body:not(.is-blog) main a[data-cta-secondary]{gap:0!important;}
+}
