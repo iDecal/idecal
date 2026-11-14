@@ -1,0 +1,14 @@
+/* Heading links retain dark heading ink; filled dark actions use white text. */
+@layer heading-button-contrast {
+ body :is(h2,h3,h4,h5,h6) a,
+ body :is(h2,h3,h4,h5,h6) a:hover {
+  color:var(--heading-surface-ink,#082680)!important;-webkit-text-fill-color:currentColor!important;
+ }
+ body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a),
+ body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a):hover {
+  color:#fff!important;-webkit-text-fill-color:#fff!important;
+ }
+ body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a) :is(span,strong,svg) {
+  color:inherit!important;-webkit-text-fill-color:inherit!important;
+ }
+}
