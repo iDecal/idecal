@@ -1,3 +1,7 @@
+# Cập nhật giao diện mới nhất
+
+- Theo yêu cầu mới: nền section ngoài Blog chuyển xanh nhạt thay navy/teal đậm; giữ footer navy và Blog như bản xuất bản. Nhãn trên heading 12px, chữ lợi ích hero 14px. CTA ngoài Blog có mũi tên chéo xuống phải 45°, xử lý trình bày bằng present-cta-arrows.mjs; không đổi điều khiển menu/lọc/form/điện thoại. Chưa xuất bản đợt này.
+
 # Quy tắc giữ nội dung của chủ website
 
 - Chủ website yêu cầu tăng tương phản theo section trên toàn site: section-contrast.css là lớp important đầu tiên; mở đầu/các khối lợi ích–quy trình dùng navy, CTA dùng teal đậm, giá/FAQ dùng xanh xám nhạt, phần đọc và thư viện ảnh nền trắng. Đây là ngoại lệ mới thay yêu cầu mọi hero luôn sáng. Tiêu đề nền tối trắng, đoạn/link sáng; thẻ trắng lồng trong nền tối đặt lại biến chữ navy/teal. Nút vàng ấm #e6c85b chữ navy. Giữ font, nội dung, ảnh, bố cục và trạng thái tương tác; thân bài Blog tiếp tục sáng. Chưa xuất bản.

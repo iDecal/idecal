@@ -39,7 +39,7 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
     <link rel="preload" href="/fonts/google-sans-flex/google-sans-flex-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
 		<SEO canonicalURL={canonicalURL} title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
 	</head>
-	<body class="bg-background font-body text-secondary">
+	<body class:list={["bg-background font-body text-secondary", {"is-blog": Astro.url.pathname.startsWith("/blog")} ]}>
 		<Header />
 		
 		<main class:list={['page-content', { 'site-section-headings': !Astro.url.pathname.startsWith('/blog') && !noindex }]}>

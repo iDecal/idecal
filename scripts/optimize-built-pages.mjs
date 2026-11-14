@@ -4,6 +4,7 @@ import {join,resolve,basename} from 'node:path';
 import {createHash} from 'node:crypto';
 import {parse,serialize} from 'parse5';
 import sharp from 'sharp';
+import {presentCtaArrows} from './present-cta-arrows.mjs';
 const root=resolve('dist');
 const files=async dir=>(await Promise.all((await readdir(dir,{withFileTypes:true})).map(e=>e.isDirectory()?files(join(dir,e.name)):[join(dir,e.name)]))).flat();
 const walk=n=>[n,...(n.childNodes??[]).flatMap(walk)];
@@ -36,7 +37,7 @@ async function imageInfo(src){
  cache.set(src,result);return result;
 }
 for(const file of (await files(root)).filter(f=>f.endsWith('.html')&&!f.includes('/admin/'))){
- const doc=parse(await readFile(file,'utf8')),nodes=walk(doc);let changed=false;
+ const doc=parse(await readFile(file,'utf8')),nodes=walk(doc);let changed=presentCtaArrows(doc,'/'+file.slice(root.length+1));
  for(const img of nodes.filter(n=>n.tagName==='img')){
   const src=get(img,'src');if(!src?.startsWith('/')||src.startsWith('//'))continue;
   const info=await imageInfo(src);if(!info)continue;
