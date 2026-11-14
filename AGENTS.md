@@ -1,3 +1,5 @@
+- Khôi phục dấu tia xanh gốc cạnh ảnh hero trang chủ; hero Giới thiệu có about-hero/data-hero-media để dùng cùng nền vàng rất nhạt xoay và giới hạn 400px. Chưa xuất bản.
+
 - Hero mới nhất: nền vàng rất nhạt #fcf6df, lệch trái/dưới và xoay -2deg riêng lớp nền; ảnh không xoay, cao tối đa 400px (mobile nhỏ hơn), bóng trắng. Chưa xuất bản thay đổi này.
 
 - Hero: theo yêu cầu mới, bỏ viền/bóng/hiệu ứng ảnh cũ; dùng nền vàng nhạt #f6e9af lệch trái và xuống dưới (16px desktop/9px mobile), bóng trắng mềm. Marker data-hero-image-treatment do build xác định từ ảnh trong hero và ảnh trang chủ; không thay ảnh/nội dung. Được phép xuất bản ngay đợt này.

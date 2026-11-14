@@ -18,7 +18,7 @@
   border-radius:inherit!important;border:0!important;box-shadow:none!important;transform:none!important;filter:none!important;animation:none!important;transition:none!important;
  }
  body [data-hero-image-treatment] :is(figure,.interior-film-image,[data-product-image]){height:100%!important;max-height:400px!important;border-radius:inherit!important;border:0!important;box-shadow:none!important;overflow:hidden!important;}
- body #gspb_svgBox-id-gsbp-fc53714{display:none!important;}
+
  @media(max-width:767px){
   body [data-hero-image-treatment],body [data-hero-image-treatment]:hover{height:clamp(210px,64vw,320px)!important;border-radius:18px!important;box-shadow:0 10px 24px 4px #ffffffe6!important;}
   body [data-hero-image-treatment]::before{transform:translate(-7px,9px) rotate(-2deg)!important;}
