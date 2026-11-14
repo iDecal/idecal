@@ -1,3 +1,5 @@
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { regions } from './regions';
@@ -38,4 +40,25 @@ export async function getLocalPhotos(key:string):Promise<LocalPhoto[]>{
  }
  if(key==='quan-tan-binh'||key==='tp-hcm')for(const image of originalTanBinh.images.slice(2))photos.push({src:image.src,alt:image.alt,caption:image.caption??image.alt,area:'Tân Bình'});
  return photos.filter((photo,index,list)=>list.findIndex(other=>other.src===photo.src)===index);
+}
+
+// Latest upload/update in Git, rather than checkout filesystem timestamps.
+export async function getHcmGalleryPhotos():Promise<LocalPhoto[]> {
+ const photos=await getLocalPhotos('tp-hcm');
+ const dates=new Map<string,number>();
+ try {
+  const {stdout}=await promisify(execFile)('git',['log','--format=PHOTO_DATE:%ct','--name-only','--','public/images'],{maxBuffer:8*1024*1024});
+  let timestamp=0;
+  for(const line of stdout.split('\n')) {
+   if(line.startsWith('PHOTO_DATE:'))timestamp=Number(line.slice(11));
+   else if(line.startsWith('public/')&&!dates.has(line))dates.set(line,timestamp);
+  }
+ } catch { /* Archives without Git retain a deterministic source order. */ }
+ const date=(photo:LocalPhoto)=>dates.get('public'+decodeURIComponent(photo.src))??0;
+ const counts=new Map<string,number>();
+ return [...photos].sort((a,b)=>date(b)-date(a)||b.src.localeCompare(a.src,'vi',{numeric:true})).filter(photo=>{
+  const count=counts.get(photo.area)??0;
+  if(count>=2)return false;
+  counts.set(photo.area,count+1);return true;
+ });
 }

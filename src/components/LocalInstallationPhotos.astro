@@ -1,16 +1,35 @@
 ---
-import {getLocalPhotos} from '../data/local-photos';
+import {getLocalPhotos,getHcmGalleryPhotos} from '../data/local-photos';
 import '../styles/local-photos.css';
 interface Props {areaKey:string;areaName:string;heading?:string;headingId?:string;}
 const {areaKey,heading=`Hình ảnh thi công thực tế tại ${Astro.props.areaName}`,headingId='local-installation-title'}=Astro.props;
-const photos=await getLocalPhotos(areaKey);
+const limitedGallery=areaKey==='tp-hcm';
+const photos=await (limitedGallery?getHcmGalleryPhotos():getLocalPhotos(areaKey));
 ---
 <section id="anh-thi-cong" class="container local-installations" aria-labelledby={headingId} data-photo-area={areaKey}>
   <div class="local-photo-heading"><div><p class="local-photo-kicker">Góc thi công</p><h2 id={headingId}>{heading}</h2></div>{photos.length>0&&<span>{photos.length} ảnh</span>}</div>
-  {photos.length>0?<div class="local-photo-grid">{photos.map(photo=><figure><a href={photo.src} class="local-photo-open" data-local-photo data-caption={photo.caption} aria-label={`Xem ảnh lớn: ${photo.caption}`} target="_blank" rel="noopener"><img src={photo.src} alt={photo.alt} width="1200" height="900" loading="lazy" decoding="async" /><span aria-hidden="true">Xem ảnh →</span></a><figcaption>{photo.caption}</figcaption></figure>)}</div>:<p class="local-photo-empty">Ảnh thi công tại khu vực này đang được cập nhật.</p>}
+  {photos.length>0?<div class="local-photo-grid" id={limitedGallery?'hcm-photo-grid':undefined} data-two-row-gallery={limitedGallery||undefined}>{photos.map(photo=><figure data-photo-district={limitedGallery?photo.area:undefined}><a href={photo.src} class="local-photo-open" data-local-photo data-caption={photo.caption} aria-label={`Xem ảnh lớn: ${photo.caption}`} target="_blank" rel="noopener"><img src={photo.src} alt={photo.alt} width="1200" height="900" loading="lazy" decoding="async" /><span aria-hidden="true">Xem ảnh →</span></a><figcaption>{photo.caption}</figcaption></figure>)}</div>:<p class="local-photo-empty">Ảnh thi công tại khu vực này đang được cập nhật.</p>}
+  {limitedGallery&&photos.length>0&&<button class="local-photo-more btn-primary-solid" type="button" data-gallery-more aria-controls="hcm-photo-grid" aria-expanded="false" hidden>Xem thêm ảnh</button>}
   {photos.length>0&&<dialog id="local-photo-viewer" class="local-photo-viewer" aria-label="Ảnh thi công thực tế"><button type="button" data-photo-close aria-label="Đóng ảnh">Đóng ×</button><img alt="Ảnh thi công phóng lớn" /><p></p></dialog>}
 </section>
 <script>
+const gallery=document.querySelector<HTMLElement>('[data-two-row-gallery]');
+const more=document.querySelector<HTMLButtonElement>('[data-gallery-more]');
+if(gallery&&more){
+ let expanded=false;
+ const items=Array.from(gallery.querySelectorAll<HTMLElement>(':scope > figure'));
+ const update=()=>{
+  const columns=getComputedStyle(gallery).gridTemplateColumns.split(' ').filter(Boolean).length;
+  const initial=columns*2;
+  items.forEach((item,index)=>{item.hidden=!expanded&&index>=initial;});
+  more.hidden=items.length<=initial;
+  more.textContent=expanded?'Thu gọn':'Xem thêm ảnh';
+  more.setAttribute('aria-expanded',String(expanded));
+ };
+ more.addEventListener('click',()=>{expanded=!expanded;update();});
+ new ResizeObserver(update).observe(gallery);
+ update();
+}
 const viewer=document.querySelector<HTMLDialogElement>('#local-photo-viewer');
 if(viewer){
  const image=viewer.querySelector('img')!;const caption=viewer.querySelector('p')!;
