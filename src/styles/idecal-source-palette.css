@@ -21,4 +21,18 @@
  body main :is(a[data-cta-text],.product-card-read,.blog-read-link) {color:#006edc!important;}
  body .homepage-original #gspb_iconsList-id-gsbp-0e0111d :is(span,svg),body .banner-benefit-list :is(span,svg) {color:#006edc!important;}
  body .homepage-original #gspb_iconsList-id-gsbp-0e0111d svg path {fill:#17abeb!important;}
+ /* Homepage benefit icons and consultation surface match the supplied reference. */
+ body .homepage-original .why-benefit-icon {background:#f3e0ff!important;}
+ body .homepage-original .why-benefit-icon svg path {fill:#9b20ff!important;}
+ body .homepage-original #gspb_container-id-gsbp-36095c7.home-consult {
+  background:#3155ee!important;background-image:var(--idecal-action)!important;border-color:transparent!important;
+  --heading-surface-ink:#fff!important;--airify-muted:#fff!important;--content-link-color:#fff!important;
+ }
+ body .homepage-original #gspb_container-id-gsbp-36095c7 :is(h2,p,.consult-label) {color:#fff!important;-webkit-text-fill-color:#fff!important;}
+ body .homepage-original #gspb_container-id-gsbp-36095c7 .consult-phone {
+  background:#fff!important;background-image:none!important;color:#006edc!important;border-color:transparent!important;padding:14px 22px!important;border-radius:8px!important;
+ }
+ body .homepage-original #gspb_container-id-gsbp-36095c7 .consult-phone:hover {background:#edf6ff!important;color:#0056b3!important;}
+ body .homepage-original #gspb_container-id-gsbp-36095c7 .consult-phone :is(span,strong,svg) {color:inherit!important;-webkit-text-fill-color:currentColor!important;}
+ body .homepage-original #gspb_container-id-gsbp-36095c7 .consult-quote {background:transparent!important;background-image:none!important;color:#fff!important;border:1px solid #ffffff80!important;}
 }
