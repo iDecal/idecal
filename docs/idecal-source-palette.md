@@ -13,4 +13,4 @@ Trích từ HTML chủ website cung cấp ngày 14/11/2026, không phải kết 
 | Nền trắng | contrastcolor | #FFFFFE |
 | Chữ thân bài | màu dùng trong nội dung nguồn | #565D66 |
 
-Nút chính dùng gradient primary → secondary như nguồn, chữ trắng. Không nhập các preset xanh lá mặc định của WordPress. Giữ nền footer xanh nhạt, bố cục hiện hành, ảnh và màu mẫu vật liệu. CSS ưu tiên: `src/styles/idecal-source-palette.css`.
+Theo mẫu nút mới chủ website gửi, nút chính và chữ H1 dùng gradient 110°: #0798DF → #3155EE → #7015F5. Nút giữ chữ trắng, hover dùng bản chuyển sắc đậm hơn. Không nhập các preset xanh lá mặc định của WordPress. Giữ nền footer xanh nhạt, bố cục hiện hành, ảnh và màu mẫu vật liệu. CSS ưu tiên: `src/styles/idecal-source-palette.css`.
