@@ -1,3 +1,5 @@
+- Mẫu card dịch vụ chủ website yêu cầu ghi nhớ (ảnh tham chiếu 15/11/2026): desktop ba cột đều nhau, ảnh cover lớn phía trên khoảng tỉ lệ 1.7:1, nền trắng, viền xanh xám rất mảnh, bo góc khoảng 18–22px, không bóng nặng. Nội dung có padding thoáng, tiêu đề xanh đậm theo font global, mô tả màu xám xanh; phần “Ứng dụng phổ biến” có đường phân cách và accordion dấu +; link cuối mô tả rõ trang đích, không nền/không viền, mũi tên ngang →. Các link cuối và đường phân cách căn đều giữa các card. Mobile xếp dọc, giữ vùng chạm tối thiểu 48px. Đây là mẫu tham chiếu cho thay đổi sau này, không tự áp dụng lại toàn website hoặc xuất bản chỉ từ yêu cầu ghi nhớ.
+
 - Chủ website đã hủy bản footer masthead mới; giữ footer đã xuất bản trước đó. Phần giảm CTA dịch vụ vẫn là bản nháp riêng, chưa xuất bản.
 
 - Rà soát CTA dịch vụ theo yêu cầu: giữ CTA liên hệ chính ở hero/cuối trang, đổi CTA lặp ở FAQ/quy trình/thẻ kiểu cắt sang vật liệu, dịch vụ hoặc Blog đúng chủ đề. Được đổi nhãn/link CTA trình bày, giữ nội dung nguồn, giá, ảnh, FAQ và URL trang. Guard nguồn chỉ ngoại lệ chính xác nhãn CTA được thay; chưa xuất bản.
