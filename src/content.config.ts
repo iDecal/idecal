@@ -41,6 +41,7 @@ const projects = defineCollection({
     description: z.string().default(''),
     pubDate: z.coerce.date(),
     gallery: z.array(z.string()).default([]),
+    beforeAfter: z.object({before:z.string(),after:z.string(),beforeAlt:z.string().optional(),afterAlt:z.string().optional(),placeholder:z.boolean().default(false)}).optional(),
     service: z.string().optional(),
     location: z.string().optional(),
   }),

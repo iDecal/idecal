@@ -27,7 +27,7 @@
 .projects-filters button[aria-pressed='true'] { background: #eaf3ff; border-color: #b8d2f0; color: #174b80; }
 .projects-filters button:hover { border-color: #91b3d7; background: #f2f7fd; }
 #project-count { flex-shrink: 0; margin: 0; color: #52677c; font-size: 13px; }
-.projects-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; align-items: stretch; }
+.projects-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; align-items: stretch; }
 .projects-page .project-card { border-radius: 16px; border-color: #dce5f0; box-shadow: none; transition: box-shadow .2s,border-color .2s; }
 .projects-page .project-card:hover { border-color: #b5cbe3; box-shadow: 0 8px 26px #173b620d; }
 .projects-page .project-card > a > div:first-child { aspect-ratio: 4/3; }

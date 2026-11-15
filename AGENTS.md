@@ -1,3 +1,5 @@
+- Cập nhật mới: Công trình desktop3 cột/tablet2/mobile1; chi tiết compact với overview ảnh+hạng mục/vật liệu, so sánh trước–sau. Chủ website cho phép ảnh tạm: ghi rõ “Ảnh minh họa” nếu chưa có cặp thật, thay qua CMS beforeAfter. Footer theo mẫu navy: thương hiệu/liên hệ hai cột trên, bốn nhóm link dưới; giữ social7 và địa chỉ, mobile accordion. Chưa xuất bản.
+
 - Hero dịch vụ mới theo ảnh tham chiếu: editorial-service-heroes.css, nội dung trái/ảnh lớn bên phải hòa vào nền sáng, bỏ khung và nền vàng cũ riêng cho data-service-hero; giữ giới hạn ảnh400px, mobile tối đa320px; lợi ích có phân cách nhẹ. Chọn ảnh nguồn lớn qua service-hero-photos.json, dùng picture/source WebP quality88, img nguồn cũ giữ fallback để bảo toàn kho nguồn. Không đổi hero trang chủ/Giới thiệu, nội dung/CTA/H1/URL. Chưa xuất bản.
 
 - Ngoại lệ mẫu card trang văn phòng: nhóm bốn dịch vụ tư vấn/thiết kế/in-cắt/thi công dùng icon, desktop 4 cột, tablet 2/mobile 1; chỉ nhóm năm giải pháp dùng ảnh và accordion theo mẫu tham chiếu. Chưa xuất bản.

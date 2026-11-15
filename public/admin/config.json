@@ -223,6 +223,44 @@
           "required": false
         },
         {
+          "name": "beforeAfter",
+          "label": "Ảnh trước – sau",
+          "widget": "object",
+          "required": false,
+          "collapsed": true,
+          "hint": "Chọn đúng hai ảnh cùng công trình. Bật ảnh minh họa nếu chỉ dùng ảnh tạm.",
+          "fields": [
+            {
+              "name": "before",
+              "label": "Ảnh trước thi công",
+              "widget": "image"
+            },
+            {
+              "name": "after",
+              "label": "Ảnh sau thi công",
+              "widget": "image"
+            },
+            {
+              "name": "beforeAlt",
+              "label": "Mô tả ảnh trước",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "afterAlt",
+              "label": "Mô tả ảnh sau",
+              "widget": "string",
+              "required": false
+            },
+            {
+              "name": "placeholder",
+              "label": "Ảnh minh họa / cần thay",
+              "widget": "boolean",
+              "default": false
+            }
+          ]
+        },
+        {
           "name": "body",
           "label": "Nội dung",
           "widget": "markdown",
