@@ -177,3 +177,23 @@
 }
 @media(max-width:430px) { .office-audience-grid { grid-template-columns:1fr; } .office-services-grid { grid-template-columns:1fr; } .office-service-card { display:grid; grid-template-columns:110px minmax(0,1fr); } .office-service-symbol { padding:20px 0 20px 16px; align-items:flex-start; } .office-service-copy { padding:16px; } }
 @media(prefers-reduced-motion:reduce) { .office-service-card { transition:none; } }
+
+/* Saved service-card reference: photographic cover, calm copy, disclosure, plain link. */
+.office-glass-page :is(.office-services-grid,.office-solutions){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:stretch;}
+.office-glass-page :is(.office-service-card,.office-solution){grid-column:auto;display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #dce6ee;border-radius:20px;overflow:hidden;box-shadow:none;transition:none;}
+.office-glass-page :is(.office-service-card,.office-solution):hover{box-shadow:none;border-color:#c6d9e5;}
+.office-glass-page :is(.office-service-card,.office-solution)>figure{margin:0;aspect-ratio:1.7;overflow:hidden;}
+.office-glass-page :is(.office-service-card,.office-solution)>figure img{display:block;width:100%;height:100%;aspect-ratio:1.7;object-fit:cover;border-radius:0;}
+.office-glass-page :is(.office-service-copy,.office-solution-copy){display:flex;flex:1;flex-direction:column;align-items:stretch;padding:26px;}
+.office-glass-page :is(.office-service-copy,.office-solution-copy) h3{margin:0 0 16px;line-height:1.5;}
+.office-glass-page :is(.office-service-copy,.office-solution-copy) p{font-size:15px;line-height:1.8;margin:0 0 22px;}
+.office-glass-page .office-card-details{margin-top:auto;border-top:1px solid #dce6ee;}
+.office-glass-page .office-card-details summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;list-style:none;cursor:pointer;font-size:14px;color:#102e57;}
+.office-glass-page .office-card-details summary::-webkit-details-marker{display:none;}
+.office-glass-page .office-card-details summary>span{font-size:22px;font-weight:400;color:#18766d;}
+.office-glass-page .office-card-details[open] summary>span{transform:rotate(45deg);}
+.office-glass-page .office-card-details ul{padding-top:8px;}
+.office-glass-page .office-solution-button{margin-top:18px;align-self:flex-start;}
+.office-glass-page .office-service-link{margin-top:auto;align-self:flex-start;}
+@media(min-width:768px) and (max-width:1100px){.office-glass-page :is(.office-services-grid,.office-solutions){grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:767px){.office-glass-page :is(.office-services-grid,.office-solutions){grid-template-columns:minmax(0,1fr);gap:22px;}.office-glass-page :is(.office-service-copy,.office-solution-copy){padding:22px;}.office-glass-page .office-solution-button{width:auto;}}
