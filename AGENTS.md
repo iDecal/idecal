@@ -1,3 +1,5 @@
+- Footer mới nhất: bỏ toàn bộ nhóm menu điều hướng và tagline “Thiết kế · In ấn · Thi công Decal & film”. Chỉ logo/mô tả ngắn/social ở trái, hotline/Zalo/email ở phải, ba địa chỉ hiển thị bên dưới, copyright cuối; mobile xếp dọc. Chưa xuất bản.
+
 - Footer thu gọn theo yêu cầu: bỏ nhóm Khám phá và danh sách vật liệu lặp header; ba cột Dịch vụ nổi bật (4 link), Hỗ trợ (3 link), Khu vực (3 địa bàn chính + xem tất cả). Giữ logo ngang tagline, hotline/Zalo/email, địa chỉ và 7 social; giảm khoảng cách dọc. Được xuất bản ngay.
 
 - Footer: chỉ hiện biểu tượng logo, bỏ chữ iDecal bên cạnh; dòng “Thiết kế · In ấn · Thi công Decal & film” nằm ngang logo, căn giữa theo chiều dọc. Chưa xuất bản.
