@@ -1,3 +1,5 @@
+- Hero dịch vụ mới theo ảnh tham chiếu: editorial-service-heroes.css, nội dung trái/ảnh lớn bên phải hòa vào nền sáng, bỏ khung và nền vàng cũ riêng cho data-service-hero; giữ giới hạn ảnh400px, mobile tối đa320px; lợi ích có phân cách nhẹ. Chọn ảnh nguồn lớn qua service-hero-photos.json, dùng picture/source WebP quality88, img nguồn cũ giữ fallback để bảo toàn kho nguồn. Không đổi hero trang chủ/Giới thiệu, nội dung/CTA/H1/URL. Chưa xuất bản.
+
 - Ngoại lệ mẫu card trang văn phòng: nhóm bốn dịch vụ tư vấn/thiết kế/in-cắt/thi công dùng icon, desktop 4 cột, tablet 2/mobile 1; chỉ nhóm năm giải pháp dùng ảnh và accordion theo mẫu tham chiếu. Chưa xuất bản.
 
 - Trang Decal kính văn phòng đã áp dụng mẫu card tham chiếu cho nhóm dịch vụ và năm giải pháp: ảnh cover 1.7:1, desktop 3 cột, tablet 2/mobile 1, nền trắng/viền mảnh/bo 20px; giải pháp có “Đặc điểm & ứng dụng” đóng mặc định, giữ toàn bộ nội dung trong disclosure; link → không nền. Không tự thêm accordion rỗng cho card chỉ có một đoạn mô tả. Chưa xuất bản.
