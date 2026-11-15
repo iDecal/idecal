@@ -25,7 +25,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
       <figure class="interior-film-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.images[0]} eager /><figcaption>Film dán nội thất<span aria-hidden="true">iDecal</span></figcaption></figure>
     </div>
   </section>
-  <div class="interior-film-nav-wrap"><nav class="container interior-film-jump" aria-label="Nội dung dịch vụ film nội thất" data-film-navigation>{sections.map((section,index)=><a href={'#'+section.id} aria-current={index===0?'location':undefined}>{section.label}</a>)}<a href={quote} class="interior-film-nav-quote">Nhận báo giá <span aria-hidden="true">→</span></a></nav></div>
+  <div class="interior-film-nav-wrap"><nav class="container interior-film-jump" aria-label="Nội dung dịch vụ film nội thất" data-film-navigation>{sections.map((section,index)=><a href={'#'+section.id} aria-current={index===0?'location':undefined}>{section.label}</a>)}<a data-cta-text href="/film-dan-noi-that/" class="interior-film-nav-quote">Xem vật liệu film <span aria-hidden="true">→</span></a></nav></div>
 
   <section id="mau-film-noi-that" class="container interior-film-section" aria-labelledby={source.patternsHeading.id}>
     <header class="interior-film-section-heading"><div><p class="interior-film-eyebrow" data-heading-label>Vật liệu & bề mặt</p><h2 id={source.patternsHeading.id}>{source.patternsHeading.title}</h2></div>{source.patternsHeading.subtitle&&<p>{source.patternsHeading.subtitle}</p>}</header>

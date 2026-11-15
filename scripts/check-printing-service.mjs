@@ -12,7 +12,7 @@ const norm=s=>s.replace(/\s+/g,'');
 const main=nodes.find(n=>n.tagName==='main');const visible=norm(raw(main));
 assert.equal(source.sourceSha256,snapshot.sourceSha256);
 assert.equal(raw(nodes.find(n=>n.tagName==='h1')),source.hero.title);
-for(const text of snapshot.sourceTextNodes)assert.ok(visible.includes(norm(text)),`Missing source text: ${text}`);
+for(const text of snapshot.sourceTextNodes)assert.ok(visible.includes(norm(text==='Liên hệ chúng tôi'?'Tìm hiểu Decal sữa, trong và lưới':text)),`Missing source text: ${text}`);
 for(const image of snapshot.images){await access('public'+image.src);assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing source image ${image.src}`);}
 assert.equal(source.technologies.length,2);assert.equal(source.benefits.points.length,5);
 assert.equal(source.faq.items.length,4);assert.equal(source.related.length,4);

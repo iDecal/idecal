@@ -1,3 +1,7 @@
+- Chủ website đã hủy bản footer masthead mới; giữ footer đã xuất bản trước đó. Phần giảm CTA dịch vụ vẫn là bản nháp riêng, chưa xuất bản.
+
+- Rà soát CTA dịch vụ theo yêu cầu: giữ CTA liên hệ chính ở hero/cuối trang, đổi CTA lặp ở FAQ/quy trình/thẻ kiểu cắt sang vật liệu, dịch vụ hoặc Blog đúng chủ đề. Được đổi nhãn/link CTA trình bày, giữ nội dung nguồn, giá, ảnh, FAQ và URL trang. Guard nguồn chỉ ngoại lệ chính xác nhãn CTA được thay; chưa xuất bản.
+
 - Khôi phục dấu tia xanh gốc cạnh ảnh hero trang chủ; hero Giới thiệu có about-hero/data-hero-media để dùng cùng nền vàng rất nhạt xoay và giới hạn 400px. Chưa xuất bản.
 
 - Hero mới nhất: nền vàng rất nhạt #fcf6df, lệch trái/dưới và xoay -2deg riêng lớp nền; ảnh không xoay, cao tối đa 400px (mobile nhỏ hơn), bóng trắng. Chưa xuất bản thay đổi này.

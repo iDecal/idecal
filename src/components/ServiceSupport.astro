@@ -12,7 +12,7 @@ const cta=getServiceCta(service);
   </div>
   <div class="consultation-actions">
    <a href={cta.href} class="consultation-primary"><span>{cta.action}</span><span class="consultation-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a>
-   <a href="https://zalo.me/0866077040" class="consultation-secondary"><span>Nhắn Zalo iDecal</span></a>
+   <a href={service==='thiet-ke'?'/dich-vu/in-decal/':'/san-pham/'} class="consultation-secondary"><span>{service==='thiet-ke'?'Tìm hiểu dịch vụ in Decal':'Xem vật liệu và sản phẩm'}</span></a>
    <span class="consultation-note">Trao đổi nhu cầu trước khi đặt dịch vụ</span>
   </div>
   <nav class="consultation-links" aria-label="Thông tin trước khi đặt dịch vụ"><a href="/blog/cach-do-kich-thuoc-kinh-truoc-khi-dat-decal">Hướng dẫn đo kính</a><a href="/dich-vu#bang-gia-dich-vu">Bảng giá tham khảo</a><a href="/du-an">Công trình thực tế</a></nav>

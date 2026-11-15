@@ -28,8 +28,8 @@ export function presentCtaArrows(doc,pathname){
   }
   const icon=parseFragment(svg).childNodes[0];icon.parentNode=target;target.childNodes.push(icon);
   a.attrs.push({name:'data-site-cta',value:''});changed=true;
-  const textAction=Boolean(cardAction)||/product-card-read|solution-button|read-more|blog-read/.test(cls)||ancestors.some(n=>n.tagName==='article'&&(walk(n).some(c=>c.tagName==='img')||/card|solution/.test(get(n,'class'))));
-  if(textAction){a.attrs.push({name:'data-cta-text',value:''});setArrow(icon,horizontal);}
+  const textAction=a.attrs.some(x=>x.name==='data-cta-text')||Boolean(cardAction)||/product-card-read|solution-button|read-more|blog-read/.test(cls)||ancestors.some(n=>n.tagName==='article'&&(walk(n).some(c=>c.tagName==='img')||/card|solution/.test(get(n,'class'))));
+  if(textAction){if(!a.attrs.some(x=>x.name==='data-cta-text'))a.attrs.push({name:'data-cta-text',value:''});setArrow(icon,horizontal);}
   const group=ancestors.find(n=>/actions|buttons/.test(get(n,'class')))||ancestors.find(n=>['article','section'].includes(n.tagName))||a.parentNode;
   if(!groups.has(group))groups.set(group,[]);groups.get(group).push({a,target,icon});
  }

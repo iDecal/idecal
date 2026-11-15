@@ -59,7 +59,7 @@ const sectionLinks=[
     <header class="sign-heading"><p class="sign-eyebrow">Chi phí theo vật liệu & hạng mục</p><h2 id={source.pricing.heading.id}>{source.pricing.heading.title}</h2></header>
     <nav class="sign-price-options" aria-label="Chọn bảng giá">{source.pricing.tables.map((table,index)=><a href={'#'+table.heading.id}>{index===0?'Giá theo loại decal':'Giá theo hạng mục'}<span aria-hidden="true">↓</span></a>)}</nav>
     {source.pricing.tables.map(table=><div class="sign-price-group"><h3 id={table.heading.id}>{table.heading.title}</h3><div class="sign-original" set:html={table.intro.map(block=>block.html).join('')} /><div class="sign-table-scroll" role="region" aria-labelledby={table.heading.id} set:html={signageTableHtml(table.html)} /></div>)}
-    <div class="sign-price-followup"><div class="sign-original sign-price-note" set:html={source.pricing.note.html} /><a href={signageCopy.quoteHref} class="btn-idecal-bold">Nhận báo giá theo kích thước của bạn →</a></div>
+    <div class="sign-price-followup"><div class="sign-original sign-price-note" set:html={source.pricing.note.html} /><a data-cta-text href="/dich-vu/in-decal/" class="btn-idecal-bold">Xem dịch vụ in Decal bảng hiệu →</a></div>
   </section>
   <section class="container sign-section sign-process-section" aria-labelledby={source.process.heading.id}>
     <div class="sign-process-layout">

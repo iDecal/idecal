@@ -34,7 +34,7 @@ const faqs = [...content.faqs, ...extraFaqs];
   {service.slug === 'thi-cong-decal' && <><InstallationServiceContent /><InstallationEvidence /></>}
   {hasDetails && <div class="lp-details"><slot name="details" /></div>}
   {uploadedServicePhotos[service.slug] && <div class="container"><InstallationPhotoGallery numbers={uploadedServicePhotos[service.slug]} heading={service.slug==='cat-decal'?'Decal chữ và logo tại công trình':service.slug==='thiet-ke'?'Ứng dụng thiết kế tại công trình':'Hình ảnh hoàn thiện Decal tại công trình'} /></div>}
-  {hasDetails ? <slot name="faq" /> : <section id="lp-cau-hoi" class="lp-faq lp-section"><div class="container lp-faq-grid"><div><p class="lp-kicker">Giải đáp trước khi bắt đầu</p><h2>Một vài điều cần biết</h2><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Trao đổi qua Zalo →</a></div><div>{faqs.slice(0,3).map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>}
+  {hasDetails ? <slot name="faq" /> : <section id="lp-cau-hoi" class="lp-faq lp-section"><div class="container lp-faq-grid"><div><p class="lp-kicker">Giải đáp trước khi bắt đầu</p><h2>Một vài điều cần biết</h2><a href={service.slug==='thiet-ke'?'/blog/tieu-chuan-thiet-ke-decal-mo-dan-kinh-van-phong/':'/huong-dan-do-kinh/'} class="btn-idecal-bold">{service.slug==='thiet-ke'?'Hướng dẫn thiết kế Decal kính':'Hướng dẫn đo kính trước thi công'} →</a></div><div>{faqs.slice(0,3).map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>}
 
   <RelatedGuides context={service.slug} />
   <ServiceSupport service={service.slug} />

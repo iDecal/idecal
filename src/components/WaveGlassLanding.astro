@@ -56,7 +56,7 @@ import '../styles/wave-glass.css';
     </div>
   </section>
   <section id="hoi-dap-van-song" class="container wave-section wave-faq">
-    <header class="wave-section-heading"><p class="wave-eyebrow">Trước khi chọn & thi công</p><h2 id={source.faq.heading.id}>{source.faq.heading.title}</h2><a href="/lien-he-idecal/" class="btn-idecal-bold">Trao đổi với iDecal →</a></header>
+    <header class="wave-section-heading"><p class="wave-eyebrow">Trước khi chọn & thi công</p><h2 id={source.faq.heading.id}>{source.faq.heading.title}</h2><a data-cta-text href="/decal-dan-kinh-van-phong/" class="btn-idecal-bold">Xem giải pháp Decal kính văn phòng →</a></header>
     <div class="wave-questions">{source.faq.items.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div class="wave-original wave-answer" set:html={item.answer.html} /></details>)}</div>
   </section>
   <section id="thi-cong-van-song" class="container wave-section wave-gallery">

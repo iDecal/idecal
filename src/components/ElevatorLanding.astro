@@ -21,7 +21,7 @@ import '../styles/elevator-service.css';
   <section id="bao-gia-thang-may" class="container elevator-section">
     <header class="elevator-heading"><p class="elevator-eyebrow">Làm rõ vật tư & công việc</p><h2>{service.quote.title}</h2><p>{service.quote.intro}</p></header>
     <div class="elevator-costs">{service.quote.items.map(item=><article><h3>{item.title}</h3><ul>{item.factors.map(factor=><li>{factor}</li>)}</ul></article>)}</div>
-    <div class="elevator-quote-followup"><p>{service.quote.note}</p><a href={service.quoteHref} class="btn-primary-solid">Gửi nhu cầu để nhận báo giá →</a></div>
+    <div class="elevator-quote-followup"><p>{service.quote.note}</p><a data-cta-text href="/dich-vu-film-dan-noi-that/" class="btn-idecal-bold">Xem film dán nội thất →</a></div>
   </section>
   <section id="quy-trinh-thang-may" class="container elevator-section elevator-process-section">
     <div class="elevator-heading"><p class="elevator-eyebrow">Từ khảo sát đến bàn giao</p><h2>Quy trình thi công gọn trong 5 bước</h2><p>Thống nhất mẫu và phạm vi công việc trước khi thực hiện, kiểm tra hoàn thiện theo bản đã duyệt.</p></div>
@@ -29,7 +29,7 @@ import '../styles/elevator-service.css';
   </section>
   <div class="container elevator-gallery"><InstallationPhotoGallery id="anh-dan-thang-may" heading="Hình ảnh film nội thất & decal thang máy" introduction="Tham khảo cách phối vân, màu sắc và bố trí quảng cáo trên thang máy. Bấm vào ảnh để xem lớn." photos={service.gallery} /><a href="/blog/dan-decal-thang-may-giai-phap-refresh-khong-gian/" class="btn-idecal-bold">Đọc thêm về dán decal thang máy →</a></div>
   <section id="hoi-dap-thang-may" class="container elevator-section elevator-faq">
-    <header class="elevator-heading"><h2>Câu hỏi thường gặp</h2><a href={service.quoteHref} class="btn-idecal-bold">Trao đổi phương án với iDecal →</a></header>
+    <header class="elevator-heading"><h2>Câu hỏi thường gặp</h2><a data-cta-text href="/dich-vu/in-decal/" class="btn-idecal-bold">Tìm hiểu dịch vụ in Decal →</a></header>
     <div>{service.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div>
   </section>
   <section class="container elevator-section elevator-contact"><div><p class="elevator-eyebrow">Bắt đầu từ hiện trạng của bạn</p><h2>Chọn mẫu film hoặc trao đổi ý tưởng quảng cáo</h2><p>Chuẩn bị ảnh bề mặt, kích thước và số lượng thang máy. iDecal sẽ tư vấn phương án phù hợp với nhu cầu sử dụng.</p></div><div class="elevator-actions"><a href={service.quoteHref} class="btn-primary-solid">Nhận tư vấn dán thang máy →</a><a href={service.parent.href} class="btn-idecal-bold">Về Decal quảng cáo →</a></div></section>

@@ -12,7 +12,7 @@ const text=n=>['script','style','noscript','svg'].includes(n.tagName)?'':n.nodeN
 const norm=s=>s.replace(/\s+/g,'');
 const main=nodes.find(n=>n.tagName==='main');const visible=norm(text(main));
 assert.equal(source.sourceSha256,snapshot.sourceSha256);assert.equal(text(nodes.find(n=>n.tagName==='h1')),source.hero.title);
-for(const t of snapshot.sourceTextNodes)assert.ok(visible.includes(norm(t)),`Missing imported source text: ${t}`);
+for(const t of snapshot.sourceTextNodes)assert.ok(visible.includes(norm(({'Đặt dịch vụ của bạn':'Xem dịch vụ dán Decal sau gia công','Đặt cắt LOGO ngay':'Tìm hiểu thiết kế logo','Trao đổi mẫu tem nhãn':'Tìm hiểu in tem nhãn','Gửi mẫu trang trí':'Xem vật liệu trang trí'}[t]??t))),`Missing imported source text: ${t}`);
 for(const image of snapshot.images){await access('public'+image.src);assert.ok(nodes.some(n=>n.tagName==='img'&&attr(n,'src')===image.src),`Missing source image ${image.src}`);}
 assert.equal(source.services.items.length,4);assert.equal(source.process.steps.length,4);assert.equal(source.benefits.points.length,4);
 const tables=nodes.filter(n=>n.tagName==='table');assert.equal(tables.length,1);
