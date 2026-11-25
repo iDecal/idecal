@@ -19,9 +19,10 @@ const rendered=normalize(text(main));
 assert.equal(source.sourceSha256,proof.sourceSha256);
 assert.equal(text(nodes.find(node=>node.tagName==='h1')),proof.heading);
 const removedIntro=source.faq.intro;
-const retainedBlocks=proof.blocks.filter(block=>!removedIntro.some(item=>item.text===block));
+const removedPhoneLabel=source.hero.contact.find(link=>link.href==='tel:0866077040').label;
+const retainedBlocks=proof.blocks.filter(block=>block!==removedPhoneLabel&&!removedIntro.some(item=>item.text===block));
 const textLeaves=node=>node.nodeName==='#text'?[node.value.trim()].filter(Boolean):(node.childNodes??[]).flatMap(textLeaves);
-const removedLeaves=new Set(removedIntro.flatMap(item=>textLeaves(parse(item.html))));
+const removedLeaves=new Set([removedPhoneLabel,...removedIntro.flatMap(item=>textLeaves(parse(item.html)))]);
 for(const block of retainedBlocks)assert.ok(rendered.includes(normalize(block)),'Missing source text: '+block);
 for(const leaf of proof.sourceTextNodes.filter(leaf=>!removedLeaves.has(leaf)))assert.ok(rendered.includes(normalize(leaf)),'Missing original source text node: '+leaf);
 for(const block of removedIntro)assert.ok(!rendered.includes(normalize(block.text)),'Requested FAQ introduction must be removed');
@@ -43,6 +44,12 @@ for(const photo of photos.images){
 }
 const questions=mainNodes.find(node=>(attr(node,'class')??'').split(/\s+/).includes('interior-film-questions'));
 const within=(node,ancestor)=>{for(let parent=node;parent;parent=parent.parentNode)if(parent===ancestor)return true;return false;};
+const contactActions=mainNodes.find(node=>(attr(node,'class')??'').split(/\s+/).includes('interior-film-contact-actions'));
+assert.ok(contactActions,'Missing interior film consultation actions');
+assert.deepEqual(mainNodes.filter(node=>node.tagName==='a'&&within(node,contactActions)).map(node=>attr(node,'href')),[
+ '/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau',
+ '/film-dan-noi-that/',
+]);
 const summaries=mainNodes.filter(node=>node.tagName==='summary'&&within(node,questions));
 assert.equal(summaries.length,7);
 assert.ok(!mainNodes.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQs must start closed');

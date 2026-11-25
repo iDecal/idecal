@@ -124,7 +124,6 @@
 .interior-film-contact p:not(.interior-film-eyebrow){font-size:14px;line-height:1.9;max-width:650px;color:#52677c}
 .interior-film-contact-actions{display:flex;flex-direction:column;align-items:start;gap:12px}
 .interior-film-contact-actions>.btn-primary-solid{gap:20px}
-.interior-film-contact-phone{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600;color:#1b4f7a}
 @media(max-width:1279px){.interior-film-page{--film-header:80px}.interior-film-hero-grid{gap:36px}.interior-film-faq{gap:40px}.interior-film-applications>article{gap:30px}.interior-film-application-copy{padding-right:28px}}
 @media(max-width:1023px){.interior-film-patterns{grid-template-columns:repeat(2,minmax(0,1fr))}.interior-film-hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:28px}.interior-film-hero-photo{aspect-ratio:3/4}.interior-film-pattern-copy{padding:22px}.interior-film-benefits-layout{gap:30px;align-items:start}.interior-film-benefits-layout>figure{aspect-ratio:3/4}.interior-film-application-copy{padding-block:24px}.interior-film-related>div{gap:20px}.interior-film-contact{gap:30px;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}}
 @media(max-width:767px){
