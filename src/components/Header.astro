@@ -4,6 +4,8 @@ import MenuOffering from './MenuOffering.astro';
 import { regions } from '../data/regions';
 import { blogCategories } from '../data/blog-categories';
 interface MenuItem { name: string; href: string; description: string; }
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+const isCurrent = (href: string) => currentPath === href.replace(/\/$/, '');
 const megaGroups: { title: string; all: string; allLabel: string; items: MenuItem[] }[] = [
   { title: 'Giải pháp & Vật liệu', all: '/san-pham', allLabel: 'Xem tất cả vật liệu', items: [
     { name: 'Decal dán kính văn phòng', href: '/decal-dan-kinh-van-phong', description: 'Riêng tư cho phòng họp, kết hợp logo và họa tiết.' },
@@ -62,9 +64,9 @@ const navLinks: NavLink[] = [
                       <section class="mega-column" aria-label={group.title}>
                         <p class="mega-heading">{group.title}</p>
                         <div class="mega-items">{group.items.map(item => (
-                          <MenuOffering {...item} />
+                          <MenuOffering {...item} current={isCurrent(item.href)} />
                         ))}</div>
-                        <a class="mega-all" href={group.all}>{group.allLabel}</a>
+                        <a class="mega-all" href={group.all} aria-current={isCurrent(group.all) ? 'page' : undefined}>{group.allLabel}</a>
                       </section>
                     ))}
                   </div>
@@ -122,12 +124,14 @@ const navLinks: NavLink[] = [
     
     <div class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-4">
       <div class="mobile-offerings" aria-label="Dịch vụ">
-        {megaGroups.map(group => (
-          <section class="mobile-offering-group" aria-label={group.title}>
-            <p class="mobile-offering-heading">{group.title}</p>
-            {group.items.map(item => <MenuOffering {...item} compact />)}
-            <a class="mega-all" href={group.all}>{group.allLabel}</a>
-          </section>
+        {megaGroups.map((group, index) => (
+          <details class="mobile-offering-group" open={index === 0 || isCurrent(group.all) || group.items.some(item => isCurrent(item.href))}>
+            <summary class="mobile-offering-heading">{group.title}</summary>
+            <div class="mobile-offering-items">
+              {group.items.map(item => <MenuOffering {...item} compact current={isCurrent(item.href)} />)}
+              <a class="mega-all" href={group.all} aria-current={isCurrent(group.all) ? 'page' : undefined}>{group.allLabel}</a>
+            </div>
+          </details>
         ))}
       </div>
       <div class="mobile-other-links flex flex-col gap-1">
@@ -336,15 +340,16 @@ const navLinks: NavLink[] = [
   .mobile-regions a { display:flex; align-items:center; min-height:44px; padding:9px 12px; border-radius:8px; font-size:13px; color:#244766; }
   .mobile-regions a:hover,.mobile-regions a[data-selected="true"] { background:#edf4fd; color:#125b91; }
   .mobile-regions a:focus-visible { outline:2px solid #168ac0; outline-offset:2px; }
-  .desktop-mega { position:absolute; top:100%; left:50%; transform:translateX(-50%); width:860px; max-width:calc(100vw - 32px); max-height:calc(100dvh - 112px); overflow-y:auto; overscroll-behavior:contain; background:white; border:1px solid #e2e8f0; border-radius:18px; box-shadow:0 18px 50px #0b174018; }
+  .desktop-mega { position:absolute; top:100%; left:50%; transform:translateX(-50%); width:960px; max-width:calc(100vw - 32px); max-height:calc(100dvh - 112px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #dce6f1; border-radius:20px; box-shadow:0 20px 48px #0b174024; }
   .desktop-mega[hidden] { display:none!important; }
-  .mega-columns { display:grid; grid-template-columns:1.1fr 1fr; gap:0; }
-  .mega-column { padding:28px 24px; }
-  .mega-column + .mega-column { border-left:1px solid #e4ecf5; background:#f7faff; }
-  .mega-heading { margin:0 14px 16px; font-size:13px; font-weight:600; color:#52677c; letter-spacing:.02em; text-transform:none; }
-  .mega-all { display:inline-flex; align-items:center; min-height:44px; margin:8px 10px 0; font-size:13px; font-weight:500; color:#16649b; }
-  .mega-all:hover { color:#0878bd; }
-  .mega-cta { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:22px 38px; border-top:1px solid #edf0f6; background:linear-gradient(110deg,#f0f7ff,#f6f3ff); }
+  .mega-columns { display:grid; grid-template-columns:minmax(0, 1.7fr) minmax(0, 1fr); gap:16px; padding:16px; }
+  .mega-column { display:flex; flex-direction:column; padding:16px; border:1px solid #e1eaf4; border-radius:14px; background:#f7faff; }
+  .mega-heading { margin:0 0 12px; padding:0 0 12px; border-bottom:1px dashed #d0dfef; color:#102e57; font-size:16px; font-weight:650; }
+  .mega-items { display:grid; gap:6px; }
+  .mega-column:first-child .mega-items { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .mega-all { display:flex; align-items:center; align-self:flex-start; min-height:48px; margin-top:auto; padding:0 10px; border-radius:8px; color:#125b91; font-size:14px; font-weight:650; }
+  .mega-all:hover,.mega-all[aria-current="page"] { background:#e6f0ff; color:#102e57; }
+  .mega-cta { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 32px; border-top:1px solid #e1eaf4; background:#f3f7fc; }
   .mega-cta p { margin:0; font-size:14px; font-weight:600; color:#163d60; }
   .mega-cta small { display:block; margin-top:4px; font-size:12px; line-height:1.6; color:#536579; }
   .mega-cta a { flex-shrink:0; padding:13px 18px; background:linear-gradient(110deg,#0878bd,#6b20ed); border-radius:8px; font-size:13px; font-weight:600; color:white; }
@@ -352,10 +357,14 @@ const navLinks: NavLink[] = [
   .mega-root a:focus-visible,.mega-trigger:focus-visible { outline:2px solid #2563eb; outline-offset:3px; }
   .mega-trigger[aria-expanded="true"] { color:#16649b; }
   .mega-trigger[aria-expanded="true"] svg { transform:rotate(180deg); }
-  .mobile-offering-group { padding:4px 0 14px; }
-  .mobile-offering-group + .mobile-offering-group { padding-top:20px; border-top:1px solid #edf1f5; }
-  .mobile-offering-heading { margin:0 0 10px; font-size:12px; line-height:1.5; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:#52677c; }
-  .mobile-offering-group .mega-all { margin:4px 0 0; }
+  .mobile-offerings { display:grid; gap:10px; }
+  .mobile-offering-group { border:1px solid #e1eaf4; border-radius:12px; background:#f7faff; }
+  .mobile-offering-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; min-height:48px; padding:10px 14px; border-radius:12px; cursor:pointer; list-style:none; color:#102e57; font-size:16px; font-weight:650; }
+  .mobile-offering-heading::-webkit-details-marker { display:none; }
+  .mobile-offering-heading::after { content:""; width:8px; height:8px; flex-shrink:0; margin-right:3px; border:solid currentColor; border-width:0 2px 2px 0; transform:rotate(45deg); }
+  .mobile-offering-group[open] > .mobile-offering-heading::after { transform:rotate(225deg); }
+  .mobile-offering-heading:focus-visible,.mobile-offering-group .mega-all:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
+  .mobile-offering-items { margin:0 8px; padding:4px 0 6px; border-top:1px dashed #d0dfef; }
   .mobile-other-links { margin-top:10px; padding-top:12px; border-top:1px solid #e2e8f0; }
 
   #mobile-menu[hidden], .mobile-dropdown-content[hidden] { display: none !important; }
