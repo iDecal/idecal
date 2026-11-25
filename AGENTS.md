@@ -1,3 +1,5 @@
+- CTA trong mỗi section dùng tối đa hai nút. Nếu section đã có nút tư vấn Zalo, bỏ dòng hotline lặp bên cạnh hoặc bên dưới cụm nút.
+
 - Quy trình duyệt giao diện theo yêu cầu chủ website: sau khi chỉnh sửa, chủ động xuất bản hoặc tạo bản xem trước và gửi đường dẫn để chủ website xem trực tiếp. Nếu yêu cầu xuất bản ngay, triển khai lên Cloudflare Pages và kiểm tra bản live.
 
 - Footer mới nhất: bỏ toàn bộ nhóm menu điều hướng và tagline “Thiết kế · In ấn · Thi công Decal & film”. Chỉ logo/mô tả ngắn/social ở trái, hotline/Zalo/email ở phải, ba địa chỉ hiển thị bên dưới, copyright cuối; mobile xếp dọc. Chưa xuất bản.

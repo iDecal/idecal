@@ -6,7 +6,6 @@
 .regional-hero h1 { font-size: clamp(30px,3.4vw,42px); line-height: 1.25; margin: 0 0 20px; }
 .regional-lead { font-size: 17px; line-height: 1.8; color: #36526f; margin: 0 0 24px; }
 .regional-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
-.regional-phone { display: inline-block; margin-top: 20px; font-size: 14px; color: #0d6b96; }
 .regional-hero-photo { position: relative; margin: 0; aspect-ratio: 4/3; overflow: hidden; border-radius: 20px; border: 1px solid #dce6f4; }
 .regional-hero-photo img { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; }
 .regional-jump { background: white; border-bottom: 1px solid #dbe5f2; }
