@@ -40,25 +40,13 @@ const navLinks: NavLink[] = [
 ---
 
 <nav aria-label="Điều hướng chính" class="site-header sticky top-0 w-full z-[100] bg-white border-b border-border">
-  <div class="header-shell relative">
-    <div class="header-row">
+  <div class="container mx-auto px-4 relative">
+    <div class="header-row flex justify-between items-center gap-4 h-[80px] xl:h-[96px]">
       
-      <div class="header-identity">
+      <div class="flex-shrink-0">
         <a href="/" class="header-brand flex items-center group" aria-label="iDecal – Trang chủ">
           <img src="/images/idecal-logo.png" alt="Logo iDecal" class="h-12 w-auto object-contain" /><span class="header-brand-name">iDecal</span>
         </a>
-      </div>
-
-      <div class="region-switcher">
-        <button id="region-trigger" type="button" class="header-location" aria-expanded="false" aria-controls="header-regions" aria-label={`Khu vực: ${activeRegion.name}. Chọn khu vực phục vụ`}>
-          <svg class="region-pin" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>{activeRegion.name}</span>
-          <svg class="region-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4"/></svg>
-        </button>
-        <div id="header-regions" class="region-panel" hidden inert>
-          <p>Chọn khu vực phục vụ</p>
-          <ul>{regions.map(region => <li><a href={`/khu-vuc/${region.slug}`} data-selected={region.slug === activeRegion.slug ? 'true' : undefined} aria-current={Astro.url.pathname.startsWith(`/khu-vuc/${region.slug}`) ? 'location' : undefined}><span>{region.name}</span>{region.slug === activeRegion.slug && <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg>}</a></li>)}</ul>
-        </div>
       </div>
 
       <!-- Desktop Menu -->
@@ -67,7 +55,7 @@ const navLinks: NavLink[] = [
           <div class={`${link.mega ? 'mega-root' : 'relative group'} py-6`}>
             {link.mega ? (
               <>
-                <button id="mega-trigger" type="button" aria-expanded="false" aria-controls="desktop-mega" class="mega-trigger header-nav-label font-medium flex items-center gap-1.5 whitespace-nowrap">
+                <button id="mega-trigger" type="button" aria-expanded="false" aria-controls="desktop-mega" class="mega-trigger text-[13px] xl:text-base font-medium text-brand-navy hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
                   {link.name}<svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>
                 </button>
                 <div id="desktop-mega" hidden inert class="desktop-mega">
@@ -88,8 +76,7 @@ const navLinks: NavLink[] = [
             ) : (<>
             <a 
               href={link.href}
-              aria-current={isCurrent(link.href) ? "page" : undefined}
-              class="header-nav-label font-medium transition-colors flex items-center gap-1.5 whitespace-nowrap"
+              class="text-[13px] xl:text-base font-medium text-brand-navy hover:text-primary transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
               {link.name}
               {link.dropdown && <svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>}
@@ -108,16 +95,22 @@ const navLinks: NavLink[] = [
         ))}
       </div>
 
-      <a class="header-phone" href="tel:0866077040" aria-label="Gọi iDecal: 0866.077.040">
-        <span class="header-phone-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2c0 8.84 7.16 16 16 16a2 2 0 0 0 2-2v-3l-5-2-2 2a12 12 0 0 1-6-6l2-2-2-5Z"/></svg>
-        </span>
-        <span class="header-phone-copy"><span>Hotline</span><strong>0866.077.040</strong></span>
-      </a>
+      <div class="region-switcher">
+        <button id="region-trigger" type="button" class="region-trigger" aria-expanded="false" aria-controls="header-regions" aria-label={`Khu vực: ${activeRegion.name}. Chọn khu vực phục vụ`}>
+          <svg class="region-pin" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>{activeRegion.name}</span>
+          <svg class="region-chevron" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4"/></svg>
+        </button>
+        <div id="header-regions" class="region-panel" hidden inert>
+          <p>Chọn khu vực phục vụ</p>
+          <ul>{regions.map(region => <li><a href={`/khu-vuc/${region.slug}`} data-selected={region.slug === activeRegion.slug ? 'true' : undefined} aria-current={Astro.url.pathname.startsWith(`/khu-vuc/${region.slug}`) ? 'location' : undefined}><span>{region.name}</span>{region.slug === activeRegion.slug && <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 4 4L19 6"/></svg>}</a></li>)}</ul>
+        </div>
+      </div>
 
-      <button id="menu-toggle" type="button" class="header-menu-button lg:hidden" aria-controls="mobile-menu" aria-expanded="false">
-        Menu
-        <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>
+      <button id="menu-toggle" class="lg:hidden p-2 text-brand-navy" aria-label="Mở menu" aria-controls="mobile-menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
       </button>
     </div>
   </div>
@@ -146,7 +139,7 @@ const navLinks: NavLink[] = [
           <div class="flex flex-col border-b border-slate-50 pb-2">
             {link.dropdown ? (
               <>
-                <button aria-expanded="false" aria-controls={`mobile-submenu-${index}`} class="mobile-dropdown-btn mobile-nav-label font-medium flex justify-between items-center text-left py-3">
+                <button aria-expanded="false" aria-controls={`mobile-submenu-${index}`} class="mobile-dropdown-btn text-lg font-medium text-secondary flex justify-between items-center text-left py-3">
                   {link.name}
                   <span class="text-brand-navy font-light">＋</span>
                 </button>
@@ -159,7 +152,7 @@ const navLinks: NavLink[] = [
                 </div>
               </>
             ) : (
-              <a href={link.href} class="mobile-nav-label font-medium py-3">{link.name}</a>
+              <a href={link.href} class="text-lg font-medium text-secondary py-3 hover:text-brand-navy">{link.name}</a>
             )}
           </div>
         ))}
@@ -308,43 +301,17 @@ const navLinks: NavLink[] = [
 </script>
 
 <style>
-  .header-shell { width:100%; max-width:1520px; margin-inline:auto; padding-inline:clamp(16px,2.5vw,36px); }
-  .header-row { display:flex; align-items:stretch; min-height:84px; gap:clamp(12px,1.8vw,28px); }
-  .header-identity { display:flex; align-items:center; flex-shrink:0; padding-inline-end:clamp(12px,2vw,32px); border-inline-end:1px solid #e0e8f1; }
-  .header-brand { gap:9px; }
-  .header-brand-name { color:#031245; font-size:20px; font-weight:500; letter-spacing:-.02em; }
-  .site-header { --header-menu-ink:#102e57; }
-  .header-main-links { gap:clamp(12px,2vw,30px); }
-  .header-nav-label { color:var(--header-menu-ink); font-size:clamp(16px,1.35vw,18px); }
-  .mobile-nav-label { color:var(--header-menu-ink); font-size:20px; }
-  .region-switcher { position:relative; display:flex; align-items:center; flex-shrink:0; }
-  .header-location { display:flex; align-items:center; gap:8px; min-height:48px; border-radius:8px; color:#173657; font-size:13px; font-weight:600; }
-  .header-location:hover,.header-location[aria-expanded="true"] { color:#125b91; }
-  .header-location>span { white-space:nowrap; }
-  .region-pin { width:23px; height:23px; flex:0 0 23px; color:#1264bd; }
+  .header-brand { gap:10px; }
+  .header-brand-name { color:#031245; font-size:23px; font-weight:600; letter-spacing:-.03em; }
+  .header-main-links { gap:clamp(24px,2.6vw,40px); }
+  .region-switcher { position:relative; flex-shrink:0; }
+  .region-trigger { display:flex; align-items:center; gap:10px; min-height:48px; min-width:212px; padding:12px 16px; border:1px solid transparent; border-radius:999px; background:linear-gradient(100deg,#0878bd 0%,#4f46e5 55%,#7d12f7 100%); color:#fff; font-size:14px; font-weight:500; box-shadow:0 6px 18px #4f46e526; transition:filter .2s,box-shadow .2s; }
+  .region-trigger:hover,.region-trigger[aria-expanded="true"] { filter:brightness(1.06); box-shadow:0 8px 22px #4f46e538; }
+  .region-trigger>span { flex:1; text-align:left; white-space:nowrap; }
+  .region-pin { width:19px; height:19px; flex:0 0 19px; color:currentColor; }
   .region-chevron { width:13px; height:13px; flex:0 0 13px; }
-  .header-location[aria-expanded="true"] .region-chevron { transform:rotate(180deg); }
-
-  .header-phone { display:flex; align-items:center; gap:10px; flex-shrink:0; padding-inline-start:clamp(12px,2vw,32px); border-inline-start:1px solid #e0e8f1; color:#102e57; }
-  .header-phone:hover { color:#125b91; }
-  .header-phone-icon { display:grid; place-items:center; width:40px; height:40px; border:1px solid #b7d3f3; border-radius:50%; color:#1264bd; }
-  .header-phone-icon svg { width:20px; height:20px; }
-  .header-phone-copy { display:grid; gap:2px; white-space:nowrap; }
-  .header-phone-copy>span { color:#52677c; font-size:12px; font-weight:500; }
-  .header-phone-copy>strong { font-size:clamp(15px,1.4vw,21px); font-weight:550; line-height:1.15; }
-  @media (forced-colors: none) {
-    @supports (background-clip: text) {
-      .header-phone-copy>strong {
-        background-image:var(--ui-action-gradient);
-        background-clip:text;
-        color:transparent;
-      }
-    }
-  }
-  .header-menu-button { align-items:center; justify-content:center; gap:5px; min-height:48px; padding-inline:10px; border:1px solid #dce6f1; border-radius:8px; color:var(--header-menu-ink); font-size:16px; font-weight:650; }
-  .header-menu-button svg { width:14px; height:14px; }
-  .header-phone:focus-visible,.header-menu-button:focus-visible { outline:2px solid #168ac0; outline-offset:3px; }
-  .region-panel { position:absolute; top:calc(100% + 6px); left:0; width:280px; max-height:calc(100dvh - 130px); overflow-y:auto; overscroll-behavior:contain; padding:12px; border:1px solid #e0e8f1; border-radius:16px; background:#fff; box-shadow:0 14px 40px #0b174018; }
+  .region-trigger[aria-expanded="true"] .region-chevron { transform:rotate(180deg); }
+  .region-panel { position:absolute; top:calc(100% + 14px); right:0; width:280px; max-height:calc(100dvh - 130px); overflow-y:auto; overscroll-behavior:contain; padding:12px; border:1px solid #e0e8f1; border-radius:16px; background:#fff; box-shadow:0 14px 40px #0b174018; }
   .region-panel[hidden] { display:none!important; }
   .region-panel>p { margin:4px 10px 10px; font-size:12px; color:#52677c; }
   .region-panel ul { list-style:none; margin:0; padding:0; }
@@ -352,35 +319,13 @@ const navLinks: NavLink[] = [
   .region-panel a:hover { background:#f3f7fc; }
   .region-panel a[data-selected="true"] { background:#edf4fd; color:#125b91; font-weight:500; }
   .region-panel a svg { flex:0 0 17px; width:17px; height:17px; }
-  .header-location:focus-visible,.region-panel a:focus-visible,.mobile-region-shortcut:focus-visible { outline:2px solid #168ac0; outline-offset:3px; }
+  .region-trigger:focus-visible,.region-panel a:focus-visible,.mobile-region-shortcut:focus-visible { outline:2px solid #168ac0; outline-offset:3px; }
   .mobile-region-shortcut { display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%; min-height:48px; padding:12px 16px; border:1px solid transparent; border-radius:12px; background:linear-gradient(100deg,#0878bd 0%,#4f46e5 55%,#7d12f7 100%); color:#fff; font-size:14px; font-weight:500; box-shadow:0 6px 18px #4f46e526; }
   .mobile-region-shortcut>svg { flex:0 0 19px; width:19px; height:19px; color:currentColor; }
   .mobile-region-shortcut>span:first-of-type { flex:1; text-align:left; }
-  @media (min-width:1024px) and (max-width:1199px) {
-    .header-shell { padding-inline:16px; }
-    .header-row { gap:12px; }
-    .header-identity,.header-phone { padding-inline:12px; }
-    .header-main-links { gap:14px; }
-  }
-  @media (max-width:1023px) {
-    .header-row { align-items:center; min-height:72px; gap:12px; }
-    .header-identity,.header-phone { padding:0; border:0; }
-    .region-switcher { display:none; }
-    .header-phone { margin-inline-start:auto; }
-    .header-menu-button { display:flex; }
-  }
-  @media (max-width:420px) {
-    .header-row { min-height:64px; gap:8px; }
-    .header-brand { gap:6px; }
-    .header-brand img { height:34px; }
-    .header-brand-name { font-size:15px; }
-    .header-phone { gap:5px; }
-    .header-phone-icon { width:28px; height:28px; }
-    .header-phone-icon svg { width:15px; height:15px; }
-    .header-phone-copy>span { display:none; }
-    .header-phone-copy>strong { font-size:12px; }
-    .header-menu-button { padding-inline:7px; }
-  }
+  @media(max-width:1279px) and (min-width:1024px) { .header-brand-name { font-size:20px; } .header-brand { gap:8px; } .region-trigger { min-width:190px; padding:11px 13px; font-size:13px; } }
+  @media(max-width:1023px) { .region-switcher { display:none; } .header-row { gap:10px; } .region-panel { position:fixed; top:76px; left:16px; right:16px; width:auto; max-height:calc(100dvh - 100px); } }
+  @media(max-width:639px) { .header-brand-name { display:none; } .header-brand img { height:40px; } .region-trigger { min-width:0; min-height:44px; padding:10px 12px; gap:7px; font-size:13px; } }
 
   .mobile-region-shortcut:hover {filter:brightness(1.06);}
   .mobile-menu-footer {max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;}
@@ -410,7 +355,7 @@ const navLinks: NavLink[] = [
   .mega-cta a { flex-shrink:0; padding:13px 18px; background:linear-gradient(110deg,#0878bd,#6b20ed); border-radius:8px; font-size:13px; font-weight:600; color:white; }
   .mega-cta a:hover { background:#1d4ed8; }
   .mega-root a:focus-visible,.mega-trigger:focus-visible { outline:2px solid #2563eb; outline-offset:3px; }
-  .mega-trigger[aria-expanded="true"] { text-decoration:underline; text-underline-offset:5px; }
+  .mega-trigger[aria-expanded="true"] { color:#16649b; }
   .mega-trigger[aria-expanded="true"] svg { transform:rotate(180deg); }
   .mobile-offerings { display:grid; gap:10px; }
   .mobile-offering-group { border:1px solid #e1eaf4; border-radius:12px; background:#f7faff; }
