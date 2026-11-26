@@ -45,9 +45,9 @@
 .printing-benefits>* {min-width:0;}
 .printing-benefits h2 {margin:0 0 24px;}
 .printing-benefits-visual img {width:100%;aspect-ratio:725/481;object-fit:cover;border-radius:16px;}
-.printing-checklist {display:grid;gap:18px;list-style:none;padding:0;margin:0 0 22px;}
-.printing-checklist li {display:flex;align-items:start;gap:12px;color:#44566b;font-size:16px;}
-.printing-checklist svg {width:20px;height:20px;flex:0 0 20px;margin-top:4px;color:#006edc;}
+.printing-checklist {display:grid;gap:18px;list-style:disc;padding-inline-start:1.25rem;margin:0 0 22px;}
+.printing-checklist li {padding-inline-start:4px;color:#44566b;font-size:16px;}
+.printing-checklist li::marker {color:#647b93;}
 .printing-source-stats {margin-top:18px;border-top:1px solid #dfe8f2;padding-top:8px;color:#526b80;}
 .printing-source-stats summary {display:flex;align-items:center;justify-content:space-between;min-height:44px;cursor:pointer;font-size:13px;list-style:none;}
 .printing-source-stats summary::-webkit-details-marker {display:none;}

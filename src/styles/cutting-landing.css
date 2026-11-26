@@ -70,9 +70,9 @@
 .cut-benefits {display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:center;gap:64px;}
 .cut-benefits>* {min-width:0;}
 .cut-benefits h2 {margin:0 0 22px;}
-.cut-benefits ul {display:grid;gap:18px;list-style:none;padding:0;margin:24px 0 0;}
-.cut-benefits li {display:flex;align-items:start;gap:12px;color:#44566b;font-size:16px;}
-.cut-benefits li svg {flex:0 0 20px;width:20px;height:20px;color:#006edc;margin-top:4px;}
+.cut-benefits ul {display:grid;gap:18px;list-style:disc;padding-inline-start:1.25rem;margin:24px 0 0;}
+.cut-benefits li {padding-inline-start:4px;color:#44566b;font-size:16px;}
+.cut-benefits li::marker {color:#647b93;}
 .cut-benefits figure img {width:100%;aspect-ratio:17/10;object-fit:cover;border-radius:16px;}
 .cut-benefits figcaption {font-size:13px;color:#61778c;line-height:1.7;padding-top:14px;}
 .cut-faq {display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;border-top:1px solid #e1eaf3;}

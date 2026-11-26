@@ -21,21 +21,23 @@ export function presentCtaArrows(doc,pathname){
   const explicit=Boolean(cardAction)||/btn|button|cta|read-more|consult|quote|about-link|order-jump/.test(cls)||(/^(xem|đọc|tìm hiểu|khám phá|nhận|liên hệ|tư vấn|trao đổi|chọn mẫu|đặt|gửi|báo giá|điền thông tin)/i.test(label)&&/[→↗↘↓]/.test(label));
   if(!explicit||(!cardAction&&label.length>150)||!label)continue;
   const target=cardAction??a;
-  // Each selected CTA has exactly one trailing icon, including imported nested SVG wrappers.
+  const cardLink=Boolean(cardAction)||/product-card-read|solution-button|read-more|blog-read/.test(cls)||ancestors.some(n=>n.tagName==='article'&&(walk(n).some(c=>c.tagName==='img')||/card|solution/.test(get(n,'class'))));
+  // Remove imported arrows before applying the shared treatment.
   for(const n of walk(target)){
    if(n.nodeName==='#text')n.value=n.value.replace(/[→↗↘↓]/g,'');
    if(n.tagName==='svg')n.parentNode.childNodes=n.parentNode.childNodes.filter(c=>c!==n);
   }
-  const icon=parseFragment(svg).childNodes[0];icon.parentNode=target;target.childNodes.push(icon);
+  const icon=cardLink?null:parseFragment(svg).childNodes[0];
+  if(icon){icon.parentNode=target;target.childNodes.push(icon);}
   a.attrs.push({name:'data-site-cta',value:''});changed=true;
-  const textAction=a.attrs.some(x=>x.name==='data-cta-text')||Boolean(cardAction)||/product-card-read|solution-button|read-more|blog-read/.test(cls)||ancestors.some(n=>n.tagName==='article'&&(walk(n).some(c=>c.tagName==='img')||/card|solution/.test(get(n,'class'))));
-  if(textAction){if(!a.attrs.some(x=>x.name==='data-cta-text'))a.attrs.push({name:'data-cta-text',value:''});setArrow(icon,horizontal);}
+  const textAction=cardLink||a.attrs.some(x=>x.name==='data-cta-text');
+  if(textAction){if(!a.attrs.some(x=>x.name==='data-cta-text'))a.attrs.push({name:'data-cta-text',value:''});if(icon)setArrow(icon,horizontal);}
   const group=ancestors.find(n=>/actions|buttons/.test(get(n,'class')))||ancestors.find(n=>['article','section'].includes(n.tagName))||a.parentNode;
   if(!groups.has(group))groups.set(group,[]);groups.get(group).push({a,target,icon});
  }
  let index=0;
  for(const buttons of groups.values()){
-  if(buttons.length===2){const secondary=buttons[1];setArrow(secondary.icon,horizontal);secondary.a.attrs.push({name:'data-cta-secondary',value:''});}
+  if(buttons.length===2){const secondary=buttons[1];if(secondary.icon)setArrow(secondary.icon,horizontal);secondary.a.attrs.push({name:'data-cta-secondary',value:''});}
   for(const [i,{a}] of buttons.entries())if(i===0&&!a.attrs.some(x=>x.name==='data-cta-text')&&(buttons.length===2||index%2===0))a.attrs.push({name:'data-cta-tone',value:'yellow'});
   index++;
  }

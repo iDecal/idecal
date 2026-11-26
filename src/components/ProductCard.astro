@@ -13,7 +13,7 @@ const Heading = heading;
     <Heading class="product-card-title"><a href={`/san-pham/${product.slug}`} class="hover:text-primary">{product.name}</a></Heading>
     <div class="product-card-footer">
       {product.price != null && <span class="product-card-price">{formatPrice(product.price)}</span>}
-      <a href={`/san-pham/${product.slug}`} class="product-card-read">Đọc thêm<span class="sr-only"> về {product.name}</span><span aria-hidden="true">→</span></a>
+      <a href={`/san-pham/${product.slug}`} class="product-card-read">Đọc thêm<span class="sr-only"> về {product.name}</span></a>
     </div>
   </div>
 </article>

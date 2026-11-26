@@ -159,7 +159,6 @@ body :is(.site-header, #mobile-menu, #site-footer) :not(svg, svg *) {
 }
 
 /* Reference blue is limited to the homepage service cards. */
-.homepage-original .home-service-icon,
 .homepage-original .home-service-action { color: #006edc !important; }
 .homepage-original .home-service-action:hover { color: #0057b3 !important; }
 .homepage-original .home-service-action:focus-visible { outline-color: #006edc; }
