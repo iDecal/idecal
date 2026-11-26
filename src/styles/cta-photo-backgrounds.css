@@ -1,5 +1,16 @@
 /* Photo treatment trial: local images only; preserve copy and action targets. */
 @layer cta-photo-backgrounds {
+ body .homepage-original .home-consult .consult-phone,
+ body .homepage-original .home-consult .consult-phone span {
+  color:#fff!important;
+  -webkit-text-fill-color:currentColor!important;
+ }
+ body .homepage-original .home-consult .consult-quote {
+  background:#f6da83!important;
+  color:#10243d!important;
+  -webkit-text-fill-color:currentColor!important;
+ }
+ body .homepage-original .home-consult .consult-quote:hover {background:#ffe9a8!important;}
  body .office-final-cta {
   background: #f3f7fc !important;
   border-color: #e0eaf4 !important;
@@ -27,7 +38,7 @@
   border-color: #d3e2f8 !important;
  }
 
- body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) {
+ body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.blog-contact,.regional-contact,.projects-contact) {
   --cta-photo:url('/images/van-phong/thi-cong-vach-kinh.webp');
   --heading-surface-ink:#fff!important;--airify-muted:#edf4ff!important;
   --content-link-color:#a9dfff!important;
@@ -39,11 +50,10 @@
  body .interior-film-contact-wrap {--cta-photo:url('/images/film-noi-that/cong-trinh/tran-va-vach-phoi-van-go.jpg');}
  body .printing-cta {--cta-photo:url('/images/van-phong/in-decal-kho-lon.webp');}
  body .cut-final-cta {--cta-photo:url('/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg');}
- body .home-consult {--cta-photo:url('/images/Banner/dich-vu-thiet-ke-decal.webp');}
- body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) :is(h2,h3,p:not([data-heading-label]):not([class*='eyebrow']):not([class*='kicker'])) {color:#edf4ff!important;}
- body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) :is(h2,h3) {-webkit-text-fill-color:#fff!important;color:#fff!important;}
- body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) a:not([class*='btn-']):not([data-site-cta]):not([class*='button']):not(.btn-primary-solid+a,.consult-phone) {color:#a9dfff!important;}
+ body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.blog-contact,.regional-contact,.projects-contact) :is(h2,h3,p:not([data-heading-label]):not([class*='eyebrow']):not([class*='kicker'])) {color:#edf4ff!important;}
+ body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.blog-contact,.regional-contact,.projects-contact) :is(h2,h3) {-webkit-text-fill-color:#fff!important;color:#fff!important;}
+ body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.blog-contact,.regional-contact,.projects-contact) a:not([class*='btn-']):not([data-site-cta]):not([class*='button']):not(.btn-primary-solid+a,.consult-phone) {color:#a9dfff!important;}
  @media(max-width:767px) {
-  body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.home-consult,.blog-contact,.regional-contact,.projects-contact) {background-image:linear-gradient(105deg,#081c36f2,#102b4abd),var(--cta-photo)!important;background-position:60% center!important;}
+  body :is(.interior-film-contact-wrap,.printing-cta,.cut-final-cta,.sign-contact,.elevator-contact,.advertising-contact,.blog-contact,.regional-contact,.projects-contact) {background-image:linear-gradient(105deg,#081c36f2,#102b4abd),var(--cta-photo)!important;background-position:60% center!important;}
  }
 }
