@@ -6,11 +6,11 @@
   -webkit-text-fill-color:currentColor!important;
  }
  body .homepage-original .home-consult .consult-quote {
-  background:#f6da83!important;
-  color:#10243d!important;
+  background:var(--ui-action-gradient)!important;
+  color:var(--ui-action-ink)!important;
   -webkit-text-fill-color:currentColor!important;
  }
- body .homepage-original .home-consult .consult-quote:hover {background:#ffe9a8!important;}
+ body .homepage-original .home-consult .consult-quote:hover {background:var(--ui-action-hover)!important;}
  body .office-final-cta {
   background: #f3f7fc !important;
   border-color: #e0eaf4 !important;
@@ -21,13 +21,13 @@
  }
  body .office-final-cta p { color: #d7e4f7 !important; }
  body .office-final-cta .btn-primary-solid {
-  background: #f6da83 !important;
-  --filled-action-ink: #10243d;
+  background: var(--ui-action-gradient) !important;
+  --filled-action-ink: var(--ui-action-ink);
  }
  body .office-final-actions :is(.btn-primary-solid,.office-final-zalo) {
   justify-content: space-between !important;
  }
- body .office-final-cta .btn-primary-solid:hover { background: #ffe9a8 !important; }
+ body .office-final-cta .btn-primary-solid:hover { background: var(--ui-action-hover) !important; }
  body .office-final-cta .office-final-zalo {
   background: transparent !important;
   border: 1px solid #b4c8e780 !important;

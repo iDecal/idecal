@@ -4,7 +4,6 @@
  body #site-footer.footer-reference a:not(.footer-zalo):hover{color:#fff!important;}
  body #site-footer.footer-reference :is(.footer-phone,.footer-logo){color:#fff!important;}
  body #site-footer.footer-reference .footer-bottom{background:transparent!important;}
- body #site-footer.footer-reference .footer-link-group h3{color:#e6c85b!important;}
  body .project-case .case-project-notes h2{font-size:18px!important;line-height:1.5!important;margin-bottom:10px!important;}
  body .project-case .case-header{background:#fff!important;background-image:none!important;--heading-surface-ink:#102e57!important;--contrast-text:#465a6c!important;--content-link-color:#18766d!important;}
 }

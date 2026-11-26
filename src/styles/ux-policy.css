@@ -1,6 +1,6 @@
 /* Shared accessibility rules; first important layer wins over legacy imports. */
 @layer ux-policy {
-  :root {--ui-text-muted:#52677c;--ui-action-gradient:linear-gradient(100deg,#0878bd 0%,#4f46e5 55%,#7d12f7 100%);}
+  :root {--ui-text-muted:#52677c;}
   body .homepage-original .home-stat-value {font-family:var(--heading-font)!important;font-size:19px!important;font-weight:600!important;line-height:1.35!important;color:#1b4f7a!important;}
   body .homepage-original .home-stat-value * {font:inherit!important;color:inherit!important;background:none!important;}
   body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut) {
@@ -10,7 +10,7 @@
   }
   body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut):hover {
     filter:none!important;
-    background-image:linear-gradient(100deg,#065e9b,#4338ca 55%,#6d28d9)!important;
+    background-image:var(--ui-action-hover)!important;
   }
   body :is(button,summary,select,textarea,input:not([type='checkbox'],[type='radio'],[type='hidden'])) {min-height:48px!important;}
   body button {min-width:48px!important;}

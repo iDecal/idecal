@@ -25,14 +25,14 @@
  body:not(.is-blog) .homepage-original .why-benefit-icon svg path{fill:#153e68!important;}
  body .blog-article-body{background:#fff!important;}
 
- body:not(.is-blog) .homepage-original .consult-quote,body .office-price-cta>a{--contrast-text:#102e57!important;--content-link-color:#102e57!important;background:#e6c85b!important;color:#102e57!important;}
+ body:not(.is-blog) .homepage-original .consult-quote,body .office-price-cta>a{--contrast-text:var(--ui-accent-ink)!important;--content-link-color:var(--ui-accent-ink)!important;background:var(--ui-accent-surface)!important;color:var(--ui-accent-ink)!important;}
  body .office-price-cta{background:#fff!important;--airify-muted:#566375!important;}
  body .contact-order-steps>li>span{color:#102e57!important;background:#e4eef2!important;}
  body:not(.is-blog) [data-service-hero] .banner-benefit-list svg{color:#153e68!important;}
- body .case-consult{--content-link-color:#102e57!important;--contrast-text:#102e57!important;background:#e6c85b!important;color:#102e57!important;}
+ body .case-consult{--content-link-color:var(--ui-accent-ink)!important;--contrast-text:var(--ui-accent-ink)!important;background:var(--ui-accent-surface)!important;color:var(--ui-accent-ink)!important;}
  body:not(.is-blog) :is(a,button,input,select,textarea,summary):focus-visible{outline-color:var(--contrast-focus,#153e68)!important;}
- body:not(.is-blog) .homepage-original .why-about-link{--content-link-color:#102e57!important;background:#e6c85b!important;background-image:none!important;color:#102e57!important;}
- body:not(.is-blog) .homepage-original .why-about-link:hover{background:#d5b547!important;}
+ body:not(.is-blog) .homepage-original .why-about-link{--content-link-color:var(--ui-accent-ink)!important;background:var(--ui-accent-surface)!important;background-image:none!important;color:var(--ui-accent-ink)!important;}
+ body:not(.is-blog) .homepage-original .why-about-link:hover{background:var(--ui-accent-surface-hover)!important;}
  body:not(.is-blog) :is([class*='eyebrow'],[class*='kicker'],[data-heading-label],.consult-label){font-size:12px!important;line-height:1.5!important;padding:6px 12px!important;margin-bottom:16px!important;}
  body:not(.is-blog) :is([data-hero-benefits],.banner-benefit-list,.office-hero-points,.lp-hero-points,.wave-hero-points,.interior-film-points) :is(p,li,span,strong){font-size:14px!important;line-height:1.65!important;}
  body:not(.is-blog) .site-cta-arrow{display:inline-block!important;flex:none!important;width:22px!important;height:22px!important;margin-left:10px!important;vertical-align:middle;color:inherit!important;}
@@ -68,12 +68,12 @@
  body.is-blog .homepage-original .why-benefit-icon svg path{fill:#8bd0f5!important;}
  body.is-blog .blog-article-body{background:#fff!important;}
 
- body.is-blog .homepage-original .consult-quote,body.is-blog .office-price-cta>a{--contrast-text:#102e57!important;--content-link-color:#102e57!important;background:#e6c85b!important;color:#102e57!important;}
+ body.is-blog .homepage-original .consult-quote,body.is-blog .office-price-cta>a{--contrast-text:var(--ui-accent-ink)!important;--content-link-color:var(--ui-accent-ink)!important;background:var(--ui-accent-surface)!important;color:var(--ui-accent-ink)!important;}
  body.is-blog .office-price-cta{background:#fff!important;--airify-muted:#566375!important;}
  body.is-blog .contact-order-steps>li>span{color:#102e57!important;background:#e4eef2!important;}
  body.is-blog [data-service-hero] .banner-benefit-list svg{color:#8bd0f5!important;}
- body.is-blog .case-consult{--content-link-color:#102e57!important;--contrast-text:#102e57!important;background:#e6c85b!important;color:#102e57!important;}
+ body.is-blog .case-consult{--content-link-color:var(--ui-accent-ink)!important;--contrast-text:var(--ui-accent-ink)!important;background:var(--ui-accent-surface)!important;color:var(--ui-accent-ink)!important;}
  body.is-blog :is(a,button,input,select,textarea,summary):focus-visible{outline-color:var(--contrast-focus,#153e68)!important;}
- body.is-blog .homepage-original .why-about-link{--content-link-color:#102e57!important;background:#e6c85b!important;background-image:none!important;color:#102e57!important;}
- body.is-blog .homepage-original .why-about-link:hover{background:#d5b547!important;}
+ body.is-blog .homepage-original .why-about-link{--content-link-color:var(--ui-accent-ink)!important;background:var(--ui-accent-surface)!important;background-image:none!important;color:var(--ui-accent-ink)!important;}
+ body.is-blog .homepage-original .why-about-link:hover{background:var(--ui-accent-surface-hover)!important;}
 }

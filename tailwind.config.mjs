@@ -19,9 +19,9 @@ export default {
           "dark": "#0D1B36"
         },
         "accent": {
-          "DEFAULT": "#E6C85B",
-          "dark": "#D5B547",
-          "light": "#FAF4D8"
+          "DEFAULT": "var(--ui-accent-surface)",
+          "dark": "var(--ui-accent-surface-hover)",
+          "light": "#F5F9FF"
         },
         "background": "#FFFFFF",
         "text": {
@@ -44,15 +44,15 @@ export default {
           "highlight": "#8bd0f5",
           "start": "#102E57",
           "middle": "#17abeb",
-          "end": "#E6C85B",
+          "end": "#7015f5",
           "pale": "#E4EEF2",
           "line": "#D7E3E9",
           "inverse": "#D9E6ED"
         }
       },
       "backgroundImage": {
-        "brand-gradient": "linear-gradient(100deg, #102E57 0%, #17abeb 55%, #E6C85B 100%)",
-        "brand-heading": "linear-gradient(90deg, #102E57 0%, #17abeb 55%, #E6C85B 100%)",
+        "brand-gradient": "var(--ui-action-gradient)",
+        "brand-heading": "var(--ui-action-gradient)",
         "brand-pattern": "url('/images/brand-pattern.svg')"
       },
       "fontFamily": {

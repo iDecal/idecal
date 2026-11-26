@@ -15,10 +15,10 @@ test('Blog, phone links and breadcrumb controls remain unchanged',()=>{
  }
 });
 
-test('A two-button section uses an upward primary and horizontal secondary arrow and uses a warm primary action',()=>{
+test('A two-button section uses an upward primary and horizontal secondary arrow',()=>{
  const doc=parse('<main><section><div class="actions"><a class="btn" href="/quote">Tư vấn →</a><a class="btn" href="/samples">Xem mẫu →</a></div></section></main>');
  presentCtaArrows(doc,'/service');
- const links=nodes(doc).filter(n=>n.tagName==='a');assert.equal(nodes(links[0]).filter(n=>n.tagName==='svg').length,1);assert.equal(nodes(links[1]).filter(n=>n.tagName==='svg').length,1);assert.match(serialize(doc),/M5 19 19 5/);assert.match(serialize(doc),/M5 12h14/);assert.match(serialize(doc),/data-cta-tone="yellow"/);
+ const links=nodes(doc).filter(n=>n.tagName==='a');assert.equal(nodes(links[0]).filter(n=>n.tagName==='svg').length,1);assert.equal(nodes(links[1]).filter(n=>n.tagName==='svg').length,1);assert.match(serialize(doc),/M5 19 19 5/);assert.match(serialize(doc),/M5 12h14/);assert.doesNotMatch(serialize(doc),/data-cta-tone/);
 });
 
-test('Small service cards use a plain horizontal text action',()=>{const doc=parse('<main><section><article><img src="a.webp"><h3>Decal mờ</h3><a class="office-solution-button" href="/decal">Xem Decal →</a></article></section></main>');presentCtaArrows(doc,'/service');assert.match(serialize(doc),/data-cta-text/);assert.match(serialize(doc),/M5 12h14/);assert.doesNotMatch(serialize(doc),/data-cta-tone/);});
+test('Small service cards use a text action without an arrow',()=>{const doc=parse('<main><section><article><img src="a.webp"><h3>Decal mờ</h3><a class="office-solution-button" href="/decal">Xem Decal →</a></article></section></main>');presentCtaArrows(doc,'/service');assert.match(serialize(doc),/data-cta-text/);assert.doesNotMatch(serialize(doc),/<svg/);assert.doesNotMatch(serialize(doc),/data-cta-tone/);});

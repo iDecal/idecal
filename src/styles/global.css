@@ -24,6 +24,16 @@
 @import './hero-surfaces.css';
 @import './heading-policy.css';
 @import './accent-surfaces.css';
+/* Shared action and accent colors across page templates. */
+:root {
+  --ui-action-gradient: linear-gradient(110deg, #0878bd 0%, #3155ee 52%, #7015f5 100%);
+  --ui-action-hover: linear-gradient(110deg, #065e9b 0%, #2947d9 52%, #5f0fda 100%);
+  --ui-action-ink: #fff;
+  --ui-accent-ink: #102e57;
+  --ui-accent-surface: #edf5ff;
+  --ui-accent-surface-hover: #dcecff;
+  --ui-accent-on-dark: #8bd0f5;
+}
 :root { --site-h2-size:var(--heading-h2); --site-h2-gradient:linear-gradient(100deg,#0f8fe0,#4f46e5 55%,#7d12f7); }
 
 

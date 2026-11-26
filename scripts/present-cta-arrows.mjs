@@ -35,11 +35,8 @@ export function presentCtaArrows(doc,pathname){
   const group=ancestors.find(n=>/actions|buttons/.test(get(n,'class')))||ancestors.find(n=>['article','section'].includes(n.tagName))||a.parentNode;
   if(!groups.has(group))groups.set(group,[]);groups.get(group).push({a,target,icon});
  }
- let index=0;
  for(const buttons of groups.values()){
   if(buttons.length===2){const secondary=buttons[1];if(secondary.icon)setArrow(secondary.icon,horizontal);secondary.a.attrs.push({name:'data-cta-secondary',value:''});}
-  for(const [i,{a}] of buttons.entries())if(i===0&&!a.attrs.some(x=>x.name==='data-cta-text')&&(buttons.length===2||index%2===0))a.attrs.push({name:'data-cta-tone',value:'yellow'});
-  index++;
  }
  return changed;
 }
