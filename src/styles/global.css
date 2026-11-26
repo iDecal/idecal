@@ -132,7 +132,7 @@ body :is(.site-header, #mobile-menu, #site-footer) :not(svg, svg *) {
   font-family: 'Inter Variable', sans-serif !important;
 }
 
-/* Headings share Wix Madefor Display, including nested links and highlights. */
+/* Headings share Lexend, including nested links and highlights. */
 .page-content :is(h1, h2, h3, h4, h5, h6),
 .page-content :is(h1, h2, h3, h4, h5, h6) *,
 .homepage-original :is(h1, h2, h3, h4, h5, h6),

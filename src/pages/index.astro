@@ -4,6 +4,8 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 import SEO from '../components/SEO.astro';
 import '@fontsource-variable/lexend';
+import lexendLatin from '@fontsource-variable/lexend/files/lexend-latin-wght-normal.woff2?url';
+import lexendVietnamese from '@fontsource-variable/lexend/files/lexend-vietnamese-wght-normal.woff2?url';
 import '@fontsource-variable/inter';
 import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import interVietnamese from '@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2?url';
@@ -21,8 +23,8 @@ import publicHomepage from '../content/homepage/public.html?raw';
     <link rel="preload" href={interExtended} as="font" type="font/woff2" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="/images/idecal-logo.png" />
-    <link rel="preload" href="/fonts/wix-madefor-display/wix-madefor-display-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/wix-madefor-display/wix-madefor-display-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={lexendLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={lexendVietnamese} as="font" type="font/woff2" crossorigin />
     <SEO title="Dịch vụ Decal dán kính cách nhiệt & Decal mờ trang trí | iDecal©" description="Chúng tôi cung cấp giải pháp trang trí kính & Dịch vụ decal dán kính cách nhiệt toàn diện. iDecal chuyên giải pháp Decal trang trí & Chống nóng toàn diện." image="/images/Banner/Dich-vu-decal-dan-kinh-cach-nhiet.webp" />
   </head>
   <body class="bg-background font-body text-secondary">

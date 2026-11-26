@@ -3,6 +3,8 @@ import SEO from '../components/SEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '@fontsource-variable/lexend';
+import lexendLatin from '@fontsource-variable/lexend/files/lexend-latin-wght-normal.woff2?url';
+import lexendVietnamese from '@fontsource-variable/lexend/files/lexend-vietnamese-wght-normal.woff2?url';
 import '@fontsource-variable/inter';
 import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import interVietnamese from '@fontsource-variable/inter/files/inter-vietnamese-wght-normal.woff2?url';
@@ -35,8 +37,8 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/images/idecal-logo.png" />
 		<meta name="generator" content={Astro.generator} />
-    <link rel="preload" href="/fonts/wix-madefor-display/wix-madefor-display-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/wix-madefor-display/wix-madefor-display-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={lexendLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={lexendVietnamese} as="font" type="font/woff2" crossorigin />
 		<SEO canonicalURL={canonicalURL} title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
 	</head>
 	<body class:list={["bg-background font-body text-secondary", {"is-blog": Astro.url.pathname.startsWith("/blog")} ]}>
