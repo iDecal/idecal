@@ -312,13 +312,13 @@ const navLinks: NavLink[] = [
   .header-row { display:flex; align-items:stretch; min-height:84px; gap:clamp(12px,1.8vw,28px); }
   .header-identity { display:flex; align-items:center; flex-shrink:0; padding-inline-end:clamp(12px,2vw,32px); border-inline-end:1px solid #e0e8f1; }
   .header-brand { gap:9px; }
-  .header-brand-name { color:#031245; font-size:23px; font-weight:700; letter-spacing:-.03em; }
+  .header-brand-name { color:#031245; font-size:20px; font-weight:500; letter-spacing:-.02em; }
   .site-header { --header-menu-ink:#102e57; }
   .header-main-links { gap:clamp(12px,2vw,30px); }
   .header-nav-label { color:var(--header-menu-ink); font-size:clamp(16px,1.35vw,18px); }
   .mobile-nav-label { color:var(--header-menu-ink); font-size:20px; }
   .region-switcher { position:relative; display:flex; align-items:center; flex-shrink:0; }
-  .header-location { display:flex; align-items:center; gap:8px; min-height:48px; border-radius:8px; color:#173657; font-size:14px; font-weight:600; }
+  .header-location { display:flex; align-items:center; gap:8px; min-height:48px; border-radius:8px; color:#173657; font-size:13px; font-weight:600; }
   .header-location:hover,.header-location[aria-expanded="true"] { color:#125b91; }
   .header-location>span { white-space:nowrap; }
   .region-pin { width:23px; height:23px; flex:0 0 23px; color:#1264bd; }
@@ -331,7 +331,16 @@ const navLinks: NavLink[] = [
   .header-phone-icon svg { width:20px; height:20px; }
   .header-phone-copy { display:grid; gap:2px; white-space:nowrap; }
   .header-phone-copy>span { color:#52677c; font-size:12px; font-weight:500; }
-  .header-phone-copy>strong { font-size:clamp(16px,1.5vw,23px); line-height:1.15; }
+  .header-phone-copy>strong { font-size:clamp(15px,1.4vw,21px); font-weight:550; line-height:1.15; }
+  @media (forced-colors: none) {
+    @supports (background-clip: text) {
+      .header-phone-copy>strong {
+        background-image:var(--ui-action-gradient);
+        background-clip:text;
+        color:transparent;
+      }
+    }
+  }
   .header-menu-button { align-items:center; justify-content:center; gap:5px; min-height:48px; padding-inline:10px; border:1px solid #dce6f1; border-radius:8px; color:var(--header-menu-ink); font-size:16px; font-weight:650; }
   .header-menu-button svg { width:14px; height:14px; }
   .header-phone:focus-visible,.header-menu-button:focus-visible { outline:2px solid #168ac0; outline-offset:3px; }
@@ -364,12 +373,12 @@ const navLinks: NavLink[] = [
     .header-row { min-height:64px; gap:8px; }
     .header-brand { gap:6px; }
     .header-brand img { height:34px; }
-    .header-brand-name { font-size:17px; }
+    .header-brand-name { font-size:15px; }
     .header-phone { gap:5px; }
     .header-phone-icon { width:28px; height:28px; }
     .header-phone-icon svg { width:15px; height:15px; }
     .header-phone-copy>span { display:none; }
-    .header-phone-copy>strong { font-size:13px; }
+    .header-phone-copy>strong { font-size:12px; }
     .header-menu-button { padding-inline:7px; }
   }
 
