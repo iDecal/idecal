@@ -1,33 +1,134 @@
 ---
-import '../../styles/catalogue.css';
-import PageBanner from '../../components/PageBanner.astro';
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
-import ProductGroupIcon from '../../components/ProductGroupIcon.astro';
-import '../../styles/product-groups.css';
 import { products, productCategories, productsInCategory } from '../../data/catalogue';
 import { productLandings, landingProducts } from '../../data/site-offerings';
-const hiddenCategorySlugs = new Set(['phim-bao-ve','decal-trang-tri','decal-cat-cnc','decal-cat-vi-tinh']);
-const addedCategories = productCategories.filter(category => category.editorCreated && !hiddenCategorySlugs.has(category.slug));
-const totalGroups = productLandings.length + addedCategories.length;
+
+const hiddenCategorySlugs = new Set(['phim-bao-ve', 'decal-trang-tri', 'decal-cat-cnc', 'decal-cat-vi-tinh']);
+const groups = [
+  ...productLandings.map(category => ({ ...category, count: landingProducts(category).length })),
+  ...productCategories
+    .filter(category => category.editorCreated && !hiddenCategorySlugs.has(category.slug))
+    .map(category => ({ ...category, count: productsInCategory(category.slug).length })),
+];
+const totalGroups = groups.length;
 ---
-<Layout title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal" description={"Khám phá " + totalGroups + " nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt, film nội thất và các vật liệu trang trí, bảo vệ."}>
-  <PageBanner title="Decal dán kính, phim cách nhiệt & film nội thất" eyebrow="Sản phẩm iDecal" image={productLandings[0].image} imageAlt={productLandings[0].name}>
-    <p slot="description">{totalGroups} nhóm sản phẩm cho văn phòng, showroom, cửa hàng và nhà ở. Chọn nhóm để xem mẫu, thông tin vật liệu và giá tham khảo.</p>
-    <Fragment slot="actions"><a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Nhận tư vấn qua Zalo</a></Fragment>
-    <Fragment slot="meta"><span><strong>{products.length}</strong> mẫu trong catalogue</span><span><strong>{totalGroups}</strong> nhóm sản phẩm</span></Fragment>
-  </PageBanner>
-  <section id="danh-muc" class="container scroll-mt-24 py-14 md:py-20">
-    <p data-heading-label class="!mb-3 text-xs uppercase tracking-widest text-primary">Danh mục</p><h2 class="brand-heading">Chọn nhóm sản phẩm của bạn</h2>
-    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {productLandings.map(category => <article class="category-card group overflow-hidden rounded-2xl border border-border bg-white transition-shadow hover:shadow-brand">
-        <a href={`/${category.slug}`} class="flex h-full flex-col">
-          <div class="product-group-cover relative aspect-square shrink-0 overflow-hidden"><ProductImage src={category.image} alt={category.name} /><div class="product-group-title" data-heading-theme="dark"><ProductGroupIcon slug={category.slug} /><h3>{category.name}</h3></div></div>
-          <div class="flex flex-1 flex-col p-6"><p class="mb-6 text-sm">{category.description}</p><div class="mt-auto flex items-center justify-between gap-3 text-sm"><span class="text-text-muted">{landingProducts(category).length} mẫu</span><span class="font-medium text-primary">Xem nhóm sản phẩm →</span></div></div>
-        </a>
-      </article>)}
-      {addedCategories.map(category => <article class="category-card overflow-hidden rounded-2xl border border-border bg-white"><a href={'/' + category.slug} class="flex h-full flex-col"><div class="aspect-square overflow-hidden"><ProductImage src={category.image} alt={category.name} /></div><div class="flex flex-1 flex-col p-6"><h3 class="text-lg">{category.name}</h3><p class="text-sm">{category.description}</p><span class="mt-auto text-sm text-primary">{productsInCategory(category.slug).length} mẫu · Xem nhóm sản phẩm →</span></div></a></article>)}
+<Layout
+  title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal"
+  description={`Khám phá ${totalGroups} nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt, film nội thất và các vật liệu trang trí, bảo vệ.`}
+>
+  <section class="materials-intro" aria-labelledby="materials-title">
+    <div class="container materials-layout">
+      <div class="materials-copy">
+        <p data-heading-label>Sản phẩm iDecal</p>
+        <h1 id="materials-title">Decal dán kính, phim cách nhiệt & film nội thất</h1>
+        <p>Chọn vật liệu cho văn phòng, showroom, cửa hàng và nhà ở. Mỗi nhóm có mẫu, thông tin vật liệu và giá tham khảo.</p>
+        <div class="materials-actions">
+          <a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm <span aria-hidden="true">↓</span></a>
+          <a href="https://zalo.me/0866077040" class="materials-help">Nhận tư vấn qua Zalo</a>
+        </div>
+        <ul class="materials-stats" aria-label="Thông tin catalogue">
+          <li><strong>{products.length}</strong> mẫu trong catalogue</li>
+          <li><strong>{totalGroups}</strong> nhóm sản phẩm</li>
+        </ul>
+      </div>
+      <div class="materials-photos">
+        <div class="materials-photo">
+          <ProductImage src="/images/van-phong/office-glass-01.webp" alt="Vách kính văn phòng dán Decal mờ" eager />
+        </div>
+        <div class="materials-photo materials-photo-detail">
+          <ProductImage src="/images/film-noi-that/dan-film-noi-that-mat-ban.jpg" alt="Bề mặt bàn hoàn thiện bằng film dán nội thất" />
+        </div>
+      </div>
     </div>
   </section>
 
+  <section id="danh-muc" class="container materials-categories" aria-labelledby="materials-categories-title">
+    <h2 id="materials-categories-title">Chọn nhóm sản phẩm của bạn</h2>
+    <div class="materials-grid">
+      {groups.map(category => (
+        <article class="materials-card group">
+          <a href={`/${category.slug}`} class="materials-card-link" aria-labelledby={`material-${category.slug}`}>
+            <div class="materials-card-image">
+              <ProductImage src={category.image} alt={category.name} />
+            </div>
+            <div class="materials-card-body">
+              <h3 id={`material-${category.slug}`}>{category.name}</h3>
+              <p>{category.description}</p>
+              <div class="materials-card-footer">
+                <span>{category.count} mẫu</span>
+                <span class="materials-card-action">Xem nhóm sản phẩm</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .materials-intro {
+    padding-block: clamp(32px, 5vw, 72px);
+    border-bottom: 1px solid #e0eaf4;
+    background: radial-gradient(ellipse at 90% 0%, #eeeaff, transparent 60%), #f3f8fd;
+  }
+  .materials-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+    align-items: center;
+    gap: clamp(28px, 4.5vw, 64px);
+  }
+  .materials-copy h1 { max-width: 24ch; margin: 0 0 16px; text-wrap: balance; }
+  .materials-copy > p:not([data-heading-label]) { max-width: 53ch; margin: 0; line-height: 1.75; }
+  .materials-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 24px; }
+  .materials-actions .btn-primary-solid { padding-inline: 16px; }
+  .materials-help { display: inline-flex; align-items: center; padding: 8px 0; font-weight: 600; }
+  .materials-help:hover { text-decoration: underline; }
+  .materials-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    padding: 16px 0 0;
+    margin: 20px 0 0;
+    border-top: 1px solid #d7e4f3;
+    list-style: none;
+    color: #52677c;
+    font-size: 14px;
+  }
+  .materials-stats strong { color: var(--ui-accent-ink); }
+  .materials-photos { display: grid; grid-template-columns: minmax(0, 1.85fr) minmax(0, 1fr); gap: 12px; }
+  .materials-photo { height: clamp(270px, 33vw, 380px); overflow: hidden; border-radius: 20px; }
+  .materials-photo-detail { margin-top: 22px; height: calc(clamp(270px, 33vw, 380px) - 22px); }
+  .materials-categories { padding-block: clamp(36px, 5vw, 72px); scroll-margin-top: 108px; }
+  .materials-categories h2 { margin-bottom: 24px; }
+  .materials-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .materials-card { overflow: hidden; border: 1px solid #dce7f2; border-radius: 16px; background: #fff; }
+  .materials-card:focus-within { outline: 2px solid #006edc; outline-offset: 3px; }
+  .materials-card-link { display: flex; flex-direction: column; height: 100%; }
+  .materials-card-image { aspect-ratio: 3 / 2; overflow: hidden; }
+  .materials-card-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+  .materials-card-body h3 { margin: 0 0 8px; }
+  .materials-card-body p { margin: 0 0 18px; font-size: 15px; line-height: 1.65; }
+  .materials-card-footer {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 6px 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid #e0eaf4;
+    color: #52677c; font-size: 14px;
+  }
+  .materials-card-action { color: #0056b3; font-weight: 600; }
+  .materials-card-link:is(:hover,:focus-visible) .materials-card-action { text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 1023px) {
+    .materials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 767px) {
+    .materials-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+    .materials-photos { gap: 8px; }
+    .materials-photo { height: clamp(160px, 54vw, 240px); border-radius: 14px; }
+    .materials-photo-detail { height: calc(clamp(160px, 54vw, 240px) - 12px); margin-top: 12px; }
+    .materials-grid { gap: 16px; }
+  }
+  @media (max-width: 559px) {
+    .materials-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>
