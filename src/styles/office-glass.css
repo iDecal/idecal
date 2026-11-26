@@ -115,13 +115,34 @@
 .office-gallery-copy { width:100%; max-width:none; }
 .office-gallery-links { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:22px; }
 .office-gallery-links a { display:inline-flex; min-height:44px; align-items:center; font-size:14px; color:#0d6b96; }
-.office-final-cta { padding:40px 0; background:var(--idecal-soft-gradient); border-top:1px solid #e0eaf4; }
-.office-final-grid { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:32px; align-items:center; }
-.office-final-grid h2 { margin:0 0 12px; }
-.office-final-grid p { margin:0; max-width:700px; }
-.office-final-actions { display:flex; flex-direction:column; align-items:center; gap:14px; }
-.office-final-phone { font-size:14px; color:#1b4f7a; text-underline-offset:4px; }
-.office-final-phone:hover { text-decoration:underline; }
+.office-final-cta { padding:clamp(28px, 5vw, 64px) 0; border-top:1px solid; }
+.office-final-grid {
+ display:grid;
+ grid-template-columns:minmax(0, 1fr) minmax(250px, 300px);
+ align-items:center;
+ gap:clamp(24px, 5vw, 64px);
+ padding:clamp(22px, 4.5vw, 60px);
+ border-radius:24px;
+ background:linear-gradient(115deg, #10243d, #173a67);
+}
+.office-final-grid h2 { max-width:23ch; margin:0 0 12px; text-wrap:balance; }
+.office-final-grid p { max-width:54ch; margin:0; }
+.office-final-actions { display:grid; gap:10px; }
+.office-final-actions :is(.btn-primary-solid,.office-final-zalo) {
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:8px 16px;
+ min-height:48px;
+ padding:12px clamp(12px, 2vw, 18px);
+ border-radius:12px;
+ font-size:16px;
+ font-weight:650;
+ line-height:1.4;
+}
+.office-final-zalo { flex-wrap:wrap; border:1px solid; }
+.office-final-zalo span { white-space:nowrap; font-variant-numeric:tabular-nums; }
+.office-final-actions a:focus-visible { outline:2px solid #fff; outline-offset:3px; }
 .office-why-contact { padding:28px; border:1px solid #ffffff30; border-radius:18px; background:#ffffff08; }
 .office-why-contact .office-original-copy p { margin-bottom:14px; }
 .office-why-contact .office-original-copy p:last-child a { font-size:21px; font-weight:600; }
@@ -172,7 +193,7 @@
  .office-gallery-grid { grid-template-columns:1fr; gap:24px; }
  .office-gallery-grid img { aspect-ratio:1.6; }
  .office-faq summary { font-size:14px; }
- .office-final-cta { padding:40px 0; }
+ .office-final-grid { border-radius:18px; }
  .office-why-contact { padding:24px; }
 }
 @media(max-width:430px) { .office-audience-grid { grid-template-columns:1fr; } .office-services-grid { grid-template-columns:1fr; } .office-service-card { display:grid; grid-template-columns:110px minmax(0,1fr); } .office-service-symbol { padding:20px 0 20px 16px; align-items:flex-start; } .office-service-copy { padding:16px; } }
