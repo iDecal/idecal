@@ -121,10 +121,10 @@
   .btn-primary-solid:hover, .service-card-brand:hover { transform: none; }
 }
 
-/* Public navigation and footer share the heading font; content stays Inter. */
+/* Public navigation and footer use Google Sans Flex. */
 body :is(.site-header, #mobile-menu, #site-footer),
 body :is(.site-header, #mobile-menu, #site-footer) :not(svg, svg *) {
-  font-family: var(--heading-font) !important;
+  font-family: 'Google Sans Flex', sans-serif !important;
 }
 
 /* Content uses Inter. */
@@ -132,7 +132,7 @@ body :is(.site-header, #mobile-menu, #site-footer) :not(svg, svg *) {
   font-family: 'Inter Variable', sans-serif !important;
 }
 
-/* Headings share Google Sans Flex, including nested links and highlights. */
+/* Headings share Wix Madefor Display, including nested links and highlights. */
 .page-content :is(h1, h2, h3, h4, h5, h6),
 .page-content :is(h1, h2, h3, h4, h5, h6) *,
 .homepage-original :is(h1, h2, h3, h4, h5, h6),

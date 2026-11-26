@@ -1,7 +1,7 @@
 /* One presentation policy for native, CMS and imported document headings.
    Values are 2px below the previous shared scale. Never rewrite source text. */
 :root {
-  --heading-font:'Google Sans Flex',sans-serif;
+  --heading-font:'Wix Madefor Display',sans-serif;
   --heading-ink:#1b4f7a;
   --footer-gradient:linear-gradient(115deg,#020c2d 0%,#05112f 58%,#0b1231 100%);
   --heading-gradient:linear-gradient(100deg,#0f8fe0 0%,#4f46e5 55%,#7d12f7 100%);
