@@ -34,9 +34,9 @@ for(const route of [primary,...aliases]){
    for(const item of group.items) assert.ok(clean(main).includes(item.description));
  }
  assert.ok(nodes.some(node=>node.tagName==='meta'&&attr(node,'name')==='description'&&attr(node,'content')===copy.description));
- const calculator=content.find(node=>attr(node,'data-film-calculator')!==undefined);
- assert.match(clean(calculator),/250k – 380k\/m² · IceTouch \(Hàn Quốc\), Rainier \(Mỹ\)/);
- assert.deepEqual(all(calculator).filter(node=>attr(node,'data-min')).map(node=>Number(attr(node,'data-min'))),[190000,250000,420000]);
+ assert.ok(!content.some(node=>attr(node,'data-film-calculator')!==undefined));
+ const related=content.find(node=>attr(node,'aria-labelledby')==='thermal-related-title');
+ assert.equal(all(related).filter(node=>node.tagName==='a'&&attr(node,'href')?.startsWith('/blog/')).length,3);
  assert.ok(!content.some(node=>node.attrs?.some(({name,value})=>name.startsWith('on')||value.startsWith('file:'))),'Local file URL or inline event in imported content');
  const gallery=content.filter(node=>attr(node,'data-upload-photo')!==undefined);assert.equal(gallery.length,3);
  assert.ok(!content.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQ closed by default');

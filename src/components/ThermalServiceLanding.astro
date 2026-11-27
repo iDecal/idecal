@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import ProductBrandLogo from './ProductBrandLogo.astro';
 import productBrands from '../data/product-brands.json';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
@@ -7,6 +8,11 @@ import { thermalCopy as copy, thermalFaqs, thermalPhotos, thermalTitle } from '.
 import films from '../data/thermal-landing-films.json';
 import '../styles/thermal-service.css';
 
+const relatedPosts = (await Promise.all([
+  '5-lua-chon-phim-cach-nhiet-tai-tphcm-gia-tham-khao',
+  'bao-gia-decal-chong-nang-phim-cach-nhiet-dan-kinh-2025',
+  'dan-phim-cach-nhiet-3m-chinh-hang-5-noi-nen-can-nhac',
+].map(id => getEntry('blog', id)))).filter(post => post !== undefined);
 const applicationPhotos = [
   { src: '/images/cong-trinh-thuc-te/15-film-cua-kinh-ban-cong.webp', alt: 'Tầm nhìn qua kính ban công căn hộ' },
   { src: '/images/cong-trinh-thuc-te/34-thi-cong-phim-vach-kinh.webp', alt: 'Kỹ thuật viên thi công phim trên vách kính văn phòng' },
@@ -151,7 +157,7 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
     </div>
   </section>
   <span id="bao-gia-phim-cach-nhiet" class="legacy-anchor" aria-hidden="true"></span>
-  <section class="section estimate-section" id="bao-gia">
+  <section class="section film-pricing-section" id="bao-gia">
     <div class="container">
       <div class="section-head">
         <h2 id="thermal-pricing-title">{copy.pricing.heading}</h2>
@@ -168,56 +174,6 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
         </table>
       </div>
       <ul class="film-price-notes">{copy.pricing.notes.map(note => <li>{note}</li>)}</ul>
-    </div>
-    <div class="container estimate-grid">
-      <div>
-        <h3>Dự toán theo diện tích kính</h3>
-        <p>Chọn diện tích và nhóm phim để ước tính nhanh. Bộ tính sử dụng mức giá theo nhóm, còn bảng trên ghi đơn giá tham khảo theo từng dòng phim.</p>
-      </div>
-      <div class="calculator" data-film-calculator>
-        <div class="calc-head">
-          <h3>Ước tính chi phí</h3>
-          <span>TRỰC TUYẾN</span>
-        </div>
-        <div class="field">
-          <div class="field-head">
-            <label for="area">Diện tích kính</label>
-            <span><input class="value-input" id="area" type="number" min="2" max="150" value="15" required="" step="1"> m²</span>
-          </div>
-          <input class="range" id="areaRange" type="range" min="2" max="150" value="15" aria-label="Điều chỉnh diện tích kính">
-          <div class="field-head">
-            <span>2m²</span>
-            <span>150m²</span>
-          </div>
-        </div>
-        <div class="field">
-          <div class="field-head">
-            <span>Phân khúc phim</span>
-          </div>
-          <div class="tier-grid" role="group" aria-label="Phân khúc phim">
-            <button class="tier" data-min="190000" data-max="220000" aria-pressed="false" type="button">
-              <b>Tiết kiệm</b>
-              <small>190k – 220k/m²</small>
-            </button>
-            <button class="tier" data-min="250000" data-max="380000" aria-pressed="true" type="button">
-              <b>Phổ thông</b>
-              <small>250k – 380k/m² · IceTouch (Hàn Quốc), Rainier (Mỹ)</small>
-            </button>
-            <button class="tier" data-min="420000" aria-pressed="false" type="button">
-              <b>Cao cấp</b>
-              <small>từ 420k/m²</small>
-            </button>
-          </div>
-        </div>
-        <div class="total">
-          <small>Tổng dự kiến · trọn gói</small>
-          <output id="total" for="area areaRange">3.750.000đ – 5.700.000đ</output>
-        </div>
-        <div class="calc-actions">
-          <a class="button accent" id="zalo" href="https://zalo.me/0866077040" target="_blank" rel="noopener">Gửi qua Zalo</a>
-          <a class="button ghost" href={quote}>Nhận báo giá chi tiết</a>
-        </div>
-      </div>
     </div>
   </section>
   <span id="ung-dung-phim" class="legacy-anchor" aria-hidden="true"></span>
@@ -278,13 +234,17 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
             ))}
           </div>
       </div>
-      <aside class="guide">
-        <div class="kicker" data-heading-label="">Cẩm nang iDecal</div>
-        <h3>Đọc nhanh trước khi chọn phim</h3>
-        <a href="#san-pham">Phản gương hay Nano Ceramic?<span>So sánh khả năng chống nóng và giữ view.</span></a>
-        <a href="/huong-dan-do-kinh/">Cách tự đo diện tích kính<span>Công thức đơn giản để có dự toán ban đầu.</span></a>
-        <a href="#quy-trinh">Những lỗi thường gặp khi tự dán<span>Vì sao bọt khí và mép phim bị bong.</span></a>
-      </aside>
+      {relatedPosts.length > 0 && (
+        <aside class="guide" aria-labelledby="thermal-related-title">
+          <h3 id="thermal-related-title">Bài viết liên quan</h3>
+          {relatedPosts.map(post => (
+            <a href={`/blog/${post.id}`}>
+              {post.data.title}
+              <span>{post.data.description}</span>
+            </a>
+          ))}
+        </aside>
+      )}
     </div>
   </section>
   <section class="cta">
@@ -304,7 +264,6 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
 </div>
 
 <script>
-  const money = new Intl.NumberFormat('vi-VN');
   for (const root of document.querySelectorAll<HTMLElement>('.thermal-film-landing')) {
     const filters = root.querySelector<HTMLElement>('[data-film-filters]');
     const filterButtons = filters?.querySelectorAll<HTMLButtonElement>('button[data-filter]');
@@ -318,40 +277,5 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
       }
     });
     if (filters) filters.hidden = false;
-
-    const calculator = root.querySelector('[data-film-calculator]');
-    const area = calculator?.querySelector<HTMLInputElement>('input[type="number"]');
-    const range = calculator?.querySelector<HTMLInputElement>('input[type="range"]');
-    const total = calculator?.querySelector<HTMLOutputElement>('output');
-    const tiers = calculator?.querySelectorAll<HTMLButtonElement>('button[data-min]');
-    let tier = calculator?.querySelector<HTMLButtonElement>('button[aria-pressed="true"]');
-    if (!area || !range || !total || !tiers || !tier) continue;
-
-    const update = () => {
-      if (!area.validity.valid) {
-        total.value = 'Nhập diện tích từ 2 đến 150 m².';
-        return;
-      }
-      const low = money.format(area.valueAsNumber * Number(tier?.dataset.min));
-      const cap = tier?.dataset.max;
-      total.value = cap ? `${low} đ – ${money.format(area.valueAsNumber * Number(cap))} đ` : `Từ ${low} đ`;
-    };
-
-    area.addEventListener('input', () => {
-      if (area.validity.valid) range.value = area.value;
-      update();
-    });
-    range.addEventListener('input', () => {
-      area.value = range.value;
-      update();
-    });
-    for (const option of tiers) {
-      option.addEventListener('click', () => {
-        tier = option;
-        for (const other of tiers) other.setAttribute('aria-pressed', String(other === option));
-        update();
-      });
-    }
-    update();
   }
 </script>
