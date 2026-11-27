@@ -6,6 +6,7 @@ import { normalizeSearch } from '../lib/site-search';
 
 interface Props { items: Product[]; category?: ProductCategory; heading?: string; showGroups?: boolean; }
 const { items, category, heading, showGroups = false } = Astro.props;
+const Heading = showGroups ? 'h1' : 'h2';
 const brands = [...new Map(items.flatMap(item => {
   const brand = item.brand?.trim();
   return brand ? [[normalizeSearch(brand), brand] as const] : [];
@@ -16,15 +17,14 @@ const groups = showGroups ? catalogueGroups.map(group => ({
   members: new Set(items.filter(item => 'select' in group ? group.select(item) : item.category === group.slug).map(item => item.slug)),
 })).filter(group => group.members.size) : [];
 ---
-<section id="mau-san-pham" class="catalogue-shop scroll-mt-24 py-14 md:py-20" data-catalog>
+<section id="mau-san-pham" class:list={["catalogue-shop scroll-mt-24", showGroups ? "py-8 md:py-12" : "py-14 md:py-20"]} data-catalog>
   <div class="container min-w-0">
     <header class="shop-heading">
-      <h2 class="brand-heading">{heading ?? (category ? `Mẫu ${category.name.toLocaleLowerCase('vi-VN')}` : 'Khám phá catalogue sản phẩm')}</h2>
+      <Heading class="brand-heading">{heading ?? (category ? `Mẫu ${category.name.toLocaleLowerCase('vi-VN')}` : 'Khám phá catalogue sản phẩm')}</Heading>
       {!showGroups && <a href="/san-pham/#mau-san-pham">Xem toàn bộ sản phẩm →</a>}
     </header>
     <div class="shop-layout">
       {items.length > 0 && <form class="shop-filters" data-catalog-filters hidden aria-label="Lọc sản phẩm">
-        <div class="shop-filter-heading"><strong>Bộ lọc</strong><button type="reset">Đặt lại</button></div>
         <label>Tìm sản phẩm <input name="query" type="search" placeholder="Tên hoặc mã mẫu" /></label>
         {groups.length > 0 && <label>Danh mục <select name="group"><option value="">Tất cả danh mục</option>{groups.map(group => <option value={group.slug}>{group.name}</option>)}</select></label>}
         {brands.length > 0 && <label>Thương hiệu <select name="brand"><option value="">Tất cả thương hiệu</option>{brands.map(([value, name]) => <option value={value}>{name}</option>)}</select></label>}
@@ -32,6 +32,7 @@ const groups = showGroups ? catalogueGroups.map(group => ({
           <label>Từ <input type="number" name="min" min="0" inputmode="numeric" /></label>
           <label>Đến <input type="number" name="max" min="0" inputmode="numeric" /></label>
         </div></fieldset>}
+        <button type="reset" class="shop-reset">Đặt lại</button>
       </form>}
       <div class="shop-results">
         <div class="shop-toolbar">
@@ -53,14 +54,15 @@ const groups = showGroups ? catalogueGroups.map(group => ({
 </section>
 <style>
   [data-catalog] :global([hidden]) { display: none !important; }
-  .shop-heading,.shop-toolbar,.shop-filter-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .shop-heading,.shop-toolbar { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
   .shop-heading { margin-bottom:24px; }
-  .shop-heading h2 { margin:0; }
+  .shop-heading :is(h1,h2) { margin:0; }
   .shop-layout { display:grid; gap:26px; }
   .shop-results { min-width:0; }
-  .shop-filters { display:grid; align-content:start; gap:16px; padding:18px; border:1px solid #dce7f4; border-radius:12px; background:#f7faff; }
-  .shop-filter-heading { border-bottom:1px solid #dce7f4; padding-bottom:10px; }
-  .shop-filter-heading button { min-height:42px; color:#006edc; font-size:14px; }
+  .shop-filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:end; gap:12px; padding:18px; border:1px solid #dce7f4; border-radius:12px; background:#f7faff; }
+  .shop-filters fieldset { grid-column:1 / -1; }
+  .shop-reset { justify-self:start; min-height:44px; padding-inline:12px; border:1px solid #cbd9eb; border-radius:6px; color:#006edc; font-size:14px; background:#fff; }
+  .shop-reset:hover { border-color:#006edc; background:#edf5ff; }
   .shop-filters label,.shop-toolbar label { display:grid; gap:6px; font-size:14px; font-weight:550; }
   .shop-filters fieldset,.shop-filters legend { margin:0; padding:0; border:0; min-width:0; font-size:14px; }
   .shop-prices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:6px; }
@@ -73,7 +75,9 @@ const groups = showGroups ? catalogueGroups.map(group => ({
   .shop-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
   .shop-card { min-width:0; }
   @media(min-width:768px) {
-    .shop-layout:has(.shop-filters:not([hidden])) { grid-template-columns:minmax(200px,240px) minmax(0,1fr); align-items:start; }
+    .shop-filters { display:flex; flex-wrap:wrap; align-items:end; gap:14px; }
+    .shop-filters > label { flex:1 1 135px; min-width:0; }
+    .shop-filters fieldset { flex:1.35 1 215px; }
     .shop-grid { gap:18px; }
   }
   @media(min-width:1024px) { .shop-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }

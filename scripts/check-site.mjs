@@ -100,7 +100,7 @@ const landingSamples = [
 ];
 for (const [slug, sample] of landingSamples) {
   const html = await readFile(path.join(root, slug, 'index.html'), 'utf8');
-  assert.ok(catalogueIndex.includes(`href="/${slug}"`), `Product index must link to landing ${slug}`);
+  assert.ok(catalogueIndex.includes(`<option value="${slug}"`), `Product index must offer the ${slug} filter`);
   if (slug === 'decal-dan-kinh-van-phong') {
     assert.ok(html.includes('office-glass-page') && html.includes('id="bao-gia-van-phong"'), 'Office landing must render imported editorial content and prices');
     continue;
