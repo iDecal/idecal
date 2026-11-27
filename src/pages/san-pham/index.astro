@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import ProductCard from '../../components/ProductCard.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { products, productsInCategory } from '../../data/catalogue';
 import { landingProducts } from '../../data/site-offerings';
@@ -8,30 +7,9 @@ import { catalogueGroups } from '../../data/catalogue-groups';
 
 const groups = catalogueGroups.map(category => ({
   ...category,
-  products: 'select' in category ? landingProducts(category) : productsInCategory(category.slug),
+  count: 'select' in category ? landingProducts(category).length : productsInCategory(category.slug).length,
 }));
 const totalGroups = groups.length;
-// Show locally hosted images first so the initial grid can load without an external image host.
-const hasLocalImage = (src = '') => src.startsWith('/') && !src.startsWith('//');
-const displayProducts = [...products].sort((a, b) =>
-  Number(hasLocalImage(b.images[0])) - Number(hasLocalImage(a.images[0]))
-);
-const labels = new Intl.Collator('vi');
-const brandKey = (brand: string) => brand.trim().toLocaleLowerCase('vi');
-const brands = new Map<string, string>();
-const groupsByProduct = new Map<string, string[]>();
-for (const product of products) {
-  const key = brandKey(product.brand ?? '');
-  if (key && !brands.has(key)) brands.set(key, product.brand.trim());
-}
-for (const group of groups) {
-  for (const product of group.products) {
-    const memberships = groupsByProduct.get(product.slug) ?? [];
-    memberships.push(group.slug);
-    groupsByProduct.set(product.slug, memberships);
-  }
-}
-const sortedBrands = [...brands].sort((a, b) => labels.compare(a[1], b[1]));
 ---
 <Layout
   title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal"
@@ -48,76 +26,29 @@ const sortedBrands = [...brands].sort((a, b) => labels.compare(a[1], b[1]));
     </figure>
   </section>
 
-  <section id="danh-muc" class="container shop-layout" data-shop aria-label="Catalogue sản phẩm">
-    <aside class="shop-sidebar">
-      <details class="shop-filters" data-shop-filters open hidden>
-        <summary>Bộ lọc sản phẩm</summary>
-        <form data-shop-form>
-          <label>Tìm sản phẩm
-            <input name="q" type="search" placeholder="Tên hoặc mã mẫu" />
-          </label>
-          <label>Danh mục
-            <select name="danh-muc">
-              <option value="">Tất cả danh mục</option>
-              {groups.filter(group => group.products.length).map(group => <option value={group.slug}>{group.name} ({group.products.length})</option>)}
-            </select>
-          </label>
-          <label>Thương hiệu
-            <select name="thuong-hieu">
-              <option value="">Tất cả thương hiệu</option>
-              {sortedBrands.map(([key, label]) => <option value={key}>{label}</option>)}
-            </select>
-          </label>
-          <label>Giá tham khảo
-            <select name="gia">
-              <option value="">Tất cả mức giá</option>
-              <option value="under-100">Dưới 100.000 ₫</option>
-              <option value="100-300">100.000–300.000 ₫</option>
-              <option value="over-300">Trên 300.000 ₫</option>
-              <option value="quote">Liên hệ báo giá</option>
-            </select>
-          </label>
-          <button type="reset">Xóa bộ lọc</button>
-        </form>
-      </details>
-      <details class="shop-categories">
-        <summary>Xem trang danh mục</summary>
-        <ul>{groups.map(group => <li><a href={`/${group.slug}/`}>{group.name}</a></li>)}</ul>
-      </details>
-    </aside>
-
-    <div class="shop-results">
-      <div class="shop-toolbar">
-        <h2>Tất cả sản phẩm</h2>
-        <label class="shop-sort" data-shop-sort hidden>Sắp xếp
-          <select name="sap-xep">
-            <option value="">Mặc định</option>
-            <option value="price-asc">Giá thấp đến cao</option>
-            <option value="price-desc">Giá cao đến thấp</option>
-            <option value="name">Tên A–Z</option>
-          </select>
-        </label>
-      </div>
-      <p class="shop-count" data-shop-count role="status">{products.length} sản phẩm</p>
-      <div class="shop-grid" data-shop-grid>
-        {displayProducts.map(product => (
-          <div data-shop-item data-groups={groupsByProduct.get(product.slug)?.join(' ')} data-brand={brandKey(product.brand ?? '')} data-code={product.code}>
-            <ProductCard product={product} />
-          </div>
-        ))}
-      </div>
-      <div class="shop-empty" data-shop-empty hidden>
-        <p>Không tìm thấy sản phẩm phù hợp.</p>
-        <button type="button" data-shop-clear>Xóa bộ lọc</button>
-      </div>
-      <button type="button" class="shop-more" data-shop-more hidden>Xem thêm sản phẩm</button>
+  <section id="danh-muc" class="container materials-categories" aria-labelledby="materials-categories-title">
+    <h2 id="materials-categories-title">Chọn nhóm sản phẩm của bạn</h2>
+    <div class="materials-grid">
+      {groups.map(category => (
+        <article class="materials-card group">
+          <a href={`/${category.slug}`} class="materials-card-link" aria-labelledby={`material-${category.slug}`}>
+            <div class="materials-card-image">
+              <ProductImage src={category.image} alt={category.name} />
+            </div>
+            <div class="materials-card-body">
+              <h3 id={`material-${category.slug}`}>{category.name}</h3>
+              <p>{category.description}</p>
+              <div class="materials-card-footer">
+                <span>{category.count} mẫu</span>
+                <span class="materials-card-action">Xem nhóm sản phẩm</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      ))}
     </div>
   </section>
 </Layout>
-
-<script>
-  import '../../scripts/catalogue-filter';
-</script>
 
 <style>
   .shop-intro { position: relative; isolation: isolate; overflow: hidden; background: #f1f6f7; border-bottom: 1px solid #dce7ef; }
@@ -126,37 +57,36 @@ const sortedBrands = [...brands].sort((a, b) => labels.compare(a[1], b[1]));
   .shop-intro-copy h1 { max-width: 28ch; margin: 0 0 12px; }
   .shop-intro-copy p { max-width: 60ch; margin: 0; }
   .shop-intro-photo { display: none; }
-  .shop-layout { display: grid; grid-template-columns: minmax(210px, 245px) minmax(0, 1fr); gap: clamp(24px, 4vw, 48px); padding-block: 36px 64px; scroll-margin-top: 108px; }
-  .shop-sidebar { min-width: 0; }
-  .shop-filters, .shop-categories { border: 1px solid #dce7ef; border-radius: 14px; background: #fff; }
-  .shop-categories { margin-top: 12px; }
-  .shop-sidebar summary { padding: 14px 16px; cursor: pointer; font-weight: 700; color: #10293f; }
-  .shop-sidebar form, .shop-categories ul { display: grid; gap: 14px; margin: 0; padding: 0 16px 16px; }
-  .shop-categories ul { list-style: none; gap: 4px; }
-  .shop-categories a { display: flex; min-height: 48px; align-items: center; }
-  .shop-layout label { display: grid; gap: 6px; font-size: .875rem; font-weight: 650; color: #10293f; }
-  .shop-layout :is(input,select,button) { min-height: 48px; border: 1px solid #a8bed2; border-radius: 8px; padding: 8px 10px; color: #10293f; background: #fff; }
-  .shop-layout :is(input,select) { width: 100%; min-width: 0; font-size: 1rem; }
-  .shop-layout button:hover { border-color: #006edc; color: #0056b3; }
-  .shop-layout :is(input,select,button,summary):focus-visible { outline: 2px solid #006edc; outline-offset: 3px; }
-  .shop-toolbar { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  .shop-toolbar h2 { margin: 0; }
-  .shop-count { margin: 8px 0 20px; font-size: .9375rem; }
-  .shop-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-  .shop-grid > div { min-width: 0; }
-  .shop-grid :global(.product-card-footer) { flex-wrap: wrap; }
-  .shop-more { display: block; margin: 24px auto 0; }
-  .shop-empty { padding: 24px; border: 1px solid #dce7ef; border-radius: 12px; background: #f1f6f7; }
-  .shop-layout [hidden] { display: none !important; }
-
   @media (min-width: 1024px) {
     .shop-intro-copy { min-height: 230px; }
     .shop-intro-photo { display: block; position: absolute; z-index: -1; inset: 0 0 0 auto; width: 44%; margin: 0; clip-path: ellipse(68% 78% at 68% 18%); mask-image: linear-gradient(to right, transparent, #000 35%); }
     .shop-intro-photo :global(img) { width: 100%; height: 100%; object-fit: cover; }
   }
-  @media (max-width: 1023px) { .shop-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .materials-categories { padding-block: clamp(36px, 5vw, 72px); scroll-margin-top: 108px; }
+  .materials-categories h2 { margin-bottom: 24px; }
+  .materials-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .materials-card { overflow: hidden; border: 1px solid #dce7f2; border-radius: 16px; background: #fff; }
+  .materials-card:focus-within { outline: 2px solid #006edc; outline-offset: 3px; }
+  .materials-card-link { display: flex; flex-direction: column; height: 100%; }
+  .materials-card-image { aspect-ratio: 3 / 2; overflow: hidden; }
+  .materials-card-body { display: flex; flex: 1; flex-direction: column; padding: 20px; }
+  .materials-card-body h3 { margin: 0 0 8px; }
+  .materials-card-body p { margin: 0 0 18px; font-size: 15px; line-height: 1.65; }
+  .materials-card-footer {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    gap: 6px 12px; margin-top: auto; padding-top: 12px; border-top: 1px solid #e0eaf4;
+    color: #52677c; font-size: 14px;
+  }
+  .materials-card-action { color: #0056b3; font-weight: 600; }
+  .materials-card-link:is(:hover,:focus-visible) .materials-card-action { text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 1023px) {
+    .materials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
   @media (max-width: 767px) {
-    .shop-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; padding-block: 24px 40px; }
-    .shop-grid { gap: 12px; }
+    .materials-grid { gap: 16px; }
+  }
+  @media (max-width: 559px) {
+    .materials-grid { grid-template-columns: minmax(0, 1fr); }
   }
 </style>
