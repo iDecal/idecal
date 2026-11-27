@@ -1,9 +1,9 @@
 ---
-interface Props { benefits: { title: string; icon?: 'layers' | 'edit' | 'bolt' }[]; }
+interface Props { benefits: { title: string }[]; }
 const { benefits } = Astro.props;
 ---
 <ul class="banner-benefit-list" aria-label="Ưu điểm nổi bật">
-  {benefits.map(benefit=><li data-hero-benefit-icon={benefit.icon ?? 'check'}><span>{benefit.title}</span></li>)}
+  {benefits.map(benefit=><li><span>{benefit.title}</span></li>)}
 </ul>
 <style>
 .banner-benefit-list { display: flex; flex-wrap: wrap; gap: 12px 20px; margin: 0; padding: 0; list-style: none; }

@@ -15,10 +15,7 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{
 ---
 <Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
 <article class="q4-page">
-<header class="q4-hero" data-feature-hero><div class="container feature-imported-hero" set:html={data.heroHtml
-    .replace('id="gspb_row-id-gsbp-e6f6a71"','id="gspb_row-id-gsbp-e6f6a71" data-hero-layout')
-    .replace('id="gspb_col-id-gsbp-72d44c7"','id="gspb_col-id-gsbp-72d44c7" data-hero-media')
-    .replace(/(<img\b[^>]*>)(<\/figure>)?/, '$1$2<span data-hero-caption>Thi công phim cách nhiệt cho kính</span>')}></div></header>
+<header class="q4-hero"><div class="container" set:html={data.heroHtml}></div></header>
 <nav class="container q4-jump" aria-label="Nội dung trang Quận 4"><a href="#ung-dung-thuc-te-cua-decal-dan-kinh-quan-4">Ứng dụng</a><a href="#thiet-ke-decal-su-hoa-quyen-giua-nghe-thuat-va-cong-nghe">Mẫu & chất liệu</a><a href="#quy-trinh-thi-cong-decal-dan-kinh-quan-4-nhanh-gon-chuyen-nghiep">Quy trình</a><a href="#anh-thi-cong">Ảnh thi công</a></nav>
 <section class="container q4-reasons"><div set:html={data.reasonsHeaderHtml}></div><div class="q4-reason-columns">{data.reasonsItems.map(item=><div set:html={item}></div>)}</div></section>
 <section class="q4-applications"><div class="container" set:html={data.applicationsHtml}></div></section>

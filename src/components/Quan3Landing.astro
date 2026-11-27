@@ -15,10 +15,7 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,provider:{
 ---
 <Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
 <article class="q3-page">
-<header class="q3-cover" data-feature-hero><div class="container feature-imported-hero" set:html={data.heroHtml
-    .replace('id="gspb_row-id-gsbp-efabd71"','id="gspb_row-id-gsbp-efabd71" data-hero-layout')
-    .replace('id="gspb_col-id-gsbp-6499e14"','id="gspb_col-id-gsbp-6499e14" data-hero-media')
-    .replace(/(<img\b[^>]*>)(<\/figure>)?/, '$1$2<span data-hero-caption>Decal mờ 3D cho vách kính</span>')}></div></header>
+<header class="q3-cover"><div class="container" set:html={data.heroHtml}></div></header>
 <div class="container q3-overview"><section set:html={data.conceptHtml}></section><section set:html={data.whyHtml}></section></div>
 <section class="container q3-materials" set:html={data.materialsHtml}></section>
 <section class="q3-trends"><div class="container" set:html={data.trendsHtml}></div></section>

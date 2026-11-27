@@ -5,7 +5,7 @@ import InteriorFilmImage from './InteriorFilmImage.astro';
 import '../styles/wave-glass.css';
 ---
 <div class="wave-glass-page">
-  <section class="wave-hero" data-feature-hero data-service-hero><div class="container" data-hero-layout>
+  <section class="wave-hero" data-service-hero><div class="container" data-hero-layout>
     <div class="wave-hero-copy" data-hero-copy>
       <p class="wave-eyebrow">Dịch vụ iDecal</p>
       <h1 id={source.hero.heading.id}>{source.title}</h1>
@@ -19,7 +19,7 @@ import '../styles/wave-glass.css';
         <BannerBenefits benefits={source.hero.points.map(title=>({title}))} />
       </div>
     </div>
-    <figure class="wave-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.image} eager /><figcaption>Decal vân sóng cho vách kính</figcaption></figure>
+    <figure class="wave-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.image} eager /></figure>
   </div></section>
   <nav class="container wave-jump" aria-label="Nội dung dịch vụ decal vân sóng">
     <a href="#mau-decal-van-song">Mẫu & báo giá</a><a href="#uu-diem-van-song">Ưu điểm</a><a href="#hoi-dap-van-song">Câu hỏi thường gặp</a><a href="#thi-cong-van-song">Ảnh thi công</a>
