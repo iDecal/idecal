@@ -1,7 +1,7 @@
 @layer sky-blue-links {
- :root, body {--content-link-color:#006edc!important;--content-link-hover:#0056b3!important;}
- body a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo,.header-brand):not(:has(img,svg:only-child)) {color:#006edc!important;}
- body a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo,.header-brand):not(:has(img,svg:only-child)):hover {color:#0056b3!important;}
+ :root, body {--content-link-color:var(--ui-primary)!important;--content-link-hover:var(--ui-primary-hover)!important;}
+ body a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo,.header-brand):not(:has(img,svg:only-child)) {color:var(--ui-primary)!important;}
+ body a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo,.header-brand):not(:has(img,svg:only-child)):hover {color:var(--ui-primary-hover)!important;}
  body :is(.brand-dark,[data-heading-theme='dark'],.home-consult,.office-why,.footer-contact) a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo) {color:#8bd0f5!important;}
  body .site-header .header-row .header-main-links > div > :is(a,button),
  body .site-header #mobile-menu .mobile-other-links > div > :is(a,button) {color:#102e57!important;}

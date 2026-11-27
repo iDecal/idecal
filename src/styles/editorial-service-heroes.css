@@ -3,9 +3,7 @@
   body [data-service-hero] {
     padding-block: clamp(36px, 5vw, 76px) !important;
     border-bottom: 1px solid #dfe9f4 !important;
-    background:
-      radial-gradient(ellipse at 88% 18%, #e4e9ff, transparent 54%),
-      linear-gradient(115deg, #f8fbff, #edf6fb) !important;
+    background: var(--ui-page-wash) !important;
   }
 
   body [data-service-hero] [data-hero-layout] {

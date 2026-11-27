@@ -4,7 +4,7 @@
   --heading-font:'Lexend Variable',sans-serif;
   --heading-ink:#1b4f7a;
   --footer-gradient:linear-gradient(115deg,#020c2d 0%,#05112f 58%,#0b1231 100%);
-  --heading-gradient:linear-gradient(100deg,#0f8fe0 0%,#4f46e5 55%,#7d12f7 100%);
+  --heading-gradient:var(--ui-action-gradient);
   --heading-h1:clamp(34px,3.5vw,38px);
   --heading-h2:clamp(24px,2.5vw,34px);
   --heading-h3:19px;
