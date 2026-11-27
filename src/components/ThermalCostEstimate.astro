@@ -1,0 +1,66 @@
+---
+interface Props {
+  rows: string[][];
+}
+const { rows } = Astro.props;
+const tiers = rows.map(([label, price]) => {
+  const [minimum, maximum] = (price.match(/\d[\d.]*/g) ?? []).map(
+    amount => Number(amount.replaceAll('.', '')),
+  );
+  return { label, price, minimum, maximum };
+});
+const initialTier = tiers[1];
+const format = new Intl.NumberFormat('vi-VN');
+---
+<div class="thermal-estimate" data-thermal-estimate hidden>
+  <h3>Ước tính theo diện tích kính</h3>
+  <div class="thermal-estimate-fields">
+    <label for="thermal-estimate-area">Diện tích kính (m²)</label>
+    <input id="thermal-estimate-area" type="number" min="0.01" step="0.01" value="10" required />
+    <label for="thermal-estimate-tier">Nhóm phim</label>
+    <select id="thermal-estimate-tier">
+      {tiers.map(({ label, price, minimum, maximum }) => (
+        <option data-minimum={minimum} data-maximum={maximum} selected={label === initialTier.label}>
+          {label} · {price}/m²
+        </option>
+      ))}
+    </select>
+  </div>
+  <div class="thermal-estimate-total">
+    <span>Chi phí tham khảo</span>
+    <output for="thermal-estimate-area thermal-estimate-tier">{format.format(initialTier.minimum * 10)} – {format.format(initialTier.maximum * 10)} ₫</output>
+  </div>
+  <p>Nhân diện tích kính với đơn giá tham khảo. Vật tư, nhân công và thuế sẽ được xác nhận khi báo giá.</p>
+</div>
+
+<script>
+  const format = new Intl.NumberFormat('vi-VN', { maximumFractionDigits: 0 });
+
+  for (const estimate of document.querySelectorAll<HTMLElement>('[data-thermal-estimate]')) {
+    const area = estimate.querySelector<HTMLInputElement>('input');
+    const tier = estimate.querySelector<HTMLSelectElement>('select');
+    const total = estimate.querySelector<HTMLOutputElement>('output');
+    if (!area || !tier || !total) continue;
+
+    const update = () => {
+      const option = tier.selectedOptions[0];
+      const minimum = Number(option.dataset.minimum);
+      const maximum = Number(option.dataset.maximum);
+      if (!area.validity.valid || !Number.isFinite(area.valueAsNumber * minimum)
+        || (option.dataset.maximum && !Number.isFinite(area.valueAsNumber * maximum))) {
+        total.value = 'Nhập diện tích kính hợp lệ.';
+        return;
+      }
+
+      const low = format.format(area.valueAsNumber * minimum);
+      total.value = Number.isFinite(maximum)
+        ? `${low} – ${format.format(area.valueAsNumber * maximum)} ₫`
+        : `Trên ${low} ₫`;
+    };
+
+    area.addEventListener('input', update);
+    tier.addEventListener('change', update);
+    update();
+    estimate.hidden = false;
+  }
+</script>

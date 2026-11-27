@@ -1,6 +1,6 @@
 - CTA trong mỗi section dùng tối đa hai nút. Nếu section đã có nút tư vấn Zalo, bỏ dòng hotline lặp bên cạnh hoặc bên dưới cụm nút.
 
-- Quy trình xuất bản theo yêu cầu chủ website: sau khi hoàn tất và kiểm tra thay đổi, mặc định đẩy lên nhánh triển khai Cloudflare Pages. Kiểm tra bản live tại idecal.pages.dev. Nếu chủ website yêu cầu bản nháp hoặc chỉ xem trước, giữ thay đổi ở bản xem trước.
+- Quy trình xuất bản theo yêu cầu chủ website: sau khi hoàn tất và kiểm tra thay đổi, mặc định tạo bản xem trước và gửi liên kết để chủ website duyệt. Chỉ xuất bản lên nhánh triển khai Cloudflare Pages khi chủ website yêu cầu xuất bản. Sau khi xuất bản, kiểm tra bản live tại idecal.pages.dev.
 
 - Footer mới nhất: bỏ toàn bộ nhóm menu điều hướng và tagline “Thiết kế · In ấn · Thi công Decal & film”. Chỉ logo/mô tả ngắn/social ở trái, hotline/Zalo/email ở phải, ba địa chỉ hiển thị bên dưới, copyright cuối; mobile xếp dọc. Chưa xuất bản.
 
