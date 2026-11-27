@@ -30,7 +30,7 @@ const steps = [
 ---
 
 {region.slug==='tp-hcm'?<HcmLanding />:updatedContent ? <RegionalLanding region={region} content={updatedContent} /> : <Layout title={`Dán decal & phim cách nhiệt tại ${region.name} | iDecal`} description={region.description} structuredData={[areaFaqSchema(localFaq.items)]}>
-  <section class="relative overflow-hidden border-b border-border bg-surface py-14 md:py-20">
+  <section data-page-hero class="relative overflow-hidden border-b border-border bg-surface py-14 md:py-20">
     <div class="container">
 
       <div class="grid items-start gap-10 lg:grid-cols-[1.6fr_1fr]">

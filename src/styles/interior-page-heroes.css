@@ -1,0 +1,45 @@
+/* Keep the homepage outside the interior hero treatment. */
+@layer interior-page-heroes {
+  main[data-interior-page] {
+    --page-hero-ink: #102e57;
+    --page-hero-muted: #405875;
+    --page-hero-line: #d7e5f3;
+  }
+
+  main[data-interior-page] :is(
+    [data-feature-hero], [data-service-hero], .compact-page-banner, .catalogue-hero,
+    .regional-hero, .district-hero, .hcm-hero, .q1-hero, .q2-intro, .q3-cover,
+    .q4-hero, .q12-hero, .tb-hero, .contact-hero, .booking-hero, [data-page-hero]
+  ) {
+    background: linear-gradient(112deg, #f8fbff 0%, #edf5ff 58%, #e5effd 100%) !important;
+    border-bottom: 1px solid var(--page-hero-line) !important;
+    --text-main: var(--page-hero-ink);
+    --text-muted: var(--page-hero-muted);
+  }
+
+  main[data-interior-page] :is(
+    [data-feature-hero], [data-service-hero], .compact-page-banner, .catalogue-hero,
+    .regional-hero, .district-hero, .hcm-hero, .q1-hero, .q2-intro, .q3-cover,
+    .q4-hero, .q12-hero, .tb-hero, .contact-hero, .booking-hero,
+    .blog-article-header, .case-header, .product-summary, .search-page-heading, [data-page-hero]
+  ) h1 {
+    color: var(--page-hero-ink) !important;
+    -webkit-text-fill-color: currentColor !important;
+    background: none !important;
+    line-height: 1.15 !important;
+    letter-spacing: -.035em !important;
+    text-wrap: pretty;
+  }
+
+  main[data-interior-page] [data-hero-media] img,
+  main[data-interior-page] :is(.compact-banner-image, .projects-hero-image) img {
+    border-radius: clamp(16px, 2vw, 28px) !important;
+    box-shadow: 0 12px 30px -20px #102e5766 !important;
+  }
+
+  main[data-interior-page] .search-page-heading,
+  main[data-interior-page] .case-heading {
+    border-block-end: 1px solid var(--page-hero-line);
+    padding-block-end: clamp(20px, 3vw, 40px);
+  }
+}

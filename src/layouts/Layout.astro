@@ -44,7 +44,7 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
 	<body class:list={["bg-background font-body text-secondary", {"is-blog": Astro.url.pathname.startsWith("/blog")} ]}>
 		<Header />
 		
-		<main class:list={['page-content', { 'site-section-headings': !Astro.url.pathname.startsWith('/blog') && !noindex }]}>
+		<main data-interior-page={Astro.url.pathname !== "/" || undefined} class:list={['page-content', { 'site-section-headings': !Astro.url.pathname.startsWith('/blog') && !noindex }]}>
 			<slot /> 
 		</main>
 
