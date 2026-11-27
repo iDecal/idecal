@@ -16,6 +16,23 @@
  body .blog-listing .blog-hero-copy {width:100%;max-width:720px;padding:0!important;}
  body .blog-listing .blog-hero-copy h1 {max-width:26ch;margin-bottom:16px!important;font-size:clamp(30px,3vw,40px)!important;line-height:1.15!important;}
  body .blog-listing .blog-hero-copy>p:last-child {max-width:56ch;color:#44566b!important;font-size:16px!important;line-height:1.7!important;}
+ body .blog-listing .blog-category-grid > a {
+  color: var(--ui-accent-ink) !important;
+ }
+ body .blog-listing .blog-category-grid > a:is(:hover,[aria-current="page"]) {
+  color: var(--ui-primary) !important;
+ }
+ body .blog-listing :is(.blog-section-title h2,.blog-card-content h2,.blog-card-content h3) {
+  --heading-surface-ink:var(--ui-accent-ink)!important;
+ }
+ body .blog-listing :is(.blog-section-title h2,.blog-post-grid .blog-card-content h2) {
+  --heading-h2-local:20px!important;
+ }
+ @media(max-width:639px) {
+  body .blog-listing :is(.blog-section-title h2,.blog-post-grid .blog-card-content h2) {
+   --heading-h2-local:16px!important;
+  }
+ }
  @media(max-width:767px) {
   body .blog-listing .blog-hero-panel {height:350px!important;min-height:350px!important;}
   body .blog-listing .blog-hero-content {padding-block:20px;}

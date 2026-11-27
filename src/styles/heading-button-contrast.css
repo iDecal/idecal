@@ -4,11 +4,11 @@
  body :is(h2,h3,h4,h5,h6) a:hover {
   color:var(--heading-surface-ink,#082680)!important;-webkit-text-fill-color:currentColor!important;
  }
- body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a),
- body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a):hover {
+ body :is(.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a),
+ body :is(.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a):hover {
   color:var(--filled-action-ink,#fff)!important;-webkit-text-fill-color:var(--filled-action-ink,#fff)!important;
  }
- body :is(.blog-category-grid>a[aria-current='page'],.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a) :is(span,strong,svg) {
+ body :is(.projects-filters button[aria-pressed='true'],.btn-primary-solid,.region-trigger,.mobile-region-shortcut,.mega-cta>a) :is(span,strong,svg) {
   color:inherit!important;-webkit-text-fill-color:inherit!important;
  }
 }
