@@ -1,5 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
+import ProductImage from './ProductImage.astro';
+import { products } from '../data/catalogue';
 import ProductBrandLogo from './ProductBrandLogo.astro';
 import productBrands from '../data/product-brands.json';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
@@ -20,7 +22,14 @@ const applicationPhotos = [
   { src: '/images/cong-trinh/Thi công Decal lưới dán kính showroom GEELY tại Bình Dương.jpg', alt: 'Mặt tiền kính showroom GEELY tại Bình Dương' },
 ];
 const quote = getServiceCta('phim-cach-nhiet').href;
-const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encodeURIComponent(name)}#yeu-cau`);
+const catalogueBySlug = new Map(products.map(product => [product.slug, product]));
+const catalogueFilms = films.flatMap(film => {
+  const product = catalogueBySlug.get(film.productSlug);
+  if (!product) return [];
+  const image = product.images.find(src => src.startsWith('/images/')) ?? product.images[0];
+  const alt = product.imageMetadata?.find(item => item.src === image)?.alt ?? product.name;
+  return [{ ...film, image, alt, href: `/san-pham/${product.slug}` }];
+});
 ---
 <div class="thermal-film-landing" data-thermal-service>
   <section class="hero">
@@ -132,14 +141,14 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
         </div>
       </div>
       <div class="products" id="products" data-film-products="">
-        {films.map((film, index) => (
+        {catalogueFilms.map(film => (
           <article class="product" data-film-group={film.group}>
-            <div class="swatch" style={{ background: film.swatch }}>
-              <span>{film.label}</span>
-              <span>#{index + 1}</span>
-            </div>
+            <a class="film-product-photo group" href={film.href} aria-label={`Xem ${film.name}`}>
+              <ProductImage src={film.image} alt={film.alt} productSlug={film.productSlug} />
+              <span class="film-product-label">{film.label}</span>
+            </a>
             <div class="product-body">
-              <h3>{film.name}</h3>
+              <h3><a href={film.href}>{film.name}</a></h3>
               <div class="stats">
                 <div><small>VLT</small><b>{film.vlt}</b></div>
                 <div><small>UV</small><b>{film.uv}</b></div>
@@ -148,7 +157,7 @@ const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encode
               <p>{film.description}</p>
               <div class="product-foot">
                 <div class="price"><small>Đơn giá tham khảo</small>{film.price}</div>
-                <a class="text-button" href={quoteFor(film.name)}>Chọn mã →</a>
+                <a class="text-button" href={film.href}>Xem sản phẩm <span aria-hidden="true">→</span></a>
               </div>
             </div>
           </article>

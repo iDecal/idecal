@@ -35,10 +35,16 @@ with sync_playwright() as p:
         page.keyboard.press('Escape')
         expect(photo).to_be_focused()
         print(width,'px: one service, 8 film models, filtering, pricing, related articles, FAQ, gallery and responsive width verified')
+    cards = page.locator('[data-film-group]')
+    for card in cards.all():
+        photo = card.locator('.film-product-photo')
+        href = photo.get_attribute('href')
+        assert href.startswith('/san-pham/')
+        expect(card.locator('h3 a')).to_have_attribute('href', href)
+        expect(card.locator('.text-button')).to_have_attribute('href', href)
+        assert page.request.get(BASE + href).ok, href
     page.locator('.product .text-button').first.click()
-    page.wait_for_url('**/lien-he-idecal**')
-    expect(page.locator('#booking-service')).to_have_value('thi-cong-decal')
-    expect(page.locator('#booking-notes')).to_have_value('Quan tâm mã phim: Medium Black 18')
+    page.wait_for_url('**/san-pham/phim-cach-nhiet-mau-khoi-trung-tinh**')
     for alias in ('/phim-cach-nhiet/','/dich-vu/phim-cach-nhiet/'):
         page.goto(BASE+alias,wait_until='networkidle')
         expect(page.locator('link[rel=canonical]')).to_have_attribute('href','https://idecal.vn'+PATH)
@@ -52,5 +58,5 @@ with sync_playwright() as p:
     expect(fallback.locator('.faq details[open]')).to_have_count(1)
     assert fallback.evaluate('document.documentElement.scrollWidth<=innerWidth')
     assert not errors,errors
-    print('Quote preselection, legacy fallback canonical and no-script access verified; redirects checked separately in check-thermal-service.mjs.')
+    print('Product navigation, legacy fallback canonical and no-script access verified; redirects checked separately in check-thermal-service.mjs.')
     browser.close()

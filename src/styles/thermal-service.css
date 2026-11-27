@@ -396,40 +396,23 @@
   border-color: #b5dcea;
 }
 
-.thermal-film-landing .swatch {
-  height: 170px;
+.thermal-film-landing .film-product-photo {
+  display: block;
   position: relative;
-  padding: 14px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--paper);
 }
 
-.thermal-film-landing .swatch:before {
-  content: '';
+.thermal-film-landing .film-product-label {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg,rgba(255,255,255,.35),transparent 35%,rgba(255,255,255,.14));
-  pointer-events: none;
-}
-
-.thermal-film-landing .swatch:after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right,transparent 49.5%,rgba(255,255,255,.18) 50%,transparent 50.5%),linear-gradient(to bottom,transparent 49.5%,rgba(255,255,255,.18) 50%,transparent 50.5%);
-  pointer-events: none;
-}
-
-.thermal-film-landing .swatch span {
-  position: relative;
-  z-index: 1;
-  background: rgba(5,24,39,.48);
-  border: 1px solid rgba(255,255,255,.25);
-  border-radius: 7px;
-  padding: 5px 7px;
-  font-size: 10px;
+  inset: 10px auto auto 10px;
+  max-width: calc(100% - 20px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 12px;
 }
 
 .thermal-film-landing .product-body {
