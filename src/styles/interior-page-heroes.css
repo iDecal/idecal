@@ -1,7 +1,7 @@
 /* Keep the homepage outside the interior hero treatment. */
 @layer interior-page-heroes {
   main[data-interior-page] {
-    --page-hero-ink: #102e57;
+    --page-hero-ink: #10293f;
     --page-hero-muted: #405875;
     --page-hero-line: #d7e5f3;
   }
@@ -11,7 +11,7 @@
     .regional-hero, .district-hero, .hcm-hero, .q1-hero, .q2-intro, .q3-cover,
     .q4-hero, .q12-hero, .tb-hero, .contact-hero, .booking-hero, [data-page-hero]
   ) {
-    background: linear-gradient(112deg, #f8fbff 0%, #edf5ff 58%, #e5effd 100%) !important;
+    background: #f1f6f7 !important;
     border-bottom: 1px solid var(--page-hero-line) !important;
     --text-main: var(--page-hero-ink);
     --text-muted: var(--page-hero-muted);
@@ -31,10 +31,93 @@
     text-wrap: pretty;
   }
 
-  main[data-interior-page] [data-hero-media] img,
-  main[data-interior-page] :is(.compact-banner-image, .projects-hero-image) img {
-    border-radius: clamp(16px, 2vw, 28px) !important;
-    box-shadow: 0 12px 30px -20px #102e5766 !important;
+  main[data-interior-page] [data-feature-hero]:not([data-product-detail])
+    [data-hero-media]:not(.brand-detail-logo) img {
+    border-radius: 0 !important;
+    clip-path: ellipse(68% 78% at 68% 18%);
+  }
+
+  main[data-interior-page] .blog-hero .blog-kicker {
+    width: fit-content;
+    margin-block-end: 1.25rem;
+    padding-block-end: .65rem;
+    border: 0 !important;
+    border-bottom: 1px solid #a7c4ce !important;
+    border-radius: 0 !important;
+    padding-inline: 0 !important;
+    background: transparent !important;
+  }
+
+  main[data-interior-page] .blog-hero .blog-kicker::before {
+    content: none !important;
+  }
+
+  main[data-interior-page] .blog-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-block-start: 1.5rem;
+  }
+
+  main[data-interior-page] .blog-hero-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: .45em;
+    min-height: 48px;
+    padding: .75rem 1.1rem;
+    border: 1px solid #a7c4ce !important;
+    border-radius: 6px;
+    color: var(--page-hero-ink) !important;
+    font-weight: 700;
+  }
+
+  main[data-interior-page] .blog-hero-actions a:first-child {
+    border-color: var(--page-hero-ink) !important;
+    background: var(--page-hero-ink);
+    color: white !important;
+  }
+
+  main[data-interior-page] .blog-hero-actions a:hover {
+    border-color: #086d87 !important;
+    background: #086d87;
+    color: white !important;
+  }
+
+  @media (min-width: 1024px) {
+    main[data-interior-page] section[data-feature-hero]:has(> .container[data-hero-layout] > [data-hero-media] img) {
+      position: relative;
+      isolation: isolate;
+      display: grid !important;
+      align-items: center;
+      min-height: clamp(480px, 45vw, 780px);
+      padding-block: clamp(52px, 6vw, 108px) !important;
+    }
+
+    main[data-interior-page] .blog-hero > .container {
+      width: 88%;
+      grid-template-columns: minmax(0, 55%) minmax(0, 1fr) !important;
+    }
+
+    main[data-interior-page] section[data-feature-hero] > .container[data-hero-layout]
+      > [data-hero-media]:has(img) {
+      position: absolute !important;
+      inset: 0 0 auto auto !important;
+      width: 44% !important;
+      height: 83% !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    main[data-interior-page] section[data-feature-hero] > .container[data-hero-layout]
+      > [data-hero-media] :is(figcaption, [data-hero-caption]) {
+      inset: auto 1.5rem 0 auto !important;
+    }
+
+    main[data-interior-page] section[data-feature-hero]:has(> .container[data-hero-layout] > [data-hero-media] img) h1 {
+      font-size: clamp(2.65rem, 4.1vw, 5rem) !important;
+      line-height: 1.06 !important;
+      max-width: none !important;
+    }
   }
 
   main[data-interior-page] .search-page-heading,

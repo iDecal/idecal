@@ -8,7 +8,9 @@ const {posts,title,description,categorySlug}=Astro.props;
 const entries=sortBlogPosts(posts);
 ---
 <div class="blog-listing">
-  <section class="blog-hero" data-feature-hero><div class="container" data-hero-layout><div class="blog-hero-copy"><p class="blog-kicker">{categorySlug?<a href="/blog">Blog iDecal / Chuyên mục</a>:'Góc chia sẻ iDecal'}</p><h1>{title}</h1><p>{description}</p></div><figure data-hero-media><img src="/images/Banner/dich-vu-thiet-ke-decal.webp" alt="Trao đổi mẫu màu và thiết kế Decal" width="960" height="640" fetchpriority="high" /><figcaption>Kinh nghiệm chọn và sử dụng Decal</figcaption></figure></div></section>
+  <section class="blog-hero" data-feature-hero><div class="container" data-hero-layout><div class="blog-hero-copy"><p class="blog-kicker">{categorySlug?<a href="/blog">Blog iDecal / Chuyên mục</a>:'Góc chia sẻ iDecal'}</p><h1>{title}</h1><p>{description}</p>
+    <div class="blog-hero-actions"><a href="#blog-grid">Khám phá nội dung <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12 12 4M5 4h7v7" /></svg></a><a href="/lien-he-idecal/">Liên hệ iDecal</a></div>
+  </div><figure data-hero-media><img src="/images/Banner/dich-vu-thiet-ke-decal.webp" alt="Trao đổi mẫu màu và thiết kế Decal" width="960" height="640" fetchpriority="high" /><figcaption>Kinh nghiệm chọn và sử dụng Decal</figcaption></figure></div></section>
   <section class="container blog-list-section" aria-label="Danh sách bài viết">
     <nav class="blog-category-nav" aria-label="Chuyên mục Blog">
       <div class="blog-category-grid"><a href="/blog" aria-current={!categorySlug?'page':undefined}>Tất cả bài viết</a>{blogCategories.map(category=><a href={`/blog/chuyen-muc/${category.slug}`} aria-current={categorySlug===category.slug?'page':undefined}>{category.name}</a>)}</div>
