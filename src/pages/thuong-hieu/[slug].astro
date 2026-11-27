@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProductCatalog from '../../components/ProductCatalog.astro';
+import ProductImage from '../../components/ProductImage.astro';
 import ProductBrandLogo from '../../components/ProductBrandLogo.astro';
 import brands from '../../data/product-brands.json';
 import { products } from '../../data/catalogue';
@@ -13,9 +14,12 @@ interface Props { brand: (typeof brands)[number]; }
 const { brand } = Astro.props;
 const groups = productLandings.filter(group => brand.groups.includes(group.slug));
 const items = products.filter(product => product.brand.trim().toLowerCase() === brand.name.toLowerCase() && groups.some(group => group.select(product)));
+const featuredProduct = items.find(item => item.images.length);
+const fallbackPhoto = groups[0]?.image ?? '/images/van-phong/office-glass-01.webp';
+const photoCaption = featuredProduct?.name ?? `Ảnh minh họa ${groups[0]?.name.toLocaleLowerCase('vi-VN') ?? 'vật liệu'}`;
 ---
 <Layout title={`${brand.name} – Sản phẩm & tư vấn vật liệu | iDecal`} description={`Tìm hiểu thương hiệu ${brand.name} cho ${groups.map(group => group.name.toLocaleLowerCase('vi-VN')).join(', ')}. Xem mẫu có trong catalogue hoặc liên hệ iDecal để trao đổi mã vật liệu.`}>
-  <section class="container py-12 md:py-16" data-feature-hero data-hero-layout={brand.logo ? true : undefined}>
+  <section class="container py-12 md:py-16" data-feature-hero data-hero-layout>
     <div>
     <a href="/san-pham" class="mb-6 inline-block text-sm text-primary hover:underline">Sản phẩm iDecal →</a>
     <h1>{brand.name}</h1>
@@ -26,7 +30,7 @@ const items = products.filter(product => product.brand.trim().toLowerCase() === 
     {items.length === 0 && <p>Liên hệ iDecal để trao đổi mã vật liệu, quy cách và mẫu {brand.name} phù hợp với nhu cầu của bạn.</p>}
     <a href="/lien-he-idecal#yeu-cau" class="btn-primary-solid">Tư vấn sản phẩm {brand.name}</a>
     </div>
-    {brand.logo&&<div class="brand-detail-logo" data-hero-media><ProductBrandLogo name={brand.name} logo={brand.logo} /><span data-hero-caption>{brand.name}</span></div>}
+    {brand.logo ? <div class="brand-detail-logo" data-hero-media><ProductBrandLogo name={brand.name} logo={brand.logo} /><span data-hero-caption>{brand.name}</span></div> : <figure data-hero-media><ProductImage src={featuredProduct?.images[0] ?? fallbackPhoto} alt={photoCaption} productSlug={featuredProduct?.slug} eager /><figcaption>{photoCaption}</figcaption></figure>}
   </section>
   {items.length > 0 && <ProductCatalog items={items} heading={`Mẫu ${brand.name} trong catalogue`} />}
 </Layout>
