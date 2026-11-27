@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProductCatalog from '../../components/ProductCatalog.astro';
 import ProductImage from '../../components/ProductImage.astro';
 import { products, productsInCategory } from '../../data/catalogue';
 import { landingProducts } from '../../data/site-offerings';
@@ -22,7 +23,7 @@ const totalGroups = groups.length;
         <h1 id="materials-title">Decal dán kính, phim cách nhiệt & film nội thất</h1>
         <p>Chọn vật liệu cho văn phòng, showroom, cửa hàng và nhà ở. Mỗi nhóm có mẫu, thông tin vật liệu và giá tham khảo.</p>
         <div class="materials-actions">
-          <a href="#danh-muc" class="btn-primary-solid">Khám phá nhóm sản phẩm <span aria-hidden="true">↓</span></a>
+          <a href="#mau-san-pham" class="btn-primary-solid">Xem và lọc sản phẩm <span aria-hidden="true">↓</span></a>
           <a href="https://zalo.me/0866077040" class="materials-help">Nhận tư vấn qua Zalo</a>
         </div>
         <ul class="materials-stats" aria-label="Thông tin catalogue">
@@ -36,6 +37,8 @@ const totalGroups = groups.length;
       </figure>
     </div>
   </section>
+
+  <ProductCatalog items={products} heading="Tất cả sản phẩm" showGroups />
 
   <section id="danh-muc" class="container materials-categories" aria-labelledby="materials-categories-title">
     <h2 id="materials-categories-title">Chọn nhóm sản phẩm của bạn</h2>

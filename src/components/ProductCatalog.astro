@@ -1,19 +1,82 @@
 ---
 import ProductCard from './ProductCard.astro';
 import { type Product, type ProductCategory } from '../data/catalogue';
-interface Props { items: Product[]; category?: ProductCategory; heading?: string; }
-const { items, category, heading } = Astro.props;
+import { catalogueGroups } from '../data/catalogue-groups';
+import { normalizeSearch } from '../lib/site-search';
+
+interface Props { items: Product[]; category?: ProductCategory; heading?: string; showGroups?: boolean; }
+const { items, category, heading, showGroups = false } = Astro.props;
+const brands = [...new Map(items.flatMap(item => {
+  const brand = item.brand?.trim();
+  return brand ? [[normalizeSearch(brand), brand] as const] : [];
+})).entries()].sort((a, b) => a[1].localeCompare(b[1], 'vi'));
+const hasPrices = items.some(item => item.price !== null);
+const groups = showGroups ? catalogueGroups.map(group => ({
+  ...group,
+  members: new Set(items.filter(item => 'select' in group ? group.select(item) : item.category === group.slug).map(item => item.slug)),
+})).filter(group => group.members.size) : [];
 ---
-<section id="mau-san-pham" class="scroll-mt-24 py-14 md:py-20" data-catalog>
+<section id="mau-san-pham" class="catalogue-shop scroll-mt-24 py-14 md:py-20" data-catalog>
   <div class="container min-w-0">
-    <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
-      <div><p data-heading-label class="!mb-3 text-xs font-medium uppercase tracking-widest text-primary">Trưng bày mẫu</p><h2 class="brand-heading !mb-0">{heading ?? (category ? `Mẫu ${category.name.toLocaleLowerCase('vi-VN')}` : 'Khám phá catalogue sản phẩm')}</h2></div>
-      <a href="/san-pham" class="text-sm font-medium text-primary hover:underline">Xem toàn bộ sản phẩm →</a>
+    <header class="shop-heading">
+      <h2 class="brand-heading">{heading ?? (category ? `Mẫu ${category.name.toLocaleLowerCase('vi-VN')}` : 'Khám phá catalogue sản phẩm')}</h2>
+      {!showGroups && <a href="/san-pham/#mau-san-pham">Xem toàn bộ sản phẩm →</a>}
+    </header>
+    <div class="shop-layout">
+      {items.length > 0 && <form class="shop-filters" data-catalog-filters hidden aria-label="Lọc sản phẩm">
+        <div class="shop-filter-heading"><strong>Bộ lọc</strong><button type="reset">Đặt lại</button></div>
+        <label>Tìm sản phẩm <input name="query" type="search" placeholder="Tên hoặc mã mẫu" /></label>
+        {groups.length > 0 && <label>Danh mục <select name="group"><option value="">Tất cả danh mục</option>{groups.map(group => <option value={group.slug}>{group.name}</option>)}</select></label>}
+        {brands.length > 0 && <label>Thương hiệu <select name="brand"><option value="">Tất cả thương hiệu</option>{brands.map(([value, name]) => <option value={value}>{name}</option>)}</select></label>}
+        {hasPrices && <fieldset><legend>Khoảng giá (₫)</legend><div class="shop-prices">
+          <label>Từ <input type="number" name="min" min="0" inputmode="numeric" /></label>
+          <label>Đến <input type="number" name="max" min="0" inputmode="numeric" /></label>
+        </div></fieldset>}
+      </form>}
+      <div class="shop-results">
+        <div class="shop-toolbar">
+          <p data-catalog-count aria-live="polite">{items.length} sản phẩm</p>
+          {items.length > 1 && <label data-catalog-sort hidden>Sắp xếp <select>
+            <option value="">Mặc định</option><option value="name">Tên A–Z</option>
+            {hasPrices && <><option value="low">Giá thấp đến cao</option><option value="high">Giá cao đến thấp</option></>}
+          </select></label>}
+        </div>
+        {hasPrices && <p class="shop-price-note">Giá tham khảo theo quy cách từng sản phẩm. Giá thi công được báo riêng.</p>}
+        <div data-catalog-grid class="shop-grid">
+          {items.map(product => <div class="shop-card" data-catalog-item data-shop-brand={normalizeSearch(product.brand ?? '')} data-shop-groups={groups.filter(group => group.members.has(product.slug)).map(group => group.slug).join(' ')}><ProductCard product={product} /></div>)}
+        </div>
+        {items.length > 0 ? <p data-catalog-empty hidden>Không tìm thấy sản phẩm phù hợp. Thử đổi từ khóa hoặc đặt lại bộ lọc.</p> : <p>Danh mục đang được cập nhật.</p>}
+        <div class="mt-8 text-center"><button type="button" data-catalog-more hidden class="min-h-12 rounded border border-brand-navy px-7 text-sm font-medium text-brand-navy hover:bg-surface">Xem thêm mẫu</button></div>
+      </div>
     </div>
-    <p class="mb-6 text-xs text-text-muted">Giá trong catalogue là giá tham khảo. Liên hệ để xác nhận đơn vị tính, quy cách, vật liệu và phần thi công.</p>
-    <div class="grid grid-cols-2 items-stretch gap-4 md:grid-cols-3 lg:grid-cols-4 md:gap-5" data-catalog-grid>{items.map(product => <ProductCard product={product} />)}</div>
-    <div class="mt-8 text-center"><button type="button" data-catalog-more hidden class="min-h-12 rounded border border-brand-navy px-7 text-sm font-medium text-brand-navy hover:bg-surface">Xem thêm mẫu</button></div>
   </div>
 </section>
-<style>[data-catalog] :global([hidden]) { display: none !important; }</style>
+<style>
+  [data-catalog] :global([hidden]) { display: none !important; }
+  .shop-heading,.shop-toolbar,.shop-filter-heading { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .shop-heading { margin-bottom:24px; }
+  .shop-heading h2 { margin:0; }
+  .shop-layout { display:grid; gap:26px; }
+  .shop-results { min-width:0; }
+  .shop-filters { display:grid; align-content:start; gap:16px; padding:18px; border:1px solid #dce7f4; border-radius:12px; background:#f7faff; }
+  .shop-filter-heading { border-bottom:1px solid #dce7f4; padding-bottom:10px; }
+  .shop-filter-heading button { min-height:42px; color:#006edc; font-size:14px; }
+  .shop-filters label,.shop-toolbar label { display:grid; gap:6px; font-size:14px; font-weight:550; }
+  .shop-filters fieldset,.shop-filters legend { margin:0; padding:0; border:0; min-width:0; font-size:14px; }
+  .shop-prices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:6px; }
+  .shop-filters :is(input,select),.shop-toolbar select { min-height:44px; width:100%; min-width:0; padding:8px 10px; border:1px solid #cbd9eb; border-radius:6px; background:#fff; color:#102e57; font-size:16px; }
+  .shop-toolbar { margin-bottom:12px; }
+  .shop-toolbar p { margin:0; color:#102e57; font-weight:650; }
+  .shop-toolbar label { display:flex; align-items:center; }
+  .shop-toolbar select { width:auto; }
+  .shop-price-note { color:#52677c; font-size:14px; }
+  .shop-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .shop-card { min-width:0; }
+  @media(min-width:768px) {
+    .shop-layout:has(.shop-filters:not([hidden])) { grid-template-columns:minmax(200px,240px) minmax(0,1fr); align-items:start; }
+    .shop-grid { gap:18px; }
+  }
+  @media(min-width:1024px) { .shop-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media(min-width:1280px) { .shop-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } }
+</style>
 <script>import '../scripts/catalogue';</script>

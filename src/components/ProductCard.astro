@@ -5,7 +5,7 @@ interface Props { product: Product; heading?: 'h2' | 'h3'; }
 const { product, heading = 'h3' } = Astro.props;
 const Heading = heading;
 ---
-<article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
+<article class="catalogue-card group flex h-full flex-col overflow-hidden rounded-brand border border-border bg-white transition-shadow hover:shadow-brand" data-product-id={product.slug} data-product-name={product.name} data-category={product.category} data-search={`${product.name} ${product.code} ${product.brand ?? ''} ${product.subcategory} ${product.uses.join(' ')}`} data-price={product.price ?? ''}>
   <a href={`/san-pham/${product.slug}`} class="relative block aspect-square overflow-hidden" aria-label={`Xem ${product.name}`}>
     <ProductImage src={product.images[0]} alt={product.name} productSlug={product.slug} />
   </a>
