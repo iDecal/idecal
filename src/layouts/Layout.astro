@@ -19,12 +19,13 @@ interface Props {
 	description?: string;
   type?: 'website' | 'article';
   noindex?: boolean;
+  hideHeader?: boolean;
   publishedTime?: string;
   modifiedTime?: string;
   structuredData?: Record<string,unknown>[];
 }
 
-const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, structuredData, description = "Dịch vụ decal dán kính cách nhiệt & trang trí chuyên nghiệp" } = Astro.props;
+const { title, canonicalURL, image, type, noindex, hideHeader, publishedTime, modifiedTime, structuredData, description = "Dịch vụ decal dán kính cách nhiệt & trang trí chuyên nghiệp" } = Astro.props;
 ---
 
 <!doctype html>
@@ -42,7 +43,7 @@ const { title, canonicalURL, image, type, noindex, publishedTime, modifiedTime, 
 		<SEO canonicalURL={canonicalURL} title={title} description={description} image={image} type={type} noindex={noindex} publishedTime={publishedTime} modifiedTime={modifiedTime} structuredData={structuredData} />
 	</head>
 	<body class:list={["bg-background font-body text-secondary", {"is-blog": Astro.url.pathname.startsWith("/blog")} ]}>
-		<Header />
+		{!hideHeader && <Header />}
 		
 		<main data-interior-page={Astro.url.pathname !== "/" || undefined} class:list={['page-content', { 'site-section-headings': !Astro.url.pathname.startsWith('/blog') && !noindex }]}>
 			<slot /> 
