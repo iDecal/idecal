@@ -26,7 +26,7 @@ const isThermal = ['phim-cach-nhiet-nha-kinh','phim-cach-nhiet'].includes(Astro.
 const isAdvertising = Astro.params.slug==='decal-quang-cao';
 const bannerImage = category.image.startsWith('/') ? category.image : '/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg';
 ---
-<Layout hideHeader={isThermal} title={isThermal ? thermalSeoTitle : isOffice ? officeGlassCopy.seoTitle : `${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={isThermal ? thermalDescription : isOffice ? officeGlassCopy.description : landing?.description ?? category.description} canonicalURL={isThermal?thermalCanonical:undefined} image={isThermal?thermalCategory.image:isAdvertising?advertisingLanding.image:undefined} structuredData={isThermal?thermalStructuredData:isAdvertising?advertisingStructuredData:undefined}>
+<Layout hideHeaderPhone={isThermal} title={isThermal ? thermalSeoTitle : isOffice ? officeGlassCopy.seoTitle : `${landing?.name ?? category.name} | Mẫu sản phẩm iDecal`} description={isThermal ? thermalDescription : isOffice ? officeGlassCopy.description : landing?.description ?? category.description} canonicalURL={isThermal?thermalCanonical:undefined} image={isThermal?thermalCategory.image:isAdvertising?advertisingLanding.image:undefined} structuredData={isThermal?thermalStructuredData:isAdvertising?advertisingStructuredData:undefined}>
 {isAdvertising ? <AdvertisingLanding/> : isThermal ? <ThermalServiceLanding /> : isOffice ? <OfficeGlassLanding /> : landing ? <ProductLanding landing={landing} /> : <>
   <PageBanner title={category.headline} eyebrow={category.name} image={bannerImage} imageAlt={category.image.startsWith('/') ? category.name : 'Cắt chữ Decal theo thiết kế'}>
     <p slot="description">{category.description}</p>

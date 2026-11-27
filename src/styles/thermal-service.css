@@ -1,5 +1,5 @@
 .thermal-service-page{--thermal-line:#dce7f1;color:#1b4f7a;background:#fff}
-.thermal-service-page [id]{scroll-margin-top:16px}
+.thermal-service-page [id]{scroll-margin-top:110px}
 .thermal-service-page :is(article,div,section,header,figure){min-width:0}
 .thermal-service-page :is(a,button,summary):focus-visible{outline:2px solid #0874bb;outline-offset:4px}
 .thermal-secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:13px 20px;min-height:48px;border:1px solid #b6cee9;border-radius:8px;background:#fff;color:#1b4f7a;font-size:14px;font-weight:500}

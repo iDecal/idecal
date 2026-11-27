@@ -1,5 +1,7 @@
 ---
 import { aboutHref, contactHref, navLinks } from '../data/header-navigation';
+interface Props { hidePhone?: boolean; }
+const { hidePhone = false } = Astro.props;
 const currentPath = Astro.url.pathname.replace(/\/$/, '');
 const isCurrent = (href: string) => !/[?#]/.test(href) && currentPath === href.replace(/\/$/, '');
 const current = (href: string) => isCurrent(href) ? 'page' : undefined;
@@ -8,7 +10,7 @@ const current = (href: string) => isCurrent(href) ? 'page' : undefined;
 <header class="site-header sticky top-0 w-full z-[100] bg-white border-b border-border">
   <div class="header-topbar">
     <div class="container header-topbar-inner">
-      <div><a href="tel:0866077040">Hotline: 0866-077-040</a><a href="https://zalo.me/0866077040">Zalo</a></div>
+      <div>{!hidePhone && <a href="tel:0866077040">Hotline: 0866-077-040</a>}<a href="https://zalo.me/0866077040">Zalo</a></div>
       <div><a href={aboutHref} aria-current={current(aboutHref)}>Giới thiệu</a><a href={contactHref} aria-current={current(contactHref)}>Liên hệ</a></div>
     </div>
   </div>
