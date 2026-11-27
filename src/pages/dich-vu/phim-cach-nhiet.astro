@@ -3,4 +3,4 @@ import Layout from '../../layouts/Layout.astro';
 import ThermalServiceLanding from '../../components/ThermalServiceLanding.astro';
 import {thermalCanonical,thermalSeoTitle,thermalDescription,thermalCategory,thermalStructuredData} from '../../data/thermal-service';
 ---
-<Layout hideHeaderPhone title={thermalSeoTitle} description={thermalDescription} canonicalURL={thermalCanonical} image={thermalCategory.image} structuredData={thermalStructuredData}><ThermalServiceLanding /></Layout>
+<Layout title={thermalSeoTitle} description={thermalDescription} canonicalURL={thermalCanonical} image={thermalCategory.image} structuredData={thermalStructuredData}><ThermalServiceLanding /></Layout>

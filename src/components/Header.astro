@@ -1,19 +1,11 @@
 ---
-import { aboutHref, contactHref, navLinks } from '../data/header-navigation';
-interface Props { hidePhone?: boolean; }
-const { hidePhone = false } = Astro.props;
+import { contactHref, navLinks } from '../data/header-navigation';
 const currentPath = Astro.url.pathname.replace(/\/$/, '');
 const isCurrent = (href: string) => !/[?#]/.test(href) && currentPath === href.replace(/\/$/, '');
 const current = (href: string) => isCurrent(href) ? 'page' : undefined;
 ---
 
 <header class="site-header sticky top-0 w-full z-[100] bg-white border-b border-border">
-  <div class="header-topbar">
-    <div class="container header-topbar-inner">
-      <div>{!hidePhone && <a href="tel:0866077040">Hotline: 0866-077-040</a>}<a href="https://zalo.me/0866077040">Zalo</a></div>
-      <div><a href={aboutHref} aria-current={current(aboutHref)}>Giới thiệu</a><a href={contactHref} aria-current={current(contactHref)}>Liên hệ</a></div>
-    </div>
-  </div>
   <nav aria-label="Điều hướng chính">
   <div class="container mx-auto px-4 relative">
     <div class="header-row flex justify-between items-center gap-4">
@@ -193,23 +185,14 @@ const current = (href: string) => isCurrent(href) ? 'page' : undefined;
 <style>
   .header-brand { gap:10px; }
   .header-brand-name { color:#031245; font-size:23px; font-weight:600; letter-spacing:-.03em; }
-  .header-topbar { background:#f1f6fb; border-bottom:1px solid #dce7f1; }
-  .header-topbar-inner, .header-topbar-inner > div { display:flex; align-items:center; gap:12px; }
-  .header-topbar-inner { justify-content:space-between; min-height:32px; }
-  .header-topbar a { display:inline-flex; align-items:center; min-height:32px; color:#102e57; font-size:13px; white-space:nowrap; }
-  .header-topbar a:hover { color:#0056b3; }
   .header-row { height:64px; }
   .header-main-links { gap:clamp(12px, 2vw, 30px); }
   .mega-root { display:flex; align-items:center; height:64px; }
   .mega-root:not(.mega-wide) { position:relative; }
-  .header-nav-link { display:flex; align-items:center; min-height:48px; font-weight:650; white-space:nowrap; }
+  .header-nav-link { display:flex; align-items:center; min-height:48px; font-weight:500; white-space:nowrap; }
   .header-main-links > div > :is(a,button) { font-size:clamp(15px, 1.25vw, 18px); }
   @media(max-width:1279px) and (min-width:1024px) { .header-brand-name { font-size:20px; } .header-brand { gap:8px; } }
   @media(max-width:1023px) { .header-row { height:56px; gap:10px; } }
-  @media(max-width:399px) {
-    .header-topbar-inner, .header-topbar-inner > div { gap:7px; }
-    .header-topbar a { font-size:11px; }
-  }
   @media(max-width:639px) { .header-brand-name { display:none; } .header-brand img { height:40px; } }
 
   .mobile-menu-footer {max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;}
@@ -218,7 +201,7 @@ const current = (href: string) => isCurrent(href) ? 'page' : undefined;
   .mobile-zalo-contact svg {flex:0 0 30px;width:30px;height:30px;}
   .mobile-call-contact {display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:8px;background:#edf4fd;color:#125b91;font-size:13px;font-weight:500;}
   .mobile-zalo-contact:focus-visible,.mobile-call-contact:focus-visible {outline:2px solid #168ac0;outline-offset:3px;}
-  .desktop-mega { position:absolute; top:100%; inset-inline:0; max-height:calc(100dvh - 98px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #e3ebf4; box-shadow:0 16px 30px #102e5714; }
+  .desktop-mega { position:absolute; top:100%; inset-inline:0; max-height:calc(100dvh - 65px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #e3ebf4; box-shadow:0 16px 30px #102e5714; }
   .desktop-mega[hidden] { display:none!important; }
   .mega-columns { display:grid; grid-template-columns:repeat(var(--menu-columns),minmax(0,1fr)); gap:clamp(16px,2.4vw,36px); padding:24px; }
   .mega-root:not(.mega-wide) .desktop-mega { width:290px; inset-inline:auto 0; border-radius:0 0 12px 12px; }
@@ -233,13 +216,13 @@ const current = (href: string) => isCurrent(href) ? 'page' : undefined;
   .mega-trigger[aria-expanded="true"] svg { transform:rotate(180deg); }
   .mobile-offerings { display:grid; gap:10px; }
   .mobile-offering-group { border:1px solid #e1eaf4; border-radius:12px; background:#f7faff; }
-  .mobile-offering-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; min-height:48px; padding:10px 14px; border-radius:12px; cursor:pointer; list-style:none; color:#102e57; font-size:16px; font-weight:650; }
+  .mobile-offering-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; min-height:48px; padding:10px 14px; border-radius:12px; cursor:pointer; list-style:none; color:#102e57; font-size:16px; font-weight:500; }
   .mobile-offering-heading::-webkit-details-marker { display:none; }
   .mobile-offering-heading::after { content:""; width:8px; height:8px; flex-shrink:0; margin-right:3px; border:solid currentColor; border-width:0 2px 2px 0; transform:rotate(45deg); }
   .mobile-offering-group[open] > .mobile-offering-heading::after { transform:rotate(225deg); }
   .mobile-offering-heading:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
   .mobile-offering-items { margin:0 14px; padding:10px 0 12px; }
-  .mobile-overview-link { display:inline-flex; align-items:center; min-height:48px; font-weight:650; }
+  .mobile-overview-link { display:inline-flex; align-items:center; min-height:48px; font-weight:500; }
   .mobile-offering-items + .mobile-offering-items { border-top:1px solid #e1eaf4; }
 
   #mobile-menu[hidden] { display: none !important; }
