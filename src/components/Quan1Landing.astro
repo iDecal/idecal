@@ -16,7 +16,7 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
 ---
 <Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
 <article class="q1-page">
-  <header class="q1-hero"><div class="container q1-hero-layout"><div class="q1-original-hero" set:html={data.heroHtml}></div><aside class="q1-consult"><p>Tư vấn</p><a href="tel:0866077040">0866.077.040</a><span>Gửi ảnh kính và nhu cầu của bạn</span><a class="btn-primary-solid" href={booking}>Nhận tư vấn →</a></aside></div></header>
+  <header class="q1-hero" data-feature-hero><div class="container q1-hero-layout" data-hero-layout><div><div class="q1-original-hero" set:html={data.heroHtml}></div><aside class="q1-consult"><p>Tư vấn</p><a href="tel:0866077040">0866.077.040</a><span>Gửi ảnh kính và nhu cầu của bạn</span><a class="btn-primary-solid" href={booking}>Nhận tư vấn →</a></aside></div><figure data-hero-media><img src={data.images[0].src} alt={data.images[0].alt} width={data.images[0].width} height={data.images[0].height} fetchpriority="high" /><figcaption>Thi công Decal tại khu vực Quận 1</figcaption></figure></div></header>
   <section class="container q1-about" set:html={data.aboutHtml}></section>
   <section class="container q1-price-layout"><div class="q1-pricing" set:html={data.pricingHtml}></div><aside class="q1-offers" set:html={data.offersHtml}></aside></section>
   <span id={data.galleryAlias} class="q1-anchor" aria-hidden="true"></span>

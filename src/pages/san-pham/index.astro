@@ -17,8 +17,8 @@ const totalGroups = groups.length;
   title="Sản phẩm decal dán kính, phim cách nhiệt & film nội thất | iDecal"
   description={`Khám phá ${totalGroups} nhóm sản phẩm iDecal: Decal mờ, Decal PVC, phim cách nhiệt, film nội thất và các vật liệu trang trí, bảo vệ.`}
 >
-  <section class="materials-intro" aria-labelledby="materials-title">
-    <div class="container materials-layout">
+  <section class="materials-intro" aria-labelledby="materials-title" data-feature-hero>
+    <div class="container materials-layout" data-hero-layout>
       <div class="materials-copy">
         <p data-heading-label>Sản phẩm iDecal</p>
         <h1 id="materials-title">Decal dán kính, phim cách nhiệt & film nội thất</h1>
@@ -32,14 +32,10 @@ const totalGroups = groups.length;
           <li><strong>{totalGroups}</strong> nhóm sản phẩm</li>
         </ul>
       </div>
-      <div class="materials-photos">
-        <div class="materials-photo">
-          <ProductImage src="/images/van-phong/office-glass-01.webp" alt="Vách kính văn phòng dán Decal mờ" eager />
-        </div>
-        <div class="materials-photo materials-photo-detail">
-          <ProductImage src="/images/film-noi-that/dan-film-noi-that-mat-ban.jpg" alt="Bề mặt bàn hoàn thiện bằng film dán nội thất" />
-        </div>
-      </div>
+      <figure class="materials-photos" data-hero-media>
+        <ProductImage src="/images/van-phong/office-glass-01.webp" alt="Vách kính văn phòng dán Decal mờ" eager />
+        <figcaption>Decal mờ trên vách kính văn phòng</figcaption>
+      </figure>
     </div>
   </section>
 

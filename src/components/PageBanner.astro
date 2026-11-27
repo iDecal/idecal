@@ -9,11 +9,11 @@ interface Props {
 }
 const { title, eyebrow, image, imageAlt, serviceHero=false } = Astro.props;
 ---
-<section class="compact-page-banner" data-service-hero={serviceHero||undefined}>
+<section class="compact-page-banner" data-feature-hero data-service-hero={serviceHero||undefined}>
   <div class="container">
-    <div class="compact-banner-grid" data-hero-layout={serviceHero||undefined}>
-      <div class="compact-banner-copy" data-hero-copy={serviceHero||undefined}><p class="compact-banner-eyebrow">{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="compact-banner-description"><slot name="description" /></div><div class="compact-banner-actions" data-hero-actions={serviceHero||undefined}><slot name="actions" /></div>{Astro.slots.has('meta') && <div class="compact-banner-meta" data-hero-benefits={serviceHero||undefined}><slot name="meta" /></div>}</div>
-      <figure class="compact-banner-image" data-hero-media={serviceHero||undefined}><ProductImage src={image} alt={imageAlt} eager /><slot name="image-badge" /></figure>
+    <div class="compact-banner-grid" data-hero-layout>
+      <div class="compact-banner-copy" data-hero-copy><p class="compact-banner-eyebrow">{eyebrow}</p><h1 class="brand-heading">{title}</h1><div class="compact-banner-description"><slot name="description" /></div><div class="compact-banner-actions" data-hero-actions={serviceHero||undefined}><slot name="actions" /></div>{Astro.slots.has('meta') && <div class="compact-banner-meta" data-hero-benefits={serviceHero||undefined}><slot name="meta" /></div>}</div>
+      <figure class="compact-banner-image" data-hero-media><ProductImage src={image} alt={imageAlt} eager />{Astro.slots.has('image-badge') ? <slot name="image-badge" /> : <figcaption>{imageAlt}</figcaption>}</figure>
     </div>
   </div>
 </section>

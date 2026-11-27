@@ -13,8 +13,8 @@ const services = serviceOfferings.map(service => ({
 }));
 ---
 <Layout title="Dịch vụ thiết kế, in ấn & thi công Decal | iDecal" description="Khám phá dịch vụ thiết kế, in Decal, cắt Decal và thi công Decal tại iDecal.">
-  <section class="services-intro" aria-labelledby="services-title">
-    <div class="container services-intro-grid">
+  <section class="services-intro" aria-labelledby="services-title" data-feature-hero>
+    <div class="container services-intro-grid" data-hero-layout>
       <div>
         <p data-heading-label>Dịch vụ iDecal</p>
         <h1 id="services-title">Dịch vụ thiết kế, in ấn & thi công Decal</h1>
@@ -24,8 +24,8 @@ const services = serviceOfferings.map(service => ({
           <a href="#bang-gia-dich-vu" class="services-heading-link">Xem bảng giá</a>
         </div>
       </div>
-      <figure class="services-intro-image">
-        <img src="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" alt="Gia công cắt chữ và logo Decal" width="1100" height="900" fetchpriority="high" />
+      <figure class="services-intro-image" data-hero-media>
+        <img src="/images/Banner/decal-cat-chu-trang-tri-quang-cao.jpg" alt="Gia công cắt chữ và logo Decal" width="1100" height="900" fetchpriority="high" /><figcaption>Gia công Decal theo thiết kế</figcaption>
       </figure>
     </div>
   </section>

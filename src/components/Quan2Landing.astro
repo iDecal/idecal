@@ -14,7 +14,10 @@ const schema=[{'@type':'Service',name:data.title,url:data.originalUrl,serviceTyp
 ---
 <Layout title={data.title} description={data.description} image={data.images[0].src} canonicalURL={data.originalUrl} structuredData={schema}>
 <article class="q2-page">
-  <header class="q2-intro"><div class="container" set:html={data.heroHtml}></div></header>
+  <header class="q2-intro" data-feature-hero><div class="container feature-imported-hero" set:html={data.heroHtml
+    .replace('id="gspb_row-id-gsbp-6554728"','id="gspb_row-id-gsbp-6554728" data-hero-layout')
+    .replace('id="gspb_col-id-gsbp-b82c3e6"','id="gspb_col-id-gsbp-b82c3e6" data-hero-media')
+    .replace(/(<img\b[^>]*>)(<\/figure>)?/, '$1$2<span data-hero-caption>Thi công Decal tại khu vực Quận 2</span>')}></div></header>
   <section class="container q2-needs" set:html={data.needsHtml}></section>
   <section class="q2-benefits"><div class="container" set:html={data.benefitsHtml}></div></section>
   <p class="container local-context-note">{district.localContext}</p>

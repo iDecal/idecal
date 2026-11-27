@@ -12,7 +12,7 @@ const sections=[{id:'mau-film-noi-that',label:'Chọn mẫu film'},{id:'loi-ich-
 const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
 ---
 <div class="interior-film-page" data-interior-film>
-  <section class="interior-film-hero" data-service-hero>
+  <section class="interior-film-hero" data-feature-hero data-service-hero>
     <div class="container interior-film-hero-grid" data-hero-layout>
       <div class="interior-film-hero-copy" data-hero-copy>
         <nav class="interior-film-breadcrumb" aria-label="Đường dẫn trang"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><a href="/dich-vu/">Dịch vụ</a><span aria-hidden="true">/</span><span aria-current="page">Film nội thất</span></nav>
@@ -22,7 +22,7 @@ const quote='/lien-he-idecal?dich-vu=thi-cong-decal#yeu-cau';
         <div class="interior-film-actions" data-hero-actions><a href="#mau-film-noi-that" class="btn-primary-solid">Khám phá mẫu film <span aria-hidden="true">↓</span></a><a href={quote} class="interior-film-button-secondary">Tư vấn & báo giá <span aria-hidden="true">→</span></a></div>
         <div class="interior-film-points" data-hero-benefits><div set:html={source.hero.paragraphs.slice(1).map(block=>block.html).join('')} /><BannerBenefits benefits={source.hero.points.map(title=>({title}))} /></div>
       </div>
-      <figure class="interior-film-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.images[0]} eager /><figcaption>Film dán nội thất<span aria-hidden="true">iDecal</span></figcaption></figure>
+      <figure class="interior-film-hero-photo" data-hero-media><InteriorFilmImage image={source.hero.images[0]} eager /><figcaption>Film dán nội thất</figcaption></figure>
     </div>
   </section>
   <div class="interior-film-nav-wrap"><nav class="container interior-film-jump" aria-label="Nội dung dịch vụ film nội thất" data-film-navigation>{sections.map((section,index)=><a href={'#'+section.id} aria-current={index===0?'location':undefined}>{section.label}</a>)}<a data-cta-text href="/film-dan-noi-that/" class="interior-film-nav-quote">Xem vật liệu film <span aria-hidden="true">→</span></a></nav></div>

@@ -5,7 +5,6 @@ import ElevatorServiceCard from './ElevatorServiceCard.astro';
 import ProductBrands from './ProductBrands.astro';
 import RelatedGuides from './RelatedGuides.astro';
 import PageBanner from './PageBanner.astro';
-import ProductGroupIcon from './ProductGroupIcon.astro';
 import BannerBenefits from './BannerBenefits.astro';
 import ProductCatalog from './ProductCatalog.astro';
 import PVCColorChart from './PVCColorChart.astro';
@@ -19,7 +18,7 @@ const services = serviceOfferings.filter(service => service.slug === landing.ser
 ---
 <div class="offering-landing product-group-landing">
   <PageBanner title={landing.headline} eyebrow={landing.name} image={landing.image} imageAlt={landing.name}>
-    <a slot="image-badge" class="product-landing-image-badge" href="#mau-san-pham" aria-label={`Xem mẫu ${landing.name.toLocaleLowerCase('vi-VN')}`}><ProductGroupIcon slug={landing.slug} /><span>{landing.name}</span></a>
+    <a slot="image-badge" class="product-landing-image-badge" data-hero-caption href="#mau-san-pham" aria-label={`Xem mẫu ${landing.name.toLocaleLowerCase('vi-VN')}`}><span>{landing.name}</span></a>
     <p slot="description">{landing.description}</p>
     <Fragment slot="actions"><a href="#mau-san-pham" class="btn-primary-solid">Xem {items.length} mẫu sản phẩm ↓</a><a href="https://zalo.me/0866077040" class="btn-idecal-bold">Tư vấn chọn mẫu</a></Fragment>
     <BannerBenefits slot="meta" benefits={landing.benefits.map(title => ({ title, description: '' }))} />

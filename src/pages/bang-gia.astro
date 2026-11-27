@@ -33,15 +33,15 @@ const breadcrumbs = [{
   image={hero.src}
   structuredData={breadcrumbs}
 >
-  <section class="pricing-intro" aria-labelledby="pricing-title">
-    <div class="container pricing-layout">
+  <section class="pricing-intro" aria-labelledby="pricing-title" data-feature-hero>
+    <div class="container pricing-layout" data-hero-layout>
       <div>
         <nav class="pricing-breadcrumb" aria-label="Đường dẫn trang"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Bảng giá</span></nav>
         <h1 id="pricing-title">Bảng giá dịch vụ Decal 2026</h1>
         <p>{pricing.intro}</p>
         <a class="btn-primary-solid" href={consultation.href}>Nhận tư vấn &amp; báo giá</a>
       </div>
-      <figure class="pricing-hero-photo"><img {...hero} fetchpriority="high" /></figure>
+      <figure class="pricing-hero-photo" data-hero-media><img {...hero} fetchpriority="high" /><figcaption>Tham khảo chi phí theo hạng mục</figcaption></figure>
     </div>
   </section>
   <nav class="container pricing-jump" aria-label="Nhóm bảng giá">
