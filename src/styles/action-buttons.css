@@ -1,3 +1,36 @@
+/* Paired actions keep the second button outlined on both light and dark surfaces. */
+@layer outlined-actions {
+  body :is(.brand-dark, [data-heading-theme="dark"], .home-consult, .office-final-grid,
+    .printing-cta, .cut-final-cta, .sign-contact, .elevator-contact, .advertising-contact,
+    .regional-contact, .projects-contact, .blog-contact, .interior-film-contact-wrap) {
+    --ui-outline-ink: var(--ui-accent-on-dark);
+  }
+
+  body :is(.bg-white, [data-heading-theme="light"]) {
+    --ui-outline-ink: var(--ui-primary);
+  }
+
+  body :is(.consult-actions, .consultation-actions, .office-final-actions) > a + a,
+  body main :is(a[data-cta-secondary], .btn-primary-solid + a, [data-hero-actions] > a:not(:first-child)):not([data-cta-text]) {
+    background: transparent !important;
+    border: 1px solid currentColor !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+    color: var(--ui-outline-ink, var(--ui-primary)) !important;
+    -webkit-text-fill-color: currentColor !important;
+
+    &:hover {
+      background: color-mix(in srgb, currentColor 9%, transparent) !important;
+      filter: none !important;
+    }
+
+    & :is(span, strong, svg) {
+      color: inherit !important;
+      -webkit-text-fill-color: currentColor !important;
+    }
+  }
+}
+
 /* Shared treatment for filled actions, including legacy button classes. */
 @layer action-buttons {
   body :is(a, button, input):is(
@@ -11,7 +44,7 @@
   body main :is(.btn-primary-solid + a, [data-hero-actions] > a:not(:first-child)):not([data-cta-text]) {
     background: var(--ui-primary) !important;
     border: 0 !important;
-    border-radius: 0 !important;
+    border-radius: 6px !important;
     box-shadow: none !important;
     color: var(--ui-action-ink) !important;
     -webkit-text-fill-color: currentColor !important;
