@@ -5,27 +5,76 @@ import { getServiceCta } from '../data/service-cta';
 import pricing from '../data/service-pricing.json';
 
 const consultation = getServiceCta();
+const canonical = new URL('/bang-gia/', Astro.site ?? Astro.url);
+const hero = {
+  src: '/images/van-phong/giai-phap-decal-mo.webp',
+  alt: 'Decal mờ trên cửa và vách kính văn phòng',
+  width: 1200,
+  height: 900,
+};
+const images = {
+  'decal-mo': { src: '/images/van-phong/office-glass-01.webp', alt: 'Phòng họp có vách kính dán Decal mờ và logo', width: 881, height: 768 },
+  'film-noi-that': { src: '/images/film-noi-that/dan-film-noi-that-mat-ban.jpg', alt: 'Bề mặt bàn hoàn thiện bằng film nội thất vân gỗ', width: 1280, height: 820 },
+  'phim-cach-nhiet': { src: '/images/phim-cach-nhiet/Thi-cong-dan-phim-cach-nhiet-van-phong-cong-ty.webp', alt: 'Thi công phim cách nhiệt trên kính văn phòng', width: 1702, height: 1135 },
+  'cat-chu': { src: '/images/cat-decal/cat-decal-theo-yeu-cau.webp', alt: 'Mẫu chữ Decal và vật liệu cắt theo yêu cầu', width: 600, height: 450 },
+};
+const breadcrumbs = [{
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Trang chủ', item: new URL('/', canonical).href },
+    { '@type': 'ListItem', position: 2, name: 'Bảng giá', item: canonical.href },
+  ],
+}];
 ---
-<Layout title={`${pricing.sourceTitle} | iDecal`} description={pricing.intro}>
-  <ServicePricing standalone />
+<Layout
+  title="Bảng giá Decal dán kính, phim cách nhiệt & film nội thất 2026 | iDecal"
+  description="Xem bảng giá tham khảo iDecal 2026 cho Decal mờ dán kính, film nội thất, phim cách nhiệt và cắt chữ Decal theo yêu cầu, kèm đơn vị tính và ghi chú thi công."
+  canonicalURL={canonical}
+  image={hero.src}
+  structuredData={breadcrumbs}
+>
+  <section class="pricing-intro" aria-labelledby="pricing-title">
+    <div class="container pricing-layout">
+      <div>
+        <nav class="pricing-breadcrumb" aria-label="Đường dẫn trang"><a href="/">Trang chủ</a><span aria-hidden="true">/</span><span aria-current="page">Bảng giá</span></nav>
+        <h1 id="pricing-title">Bảng giá dịch vụ Decal 2026</h1>
+        <p>{pricing.intro}</p>
+        <a class="btn-primary-solid" href={consultation.href}>Nhận tư vấn &amp; báo giá</a>
+      </div>
+      <figure class="pricing-hero-photo"><img {...hero} fetchpriority="high" /></figure>
+    </div>
+  </section>
+  <nav class="container pricing-jump" aria-label="Nhóm bảng giá">
+    {pricing.groups.map(group => <a href={`#gia-${group.id}`}>{group.title}</a>)}
+  </nav>
+
+  <ServicePricing standalone images={images} />
+
   <section class="container pricing-contact" aria-labelledby="pricing-contact-title">
     <div>
       <h2 id="pricing-contact-title">Cần báo giá cho công trình của bạn?</h2>
       <p>{consultation.description}</p>
     </div>
-    <a class="btn-primary-solid" href={consultation.href}>Nhận tư vấn &amp; báo giá</a>
+    <a class="btn-primary-solid" href={consultation.href}>Gửi yêu cầu tư vấn</a>
   </section>
 </Layout>
 
 <style>
-  .pricing-contact {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px 32px;
-    padding-block: clamp(32px, 5vw, 64px);
-  }
+  .pricing-intro { padding-block: clamp(30px, 5vw, 64px); background: radial-gradient(ellipse at 88% 0%, #edeaff, transparent 62%), #f3f8fd; }
+  .pricing-layout { display: grid; align-items: center; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(24px, 5vw, 64px); }
+  .pricing-breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; color: #52677c; font-size: 14px; }
+  .pricing-layout h1 { margin: 0 0 12px; text-wrap: balance; }
+  .pricing-layout p { max-width: 58ch; margin: 0 0 20px; line-height: 1.75; }
+  .pricing-hero-photo { height: clamp(220px, 28vw, 340px); margin: 0; overflow: hidden; border-radius: 18px; }
+  .pricing-hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .pricing-jump { display: flex; flex-wrap: wrap; gap: 8px 12px; padding-block: 20px; }
+  .pricing-jump a { display: inline-flex; align-items: center; min-height: 48px; padding: 8px 12px; border: 1px solid #d7e4f3; border-radius: 9px; background: #f3f8fd; font-size: 14px; font-weight: 600; }
+  .pricing-jump a:hover { background: var(--ui-accent-surface-hover); }
+  .pricing-contact { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-block: clamp(32px, 5vw, 64px); }
   .pricing-contact h2 { margin: 0 0 12px; }
   .pricing-contact p { max-width: 62ch; margin: 0; line-height: 1.7; }
+  @media (max-width: 767px) {
+    .pricing-layout { grid-template-columns: minmax(0, 1fr); }
+    .pricing-hero-photo { height: clamp(165px, 55vw, 250px); border-radius: 14px; }
+  }
 </style>

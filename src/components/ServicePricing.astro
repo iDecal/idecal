@@ -2,18 +2,51 @@
 import {getServicePath} from '../data/service-routes';
 import pricing from '../data/service-pricing.json';
 
-interface Props { standalone?: boolean; }
-const { standalone = false } = Astro.props;
-const Heading = standalone ? 'h1' : 'h2';
+interface PriceImage { src: string; alt: string; width: number; height: number; }
+interface Props { standalone?: boolean; images?: Record<string, PriceImage>; }
+const { standalone = false, images = {} } = Astro.props;
 const GroupHeading = standalone ? 'h2' : 'h3';
 ---
-<section id="bang-gia-dich-vu" class="service-pricing-section scroll-mt-28">
+<section id="bang-gia-dich-vu" class:list={['service-pricing-section', 'scroll-mt-28', { 'pricing-illustrated': standalone }]} aria-label={pricing.title}>
   <div class="container">
-    <div class="service-pricing-heading"><span class="service-pricing-eyebrow">Bảng giá tham khảo · 2026</span><Heading class="brand-heading">{pricing.title}</Heading><p>{pricing.intro}</p></div>
-    <div class="service-pricing-groups">{pricing.groups.map((group,index)=><details class="service-pricing-group" open={index===0} id={`gia-${group.id}`}>
-      <summary><span class="service-price-number" aria-hidden="true">0{index+1}</span><span class="service-price-title"><GroupHeading>{group.title}</GroupHeading><span>{group.scope}</span></span><svg class="service-price-chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 9 6 6 6-6" /></svg></summary>
-      <div class="service-price-content"><p class="service-price-description">{group.description}</p><div class:list={['service-price-scroll',{'service-price-wide':group.columns.length===3}]} tabindex="0" role="region" aria-label={`Bảng giá ${group.title}`}><table><caption class="sr-only">Bảng giá tham khảo {group.title}</caption><thead><tr>{group.columns.map(column=><th scope="col">{column}</th>)}</tr></thead><tbody>{group.rows.map(row=><tr>{row.map((value,cell)=>cell===0?<th scope="row">{value}</th>:<td class:list={{'price-not-updated':value==='Chưa cập nhật'}}>{value}</td>)}</tr>)}</tbody></table></div><ul class="service-price-notes">{group.notes.map(note=><li>{note}</li>)}</ul><a href={getServicePath(group.service)} class="service-price-related">{group.linkText}<span aria-hidden="true">→</span></a></div>
-    </details>)}</div>
+    {!standalone && <div class="service-pricing-heading">
+      <span class="service-pricing-eyebrow">Bảng giá tham khảo · 2026</span>
+      <h2 class="brand-heading">{pricing.title}</h2>
+      <p>{pricing.intro}</p>
+    </div>}
+
+    <div class="service-pricing-groups">
+      {pricing.groups.map((group, index) => {
+        const photo = images[group.id];
+        return (
+          <details class="service-pricing-group" open={standalone || index === 0} id={`gia-${group.id}`}>
+            <summary>
+              {!standalone && <span class="service-price-number" aria-hidden="true">0{index+1}</span>}
+              <span class="service-price-title"><GroupHeading>{group.title}</GroupHeading><span>{group.scope}</span></span>
+              <svg class="service-price-chevron" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m6 9 6 6 6-6" /></svg>
+            </summary>
+            <div class:list={['service-price-content', {'service-price-with-image': photo}]}>
+              {photo && <figure class="service-price-image"><img {...photo} loading="lazy" decoding="async" /></figure>}
+              <div class="service-price-data">
+                <p class="service-price-description">{group.description}</p>
+                <div class:list={['service-price-scroll', {'service-price-wide': group.columns.length === 3}]} tabindex="0" role="region" aria-label={`Bảng giá ${group.title}`}>
+                  <table>
+                    <caption class="sr-only">Bảng giá tham khảo {group.title}</caption>
+                    <thead><tr>{group.columns.map(column => <th scope="col">{column}</th>)}</tr></thead>
+                    <tbody>{group.rows.map(row => <tr>{row.map((value, cell) => cell === 0
+                      ? <th scope="row">{value}</th>
+                      : <td class:list={{'price-not-updated': value === 'Chưa cập nhật'}}>{value}</td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+                <ul class="service-price-notes">{group.notes.map(note => <li>{note}</li>)}</ul>
+                <a href={getServicePath(group.service)} class="service-price-related">{group.linkText}<span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </details>
+        );
+      })}
+    </div>
+
     <details class="service-price-factors"><summary>Những yếu tố làm thay đổi giá thi công<span aria-hidden="true">+</span></summary><ul>{pricing.factors.map(factor=><li><strong>{factor.title}</strong><p>{factor.text}</p></li>)}</ul></details>
   </div>
 </section>
@@ -58,6 +91,18 @@ const GroupHeading = standalone ? 'h2' : 'h3';
 .service-price-factors strong { font-size: 14px; color: #173a61; font-weight: 600; }
 .service-price-factors p { margin: 5px 0 0; font-size: 14px; color: #52657c; }
 .service-pricing-section summary:focus-visible, .service-price-scroll:focus-visible { outline: 2px solid #006edc; outline-offset: -3px; }
+.pricing-illustrated { background: #f5f8fc; }
+.pricing-illustrated .service-pricing-groups { gap: 24px; }
+.pricing-illustrated .service-price-title { --heading-h2-local: clamp(19px, 1.9vw, 25px); }
+.pricing-illustrated .service-price-title h2 { --heading-h2-local: inherit; }
+.service-price-with-image { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.5fr); gap: 24px; align-items: start; }
+.service-price-image { margin: 0; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 12px; }
+.service-price-image img { width: 100%; height: 100%; object-fit: cover; }
+.service-price-data { min-width: 0; }
+@media (max-width: 900px) {
+ .service-price-with-image { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+ .service-price-image { aspect-ratio: 16 / 9; max-height: 300px; }
+}
 @media(max-width:767px) {
  .service-pricing-section { padding: 36px 0; }
  .service-pricing-section .container { padding-left: 20px; padding-right: 20px; }
