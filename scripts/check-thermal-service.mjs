@@ -35,7 +35,10 @@ for(const route of [primary,...aliases]){
  assert.ok(!content.some(node=>node.tagName==='details'&&attr(node,'open')!==undefined),'FAQ closed by default');
  const schemas=nodes.filter(node=>node.tagName==='script'&&attr(node,'type')==='application/ld+json').flatMap(node=>{const data=JSON.parse((node.childNodes??[]).map(child=>child.value??'').join(''));return data['@graph']??[data];});
  assert.ok(schemas.some(schema=>schema['@type']==='Service'&&schema.url===canonical));
- const faq=schemas.find(schema=>schema['@type']==='FAQPage');assert.equal(faq.mainEntity.length,2);
+ const faq=schemas.find(schema=>schema['@type']==='FAQPage');assert.equal(faq.mainEntity.length,4);
+ assert.match(clean(nodes.find(node=>node.tagName==='title')), /^Phim cách nhiệt nhà kính/);
+ assert.ok(content.some(node=>attr(node,'class')==='thermal-specs'&&clean(node).includes('TSER')));
+ assert.ok(ids.indexOf('bao-gia-phim-cach-nhiet') < ids.indexOf('mau-san-pham'));
  for(const item of faq.mainEntity){assert.ok(clean(main).includes(item.name));assert.ok(clean(main).includes(item.acceptedAnswer.text));}
 }
 const redirects=new Map((await readFile('public/_redirects','utf8')).split('\n').filter(line=>line.trim()&&!line.startsWith('#')).map(line=>{const [from,to,status]=line.trim().split(/\s+/);return [from,{to,status}];}));
