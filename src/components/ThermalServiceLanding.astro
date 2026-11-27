@@ -5,7 +5,6 @@ import ProductBrands from './ProductBrands.astro';
 import ProductCatalog from './ProductCatalog.astro';
 import ProductCard from './ProductCard.astro';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
-import RelatedGuides from './RelatedGuides.astro';
 import ServiceSupport from './ServiceSupport.astro';
 import {getServiceCta} from '../data/service-cta';
 import {thermalTitle,thermalCategory as category,thermalLanding as landing,thermalPresentation,thermalFilms,thermalSupportProducts,thermalPricing,thermalPhotos,thermalFaqs,thermalChecks} from '../data/thermal-service';
@@ -45,6 +44,5 @@ const jumpItems=[
   <div class="container thermal-gallery"><InstallationPhotoGallery photos={thermalPhotos} id="anh-thi-cong-phim" heading="Ảnh thi công phim cách nhiệt" introduction={thermalPresentation.introduction} /></div>
 
   <section id="cau-hoi-phim" class="container thermal-section thermal-faq"><header class="thermal-heading"><p data-heading-label>Trước khi đặt dịch vụ</p><h2>Câu hỏi thường gặp</h2></header><div>{thermalFaqs.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>
-  <RelatedGuides context="phim-cach-nhiet" />
   <ServiceSupport service="phim-cach-nhiet" />
 </div>

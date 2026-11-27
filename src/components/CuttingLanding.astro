@@ -4,7 +4,6 @@ import {cuttingMaterials,cuttingRelatedSolutions,cuttingFaqs,cuttingServiceImage
 import {uploadedServicePhotos} from '../data/installation-photo-links';
 import BannerBenefits from './BannerBenefits.astro';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
-import RelatedGuides from './RelatedGuides.astro';
 import '../styles/cutting-landing.css';
 const quote='/lien-he-idecal?dich-vu=cat-decal#yeu-cau';
 const consultationHtml=source.materials.consult.map(block=>block.html.replace(/<\/p>$/,` <a href="${quote}">gửi mẫu cần cắt để được hỗ trợ</a>.</p>`)).join('');
@@ -29,6 +28,5 @@ const serviceLinks=[source.services.items[0].actions[0].href,'/dich-vu/in-decal/
   <div class="container"><InstallationPhotoGallery numbers={uploadedServicePhotos['cat-decal']} heading="Decal chữ và logo tại công trình" /></div>
 
   <section id="cau-hoi" class="container cut-section cut-faq"><header><p data-heading-label>{source.faq.heading.subtitle}</p><h2>{source.faq.heading.title}</h2><a data-cta-text class="cut-text-link" href="/blog/cat-decal-vi-tinh-va-ung-dung/">Tìm hiểu ứng dụng cắt Decal <span aria-hidden="true">→</span></a></header><div class="cut-faq-list">{cuttingFaqs.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><div><Fragment set:html={item.blocks.map(b=>b.html).join('')} />{item.clarification&&<p>{item.clarification}</p>}</div></details>)}</div></section>
-  <RelatedGuides context="cat-decal" />
   <section class="cut-final-cta"><div class="container cut-final-grid"><div><h2>Cần cắt chữ hoặc logo theo mẫu?</h2><p>Gửi file AI, Corel hoặc PDF, kích thước và số lượng để iDecal kiểm tra, tư vấn và báo giá.</p></div><div class="cut-final-actions"><a class="btn-primary-solid" href={quote}>Nhận báo giá cắt <span aria-hidden="true">→</span></a><a class="cut-text-link" href="https://zalo.me/0866077040">Hotline/Zalo: 0866.077.040</a></div></div></section>
 </div>
