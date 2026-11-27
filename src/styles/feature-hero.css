@@ -92,7 +92,7 @@
   body [data-feature-hero] [data-hero-media] :is(figcaption, [data-hero-caption]) {
     position: absolute !important;
     z-index: 2;
-    inset: -16px 0 auto auto !important;
+    inset: auto auto -18px -12px !important;
     display: block !important;
     width: fit-content !important;
     max-width: calc(100% - 28px) !important;
@@ -246,7 +246,7 @@
     body [data-feature-hero] .product-detail-layout { grid-template-areas: 'copy' 'media'; }
     body [data-feature-hero] [data-hero-media] { border-radius: 15px !important; }
     body [data-feature-hero] [data-hero-media] :is(figcaption, [data-hero-caption]) {
-      inset: 10px 10px auto auto !important;
+      inset: auto auto -14px 0 !important;
       font-size: 13px !important;
     }
   }
