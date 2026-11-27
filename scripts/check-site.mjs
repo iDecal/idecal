@@ -146,7 +146,9 @@ for (const product of catalogueProducts) {
   assert.ok(html.includes('/huong-dan-do-kinh/?san-pham=' + encodeURIComponent(product.slug)), 'Measurement guide must preserve product context: ' + product.slug);
   assert.ok(legacyRedirects.includes(`/${product.slug} /san-pham/${product.slug}/ 301`), `Missing legacy redirect: ${product.slug}`);
 }
-assert.equal((catalogueIndex.match(/class="catalogue-card\b/g) ?? []).length, 0, 'Product index must show landing groups without repeating the full catalogue');
+const catalogueCardIds = [...catalogueIndex.matchAll(/data-product-id="([^"]+)"/g)].map(match => match[1]);
+assert.deepEqual(catalogueCardIds.sort(), catalogueProducts.map(product => product.slug).sort(),
+  'Product index must include each catalogue product exactly once');
 
 let references = 0;
 const failures = [];
