@@ -13,7 +13,7 @@ for(const [slug,item] of Object.entries(plan)){
  const html=await readFile(`dist/blog/${slug}/index.html`,'utf8');const source=await readFile(`src/content/blog/${slug}.md`,'utf8');
  const title=text(html.match(/<title>(.*?)<\/title>/s)?.[1]??'');
  const description=decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1]??'');
- const body=html.split('<div class="blog-article-body">')[1]?.split('<div class="blog-contact">')[0]??'';const visible=text(body);
+ const body=html.split('<div class="blog-article-body">')[1]?.split('</article>')[0]??'';const visible=text(body);
  const headings=[...body.matchAll(/<h[23]\b[^>]*>([\s\S]*?)<\/h[23]>/g)].map(match=>text(match[1]));
  const links=[...body.matchAll(/<a\b[^>]*href="([^\"]+)"/g)].map(match=>decode(match[1])).filter(href=>href.startsWith('/')&&!/\.(?:jpg|png|webp|avif|jpeg)(?:\?|$)/i.test(href));
  const approvedTitle=titleChanges[slug]?.title;

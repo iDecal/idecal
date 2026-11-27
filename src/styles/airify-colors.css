@@ -11,7 +11,7 @@
  body :is(.page-content,.homepage-original) :is([class*='eyebrow'],[class*='kicker'],.consult-label,.case-category,[data-heading-label]){background:#e4eef2!important;background-image:none!important;border-color:#d4e3e9!important;color:#102e57!important;}
  body :is(.compact-page-banner,.catalogue-hero,.lp-hero,.projects-hero,.project-detail-hero,.regional-hero,.contact-hero,.booking-hero,.district-hero,.hcm-hero,.q1-hero,.q2-intro,.q3-cover,.q4-hero,.q12-hero,.tb-hero,.blog-hero-panel,.case-header,.glass-guide-hero,.wave-hero,.interior-film-hero,.sign-hero,.elevator-hero,[data-service-hero]){background:#e4eef2!important;background-image:none!important;}
  body .blog-hero-panel::after{background:linear-gradient(105deg,#e4eef2 4%,#e4eef2ed 40%,#e4eef235)!important;}
- body :is(.offering-surface,.lp-process,.lp-faq,.lp-overview-fit,.regional-soft,.projects-contact,.project-detail-related,.project-detail-gallery-section,.catalogue-detail,.contact-hours,.blog-contact,.blog-featured,.booking-product){background:#f5f8fa!important;background-image:none!important;}
+ body :is(.offering-surface,.lp-process,.lp-faq,.lp-overview-fit,.regional-soft,.projects-contact,.project-detail-related,.project-detail-gallery-section,.catalogue-detail,.contact-hours,.blog-featured,.booking-product){background:#f5f8fa!important;background-image:none!important;}
  body .homepage-original .home-process{background:#f5f8fa!important;background-image:none!important;}
  body .blog-post-grid .post-card{background:#eaf1f4!important;}
  body .projects-filters button[aria-pressed='true']{background:#102e57!important;background-image:none!important;color:#fff!important;}

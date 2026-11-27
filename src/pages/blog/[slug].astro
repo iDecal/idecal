@@ -71,7 +71,6 @@ const articleSchema={'@type':'BlogPosting','@id':canonical+'#article',headline:e
           {remainingHtml!==undefined?<Fragment set:html={remainingHtml} />:<Content />}
         </div>
         <InstallationPhotoGallery numbers={additionalPhotoNumbers} heading="Ảnh công trình iDecal cùng chủ đề" />
-        <div class="blog-contact"><div><h2>Cần tư vấn cho không gian của bạn?</h2><p>Gửi hình ảnh và kích thước để iDecal tư vấn vật liệu, thiết kế và thi công.</p></div><a class="btn-primary-solid" href="/lien-he-idecal">Liên hệ iDecal →</a></div>
       </article>
       <aside class="blog-sidebar">
         <nav class="blog-sidebar-categories" aria-label="Chuyên mục bài viết"><h2>Khám phá chuyên mục</h2>{blogCategories.map(item=><a href={`/blog/chuyen-muc/${item.slug}`} aria-current={category.slug===item.slug?'page':undefined}>{item.name}<span aria-hidden="true">→</span></a>)}</nav>

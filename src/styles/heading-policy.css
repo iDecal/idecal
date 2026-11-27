@@ -53,7 +53,6 @@
   body .blog-card-content h2 {--heading-h2-local:17px;}
   body .blog-article-body h2 {--heading-h2-local:23px;}
   body .blog-sidebar-categories h2 {--heading-h2-local:13px;}
-  body .blog-contact h2 {--heading-h2-local:16px;}
   body h2.product-card-title {--heading-h2-local:18px;}
   body .product-information-item summary h2 {--heading-h2-local:13px;}
   @media(max-width:767px) { :root {--heading-h2-bump:2px;} }

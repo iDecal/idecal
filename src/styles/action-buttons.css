@@ -2,7 +2,7 @@
 @layer outlined-actions {
   body :is(.brand-dark, [data-heading-theme="dark"], .home-consult, .office-final-grid,
     .printing-cta, .cut-final-cta, .sign-contact, .elevator-contact, .advertising-contact,
-    .regional-contact, .projects-contact, .blog-contact, .interior-film-contact-wrap) {
+    .regional-contact, .projects-contact, .interior-film-contact-wrap) {
     --ui-outline-ink: var(--ui-accent-on-dark);
   }
 

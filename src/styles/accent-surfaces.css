@@ -8,7 +8,7 @@
 .page-content :is(.compact-page-banner,.catalogue-hero,.lp-hero,.projects-hero,.project-detail-hero,.regional-hero,.contact-hero,.booking-hero) {
   background-image: var(--idecal-soft-gradient) !important;
 }
-.page-content :is(.offering-surface,.lp-process,.lp-faq,.lp-overview-fit,.regional-soft,.projects-contact,.project-detail-related,.project-detail-gallery-section,.catalogue-detail,.contact-hours,.blog-contact,.blog-featured,.booking-product) {
+.page-content :is(.offering-surface,.lp-process,.lp-faq,.lp-overview-fit,.regional-soft,.projects-contact,.project-detail-related,.project-detail-gallery-section,.catalogue-detail,.contact-hours,.blog-featured,.booking-product) {
   background-image: var(--idecal-faint-gradient) !important;
 }
 .page-content section.bg-surface:not(.brand-dark) {
