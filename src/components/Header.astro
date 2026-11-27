@@ -33,6 +33,7 @@ const activeRegion = regions.find(region => Astro.url.pathname.split('/')[1] ===
 const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
   { name: 'Dịch vụ', href: '/dich-vu', mega: true, dropdown: [] },
+  { name: 'Sản phẩm', href: '/san-pham/' },
   { name: 'Công trình thực tế', href: '/du-an' },
   { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
   { name: 'Liên hệ', href: '/lien-he-idecal' },
@@ -76,6 +77,7 @@ const navLinks: NavLink[] = [
             ) : (<>
             <a 
               href={link.href}
+              aria-current={isCurrent(link.href) ? 'page' : undefined}
               class="text-[13px] xl:text-base font-medium text-brand-navy hover:text-primary transition-colors flex items-center gap-1.5 whitespace-nowrap"
             >
               {link.name}
@@ -152,7 +154,7 @@ const navLinks: NavLink[] = [
                 </div>
               </>
             ) : (
-              <a href={link.href} class="text-lg font-medium text-secondary py-3 hover:text-brand-navy">{link.name}</a>
+              <a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined} class="text-lg font-medium text-secondary py-3 hover:text-brand-navy">{link.name}</a>
             )}
           </div>
         ))}
@@ -303,7 +305,7 @@ const navLinks: NavLink[] = [
 <style>
   .header-brand { gap:10px; }
   .header-brand-name { color:#031245; font-size:23px; font-weight:600; letter-spacing:-.03em; }
-  .header-main-links { gap:clamp(24px,2.6vw,40px); }
+  .header-main-links { gap:clamp(16px,2vw,32px); }
   .region-switcher { position:relative; flex-shrink:0; }
   .region-trigger { display:flex; align-items:center; gap:10px; min-height:48px; min-width:212px; padding:12px 16px; border:1px solid transparent; border-radius:999px; background:linear-gradient(100deg,#0878bd 0%,#4f46e5 55%,#7d12f7 100%); color:#fff; font-size:14px; font-weight:500; box-shadow:0 6px 18px #4f46e526; transition:filter .2s,box-shadow .2s; }
   .region-trigger:hover,.region-trigger[aria-expanded="true"] { filter:brightness(1.06); box-shadow:0 8px 22px #4f46e538; }
