@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServicePricing from '../components/ServicePricing.astro';
+import { getServiceCta } from '../data/service-cta';
+import pricing from '../data/service-pricing.json';
+
+const consultation = getServiceCta();
+---
+<Layout title={`${pricing.sourceTitle} | iDecal`} description={pricing.intro}>
+  <ServicePricing standalone />
+  <section class="container pricing-contact" aria-labelledby="pricing-contact-title">
+    <div>
+      <h2 id="pricing-contact-title">Cần báo giá cho công trình của bạn?</h2>
+      <p>{consultation.description}</p>
+    </div>
+    <a class="btn-primary-solid" href={consultation.href}>Nhận tư vấn &amp; báo giá</a>
+  </section>
+</Layout>
+
+<style>
+  .pricing-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 32px;
+    padding-block: clamp(32px, 5vw, 64px);
+  }
+  .pricing-contact h2 { margin: 0 0 12px; }
+  .pricing-contact p { max-width: 62ch; margin: 0; line-height: 1.7; }
+</style>
