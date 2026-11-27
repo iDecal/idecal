@@ -23,12 +23,23 @@
     .q4-hero, .q12-hero, .tb-hero, .contact-hero, .booking-hero,
     .blog-article-header, .case-header, .product-summary, .search-page-heading, [data-page-hero]
   ) h1 {
-    color: var(--page-hero-ink) !important;
-    -webkit-text-fill-color: currentColor !important;
+    font-size: var(--heading-h1) !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -.02em !important;
+    background-image: var(--ui-action-gradient) !important;
+    background-clip: text !important;
+    color: var(--heading-surface-ink, transparent) !important;
+    -webkit-text-fill-color: var(--heading-surface-ink, transparent) !important;
+  }
+
+  main[data-interior-page] h1 [data-hero-emphasis] {
     background: none !important;
-    line-height: 1.15 !important;
-    letter-spacing: -.035em !important;
-    text-wrap: pretty;
+    -webkit-text-fill-color: inherit !important;
+  }
+
+  main[data-interior-page] [data-hero-media] :is(figcaption, [data-hero-caption]) {
+    display: none !important;
   }
 
   main[data-interior-page] [data-feature-hero]:not([data-product-detail])
@@ -84,39 +95,44 @@
   }
 
   @media (min-width: 1024px) {
-    main[data-interior-page] section[data-feature-hero]:has(> .container[data-hero-layout] > [data-hero-media] img) {
+    main[data-interior-page] [data-feature-hero]:not([data-product-detail])
+      [data-hero-layout]:has(> [data-hero-media]),
+    main[data-interior-page] [data-feature-hero][data-hero-layout]:has(> [data-hero-media]) {
+      grid-template-columns: minmax(0, 65fr) minmax(0, 35fr) !important;
+    }
+
+    main[data-interior-page] section[data-feature-hero]:not([data-product-detail]):has(
+      > .container [data-hero-media]:not(.brand-detail-logo) img
+    ) {
       position: relative;
       isolation: isolate;
       display: grid !important;
       align-items: center;
-      min-height: clamp(480px, 45vw, 780px);
-      padding-block: clamp(52px, 6vw, 108px) !important;
+      min-height: clamp(400px, 37vw, 650px);
     }
 
-    main[data-interior-page] .blog-hero > .container {
-      width: 88%;
-      grid-template-columns: minmax(0, 55%) minmax(0, 1fr) !important;
+    main[data-interior-page] section[data-feature-hero]:not([data-product-detail])
+      [data-hero-layout]:has(> [data-hero-media]:not(.brand-detail-logo) img) {
+      column-gap: 0 !important;
     }
 
+    main[data-interior-page] section[data-feature-hero]:not([data-product-detail])
+      [data-hero-layout]:has(> [data-hero-media]:not(.brand-detail-logo) img) > :not([data-hero-media]) {
+      position: relative;
+      z-index: 1;
+    }
+
+    main[data-interior-page] section[data-feature-hero]:not([data-product-detail]) > .container
+      [data-hero-layout] > [data-hero-media]:not(.brand-detail-logo):has(img),
     main[data-interior-page] section[data-feature-hero] > .container[data-hero-layout]
-      > [data-hero-media]:has(img) {
+      > [data-hero-media]:not(.brand-detail-logo):has(img) {
       position: absolute !important;
       inset: 0 0 auto auto !important;
       width: 44% !important;
-      height: 83% !important;
+      height: 100% !important;
       background: transparent !important;
       box-shadow: none !important;
-    }
-
-    main[data-interior-page] section[data-feature-hero] > .container[data-hero-layout]
-      > [data-hero-media] :is(figcaption, [data-hero-caption]) {
-      inset: auto 1.5rem 0 auto !important;
-    }
-
-    main[data-interior-page] section[data-feature-hero]:has(> .container[data-hero-layout] > [data-hero-media] img) h1 {
-      font-size: clamp(2.65rem, 4.1vw, 5rem) !important;
-      line-height: 1.06 !important;
-      max-width: none !important;
+      mask-image: linear-gradient(to right, transparent, #000 32%);
     }
   }
 
