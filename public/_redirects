@@ -858,3 +858,31 @@
 # Original cutting service URL
 /dich-vu-cat-decal-theo-yeu-cau /dich-vu/cat-decal/ 301
 /dich-vu-cat-decal-theo-yeu-cau/ /dich-vu/cat-decal/ 301
+
+# Short navigation URLs resolve to the existing canonical pages.
+/gioi-thieu /gioi-thieu-idecal/ 301
+/gioi-thieu/ /gioi-thieu-idecal/ 301
+/lien-he /lien-he-idecal/ 301
+/lien-he/ /lien-he-idecal/ 301
+/decal-dan-kinh /decal-mo-dan-kinh/ 301
+/decal-dan-kinh/ /decal-mo-dan-kinh/ 301
+/thi-cong-decal /dich-vu/thi-cong-decal/ 301
+/thi-cong-decal/ /dich-vu/thi-cong-decal/ 301
+/dich-vu/dan-phim-cach-nhiet /phim-cach-nhiet-nha-kinh/ 301
+/dich-vu/dan-phim-cach-nhiet/ /phim-cach-nhiet-nha-kinh/ 301
+/dich-vu/dan-decal-kinh /decal-dan-kinh-van-phong/ 301
+/dich-vu/dan-decal-kinh/ /decal-dan-kinh-van-phong/ 301
+/dich-vu/dan-film-noi-that /dich-vu-film-dan-noi-that/ 301
+/dich-vu/dan-film-noi-that/ /dich-vu-film-dan-noi-that/ 301
+/dich-vu/in-dan-decal-quang-cao /decal-quang-cao/ 301
+/dich-vu/in-dan-decal-quang-cao/ /decal-quang-cao/ 301
+/thi-cong-decal/tphcm /khu-vuc/tp-hcm/ 301
+/thi-cong-decal/tphcm/ /khu-vuc/tp-hcm/ 301
+/thi-cong-decal/binh-duong /khu-vuc/binh-duong/ 301
+/thi-cong-decal/binh-duong/ /khu-vuc/binh-duong/ 301
+/thi-cong-decal/nha-trang /khu-vuc/nha-trang/ 301
+/thi-cong-decal/nha-trang/ /khu-vuc/nha-trang/ 301
+/thi-cong-decal/quy-nhon /khu-vuc/quy-nhon/ 301
+/thi-cong-decal/quy-nhon/ /khu-vuc/quy-nhon/ 301
+/thi-cong-decal/dong-nai-vung-tau /khu-vuc/#dong-nai-vung-tau 301
+/thi-cong-decal/dong-nai-vung-tau/ /khu-vuc/#dong-nai-vung-tau 301

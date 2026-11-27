@@ -11,3 +11,9 @@ export const projectTypes = [
   'Sự kiện',
   'Khác',
 ] as const;
+
+export const projectMenuCategories = [
+  { slug: 'van-phong', name: 'Công trình Văn phòng', category: 'Văn phòng' },
+  { slug: 'nha-o-chung-cu', name: 'Công trình Nhà ở & Chung cư', category: 'Nhà ở dân dụng' },
+  { slug: 'showroom-cua-hang', name: 'Công trình Showroom & Cửa hàng', category: 'Showroom' },
+] as const;

@@ -43,7 +43,7 @@ const projectIndex = await readFile(path.join(root, 'du-an/index.html'), 'utf8')
 const projectFiles = (await walk(path.resolve('src/content/projects'))).filter(file => file.endsWith('.md'));
 const indexProjects = projectIndex.match(/class="project-card\b/g) ?? [];
 assert.equal(indexProjects.length, projectFiles.length, 'Project index must display every project');
-assert.ok(home.includes('href="/du-an"'), 'Home must link to the full project index');
+assert.ok(/href="\/du-an\/?"/.test(home), 'Home must link to the full project index');
 // The latest requested homepage reproduces the supplied public WordPress content,
 // which replaces the previous three-project homepage section.
 const sourceAudit = JSON.parse(await readFile('src/content/homepage/source-audit.json', 'utf8'));

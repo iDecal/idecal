@@ -1,63 +1,20 @@
 ---
-import SubmenuIcon from './SubmenuIcon.astro';
-import { catalogueGroups } from '../data/catalogue-groups';
-import { serviceOfferings } from '../data/site-offerings';
-import { blogCategories } from '../data/blog-categories';
-interface MenuItem { name: string; href: string; }
-interface MegaGroup { title: string; items: MenuItem[]; }
+import { aboutHref, contactHref, navLinks } from '../data/header-navigation';
 const currentPath = Astro.url.pathname.replace(/\/$/, '');
-const isCurrent = (href: string) => currentPath === href.replace(/\/$/, '');
-const glazingGroups = new Set(['decal-mo-dan-kinh', 'decal-dan-kinh-van-phong', 'phim-cach-nhiet-nha-kinh', 'film-trang-tri-kinh']);
-const productLinks = (forGlazing: boolean) => catalogueGroups
-  .filter(category => glazingGroups.has(category.slug) === forGlazing)
-  .map(category => ({ name: category.name, href: `/${category.slug}` }));
-
-const megaMenus: Record<string, MegaGroup[]> = {
-  services: [
-    { title: 'Dịch vụ theo yêu cầu', items: serviceOfferings.map(service => ({ name: service.name, href: `/dich-vu/${service.slug}` })) },
-    { title: 'Giải pháp thi công', items: [
-      { name: 'Decal kính văn phòng', href: '/decal-dan-kinh-van-phong' },
-      { name: 'Phim cách nhiệt nhà kính', href: '/phim-cach-nhiet-nha-kinh' },
-      { name: 'Film dán nội thất', href: '/dich-vu-film-dan-noi-that/' },
-      { name: 'Decal quảng cáo', href: '/decal-quang-cao' },
-      { name: 'Film bảo vệ', href: '/film-bao-ve-noi-that' },
-      { name: 'Decal 3D & film trang trí kính', href: '/film-trang-tri-kinh' },
-    ] },
-    { title: 'Thông tin dịch vụ', items: [
-      { name: 'Tất cả dịch vụ', href: '/dich-vu' },
-      { name: 'Bảng giá thi công', href: '/bang-gia/' },
-      { name: 'Công trình đã thực hiện', href: '/du-an' },
-    ] },
-  ],
-  products: [
-    { title: 'Danh mục', items: [
-      { name: 'Tất cả sản phẩm', href: '/san-pham/' },
-      { name: 'Hướng dẫn đo kính', href: '/huong-dan-do-kinh/' },
-    ] },
-    { title: 'Decal và phim cho kính', items: productLinks(true) },
-    { title: 'Các vật liệu khác', items: productLinks(false) },
-  ],
-};
-interface NavLink {
-  name: string;
-  href: string;
-  mega?: 'services' | 'products';
-  dropdown?: { name: string; href: string; highlight?: boolean; showIcon?: boolean }[];
-}
-const contactHref = '/lien-he-idecal';
-const navLinks: NavLink[] = [
-  { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
-  { name: 'Dịch vụ', href: '/dich-vu', mega: 'services' },
-  { name: 'Sản phẩm', href: '/san-pham/', mega: 'products' },
-  { name: 'Bảng giá', href: '/bang-gia/' },
-  { name: 'Pofolio', href: '/du-an' },
-  { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
-];
+const isCurrent = (href: string) => !/[?#]/.test(href) && currentPath === href.replace(/\/$/, '');
+const current = (href: string) => isCurrent(href) ? 'page' : undefined;
 ---
 
-<nav aria-label="Điều hướng chính" class="site-header sticky top-0 w-full z-[100] bg-white border-b border-border">
+<header class="site-header sticky top-0 w-full z-[100] bg-white border-b border-border">
+  <div class="header-topbar">
+    <div class="container header-topbar-inner">
+      <div><a href="tel:0866077040">Hotline: 0866-077-040</a><a href="https://zalo.me/0866077040">Zalo</a></div>
+      <div><a href={aboutHref} aria-current={current(aboutHref)}>Giới thiệu</a><a href={contactHref} aria-current={current(contactHref)}>Liên hệ</a></div>
+    </div>
+  </div>
+  <nav aria-label="Điều hướng chính">
   <div class="container mx-auto px-4 relative">
-    <div class="header-row flex justify-between items-center gap-4 h-[80px] xl:h-[96px]">
+    <div class="header-row flex justify-between items-center gap-4">
       
       <div class="flex-shrink-0">
         <a href="/" class="header-brand flex items-center group" aria-label="iDecal – Trang chủ">
@@ -65,53 +22,29 @@ const navLinks: NavLink[] = [
         </a>
       </div>
 
-      <!-- Desktop Menu -->
       <div class="header-main-links hidden lg:flex flex-1 justify-center items-center">
-        {navLinks.map((link) => (
-          <div class={`${link.mega ? 'mega-root' : 'relative group'} py-6`}>
-            {link.mega ? (
-              <>
-                <button id={`mega-trigger-${link.mega}`} type="button" aria-expanded="false" aria-controls={`desktop-mega-${link.mega}`} class="mega-trigger font-medium text-brand-navy hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
-                  {link.name}<svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>
-                </button>
-                <div id={`desktop-mega-${link.mega}`} hidden inert class="desktop-mega">
-                  <div class="mega-columns">
-                    {megaMenus[link.mega].map(group => (
-                      <section class="mega-column" aria-label={group.title}>
-                        <p class="mega-heading">{group.title}</p>
-                        <ul class="mega-items">{group.items.map(item => (
-                          <li><a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.name}</a></li>
-                        ))}</ul>
-                      </section>
-                    ))}
+        {navLinks.map(link => (
+          <div class:list={['mega-root', { 'mega-wide': link.groups.length > 1 }]}>
+            <a class="header-nav-link" href={link.href} aria-current={current(link.href)}>{link.name}</a>
+            <button id={`mega-trigger-${link.id}`} type="button" aria-label={`Mở mục ${link.name}`} aria-expanded="false" aria-controls={`desktop-mega-${link.id}`} class="mega-trigger">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>
+            </button>
+            <div id={`desktop-mega-${link.id}`} hidden inert class="desktop-mega">
+              <div class="mega-columns" style={`--menu-columns: ${link.groups.length}`}>
+                {link.groups.map(group => (
+                  <div class="mega-column">
+                    {group.title && <p class="mega-heading">{group.href ? <a href={group.href} aria-current={current(group.href)}>{group.title}</a> : group.title}</p>}
+                    <ul class="mega-items">{group.items.map(item => <li><a href={item.href} aria-current={current(item.href)}>{item.name}</a></li>)}</ul>
                   </div>
-                </div>
-              </>
-            ) : (<>
-            <a 
-              href={link.href}
-              aria-current={isCurrent(link.href) ? 'page' : undefined}
-              class="font-medium text-brand-navy hover:text-primary transition-colors flex items-center gap-1.5 whitespace-nowrap"
-            >
-              {link.name}
-              {link.dropdown && <svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>}
-            </a>
-            {link.dropdown && (
-              <div class="absolute top-[90%] left-0 w-72 bg-white shadow-2xl rounded-2xl border border-border p-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all transform translate-y-2 group-hover:translate-y-0">
-                {link.dropdown.map((sub) => (
-                  <a href={sub.href} class={`flex items-center gap-3 px-3 py-2.5 text-sm rounded-xl transition-all font-medium ${sub.highlight ? 'bg-brand-navy/5 text-brand-navy font-bold mb-2' : 'text-secondary hover:bg-surface hover:text-brand-navy'}`}>
-                    {sub.showIcon !== false && <SubmenuIcon href={sub.href} />}<span>{sub.name}</span>
-                  </a>
                 ))}
               </div>
-            )}
-            </>)}
+            </div>
           </div>
         ))}
       </div>
 
       <div class="hidden shrink-0 lg:block">
-        <a class="btn-primary-solid" href={contactHref} aria-current={isCurrent(contactHref) ? 'page' : undefined}>Liên hệ</a>
+        <a class="btn-primary-solid" href={contactHref} aria-current={current(contactHref)}>Liên hệ / Báo giá</a>
       </div>
 
       <button id="menu-toggle" class="lg:hidden p-2 text-brand-navy" aria-label="Mở menu" aria-controls="mobile-menu" aria-expanded="false">
@@ -131,51 +64,28 @@ const navLinks: NavLink[] = [
     
     <div class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-4">
       <div class="mobile-offerings">
-        {navLinks.map(link => link.mega && (
-          <details class="mobile-offering-group" open={megaMenus[link.mega].some(group => group.items.some(item => isCurrent(item.href)))}>
+        {navLinks.map(link => (
+          <details class="mobile-offering-group" open={isCurrent(link.href) || link.groups.some(group => (group.href && isCurrent(group.href)) || group.items.some(item => isCurrent(item.href)))}>
             <summary class="mobile-offering-heading">{link.name}</summary>
-            {megaMenus[link.mega].map(group => (
-              <section class="mobile-offering-items" aria-label={group.title}>
-                <p class="mega-heading">{group.title}</p>
-                <ul class="mega-items">{group.items.map(item => (
-                  <li><a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.name}</a></li>
-                ))}</ul>
-              </section>
+            <div class="mobile-offering-items"><a class="mobile-overview-link" href={link.href} aria-current={current(link.href)}>Xem tất cả {link.name.toLocaleLowerCase('vi')}</a></div>
+            {link.groups.map(group => (
+              <div class="mobile-offering-items">
+                {group.title && <p class="mega-heading">{group.href ? <a href={group.href} aria-current={current(group.href)}>{group.title}</a> : group.title}</p>}
+                <ul class="mega-items">{group.items.map(item => <li><a href={item.href} aria-current={current(item.href)}>{item.name}</a></li>)}</ul>
+              </div>
             ))}
           </details>
-        ))}
-      </div>
-      <div class="mobile-other-links flex flex-col">
-        {navLinks.filter(link => !link.mega).map((link, index) => (
-          <div class="flex flex-col border-b border-slate-50 pb-2">
-            {link.dropdown ? (
-              <>
-                <button aria-expanded="false" aria-controls={`mobile-submenu-${index}`} class="mobile-dropdown-btn font-medium text-secondary flex justify-between items-center text-left py-3">
-                  {link.name}
-                  <span class="text-brand-navy font-light">＋</span>
-                </button>
-                <div id={`mobile-submenu-${index}`} hidden class="mobile-dropdown-content flex flex-col bg-surface rounded-xl px-3 py-2 mb-2">
-                  {link.dropdown.map((sub) => (
-                    <a href={sub.href} class={`flex items-center gap-3 text-sm leading-relaxed font-medium py-2.5 ${sub.highlight ? 'text-brand-navy font-bold' : 'text-secondary'}`}>
-                      {sub.showIcon !== false && <SubmenuIcon href={sub.href} />}<span>{sub.name}</span>
-                    </a>
-                  ))}
-                </div>
-              </>
-            ) : (
-              <a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined} class="font-medium text-secondary py-3 hover:text-brand-navy">{link.name}</a>
-            )}
-          </div>
         ))}
       </div>
     </div>
 
     <div class="shrink-0 p-5 border-t border-border bg-white mobile-menu-footer">
-      <a class="btn-primary-solid w-full justify-center" href={contactHref} aria-current={isCurrent(contactHref) ? 'page' : undefined}>Liên hệ</a>
+      <a class="btn-primary-solid w-full justify-center" href={contactHref} aria-current={isCurrent(contactHref) ? 'page' : undefined}>Liên hệ / Báo giá</a>
       <div class="mobile-menu-contact"><a class="mobile-zalo-contact" href="https://zalo.me/0866077040" aria-label="Chat Zalo với iDecal: 0866.077.040"><svg aria-hidden="true" viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#0068ff"/><path d="M6 7h20v15H13l-5 4v-4H6Z" fill="#fff"/><text x="16" y="17" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="8" fill="#0068ff">Zalo</text></svg><span>0866.077.040</span></a><a class="mobile-call-contact" href="tel:0866077040" aria-label="Gọi iDecal: 0866.077.040">Gọi ngay</a></div>
     </div>
   </div>
-</nav>
+  </nav>
+</header>
 
 <script>
   const desktopQuery = window.matchMedia('(min-width: 1024px)');
@@ -249,13 +159,6 @@ const navLinks: NavLink[] = [
       document.body.style.overflow = 'hidden';
       menuClose?.focus();
     } else {
-      mobileMenu.querySelectorAll<HTMLButtonElement>('.mobile-dropdown-btn').forEach(button => {
-        button.setAttribute('aria-expanded', 'false');
-        const panel = button.nextElementSibling as HTMLElement | null;
-        if (panel) { panel.hidden = true; panel.inert = true; }
-        const indicator = button.querySelector('span');
-        if (indicator) indicator.textContent = '＋';
-      });
       document.body.style.overflow = previousOverflow;
       menuToggle.focus();
     }
@@ -283,37 +186,28 @@ const navLinks: NavLink[] = [
   window.matchMedia('(min-width: 1024px)').addEventListener('change', event => {
     if (event.matches) setMenu(false);
   });
-  document.querySelectorAll<HTMLButtonElement>('.mobile-dropdown-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const content = button.nextElementSibling as HTMLElement | null;
-      if (!content) return;
-      const open = button.getAttribute('aria-expanded') !== 'true';
-      button.setAttribute('aria-expanded', String(open));
-      document.querySelectorAll<HTMLButtonElement>('.mobile-dropdown-btn').forEach(other => {
-        if (other === button) return;
-        other.setAttribute('aria-expanded', 'false');
-        const panel = other.nextElementSibling as HTMLElement | null;
-        if (panel) { panel.hidden = true; panel.inert = true; }
-        const indicator = other.querySelector('span');
-        if (indicator) indicator.textContent = '＋';
-      });
-      content.hidden = !open;
-      content.inert = !open;
-      const icon = button.querySelector('span');
-      if (icon) icon.textContent = open ? '－' : '＋';
-    });
-    const content = button.nextElementSibling as HTMLElement | null;
-    if (content) content.inert = true;
-  });
 </script>
 
 <style>
   .header-brand { gap:10px; }
   .header-brand-name { color:#031245; font-size:23px; font-weight:600; letter-spacing:-.03em; }
-  .header-main-links { gap:clamp(22px, 2.55vw, 40px); }
+  .header-topbar { background:#f1f6fb; border-bottom:1px solid #dce7f1; }
+  .header-topbar-inner, .header-topbar-inner > div { display:flex; align-items:center; gap:12px; }
+  .header-topbar-inner { justify-content:space-between; min-height:32px; }
+  .header-topbar a { display:inline-flex; align-items:center; min-height:32px; color:#102e57; font-size:13px; white-space:nowrap; }
+  .header-topbar a:hover { color:#0056b3; }
+  .header-row { height:64px; }
+  .header-main-links { gap:clamp(12px, 2vw, 30px); }
+  .mega-root { display:flex; align-items:center; height:64px; }
+  .mega-root:not(.mega-wide) { position:relative; }
+  .header-nav-link { display:flex; align-items:center; min-height:48px; font-weight:650; white-space:nowrap; }
   .header-main-links > div > :is(a,button) { font-size:clamp(15px, 1.25vw, 18px); }
   @media(max-width:1279px) and (min-width:1024px) { .header-brand-name { font-size:20px; } .header-brand { gap:8px; } }
-  @media(max-width:1023px) { .header-row { gap:10px; } }
+  @media(max-width:1023px) { .header-row { height:56px; gap:10px; } }
+  @media(max-width:399px) {
+    .header-topbar-inner, .header-topbar-inner > div { gap:7px; }
+    .header-topbar a { font-size:11px; }
+  }
   @media(max-width:639px) { .header-brand-name { display:none; } .header-brand img { height:40px; } }
 
   .mobile-menu-footer {max-height:60dvh;overflow-y:auto;overscroll-behavior:contain;}
@@ -322,16 +216,18 @@ const navLinks: NavLink[] = [
   .mobile-zalo-contact svg {flex:0 0 30px;width:30px;height:30px;}
   .mobile-call-contact {display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:8px;background:#edf4fd;color:#125b91;font-size:13px;font-weight:500;}
   .mobile-zalo-contact:focus-visible,.mobile-call-contact:focus-visible {outline:2px solid #168ac0;outline-offset:3px;}
-  .desktop-mega { position:absolute; top:100%; inset-inline:0; max-height:calc(100dvh - 96px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #e3ebf4; box-shadow:0 16px 30px #102e5714; }
+  .desktop-mega { position:absolute; top:100%; inset-inline:0; max-height:calc(100dvh - 98px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #e3ebf4; box-shadow:0 16px 30px #102e5714; }
   .desktop-mega[hidden] { display:none!important; }
-  .mega-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(28px,5vw,72px); padding:32px clamp(28px,5vw,72px) 36px; }
-  .mega-heading { margin:0 0 10px; padding:0 0 12px; border-bottom:1px solid #e1eaf4; color:#102e57; font-size:12px; font-weight:650; letter-spacing:.065em; text-transform:uppercase; }
+  .mega-columns { display:grid; grid-template-columns:repeat(var(--menu-columns),minmax(0,1fr)); gap:clamp(16px,2.4vw,36px); padding:24px; }
+  .mega-root:not(.mega-wide) .desktop-mega { width:290px; inset-inline:auto 0; border-radius:0 0 12px 12px; }
+  .mega-root:not(.mega-wide) .mega-columns { padding:12px 18px; }
+  .mega-heading { margin:0 0 10px; padding:0 0 12px; border-bottom:1px solid #e1eaf4; color:#102e57; font-size:16px; font-weight:700; }
   .mega-items { margin:0; padding:0; list-style:none; }
   .mega-items a { display:flex; align-items:center; min-height:42px; padding:6px 0; font-size:15px; line-height:1.45; }
   .mega-items a:hover,.mega-items a[aria-current="page"] { text-decoration:underline!important; text-underline-offset:4px; }
   .mega-root a:focus-visible,.mega-trigger:focus-visible,.mobile-offering-items a:focus-visible { outline:2px solid #006edc; outline-offset:3px; }
-  .mega-trigger { position:relative; }
-  .mega-trigger[aria-expanded="true"]::after { content:""; position:absolute; inset:auto 0 -14px; height:2px; background:#006edc; }
+  .mega-trigger { display:grid; place-items:center; width:28px; min-height:48px; position:relative; }
+  .mega-trigger[aria-expanded="true"]::after { content:""; position:absolute; inset:auto 0 -7px; height:2px; background:#006edc; }
   .mega-trigger[aria-expanded="true"] svg { transform:rotate(180deg); }
   .mobile-offerings { display:grid; gap:10px; }
   .mobile-offering-group { border:1px solid #e1eaf4; border-radius:12px; background:#f7faff; }
@@ -341,10 +237,9 @@ const navLinks: NavLink[] = [
   .mobile-offering-group[open] > .mobile-offering-heading::after { transform:rotate(225deg); }
   .mobile-offering-heading:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
   .mobile-offering-items { margin:0 14px; padding:10px 0 12px; }
-  .mobile-other-links { gap:8px; margin-top:10px; padding-top:12px; border-top:1px solid #e2e8f0; }
+  .mobile-overview-link { display:inline-flex; align-items:center; min-height:48px; font-weight:650; }
+  .mobile-offering-items + .mobile-offering-items { border-top:1px solid #e1eaf4; }
 
-  .mobile-other-links > div > :is(a,button) { font-size:19px; }
-
-  #mobile-menu[hidden], .mobile-dropdown-content[hidden] { display: none !important; }
+  #mobile-menu[hidden] { display: none !important; }
   .mobile-menu-footer { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
 </style>

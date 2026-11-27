@@ -26,6 +26,7 @@ const cover = projects[0];
   </div>
 </Layout>
 <script>
+  import { projectMenuCategories } from '../../data/project-types';
   const filters = document.querySelectorAll<HTMLButtonElement>('.projects-page .project-filter');
   const cards = document.querySelectorAll<HTMLElement>('#project-grid .project-card');
   const controls = document.querySelector<HTMLElement>('.projects-filters');
@@ -42,8 +43,18 @@ const cover = projects[0];
     if (empty) empty.hidden = visible > 0;
     if (count) count.textContent = category === 'Tất cả' ? `${visible} công trình` : `${visible} / ${cards.length} công trình`;
   };
-  filters.forEach(button => button.addEventListener('click', () => selectCategory(button.dataset.category ?? 'Tất cả')));
+  const initialGroup = new URLSearchParams(location.search).get('nhom');
+  const initialCategory = projectMenuCategories.find(item => item.slug === initialGroup)?.category;
+  if (initialCategory) selectCategory(initialCategory);
+  const clearMenuCategory = () => {
+    const url = new URL(location.href);
+    if (!url.searchParams.has('nhom')) return;
+    url.searchParams.delete('nhom');
+    history.replaceState(history.state, '', url);
+  };
+  filters.forEach(button => button.addEventListener('click', () => { clearMenuCategory(); selectCategory(button.dataset.category ?? 'Tất cả'); }));
   document.getElementById('project-reset')?.addEventListener('click', () => {
+    clearMenuCategory();
     selectCategory('Tất cả');
     filters[0]?.focus();
   });
