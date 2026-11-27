@@ -1,38 +1,54 @@
 ---
 import SubmenuIcon from './SubmenuIcon.astro';
-import MenuOffering from './MenuOffering.astro';
+import { catalogueGroups } from '../data/catalogue-groups';
+import { serviceOfferings } from '../data/site-offerings';
 import { blogCategories } from '../data/blog-categories';
-interface MenuItem { name: string; href: string; description: string; }
+interface MenuItem { name: string; href: string; }
+interface MegaGroup { title: string; items: MenuItem[]; }
 const currentPath = Astro.url.pathname.replace(/\/$/, '');
 const isCurrent = (href: string) => currentPath === href.replace(/\/$/, '');
-const megaGroups: { title: string; all: string; allLabel: string; items: MenuItem[] }[] = [
-  { title: 'Giải pháp & Vật liệu', all: '/san-pham', allLabel: 'Xem tất cả vật liệu', items: [
-    { name: 'Decal dán kính văn phòng', href: '/decal-dan-kinh-van-phong', description: 'Riêng tư cho phòng họp, kết hợp logo và họa tiết.' },
-    { name: 'Phim cách nhiệt nhà kính', href: '/phim-cach-nhiet-nha-kinh', description: 'Chọn phim theo hướng nắng và độ sáng mong muốn.' },
-    { name: 'Film dán nội thất', href: '/dich-vu-film-dan-noi-that/', description: 'Làm mới tủ, cửa, bàn với nhiều vân bề mặt.' },
-    { name: 'Film bảo vệ', href: '/film-bao-ve-noi-that', description: 'PPF cho nội thất, phim an toàn cho kính.' },
-    { name: 'Decal 3D & film trang trí kính', href: '/film-trang-tri-kinh', description: 'Vân sóng, họa tiết và hiệu ứng trang trí ô kính.' },
-    { name: 'Decal quảng cáo', href: '/decal-quang-cao', description: 'Logo, thông điệp và hình ảnh cho cửa hàng.' },
-  ] },
-  { title: 'Kỹ thuật & Gia công', all: '/dich-vu', allLabel: 'Xem tất cả dịch vụ', items: [
-    { name: 'Thiết kế file & phối mẫu', href: '/dich-vu/thiet-ke', description: 'Dàn logo, họa tiết theo kích thước thực tế.' },
-    { name: 'In decal khổ lớn', href: '/dich-vu/in-decal', description: 'In theo thiết kế, chọn cách hoàn thiện phù hợp.' },
-    { name: 'Cắt bế decal vector', href: '/dich-vu/cat-decal', description: 'Gia công chữ, logo và họa tiết theo đường cắt.' },
-    { name: 'Thi công dán tận nơi', href: '/dich-vu/thi-cong-decal', description: 'Khảo sát, xử lý bề mặt và kiểm tra bàn giao.' },
-  ] },
-];
+const glazingGroups = new Set(['decal-mo-dan-kinh', 'decal-dan-kinh-van-phong', 'phim-cach-nhiet-nha-kinh', 'film-trang-tri-kinh']);
+const productLinks = (forGlazing: boolean) => catalogueGroups
+  .filter(category => glazingGroups.has(category.slug) === forGlazing)
+  .map(category => ({ name: category.name, href: `/${category.slug}` }));
 
+const megaMenus: Record<string, MegaGroup[]> = {
+  services: [
+    { title: 'Dịch vụ theo yêu cầu', items: serviceOfferings.map(service => ({ name: service.name, href: `/dich-vu/${service.slug}` })) },
+    { title: 'Giải pháp thi công', items: [
+      { name: 'Decal kính văn phòng', href: '/decal-dan-kinh-van-phong' },
+      { name: 'Phim cách nhiệt nhà kính', href: '/phim-cach-nhiet-nha-kinh' },
+      { name: 'Film dán nội thất', href: '/dich-vu-film-dan-noi-that/' },
+      { name: 'Decal quảng cáo', href: '/decal-quang-cao' },
+      { name: 'Film bảo vệ', href: '/film-bao-ve-noi-that' },
+      { name: 'Decal 3D & film trang trí kính', href: '/film-trang-tri-kinh' },
+    ] },
+    { title: 'Thông tin dịch vụ', items: [
+      { name: 'Tất cả dịch vụ', href: '/dich-vu' },
+      { name: 'Bảng giá thi công', href: '/bang-gia/' },
+      { name: 'Công trình đã thực hiện', href: '/du-an' },
+    ] },
+  ],
+  products: [
+    { title: 'Danh mục', items: [
+      { name: 'Tất cả sản phẩm', href: '/san-pham/' },
+      { name: 'Hướng dẫn đo kính', href: '/huong-dan-do-kinh/' },
+    ] },
+    { title: 'Decal và phim cho kính', items: productLinks(true) },
+    { title: 'Các vật liệu khác', items: productLinks(false) },
+  ],
+};
 interface NavLink {
   name: string;
   href: string;
-  mega?: boolean;
+  mega?: 'services' | 'products';
   dropdown?: { name: string; href: string; highlight?: boolean; showIcon?: boolean }[];
 }
 const contactHref = '/lien-he-idecal';
 const navLinks: NavLink[] = [
   { name: 'Giới thiệu', href: '/gioi-thieu-idecal' },
-  { name: 'Dịch vụ', href: '/dich-vu', mega: true, dropdown: [] },
-  { name: 'Sản phẩm', href: '/san-pham/' },
+  { name: 'Dịch vụ', href: '/dich-vu', mega: 'services' },
+  { name: 'Sản phẩm', href: '/san-pham/', mega: 'products' },
   { name: 'Bảng giá', href: '/bang-gia/' },
   { name: 'Pofolio', href: '/du-an' },
   { name: 'Blog', href: '/blog', dropdown: blogCategories.map(category => ({ name: category.name, href: `/blog/chuyen-muc/${category.slug}`, showIcon: false })) },
@@ -55,22 +71,20 @@ const navLinks: NavLink[] = [
           <div class={`${link.mega ? 'mega-root' : 'relative group'} py-6`}>
             {link.mega ? (
               <>
-                <button id="mega-trigger" type="button" aria-expanded="false" aria-controls="desktop-mega" class="mega-trigger font-medium text-brand-navy hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
+                <button id={`mega-trigger-${link.mega}`} type="button" aria-expanded="false" aria-controls={`desktop-mega-${link.mega}`} class="mega-trigger font-medium text-brand-navy hover:text-primary flex items-center gap-1.5 whitespace-nowrap">
                   {link.name}<svg aria-hidden="true" class="h-3 w-3" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m4 6 4 4 4-4" /></svg>
                 </button>
-                <div id="desktop-mega" hidden inert class="desktop-mega">
+                <div id={`desktop-mega-${link.mega}`} hidden inert class="desktop-mega">
                   <div class="mega-columns">
-                    {megaGroups.map(group => (
+                    {megaMenus[link.mega].map(group => (
                       <section class="mega-column" aria-label={group.title}>
                         <p class="mega-heading">{group.title}</p>
-                        <div class="mega-items">{group.items.map(item => (
-                          <MenuOffering {...item} current={isCurrent(item.href)} />
-                        ))}</div>
-                        <a class="mega-all" href={group.all} aria-current={isCurrent(group.all) ? 'page' : undefined}>{group.allLabel}</a>
+                        <ul class="mega-items">{group.items.map(item => (
+                          <li><a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.name}</a></li>
+                        ))}</ul>
                       </section>
                     ))}
                   </div>
-                  <div class="mega-cta"><div><p>Chưa biết chọn vật liệu nào?</p><small>Gửi ảnh hiện trạng và kích thước để được tư vấn.</small></div><a href="/lien-he-idecal">Nhận tư vấn & báo giá</a></div>
                 </div>
               </>
             ) : (<>
@@ -116,14 +130,18 @@ const navLinks: NavLink[] = [
     </div>
     
     <div class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-4">
-      <div class="mobile-offerings" aria-label="Dịch vụ">
-        {megaGroups.map((group, index) => (
-          <details class="mobile-offering-group" open={index === 0 || isCurrent(group.all) || group.items.some(item => isCurrent(item.href))}>
-            <summary class="mobile-offering-heading">{group.title}</summary>
-            <div class="mobile-offering-items">
-              {group.items.map(item => <MenuOffering {...item} compact current={isCurrent(item.href)} />)}
-              <a class="mega-all" href={group.all} aria-current={isCurrent(group.all) ? 'page' : undefined}>{group.allLabel}</a>
-            </div>
+      <div class="mobile-offerings">
+        {navLinks.map(link => link.mega && (
+          <details class="mobile-offering-group" open={megaMenus[link.mega].some(group => group.items.some(item => isCurrent(item.href)))}>
+            <summary class="mobile-offering-heading">{link.name}</summary>
+            {megaMenus[link.mega].map(group => (
+              <section class="mobile-offering-items" aria-label={group.title}>
+                <p class="mega-heading">{group.title}</p>
+                <ul class="mega-items">{group.items.map(item => (
+                  <li><a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>{item.name}</a></li>
+                ))}</ul>
+              </section>
+            ))}
           </details>
         ))}
       </div>
@@ -160,32 +178,58 @@ const navLinks: NavLink[] = [
 </nav>
 
 <script>
-  const megaRoot = document.querySelector<HTMLElement>('.mega-root');
-  const megaTrigger = document.getElementById('mega-trigger');
-  const megaPanel = document.getElementById('desktop-mega');
-  let megaTimer: ReturnType<typeof setTimeout>;
   const desktopQuery = window.matchMedia('(min-width: 1024px)');
-  function setMega(open: boolean) {
-    clearTimeout(megaTimer);
-    if (!megaPanel || !megaTrigger) return;
-    megaPanel.hidden = !open; megaPanel.inert = !open;
-    megaTrigger.setAttribute('aria-expanded', String(open));
+  const hoverQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+  let activeMenu: HTMLElement | undefined;
+  let pinned = false;
+  let closeTimer: ReturnType<typeof setTimeout>;
+
+  function setMega(root?: HTMLElement, pin = false) {
+    clearTimeout(closeTimer);
+    if (activeMenu && activeMenu !== root) toggleMega(activeMenu, false);
+    if (root) toggleMega(root, true);
+    activeMenu = root;
+    pinned = pin;
   }
-  megaRoot?.addEventListener('mouseenter', () => {
-    if (desktopQuery.matches && window.matchMedia('(hover: hover) and (pointer: fine)').matches) setMega(true);
+
+  function toggleMega(root: HTMLElement, open: boolean) {
+    const trigger = root.querySelector<HTMLButtonElement>('.mega-trigger')!;
+    const panel = root.querySelector<HTMLElement>('.desktop-mega')!;
+    trigger.setAttribute('aria-expanded', String(open));
+    panel.hidden = !open;
+    panel.inert = !open;
+  }
+
+  document.querySelectorAll<HTMLElement>('.mega-root').forEach(root => {
+    const trigger = root.querySelector<HTMLButtonElement>('.mega-trigger')!;
+    root.addEventListener('mouseenter', () => {
+      if (desktopQuery.matches && hoverQuery.matches && (!pinned || root === activeMenu)) setMega(root, pinned);
+    });
+    root.addEventListener('mouseleave', () => {
+      if (activeMenu === root && !pinned && !root.contains(document.activeElement)) {
+        closeTimer = setTimeout(() => setMega(), 160);
+      }
+    });
+    trigger.addEventListener('click', event => {
+      if (activeMenu === root && (pinned || event.detail === 0)) setMega();
+      else setMega(root, true);
+    });
+    root.addEventListener('focusout', event => {
+      if (root === activeMenu && !root.contains(event.relatedTarget as Node | null)) setMega();
+    });
   });
-  megaRoot?.addEventListener('mouseleave', () => {
-    if (!megaRoot.contains(document.activeElement)) megaTimer = setTimeout(() => setMega(false), 180);
+
+  document.addEventListener('pointerdown', event => {
+    if (!activeMenu?.contains(event.target as Node)) setMega();
   });
-  megaTrigger?.addEventListener('click', () => setMega(megaTrigger.getAttribute('aria-expanded') !== 'true'));
-  megaRoot?.addEventListener('focusout', event => {
-    if (!megaRoot.contains(event.relatedTarget as Node | null)) setMega(false);
-  });
-  document.addEventListener('pointerdown', event => { if (!megaRoot?.contains(event.target as Node)) setMega(false); });
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && megaTrigger?.getAttribute('aria-expanded') === 'true') { setMega(false); megaTrigger.focus(); }
+    if (event.key !== 'Escape' || !activeMenu) return;
+    const trigger = activeMenu.querySelector<HTMLButtonElement>('.mega-trigger');
+    setMega();
+    trigger?.focus();
   });
-  desktopQuery.addEventListener('change', () => setMega(false));
+  desktopQuery.addEventListener('change', () => setMega());
+
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -200,7 +244,7 @@ const navLinks: NavLink[] = [
     mobileMenu.inert = !open;
     menuToggle.setAttribute('aria-expanded', String(open));
     if (open) {
-      setMega(false);
+      setMega();
       previousOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
       menuClose?.focus();
@@ -278,22 +322,16 @@ const navLinks: NavLink[] = [
   .mobile-zalo-contact svg {flex:0 0 30px;width:30px;height:30px;}
   .mobile-call-contact {display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border-radius:8px;background:#edf4fd;color:#125b91;font-size:13px;font-weight:500;}
   .mobile-zalo-contact:focus-visible,.mobile-call-contact:focus-visible {outline:2px solid #168ac0;outline-offset:3px;}
-  .desktop-mega { position:absolute; top:100%; left:50%; transform:translateX(-50%); width:960px; max-width:calc(100vw - 32px); max-height:calc(100dvh - 112px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #dce6f1; border-radius:20px; box-shadow:0 20px 48px #0b174024; }
+  .desktop-mega { position:absolute; top:100%; inset-inline:0; max-height:calc(100dvh - 96px); overflow-y:auto; overscroll-behavior:contain; background:#fff; border:1px solid #e3ebf4; box-shadow:0 16px 30px #102e5714; }
   .desktop-mega[hidden] { display:none!important; }
-  .mega-columns { display:grid; grid-template-columns:minmax(0, 1.7fr) minmax(0, 1fr); gap:16px; padding:16px; }
-  .mega-column { display:flex; flex-direction:column; padding:16px; border:1px solid #e1eaf4; border-radius:14px; background:#f7faff; }
-  .mega-heading { margin:0 0 12px; padding:0 0 12px; border-bottom:1px dashed #d0dfef; color:#102e57; font-size:16px; font-weight:650; }
-  .mega-items { display:grid; gap:6px; }
-  .mega-column:first-child .mega-items { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  .mega-all { display:flex; align-items:center; align-self:flex-start; min-height:48px; margin-top:auto; padding:0 10px; border-radius:8px; color:#125b91; font-size:14px; font-weight:650; }
-  .mega-all:hover,.mega-all[aria-current="page"] { background:#e6f0ff; color:#102e57; }
-  .mega-cta { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 32px; border-top:1px solid #e1eaf4; background:#f3f7fc; }
-  .mega-cta p { margin:0; font-size:14px; font-weight:600; color:#163d60; }
-  .mega-cta small { display:block; margin-top:4px; font-size:12px; line-height:1.6; color:#536579; }
-  .mega-cta a { flex-shrink:0; padding:13px 18px; background:linear-gradient(110deg,#0878bd,#6b20ed); border-radius:8px; font-size:13px; font-weight:600; color:white; }
-  .mega-cta a:hover { background:#1d4ed8; }
-  .mega-root a:focus-visible,.mega-trigger:focus-visible { outline:2px solid #2563eb; outline-offset:3px; }
-  .mega-trigger[aria-expanded="true"] { color:#16649b; }
+  .mega-columns { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(28px,5vw,72px); padding:32px clamp(28px,5vw,72px) 36px; }
+  .mega-heading { margin:0 0 10px; padding:0 0 12px; border-bottom:1px solid #e1eaf4; color:#102e57; font-size:12px; font-weight:650; letter-spacing:.065em; text-transform:uppercase; }
+  .mega-items { margin:0; padding:0; list-style:none; }
+  .mega-items a { display:flex; align-items:center; min-height:42px; padding:6px 0; font-size:15px; line-height:1.45; }
+  .mega-items a:hover,.mega-items a[aria-current="page"] { text-decoration:underline!important; text-underline-offset:4px; }
+  .mega-root a:focus-visible,.mega-trigger:focus-visible,.mobile-offering-items a:focus-visible { outline:2px solid #006edc; outline-offset:3px; }
+  .mega-trigger { position:relative; }
+  .mega-trigger[aria-expanded="true"]::after { content:""; position:absolute; inset:auto 0 -14px; height:2px; background:#006edc; }
   .mega-trigger[aria-expanded="true"] svg { transform:rotate(180deg); }
   .mobile-offerings { display:grid; gap:10px; }
   .mobile-offering-group { border:1px solid #e1eaf4; border-radius:12px; background:#f7faff; }
@@ -301,8 +339,8 @@ const navLinks: NavLink[] = [
   .mobile-offering-heading::-webkit-details-marker { display:none; }
   .mobile-offering-heading::after { content:""; width:8px; height:8px; flex-shrink:0; margin-right:3px; border:solid currentColor; border-width:0 2px 2px 0; transform:rotate(45deg); }
   .mobile-offering-group[open] > .mobile-offering-heading::after { transform:rotate(225deg); }
-  .mobile-offering-heading:focus-visible,.mobile-offering-group .mega-all:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
-  .mobile-offering-items { margin:0 8px; padding:4px 0 6px; border-top:1px dashed #d0dfef; }
+  .mobile-offering-heading:focus-visible { outline:2px solid #2563eb; outline-offset:2px; }
+  .mobile-offering-items { margin:0 14px; padding:10px 0 12px; }
   .mobile-other-links { gap:8px; margin-top:10px; padding-top:12px; border-top:1px solid #e2e8f0; }
 
   .mobile-other-links > div > :is(a,button) { font-size:19px; }

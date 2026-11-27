@@ -4,6 +4,7 @@
  body a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo,.header-brand):not(:has(img,svg:only-child)):hover {color:var(--ui-primary-hover)!important;}
  body :is(.brand-dark,[data-heading-theme='dark'],.home-consult,.office-why,.footer-contact) a:not([class*='btn-'],[class*='button'],.gspb-buttonbox,.footer-logo) {color:#8bd0f5!important;}
  body .site-header .header-row .header-main-links > div > :is(a,button),
+ body .site-header :is(.desktop-mega,.mobile-offering-group) .mega-items a,
  body .site-header #mobile-menu .mobile-other-links > div > :is(a,button) {color:#102e57!important;}
  @media(max-width:767px) {
   body .homepage-original #gspb_col-id-gsbp-81b980a {margin-top:32px!important;position:relative!important;padding-bottom:0!important;}

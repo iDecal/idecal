@@ -20,7 +20,6 @@
  body :is(.brand-dark,[data-heading-theme='dark'],.home-consult,.office-why) :is(.bg-white,[data-heading-theme='light']){--airify-ink:#102e57;--airify-muted:#566375;--content-link-color:#153e68;}
  body #site-footer{background:#e4eef2!important;background-image:none!important;--heading-surface-ink:#102e57;}
  body #site-footer .footer-bottom{background:#d5e5ed!important;}
- body :is(.mega-column+.mega-column,.desktop-mega .mega-cta){background:#f0f5f7!important;background-image:none!important;}
  body .projects-filters{background:#f0f5f7!important;}
  body .homepage-original #gspb_row-id-gsbp-aa4530a.home-partner-strip{background:#e4eef2!important;}
  body .homepage-original #gspb_iconsList-id-gsbp-0e0111d :is(span,svg),body .banner-benefit-list :is(span,svg){color:#153e68!important;}

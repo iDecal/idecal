@@ -1,16 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ProductImage from '../../components/ProductImage.astro';
-import { products, productCategories, productsInCategory } from '../../data/catalogue';
-import { productLandings, landingProducts } from '../../data/site-offerings';
+import { products, productsInCategory } from '../../data/catalogue';
+import { landingProducts } from '../../data/site-offerings';
+import { catalogueGroups } from '../../data/catalogue-groups';
 
-const hiddenCategorySlugs = new Set(['phim-bao-ve', 'decal-trang-tri', 'decal-cat-cnc', 'decal-cat-vi-tinh']);
-const groups = [
-  ...productLandings.map(category => ({ ...category, count: landingProducts(category).length })),
-  ...productCategories
-    .filter(category => category.editorCreated && !hiddenCategorySlugs.has(category.slug))
-    .map(category => ({ ...category, count: productsInCategory(category.slug).length })),
-];
+const groups = catalogueGroups.map(category => ({
+  ...category,
+  count: 'select' in category ? landingProducts(category).length : productsInCategory(category.slug).length,
+}));
 const totalGroups = groups.length;
 ---
 <Layout
