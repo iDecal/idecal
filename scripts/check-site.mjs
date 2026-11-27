@@ -83,8 +83,7 @@ for (const category of catalogueCategories) {
   const html = await readFile(categoryPage, 'utf8');
   const expected = catalogueProducts.filter(product => product.category === category.slug).length;
   if (category.slug === 'phim-cach-nhiet') {
-    assert.ok(html.includes('thermal-service-page'), 'Thermal category must render the consolidated service');
-    for (const product of catalogueProducts.filter(product => product.category === category.slug)) assert.ok(html.includes(`data-product-id="${product.slug}"`), `Merged service must retain category product: ${product.slug}`);
+    assert.ok(html.includes('data-thermal-service'), 'Thermal category must render the consolidated service');
   } else if (!['decal-mo-dan-kinh', 'decal-pvc', 'phim-bao-ve'].includes(category.slug)) assert.equal((html.match(/class="catalogue-card\b/g) ?? []).length, expected, `Legacy category count mismatch: ${category.slug}`);
 }
 // New navigation groups may overlap by application while preserving original product URLs.
@@ -103,6 +102,10 @@ for (const [slug, sample] of landingSamples) {
   assert.ok(catalogueIndex.includes(`href="/${slug}"`), `Product index must link to landing ${slug}`);
   if (slug === 'decal-dan-kinh-van-phong') {
     assert.ok(html.includes('office-glass-page') && html.includes('id="bao-gia-van-phong"'), 'Office landing must render imported editorial content and prices');
+    continue;
+  }
+  if (slug === 'phim-cach-nhiet-nha-kinh') {
+    assert.ok(html.includes('data-film-products') && html.includes('id="mau-san-pham"'), 'Thermal landing must show the imported film catalogue');
     continue;
   }
   assert.ok(html.includes(`data-product-id="${sample}"`) || html.includes(`data-protection-film="${sample}"`), `Landing ${slug} must show relevant sample ${sample}`);

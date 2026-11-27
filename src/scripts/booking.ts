@@ -18,6 +18,10 @@ if (form) {
   const status = byId<HTMLElement>('booking-copy-status');
   const data: BookingData = JSON.parse(byId('booking-product-data').textContent ?? '');
   const params = new URLSearchParams(location.search);
+  const film = params.get('mau-phim')?.trim();
+  if (params.get('dich-vu') === 'thi-cong-decal' && film && !notes.value) {
+    notes.value = `Quan tâm mã phim: ${film.slice(0, 100)}`;
+  }
   const lookup = (entries: Record<string, string>, param: string) => {
     const key = params.get(param);
     return key && Object.hasOwn(entries, key) ? entries[key] : '';

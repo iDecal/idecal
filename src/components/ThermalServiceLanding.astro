@@ -1,70 +1,357 @@
 ---
-import ProductImage from './ProductImage.astro';
-import ThermalIcon from './ThermalIcon.astro';
-import ThermalCostEstimate from './ThermalCostEstimate.astro';
-import BannerBenefits from './BannerBenefits.astro';
-import ProductBrands from './ProductBrands.astro';
-import ProductCatalog from './ProductCatalog.astro';
-import ProductCard from './ProductCard.astro';
+import ProductBrandLogo from './ProductBrandLogo.astro';
+import productBrands from '../data/product-brands.json';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
-import ServiceSupport from './ServiceSupport.astro';
-import {getServiceCta} from '../data/service-cta';
-import {thermalTitle,thermalCategory as category,thermalLanding as landing,thermalPresentation,thermalFilms,thermalSupportProducts,thermalPricing,thermalPhotos,thermalFaqs,thermalChecks,thermalSelectionCriteria} from '../data/thermal-service';
+import { getServiceCta } from '../data/service-cta';
+import { thermalCopy as copy, thermalFaqs, thermalPhotos, thermalTitle } from '../data/thermal-service';
+import films from '../data/thermal-landing-films.json';
 import '../styles/thermal-service.css';
-const quote=getServiceCta('phim-cach-nhiet').href;
-const benefitIcons = ['heat', 'shield', 'eye', 'energy'] as const;
-const applicationIcons = ['home', 'office', 'shop'] as const;
-const jumpItems=[
-  {id:'bao-gia-phim-cach-nhiet',label:'Bảng giá'},
-  {id:'chon-phim',label:'Cách chọn phim'},
-  {id:'mau-san-pham',label:'Mẫu phim'},
-  {id:'ung-dung-phim',label:'Ứng dụng'},
-  {id:'thi-cong-phim',label:'Thi công'},
-  {id:'anh-thi-cong-phim',label:'Ảnh thực tế'},
-  {id:'cau-hoi-phim',label:'Câu hỏi'},
-] as const;
+
+const applicationPhotos = [
+  { src: '/images/cong-trinh-thuc-te/15-film-cua-kinh-ban-cong.webp', alt: 'Tầm nhìn qua kính ban công căn hộ' },
+  { src: '/images/cong-trinh-thuc-te/34-thi-cong-phim-vach-kinh.webp', alt: 'Kỹ thuật viên thi công phim trên vách kính văn phòng' },
+  { src: '/images/blog-wordpress/711e052da151ae36a5f4.jpg', alt: 'Thi công dán phim cách nhiệt giếng trời tại Quận Tân Bình' },
+  { src: '/images/cong-trinh/Thi công Decal lưới dán kính showroom GEELY tại Bình Dương.jpg', alt: 'Mặt tiền kính showroom GEELY tại Bình Dương' },
+];
+const quote = getServiceCta('phim-cach-nhiet').href;
+const quoteFor = (name: string) => quote.replace('#yeu-cau', `&mau-phim=${encodeURIComponent(name)}#yeu-cau`);
 ---
-<div class="thermal-service-page" data-thermal-service>
-  <section class="thermal-hero">
-    <div class="container thermal-hero-grid">
-      <header class="thermal-hero-heading">
-        <p class="thermal-hero-label">Tư vấn vật liệu và thi công</p>
-        <h1 class="brand-heading">{thermalTitle}</h1>
-      </header>
-      <div class="thermal-hero-photo">
-        <figure>
-          <ProductImage src={landing.image} alt="Kỹ thuật viên đặt cuộn phim cách nhiệt lên ô kính" eager />
-        </figure>
-      </div>
-      <div class="thermal-hero-content">
-        <p>Phim cách nhiệt nhà kính giúp giảm nhiệt do nắng chiếu qua kính, giảm chói và hạn chế tia UV. Chọn mẫu theo loại kính, hướng nắng và lượng ánh sáng tự nhiên bạn muốn giữ.</p>
-        <div class="thermal-hero-actions">
-          <a href="#bao-gia-phim-cach-nhiet" class="btn-primary-solid">Xem bảng giá theo m² <span aria-hidden="true">↓</span></a>
-          <a href={quote} class="thermal-secondary-button">Nhận báo giá thi công <span aria-hidden="true">→</span></a>
+<div class="thermal-film-landing" data-thermal-service>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow" data-heading-label="">Phim cách nhiệt nhà kính chính hãng</div>
+        <h1>{thermalTitle}</h1>
+        <div class="hero-copy">{copy.intro.map(paragraph => <p>{paragraph}</p>)}</div>
+        <div class="hero-actions">
+          <a class="button primary" href="#bao-gia">{copy.action} <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="tel:0866077040">Hotline kỹ thuật: 0866 077 040</a>
         </div>
-        <BannerBenefits benefits={landing.benefits.map(title => ({ title }))} />
+        <div class="hero-proof">
+          <div>
+            <b>99.9%</b>
+            cản tia UV
+          </div>
+          <span class="divider"></span>
+          <div>
+            <b>Đến 8°C</b>
+            giảm nhiệt độ phòng
+          </div>
+          <span class="divider"></span>
+          <div>
+            <b>5–10 năm</b>
+            bảo hành
+          </div>
+        </div>
+        <p class="film-caveat">Thông số, mức tiết kiệm và thời hạn bảo hành thay đổi theo mã phim, loại kính và điều kiện sử dụng.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image" data-hero-media="">
+          <img src="/images/Banner/Dich-vu-decal-dan-kinh-cach-nhiet.webp" alt="Mặt tiền tòa nhà kính nhìn từ dưới tán cây" loading="eager" fetchpriority="high">
+          <span class="hero-label">Nano ceramic · phản quang · khói trung tính</span>
+        </div>
+        <div class="hero-note">
+          <strong>~30%</strong>
+          <span>tiết kiệm điện lạnh cho không gian kính</span>
+        </div>
       </div>
     </div>
   </section>
-  <nav class="thermal-jump" aria-label="Nội dung dịch vụ phim cách nhiệt"><div class="container">{jumpItems.map(item=><a href={'#'+item.id}><span>{item.label}</span></a>)}</div></nav>
-
-  <section class="container thermal-section thermal-overview" aria-labelledby="thermal-overview-title"><header class="thermal-heading"><p data-heading-label>Giảm nắng gắt, cân bằng ánh sáng</p><h2 id="thermal-overview-title">Phim cách nhiệt chống nóng cho kính</h2><p>{landing.description}</p></header><div class="thermal-benefits">{category.benefits.map((item, index)=><article><ThermalIcon name={benefitIcons[index]} /><h3>{item.title}</h3><p>{item.description}</p></article>)}</div></section>
-  <div class="thermal-brands"><ProductBrands group="phim-cach-nhiet-nha-kinh" /></div>
-
-  <section id="bao-gia-phim-cach-nhiet" class="thermal-price-surface"><div class="container thermal-section"><header class="thermal-heading"><p data-heading-label>{thermalPricing.scope}</p><h2>Báo giá phim cách nhiệt nhà kính 2026</h2><p>{thermalPricing.description}</p></header><div class="thermal-price-layout"><div><table class="thermal-price-table"><caption class="sr-only">Báo giá phim cách nhiệt tham khảo năm 2026</caption><thead><tr>{thermalPricing.columns.map(column=><th scope="col">{column}</th>)}</tr></thead><tbody>{thermalPricing.rows.map(row=><tr><th scope="row">{row[0]}</th><td>{row[1]}</td></tr>)}</tbody></table><ul class="thermal-price-notes">{thermalPricing.notes.map(note=><li>{note}</li>)}</ul><ThermalCostEstimate rows={thermalPricing.rows} /></div><aside class="thermal-quote-box"><h3>Báo giá theo công trình của bạn</h3><p>Gửi ảnh kính, kích thước và nhu cầu giữ sáng để được tư vấn mã phim cùng phương án thi công.</p><a href={quote} class="btn-primary-solid">Nhận báo giá thi công <span aria-hidden="true">→</span></a><a href="/huong-dan-do-kinh/" class="thermal-text-link">Hướng dẫn đo kính <span aria-hidden="true">→</span></a></aside></div></div></section>
-
-  <section id="chon-phim" class="container thermal-section"><header class="thermal-heading"><p data-heading-label>Chọn mẫu phù hợp</p><h2>Cách chọn phim cách nhiệt cho nhà kính</h2><p>{landing.guidance}</p></header><dl class="thermal-specs">{thermalSelectionCriteria.map(item=><div><dt>{item.term}</dt><dd>{item.explanation}</dd></div>)}</dl><div class="thermal-needs">{category.needs.slice(0,3).map(item=><article><h3>{item.label}</h3><p>{item.tip}</p></article>)}</div><div class="thermal-swatches"><figure><img src="/images/uploads/film-phan-guong-xanh-la.png" alt="Minh họa sắc xanh lá của film phản gương trên cửa kính" width="1500" height="1120" loading="lazy" /><figcaption>Sắc xanh lá</figcaption></figure><figure><img src="/images/uploads/film-phan-guong-xanh-xam.png" alt="Minh họa sắc xanh xám của film phản gương trên cửa kính" width="1500" height="1120" loading="lazy" /><figcaption>Sắc xanh xám</figcaption></figure></div><p class="thermal-image-note">Ảnh minh họa sắc phim. Đối chiếu mẫu thực tế khi chọn.</p></section>
-
-  <div class="thermal-soft"><ProductCatalog items={thermalFilms} category={category} heading="Sản phẩm phim cách nhiệt nhà kính" /></div>
-  {thermalSupportProducts.length>0&&<section class="container thermal-section thermal-support-products" aria-labelledby="thermal-support-title"><header class="thermal-heading"><h2 id="thermal-support-title">Sản phẩm hỗ trợ & bảo vệ kính</h2><p>Tham khảo thêm bộ dụng cụ thi công và phim bảo vệ kính theo nhu cầu sử dụng.</p></header><div class="thermal-support-grid">{thermalSupportProducts.map(product=><ProductCard product={product} />)}</div></section>}
-
-
-
-  <section id="ung-dung-phim" class="thermal-soft"><div class="container thermal-section"><header class="thermal-heading"><p data-heading-label>Ứng dụng theo không gian</p><h2>Phim cách nhiệt nhà kính phù hợp ở đâu?</h2></header><div class="thermal-applications">{landing.uses.map((item, index)=><article><ThermalIcon name={applicationIcons[index]} /><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></div></section>
-
-  <section id="thi-cong-phim" class="container thermal-section"><div class="thermal-installation"><header class="thermal-heading"><p data-heading-label>Thi công phim cách nhiệt nhà kính</p><h2>Thống nhất phương án trước khi dán</h2><p>Lựa chọn phim theo loại kính, hướng nắng và nhu cầu giữ sáng cho nhà ở, văn phòng hoặc showroom.</p><a data-cta-text href="/dich-vu/thi-cong-decal/" class="thermal-text-link">Xem dịch vụ thi công <span aria-hidden="true">→</span></a></header><ol>{thermalChecks.map((point,index)=><li><div><span class="thermal-step-label">Bước {'0'+(index+1)}</span><p>{point}</p></div></li>)}</ol></div><p class="thermal-installation-scope">Có thể mua vật liệu hoặc trao đổi thêm về thiết kế, in, cắt và thi công. Phạm vi công việc được xác nhận trước khi thực hiện.</p></section>
-  <div class="container thermal-gallery"><InstallationPhotoGallery photos={thermalPhotos} id="anh-thi-cong-phim" heading="Ảnh thi công phim cách nhiệt" introduction={thermalPresentation.introduction} /></div>
-
-  <section id="cau-hoi-phim" class="container thermal-section thermal-faq"><header class="thermal-heading"><p data-heading-label>Trước khi đặt dịch vụ</p><h2>Câu hỏi về phim cách nhiệt nhà kính</h2></header><div>{thermalFaqs.map(item=><details><summary>{item.question}<span aria-hidden="true">+</span></summary><p>{item.answer}</p></details>)}</div></section>
-  <ServiceSupport service="phim-cach-nhiet" />
+  <nav class="jump" aria-label="Nội dung trang phim cách nhiệt">
+    <div class="container jump-inner">
+      <a href="#san-pham">Sản phẩm</a>
+      <a href="#bao-gia">Báo giá 2026</a>
+      <a href="#chon-phim">Các loại phim</a>
+      <a href="#thuong-hieu-phim">Thương hiệu</a>
+      <a href="#ung-dung">Ứng dụng</a>
+      <a href="#quy-trinh">Quy trình</a>
+      <a href="#thuc-te">Công trình</a>
+      <a href="#faq">Hỏi đáp</a>
+    </div>
+  </nav>
+  {[
+    { id: 'loi-ich', content: copy.benefits, grid: 'benefits', card: 'benefit' },
+    { id: 'chon-phim', content: copy.types, grid: 'film-info-grid', card: 'step' },
+  ].map(({ id, content, grid, card }) => (
+    <section class="section" id={id}>
+      <div class="container">
+        <div class="section-head">
+          <h2>{content.heading}</h2>
+          <p>{content.intro}</p>
+        </div>
+        <div class={grid}>
+          {content.items.map(item => (
+            <article class={card}>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+  <section class="section film-brands" id="thuong-hieu-phim">
+    <div class="container">
+      <header class="section-head">
+        <h2>{copy.brands.heading}</h2>
+        <p>{copy.brands.intro}</p>
+      </header>
+      <div class="film-brand-grid">
+        {copy.brands.items.map(item => {
+          const brand = productBrands.find(brand => brand.slug === item.logoSlug);
+          return (
+            <article class="step film-brand-card">
+              {brand?.logo && <ProductBrandLogo name={brand.name} logo={brand.logo} />}
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+  <span id="mau-san-pham" class="legacy-anchor" aria-hidden="true"></span>
+  <section class="section products-section" id="san-pham">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="kicker" data-heading-label="">Danh mục 2026</div>
+          <h2>8 sắc phim, một lựa chọn đúng cho từng mặt kính.</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Lọc mẫu phim" data-film-filters hidden>
+          <button class="filter" data-filter="all" aria-pressed="true" type="button">Tất cả (8)</button>
+          <button class="filter" data-filter="reflective" aria-pressed="false" type="button">Phản gương</button>
+          <button class="filter" data-filter="smoke" aria-pressed="false" type="button">Khói trung tính</button>
+          <button class="filter" data-filter="cool" aria-pressed="false" type="button">Xanh dịu mắt</button>
+        </div>
+      </div>
+      <div class="products" id="products" data-film-products="">
+        {films.map((film, index) => (
+          <article class="product" data-film-group={film.group}>
+            <div class="swatch" style={{ background: film.swatch }}>
+              <span>{film.label}</span>
+              <span>#{index + 1}</span>
+            </div>
+            <div class="product-body">
+              <h3>{film.name}</h3>
+              <div class="stats">
+                <div><small>VLT</small><b>{film.vlt}</b></div>
+                <div><small>UV</small><b>{film.uv}</b></div>
+                <div><small>IR</small><b>{film.ir}</b></div>
+              </div>
+              <p>{film.description}</p>
+              <div class="product-foot">
+                <div class="price"><small>Đơn giá tham khảo</small>{film.price}</div>
+                <a class="text-button" href={quoteFor(film.name)}>Chọn mã →</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <span id="bao-gia-phim-cach-nhiet" class="legacy-anchor" aria-hidden="true"></span>
+  <section class="section estimate-section" id="bao-gia">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="thermal-pricing-title">{copy.pricing.heading}</h2>
+        <p>{copy.pricing.intro}</p>
+      </div>
+      <div class="film-price-scroll" role="region" tabindex="0" aria-labelledby="thermal-pricing-title">
+        <table class="film-price-table">
+          <thead><tr>{copy.pricing.columns.map(column => <th scope="col">{column}</th>)}</tr></thead>
+          <tbody>
+            {copy.pricing.rows.map(([name, ...values]) => (
+              <tr><th scope="row">{name}</th>{values.map(value => <td>{value}</td>)}</tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <ul class="film-price-notes">{copy.pricing.notes.map(note => <li>{note}</li>)}</ul>
+    </div>
+    <div class="container estimate-grid">
+      <div>
+        <h3>Dự toán theo diện tích kính</h3>
+        <p>Chọn diện tích và nhóm phim để ước tính nhanh. Bộ tính sử dụng mức giá theo nhóm, còn bảng trên ghi đơn giá tham khảo theo từng dòng phim.</p>
+      </div>
+      <div class="calculator" data-film-calculator>
+        <div class="calc-head">
+          <h3>Ước tính chi phí</h3>
+          <span>TRỰC TUYẾN</span>
+        </div>
+        <div class="field">
+          <div class="field-head">
+            <label for="area">Diện tích kính</label>
+            <span><input class="value-input" id="area" type="number" min="2" max="150" value="15" required="" step="1"> m²</span>
+          </div>
+          <input class="range" id="areaRange" type="range" min="2" max="150" value="15" aria-label="Điều chỉnh diện tích kính">
+          <div class="field-head">
+            <span>2m²</span>
+            <span>150m²</span>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-head">
+            <span>Phân khúc phim</span>
+          </div>
+          <div class="tier-grid" role="group" aria-label="Phân khúc phim">
+            <button class="tier" data-min="190000" data-max="220000" aria-pressed="false" type="button">
+              <b>Tiết kiệm</b>
+              <small>190k – 220k/m²</small>
+            </button>
+            <button class="tier" data-min="250000" data-max="380000" aria-pressed="true" type="button">
+              <b>Phổ thông</b>
+              <small>250k – 380k/m² · IceTouch (Hàn Quốc), Rainier (Mỹ)</small>
+            </button>
+            <button class="tier" data-min="420000" aria-pressed="false" type="button">
+              <b>Cao cấp</b>
+              <small>từ 420k/m²</small>
+            </button>
+          </div>
+        </div>
+        <div class="total">
+          <small>Tổng dự kiến · trọn gói</small>
+          <output id="total" for="area areaRange">3.750.000đ – 5.700.000đ</output>
+        </div>
+        <div class="calc-actions">
+          <a class="button accent" id="zalo" href="https://zalo.me/0866077040" target="_blank" rel="noopener">Gửi qua Zalo</a>
+          <a class="button ghost" href={quote}>Nhận báo giá chi tiết</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <span id="ung-dung-phim" class="legacy-anchor" aria-hidden="true"></span>
+  <section class="section" id="ung-dung">
+    <div class="container">
+      <div class="section-head">
+        <h2>{copy.applications.heading}</h2>
+        <p>{copy.applications.intro}</p>
+      </div>
+      <div class="spaces film-info-grid">
+        {copy.applications.items.map((item, index) => (
+          <article class="space">
+            <div class="space-img"><img {...applicationPhotos[index]} loading="lazy" /></div>
+            <div class="space-body">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <a href="#bao-gia">Xem giải pháp →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <span id="thi-cong-phim" class="legacy-anchor" aria-hidden="true"></span>
+  <section class="section" id="quy-trinh">
+    <div class="container">
+      <div class="section-head">
+        <h2>{copy.process.heading}</h2>
+        <p>{copy.process.intro}</p>
+      </div>
+      <ol class="process film-process">
+        {copy.process.items.map((item, index) => (
+          <li class="step">
+            <span class="step-num">Bước {index + 1}</span>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </li>
+        ))}
+      </ol>
+      <span id="anh-thi-cong-phim" class="legacy-anchor" aria-hidden="true"></span>
+      <div class="gallery" id="thuc-te">
+        <InstallationPhotoGallery photos={thermalPhotos} id="anh-thi-cong-phim-anh" heading={copy.galleryHeading} />
+      </div>
+    </div>
+  </section>
+  <span id="cau-hoi-phim" class="legacy-anchor" aria-hidden="true"></span>
+  <section class="section faq-section" id="faq">
+    <div class="container faq-layout">
+      <div>
+        <div class="kicker" data-heading-label="">Câu hỏi thường gặp</div>
+        <h2>{copy.faqHeading}</h2>
+        <div class="faq">
+            {thermalFaqs.map(item => (
+              <details class="faq-item" name="thermal-film-faq">
+                <summary class="faq-trigger">{item.question}<span class="faq-icon" aria-hidden="true"></span></summary>
+                <div class="faq-content">{item.answer}</div>
+              </details>
+            ))}
+          </div>
+      </div>
+      <aside class="guide">
+        <div class="kicker" data-heading-label="">Cẩm nang iDecal</div>
+        <h3>Đọc nhanh trước khi chọn phim</h3>
+        <a href="#san-pham">Phản gương hay Nano Ceramic?<span>So sánh khả năng chống nóng và giữ view.</span></a>
+        <a href="/huong-dan-do-kinh/">Cách tự đo diện tích kính<span>Công thức đơn giản để có dự toán ban đầu.</span></a>
+        <a href="#quy-trinh">Những lỗi thường gặp khi tự dán<span>Vì sao bọt khí và mép phim bị bong.</span></a>
+      </aside>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <div class="kicker" data-heading-label="">Khảo sát &amp; mang mẫu tận nơi miễn phí</div>
+          <h2>{copy.contactHeading}</h2>
+          <p>{copy.contactIntro}</p>
+          <p>Hotline / Zalo: <a href="tel:0866077040">0866 077 040</a> · <a href="/lien-he-idecal/">Xem địa chỉ showroom và văn phòng iDecal</a></p>
+          <p>{copy.commitment}</p>
+        </div>
+        <a class="button primary" href={quote}>Đăng ký tư vấn</a>
+      </div>
+    </div>
+  </section>
 </div>
+
+<script>
+  const money = new Intl.NumberFormat('vi-VN');
+  for (const root of document.querySelectorAll<HTMLElement>('.thermal-film-landing')) {
+    const filters = root.querySelector<HTMLElement>('[data-film-filters]');
+    const filterButtons = filters?.querySelectorAll<HTMLButtonElement>('button[data-filter]');
+    const products = root.querySelectorAll<HTMLElement>('[data-film-group]');
+    filters?.addEventListener('click', event => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-filter]');
+      if (!button) return;
+      for (const option of filterButtons ?? []) option.setAttribute('aria-pressed', String(option === button));
+      for (const product of products) {
+        product.hidden = button.dataset.filter !== 'all' && product.dataset.filmGroup !== button.dataset.filter;
+      }
+    });
+    if (filters) filters.hidden = false;
+
+    const calculator = root.querySelector('[data-film-calculator]');
+    const area = calculator?.querySelector<HTMLInputElement>('input[type="number"]');
+    const range = calculator?.querySelector<HTMLInputElement>('input[type="range"]');
+    const total = calculator?.querySelector<HTMLOutputElement>('output');
+    const tiers = calculator?.querySelectorAll<HTMLButtonElement>('button[data-min]');
+    let tier = calculator?.querySelector<HTMLButtonElement>('button[aria-pressed="true"]');
+    if (!area || !range || !total || !tiers || !tier) continue;
+
+    const update = () => {
+      if (!area.validity.valid) {
+        total.value = 'Nhập diện tích từ 2 đến 150 m².';
+        return;
+      }
+      const low = money.format(area.valueAsNumber * Number(tier?.dataset.min));
+      const cap = tier?.dataset.max;
+      total.value = cap ? `${low} đ – ${money.format(area.valueAsNumber * Number(cap))} đ` : `Từ ${low} đ`;
+    };
+
+    area.addEventListener('input', () => {
+      if (area.validity.valid) range.value = area.value;
+      update();
+    });
+    range.addEventListener('input', () => {
+      area.value = range.value;
+      update();
+    });
+    for (const option of tiers) {
+      option.addEventListener('click', () => {
+        tier = option;
+        for (const other of tiers) other.setAttribute('aria-pressed', String(other === option));
+        update();
+      });
+    }
+    update();
+  }
+</script>

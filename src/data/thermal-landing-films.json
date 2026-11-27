@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Medium Black 18",
+    "group": "smoke",
+    "label": "Khói trung tính",
+    "swatch": "linear-gradient(135deg,#475569,#0f172a)",
+    "vlt": "18%",
+    "uv": "99%",
+    "ir": "78%",
+    "description": "Khói đen trung tính, giảm chói hiệu quả và giữ màu cảnh vật tự nhiên.",
+    "price": "Liên hệ"
+  },
+  {
+    "name": "Xanh dương phản gương",
+    "group": "reflective",
+    "label": "Phản gương",
+    "swatch": "linear-gradient(135deg,#38bdf8,#172554)",
+    "vlt": "15%",
+    "uv": "99.9%",
+    "ir": "88%",
+    "description": "Ánh xanh sang trọng, cản nhiệt mạnh cho kính hướng Tây.",
+    "price": "315.000 ₫/m²"
+  },
+  {
+    "name": "Khói sáng P.K18",
+    "group": "smoke",
+    "label": "Phổ thông",
+    "swatch": "linear-gradient(135deg,#94a3b8,#334155)",
+    "vlt": "35%",
+    "uv": "99%",
+    "ir": "72%",
+    "description": "Lấy sáng tốt, dịu mắt và tối ưu chi phí cho văn phòng.",
+    "price": "160.000 ₫/m²"
+  },
+  {
+    "name": "Smoke Black",
+    "group": "smoke",
+    "label": "Riêng tư",
+    "swatch": "linear-gradient(135deg,#374151,#030712)",
+    "vlt": "12%",
+    "uv": "99.5%",
+    "ir": "82%",
+    "description": "Khói đen sâu, tăng riêng tư cho phòng ngủ và phòng họp.",
+    "price": "Liên hệ"
+  },
+  {
+    "name": "IceTouch Nano Ceramic",
+    "group": "cool",
+    "label": "Công nghệ cao cấp",
+    "swatch": "linear-gradient(135deg,#7dd3fc,#0f2942)",
+    "vlt": "45%",
+    "uv": "99.9%",
+    "ir": "92%",
+    "description": "Men gốm Nano Ceramic, cản nhiệt cao nhưng không cản sóng.",
+    "price": "Liên hệ"
+  },
+  {
+    "name": "Bạc phản gương",
+    "group": "reflective",
+    "label": "Chống nóng cực đại",
+    "swatch": "linear-gradient(135deg,#e2e8f0,#475569)",
+    "vlt": "14%",
+    "uv": "99.9%",
+    "ir": "90%",
+    "description": "Phản xạ bức xạ mặt trời, phù hợp mặt kính nắng gắt.",
+    "price": "280.000 ₫/m²"
+  },
+  {
+    "name": "Xanh nhạt tự nhiên",
+    "group": "cool",
+    "label": "Giữ trọn tầm nhìn",
+    "swatch": "linear-gradient(135deg,#a7f3d0,#047857)",
+    "vlt": "65%",
+    "uv": "99.9%",
+    "ir": "85%",
+    "description": "Xanh ngọc dịu mắt, xuyên sáng cao cho showroom và căn hộ view đẹp.",
+    "price": "370.000 ₫/m²"
+  },
+  {
+    "name": "R20S – Rainier",
+    "group": "reflective",
+    "label": "Bán chạy 2026",
+    "swatch": "linear-gradient(135deg,#38bdf8,#0f2942)",
+    "vlt": "20%",
+    "uv": "99.9%",
+    "ir": "86%",
+    "description": "Cân bằng giữa cách nhiệt, chống chói và độ bền màu.",
+    "price": "280.000 ₫/m²"
+  }
+]
