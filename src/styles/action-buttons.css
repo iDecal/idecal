@@ -1,0 +1,29 @@
+/* Shared treatment for filled actions, including legacy button classes. */
+@layer action-buttons {
+  body :is(a, button, input):is(
+    .btn-primary-solid, .btn-idecal-bold, .gspb-buttonbox, .wp-block-button__link,
+    .region-trigger, .mobile-region-shortcut, .mobile-call-contact, .footer-zalo, .mega-cta > a,
+    .consult-phone, .consult-quote, .consultation-primary, .consultation-secondary,
+    .office-final-zalo, .product-install-button, .advertising-secondary,
+    .thermal-secondary-button, .interior-film-button-secondary, .sign-phone, .elevator-phone,
+    a[data-site-cta]:not([data-cta-text]), [type="submit"]
+  ):not(a[data-cta-text]),
+  body main :is(.btn-primary-solid + a, [data-hero-actions] > a:not(:first-child)):not([data-cta-text]) {
+    background: var(--ui-primary) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: var(--ui-action-ink) !important;
+    -webkit-text-fill-color: currentColor !important;
+
+    &:hover {
+      background-image: var(--ui-action-gradient) !important;
+      filter: none !important;
+    }
+
+    & :is(span, strong, svg) {
+      color: inherit !important;
+      -webkit-text-fill-color: currentColor !important;
+    }
+  }
+}
