@@ -20,7 +20,7 @@
     {
       "id":"phim-cach-nhiet","title":"Phim cách nhiệt nhà kính","scope":"Giá tham khảo năm 2026","description":"Mức giá được phân theo nhóm sản phẩm. Thương hiệu, thông số kỹ thuật và loại phim ảnh hưởng đến giá thực tế.",
       "columns":["Nhóm sản phẩm","Giá / m²"],
-      "rows":[["Giá rẻ","190.000 – 220.000đ"],["Trung bình","250.000 – 380.000đ"],["Cao cấp","Trên 420.000đ"]],
+      "rows":[["Giá rẻ","190.000 – 220.000đ"],["Trung bình – IceTouch (Hàn Quốc), Rainier (Mỹ)","250.000 – 380.000đ"],["Cao cấp","Trên 420.000đ"]],
       "notes":["Giá phim cách nhiệt tham khảo năm 2026; báo giá được xác nhận theo mã phim và thời điểm đặt hàng.","Phạm vi vật tư, nhân công và thuế cần được xác nhận theo mẫu phim và công trình."],
       "service":"phim-cach-nhiet","linkText":"Xem dịch vụ phim cách nhiệt"
     },
