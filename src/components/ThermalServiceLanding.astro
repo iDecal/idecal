@@ -2,8 +2,6 @@
 import { getEntry } from 'astro:content';
 import ProductImage from './ProductImage.astro';
 import { products } from '../data/catalogue';
-import ProductBrandLogo from './ProductBrandLogo.astro';
-import productBrands from '../data/product-brands.json';
 import InstallationPhotoGallery from './InstallationPhotoGallery.astro';
 import { getServiceCta } from '../data/service-cta';
 import { thermalCopy as copy, thermalFaqs, thermalPhotos, thermalTitle } from '../data/thermal-service';
@@ -33,7 +31,7 @@ const catalogueFilms = films.flatMap(film => {
 ---
 <div class="thermal-film-landing" data-thermal-service>
   <section class="hero">
-    <div class="container hero-grid">
+    <div class="container px-4 hero-grid">
       <div>
         <div class="eyebrow" data-heading-label="">Phim cách nhiệt nhà kính chính hãng</div>
         <h1>{thermalTitle}</h1>
@@ -73,7 +71,7 @@ const catalogueFilms = films.flatMap(film => {
     </div>
   </section>
   <nav class="jump" aria-label="Nội dung trang phim cách nhiệt">
-    <div class="container jump-inner">
+    <div class="container px-4 jump-inner">
       <a href="#san-pham">Sản phẩm</a>
       <a href="#bao-gia">Báo giá 2026</a>
       <a href="#chon-phim">Các loại phim</a>
@@ -89,7 +87,7 @@ const catalogueFilms = films.flatMap(film => {
     { id: 'chon-phim', content: copy.types, grid: 'film-info-grid', card: 'step' },
   ].map(({ id, content, grid, card }) => (
     <section class="section" id={id}>
-      <div class="container">
+      <div class="container px-4">
         <div class="section-head">
           <h2>{content.heading}</h2>
           <p>{content.intro}</p>
@@ -105,29 +103,17 @@ const catalogueFilms = films.flatMap(film => {
       </div>
     </section>
   ))}
-  <section class="section film-brands" id="thuong-hieu-phim">
-    <div class="container">
-      <header class="section-head">
-        <h2>{copy.brands.heading}</h2>
-        <p>{copy.brands.intro}</p>
-      </header>
-      <div class="film-brand-grid">
-        {copy.brands.items.map(item => {
-          const brand = productBrands.find(brand => brand.slug === item.logoSlug);
-          return (
-            <article class="step film-brand-card">
-              {brand?.logo && <ProductBrandLogo name={brand.name} logo={brand.logo} />}
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          );
-        })}
-      </div>
+  <section class="film-brands" id="thuong-hieu-phim" aria-labelledby="film-brands-title">
+    <div class="container px-4 film-brand-row">
+      <h2 id="film-brands-title">{copy.brands.heading}</h2>
+      <ul class="film-brand-list">
+        {copy.brands.items.map(brand => <li>{brand}</li>)}
+      </ul>
     </div>
   </section>
   <span id="mau-san-pham" class="legacy-anchor" aria-hidden="true"></span>
   <section class="section products-section" id="san-pham">
-    <div class="container">
+    <div class="container px-4">
       <div class="section-head">
         <div>
           <div class="kicker" data-heading-label="">Danh mục 2026</div>
@@ -145,7 +131,6 @@ const catalogueFilms = films.flatMap(film => {
           <article class="product" data-film-group={film.group}>
             <a class="film-product-photo group" href={film.href} aria-label={`Xem ${film.name}`}>
               <ProductImage src={film.image} alt={film.alt} productSlug={film.productSlug} />
-              <span class="film-product-label">{film.label}</span>
             </a>
             <div class="product-body">
               <h3><a href={film.href}>{film.name}</a></h3>
@@ -167,7 +152,7 @@ const catalogueFilms = films.flatMap(film => {
   </section>
   <span id="bao-gia-phim-cach-nhiet" class="legacy-anchor" aria-hidden="true"></span>
   <section class="section film-pricing-section" id="bao-gia">
-    <div class="container">
+    <div class="container px-4">
       <div class="section-head">
         <h2 id="thermal-pricing-title">{copy.pricing.heading}</h2>
         <p>{copy.pricing.intro}</p>
@@ -187,7 +172,7 @@ const catalogueFilms = films.flatMap(film => {
   </section>
   <span id="ung-dung-phim" class="legacy-anchor" aria-hidden="true"></span>
   <section class="section" id="ung-dung">
-    <div class="container">
+    <div class="container px-4">
       <div class="section-head">
         <h2>{copy.applications.heading}</h2>
         <p>{copy.applications.intro}</p>
@@ -208,7 +193,7 @@ const catalogueFilms = films.flatMap(film => {
   </section>
   <span id="thi-cong-phim" class="legacy-anchor" aria-hidden="true"></span>
   <section class="section" id="quy-trinh">
-    <div class="container">
+    <div class="container px-4">
       <div class="section-head">
         <h2>{copy.process.heading}</h2>
         <p>{copy.process.intro}</p>
@@ -230,7 +215,7 @@ const catalogueFilms = films.flatMap(film => {
   </section>
   <span id="cau-hoi-phim" class="legacy-anchor" aria-hidden="true"></span>
   <section class="section faq-section" id="faq">
-    <div class="container faq-layout">
+    <div class="container px-4 faq-layout">
       <div>
         <div class="kicker" data-heading-label="">Câu hỏi thường gặp</div>
         <h2>{copy.faqHeading}</h2>
@@ -248,8 +233,11 @@ const catalogueFilms = films.flatMap(film => {
           <h3 id="thermal-related-title">Bài viết liên quan</h3>
           {relatedPosts.map(post => (
             <a href={`/blog/${post.id}`}>
-              {post.data.title}
-              <span>{post.data.description}</span>
+              <img class="guide-thumbnail" src={post.data.image} alt="" width="80" height="64" loading="lazy" decoding="async" />
+              <div>
+                <strong>{post.data.title}</strong>
+                <span>{post.data.description}</span>
+              </div>
             </a>
           ))}
         </aside>
@@ -257,7 +245,7 @@ const catalogueFilms = films.flatMap(film => {
     </div>
   </section>
   <section class="cta">
-    <div class="container">
+    <div class="container px-4">
       <div class="cta-box">
         <div>
           <div class="kicker" data-heading-label="">Khảo sát &amp; mang mẫu tận nơi miễn phí</div>

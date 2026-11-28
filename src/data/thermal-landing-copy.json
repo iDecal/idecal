@@ -51,35 +51,14 @@
     "heading": "Các loại phim cách nhiệt nhà kính phổ biến hiện nay"
   },
   "brands": {
-    "intro": "Tham khảo các hãng theo loại kính, nhu cầu giữ sáng và ngân sách.",
+    "heading": "Thương hiệu phim cách nhiệt",
     "items": [
-      {
-        "title": "3M (Mỹ)",
-        "description": "Dòng Crystalline dùng công nghệ quang học đa lớp.",
-        "logoSlug": "3m"
-      },
-      {
-        "title": "LLumar / Classis (Mỹ)",
-        "description": "Có nhiều lựa chọn về độ sáng và độ phản gương.",
-        "logoSlug": "llumar"
-      },
-      {
-        "title": "Ntech / Anygard (Hàn Quốc)",
-        "description": "Nhiều sắc độ, phù hợp khi cần cân đối chi phí.",
-        "logoSlug": null
-      },
-      {
-        "title": "IceTouch (Hàn Quốc)",
-        "description": "Có dòng Nano Ceramic, thuộc nhóm giá trung bình.",
-        "logoSlug": "icetouch"
-      },
-      {
-        "title": "Rainier (Mỹ)",
-        "description": "Có mẫu R20S phản gương, thuộc nhóm giá trung bình.",
-        "logoSlug": "rainier"
-      }
-    ],
-    "heading": "Thương hiệu phim cách nhiệt"
+      "3M™",
+      "LLumar",
+      "V-KOOL",
+      "Rainier",
+      "IceTouch"
+    ]
   },
   "applications": {
     "intro": "Chọn độ truyền sáng và màu phim phù hợp với từng khu vực.",

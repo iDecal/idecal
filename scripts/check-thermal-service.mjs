@@ -29,9 +29,16 @@ for(const route of [primary,...aliases]){
  for(const id of ['mau-san-pham','bao-gia-phim-cach-nhiet','chon-phim','ung-dung-phim','thi-cong-phim','anh-thi-cong-phim','cau-hoi-phim'])assert.ok(ids.includes(id),'Lost section link: '+id);
  const table=content.find(node=>(attr(node,'class')??'').includes('film-price-table'));
  assert.deepEqual(all(table).filter(node=>node.tagName==='td').map(clean),copy.pricing.rows.flatMap(row=>row.slice(1)));
- for(const group of [copy.benefits,copy.types,copy.brands,copy.applications,copy.process]) {
+ for(const group of [copy.benefits,copy.types,copy.applications,copy.process]) {
    assert.ok(clean(main).includes(group.heading));
    for(const item of group.items) assert.ok(clean(main).includes(item.description));
+ }
+ const brands=content.find(node=>attr(node,'class')==='film-brand-list');
+ assert.deepEqual(all(brands).filter(node=>node.tagName==='li').map(clean),copy.brands.items);
+ for(const card of cards){
+   const photo=all(card).find(node=>(attr(node,'class')??'').includes('film-product-photo'));
+   assert.ok(all(photo).some(node=>node.tagName==='img'));
+   assert.ok(!all(photo).some(node=>attr(node,'class')==='film-product-label'));
  }
  assert.ok(nodes.some(node=>node.tagName==='meta'&&attr(node,'name')==='description'&&attr(node,'content')===copy.description));
  assert.ok(!content.some(node=>attr(node,'data-film-calculator')!==undefined));

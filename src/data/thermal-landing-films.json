@@ -2,7 +2,6 @@
   {
     "name": "Medium Black 18",
     "group": "smoke",
-    "label": "Khói trung tính",
     "vlt": "18%",
     "uv": "99%",
     "ir": "78%",
@@ -13,7 +12,6 @@
   {
     "name": "Xanh dương phản gương",
     "group": "reflective",
-    "label": "Phản gương",
     "vlt": "15%",
     "uv": "99.9%",
     "ir": "88%",
@@ -24,7 +22,6 @@
   {
     "name": "Khói sáng P.K18",
     "group": "smoke",
-    "label": "Phổ thông",
     "vlt": "35%",
     "uv": "99%",
     "ir": "72%",
@@ -35,7 +32,6 @@
   {
     "name": "Smoke Black",
     "group": "smoke",
-    "label": "Riêng tư",
     "vlt": "12%",
     "uv": "99.5%",
     "ir": "82%",
@@ -46,7 +42,6 @@
   {
     "name": "IceTouch Nano Ceramic",
     "group": "cool",
-    "label": "Công nghệ cao cấp",
     "vlt": "45%",
     "uv": "99.9%",
     "ir": "92%",
@@ -57,7 +52,6 @@
   {
     "name": "Bạc phản gương",
     "group": "reflective",
-    "label": "Chống nóng cực đại",
     "vlt": "14%",
     "uv": "99.9%",
     "ir": "90%",
@@ -68,7 +62,6 @@
   {
     "name": "Xanh nhạt tự nhiên",
     "group": "cool",
-    "label": "Giữ trọn tầm nhìn",
     "vlt": "65%",
     "uv": "99.9%",
     "ir": "85%",
@@ -79,7 +72,6 @@
   {
     "name": "R20S – Rainier",
     "group": "reflective",
-    "label": "Bán chạy 2026",
     "vlt": "20%",
     "uv": "99.9%",
     "ir": "86%",
