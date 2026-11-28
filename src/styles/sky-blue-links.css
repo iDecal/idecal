@@ -8,11 +8,6 @@
  body .site-header #mobile-menu .mobile-other-links > div > :is(a,button) {color:#102e57!important;}
  @media(max-width:767px) {
   body .homepage-original #gspb_col-id-gsbp-81b980a {margin-top:32px!important;position:relative!important;padding-bottom:0!important;}
-  body .homepage-original #gspb_container-id-gspb-JsG1aisOgl9SNGw56xSt2 {
-   position:relative!important;inset:auto!important;width:calc(100% - 32px)!important;max-width:360px!important;
-   margin:-28px 0 0 auto!important;transform:translateY(24px)!important;z-index:2!important;
-   padding:20px!important;border-radius:20px!important;box-sizing:border-box!important;
-  }
-  body .homepage-original #gspb_col-id-gsbp-81b980a {margin-bottom:24px!important;}
+
  }
 }

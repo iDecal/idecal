@@ -1,7 +1,7 @@
 /* Shared accessibility rules; first important layer wins over legacy imports. */
 @layer ux-policy {
   :root {--ui-text-muted:#52677c;}
-  body .homepage-original .home-stat-value {font-family:var(--heading-font)!important;font-size:19px!important;font-weight:600!important;line-height:1.35!important;color:#1b4f7a!important;}
+  body .homepage-original .home-stat-value {font-family:var(--heading-font)!important;font-size:clamp(30px,3.2vw,46px)!important;font-weight:700!important;line-height:1.1!important;color:#0066c8!important;}
   body .homepage-original .home-stat-value * {font:inherit!important;color:inherit!important;background:none!important;}
   body :is(.btn-primary-solid,.gspb-buttonbox,.region-trigger,.mobile-region-shortcut) {
     min-height:48px!important;
